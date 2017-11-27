@@ -7,18 +7,22 @@ import com.google.inject.Inject;
 import fr.inria.diverse.melange.metamodel.melange.Annotation;
 import fr.inria.diverse.melange.metamodel.melange.ClassBinding;
 import fr.inria.diverse.melange.metamodel.melange.ExternalLanguage;
+import fr.inria.diverse.melange.metamodel.melange.Feature;
 import fr.inria.diverse.melange.metamodel.melange.Import;
 import fr.inria.diverse.melange.metamodel.melange.ImportDsl;
 import fr.inria.diverse.melange.metamodel.melange.Inheritance;
 import fr.inria.diverse.melange.metamodel.melange.Language;
+import fr.inria.diverse.melange.metamodel.melange.LanguageConcern;
 import fr.inria.diverse.melange.metamodel.melange.Mapping;
 import fr.inria.diverse.melange.metamodel.melange.MelangePackage;
 import fr.inria.diverse.melange.metamodel.melange.Merge;
 import fr.inria.diverse.melange.metamodel.melange.ModelType;
 import fr.inria.diverse.melange.metamodel.melange.ModelTypingSpace;
+import fr.inria.diverse.melange.metamodel.melange.OneOf;
 import fr.inria.diverse.melange.metamodel.melange.PackageBinding;
 import fr.inria.diverse.melange.metamodel.melange.PropertyBinding;
 import fr.inria.diverse.melange.metamodel.melange.Slice;
+import fr.inria.diverse.melange.metamodel.melange.SomeOf;
 import fr.inria.diverse.melange.metamodel.melange.Weave;
 import fr.inria.diverse.melange.metamodel.melange.XbaseTransformation;
 import fr.inria.diverse.melange.services.MelangeGrammarAccess;
@@ -101,6 +105,9 @@ public class MelangeSemanticSequencer extends XbaseSemanticSequencer {
 			case MelangePackage.EXTERNAL_LANGUAGE:
 				sequence_ExternalLanguage(context, (ExternalLanguage) semanticObject); 
 				return; 
+			case MelangePackage.FEATURE:
+				sequence_Feature(context, (Feature) semanticObject); 
+				return; 
 			case MelangePackage.IMPORT:
 				if (rule == grammarAccess.getExternalImportRule()) {
 					sequence_ExternalImport(context, (Import) semanticObject); 
@@ -121,6 +128,9 @@ public class MelangeSemanticSequencer extends XbaseSemanticSequencer {
 			case MelangePackage.LANGUAGE:
 				sequence_Language(context, (Language) semanticObject); 
 				return; 
+			case MelangePackage.LANGUAGE_CONCERN:
+				sequence_LanguageConcern(context, (LanguageConcern) semanticObject); 
+				return; 
 			case MelangePackage.MAPPING:
 				sequence_Mapping(context, (Mapping) semanticObject); 
 				return; 
@@ -133,6 +143,9 @@ public class MelangeSemanticSequencer extends XbaseSemanticSequencer {
 			case MelangePackage.MODEL_TYPING_SPACE:
 				sequence_ModelTypingSpace(context, (ModelTypingSpace) semanticObject); 
 				return; 
+			case MelangePackage.ONE_OF:
+				sequence_OneOf(context, (OneOf) semanticObject); 
+				return; 
 			case MelangePackage.PACKAGE_BINDING:
 				sequence_PackageMapping(context, (PackageBinding) semanticObject); 
 				return; 
@@ -141,6 +154,9 @@ public class MelangeSemanticSequencer extends XbaseSemanticSequencer {
 				return; 
 			case MelangePackage.SLICE:
 				sequence_Slice(context, (Slice) semanticObject); 
+				return; 
+			case MelangePackage.SOME_OF:
+				sequence_SomeOf(context, (SomeOf) semanticObject); 
 				return; 
 			case MelangePackage.WEAVE:
 				if (rule == grammarAccess.getOperatorRule()
@@ -519,14 +535,27 @@ public class MelangeSemanticSequencer extends XbaseSemanticSequencer {
 	 * Constraint:
 	 *     (
 	 *         (operators+=Weave | xmof=STRING | fileExtension=STRING)? 
-	 *         (xtext+=STRING xtext+=STRING*)? 
 	 *         (sirius+=STRING sirius+=STRING*)? 
+	 *         (xtext+=STRING xtext+=STRING*)? 
 	 *         (ecl+=STRING ecl+=STRING*)? 
 	 *         (exactTypeName=ValidID exactTypeUri=STRING?)? 
 	 *         (name=ValidID (implements+=[ModelType|QualifiedName] implements+=[ModelType|QualifiedName]*)? operators+=ExternalImport)?
 	 *     )+
 	 */
 	protected void sequence_ExternalLanguage(ISerializationContext context, ExternalLanguage semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     Variability returns Feature
+	 *     Feature returns Feature
+	 *
+	 * Constraint:
+	 *     (optional?='?'? name=ID)
+	 */
+	protected void sequence_Feature(ISerializationContext context, Feature semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -545,7 +574,7 @@ public class MelangeSemanticSequencer extends XbaseSemanticSequencer {
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MelangePackage.Literals.IMPORT_DSL__DSL));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getImportDslAccess().getDslDslQualifiedNameParserRuleCall_1_0_1(), semanticObject.getDsl());
+		feeder.accept(grammarAccess.getImportDslAccess().getDslDslQualifiedNameParserRuleCall_1_0_1(), semanticObject.eGet(MelangePackage.Literals.IMPORT_DSL__DSL, false));
 		feeder.finish();
 	}
 	
@@ -576,7 +605,29 @@ public class MelangeSemanticSequencer extends XbaseSemanticSequencer {
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MelangePackage.Literals.LANGUAGE_OPERATOR__TARGET_LANGUAGE));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getInheritAccess().getTargetLanguageLanguageQualifiedNameParserRuleCall_0_1(), semanticObject.getTargetLanguage());
+		feeder.accept(grammarAccess.getInheritAccess().getTargetLanguageLanguageQualifiedNameParserRuleCall_0_1(), semanticObject.eGet(MelangePackage.Literals.LANGUAGE_OPERATOR__TARGET_LANGUAGE, false));
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     Element returns LanguageConcern
+	 *     LanguageConcern returns LanguageConcern
+	 *
+	 * Constraint:
+	 *     (name=ValidID vm=Variability)
+	 */
+	protected void sequence_LanguageConcern(ISerializationContext context, LanguageConcern semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, MelangePackage.Literals.NAMED_ELEMENT__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MelangePackage.Literals.NAMED_ELEMENT__NAME));
+			if (transientValues.isValueTransient(semanticObject, MelangePackage.Literals.LANGUAGE_CONCERN__VM) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MelangePackage.Literals.LANGUAGE_CONCERN__VM));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getLanguageConcernAccess().getNameValidIDParserRuleCall_1_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getLanguageConcernAccess().getVmVariabilityParserRuleCall_5_0(), semanticObject.getVm());
 		feeder.finish();
 	}
 	
@@ -589,10 +640,10 @@ public class MelangeSemanticSequencer extends XbaseSemanticSequencer {
 	 * Constraint:
 	 *     (
 	 *         (xmof=STRING | fileExtension=STRING | annotations+=Annotation)? 
-	 *         (xtext+=STRING xtext+=STRING*)? 
-	 *         (sirius+=STRING sirius+=STRING*)? 
-	 *         (ecl+=STRING ecl+=STRING*)? 
 	 *         (exactTypeName=ValidID exactTypeUri=STRING?)? 
+	 *         (xtext+=STRING xtext+=STRING*)? 
+	 *         (ecl+=STRING ecl+=STRING*)? 
+	 *         (sirius+=STRING sirius+=STRING*)? 
 	 *         (resourceType=ResourceType (resourceUri=STRING | xtextSetupRef=JvmTypeReference)?)? 
 	 *         (
 	 *             name=ValidID 
@@ -648,6 +699,19 @@ public class MelangeSemanticSequencer extends XbaseSemanticSequencer {
 	
 	/**
 	 * Contexts:
+	 *     Variability returns OneOf
+	 *     OneOf returns OneOf
+	 *
+	 * Constraint:
+	 *     (optional?='?'? name=ID children+=Variability*)
+	 */
+	protected void sequence_OneOf(ISerializationContext context, OneOf semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
 	 *     PackageMapping returns PackageBinding
 	 *
 	 * Constraint:
@@ -688,6 +752,19 @@ public class MelangeSemanticSequencer extends XbaseSemanticSequencer {
 	 *     (targetLanguage=[Language|QualifiedName] roots+=STRING roots+=STRING* mappingRules+=PackageMapping*)
 	 */
 	protected void sequence_Slice(ISerializationContext context, Slice semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     Variability returns SomeOf
+	 *     SomeOf returns SomeOf
+	 *
+	 * Constraint:
+	 *     (optional?='?'? name=ID children+=Variability*)
+	 */
+	protected void sequence_SomeOf(ISerializationContext context, SomeOf semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	

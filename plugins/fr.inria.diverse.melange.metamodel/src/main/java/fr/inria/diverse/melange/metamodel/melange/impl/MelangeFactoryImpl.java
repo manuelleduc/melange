@@ -77,6 +77,11 @@ public class MelangeFactoryImpl extends EFactoryImpl implements MelangeFactory {
 			case MelangePackage.EXTERNAL_LANGUAGE: return createExternalLanguage();
 			case MelangePackage.ANNOTATION: return createAnnotation();
 			case MelangePackage.IMPORT_DSL: return createImportDsl();
+			case MelangePackage.LANGUAGE_CONCERN: return createLanguageConcern();
+			case MelangePackage.VARIABILITY: return createVariability();
+			case MelangePackage.FEATURE: return createFeature();
+			case MelangePackage.ONE_OF: return createOneOf();
+			case MelangePackage.SOME_OF: return createSomeOf();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -310,6 +315,56 @@ public class MelangeFactoryImpl extends EFactoryImpl implements MelangeFactory {
 	public ImportDsl createImportDsl() {
 		ImportDslImpl importDsl = new ImportDslImpl();
 		return importDsl;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public LanguageConcern createLanguageConcern() {
+		LanguageConcernImpl languageConcern = new LanguageConcernImpl();
+		return languageConcern;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Variability createVariability() {
+		VariabilityImpl variability = new VariabilityImpl();
+		return variability;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Feature createFeature() {
+		FeatureImpl feature = new FeatureImpl();
+		return feature;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public OneOf createOneOf() {
+		OneOfImpl oneOf = new OneOfImpl();
+		return oneOf;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public SomeOf createSomeOf() {
+		SomeOfImpl someOf = new SomeOfImpl();
+		return someOf;
 	}
 
 	/**

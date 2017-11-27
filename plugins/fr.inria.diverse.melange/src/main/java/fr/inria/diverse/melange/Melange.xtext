@@ -21,11 +21,33 @@ ModelTypingSpace:
 ;
 
 Element:
-	 Language | (=> 'external' ExternalLanguage) | ImportDsl | EcoreModelType | TransformationDecl | Mapping
+	 LanguageConcern | Language | (=> 'external' ExternalLanguage) | ImportDsl | EcoreModelType | TransformationDecl | Mapping
 ;
 
 TransformationDecl returns Transformation:
 	XbaseTransformation
+;
+
+LanguageConcern:
+	'concern' name = ValidID '{'
+		'variability' '=' vm=Variability
+	'}'
+;
+
+Variability:
+	Feature | OneOf | SomeOf
+;
+
+Feature:
+	(optional?='?')? name = ID
+;
+
+OneOf:
+	(optional?='?')? 'oneOf' name = ID '{' children+=Variability* '}'
+;
+
+SomeOf:
+	(optional?='?')? 'someOf' name = ID '{' children+=Variability* '}'
 ;
 
 Language:
@@ -55,7 +77,6 @@ ExternalLanguage:
 	'{'
 		operators += ExternalImport &
 		(operators += Weave)* &
-//		('resource' resourceType = ResourceType (=> 'uri' resourceUri = STRING | 'setup' xtextSetupRef = JvmTypeReference)?)? &
 		('xtext' xtext+=STRING (',' xtext+=STRING)* )? &
 		('sirius' sirius+=STRING (',' sirius+=STRING)* )? &
 		('ecl' ecl+=STRING (',' ecl+=STRING)* )? &
@@ -86,10 +107,6 @@ XbaseTransformation:
 	'(' (parameters += FullJvmFormalParameter (',' parameters += FullJvmFormalParameter)*)? ')'
 	body = XBlockExpression
 ;
-
-//KomprenSlicer:
-//	slicer = Slicer
-//;
 
 Mapping returns Mapping:
 	"map" from=[Language | QualifiedName] "to" to=[ModelType | QualifiedName] "{"

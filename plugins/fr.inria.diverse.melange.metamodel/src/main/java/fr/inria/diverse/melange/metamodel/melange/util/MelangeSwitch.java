@@ -246,6 +246,49 @@ public class MelangeSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case MelangePackage.LANGUAGE_CONCERN: {
+				LanguageConcern languageConcern = (LanguageConcern)theEObject;
+				T result = caseLanguageConcern(languageConcern);
+				if (result == null) result = caseNamedElement(languageConcern);
+				if (result == null) result = caseElement(languageConcern);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case MelangePackage.VARIABILITY: {
+				Variability variability = (Variability)theEObject;
+				T result = caseVariability(variability);
+				if (result == null) result = caseNamedElement(variability);
+				if (result == null) result = caseElement(variability);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case MelangePackage.FEATURE: {
+				Feature feature = (Feature)theEObject;
+				T result = caseFeature(feature);
+				if (result == null) result = caseVariability(feature);
+				if (result == null) result = caseNamedElement(feature);
+				if (result == null) result = caseElement(feature);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case MelangePackage.ONE_OF: {
+				OneOf oneOf = (OneOf)theEObject;
+				T result = caseOneOf(oneOf);
+				if (result == null) result = caseVariability(oneOf);
+				if (result == null) result = caseNamedElement(oneOf);
+				if (result == null) result = caseElement(oneOf);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case MelangePackage.SOME_OF: {
+				SomeOf someOf = (SomeOf)theEObject;
+				T result = caseSomeOf(someOf);
+				if (result == null) result = caseVariability(someOf);
+				if (result == null) result = caseNamedElement(someOf);
+				if (result == null) result = caseElement(someOf);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -622,6 +665,81 @@ public class MelangeSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseImportDsl(ImportDsl object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Language Concern</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Language Concern</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseLanguageConcern(LanguageConcern object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Variability</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Variability</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseVariability(Variability object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Feature</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Feature</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseFeature(Feature object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>One Of</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>One Of</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseOneOf(OneOf object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Some Of</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Some Of</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseSomeOf(SomeOf object) {
 		return null;
 	}
 

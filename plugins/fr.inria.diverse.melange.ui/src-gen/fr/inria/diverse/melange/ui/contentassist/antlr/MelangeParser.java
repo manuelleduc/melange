@@ -38,6 +38,7 @@ public class MelangeParser extends AbstractContentAssistParser {
 				private static final long serialVersionUID = 1L;
 				{
 					put(grammarAccess.getElementAccess().getAlternatives(), "rule__Element__Alternatives");
+					put(grammarAccess.getVariabilityAccess().getAlternatives(), "rule__Variability__Alternatives");
 					put(grammarAccess.getLanguageAccess().getAlternatives_1_2(), "rule__Language__Alternatives_1_2");
 					put(grammarAccess.getOperatorAccess().getAlternatives(), "rule__Operator__Alternatives");
 					put(grammarAccess.getWeaveAccess().getAlternatives(), "rule__Weave__Alternatives");
@@ -82,7 +83,11 @@ public class MelangeParser extends AbstractContentAssistParser {
 					put(grammarAccess.getXImportDeclarationAccess().getAlternatives_1_0_3(), "rule__XImportDeclaration__Alternatives_1_0_3");
 					put(grammarAccess.getResourceTypeAccess().getAlternatives(), "rule__ResourceType__Alternatives");
 					put(grammarAccess.getModelTypingSpaceAccess().getGroup(), "rule__ModelTypingSpace__Group__0");
-					put(grammarAccess.getElementAccess().getGroup_1(), "rule__Element__Group_1__0");
+					put(grammarAccess.getElementAccess().getGroup_2(), "rule__Element__Group_2__0");
+					put(grammarAccess.getLanguageConcernAccess().getGroup(), "rule__LanguageConcern__Group__0");
+					put(grammarAccess.getFeatureAccess().getGroup(), "rule__Feature__Group__0");
+					put(grammarAccess.getOneOfAccess().getGroup(), "rule__OneOf__Group__0");
+					put(grammarAccess.getSomeOfAccess().getGroup(), "rule__SomeOf__Group__0");
 					put(grammarAccess.getLanguageAccess().getGroup_0(), "rule__Language__Group_0__0");
 					put(grammarAccess.getLanguageAccess().getGroup_0_2(), "rule__Language__Group_0_2__0");
 					put(grammarAccess.getLanguageAccess().getGroup_0_2_2(), "rule__Language__Group_0_2_2__0");
@@ -330,6 +335,16 @@ public class MelangeParser extends AbstractContentAssistParser {
 					put(grammarAccess.getModelTypingSpaceAccess().getNameAssignment_1(), "rule__ModelTypingSpace__NameAssignment_1");
 					put(grammarAccess.getModelTypingSpaceAccess().getImportsAssignment_2(), "rule__ModelTypingSpace__ImportsAssignment_2");
 					put(grammarAccess.getModelTypingSpaceAccess().getElementsAssignment_3(), "rule__ModelTypingSpace__ElementsAssignment_3");
+					put(grammarAccess.getLanguageConcernAccess().getNameAssignment_1(), "rule__LanguageConcern__NameAssignment_1");
+					put(grammarAccess.getLanguageConcernAccess().getVmAssignment_5(), "rule__LanguageConcern__VmAssignment_5");
+					put(grammarAccess.getFeatureAccess().getOptionalAssignment_0(), "rule__Feature__OptionalAssignment_0");
+					put(grammarAccess.getFeatureAccess().getNameAssignment_1(), "rule__Feature__NameAssignment_1");
+					put(grammarAccess.getOneOfAccess().getOptionalAssignment_0(), "rule__OneOf__OptionalAssignment_0");
+					put(grammarAccess.getOneOfAccess().getNameAssignment_2(), "rule__OneOf__NameAssignment_2");
+					put(grammarAccess.getOneOfAccess().getChildrenAssignment_4(), "rule__OneOf__ChildrenAssignment_4");
+					put(grammarAccess.getSomeOfAccess().getOptionalAssignment_0(), "rule__SomeOf__OptionalAssignment_0");
+					put(grammarAccess.getSomeOfAccess().getNameAssignment_2(), "rule__SomeOf__NameAssignment_2");
+					put(grammarAccess.getSomeOfAccess().getChildrenAssignment_4(), "rule__SomeOf__ChildrenAssignment_4");
 					put(grammarAccess.getLanguageAccess().getNameAssignment_0_1(), "rule__Language__NameAssignment_0_1");
 					put(grammarAccess.getLanguageAccess().getOperatorsAssignment_0_2_1(), "rule__Language__OperatorsAssignment_0_2_1");
 					put(grammarAccess.getLanguageAccess().getOperatorsAssignment_0_2_2_1(), "rule__Language__OperatorsAssignment_0_2_2_1");

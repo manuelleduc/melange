@@ -202,6 +202,51 @@ public interface MelangeFactory extends EFactory {
 	ImportDsl createImportDsl();
 
 	/**
+	 * Returns a new object of class '<em>Language Concern</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Language Concern</em>'.
+	 * @generated
+	 */
+	LanguageConcern createLanguageConcern();
+
+	/**
+	 * Returns a new object of class '<em>Variability</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Variability</em>'.
+	 * @generated
+	 */
+	Variability createVariability();
+
+	/**
+	 * Returns a new object of class '<em>Feature</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Feature</em>'.
+	 * @generated
+	 */
+	Feature createFeature();
+
+	/**
+	 * Returns a new object of class '<em>One Of</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>One Of</em>'.
+	 * @generated
+	 */
+	OneOf createOneOf();
+
+	/**
+	 * Returns a new object of class '<em>Some Of</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Some Of</em>'.
+	 * @generated
+	 */
+	SomeOf createSomeOf();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
