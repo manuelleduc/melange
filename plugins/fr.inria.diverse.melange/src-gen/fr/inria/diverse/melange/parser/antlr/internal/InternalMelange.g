@@ -334,11 +334,90 @@ ruleLanguageConcern returns [EObject current=null]
 	    }
 
 )
-)	otherlv_6='}' 
+)(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getLanguageConcernAccess().getOperatorsTaggedOperatorParserRuleCall_6_0()); 
+	    }
+		lv_operators_6_0=ruleTaggedOperator		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getLanguageConcernRule());
+	        }
+       		add(
+       			$current, 
+       			"operators",
+        		lv_operators_6_0, 
+        		"fr.inria.diverse.melange.Melange.TaggedOperator");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+)*	otherlv_7='}' 
     {
-    	newLeafNode(otherlv_6, grammarAccess.getLanguageConcernAccess().getRightCurlyBracketKeyword_6());
+    	newLeafNode(otherlv_7, grammarAccess.getLanguageConcernAccess().getRightCurlyBracketKeyword_7());
     }
 )
+;
+
+
+
+
+
+// Entry rule entryRuleTaggedOperator
+entryRuleTaggedOperator returns [EObject current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getTaggedOperatorRule()); }
+	 iv_ruleTaggedOperator=ruleTaggedOperator 
+	 { $current=$iv_ruleTaggedOperator.current; } 
+	 EOF 
+;
+
+// Rule TaggedOperator
+ruleTaggedOperator returns [EObject current=null] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+(((
+(
+		lv_name_0_0=RULE_ID
+		{
+			newLeafNode(lv_name_0_0, grammarAccess.getTaggedOperatorAccess().getNameIDTerminalRuleCall_0_0_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getTaggedOperatorRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"name",
+        		lv_name_0_0, 
+        		"org.eclipse.xtext.xbase.Xtype.ID");
+	    }
+
+)
+)	otherlv_1='|' 
+    {
+    	newLeafNode(otherlv_1, grammarAccess.getTaggedOperatorAccess().getVerticalLineKeyword_0_1());
+    }
+)?(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getTaggedOperatorAccess().getOperatorOperatorParserRuleCall_1_0()); 
+	    }
+		lv_operator_2_0=ruleOperator		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getTaggedOperatorRule());
+	        }
+       		set(
+       			$current, 
+       			"operator",
+        		lv_operator_2_0, 
+        		"fr.inria.diverse.melange.Melange.Operator");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+))
 ;
 
 

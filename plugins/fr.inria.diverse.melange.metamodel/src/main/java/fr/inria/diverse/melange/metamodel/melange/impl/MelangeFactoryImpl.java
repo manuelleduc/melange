@@ -82,6 +82,7 @@ public class MelangeFactoryImpl extends EFactoryImpl implements MelangeFactory {
 			case MelangePackage.FEATURE: return createFeature();
 			case MelangePackage.ONE_OF: return createOneOf();
 			case MelangePackage.SOME_OF: return createSomeOf();
+			case MelangePackage.TAGGED_OPERATOR: return createTaggedOperator();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -365,6 +366,16 @@ public class MelangeFactoryImpl extends EFactoryImpl implements MelangeFactory {
 	public SomeOf createSomeOf() {
 		SomeOfImpl someOf = new SomeOfImpl();
 		return someOf;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public TaggedOperator createTaggedOperator() {
+		TaggedOperatorImpl taggedOperator = new TaggedOperatorImpl();
+		return taggedOperator;
 	}
 
 	/**

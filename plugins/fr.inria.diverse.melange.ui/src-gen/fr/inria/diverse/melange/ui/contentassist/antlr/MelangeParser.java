@@ -85,6 +85,8 @@ public class MelangeParser extends AbstractContentAssistParser {
 					put(grammarAccess.getModelTypingSpaceAccess().getGroup(), "rule__ModelTypingSpace__Group__0");
 					put(grammarAccess.getElementAccess().getGroup_2(), "rule__Element__Group_2__0");
 					put(grammarAccess.getLanguageConcernAccess().getGroup(), "rule__LanguageConcern__Group__0");
+					put(grammarAccess.getTaggedOperatorAccess().getGroup(), "rule__TaggedOperator__Group__0");
+					put(grammarAccess.getTaggedOperatorAccess().getGroup_0(), "rule__TaggedOperator__Group_0__0");
 					put(grammarAccess.getFeatureAccess().getGroup(), "rule__Feature__Group__0");
 					put(grammarAccess.getOneOfAccess().getGroup(), "rule__OneOf__Group__0");
 					put(grammarAccess.getSomeOfAccess().getGroup(), "rule__SomeOf__Group__0");
@@ -337,6 +339,9 @@ public class MelangeParser extends AbstractContentAssistParser {
 					put(grammarAccess.getModelTypingSpaceAccess().getElementsAssignment_3(), "rule__ModelTypingSpace__ElementsAssignment_3");
 					put(grammarAccess.getLanguageConcernAccess().getNameAssignment_1(), "rule__LanguageConcern__NameAssignment_1");
 					put(grammarAccess.getLanguageConcernAccess().getVmAssignment_5(), "rule__LanguageConcern__VmAssignment_5");
+					put(grammarAccess.getLanguageConcernAccess().getOperatorsAssignment_6(), "rule__LanguageConcern__OperatorsAssignment_6");
+					put(grammarAccess.getTaggedOperatorAccess().getNameAssignment_0_0(), "rule__TaggedOperator__NameAssignment_0_0");
+					put(grammarAccess.getTaggedOperatorAccess().getOperatorAssignment_1(), "rule__TaggedOperator__OperatorAssignment_1");
 					put(grammarAccess.getFeatureAccess().getOptionalAssignment_0(), "rule__Feature__OptionalAssignment_0");
 					put(grammarAccess.getFeatureAccess().getNameAssignment_1(), "rule__Feature__NameAssignment_1");
 					put(grammarAccess.getOneOfAccess().getOptionalAssignment_0(), "rule__OneOf__OptionalAssignment_0");

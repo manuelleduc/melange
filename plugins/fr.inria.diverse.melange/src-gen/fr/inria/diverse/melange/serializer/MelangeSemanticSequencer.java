@@ -23,6 +23,7 @@ import fr.inria.diverse.melange.metamodel.melange.PackageBinding;
 import fr.inria.diverse.melange.metamodel.melange.PropertyBinding;
 import fr.inria.diverse.melange.metamodel.melange.Slice;
 import fr.inria.diverse.melange.metamodel.melange.SomeOf;
+import fr.inria.diverse.melange.metamodel.melange.TaggedOperator;
 import fr.inria.diverse.melange.metamodel.melange.Weave;
 import fr.inria.diverse.melange.metamodel.melange.XbaseTransformation;
 import fr.inria.diverse.melange.services.MelangeGrammarAccess;
@@ -157,6 +158,9 @@ public class MelangeSemanticSequencer extends XbaseSemanticSequencer {
 				return; 
 			case MelangePackage.SOME_OF:
 				sequence_SomeOf(context, (SomeOf) semanticObject); 
+				return; 
+			case MelangePackage.TAGGED_OPERATOR:
+				sequence_TaggedOperator(context, (TaggedOperator) semanticObject); 
 				return; 
 			case MelangePackage.WEAVE:
 				if (rule == grammarAccess.getOperatorRule()
@@ -535,9 +539,9 @@ public class MelangeSemanticSequencer extends XbaseSemanticSequencer {
 	 * Constraint:
 	 *     (
 	 *         (operators+=Weave | xmof=STRING | fileExtension=STRING)? 
-	 *         (sirius+=STRING sirius+=STRING*)? 
-	 *         (xtext+=STRING xtext+=STRING*)? 
 	 *         (ecl+=STRING ecl+=STRING*)? 
+	 *         (xtext+=STRING xtext+=STRING*)? 
+	 *         (sirius+=STRING sirius+=STRING*)? 
 	 *         (exactTypeName=ValidID exactTypeUri=STRING?)? 
 	 *         (name=ValidID (implements+=[ModelType|QualifiedName] implements+=[ModelType|QualifiedName]*)? operators+=ExternalImport)?
 	 *     )+
@@ -616,19 +620,10 @@ public class MelangeSemanticSequencer extends XbaseSemanticSequencer {
 	 *     LanguageConcern returns LanguageConcern
 	 *
 	 * Constraint:
-	 *     (name=ValidID vm=Variability)
+	 *     (name=ValidID vm=Variability operators+=TaggedOperator*)
 	 */
 	protected void sequence_LanguageConcern(ISerializationContext context, LanguageConcern semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, MelangePackage.Literals.NAMED_ELEMENT__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MelangePackage.Literals.NAMED_ELEMENT__NAME));
-			if (transientValues.isValueTransient(semanticObject, MelangePackage.Literals.LANGUAGE_CONCERN__VM) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MelangePackage.Literals.LANGUAGE_CONCERN__VM));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getLanguageConcernAccess().getNameValidIDParserRuleCall_1_0(), semanticObject.getName());
-		feeder.accept(grammarAccess.getLanguageConcernAccess().getVmVariabilityParserRuleCall_5_0(), semanticObject.getVm());
-		feeder.finish();
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
@@ -641,9 +636,9 @@ public class MelangeSemanticSequencer extends XbaseSemanticSequencer {
 	 *     (
 	 *         (xmof=STRING | fileExtension=STRING | annotations+=Annotation)? 
 	 *         (exactTypeName=ValidID exactTypeUri=STRING?)? 
+	 *         (sirius+=STRING sirius+=STRING*)? 
 	 *         (xtext+=STRING xtext+=STRING*)? 
 	 *         (ecl+=STRING ecl+=STRING*)? 
-	 *         (sirius+=STRING sirius+=STRING*)? 
 	 *         (resourceType=ResourceType (resourceUri=STRING | xtextSetupRef=JvmTypeReference)?)? 
 	 *         (
 	 *             name=ValidID 
@@ -765,6 +760,18 @@ public class MelangeSemanticSequencer extends XbaseSemanticSequencer {
 	 *     (optional?='?'? name=ID children+=Variability*)
 	 */
 	protected void sequence_SomeOf(ISerializationContext context, SomeOf semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     TaggedOperator returns TaggedOperator
+	 *
+	 * Constraint:
+	 *     (name=ID? operator=Operator)
+	 */
+	protected void sequence_TaggedOperator(ISerializationContext context, TaggedOperator semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	

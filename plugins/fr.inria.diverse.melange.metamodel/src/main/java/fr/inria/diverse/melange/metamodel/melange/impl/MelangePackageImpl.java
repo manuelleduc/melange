@@ -31,6 +31,7 @@ import fr.inria.diverse.melange.metamodel.melange.ResourceType;
 import fr.inria.diverse.melange.metamodel.melange.Slice;
 import fr.inria.diverse.melange.metamodel.melange.SomeOf;
 import fr.inria.diverse.melange.metamodel.melange.Subtyping;
+import fr.inria.diverse.melange.metamodel.melange.TaggedOperator;
 import fr.inria.diverse.melange.metamodel.melange.Transformation;
 import fr.inria.diverse.melange.metamodel.melange.Variability;
 import fr.inria.diverse.melange.metamodel.melange.Weave;
@@ -268,6 +269,13 @@ public class MelangePackageImpl extends EPackageImpl implements MelangePackage {
 	 * @generated
 	 */
 	private EClass someOfEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass taggedOperatorEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -1159,6 +1167,15 @@ public class MelangePackageImpl extends EPackageImpl implements MelangePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getLanguageConcern_Operators() {
+		return (EReference)languageConcernEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getVariability() {
 		return variabilityEClass;
 	}
@@ -1215,6 +1232,24 @@ public class MelangePackageImpl extends EPackageImpl implements MelangePackage {
 	 */
 	public EReference getSomeOf_Children() {
 		return (EReference)someOfEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getTaggedOperator() {
+		return taggedOperatorEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getTaggedOperator_Operator() {
+		return (EReference)taggedOperatorEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1369,6 +1404,7 @@ public class MelangePackageImpl extends EPackageImpl implements MelangePackage {
 
 		languageConcernEClass = createEClass(LANGUAGE_CONCERN);
 		createEReference(languageConcernEClass, LANGUAGE_CONCERN__VM);
+		createEReference(languageConcernEClass, LANGUAGE_CONCERN__OPERATORS);
 
 		variabilityEClass = createEClass(VARIABILITY);
 		createEAttribute(variabilityEClass, VARIABILITY__OPTIONAL);
@@ -1380,6 +1416,9 @@ public class MelangePackageImpl extends EPackageImpl implements MelangePackage {
 
 		someOfEClass = createEClass(SOME_OF);
 		createEReference(someOfEClass, SOME_OF__CHILDREN);
+
+		taggedOperatorEClass = createEClass(TAGGED_OPERATOR);
+		createEReference(taggedOperatorEClass, TAGGED_OPERATOR__OPERATOR);
 
 		// Create enums
 		resourceTypeEEnum = createEEnum(RESOURCE_TYPE);
@@ -1441,6 +1480,7 @@ public class MelangePackageImpl extends EPackageImpl implements MelangePackage {
 		featureEClass.getESuperTypes().add(this.getVariability());
 		oneOfEClass.getESuperTypes().add(this.getVariability());
 		someOfEClass.getESuperTypes().add(this.getVariability());
+		taggedOperatorEClass.getESuperTypes().add(this.getNamedElement());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(modelTypingSpaceEClass, ModelTypingSpace.class, "ModelTypingSpace", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1558,6 +1598,7 @@ public class MelangePackageImpl extends EPackageImpl implements MelangePackage {
 
 		initEClass(languageConcernEClass, LanguageConcern.class, "LanguageConcern", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getLanguageConcern_Vm(), this.getVariability(), null, "vm", null, 1, 1, LanguageConcern.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getLanguageConcern_Operators(), this.getTaggedOperator(), null, "operators", null, 0, -1, LanguageConcern.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(variabilityEClass, Variability.class, "Variability", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getVariability_Optional(), ecorePackage.getEBoolean(), "optional", null, 0, 1, Variability.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1569,6 +1610,9 @@ public class MelangePackageImpl extends EPackageImpl implements MelangePackage {
 
 		initEClass(someOfEClass, SomeOf.class, "SomeOf", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getSomeOf_Children(), this.getVariability(), null, "children", null, 0, -1, SomeOf.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(taggedOperatorEClass, TaggedOperator.class, "TaggedOperator", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getTaggedOperator_Operator(), this.getOperator(), null, "operator", null, 1, 1, TaggedOperator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(resourceTypeEEnum, ResourceType.class, "ResourceType");

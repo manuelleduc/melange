@@ -13,12 +13,17 @@ package fr.inria.diverse.melange.metamodel.melange.impl;
 import fr.inria.diverse.melange.metamodel.melange.LanguageConcern;
 import fr.inria.diverse.melange.metamodel.melange.MelangePackage;
 
+import fr.inria.diverse.melange.metamodel.melange.TaggedOperator;
 import fr.inria.diverse.melange.metamodel.melange.Variability;
+import java.util.Collection;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -29,6 +34,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * </p>
  * <ul>
  *   <li>{@link fr.inria.diverse.melange.metamodel.melange.impl.LanguageConcernImpl#getVm <em>Vm</em>}</li>
+ *   <li>{@link fr.inria.diverse.melange.metamodel.melange.impl.LanguageConcernImpl#getOperators <em>Operators</em>}</li>
  * </ul>
  *
  * @generated
@@ -43,6 +49,16 @@ public class LanguageConcernImpl extends NamedElementImpl implements LanguageCon
 	 * @ordered
 	 */
 	protected Variability vm;
+
+	/**
+	 * The cached value of the '{@link #getOperators() <em>Operators</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getOperators()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<TaggedOperator> operators;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -111,11 +127,25 @@ public class LanguageConcernImpl extends NamedElementImpl implements LanguageCon
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<TaggedOperator> getOperators() {
+		if (operators == null) {
+			operators = new EObjectContainmentEList<TaggedOperator>(TaggedOperator.class, this, MelangePackage.LANGUAGE_CONCERN__OPERATORS);
+		}
+		return operators;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case MelangePackage.LANGUAGE_CONCERN__VM:
 				return basicSetVm(null, msgs);
+			case MelangePackage.LANGUAGE_CONCERN__OPERATORS:
+				return ((InternalEList<?>)getOperators()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -130,6 +160,8 @@ public class LanguageConcernImpl extends NamedElementImpl implements LanguageCon
 		switch (featureID) {
 			case MelangePackage.LANGUAGE_CONCERN__VM:
 				return getVm();
+			case MelangePackage.LANGUAGE_CONCERN__OPERATORS:
+				return getOperators();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -139,11 +171,16 @@ public class LanguageConcernImpl extends NamedElementImpl implements LanguageCon
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case MelangePackage.LANGUAGE_CONCERN__VM:
 				setVm((Variability)newValue);
+				return;
+			case MelangePackage.LANGUAGE_CONCERN__OPERATORS:
+				getOperators().clear();
+				getOperators().addAll((Collection<? extends TaggedOperator>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -160,6 +197,9 @@ public class LanguageConcernImpl extends NamedElementImpl implements LanguageCon
 			case MelangePackage.LANGUAGE_CONCERN__VM:
 				setVm((Variability)null);
 				return;
+			case MelangePackage.LANGUAGE_CONCERN__OPERATORS:
+				getOperators().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -174,6 +214,8 @@ public class LanguageConcernImpl extends NamedElementImpl implements LanguageCon
 		switch (featureID) {
 			case MelangePackage.LANGUAGE_CONCERN__VM:
 				return vm != null;
+			case MelangePackage.LANGUAGE_CONCERN__OPERATORS:
+				return operators != null && !operators.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

@@ -133,15 +133,18 @@ public class MelangeGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cEqualsSignKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		private final Assignment cVmAssignment_5 = (Assignment)cGroup.eContents().get(5);
 		private final RuleCall cVmVariabilityParserRuleCall_5_0 = (RuleCall)cVmAssignment_5.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_6 = (Keyword)cGroup.eContents().get(6);
+		private final Assignment cOperatorsAssignment_6 = (Assignment)cGroup.eContents().get(6);
+		private final RuleCall cOperatorsTaggedOperatorParserRuleCall_6_0 = (RuleCall)cOperatorsAssignment_6.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_7 = (Keyword)cGroup.eContents().get(7);
 		
 		//LanguageConcern:
 		//	'concern' name=ValidID '{'
 		//	'variability' '=' vm=Variability
+		//	operators+=TaggedOperator*
 		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 
-		//'concern' name=ValidID '{' 'variability' '=' vm=Variability '}'
+		//'concern' name=ValidID '{' 'variability' '=' vm=Variability operators+=TaggedOperator* '}'
 		public Group getGroup() { return cGroup; }
 
 		//'concern'
@@ -168,8 +171,50 @@ public class MelangeGrammarAccess extends AbstractGrammarElementFinder {
 		//Variability
 		public RuleCall getVmVariabilityParserRuleCall_5_0() { return cVmVariabilityParserRuleCall_5_0; }
 
+		//operators+=TaggedOperator*
+		public Assignment getOperatorsAssignment_6() { return cOperatorsAssignment_6; }
+
+		//TaggedOperator
+		public RuleCall getOperatorsTaggedOperatorParserRuleCall_6_0() { return cOperatorsTaggedOperatorParserRuleCall_6_0; }
+
 		//'}'
-		public Keyword getRightCurlyBracketKeyword_6() { return cRightCurlyBracketKeyword_6; }
+		public Keyword getRightCurlyBracketKeyword_7() { return cRightCurlyBracketKeyword_7; }
+	}
+
+	public class TaggedOperatorElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "fr.inria.diverse.melange.Melange.TaggedOperator");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Group cGroup_0 = (Group)cGroup.eContents().get(0);
+		private final Assignment cNameAssignment_0_0 = (Assignment)cGroup_0.eContents().get(0);
+		private final RuleCall cNameIDTerminalRuleCall_0_0_0 = (RuleCall)cNameAssignment_0_0.eContents().get(0);
+		private final Keyword cVerticalLineKeyword_0_1 = (Keyword)cGroup_0.eContents().get(1);
+		private final Assignment cOperatorAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cOperatorOperatorParserRuleCall_1_0 = (RuleCall)cOperatorAssignment_1.eContents().get(0);
+		
+		//TaggedOperator:
+		//	(name=ID '|')? operator=Operator;
+		@Override public ParserRule getRule() { return rule; }
+
+		//(name=ID '|')? operator=Operator
+		public Group getGroup() { return cGroup; }
+
+		//(name=ID '|')?
+		public Group getGroup_0() { return cGroup_0; }
+
+		//name=ID
+		public Assignment getNameAssignment_0_0() { return cNameAssignment_0_0; }
+
+		//ID
+		public RuleCall getNameIDTerminalRuleCall_0_0_0() { return cNameIDTerminalRuleCall_0_0_0; }
+
+		//'|'
+		public Keyword getVerticalLineKeyword_0_1() { return cVerticalLineKeyword_0_1; }
+
+		//operator=Operator
+		public Assignment getOperatorAssignment_1() { return cOperatorAssignment_1; }
+
+		//Operator
+		public RuleCall getOperatorOperatorParserRuleCall_1_0() { return cOperatorOperatorParserRuleCall_1_0; }
 	}
 
 	public class VariabilityElements extends AbstractParserRuleElementFinder {
@@ -1857,6 +1902,7 @@ public class MelangeGrammarAccess extends AbstractGrammarElementFinder {
 	private final ElementElements pElement;
 	private final TransformationDeclElements pTransformationDecl;
 	private final LanguageConcernElements pLanguageConcern;
+	private final TaggedOperatorElements pTaggedOperator;
 	private final VariabilityElements pVariability;
 	private final FeatureElements pFeature;
 	private final OneOfElements pOneOf;
@@ -1899,6 +1945,7 @@ public class MelangeGrammarAccess extends AbstractGrammarElementFinder {
 		this.pElement = new ElementElements();
 		this.pTransformationDecl = new TransformationDeclElements();
 		this.pLanguageConcern = new LanguageConcernElements();
+		this.pTaggedOperator = new TaggedOperatorElements();
 		this.pVariability = new VariabilityElements();
 		this.pFeature = new FeatureElements();
 		this.pOneOf = new OneOfElements();
@@ -1992,6 +2039,7 @@ public class MelangeGrammarAccess extends AbstractGrammarElementFinder {
 	//LanguageConcern:
 	//	'concern' name=ValidID '{'
 	//	'variability' '=' vm=Variability
+	//	operators+=TaggedOperator*
 	//	'}';
 	public LanguageConcernElements getLanguageConcernAccess() {
 		return pLanguageConcern;
@@ -1999,6 +2047,16 @@ public class MelangeGrammarAccess extends AbstractGrammarElementFinder {
 	
 	public ParserRule getLanguageConcernRule() {
 		return getLanguageConcernAccess().getRule();
+	}
+
+	//TaggedOperator:
+	//	(name=ID '|')? operator=Operator;
+	public TaggedOperatorElements getTaggedOperatorAccess() {
+		return pTaggedOperator;
+	}
+	
+	public ParserRule getTaggedOperatorRule() {
+		return getTaggedOperatorAccess().getRule();
 	}
 
 	//Variability:

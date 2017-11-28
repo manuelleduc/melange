@@ -247,6 +247,15 @@ public interface MelangeFactory extends EFactory {
 	SomeOf createSomeOf();
 
 	/**
+	 * Returns a new object of class '<em>Tagged Operator</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Tagged Operator</em>'.
+	 * @generated
+	 */
+	TaggedOperator createTaggedOperator();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

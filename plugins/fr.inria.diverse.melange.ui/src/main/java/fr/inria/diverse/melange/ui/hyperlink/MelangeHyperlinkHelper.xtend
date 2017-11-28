@@ -12,7 +12,9 @@ package fr.inria.diverse.melange.ui.hyperlink
 
 import fr.inria.diverse.melange.metamodel.melange.Import
 import fr.inria.diverse.melange.metamodel.melange.Language
+import fr.inria.diverse.melange.metamodel.melange.LanguageConcern
 import fr.inria.diverse.melange.metamodel.melange.MelangePackage
+import fr.inria.diverse.melange.metamodel.melange.ModelType
 import java.util.List
 import org.eclipse.emf.common.util.URI
 import org.eclipse.jface.text.Region
@@ -22,7 +24,7 @@ import org.eclipse.xtext.resource.XtextResource
 import org.eclipse.xtext.ui.editor.hyperlinking.IHyperlinkAcceptor
 import org.eclipse.xtext.util.ITextRegion
 import org.eclipse.xtext.xbase.ui.navigation.XbaseHyperLinkHelper
-import fr.inria.diverse.melange.metamodel.melange.ModelType
+import fr.inria.diverse.melange.metamodel.melange.NamedElement
 
 class MelangeHyperlinkHelper extends XbaseHyperLinkHelper{
     
@@ -33,12 +35,18 @@ class MelangeHyperlinkHelper extends XbaseHyperLinkHelper{
             
             val uriConverter = resource.resourceSet.URIConverter
             val uri = URI.createURI(element.ecoreUri)
-            val region = getTextRegion(element.eContainer as Language, offset)
+            
+            // TODO: holds as long as Language and LanguageConcern does not have a common ancestor.
+            val region = if(element.eContainer instanceof Language) {
+            	getTextRegion(element.eContainer as Language, offset)
+            } else {
+            	getTextRegion(element.eContainer.eContainer as LanguageConcern, offset)
+            }
             
             val hyperlink = hyperlinkProvider.get() => [
                 hyperlinkRegion = new Region(region.offset+7, region.length-7)
                 URI = if (uri.isPlatformResource) uri else uriConverter.normalize(uri)
-                hyperlinkText = ("Open "+ (element.eContainer as Language).name +" Ecore file")
+                hyperlinkText = ("Open "+ (element.eContainer as NamedElement).name +" Ecore file")
             ]
             
             acceptor.accept(hyperlink)
@@ -79,6 +87,18 @@ class MelangeHyperlinkHelper extends XbaseHyperLinkHelper{
         else {
             super.createHyperlinksByOffset(resource, offset, acceptor)
         }
+    }
+        
+    def ITextRegion getTextRegion(LanguageConcern lang,  int offset) {
+    	val List<INode> nodes = NodeModelUtils.findNodesForFeature(lang,
+                MelangePackage.Literals.LANGUAGE_CONCERN__OPERATORS);
+        for (INode node : nodes) {
+            val ITextRegion textRegion = node.getTextRegion();
+            if (textRegion.contains(offset)) {
+                return textRegion;
+            }
+        }
+        return null;
     }
     
     def ITextRegion getTextRegion(Language lang,  int offset) {

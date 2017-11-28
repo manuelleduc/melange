@@ -10,6 +10,8 @@
  */
 package fr.inria.diverse.melange.metamodel.melange;
 
+import org.eclipse.emf.common.util.EList;
+
 
 /**
  * <!-- begin-user-doc -->
@@ -21,6 +23,7 @@ package fr.inria.diverse.melange.metamodel.melange;
  * </p>
  * <ul>
  *   <li>{@link fr.inria.diverse.melange.metamodel.melange.LanguageConcern#getVm <em>Vm</em>}</li>
+ *   <li>{@link fr.inria.diverse.melange.metamodel.melange.LanguageConcern#getOperators <em>Operators</em>}</li>
  * </ul>
  *
  * @see fr.inria.diverse.melange.metamodel.melange.MelangePackage#getLanguageConcern()
@@ -54,4 +57,20 @@ public interface LanguageConcern extends NamedElement {
 	 * @generated
 	 */
 	void setVm(Variability value);
+
+	/**
+	 * Returns the value of the '<em><b>Operators</b></em>' containment reference list.
+	 * The list contents are of type {@link fr.inria.diverse.melange.metamodel.melange.TaggedOperator}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Operators</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Operators</em>' containment reference list.
+	 * @see fr.inria.diverse.melange.metamodel.melange.MelangePackage#getLanguageConcern_Operators()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<TaggedOperator> getOperators();
 } // LanguageConcern

@@ -4,7 +4,7 @@
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-v10.html
- *
+ * 
  * Contributors:
  *     Inria - initial API and implementation
  *******************************************************************************/
@@ -37,9 +37,9 @@ import org.eclipse.emf.ecore.EClassifier
 import org.eclipse.emf.ecore.EPackage
 import org.eclipse.xtext.common.types.JvmDeclaredType
 import org.eclipse.xtext.validation.Check
+import fr.inria.diverse.melange.metamodel.melange.LanguageConcern
 
-class MelangeValidator extends AbstractMelangeValidator
-{
+class MelangeValidator extends AbstractMelangeValidator {
 	@Inject extension AspectExtensions
 	@Inject extension LanguageExtensions
 	@Inject extension ModelingElementExtensions
@@ -60,15 +60,13 @@ class MelangeValidator extends AbstractMelangeValidator
 
 	@Check
 	def void checkNamesAreUnique(NamedElement e) {
-		val root =
-			if (e.eContainer instanceof ModelTypingSpace)
+		val root = if (e.eContainer instanceof ModelTypingSpace)
 				e.eContainer
 			else if (e.eContainer.eContainer instanceof ModelTypingSpace)
 				e.eContainer.eContainer
 
-		if ((root as ModelTypingSpace).elements.filter(NamedElement).exists[e_ |
-			   e_ != e
-			&& e_.name == e.name
+		if ((root as ModelTypingSpace).elements.filter(NamedElement).exists [ e_ |
+			e_ != e && e_.name == e.name
 		])
 			error(
 				"Names must be unique",
@@ -79,7 +77,7 @@ class MelangeValidator extends AbstractMelangeValidator
 
 	@Check
 	def void checkNameIsValid(Language l) {
-		if(!(l instanceof ImportDsl))
+		if (!(l instanceof ImportDsl))
 			if (l.name.nullOrEmpty || !Character.isUpperCase(l.name.charAt(0)))
 				error(
 					"Language name should start with an uppercase",
@@ -92,8 +90,7 @@ class MelangeValidator extends AbstractMelangeValidator
 	def void checkLanguageNameIsntAmbiguous(Language l) {
 		if (!l.name.nullOrEmpty && l.name.endsWith("MT"))
 			error(
-				"Language shouldn't end with 'MT' to avoid ambiguities "
-				+ "with model type names",
+				"Language shouldn't end with 'MT' to avoid ambiguities " + "with model type names",
 				MelangePackage.Literals.NAMED_ELEMENT__NAME,
 				MelangeValidationConstants.LANGUAGE_NAME_AMBIGUOUS
 			)
@@ -101,7 +98,7 @@ class MelangeValidator extends AbstractMelangeValidator
 
 	@Check
 	def void checkNameIsValid(ModelType mt) {
-		if(!(mt.extracted instanceof ImportDsl))
+		if (!(mt.extracted instanceof ImportDsl))
 			if (mt.name.nullOrEmpty || !Character.isUpperCase(mt.name.charAt(0)))
 				error(
 					"Model type name should start with an uppercase",
@@ -119,9 +116,7 @@ class MelangeValidator extends AbstractMelangeValidator
 					MelangePackage.Literals.NAMED_ELEMENT__NAME,
 					MelangeValidationConstants.MODELTYPE_ECORE_EMPTY
 				)
-			else if (
-				mt.ecoreUri !== null && modelUtils.loadPkg(mt.ecoreUri) === null
-			)
+			else if (mt.ecoreUri !== null && modelUtils.loadPkg(mt.ecoreUri) === null)
 				error(
 					'''The Ecore file "«mt.ecoreUri»" couldn't be loaded''',
 					MelangePackage.Literals.MODELING_ELEMENT__ECORE_URI,
@@ -153,7 +148,9 @@ class MelangeValidator extends AbstractMelangeValidator
 	@Check
 	def void checkLanguageImplementsExactType(Language l) {
 		if (!matchingHelper.match(
-			l.syntax.pkgs.toList, l.exactType.pkgs.toList, null
+			l.syntax.pkgs.toList,
+			l.exactType.pkgs.toList,
+			null
 		))
 			error(
 				'''«l.name» doesn't match its exact type «l.exactType.name»''',
@@ -165,7 +162,7 @@ class MelangeValidator extends AbstractMelangeValidator
 	@Check
 	def void checkLanguageOperatorIsAllowed(LanguageOperator o) {
 		val lang = o.eContainer as Language
-		if (lang instanceof ExternalLanguage){
+		if (lang instanceof ExternalLanguage) {
 			error(
 				'''Language operator «o.eClass.name» is no allowed in external languages (ie.legacy)''',
 				MelangePackage.Literals.LANGUAGE_OPERATOR__TARGET_LANGUAGE,
@@ -173,41 +170,48 @@ class MelangeValidator extends AbstractMelangeValidator
 			)
 		}
 	}
-	
+
+	def validateImportEcore(Import i) {
+		val ecore = modelUtils.loadPkg(i.ecoreUri)
+
+		if (ecore === null)
+			error(
+				'''The Ecore file "«i.ecoreUri»" couldn't be loaded''',
+				MelangePackage.Literals.IMPORT__ECORE_URI,
+				MelangeValidationConstants.IMPORT_INVALID_URI
+			)
+	}
+
 	@Check
 	def void checkImportIsValid(Import i) {
 		try {
-			val lang = i.eContainer as Language
-			val ecore = modelUtils.loadPkg(i.ecoreUri)
+			i.validateImportEcore
+			
+			// TODO: we do not deal with syntax declaration in Language Concerns
+			if (i.eContainer instanceof Language) {
+				val lang = i.eContainer as Language
 
-			if (ecore === null)
-				error(
-					'''The Ecore file "«i.ecoreUri»" couldn't be loaded''',
-					MelangePackage.Literals.IMPORT__ECORE_URI,
-					MelangeValidationConstants.IMPORT_INVALID_URI
-				)
-
-			// If its an Xcore file, the Genmodel is directly embedded within it
-			if (!lang.syntax.isXcore) {
-				if (i.genmodelUris.empty) {
-					val speculativeGenmodelPath = i.ecoreUri.substring(0,
-						i.ecoreUri.lastIndexOf(".")) + ".genmodel"
-					if (modelUtils.loadGenmodel(speculativeGenmodelPath) === null)
-						error(
-							'''No associated genmodel found at "«speculativeGenmodelPath»"''',
-							MelangePackage.Literals.IMPORT__ECORE_URI,
-							MelangeValidationConstants.IMPORT_INVALID_GENMODEL
-						)
-				} else {
-					i.genmodelUris.forEach[gmUri, n |
-						if (modelUtils.loadGenmodel(gmUri) === null)
+				// If its an Xcore file, the Genmodel is directly embedded within it
+				if (!lang.syntax.isXcore) {
+					if (i.genmodelUris.empty) {
+						val speculativeGenmodelPath = i.ecoreUri.substring(0, i.ecoreUri.lastIndexOf(".")) + ".genmodel"
+						if (modelUtils.loadGenmodel(speculativeGenmodelPath) === null)
 							error(
-								'''Couldn't load the specified Genmodel "«gmUri»"''',
-								MelangePackage.Literals.IMPORT__GENMODEL_URIS,
-								n,
+								'''No associated genmodel found at "«speculativeGenmodelPath»"''',
+								MelangePackage.Literals.IMPORT__ECORE_URI,
 								MelangeValidationConstants.IMPORT_INVALID_GENMODEL
 							)
-					]
+					} else {
+						i.genmodelUris.forEach [ gmUri, n |
+							if (modelUtils.loadGenmodel(gmUri) === null)
+								error(
+									'''Couldn't load the specified Genmodel "«gmUri»"''',
+									MelangePackage.Literals.IMPORT__GENMODEL_URIS,
+									n,
+									MelangeValidationConstants.IMPORT_INVALID_GENMODEL
+								)
+						]
+					}
 				}
 			}
 		} catch (Exception e) {
@@ -221,14 +225,10 @@ class MelangeValidator extends AbstractMelangeValidator
 
 	@Check
 	def void checkHasAnnotationProcessorDependency(Aspect asp) {
-		if (
-			   asp.aspectTypeRef?.type !== null
-			&& asp.aspectTypeRef.type instanceof JvmDeclaredType
-			&& (asp.aspectTypeRef.type as JvmDeclaredType).annotations
-				.exists[annotation.eIsProxy])
+		if (asp.aspectTypeRef?.type !== null && asp.aspectTypeRef.type instanceof JvmDeclaredType &&
+			(asp.aspectTypeRef.type as JvmDeclaredType).annotations.exists[annotation.eIsProxy])
 			error(
-				"Cannot find dependency to annotation processor. "
-				+ "Please add k3.al.annotationprocessor",
+				"Cannot find dependency to annotation processor. " + "Please add k3.al.annotationprocessor",
 				MelangePackage.Literals.ASPECT__ASPECT_TYPE_REF,
 				MelangeValidationConstants.INVALID_ASPECT_IMPORT
 			)
@@ -236,10 +236,10 @@ class MelangeValidator extends AbstractMelangeValidator
 
 	@Check
 	def void checkImplements(Language l) {
-		l.^implements
-		.forEach[mt, i |
+		l.^implements.forEach [ mt, i |
 			if (!matchingHelper.match(
-				l.syntax.pkgs.toList, mt.pkgs.toList,
+				l.syntax.pkgs.toList,
+				mt.pkgs.toList,
 				l.mappings.findFirst[to == mt]
 			))
 				error(
@@ -252,7 +252,7 @@ class MelangeValidator extends AbstractMelangeValidator
 
 	@Check
 	def void checkNoCyclicInheritance(Language l) {
-		if (l.allSuperLanguages.exists[ll | ll.allSuperLanguages.contains(l)])
+		if (l.allSuperLanguages.exists[ll|ll.allSuperLanguages.contains(l)])
 			error(
 				"Cannot inherit from self",
 				MelangePackage.Literals.LANGUAGE_OPERATOR__TARGET_LANGUAGE,
@@ -262,10 +262,7 @@ class MelangeValidator extends AbstractMelangeValidator
 
 	@Check
 	def void checkXtextResourceProperlyConfigured(Language l) {
-		if (
-			   l.resourceType == ResourceType.XTEXT
-			&& l.xtextSetupRef === null
-		)
+		if (l.resourceType == ResourceType.XTEXT && l.xtextSetupRef === null)
 			error(
 				"Xtext resources needs a 'setup' class",
 				MelangePackage.Literals.LANGUAGE__RESOURCE_TYPE,
@@ -288,16 +285,11 @@ class MelangeValidator extends AbstractMelangeValidator
 	def void checkAspectAnnotationIsValid(Aspect asp) {
 		val clsName = asp.aspectTypeRef.aspectAnnotationValue
 		val lang = asp.eContainer as Language
-		val correspondingWeave =
-			lang.operators
-			.filter(Weave)
-			.findFirst[aspectTypeRef.simpleName == asp.aspectTypeRef.simpleName]
+		val correspondingWeave = lang.operators.filter(Weave).findFirst [
+			aspectTypeRef.simpleName == asp.aspectTypeRef.simpleName
+		]
 
-		if (
-			   clsName !== null
-			&& correspondingWeave !== null
-			&& asp.aspectedClass === null
-		)
+		if (clsName !== null && correspondingWeave !== null && asp.aspectedClass === null)
 			error(
 				'''Cannot find target class «clsName»''',
 				correspondingWeave,
@@ -305,22 +297,17 @@ class MelangeValidator extends AbstractMelangeValidator
 				MelangeValidationConstants.WEAVE_INVALID_TARGET
 			)
 	}
-	
+
 	@Check
 	def void checkFindAspectedClass(Aspect asp) {
-		
+
 		val lang = asp.eContainer as Language
-		val correspondingWeave =
-			lang.operators
-			.filter(Weave)
-			.findFirst[aspectTypeRef.simpleName == asp.aspectTypeRef.simpleName]
+		val correspondingWeave = lang.operators.filter(Weave).findFirst [
+			aspectTypeRef.simpleName == asp.aspectTypeRef.simpleName
+		]
 		val clsName = correspondingWeave?.aspectTypeRef.aspectAnnotationValue
 
-		if (
-			   asp.hasAspectAnnotation
-			&& clsName === null
-			&& correspondingWeave !== null
-		)
+		if (asp.hasAspectAnnotation && clsName === null && correspondingWeave !== null)
 			error(
 				'''Cannot find in the classpath the class targeted by «asp.aspectTypeRef.qualifiedName»''',
 				correspondingWeave,
@@ -331,10 +318,7 @@ class MelangeValidator extends AbstractMelangeValidator
 
 	@Check
 	def void checkWildcardAspectImport(Weave w) {
-		if (
-			   w.aspectWildcardImport !== null
-			&& !w.aspectWildcardImport.endsWith(".*")
-		)
+		if (w.aspectWildcardImport !== null && !w.aspectWildcardImport.endsWith(".*"))
 			error(
 				"Only wildcard imports are supported, e.g. my.pkg.*",
 				MelangePackage.Literals.WEAVE__ASPECT_WILDCARD_IMPORT,
@@ -344,11 +328,9 @@ class MelangeValidator extends AbstractMelangeValidator
 
 	@Check
 	def void checkSliceCriteria(Slice s) {
-		val invalidRoots =
-			s.roots
-			.filter[clsName |
-				s.targetLanguage.syntax.findClassifier(clsName) === null
-			]
+		val invalidRoots = s.roots.filter [ clsName |
+			s.targetLanguage.syntax.findClassifier(clsName) === null
+		]
 		val invalidRootsSize = invalidRoots.size
 
 		if (invalidRootsSize > 0)
@@ -369,7 +351,7 @@ class MelangeValidator extends AbstractMelangeValidator
 				error(
 					'''Unexpected error: cannot find a GenPackage for: «
 					»«invalidPkgs.map[name].join(", ")».''' +
-					''' Please check whether the associated Genmodel is up to date.''',
+						''' Please check whether the associated Genmodel is up to date.''',
 					MelangePackage.Literals.NAMED_ELEMENT__NAME,
 					MelangeValidationConstants.METAMODEL_NO_GENPACKAGE
 				)
@@ -380,7 +362,7 @@ class MelangeValidator extends AbstractMelangeValidator
 					error(
 						'''Unexpected error: cannot find a GenClassifier for: «
 						»«invalidCls.map[name].join(", ")».''' +
-						''' Please check whether the associated Genmodel is up to date.''',
+							''' Please check whether the associated Genmodel is up to date.''',
 						MelangePackage.Literals.NAMED_ELEMENT__NAME,
 						MelangeValidationConstants.METAMODEL_NO_GENPACKAGE
 					)
@@ -395,7 +377,7 @@ class MelangeValidator extends AbstractMelangeValidator
 		if (invalidPkgs.size > 0)
 			error(
 				'''Cannot find a GenPackage for: «invalidPkgs.map[name].join(", ")».''' +
-				''' Please check whether the associated Genmodel is up to date.''',
+					''' Please check whether the associated Genmodel is up to date.''',
 				MelangePackage.Literals.NAMED_ELEMENT__NAME,
 				MelangeValidationConstants.METAMODEL_NO_GENPACKAGE
 			)
@@ -405,7 +387,7 @@ class MelangeValidator extends AbstractMelangeValidator
 			if (invalidCls.size > 0)
 				error(
 					'''Cannot find a GenClassifier for: «invalidCls.map[name].join(", ")».''' +
-					''' Please check whether the associated Genmodel is up to date.''',
+						''' Please check whether the associated Genmodel is up to date.''',
 					MelangePackage.Literals.NAMED_ELEMENT__NAME,
 					MelangeValidationConstants.METAMODEL_NO_GENPACKAGE
 				)
@@ -417,13 +399,9 @@ class MelangeValidator extends AbstractMelangeValidator
 	}
 
 	private def Iterable<EClassifier> getEClassifiersWithoutGenClassifier(ModelingElement m) {
-		return
-			m.allClassifiers
-			.filter[
-				   name != "EObject"
-				&& !isAspectSpecific
-				&& m.getGenClassifierFor(it) === null
-			]
+		return m.allClassifiers.filter [
+			name != "EObject" && !isAspectSpecific && m.getGenClassifierFor(it) === null
+		]
 	}
 
 	@Check
@@ -435,14 +413,14 @@ class MelangeValidator extends AbstractMelangeValidator
 				MelangeValidationConstants.LANGUAGE_NAME_CONFLICTS_METACLASS
 			)
 	}
-	
+
 	@Check
-	def void checkOperators(LanguageOperator op){
+	def void checkOperators(LanguageOperator op) {
 		val targetLang = op.targetLanguage
 
-		if(targetLang.isInError) {
+		if (targetLang.isInError) {
 			error(
-				"Language \'"+targetLang.name+"\' has errors in its definition",
+				"Language \'" + targetLang.name + "\' has errors in its definition",
 				MelangePackage.Literals.LANGUAGE_OPERATOR__TARGET_LANGUAGE,
 				MelangeValidationConstants.METAMODEL_IN_ERROR
 			)
@@ -450,28 +428,27 @@ class MelangeValidator extends AbstractMelangeValidator
 	}
 
 	@Check
-	def void checkEntryPoints(Language lang){
+	def void checkEntryPoints(Language lang) {
 		val entries = lang.entryPoints
-		if(entries.isEmpty && lang.ecl.isEmpty && !lang.semantics.isEmpty){
+		if (entries.isEmpty && lang.ecl.isEmpty && !lang.semantics.isEmpty) {
 			warning(
-				"Language " + lang.name + " doesn't define an entry point. An Aspect's "
-				+ "method should be tagged with @Main to be identified as an "
-				+ "entry point for the execution.",
+				"Language " + lang.name + " doesn't define an entry point. An Aspect's " +
+					"method should be tagged with @Main to be identified as an " + "entry point for the execution.",
 				MelangePackage.Literals.NAMED_ELEMENT__NAME,
 				MelangeValidationConstants.LANGUAGE_NO_MAIN
 			)
 		}
 	}
-	
+
 	@Check
 	def void checkExternalAspect(Weave weave) {
 		val lang = weave.owningLanguage
-		if(lang instanceof ExternalLanguage){
+		if (lang instanceof ExternalLanguage) {
 			val importFragment = builder.getBuilder(lang).subBuilders.filter(ImportBuilder).head.model
-			val correspondingAspect =
-				lang.semantics
-				.findFirst[aspectTypeRef.simpleName == weave.aspectTypeRef.simpleName]
-			if(!matchingHelper.match(importFragment.toList, #[correspondingAspect.ecoreFragment], null)){
+			val correspondingAspect = lang.semantics.findFirst [
+				aspectTypeRef.simpleName == weave.aspectTypeRef.simpleName
+			]
+			if (!matchingHelper.match(importFragment.toList, #[correspondingAspect.ecoreFragment], null)) {
 				error(
 					'''Aspect in External Language must match aspected class. Check it doesn't introduce new features''',
 					weave,

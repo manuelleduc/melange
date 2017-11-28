@@ -1848,13 +1848,22 @@ public interface MelangePackage extends EPackage {
 	int LANGUAGE_CONCERN__VM = NAMED_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Operators</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LANGUAGE_CONCERN__OPERATORS = NAMED_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
 	 * The number of structural features of the '<em>Language Concern</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LANGUAGE_CONCERN_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 1;
+	int LANGUAGE_CONCERN_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Language Concern</em>' class.
@@ -2068,6 +2077,52 @@ public interface MelangePackage extends EPackage {
 	int SOME_OF_OPERATION_COUNT = VARIABILITY_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link fr.inria.diverse.melange.metamodel.melange.impl.TaggedOperatorImpl <em>Tagged Operator</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see fr.inria.diverse.melange.metamodel.melange.impl.TaggedOperatorImpl
+	 * @see fr.inria.diverse.melange.metamodel.melange.impl.MelangePackageImpl#getTaggedOperator()
+	 * @generated
+	 */
+	int TAGGED_OPERATOR = 30;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TAGGED_OPERATOR__NAME = NAMED_ELEMENT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Operator</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TAGGED_OPERATOR__OPERATOR = NAMED_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Tagged Operator</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TAGGED_OPERATOR_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Tagged Operator</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TAGGED_OPERATOR_OPERATION_COUNT = NAMED_ELEMENT_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link fr.inria.diverse.melange.metamodel.melange.ResourceType <em>Resource Type</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2075,7 +2130,7 @@ public interface MelangePackage extends EPackage {
 	 * @see fr.inria.diverse.melange.metamodel.melange.impl.MelangePackageImpl#getResourceType()
 	 * @generated
 	 */
-	int RESOURCE_TYPE = 30;
+	int RESOURCE_TYPE = 31;
 
 
 	/**
@@ -3043,6 +3098,17 @@ public interface MelangePackage extends EPackage {
 	EReference getLanguageConcern_Vm();
 
 	/**
+	 * Returns the meta object for the containment reference list '{@link fr.inria.diverse.melange.metamodel.melange.LanguageConcern#getOperators <em>Operators</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Operators</em>'.
+	 * @see fr.inria.diverse.melange.metamodel.melange.LanguageConcern#getOperators()
+	 * @see #getLanguageConcern()
+	 * @generated
+	 */
+	EReference getLanguageConcern_Operators();
+
+	/**
 	 * Returns the meta object for class '{@link fr.inria.diverse.melange.metamodel.melange.Variability <em>Variability</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3114,6 +3180,27 @@ public interface MelangePackage extends EPackage {
 	 * @generated
 	 */
 	EReference getSomeOf_Children();
+
+	/**
+	 * Returns the meta object for class '{@link fr.inria.diverse.melange.metamodel.melange.TaggedOperator <em>Tagged Operator</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Tagged Operator</em>'.
+	 * @see fr.inria.diverse.melange.metamodel.melange.TaggedOperator
+	 * @generated
+	 */
+	EClass getTaggedOperator();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link fr.inria.diverse.melange.metamodel.melange.TaggedOperator#getOperator <em>Operator</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Operator</em>'.
+	 * @see fr.inria.diverse.melange.metamodel.melange.TaggedOperator#getOperator()
+	 * @see #getTaggedOperator()
+	 * @generated
+	 */
+	EReference getTaggedOperator_Operator();
 
 	/**
 	 * Returns the meta object for enum '{@link fr.inria.diverse.melange.metamodel.melange.ResourceType <em>Resource Type</em>}'.
@@ -3921,6 +4008,14 @@ public interface MelangePackage extends EPackage {
 		EReference LANGUAGE_CONCERN__VM = eINSTANCE.getLanguageConcern_Vm();
 
 		/**
+		 * The meta object literal for the '<em><b>Operators</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference LANGUAGE_CONCERN__OPERATORS = eINSTANCE.getLanguageConcern_Operators();
+
+		/**
 		 * The meta object literal for the '{@link fr.inria.diverse.melange.metamodel.melange.impl.VariabilityImpl <em>Variability</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3983,6 +4078,24 @@ public interface MelangePackage extends EPackage {
 		 * @generated
 		 */
 		EReference SOME_OF__CHILDREN = eINSTANCE.getSomeOf_Children();
+
+		/**
+		 * The meta object literal for the '{@link fr.inria.diverse.melange.metamodel.melange.impl.TaggedOperatorImpl <em>Tagged Operator</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see fr.inria.diverse.melange.metamodel.melange.impl.TaggedOperatorImpl
+		 * @see fr.inria.diverse.melange.metamodel.melange.impl.MelangePackageImpl#getTaggedOperator()
+		 * @generated
+		 */
+		EClass TAGGED_OPERATOR = eINSTANCE.getTaggedOperator();
+
+		/**
+		 * The meta object literal for the '<em><b>Operator</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TAGGED_OPERATOR__OPERATOR = eINSTANCE.getTaggedOperator_Operator();
 
 		/**
 		 * The meta object literal for the '{@link fr.inria.diverse.melange.metamodel.melange.ResourceType <em>Resource Type</em>}' enum.
