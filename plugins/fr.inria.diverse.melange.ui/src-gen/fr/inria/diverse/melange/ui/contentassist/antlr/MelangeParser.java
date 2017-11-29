@@ -340,7 +340,7 @@ public class MelangeParser extends AbstractContentAssistParser {
 					put(grammarAccess.getLanguageConcernAccess().getNameAssignment_1(), "rule__LanguageConcern__NameAssignment_1");
 					put(grammarAccess.getLanguageConcernAccess().getVmAssignment_5(), "rule__LanguageConcern__VmAssignment_5");
 					put(grammarAccess.getLanguageConcernAccess().getOperatorsAssignment_6(), "rule__LanguageConcern__OperatorsAssignment_6");
-					put(grammarAccess.getTaggedOperatorAccess().getNameAssignment_0_0(), "rule__TaggedOperator__NameAssignment_0_0");
+					put(grammarAccess.getTaggedOperatorAccess().getTagAssignment_0_0(), "rule__TaggedOperator__TagAssignment_0_0");
 					put(grammarAccess.getTaggedOperatorAccess().getOperatorAssignment_1(), "rule__TaggedOperator__OperatorAssignment_1");
 					put(grammarAccess.getFeatureAccess().getOptionalAssignment_0(), "rule__Feature__OptionalAssignment_0");
 					put(grammarAccess.getFeatureAccess().getNameAssignment_1(), "rule__Feature__NameAssignment_1");

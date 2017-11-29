@@ -37,7 +37,7 @@ LanguageConcern:
 ;
 
 TaggedOperator:
-	(name=ID '|')? operator=Operator
+	(tag=ID '|')? operator=Operator
 ;
 
 Variability:

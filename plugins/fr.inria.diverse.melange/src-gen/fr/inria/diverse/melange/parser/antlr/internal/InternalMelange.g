@@ -379,9 +379,9 @@ ruleTaggedOperator returns [EObject current=null]
     @after { leaveRule(); }:
 (((
 (
-		lv_name_0_0=RULE_ID
+		lv_tag_0_0=RULE_ID
 		{
-			newLeafNode(lv_name_0_0, grammarAccess.getTaggedOperatorAccess().getNameIDTerminalRuleCall_0_0_0()); 
+			newLeafNode(lv_tag_0_0, grammarAccess.getTaggedOperatorAccess().getTagIDTerminalRuleCall_0_0_0()); 
 		}
 		{
 	        if ($current==null) {
@@ -389,8 +389,8 @@ ruleTaggedOperator returns [EObject current=null]
 	        }
        		setWithLastConsumed(
        			$current, 
-       			"name",
-        		lv_name_0_0, 
+       			"tag",
+        		lv_tag_0_0, 
         		"org.eclipse.xtext.xbase.Xtype.ID");
 	    }
 

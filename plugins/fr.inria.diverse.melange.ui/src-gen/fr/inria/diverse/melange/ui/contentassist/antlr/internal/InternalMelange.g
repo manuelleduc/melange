@@ -4934,9 +4934,9 @@ rule__TaggedOperator__Group_0__0__Impl
     }
 :
 (
-{ before(grammarAccess.getTaggedOperatorAccess().getNameAssignment_0_0()); }
-(rule__TaggedOperator__NameAssignment_0_0)
-{ after(grammarAccess.getTaggedOperatorAccess().getNameAssignment_0_0()); }
+{ before(grammarAccess.getTaggedOperatorAccess().getTagAssignment_0_0()); }
+(rule__TaggedOperator__TagAssignment_0_0)
+{ after(grammarAccess.getTaggedOperatorAccess().getTagAssignment_0_0()); }
 )
 
 ;
@@ -25749,14 +25749,14 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__TaggedOperator__NameAssignment_0_0
+rule__TaggedOperator__TagAssignment_0_0
     @init {
 		int stackSize = keepStackSize();
     }
 :
 (
-{ before(grammarAccess.getTaggedOperatorAccess().getNameIDTerminalRuleCall_0_0_0()); }
-	RULE_ID{ after(grammarAccess.getTaggedOperatorAccess().getNameIDTerminalRuleCall_0_0_0()); }
+{ before(grammarAccess.getTaggedOperatorAccess().getTagIDTerminalRuleCall_0_0_0()); }
+	RULE_ID{ after(grammarAccess.getTaggedOperatorAccess().getTagIDTerminalRuleCall_0_0_0()); }
 )
 
 ;

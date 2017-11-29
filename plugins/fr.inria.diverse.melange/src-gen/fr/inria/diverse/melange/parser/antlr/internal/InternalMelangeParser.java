@@ -1076,11 +1076,11 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleTaggedOperator"
-    // InternalMelange.g:376:1: ruleTaggedOperator returns [EObject current=null] : ( ( ( (lv_name_0_0= RULE_ID ) ) otherlv_1= '|' )? ( (lv_operator_2_0= ruleOperator ) ) ) ;
+    // InternalMelange.g:376:1: ruleTaggedOperator returns [EObject current=null] : ( ( ( (lv_tag_0_0= RULE_ID ) ) otherlv_1= '|' )? ( (lv_operator_2_0= ruleOperator ) ) ) ;
     public final EObject ruleTaggedOperator() throws RecognitionException {
         EObject current = null;
 
-        Token lv_name_0_0=null;
+        Token lv_tag_0_0=null;
         Token otherlv_1=null;
         EObject lv_operator_2_0 = null;
 
@@ -1088,13 +1088,13 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // InternalMelange.g:379:28: ( ( ( ( (lv_name_0_0= RULE_ID ) ) otherlv_1= '|' )? ( (lv_operator_2_0= ruleOperator ) ) ) )
-            // InternalMelange.g:380:1: ( ( ( (lv_name_0_0= RULE_ID ) ) otherlv_1= '|' )? ( (lv_operator_2_0= ruleOperator ) ) )
+            // InternalMelange.g:379:28: ( ( ( ( (lv_tag_0_0= RULE_ID ) ) otherlv_1= '|' )? ( (lv_operator_2_0= ruleOperator ) ) ) )
+            // InternalMelange.g:380:1: ( ( ( (lv_tag_0_0= RULE_ID ) ) otherlv_1= '|' )? ( (lv_operator_2_0= ruleOperator ) ) )
             {
-            // InternalMelange.g:380:1: ( ( ( (lv_name_0_0= RULE_ID ) ) otherlv_1= '|' )? ( (lv_operator_2_0= ruleOperator ) ) )
-            // InternalMelange.g:380:2: ( ( (lv_name_0_0= RULE_ID ) ) otherlv_1= '|' )? ( (lv_operator_2_0= ruleOperator ) )
+            // InternalMelange.g:380:1: ( ( ( (lv_tag_0_0= RULE_ID ) ) otherlv_1= '|' )? ( (lv_operator_2_0= ruleOperator ) ) )
+            // InternalMelange.g:380:2: ( ( (lv_tag_0_0= RULE_ID ) ) otherlv_1= '|' )? ( (lv_operator_2_0= ruleOperator ) )
             {
-            // InternalMelange.g:380:2: ( ( (lv_name_0_0= RULE_ID ) ) otherlv_1= '|' )?
+            // InternalMelange.g:380:2: ( ( (lv_tag_0_0= RULE_ID ) ) otherlv_1= '|' )?
             int alt5=2;
             int LA5_0 = input.LA(1);
 
@@ -1103,18 +1103,18 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
             }
             switch (alt5) {
                 case 1 :
-                    // InternalMelange.g:380:3: ( (lv_name_0_0= RULE_ID ) ) otherlv_1= '|'
+                    // InternalMelange.g:380:3: ( (lv_tag_0_0= RULE_ID ) ) otherlv_1= '|'
                     {
-                    // InternalMelange.g:380:3: ( (lv_name_0_0= RULE_ID ) )
-                    // InternalMelange.g:381:1: (lv_name_0_0= RULE_ID )
+                    // InternalMelange.g:380:3: ( (lv_tag_0_0= RULE_ID ) )
+                    // InternalMelange.g:381:1: (lv_tag_0_0= RULE_ID )
                     {
-                    // InternalMelange.g:381:1: (lv_name_0_0= RULE_ID )
-                    // InternalMelange.g:382:3: lv_name_0_0= RULE_ID
+                    // InternalMelange.g:381:1: (lv_tag_0_0= RULE_ID )
+                    // InternalMelange.g:382:3: lv_tag_0_0= RULE_ID
                     {
-                    lv_name_0_0=(Token)match(input,RULE_ID,FOLLOW_12); if (state.failed) return current;
+                    lv_tag_0_0=(Token)match(input,RULE_ID,FOLLOW_12); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                      			newLeafNode(lv_name_0_0, grammarAccess.getTaggedOperatorAccess().getNameIDTerminalRuleCall_0_0_0()); 
+                      			newLeafNode(lv_tag_0_0, grammarAccess.getTaggedOperatorAccess().getTagIDTerminalRuleCall_0_0_0()); 
                       		
                     }
                     if ( state.backtracking==0 ) {
@@ -1124,8 +1124,8 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                       	        }
                              		setWithLastConsumed(
                              			current, 
-                             			"name",
-                              		lv_name_0_0, 
+                             			"tag",
+                              		lv_tag_0_0, 
                               		"org.eclipse.xtext.xbase.Xtype.ID");
                       	    
                     }

@@ -161,7 +161,7 @@ class MelangeValidator extends AbstractMelangeValidator {
 
 	@Check
 	def void checkLanguageOperatorIsAllowed(LanguageOperator o) {
-		val lang = o.eContainer as Language
+		val lang = o.eContainer
 		if (lang instanceof ExternalLanguage) {
 			error(
 				'''Language operator «o.eClass.name» is no allowed in external languages (ie.legacy)''',

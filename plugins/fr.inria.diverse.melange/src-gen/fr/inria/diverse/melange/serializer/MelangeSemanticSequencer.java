@@ -539,8 +539,8 @@ public class MelangeSemanticSequencer extends XbaseSemanticSequencer {
 	 * Constraint:
 	 *     (
 	 *         (operators+=Weave | xmof=STRING | fileExtension=STRING)? 
-	 *         (ecl+=STRING ecl+=STRING*)? 
 	 *         (xtext+=STRING xtext+=STRING*)? 
+	 *         (ecl+=STRING ecl+=STRING*)? 
 	 *         (sirius+=STRING sirius+=STRING*)? 
 	 *         (exactTypeName=ValidID exactTypeUri=STRING?)? 
 	 *         (name=ValidID (implements+=[ModelType|QualifiedName] implements+=[ModelType|QualifiedName]*)? operators+=ExternalImport)?
@@ -635,10 +635,10 @@ public class MelangeSemanticSequencer extends XbaseSemanticSequencer {
 	 * Constraint:
 	 *     (
 	 *         (xmof=STRING | fileExtension=STRING | annotations+=Annotation)? 
-	 *         (exactTypeName=ValidID exactTypeUri=STRING?)? 
-	 *         (sirius+=STRING sirius+=STRING*)? 
-	 *         (xtext+=STRING xtext+=STRING*)? 
 	 *         (ecl+=STRING ecl+=STRING*)? 
+	 *         (exactTypeName=ValidID exactTypeUri=STRING?)? 
+	 *         (xtext+=STRING xtext+=STRING*)? 
+	 *         (sirius+=STRING sirius+=STRING*)? 
 	 *         (resourceType=ResourceType (resourceUri=STRING | xtextSetupRef=JvmTypeReference)?)? 
 	 *         (
 	 *             name=ValidID 
@@ -769,7 +769,7 @@ public class MelangeSemanticSequencer extends XbaseSemanticSequencer {
 	 *     TaggedOperator returns TaggedOperator
 	 *
 	 * Constraint:
-	 *     (name=ID? operator=Operator)
+	 *     (tag=ID? operator=Operator)
 	 */
 	protected void sequence_TaggedOperator(ISerializationContext context, TaggedOperator semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

@@ -1257,6 +1257,15 @@ public class MelangePackageImpl extends EPackageImpl implements MelangePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getTaggedOperator_Tag() {
+		return (EAttribute)taggedOperatorEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getResourceType() {
 		return resourceTypeEEnum;
 	}
@@ -1419,6 +1428,7 @@ public class MelangePackageImpl extends EPackageImpl implements MelangePackage {
 
 		taggedOperatorEClass = createEClass(TAGGED_OPERATOR);
 		createEReference(taggedOperatorEClass, TAGGED_OPERATOR__OPERATOR);
+		createEAttribute(taggedOperatorEClass, TAGGED_OPERATOR__TAG);
 
 		// Create enums
 		resourceTypeEEnum = createEEnum(RESOURCE_TYPE);
@@ -1452,6 +1462,7 @@ public class MelangePackageImpl extends EPackageImpl implements MelangePackage {
 		TypesPackage theTypesPackage = (TypesPackage)EPackage.Registry.INSTANCE.getEPackage(TypesPackage.eNS_URI);
 		XbasePackage theXbasePackage = (XbasePackage)EPackage.Registry.INSTANCE.getEPackage(XbasePackage.eNS_URI);
 		DslPackage theDslPackage = (DslPackage)EPackage.Registry.INSTANCE.getEPackage(DslPackage.eNS_URI);
+		EcorePackage theEcorePackage = (EcorePackage)EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
 
 		// Create type parameters
 
@@ -1480,7 +1491,6 @@ public class MelangePackageImpl extends EPackageImpl implements MelangePackage {
 		featureEClass.getESuperTypes().add(this.getVariability());
 		oneOfEClass.getESuperTypes().add(this.getVariability());
 		someOfEClass.getESuperTypes().add(this.getVariability());
-		taggedOperatorEClass.getESuperTypes().add(this.getNamedElement());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(modelTypingSpaceEClass, ModelTypingSpace.class, "ModelTypingSpace", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1613,6 +1623,7 @@ public class MelangePackageImpl extends EPackageImpl implements MelangePackage {
 
 		initEClass(taggedOperatorEClass, TaggedOperator.class, "TaggedOperator", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getTaggedOperator_Operator(), this.getOperator(), null, "operator", null, 1, 1, TaggedOperator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTaggedOperator_Tag(), theEcorePackage.getEString(), "tag", null, 0, 1, TaggedOperator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(resourceTypeEEnum, ResourceType.class, "ResourceType");

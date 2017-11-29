@@ -16144,26 +16144,26 @@ public class InternalMelangeParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TaggedOperator__Group_0__0__Impl"
-    // InternalMelange.g:4931:1: rule__TaggedOperator__Group_0__0__Impl : ( ( rule__TaggedOperator__NameAssignment_0_0 ) ) ;
+    // InternalMelange.g:4931:1: rule__TaggedOperator__Group_0__0__Impl : ( ( rule__TaggedOperator__TagAssignment_0_0 ) ) ;
     public final void rule__TaggedOperator__Group_0__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalMelange.g:4935:1: ( ( ( rule__TaggedOperator__NameAssignment_0_0 ) ) )
-            // InternalMelange.g:4936:1: ( ( rule__TaggedOperator__NameAssignment_0_0 ) )
+            // InternalMelange.g:4935:1: ( ( ( rule__TaggedOperator__TagAssignment_0_0 ) ) )
+            // InternalMelange.g:4936:1: ( ( rule__TaggedOperator__TagAssignment_0_0 ) )
             {
-            // InternalMelange.g:4936:1: ( ( rule__TaggedOperator__NameAssignment_0_0 ) )
-            // InternalMelange.g:4937:1: ( rule__TaggedOperator__NameAssignment_0_0 )
+            // InternalMelange.g:4936:1: ( ( rule__TaggedOperator__TagAssignment_0_0 ) )
+            // InternalMelange.g:4937:1: ( rule__TaggedOperator__TagAssignment_0_0 )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getTaggedOperatorAccess().getNameAssignment_0_0()); 
+               before(grammarAccess.getTaggedOperatorAccess().getTagAssignment_0_0()); 
             }
-            // InternalMelange.g:4938:1: ( rule__TaggedOperator__NameAssignment_0_0 )
-            // InternalMelange.g:4938:2: rule__TaggedOperator__NameAssignment_0_0
+            // InternalMelange.g:4938:1: ( rule__TaggedOperator__TagAssignment_0_0 )
+            // InternalMelange.g:4938:2: rule__TaggedOperator__TagAssignment_0_0
             {
             pushFollow(FOLLOW_2);
-            rule__TaggedOperator__NameAssignment_0_0();
+            rule__TaggedOperator__TagAssignment_0_0();
 
             state._fsp--;
             if (state.failed) return ;
@@ -16171,7 +16171,7 @@ public class InternalMelangeParser extends AbstractInternalContentAssistParser {
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getTaggedOperatorAccess().getNameAssignment_0_0()); 
+               after(grammarAccess.getTaggedOperatorAccess().getTagAssignment_0_0()); 
             }
 
             }
@@ -73346,9 +73346,9 @@ public class InternalMelangeParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__LanguageConcern__OperatorsAssignment_6"
 
 
-    // $ANTLR start "rule__TaggedOperator__NameAssignment_0_0"
-    // InternalMelange.g:25752:1: rule__TaggedOperator__NameAssignment_0_0 : ( RULE_ID ) ;
-    public final void rule__TaggedOperator__NameAssignment_0_0() throws RecognitionException {
+    // $ANTLR start "rule__TaggedOperator__TagAssignment_0_0"
+    // InternalMelange.g:25752:1: rule__TaggedOperator__TagAssignment_0_0 : ( RULE_ID ) ;
+    public final void rule__TaggedOperator__TagAssignment_0_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
@@ -73360,11 +73360,11 @@ public class InternalMelangeParser extends AbstractInternalContentAssistParser {
             // InternalMelange.g:25758:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getTaggedOperatorAccess().getNameIDTerminalRuleCall_0_0_0()); 
+               before(grammarAccess.getTaggedOperatorAccess().getTagIDTerminalRuleCall_0_0_0()); 
             }
             match(input,RULE_ID,FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getTaggedOperatorAccess().getNameIDTerminalRuleCall_0_0_0()); 
+               after(grammarAccess.getTaggedOperatorAccess().getTagIDTerminalRuleCall_0_0_0()); 
             }
 
             }
@@ -73384,7 +73384,7 @@ public class InternalMelangeParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__TaggedOperator__NameAssignment_0_0"
+    // $ANTLR end "rule__TaggedOperator__TagAssignment_0_0"
 
 
     // $ANTLR start "rule__TaggedOperator__OperatorAssignment_1"

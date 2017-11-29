@@ -292,8 +292,6 @@ public class MelangeSwitch<T> extends Switch<T> {
 			case MelangePackage.TAGGED_OPERATOR: {
 				TaggedOperator taggedOperator = (TaggedOperator)theEObject;
 				T result = caseTaggedOperator(taggedOperator);
-				if (result == null) result = caseNamedElement(taggedOperator);
-				if (result == null) result = caseElement(taggedOperator);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}

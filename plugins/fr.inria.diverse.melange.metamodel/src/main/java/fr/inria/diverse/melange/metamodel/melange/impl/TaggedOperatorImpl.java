@@ -21,6 +21,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -31,11 +32,12 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * </p>
  * <ul>
  *   <li>{@link fr.inria.diverse.melange.metamodel.melange.impl.TaggedOperatorImpl#getOperator <em>Operator</em>}</li>
+ *   <li>{@link fr.inria.diverse.melange.metamodel.melange.impl.TaggedOperatorImpl#getTag <em>Tag</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class TaggedOperatorImpl extends NamedElementImpl implements TaggedOperator {
+public class TaggedOperatorImpl extends MinimalEObjectImpl.Container implements TaggedOperator {
 	/**
 	 * The cached value of the '{@link #getOperator() <em>Operator</em>}' containment reference.
 	 * <!-- begin-user-doc -->
@@ -45,6 +47,25 @@ public class TaggedOperatorImpl extends NamedElementImpl implements TaggedOperat
 	 * @ordered
 	 */
 	protected Operator operator;
+
+	/**
+	 * The default value of the '{@link #getTag() <em>Tag</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTag()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String TAG_EDEFAULT = null;
+	/**
+	 * The cached value of the '{@link #getTag() <em>Tag</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTag()
+	 * @generated
+	 * @ordered
+	 */
+	protected String tag = TAG_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -113,6 +134,27 @@ public class TaggedOperatorImpl extends NamedElementImpl implements TaggedOperat
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getTag() {
+		return tag;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setTag(String newTag) {
+		String oldTag = tag;
+		tag = newTag;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, MelangePackage.TAGGED_OPERATOR__TAG, oldTag, tag));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -132,6 +174,8 @@ public class TaggedOperatorImpl extends NamedElementImpl implements TaggedOperat
 		switch (featureID) {
 			case MelangePackage.TAGGED_OPERATOR__OPERATOR:
 				return getOperator();
+			case MelangePackage.TAGGED_OPERATOR__TAG:
+				return getTag();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -146,6 +190,9 @@ public class TaggedOperatorImpl extends NamedElementImpl implements TaggedOperat
 		switch (featureID) {
 			case MelangePackage.TAGGED_OPERATOR__OPERATOR:
 				setOperator((Operator)newValue);
+				return;
+			case MelangePackage.TAGGED_OPERATOR__TAG:
+				setTag((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -162,6 +209,9 @@ public class TaggedOperatorImpl extends NamedElementImpl implements TaggedOperat
 			case MelangePackage.TAGGED_OPERATOR__OPERATOR:
 				setOperator((Operator)null);
 				return;
+			case MelangePackage.TAGGED_OPERATOR__TAG:
+				setTag(TAG_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -176,8 +226,26 @@ public class TaggedOperatorImpl extends NamedElementImpl implements TaggedOperat
 		switch (featureID) {
 			case MelangePackage.TAGGED_OPERATOR__OPERATOR:
 				return operator != null;
+			case MelangePackage.TAGGED_OPERATOR__TAG:
+				return TAG_EDEFAULT == null ? tag != null : !TAG_EDEFAULT.equals(tag);
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (tag: ");
+		result.append(tag);
+		result.append(')');
+		return result.toString();
 	}
 
 } //TaggedOperatorImpl

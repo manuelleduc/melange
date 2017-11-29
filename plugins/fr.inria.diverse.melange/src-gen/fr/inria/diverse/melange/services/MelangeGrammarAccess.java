@@ -185,27 +185,27 @@ public class MelangeGrammarAccess extends AbstractGrammarElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "fr.inria.diverse.melange.Melange.TaggedOperator");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Group cGroup_0 = (Group)cGroup.eContents().get(0);
-		private final Assignment cNameAssignment_0_0 = (Assignment)cGroup_0.eContents().get(0);
-		private final RuleCall cNameIDTerminalRuleCall_0_0_0 = (RuleCall)cNameAssignment_0_0.eContents().get(0);
+		private final Assignment cTagAssignment_0_0 = (Assignment)cGroup_0.eContents().get(0);
+		private final RuleCall cTagIDTerminalRuleCall_0_0_0 = (RuleCall)cTagAssignment_0_0.eContents().get(0);
 		private final Keyword cVerticalLineKeyword_0_1 = (Keyword)cGroup_0.eContents().get(1);
 		private final Assignment cOperatorAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cOperatorOperatorParserRuleCall_1_0 = (RuleCall)cOperatorAssignment_1.eContents().get(0);
 		
 		//TaggedOperator:
-		//	(name=ID '|')? operator=Operator;
+		//	(tag=ID '|')? operator=Operator;
 		@Override public ParserRule getRule() { return rule; }
 
-		//(name=ID '|')? operator=Operator
+		//(tag=ID '|')? operator=Operator
 		public Group getGroup() { return cGroup; }
 
-		//(name=ID '|')?
+		//(tag=ID '|')?
 		public Group getGroup_0() { return cGroup_0; }
 
-		//name=ID
-		public Assignment getNameAssignment_0_0() { return cNameAssignment_0_0; }
+		//tag=ID
+		public Assignment getTagAssignment_0_0() { return cTagAssignment_0_0; }
 
 		//ID
-		public RuleCall getNameIDTerminalRuleCall_0_0_0() { return cNameIDTerminalRuleCall_0_0_0; }
+		public RuleCall getTagIDTerminalRuleCall_0_0_0() { return cTagIDTerminalRuleCall_0_0_0; }
 
 		//'|'
 		public Keyword getVerticalLineKeyword_0_1() { return cVerticalLineKeyword_0_1; }
@@ -2050,7 +2050,7 @@ public class MelangeGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//TaggedOperator:
-	//	(name=ID '|')? operator=Operator;
+	//	(tag=ID '|')? operator=Operator;
 	public TaggedOperatorElements getTaggedOperatorAccess() {
 		return pTaggedOperator;
 	}
