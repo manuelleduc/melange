@@ -539,8 +539,8 @@ public class MelangeSemanticSequencer extends XbaseSemanticSequencer {
 	 * Constraint:
 	 *     (
 	 *         (operators+=Weave | xmof=STRING | fileExtension=STRING)? 
-	 *         (xtext+=STRING xtext+=STRING*)? 
 	 *         (ecl+=STRING ecl+=STRING*)? 
+	 *         (xtext+=STRING xtext+=STRING*)? 
 	 *         (sirius+=STRING sirius+=STRING*)? 
 	 *         (exactTypeName=ValidID exactTypeUri=STRING?)? 
 	 *         (name=ValidID (implements+=[ModelType|QualifiedName] implements+=[ModelType|QualifiedName]*)? operators+=ExternalImport)?
@@ -636,9 +636,9 @@ public class MelangeSemanticSequencer extends XbaseSemanticSequencer {
 	 *     (
 	 *         (xmof=STRING | fileExtension=STRING | annotations+=Annotation)? 
 	 *         (ecl+=STRING ecl+=STRING*)? 
-	 *         (exactTypeName=ValidID exactTypeUri=STRING?)? 
 	 *         (xtext+=STRING xtext+=STRING*)? 
 	 *         (sirius+=STRING sirius+=STRING*)? 
+	 *         (exactTypeName=ValidID exactTypeUri=STRING?)? 
 	 *         (resourceType=ResourceType (resourceUri=STRING | xtextSetupRef=JvmTypeReference)?)? 
 	 *         (
 	 *             name=ValidID 

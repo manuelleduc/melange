@@ -140,11 +140,14 @@ public class MelangeGrammarAccess extends AbstractGrammarElementFinder {
 		//LanguageConcern:
 		//	'concern' name=ValidID '{'
 		//	'variability' '=' vm=Variability
+		//	//		(realisations+= Realisation)
+		//
 		//	operators+=TaggedOperator*
 		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 
-		//'concern' name=ValidID '{' 'variability' '=' vm=Variability operators+=TaggedOperator* '}'
+		//'concern' name=ValidID '{' 'variability' '=' vm=Variability //		(realisations+= Realisation)
+		//operators+=TaggedOperator* '}'
 		public Group getGroup() { return cGroup; }
 
 		//'concern'
@@ -171,6 +174,7 @@ public class MelangeGrammarAccess extends AbstractGrammarElementFinder {
 		//Variability
 		public RuleCall getVmVariabilityParserRuleCall_5_0() { return cVmVariabilityParserRuleCall_5_0; }
 
+		////		(realisations+= Realisation)
 		//operators+=TaggedOperator*
 		public Assignment getOperatorsAssignment_6() { return cOperatorsAssignment_6; }
 
@@ -191,6 +195,25 @@ public class MelangeGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cOperatorAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cOperatorOperatorParserRuleCall_1_0 = (RuleCall)cOperatorAssignment_1.eContents().get(0);
 		
+		////Realisation:
+		////	{Realisation}
+		////	condition=Condition
+		////	 '->' (targets+=[TaggedOperator|ID])*
+		////;
+		////Condition returns Condition:
+		////	Or
+		////;
+		////Or returns Condition:
+		////	And ({Or.left=current} 'or' right=Or)*
+		////;
+		////And returns Condition:
+		////	Terminal ({And.left=current} 'and' right=And)*
+		////;
+		////Terminal returns Condition:
+		////	{Not} '!' content=Condition |
+		////	{FeatureRef} ref=[Variability|ID] |
+		////	'(' Condition ')'
+		////;
 		//TaggedOperator:
 		//	(tag=ID '|')? operator=Operator;
 		@Override public ParserRule getRule() { return rule; }
@@ -2039,6 +2062,8 @@ public class MelangeGrammarAccess extends AbstractGrammarElementFinder {
 	//LanguageConcern:
 	//	'concern' name=ValidID '{'
 	//	'variability' '=' vm=Variability
+	//	//		(realisations+= Realisation)
+	//
 	//	operators+=TaggedOperator*
 	//	'}';
 	public LanguageConcernElements getLanguageConcernAccess() {
@@ -2049,6 +2074,25 @@ public class MelangeGrammarAccess extends AbstractGrammarElementFinder {
 		return getLanguageConcernAccess().getRule();
 	}
 
+	////Realisation:
+	////	{Realisation}
+	////	condition=Condition
+	////	 '->' (targets+=[TaggedOperator|ID])*
+	////;
+	////Condition returns Condition:
+	////	Or
+	////;
+	////Or returns Condition:
+	////	And ({Or.left=current} 'or' right=Or)*
+	////;
+	////And returns Condition:
+	////	Terminal ({And.left=current} 'and' right=And)*
+	////;
+	////Terminal returns Condition:
+	////	{Not} '!' content=Condition |
+	////	{FeatureRef} ref=[Variability|ID] |
+	////	'(' Condition ')'
+	////;
 	//TaggedOperator:
 	//	(tag=ID '|')? operator=Operator;
 	public TaggedOperatorElements getTaggedOperatorAccess() {

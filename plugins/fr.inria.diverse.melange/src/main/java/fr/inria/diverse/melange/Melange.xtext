@@ -32,9 +32,35 @@ LanguageConcern:
 	'concern' name = ValidID '{'
 		'variability' '=' vm=Variability
 		
+//		(realisations+= Realisation)
+		
 		(operators += TaggedOperator)*
 	'}'
 ;
+
+//Realisation:
+//	{Realisation}
+//	condition=Condition
+//	 '->' (targets+=[TaggedOperator|ID])*
+//;
+
+//Condition returns Condition:
+//	Or
+//;
+
+//Or returns Condition:
+//	And ({Or.left=current} 'or' right=Or)*
+//;
+
+//And returns Condition:
+//	Terminal ({And.left=current} 'and' right=And)*
+//;
+
+//Terminal returns Condition:
+//	{Not} '!' content=Condition |
+//	{FeatureRef} ref=[Variability|ID] |
+//	'(' Condition ')'
+//;
 
 TaggedOperator:
 	(tag=ID '|')? operator=Operator
