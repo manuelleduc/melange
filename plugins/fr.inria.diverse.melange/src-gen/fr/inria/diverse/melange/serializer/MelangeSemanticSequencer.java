@@ -4,10 +4,12 @@
 package fr.inria.diverse.melange.serializer;
 
 import com.google.inject.Inject;
+import fr.inria.diverse.melange.metamodel.melange.And;
 import fr.inria.diverse.melange.metamodel.melange.Annotation;
 import fr.inria.diverse.melange.metamodel.melange.ClassBinding;
 import fr.inria.diverse.melange.metamodel.melange.ExternalLanguage;
 import fr.inria.diverse.melange.metamodel.melange.Feature;
+import fr.inria.diverse.melange.metamodel.melange.FeatureRef;
 import fr.inria.diverse.melange.metamodel.melange.Import;
 import fr.inria.diverse.melange.metamodel.melange.ImportDsl;
 import fr.inria.diverse.melange.metamodel.melange.Inheritance;
@@ -18,9 +20,12 @@ import fr.inria.diverse.melange.metamodel.melange.MelangePackage;
 import fr.inria.diverse.melange.metamodel.melange.Merge;
 import fr.inria.diverse.melange.metamodel.melange.ModelType;
 import fr.inria.diverse.melange.metamodel.melange.ModelTypingSpace;
+import fr.inria.diverse.melange.metamodel.melange.Not;
 import fr.inria.diverse.melange.metamodel.melange.OneOf;
+import fr.inria.diverse.melange.metamodel.melange.Or;
 import fr.inria.diverse.melange.metamodel.melange.PackageBinding;
 import fr.inria.diverse.melange.metamodel.melange.PropertyBinding;
+import fr.inria.diverse.melange.metamodel.melange.Realisation;
 import fr.inria.diverse.melange.metamodel.melange.Slice;
 import fr.inria.diverse.melange.metamodel.melange.SomeOf;
 import fr.inria.diverse.melange.metamodel.melange.TaggedOperator;
@@ -97,6 +102,9 @@ public class MelangeSemanticSequencer extends XbaseSemanticSequencer {
 		Set<Parameter> parameters = context.getEnabledBooleanParameters();
 		if (epackage == MelangePackage.eINSTANCE)
 			switch (semanticObject.eClass().getClassifierID()) {
+			case MelangePackage.AND:
+				sequence_And(context, (And) semanticObject); 
+				return; 
 			case MelangePackage.ANNOTATION:
 				sequence_Annotation(context, (Annotation) semanticObject); 
 				return; 
@@ -108,6 +116,9 @@ public class MelangeSemanticSequencer extends XbaseSemanticSequencer {
 				return; 
 			case MelangePackage.FEATURE:
 				sequence_Feature(context, (Feature) semanticObject); 
+				return; 
+			case MelangePackage.FEATURE_REF:
+				sequence_Terminal(context, (FeatureRef) semanticObject); 
 				return; 
 			case MelangePackage.IMPORT:
 				if (rule == grammarAccess.getExternalImportRule()) {
@@ -144,14 +155,23 @@ public class MelangeSemanticSequencer extends XbaseSemanticSequencer {
 			case MelangePackage.MODEL_TYPING_SPACE:
 				sequence_ModelTypingSpace(context, (ModelTypingSpace) semanticObject); 
 				return; 
+			case MelangePackage.NOT:
+				sequence_Terminal(context, (Not) semanticObject); 
+				return; 
 			case MelangePackage.ONE_OF:
 				sequence_OneOf(context, (OneOf) semanticObject); 
+				return; 
+			case MelangePackage.OR:
+				sequence_Or(context, (Or) semanticObject); 
 				return; 
 			case MelangePackage.PACKAGE_BINDING:
 				sequence_PackageMapping(context, (PackageBinding) semanticObject); 
 				return; 
 			case MelangePackage.PROPERTY_BINDING:
 				sequence_PropertyMapping(context, (PropertyBinding) semanticObject); 
+				return; 
+			case MelangePackage.REALISATION:
+				sequence_Realisation(context, (Realisation) semanticObject); 
 				return; 
 			case MelangePackage.SLICE:
 				sequence_Slice(context, (Slice) semanticObject); 
@@ -426,6 +446,32 @@ public class MelangeSemanticSequencer extends XbaseSemanticSequencer {
 	
 	/**
 	 * Contexts:
+	 *     Condition returns And
+	 *     Or returns And
+	 *     Or.Or_1_0 returns And
+	 *     And returns And
+	 *     And.And_1_0 returns And
+	 *     Terminal returns And
+	 *
+	 * Constraint:
+	 *     (left=And_And_1_0 right=And)
+	 */
+	protected void sequence_And(ISerializationContext context, And semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, MelangePackage.Literals.AND__LEFT) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MelangePackage.Literals.AND__LEFT));
+			if (transientValues.isValueTransient(semanticObject, MelangePackage.Literals.AND__RIGHT) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MelangePackage.Literals.AND__RIGHT));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getAndAccess().getAndLeftAction_1_0(), semanticObject.getLeft());
+		feeder.accept(grammarAccess.getAndAccess().getRightAndParserRuleCall_1_2_0(), semanticObject.getRight());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
 	 *     Annotation returns Annotation
 	 *
 	 * Constraint:
@@ -620,7 +666,7 @@ public class MelangeSemanticSequencer extends XbaseSemanticSequencer {
 	 *     LanguageConcern returns LanguageConcern
 	 *
 	 * Constraint:
-	 *     (name=ValidID vm=Variability operators+=TaggedOperator*)
+	 *     (name=ValidID vm=Variability realisations+=Realisation* operators+=TaggedOperator*)
 	 */
 	protected void sequence_LanguageConcern(ISerializationContext context, LanguageConcern semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -635,10 +681,10 @@ public class MelangeSemanticSequencer extends XbaseSemanticSequencer {
 	 * Constraint:
 	 *     (
 	 *         (xmof=STRING | fileExtension=STRING | annotations+=Annotation)? 
-	 *         (ecl+=STRING ecl+=STRING*)? 
+	 *         (exactTypeName=ValidID exactTypeUri=STRING?)? 
 	 *         (xtext+=STRING xtext+=STRING*)? 
 	 *         (sirius+=STRING sirius+=STRING*)? 
-	 *         (exactTypeName=ValidID exactTypeUri=STRING?)? 
+	 *         (ecl+=STRING ecl+=STRING*)? 
 	 *         (resourceType=ResourceType (resourceUri=STRING | xtextSetupRef=JvmTypeReference)?)? 
 	 *         (
 	 *             name=ValidID 
@@ -707,6 +753,32 @@ public class MelangeSemanticSequencer extends XbaseSemanticSequencer {
 	
 	/**
 	 * Contexts:
+	 *     Condition returns Or
+	 *     Or returns Or
+	 *     Or.Or_1_0 returns Or
+	 *     And returns Or
+	 *     And.And_1_0 returns Or
+	 *     Terminal returns Or
+	 *
+	 * Constraint:
+	 *     (left=Or_Or_1_0 right=Or)
+	 */
+	protected void sequence_Or(ISerializationContext context, Or semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, MelangePackage.Literals.OR__LEFT) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MelangePackage.Literals.OR__LEFT));
+			if (transientValues.isValueTransient(semanticObject, MelangePackage.Literals.OR__RIGHT) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MelangePackage.Literals.OR__RIGHT));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getOrAccess().getOrLeftAction_1_0(), semanticObject.getLeft());
+		feeder.accept(grammarAccess.getOrAccess().getRightOrParserRuleCall_1_2_0(), semanticObject.getRight());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
 	 *     PackageMapping returns PackageBinding
 	 *
 	 * Constraint:
@@ -735,6 +807,18 @@ public class MelangeSemanticSequencer extends XbaseSemanticSequencer {
 		feeder.accept(grammarAccess.getPropertyMappingAccess().getFromSTRINGTerminalRuleCall_0_0(), semanticObject.getFrom());
 		feeder.accept(grammarAccess.getPropertyMappingAccess().getToSTRINGTerminalRuleCall_2_0(), semanticObject.getTo());
 		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     Realisation returns Realisation
+	 *
+	 * Constraint:
+	 *     (condition=Condition targets+=[TaggedOperator|ID]*)
+	 */
+	protected void sequence_Realisation(ISerializationContext context, Realisation semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
@@ -769,10 +853,56 @@ public class MelangeSemanticSequencer extends XbaseSemanticSequencer {
 	 *     TaggedOperator returns TaggedOperator
 	 *
 	 * Constraint:
-	 *     (tag=ID? operator=Operator)
+	 *     (name=ID? operator=Operator)
 	 */
 	protected void sequence_TaggedOperator(ISerializationContext context, TaggedOperator semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     Condition returns FeatureRef
+	 *     Or returns FeatureRef
+	 *     Or.Or_1_0 returns FeatureRef
+	 *     And returns FeatureRef
+	 *     And.And_1_0 returns FeatureRef
+	 *     Terminal returns FeatureRef
+	 *
+	 * Constraint:
+	 *     ref=[Variability|ID]
+	 */
+	protected void sequence_Terminal(ISerializationContext context, FeatureRef semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, MelangePackage.Literals.FEATURE_REF__REF) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MelangePackage.Literals.FEATURE_REF__REF));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getTerminalAccess().getRefVariabilityIDTerminalRuleCall_1_1_0_1(), semanticObject.eGet(MelangePackage.Literals.FEATURE_REF__REF, false));
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     Condition returns Not
+	 *     Or returns Not
+	 *     Or.Or_1_0 returns Not
+	 *     And returns Not
+	 *     And.And_1_0 returns Not
+	 *     Terminal returns Not
+	 *
+	 * Constraint:
+	 *     content=Condition
+	 */
+	protected void sequence_Terminal(ISerializationContext context, Not semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, MelangePackage.Literals.NOT__CONTENT) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MelangePackage.Literals.NOT__CONTENT));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getTerminalAccess().getContentConditionParserRuleCall_0_2_0(), semanticObject.getContent());
+		feeder.finish();
 	}
 	
 	

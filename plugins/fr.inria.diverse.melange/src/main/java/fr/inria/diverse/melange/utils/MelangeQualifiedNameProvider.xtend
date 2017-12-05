@@ -1,13 +1,14 @@
 package fr.inria.diverse.melange.utils
 
-import org.eclipse.xtext.xbase.scoping.XbaseQualifiedNameProvider
-import org.eclipse.emf.ecore.EObject
+import com.google.inject.Inject
 import fr.inria.diverse.melange.metamodel.melange.ImportDsl
 import fr.inria.diverse.melange.metamodel.melange.ModelType
-import com.google.inject.Inject
+import fr.inria.diverse.melange.metamodel.melange.Variability
+import org.eclipse.emf.ecore.EObject
 import org.eclipse.xtext.naming.IQualifiedNameConverter
 import org.eclipse.xtext.naming.QualifiedName
 import org.eclipse.xtext.nodemodel.util.NodeModelUtils
+import org.eclipse.xtext.xbase.scoping.XbaseQualifiedNameProvider
 
 class MelangeQualifiedNameProvider extends XbaseQualifiedNameProvider {
 	
@@ -24,6 +25,8 @@ class MelangeQualifiedNameProvider extends XbaseQualifiedNameProvider {
 				val simpleName = importName.lastSegment + "MT"
 				return importName.skipLast(1).append(simpleName)
 			}
+		} else if(obj instanceof Variability) {
+			return obj.name.toQualifiedName
 		}
 		
 		super.getFullyQualifiedName(obj)

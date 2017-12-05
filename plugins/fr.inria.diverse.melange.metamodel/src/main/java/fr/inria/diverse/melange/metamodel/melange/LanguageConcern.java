@@ -24,6 +24,7 @@ import org.eclipse.emf.common.util.EList;
  * <ul>
  *   <li>{@link fr.inria.diverse.melange.metamodel.melange.LanguageConcern#getVm <em>Vm</em>}</li>
  *   <li>{@link fr.inria.diverse.melange.metamodel.melange.LanguageConcern#getOperators <em>Operators</em>}</li>
+ *   <li>{@link fr.inria.diverse.melange.metamodel.melange.LanguageConcern#getRealisations <em>Realisations</em>}</li>
  * </ul>
  *
  * @see fr.inria.diverse.melange.metamodel.melange.MelangePackage#getLanguageConcern()
@@ -73,4 +74,20 @@ public interface LanguageConcern extends NamedElement {
 	 * @generated
 	 */
 	EList<TaggedOperator> getOperators();
+
+	/**
+	 * Returns the value of the '<em><b>Realisations</b></em>' containment reference list.
+	 * The list contents are of type {@link fr.inria.diverse.melange.metamodel.melange.Realisation}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Realisations</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Realisations</em>' containment reference list.
+	 * @see fr.inria.diverse.melange.metamodel.melange.MelangePackage#getLanguageConcern_Realisations()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<Realisation> getRealisations();
 } // LanguageConcern

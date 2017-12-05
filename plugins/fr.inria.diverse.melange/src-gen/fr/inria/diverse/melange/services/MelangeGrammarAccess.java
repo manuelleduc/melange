@@ -133,21 +133,21 @@ public class MelangeGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cEqualsSignKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		private final Assignment cVmAssignment_5 = (Assignment)cGroup.eContents().get(5);
 		private final RuleCall cVmVariabilityParserRuleCall_5_0 = (RuleCall)cVmAssignment_5.eContents().get(0);
-		private final Assignment cOperatorsAssignment_6 = (Assignment)cGroup.eContents().get(6);
-		private final RuleCall cOperatorsTaggedOperatorParserRuleCall_6_0 = (RuleCall)cOperatorsAssignment_6.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_7 = (Keyword)cGroup.eContents().get(7);
+		private final Assignment cRealisationsAssignment_6 = (Assignment)cGroup.eContents().get(6);
+		private final RuleCall cRealisationsRealisationParserRuleCall_6_0 = (RuleCall)cRealisationsAssignment_6.eContents().get(0);
+		private final Assignment cOperatorsAssignment_7 = (Assignment)cGroup.eContents().get(7);
+		private final RuleCall cOperatorsTaggedOperatorParserRuleCall_7_0 = (RuleCall)cOperatorsAssignment_7.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_8 = (Keyword)cGroup.eContents().get(8);
 		
 		//LanguageConcern:
 		//	'concern' name=ValidID '{'
 		//	'variability' '=' vm=Variability
-		//	//		(realisations+= Realisation)
-		//
+		//	realisations+=Realisation*
 		//	operators+=TaggedOperator*
 		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 
-		//'concern' name=ValidID '{' 'variability' '=' vm=Variability //		(realisations+= Realisation)
-		//operators+=TaggedOperator* '}'
+		//'concern' name=ValidID '{' 'variability' '=' vm=Variability realisations+=Realisation* operators+=TaggedOperator* '}'
 		public Group getGroup() { return cGroup; }
 
 		//'concern'
@@ -174,70 +174,254 @@ public class MelangeGrammarAccess extends AbstractGrammarElementFinder {
 		//Variability
 		public RuleCall getVmVariabilityParserRuleCall_5_0() { return cVmVariabilityParserRuleCall_5_0; }
 
-		////		(realisations+= Realisation)
+		//realisations+=Realisation*
+		public Assignment getRealisationsAssignment_6() { return cRealisationsAssignment_6; }
+
+		//Realisation
+		public RuleCall getRealisationsRealisationParserRuleCall_6_0() { return cRealisationsRealisationParserRuleCall_6_0; }
+
 		//operators+=TaggedOperator*
-		public Assignment getOperatorsAssignment_6() { return cOperatorsAssignment_6; }
+		public Assignment getOperatorsAssignment_7() { return cOperatorsAssignment_7; }
 
 		//TaggedOperator
-		public RuleCall getOperatorsTaggedOperatorParserRuleCall_6_0() { return cOperatorsTaggedOperatorParserRuleCall_6_0; }
+		public RuleCall getOperatorsTaggedOperatorParserRuleCall_7_0() { return cOperatorsTaggedOperatorParserRuleCall_7_0; }
 
 		//'}'
-		public Keyword getRightCurlyBracketKeyword_7() { return cRightCurlyBracketKeyword_7; }
+		public Keyword getRightCurlyBracketKeyword_8() { return cRightCurlyBracketKeyword_8; }
+	}
+
+	public class RealisationElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "fr.inria.diverse.melange.Melange.Realisation");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Action cRealisationAction_0 = (Action)cGroup.eContents().get(0);
+		private final Assignment cConditionAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cConditionConditionParserRuleCall_1_0 = (RuleCall)cConditionAssignment_1.eContents().get(0);
+		private final Keyword cHyphenMinusGreaterThanSignKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Assignment cTargetsAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final CrossReference cTargetsTaggedOperatorCrossReference_3_0 = (CrossReference)cTargetsAssignment_3.eContents().get(0);
+		private final RuleCall cTargetsTaggedOperatorIDTerminalRuleCall_3_0_1 = (RuleCall)cTargetsTaggedOperatorCrossReference_3_0.eContents().get(1);
+		
+		//Realisation:
+		//	{Realisation} condition=Condition
+		//	'->' targets+=[TaggedOperator]*;
+		@Override public ParserRule getRule() { return rule; }
+
+		//{Realisation} condition=Condition '->' targets+=[TaggedOperator]*
+		public Group getGroup() { return cGroup; }
+
+		//{Realisation}
+		public Action getRealisationAction_0() { return cRealisationAction_0; }
+
+		//condition=Condition
+		public Assignment getConditionAssignment_1() { return cConditionAssignment_1; }
+
+		//Condition
+		public RuleCall getConditionConditionParserRuleCall_1_0() { return cConditionConditionParserRuleCall_1_0; }
+
+		//'->'
+		public Keyword getHyphenMinusGreaterThanSignKeyword_2() { return cHyphenMinusGreaterThanSignKeyword_2; }
+
+		//targets+=[TaggedOperator]*
+		public Assignment getTargetsAssignment_3() { return cTargetsAssignment_3; }
+
+		//[TaggedOperator]
+		public CrossReference getTargetsTaggedOperatorCrossReference_3_0() { return cTargetsTaggedOperatorCrossReference_3_0; }
+
+		//ID
+		public RuleCall getTargetsTaggedOperatorIDTerminalRuleCall_3_0_1() { return cTargetsTaggedOperatorIDTerminalRuleCall_3_0_1; }
+	}
+
+	public class ConditionElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "fr.inria.diverse.melange.Melange.Condition");
+		private final RuleCall cOrParserRuleCall = (RuleCall)rule.eContents().get(1);
+		
+		//Condition:
+		//	Or;
+		@Override public ParserRule getRule() { return rule; }
+
+		//Or
+		public RuleCall getOrParserRuleCall() { return cOrParserRuleCall; }
+	}
+
+	public class OrElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "fr.inria.diverse.melange.Melange.Or");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final RuleCall cAndParserRuleCall_0 = (RuleCall)cGroup.eContents().get(0);
+		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
+		private final Action cOrLeftAction_1_0 = (Action)cGroup_1.eContents().get(0);
+		private final Keyword cOrKeyword_1_1 = (Keyword)cGroup_1.eContents().get(1);
+		private final Assignment cRightAssignment_1_2 = (Assignment)cGroup_1.eContents().get(2);
+		private final RuleCall cRightOrParserRuleCall_1_2_0 = (RuleCall)cRightAssignment_1_2.eContents().get(0);
+		
+		//Or Condition:
+		//	And ({Or.left=current} 'or' right=Or)*;
+		@Override public ParserRule getRule() { return rule; }
+
+		//And ({Or.left=current} 'or' right=Or)*
+		public Group getGroup() { return cGroup; }
+
+		//And
+		public RuleCall getAndParserRuleCall_0() { return cAndParserRuleCall_0; }
+
+		//({Or.left=current} 'or' right=Or)*
+		public Group getGroup_1() { return cGroup_1; }
+
+		//{Or.left=current}
+		public Action getOrLeftAction_1_0() { return cOrLeftAction_1_0; }
+
+		//'or'
+		public Keyword getOrKeyword_1_1() { return cOrKeyword_1_1; }
+
+		//right=Or
+		public Assignment getRightAssignment_1_2() { return cRightAssignment_1_2; }
+
+		//Or
+		public RuleCall getRightOrParserRuleCall_1_2_0() { return cRightOrParserRuleCall_1_2_0; }
+	}
+
+	public class AndElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "fr.inria.diverse.melange.Melange.And");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final RuleCall cTerminalParserRuleCall_0 = (RuleCall)cGroup.eContents().get(0);
+		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
+		private final Action cAndLeftAction_1_0 = (Action)cGroup_1.eContents().get(0);
+		private final Keyword cAndKeyword_1_1 = (Keyword)cGroup_1.eContents().get(1);
+		private final Assignment cRightAssignment_1_2 = (Assignment)cGroup_1.eContents().get(2);
+		private final RuleCall cRightAndParserRuleCall_1_2_0 = (RuleCall)cRightAssignment_1_2.eContents().get(0);
+		
+		//And Condition:
+		//	Terminal ({And.left=current} 'and' right=And)*;
+		@Override public ParserRule getRule() { return rule; }
+
+		//Terminal ({And.left=current} 'and' right=And)*
+		public Group getGroup() { return cGroup; }
+
+		//Terminal
+		public RuleCall getTerminalParserRuleCall_0() { return cTerminalParserRuleCall_0; }
+
+		//({And.left=current} 'and' right=And)*
+		public Group getGroup_1() { return cGroup_1; }
+
+		//{And.left=current}
+		public Action getAndLeftAction_1_0() { return cAndLeftAction_1_0; }
+
+		//'and'
+		public Keyword getAndKeyword_1_1() { return cAndKeyword_1_1; }
+
+		//right=And
+		public Assignment getRightAssignment_1_2() { return cRightAssignment_1_2; }
+
+		//And
+		public RuleCall getRightAndParserRuleCall_1_2_0() { return cRightAndParserRuleCall_1_2_0; }
+	}
+
+	public class TerminalElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "fr.inria.diverse.melange.Melange.Terminal");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final Group cGroup_0 = (Group)cAlternatives.eContents().get(0);
+		private final Action cNotAction_0_0 = (Action)cGroup_0.eContents().get(0);
+		private final Keyword cExclamationMarkKeyword_0_1 = (Keyword)cGroup_0.eContents().get(1);
+		private final Assignment cContentAssignment_0_2 = (Assignment)cGroup_0.eContents().get(2);
+		private final RuleCall cContentConditionParserRuleCall_0_2_0 = (RuleCall)cContentAssignment_0_2.eContents().get(0);
+		private final Group cGroup_1 = (Group)cAlternatives.eContents().get(1);
+		private final Action cFeatureRefAction_1_0 = (Action)cGroup_1.eContents().get(0);
+		private final Assignment cRefAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
+		private final CrossReference cRefVariabilityCrossReference_1_1_0 = (CrossReference)cRefAssignment_1_1.eContents().get(0);
+		private final RuleCall cRefVariabilityIDTerminalRuleCall_1_1_0_1 = (RuleCall)cRefVariabilityCrossReference_1_1_0.eContents().get(1);
+		private final Group cGroup_2 = (Group)cAlternatives.eContents().get(2);
+		private final Keyword cLeftParenthesisKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
+		private final RuleCall cConditionParserRuleCall_2_1 = (RuleCall)cGroup_2.eContents().get(1);
+		private final Keyword cRightParenthesisKeyword_2_2 = (Keyword)cGroup_2.eContents().get(2);
+		
+		//Terminal Condition:
+		//	{Not} '!' content=Condition | {FeatureRef} ref=[Variability] |
+		//	'(' Condition ')';
+		@Override public ParserRule getRule() { return rule; }
+
+		//{Not} '!' content=Condition | {FeatureRef} ref=[Variability] | '(' Condition ')'
+		public Alternatives getAlternatives() { return cAlternatives; }
+
+		//{Not} '!' content=Condition
+		public Group getGroup_0() { return cGroup_0; }
+
+		//{Not}
+		public Action getNotAction_0_0() { return cNotAction_0_0; }
+
+		//'!'
+		public Keyword getExclamationMarkKeyword_0_1() { return cExclamationMarkKeyword_0_1; }
+
+		//content=Condition
+		public Assignment getContentAssignment_0_2() { return cContentAssignment_0_2; }
+
+		//Condition
+		public RuleCall getContentConditionParserRuleCall_0_2_0() { return cContentConditionParserRuleCall_0_2_0; }
+
+		//{FeatureRef} ref=[Variability]
+		public Group getGroup_1() { return cGroup_1; }
+
+		//{FeatureRef}
+		public Action getFeatureRefAction_1_0() { return cFeatureRefAction_1_0; }
+
+		//ref=[Variability]
+		public Assignment getRefAssignment_1_1() { return cRefAssignment_1_1; }
+
+		//[Variability]
+		public CrossReference getRefVariabilityCrossReference_1_1_0() { return cRefVariabilityCrossReference_1_1_0; }
+
+		//ID
+		public RuleCall getRefVariabilityIDTerminalRuleCall_1_1_0_1() { return cRefVariabilityIDTerminalRuleCall_1_1_0_1; }
+
+		//'(' Condition ')'
+		public Group getGroup_2() { return cGroup_2; }
+
+		//'('
+		public Keyword getLeftParenthesisKeyword_2_0() { return cLeftParenthesisKeyword_2_0; }
+
+		//Condition
+		public RuleCall getConditionParserRuleCall_2_1() { return cConditionParserRuleCall_2_1; }
+
+		//')'
+		public Keyword getRightParenthesisKeyword_2_2() { return cRightParenthesisKeyword_2_2; }
 	}
 
 	public class TaggedOperatorElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "fr.inria.diverse.melange.Melange.TaggedOperator");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Group cGroup_0 = (Group)cGroup.eContents().get(0);
-		private final Assignment cTagAssignment_0_0 = (Assignment)cGroup_0.eContents().get(0);
-		private final RuleCall cTagIDTerminalRuleCall_0_0_0 = (RuleCall)cTagAssignment_0_0.eContents().get(0);
-		private final Keyword cVerticalLineKeyword_0_1 = (Keyword)cGroup_0.eContents().get(1);
-		private final Assignment cOperatorAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cOperatorOperatorParserRuleCall_1_0 = (RuleCall)cOperatorAssignment_1.eContents().get(0);
+		private final Action cTaggedOperatorAction_0 = (Action)cGroup.eContents().get(0);
+		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
+		private final Assignment cNameAssignment_1_0 = (Assignment)cGroup_1.eContents().get(0);
+		private final RuleCall cNameIDTerminalRuleCall_1_0_0 = (RuleCall)cNameAssignment_1_0.eContents().get(0);
+		private final Keyword cVerticalLineKeyword_1_1 = (Keyword)cGroup_1.eContents().get(1);
+		private final Assignment cOperatorAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cOperatorOperatorParserRuleCall_2_0 = (RuleCall)cOperatorAssignment_2.eContents().get(0);
 		
-		////Realisation:
-		////	{Realisation}
-		////	condition=Condition
-		////	 '->' (targets+=[TaggedOperator|ID])*
-		////;
-		////Condition returns Condition:
-		////	Or
-		////;
-		////Or returns Condition:
-		////	And ({Or.left=current} 'or' right=Or)*
-		////;
-		////And returns Condition:
-		////	Terminal ({And.left=current} 'and' right=And)*
-		////;
-		////Terminal returns Condition:
-		////	{Not} '!' content=Condition |
-		////	{FeatureRef} ref=[Variability|ID] |
-		////	'(' Condition ')'
-		////;
 		//TaggedOperator:
-		//	(tag=ID '|')? operator=Operator;
+		//	{TaggedOperator} (name=ID '|')? operator=Operator;
 		@Override public ParserRule getRule() { return rule; }
 
-		//(tag=ID '|')? operator=Operator
+		//{TaggedOperator} (name=ID '|')? operator=Operator
 		public Group getGroup() { return cGroup; }
 
-		//(tag=ID '|')?
-		public Group getGroup_0() { return cGroup_0; }
+		//{TaggedOperator}
+		public Action getTaggedOperatorAction_0() { return cTaggedOperatorAction_0; }
 
-		//tag=ID
-		public Assignment getTagAssignment_0_0() { return cTagAssignment_0_0; }
+		//(name=ID '|')?
+		public Group getGroup_1() { return cGroup_1; }
+
+		//name=ID
+		public Assignment getNameAssignment_1_0() { return cNameAssignment_1_0; }
 
 		//ID
-		public RuleCall getTagIDTerminalRuleCall_0_0_0() { return cTagIDTerminalRuleCall_0_0_0; }
+		public RuleCall getNameIDTerminalRuleCall_1_0_0() { return cNameIDTerminalRuleCall_1_0_0; }
 
 		//'|'
-		public Keyword getVerticalLineKeyword_0_1() { return cVerticalLineKeyword_0_1; }
+		public Keyword getVerticalLineKeyword_1_1() { return cVerticalLineKeyword_1_1; }
 
 		//operator=Operator
-		public Assignment getOperatorAssignment_1() { return cOperatorAssignment_1; }
+		public Assignment getOperatorAssignment_2() { return cOperatorAssignment_2; }
 
 		//Operator
-		public RuleCall getOperatorOperatorParserRuleCall_1_0() { return cOperatorOperatorParserRuleCall_1_0; }
+		public RuleCall getOperatorOperatorParserRuleCall_2_0() { return cOperatorOperatorParserRuleCall_2_0; }
 	}
 
 	public class VariabilityElements extends AbstractParserRuleElementFinder {
@@ -297,19 +481,20 @@ public class MelangeGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Assignment cOptionalAssignment_0 = (Assignment)cGroup.eContents().get(0);
 		private final Keyword cOptionalQuestionMarkKeyword_0_0 = (Keyword)cOptionalAssignment_0.eContents().get(0);
-		private final Keyword cOneOfKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Assignment cNameAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cNameIDTerminalRuleCall_2_0 = (RuleCall)cNameAssignment_2.eContents().get(0);
-		private final Keyword cLeftCurlyBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Assignment cChildrenAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cChildrenVariabilityParserRuleCall_4_0 = (RuleCall)cChildrenAssignment_4.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
+		private final Keyword cOneOfKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
+		private final Assignment cNameAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
+		private final RuleCall cNameIDTerminalRuleCall_1_1_0 = (RuleCall)cNameAssignment_1_1.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_1_2 = (Keyword)cGroup_1.eContents().get(2);
+		private final Assignment cChildrenAssignment_1_3 = (Assignment)cGroup_1.eContents().get(3);
+		private final RuleCall cChildrenVariabilityParserRuleCall_1_3_0 = (RuleCall)cChildrenAssignment_1_3.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_1_4 = (Keyword)cGroup_1.eContents().get(4);
 		
 		//OneOf:
-		//	optional?='?'? 'oneOf' name=ID '{' children+=Variability* '}';
+		//	optional?='?'? (=> 'oneOf' name=ID '{' children+=Variability* '}');
 		@Override public ParserRule getRule() { return rule; }
 
-		//optional?='?'? 'oneOf' name=ID '{' children+=Variability* '}'
+		//optional?='?'? (=> 'oneOf' name=ID '{' children+=Variability* '}')
 		public Group getGroup() { return cGroup; }
 
 		//optional?='?'?
@@ -318,26 +503,29 @@ public class MelangeGrammarAccess extends AbstractGrammarElementFinder {
 		//'?'
 		public Keyword getOptionalQuestionMarkKeyword_0_0() { return cOptionalQuestionMarkKeyword_0_0; }
 
-		//'oneOf'
-		public Keyword getOneOfKeyword_1() { return cOneOfKeyword_1; }
+		//=> 'oneOf' name=ID '{' children+=Variability* '}'
+		public Group getGroup_1() { return cGroup_1; }
+
+		//=> 'oneOf'
+		public Keyword getOneOfKeyword_1_0() { return cOneOfKeyword_1_0; }
 
 		//name=ID
-		public Assignment getNameAssignment_2() { return cNameAssignment_2; }
+		public Assignment getNameAssignment_1_1() { return cNameAssignment_1_1; }
 
 		//ID
-		public RuleCall getNameIDTerminalRuleCall_2_0() { return cNameIDTerminalRuleCall_2_0; }
+		public RuleCall getNameIDTerminalRuleCall_1_1_0() { return cNameIDTerminalRuleCall_1_1_0; }
 
 		//'{'
-		public Keyword getLeftCurlyBracketKeyword_3() { return cLeftCurlyBracketKeyword_3; }
+		public Keyword getLeftCurlyBracketKeyword_1_2() { return cLeftCurlyBracketKeyword_1_2; }
 
 		//children+=Variability*
-		public Assignment getChildrenAssignment_4() { return cChildrenAssignment_4; }
+		public Assignment getChildrenAssignment_1_3() { return cChildrenAssignment_1_3; }
 
 		//Variability
-		public RuleCall getChildrenVariabilityParserRuleCall_4_0() { return cChildrenVariabilityParserRuleCall_4_0; }
+		public RuleCall getChildrenVariabilityParserRuleCall_1_3_0() { return cChildrenVariabilityParserRuleCall_1_3_0; }
 
 		//'}'
-		public Keyword getRightCurlyBracketKeyword_5() { return cRightCurlyBracketKeyword_5; }
+		public Keyword getRightCurlyBracketKeyword_1_4() { return cRightCurlyBracketKeyword_1_4; }
 	}
 
 	public class SomeOfElements extends AbstractParserRuleElementFinder {
@@ -345,19 +533,20 @@ public class MelangeGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Assignment cOptionalAssignment_0 = (Assignment)cGroup.eContents().get(0);
 		private final Keyword cOptionalQuestionMarkKeyword_0_0 = (Keyword)cOptionalAssignment_0.eContents().get(0);
-		private final Keyword cSomeOfKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Assignment cNameAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cNameIDTerminalRuleCall_2_0 = (RuleCall)cNameAssignment_2.eContents().get(0);
-		private final Keyword cLeftCurlyBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Assignment cChildrenAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cChildrenVariabilityParserRuleCall_4_0 = (RuleCall)cChildrenAssignment_4.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
+		private final Keyword cSomeOfKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
+		private final Assignment cNameAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
+		private final RuleCall cNameIDTerminalRuleCall_1_1_0 = (RuleCall)cNameAssignment_1_1.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_1_2 = (Keyword)cGroup_1.eContents().get(2);
+		private final Assignment cChildrenAssignment_1_3 = (Assignment)cGroup_1.eContents().get(3);
+		private final RuleCall cChildrenVariabilityParserRuleCall_1_3_0 = (RuleCall)cChildrenAssignment_1_3.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_1_4 = (Keyword)cGroup_1.eContents().get(4);
 		
 		//SomeOf:
-		//	optional?='?'? 'someOf' name=ID '{' children+=Variability* '}';
+		//	optional?='?'? (=> 'someOf' name=ID '{' children+=Variability* '}');
 		@Override public ParserRule getRule() { return rule; }
 
-		//optional?='?'? 'someOf' name=ID '{' children+=Variability* '}'
+		//optional?='?'? (=> 'someOf' name=ID '{' children+=Variability* '}')
 		public Group getGroup() { return cGroup; }
 
 		//optional?='?'?
@@ -366,26 +555,29 @@ public class MelangeGrammarAccess extends AbstractGrammarElementFinder {
 		//'?'
 		public Keyword getOptionalQuestionMarkKeyword_0_0() { return cOptionalQuestionMarkKeyword_0_0; }
 
-		//'someOf'
-		public Keyword getSomeOfKeyword_1() { return cSomeOfKeyword_1; }
+		//=> 'someOf' name=ID '{' children+=Variability* '}'
+		public Group getGroup_1() { return cGroup_1; }
+
+		//=> 'someOf'
+		public Keyword getSomeOfKeyword_1_0() { return cSomeOfKeyword_1_0; }
 
 		//name=ID
-		public Assignment getNameAssignment_2() { return cNameAssignment_2; }
+		public Assignment getNameAssignment_1_1() { return cNameAssignment_1_1; }
 
 		//ID
-		public RuleCall getNameIDTerminalRuleCall_2_0() { return cNameIDTerminalRuleCall_2_0; }
+		public RuleCall getNameIDTerminalRuleCall_1_1_0() { return cNameIDTerminalRuleCall_1_1_0; }
 
 		//'{'
-		public Keyword getLeftCurlyBracketKeyword_3() { return cLeftCurlyBracketKeyword_3; }
+		public Keyword getLeftCurlyBracketKeyword_1_2() { return cLeftCurlyBracketKeyword_1_2; }
 
 		//children+=Variability*
-		public Assignment getChildrenAssignment_4() { return cChildrenAssignment_4; }
+		public Assignment getChildrenAssignment_1_3() { return cChildrenAssignment_1_3; }
 
 		//Variability
-		public RuleCall getChildrenVariabilityParserRuleCall_4_0() { return cChildrenVariabilityParserRuleCall_4_0; }
+		public RuleCall getChildrenVariabilityParserRuleCall_1_3_0() { return cChildrenVariabilityParserRuleCall_1_3_0; }
 
 		//'}'
-		public Keyword getRightCurlyBracketKeyword_5() { return cRightCurlyBracketKeyword_5; }
+		public Keyword getRightCurlyBracketKeyword_1_4() { return cRightCurlyBracketKeyword_1_4; }
 	}
 
 	public class LanguageElements extends AbstractParserRuleElementFinder {
@@ -1925,6 +2117,11 @@ public class MelangeGrammarAccess extends AbstractGrammarElementFinder {
 	private final ElementElements pElement;
 	private final TransformationDeclElements pTransformationDecl;
 	private final LanguageConcernElements pLanguageConcern;
+	private final RealisationElements pRealisation;
+	private final ConditionElements pCondition;
+	private final OrElements pOr;
+	private final AndElements pAnd;
+	private final TerminalElements pTerminal;
 	private final TaggedOperatorElements pTaggedOperator;
 	private final VariabilityElements pVariability;
 	private final FeatureElements pFeature;
@@ -1968,6 +2165,11 @@ public class MelangeGrammarAccess extends AbstractGrammarElementFinder {
 		this.pElement = new ElementElements();
 		this.pTransformationDecl = new TransformationDeclElements();
 		this.pLanguageConcern = new LanguageConcernElements();
+		this.pRealisation = new RealisationElements();
+		this.pCondition = new ConditionElements();
+		this.pOr = new OrElements();
+		this.pAnd = new AndElements();
+		this.pTerminal = new TerminalElements();
 		this.pTaggedOperator = new TaggedOperatorElements();
 		this.pVariability = new VariabilityElements();
 		this.pFeature = new FeatureElements();
@@ -2062,8 +2264,7 @@ public class MelangeGrammarAccess extends AbstractGrammarElementFinder {
 	//LanguageConcern:
 	//	'concern' name=ValidID '{'
 	//	'variability' '=' vm=Variability
-	//	//		(realisations+= Realisation)
-	//
+	//	realisations+=Realisation*
 	//	operators+=TaggedOperator*
 	//	'}';
 	public LanguageConcernElements getLanguageConcernAccess() {
@@ -2074,27 +2275,60 @@ public class MelangeGrammarAccess extends AbstractGrammarElementFinder {
 		return getLanguageConcernAccess().getRule();
 	}
 
-	////Realisation:
-	////	{Realisation}
-	////	condition=Condition
-	////	 '->' (targets+=[TaggedOperator|ID])*
-	////;
-	////Condition returns Condition:
-	////	Or
-	////;
-	////Or returns Condition:
-	////	And ({Or.left=current} 'or' right=Or)*
-	////;
-	////And returns Condition:
-	////	Terminal ({And.left=current} 'and' right=And)*
-	////;
-	////Terminal returns Condition:
-	////	{Not} '!' content=Condition |
-	////	{FeatureRef} ref=[Variability|ID] |
-	////	'(' Condition ')'
-	////;
+	//Realisation:
+	//	{Realisation} condition=Condition
+	//	'->' targets+=[TaggedOperator]*;
+	public RealisationElements getRealisationAccess() {
+		return pRealisation;
+	}
+	
+	public ParserRule getRealisationRule() {
+		return getRealisationAccess().getRule();
+	}
+
+	//Condition:
+	//	Or;
+	public ConditionElements getConditionAccess() {
+		return pCondition;
+	}
+	
+	public ParserRule getConditionRule() {
+		return getConditionAccess().getRule();
+	}
+
+	//Or Condition:
+	//	And ({Or.left=current} 'or' right=Or)*;
+	public OrElements getOrAccess() {
+		return pOr;
+	}
+	
+	public ParserRule getOrRule() {
+		return getOrAccess().getRule();
+	}
+
+	//And Condition:
+	//	Terminal ({And.left=current} 'and' right=And)*;
+	public AndElements getAndAccess() {
+		return pAnd;
+	}
+	
+	public ParserRule getAndRule() {
+		return getAndAccess().getRule();
+	}
+
+	//Terminal Condition:
+	//	{Not} '!' content=Condition | {FeatureRef} ref=[Variability] |
+	//	'(' Condition ')';
+	public TerminalElements getTerminalAccess() {
+		return pTerminal;
+	}
+	
+	public ParserRule getTerminalRule() {
+		return getTerminalAccess().getRule();
+	}
+
 	//TaggedOperator:
-	//	(tag=ID '|')? operator=Operator;
+	//	{TaggedOperator} (name=ID '|')? operator=Operator;
 	public TaggedOperatorElements getTaggedOperatorAccess() {
 		return pTaggedOperator;
 	}
@@ -2124,7 +2358,7 @@ public class MelangeGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//OneOf:
-	//	optional?='?'? 'oneOf' name=ID '{' children+=Variability* '}';
+	//	optional?='?'? (=> 'oneOf' name=ID '{' children+=Variability* '}');
 	public OneOfElements getOneOfAccess() {
 		return pOneOf;
 	}
@@ -2134,7 +2368,7 @@ public class MelangeGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//SomeOf:
-	//	optional?='?'? 'someOf' name=ID '{' children+=Variability* '}';
+	//	optional?='?'? (=> 'someOf' name=ID '{' children+=Variability* '}');
 	public SomeOfElements getSomeOfAccess() {
 		return pSomeOf;
 	}

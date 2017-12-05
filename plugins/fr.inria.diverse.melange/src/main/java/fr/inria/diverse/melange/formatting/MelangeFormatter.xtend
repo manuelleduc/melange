@@ -32,7 +32,7 @@ class MelangeFormatter extends AbstractDeclarativeFormatter {
 		// LanguageConcern
 		{
 			val lcob = languageConcernAccess.leftCurlyBracketKeyword_2
-			val lccb = languageConcernAccess.rightCurlyBracketKeyword_7
+			val lccb = languageConcernAccess.rightCurlyBracketKeyword_8
 			c.setIndentation(lcob, lccb)
 			c.setLinewrap().after(lcob)
 			c.setLinewrap(2).after(lccb)
@@ -40,21 +40,21 @@ class MelangeFormatter extends AbstractDeclarativeFormatter {
 
 		// variability
 		{
-			val ooob = oneOfAccess.leftCurlyBracketKeyword_3
-			val oocb = oneOfAccess.rightCurlyBracketKeyword_5
+			val ooob = oneOfAccess.leftCurlyBracketKeyword_1_2
+			val oocb = oneOfAccess.rightCurlyBracketKeyword_1_4
 			c.setIndentation(ooob, oocb)
 			c.setLinewrap().after(ooob)
 			c.setLinewrap().after(oocb)
-			c.setLinewrap.after(oneOfAccess.childrenAssignment_4)
+			c.setLinewrap.after(oneOfAccess.childrenAssignment_1_3)
 		}
 
 		{
-			val soob = someOfAccess.leftCurlyBracketKeyword_3
-			val socb = someOfAccess.rightCurlyBracketKeyword_5
+			val soob = someOfAccess.leftCurlyBracketKeyword_1_2
+			val socb = someOfAccess.rightCurlyBracketKeyword_1_4
 			c.setIndentation(soob, socb)
 			c.setLinewrap().after(soob)
 			c.setLinewrap().after(socb)
-			c.setLinewrap.after(someOfAccess.childrenAssignment_4)
+			c.setLinewrap.after(someOfAccess.childrenAssignment_1_3)
 		}
 
 		c.setNoSpace.after(oneOfAccess.optionalQuestionMarkKeyword_0_0)

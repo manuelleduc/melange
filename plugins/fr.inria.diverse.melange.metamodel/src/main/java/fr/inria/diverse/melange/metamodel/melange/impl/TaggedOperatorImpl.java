@@ -32,7 +32,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * </p>
  * <ul>
  *   <li>{@link fr.inria.diverse.melange.metamodel.melange.impl.TaggedOperatorImpl#getOperator <em>Operator</em>}</li>
- *   <li>{@link fr.inria.diverse.melange.metamodel.melange.impl.TaggedOperatorImpl#getTag <em>Tag</em>}</li>
+ *   <li>{@link fr.inria.diverse.melange.metamodel.melange.impl.TaggedOperatorImpl#getName <em>Name</em>}</li>
  * </ul>
  *
  * @generated
@@ -49,23 +49,24 @@ public class TaggedOperatorImpl extends MinimalEObjectImpl.Container implements 
 	protected Operator operator;
 
 	/**
-	 * The default value of the '{@link #getTag() <em>Tag</em>}' attribute.
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getTag()
+	 * @see #getName()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String TAG_EDEFAULT = null;
+	protected static final String NAME_EDEFAULT = null;
+
 	/**
-	 * The cached value of the '{@link #getTag() <em>Tag</em>}' attribute.
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getTag()
+	 * @see #getName()
 	 * @generated
 	 * @ordered
 	 */
-	protected String tag = TAG_EDEFAULT;
+	protected String name = NAME_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -134,8 +135,8 @@ public class TaggedOperatorImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getTag() {
-		return tag;
+	public String getName() {
+		return name;
 	}
 
 	/**
@@ -143,11 +144,11 @@ public class TaggedOperatorImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setTag(String newTag) {
-		String oldTag = tag;
-		tag = newTag;
+	public void setName(String newName) {
+		String oldName = name;
+		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MelangePackage.TAGGED_OPERATOR__TAG, oldTag, tag));
+			eNotify(new ENotificationImpl(this, Notification.SET, MelangePackage.TAGGED_OPERATOR__NAME, oldName, name));
 	}
 
 	/**
@@ -174,8 +175,8 @@ public class TaggedOperatorImpl extends MinimalEObjectImpl.Container implements 
 		switch (featureID) {
 			case MelangePackage.TAGGED_OPERATOR__OPERATOR:
 				return getOperator();
-			case MelangePackage.TAGGED_OPERATOR__TAG:
-				return getTag();
+			case MelangePackage.TAGGED_OPERATOR__NAME:
+				return getName();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -191,8 +192,8 @@ public class TaggedOperatorImpl extends MinimalEObjectImpl.Container implements 
 			case MelangePackage.TAGGED_OPERATOR__OPERATOR:
 				setOperator((Operator)newValue);
 				return;
-			case MelangePackage.TAGGED_OPERATOR__TAG:
-				setTag((String)newValue);
+			case MelangePackage.TAGGED_OPERATOR__NAME:
+				setName((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -209,8 +210,8 @@ public class TaggedOperatorImpl extends MinimalEObjectImpl.Container implements 
 			case MelangePackage.TAGGED_OPERATOR__OPERATOR:
 				setOperator((Operator)null);
 				return;
-			case MelangePackage.TAGGED_OPERATOR__TAG:
-				setTag(TAG_EDEFAULT);
+			case MelangePackage.TAGGED_OPERATOR__NAME:
+				setName(NAME_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -226,8 +227,8 @@ public class TaggedOperatorImpl extends MinimalEObjectImpl.Container implements 
 		switch (featureID) {
 			case MelangePackage.TAGGED_OPERATOR__OPERATOR:
 				return operator != null;
-			case MelangePackage.TAGGED_OPERATOR__TAG:
-				return TAG_EDEFAULT == null ? tag != null : !TAG_EDEFAULT.equals(tag);
+			case MelangePackage.TAGGED_OPERATOR__NAME:
+				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -242,8 +243,8 @@ public class TaggedOperatorImpl extends MinimalEObjectImpl.Container implements 
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (tag: ");
-		result.append(tag);
+		result.append(" (name: ");
+		result.append(name);
 		result.append(')');
 		return result.toString();
 	}

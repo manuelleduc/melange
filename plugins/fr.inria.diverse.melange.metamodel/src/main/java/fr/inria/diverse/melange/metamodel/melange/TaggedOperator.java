@@ -23,7 +23,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link fr.inria.diverse.melange.metamodel.melange.TaggedOperator#getOperator <em>Operator</em>}</li>
- *   <li>{@link fr.inria.diverse.melange.metamodel.melange.TaggedOperator#getTag <em>Tag</em>}</li>
+ *   <li>{@link fr.inria.diverse.melange.metamodel.melange.TaggedOperator#getName <em>Name</em>}</li>
  * </ul>
  *
  * @see fr.inria.diverse.melange.metamodel.melange.MelangePackage#getTaggedOperator()
@@ -58,29 +58,29 @@ public interface TaggedOperator extends EObject {
 	void setOperator(Operator value);
 
 	/**
-	 * Returns the value of the '<em><b>Tag</b></em>' attribute.
+	 * Returns the value of the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Tag</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Name</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Tag</em>' attribute.
-	 * @see #setTag(String)
-	 * @see fr.inria.diverse.melange.metamodel.melange.MelangePackage#getTaggedOperator_Tag()
+	 * @return the value of the '<em>Name</em>' attribute.
+	 * @see #setName(String)
+	 * @see fr.inria.diverse.melange.metamodel.melange.MelangePackage#getTaggedOperator_Name()
 	 * @model
 	 * @generated
 	 */
-	String getTag();
+	String getName();
 
 	/**
-	 * Sets the value of the '{@link fr.inria.diverse.melange.metamodel.melange.TaggedOperator#getTag <em>Tag</em>}' attribute.
+	 * Sets the value of the '{@link fr.inria.diverse.melange.metamodel.melange.TaggedOperator#getName <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Tag</em>' attribute.
-	 * @see #getTag()
+	 * @param value the new value of the '<em>Name</em>' attribute.
+	 * @see #getName()
 	 * @generated
 	 */
-	void setTag(String value);
+	void setName(String value);
 
 } // TaggedOperator

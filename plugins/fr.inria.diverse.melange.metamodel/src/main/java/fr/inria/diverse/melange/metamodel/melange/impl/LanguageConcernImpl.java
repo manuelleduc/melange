@@ -13,6 +13,7 @@ package fr.inria.diverse.melange.metamodel.melange.impl;
 import fr.inria.diverse.melange.metamodel.melange.LanguageConcern;
 import fr.inria.diverse.melange.metamodel.melange.MelangePackage;
 
+import fr.inria.diverse.melange.metamodel.melange.Realisation;
 import fr.inria.diverse.melange.metamodel.melange.TaggedOperator;
 import fr.inria.diverse.melange.metamodel.melange.Variability;
 import java.util.Collection;
@@ -35,6 +36,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <ul>
  *   <li>{@link fr.inria.diverse.melange.metamodel.melange.impl.LanguageConcernImpl#getVm <em>Vm</em>}</li>
  *   <li>{@link fr.inria.diverse.melange.metamodel.melange.impl.LanguageConcernImpl#getOperators <em>Operators</em>}</li>
+ *   <li>{@link fr.inria.diverse.melange.metamodel.melange.impl.LanguageConcernImpl#getRealisations <em>Realisations</em>}</li>
  * </ul>
  *
  * @generated
@@ -59,6 +61,16 @@ public class LanguageConcernImpl extends NamedElementImpl implements LanguageCon
 	 * @ordered
 	 */
 	protected EList<TaggedOperator> operators;
+
+	/**
+	 * The cached value of the '{@link #getRealisations() <em>Realisations</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRealisations()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Realisation> realisations;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -139,6 +151,18 @@ public class LanguageConcernImpl extends NamedElementImpl implements LanguageCon
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<Realisation> getRealisations() {
+		if (realisations == null) {
+			realisations = new EObjectContainmentEList<Realisation>(Realisation.class, this, MelangePackage.LANGUAGE_CONCERN__REALISATIONS);
+		}
+		return realisations;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -146,6 +170,8 @@ public class LanguageConcernImpl extends NamedElementImpl implements LanguageCon
 				return basicSetVm(null, msgs);
 			case MelangePackage.LANGUAGE_CONCERN__OPERATORS:
 				return ((InternalEList<?>)getOperators()).basicRemove(otherEnd, msgs);
+			case MelangePackage.LANGUAGE_CONCERN__REALISATIONS:
+				return ((InternalEList<?>)getRealisations()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -162,6 +188,8 @@ public class LanguageConcernImpl extends NamedElementImpl implements LanguageCon
 				return getVm();
 			case MelangePackage.LANGUAGE_CONCERN__OPERATORS:
 				return getOperators();
+			case MelangePackage.LANGUAGE_CONCERN__REALISATIONS:
+				return getRealisations();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -182,6 +210,10 @@ public class LanguageConcernImpl extends NamedElementImpl implements LanguageCon
 				getOperators().clear();
 				getOperators().addAll((Collection<? extends TaggedOperator>)newValue);
 				return;
+			case MelangePackage.LANGUAGE_CONCERN__REALISATIONS:
+				getRealisations().clear();
+				getRealisations().addAll((Collection<? extends Realisation>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -200,6 +232,9 @@ public class LanguageConcernImpl extends NamedElementImpl implements LanguageCon
 			case MelangePackage.LANGUAGE_CONCERN__OPERATORS:
 				getOperators().clear();
 				return;
+			case MelangePackage.LANGUAGE_CONCERN__REALISATIONS:
+				getRealisations().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -216,6 +251,8 @@ public class LanguageConcernImpl extends NamedElementImpl implements LanguageCon
 				return vm != null;
 			case MelangePackage.LANGUAGE_CONCERN__OPERATORS:
 				return operators != null && !operators.isEmpty();
+			case MelangePackage.LANGUAGE_CONCERN__REALISATIONS:
+				return realisations != null && !realisations.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

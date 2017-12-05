@@ -2,12 +2,15 @@
  */
 package fr.inria.diverse.melange.metamodel.melange.impl;
 
+import fr.inria.diverse.melange.metamodel.melange.And;
 import fr.inria.diverse.melange.metamodel.melange.Annotation;
 import fr.inria.diverse.melange.metamodel.melange.Aspect;
 import fr.inria.diverse.melange.metamodel.melange.ClassBinding;
+import fr.inria.diverse.melange.metamodel.melange.Condition;
 import fr.inria.diverse.melange.metamodel.melange.Element;
 import fr.inria.diverse.melange.metamodel.melange.ExternalLanguage;
 import fr.inria.diverse.melange.metamodel.melange.Feature;
+import fr.inria.diverse.melange.metamodel.melange.FeatureRef;
 import fr.inria.diverse.melange.metamodel.melange.Import;
 import fr.inria.diverse.melange.metamodel.melange.ImportDsl;
 import fr.inria.diverse.melange.metamodel.melange.Inheritance;
@@ -23,10 +26,13 @@ import fr.inria.diverse.melange.metamodel.melange.ModelType;
 import fr.inria.diverse.melange.metamodel.melange.ModelTypingSpace;
 import fr.inria.diverse.melange.metamodel.melange.ModelingElement;
 import fr.inria.diverse.melange.metamodel.melange.NamedElement;
+import fr.inria.diverse.melange.metamodel.melange.Not;
 import fr.inria.diverse.melange.metamodel.melange.OneOf;
 import fr.inria.diverse.melange.metamodel.melange.Operator;
+import fr.inria.diverse.melange.metamodel.melange.Or;
 import fr.inria.diverse.melange.metamodel.melange.PackageBinding;
 import fr.inria.diverse.melange.metamodel.melange.PropertyBinding;
+import fr.inria.diverse.melange.metamodel.melange.Realisation;
 import fr.inria.diverse.melange.metamodel.melange.ResourceType;
 import fr.inria.diverse.melange.metamodel.melange.Slice;
 import fr.inria.diverse.melange.metamodel.melange.SomeOf;
@@ -276,6 +282,48 @@ public class MelangePackageImpl extends EPackageImpl implements MelangePackage {
 	 * @generated
 	 */
 	private EClass taggedOperatorEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass realisationEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass conditionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass orEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass andEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass notEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass featureRefEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -1176,6 +1224,15 @@ public class MelangePackageImpl extends EPackageImpl implements MelangePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getLanguageConcern_Realisations() {
+		return (EReference)languageConcernEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getVariability() {
 		return variabilityEClass;
 	}
@@ -1257,8 +1314,134 @@ public class MelangePackageImpl extends EPackageImpl implements MelangePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getTaggedOperator_Tag() {
+	public EAttribute getTaggedOperator_Name() {
 		return (EAttribute)taggedOperatorEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getRealisation() {
+		return realisationEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getRealisation_Condition() {
+		return (EReference)realisationEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getRealisation_Targets() {
+		return (EReference)realisationEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getCondition() {
+		return conditionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getOr() {
+		return orEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getOr_Left() {
+		return (EReference)orEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getOr_Right() {
+		return (EReference)orEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getAnd() {
+		return andEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getAnd_Left() {
+		return (EReference)andEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getAnd_Right() {
+		return (EReference)andEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getNot() {
+		return notEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getNot_Content() {
+		return (EReference)notEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getFeatureRef() {
+		return featureRefEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getFeatureRef_Ref() {
+		return (EReference)featureRefEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1414,6 +1597,7 @@ public class MelangePackageImpl extends EPackageImpl implements MelangePackage {
 		languageConcernEClass = createEClass(LANGUAGE_CONCERN);
 		createEReference(languageConcernEClass, LANGUAGE_CONCERN__VM);
 		createEReference(languageConcernEClass, LANGUAGE_CONCERN__OPERATORS);
+		createEReference(languageConcernEClass, LANGUAGE_CONCERN__REALISATIONS);
 
 		variabilityEClass = createEClass(VARIABILITY);
 		createEAttribute(variabilityEClass, VARIABILITY__OPTIONAL);
@@ -1428,7 +1612,27 @@ public class MelangePackageImpl extends EPackageImpl implements MelangePackage {
 
 		taggedOperatorEClass = createEClass(TAGGED_OPERATOR);
 		createEReference(taggedOperatorEClass, TAGGED_OPERATOR__OPERATOR);
-		createEAttribute(taggedOperatorEClass, TAGGED_OPERATOR__TAG);
+		createEAttribute(taggedOperatorEClass, TAGGED_OPERATOR__NAME);
+
+		realisationEClass = createEClass(REALISATION);
+		createEReference(realisationEClass, REALISATION__CONDITION);
+		createEReference(realisationEClass, REALISATION__TARGETS);
+
+		conditionEClass = createEClass(CONDITION);
+
+		orEClass = createEClass(OR);
+		createEReference(orEClass, OR__LEFT);
+		createEReference(orEClass, OR__RIGHT);
+
+		andEClass = createEClass(AND);
+		createEReference(andEClass, AND__LEFT);
+		createEReference(andEClass, AND__RIGHT);
+
+		notEClass = createEClass(NOT);
+		createEReference(notEClass, NOT__CONTENT);
+
+		featureRefEClass = createEClass(FEATURE_REF);
+		createEReference(featureRefEClass, FEATURE_REF__REF);
 
 		// Create enums
 		resourceTypeEEnum = createEEnum(RESOURCE_TYPE);
@@ -1491,6 +1695,10 @@ public class MelangePackageImpl extends EPackageImpl implements MelangePackage {
 		featureEClass.getESuperTypes().add(this.getVariability());
 		oneOfEClass.getESuperTypes().add(this.getVariability());
 		someOfEClass.getESuperTypes().add(this.getVariability());
+		orEClass.getESuperTypes().add(this.getCondition());
+		andEClass.getESuperTypes().add(this.getCondition());
+		notEClass.getESuperTypes().add(this.getCondition());
+		featureRefEClass.getESuperTypes().add(this.getCondition());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(modelTypingSpaceEClass, ModelTypingSpace.class, "ModelTypingSpace", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1609,6 +1817,7 @@ public class MelangePackageImpl extends EPackageImpl implements MelangePackage {
 		initEClass(languageConcernEClass, LanguageConcern.class, "LanguageConcern", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getLanguageConcern_Vm(), this.getVariability(), null, "vm", null, 1, 1, LanguageConcern.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getLanguageConcern_Operators(), this.getTaggedOperator(), null, "operators", null, 0, -1, LanguageConcern.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getLanguageConcern_Realisations(), this.getRealisation(), null, "realisations", null, 0, -1, LanguageConcern.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(variabilityEClass, Variability.class, "Variability", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getVariability_Optional(), ecorePackage.getEBoolean(), "optional", null, 0, 1, Variability.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1623,7 +1832,27 @@ public class MelangePackageImpl extends EPackageImpl implements MelangePackage {
 
 		initEClass(taggedOperatorEClass, TaggedOperator.class, "TaggedOperator", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getTaggedOperator_Operator(), this.getOperator(), null, "operator", null, 1, 1, TaggedOperator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getTaggedOperator_Tag(), theEcorePackage.getEString(), "tag", null, 0, 1, TaggedOperator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTaggedOperator_Name(), theEcorePackage.getEString(), "name", null, 0, 1, TaggedOperator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(realisationEClass, Realisation.class, "Realisation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getRealisation_Condition(), this.getCondition(), null, "condition", null, 1, 1, Realisation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getRealisation_Targets(), this.getTaggedOperator(), null, "targets", null, 0, -1, Realisation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(conditionEClass, Condition.class, "Condition", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(orEClass, Or.class, "Or", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getOr_Left(), this.getCondition(), null, "left", null, 1, 1, Or.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getOr_Right(), this.getCondition(), null, "right", null, 1, 1, Or.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(andEClass, And.class, "And", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getAnd_Left(), this.getCondition(), null, "left", null, 1, 1, And.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAnd_Right(), this.getCondition(), null, "right", null, 1, 1, And.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(notEClass, Not.class, "Not", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getNot_Content(), this.getCondition(), null, "content", null, 1, 1, Not.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(featureRefEClass, FeatureRef.class, "FeatureRef", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getFeatureRef_Ref(), this.getVariability(), null, "ref", null, 1, 1, FeatureRef.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(resourceTypeEEnum, ResourceType.class, "ResourceType");

@@ -1857,13 +1857,22 @@ public interface MelangePackage extends EPackage {
 	int LANGUAGE_CONCERN__OPERATORS = NAMED_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
+	 * The feature id for the '<em><b>Realisations</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LANGUAGE_CONCERN__REALISATIONS = NAMED_ELEMENT_FEATURE_COUNT + 2;
+
+	/**
 	 * The number of structural features of the '<em>Language Concern</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LANGUAGE_CONCERN_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 2;
+	int LANGUAGE_CONCERN_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Language Concern</em>' class.
@@ -2096,13 +2105,13 @@ public interface MelangePackage extends EPackage {
 	int TAGGED_OPERATOR__OPERATOR = 0;
 
 	/**
-	 * The feature id for the '<em><b>Tag</b></em>' attribute.
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TAGGED_OPERATOR__TAG = 1;
+	int TAGGED_OPERATOR__NAME = 1;
 
 	/**
 	 * The number of structural features of the '<em>Tagged Operator</em>' class.
@@ -2123,6 +2132,246 @@ public interface MelangePackage extends EPackage {
 	int TAGGED_OPERATOR_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link fr.inria.diverse.melange.metamodel.melange.impl.RealisationImpl <em>Realisation</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see fr.inria.diverse.melange.metamodel.melange.impl.RealisationImpl
+	 * @see fr.inria.diverse.melange.metamodel.melange.impl.MelangePackageImpl#getRealisation()
+	 * @generated
+	 */
+	int REALISATION = 31;
+
+	/**
+	 * The feature id for the '<em><b>Condition</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REALISATION__CONDITION = 0;
+
+	/**
+	 * The feature id for the '<em><b>Targets</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REALISATION__TARGETS = 1;
+
+	/**
+	 * The number of structural features of the '<em>Realisation</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REALISATION_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>Realisation</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REALISATION_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link fr.inria.diverse.melange.metamodel.melange.impl.ConditionImpl <em>Condition</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see fr.inria.diverse.melange.metamodel.melange.impl.ConditionImpl
+	 * @see fr.inria.diverse.melange.metamodel.melange.impl.MelangePackageImpl#getCondition()
+	 * @generated
+	 */
+	int CONDITION = 32;
+
+	/**
+	 * The number of structural features of the '<em>Condition</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONDITION_FEATURE_COUNT = 0;
+
+	/**
+	 * The number of operations of the '<em>Condition</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONDITION_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link fr.inria.diverse.melange.metamodel.melange.impl.OrImpl <em>Or</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see fr.inria.diverse.melange.metamodel.melange.impl.OrImpl
+	 * @see fr.inria.diverse.melange.metamodel.melange.impl.MelangePackageImpl#getOr()
+	 * @generated
+	 */
+	int OR = 33;
+
+	/**
+	 * The feature id for the '<em><b>Left</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OR__LEFT = CONDITION_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Right</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OR__RIGHT = CONDITION_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Or</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OR_FEATURE_COUNT = CONDITION_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>Or</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OR_OPERATION_COUNT = CONDITION_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link fr.inria.diverse.melange.metamodel.melange.impl.AndImpl <em>And</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see fr.inria.diverse.melange.metamodel.melange.impl.AndImpl
+	 * @see fr.inria.diverse.melange.metamodel.melange.impl.MelangePackageImpl#getAnd()
+	 * @generated
+	 */
+	int AND = 34;
+
+	/**
+	 * The feature id for the '<em><b>Left</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AND__LEFT = CONDITION_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Right</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AND__RIGHT = CONDITION_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>And</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AND_FEATURE_COUNT = CONDITION_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>And</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AND_OPERATION_COUNT = CONDITION_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link fr.inria.diverse.melange.metamodel.melange.impl.NotImpl <em>Not</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see fr.inria.diverse.melange.metamodel.melange.impl.NotImpl
+	 * @see fr.inria.diverse.melange.metamodel.melange.impl.MelangePackageImpl#getNot()
+	 * @generated
+	 */
+	int NOT = 35;
+
+	/**
+	 * The feature id for the '<em><b>Content</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NOT__CONTENT = CONDITION_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Not</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NOT_FEATURE_COUNT = CONDITION_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Not</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NOT_OPERATION_COUNT = CONDITION_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link fr.inria.diverse.melange.metamodel.melange.impl.FeatureRefImpl <em>Feature Ref</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see fr.inria.diverse.melange.metamodel.melange.impl.FeatureRefImpl
+	 * @see fr.inria.diverse.melange.metamodel.melange.impl.MelangePackageImpl#getFeatureRef()
+	 * @generated
+	 */
+	int FEATURE_REF = 36;
+
+	/**
+	 * The feature id for the '<em><b>Ref</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FEATURE_REF__REF = CONDITION_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Feature Ref</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FEATURE_REF_FEATURE_COUNT = CONDITION_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Feature Ref</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FEATURE_REF_OPERATION_COUNT = CONDITION_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link fr.inria.diverse.melange.metamodel.melange.ResourceType <em>Resource Type</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2130,7 +2379,7 @@ public interface MelangePackage extends EPackage {
 	 * @see fr.inria.diverse.melange.metamodel.melange.impl.MelangePackageImpl#getResourceType()
 	 * @generated
 	 */
-	int RESOURCE_TYPE = 31;
+	int RESOURCE_TYPE = 37;
 
 
 	/**
@@ -3109,6 +3358,17 @@ public interface MelangePackage extends EPackage {
 	EReference getLanguageConcern_Operators();
 
 	/**
+	 * Returns the meta object for the containment reference list '{@link fr.inria.diverse.melange.metamodel.melange.LanguageConcern#getRealisations <em>Realisations</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Realisations</em>'.
+	 * @see fr.inria.diverse.melange.metamodel.melange.LanguageConcern#getRealisations()
+	 * @see #getLanguageConcern()
+	 * @generated
+	 */
+	EReference getLanguageConcern_Realisations();
+
+	/**
 	 * Returns the meta object for class '{@link fr.inria.diverse.melange.metamodel.melange.Variability <em>Variability</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3203,15 +3463,163 @@ public interface MelangePackage extends EPackage {
 	EReference getTaggedOperator_Operator();
 
 	/**
-	 * Returns the meta object for the attribute '{@link fr.inria.diverse.melange.metamodel.melange.TaggedOperator#getTag <em>Tag</em>}'.
+	 * Returns the meta object for the attribute '{@link fr.inria.diverse.melange.metamodel.melange.TaggedOperator#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Tag</em>'.
-	 * @see fr.inria.diverse.melange.metamodel.melange.TaggedOperator#getTag()
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see fr.inria.diverse.melange.metamodel.melange.TaggedOperator#getName()
 	 * @see #getTaggedOperator()
 	 * @generated
 	 */
-	EAttribute getTaggedOperator_Tag();
+	EAttribute getTaggedOperator_Name();
+
+	/**
+	 * Returns the meta object for class '{@link fr.inria.diverse.melange.metamodel.melange.Realisation <em>Realisation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Realisation</em>'.
+	 * @see fr.inria.diverse.melange.metamodel.melange.Realisation
+	 * @generated
+	 */
+	EClass getRealisation();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link fr.inria.diverse.melange.metamodel.melange.Realisation#getCondition <em>Condition</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Condition</em>'.
+	 * @see fr.inria.diverse.melange.metamodel.melange.Realisation#getCondition()
+	 * @see #getRealisation()
+	 * @generated
+	 */
+	EReference getRealisation_Condition();
+
+	/**
+	 * Returns the meta object for the reference list '{@link fr.inria.diverse.melange.metamodel.melange.Realisation#getTargets <em>Targets</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Targets</em>'.
+	 * @see fr.inria.diverse.melange.metamodel.melange.Realisation#getTargets()
+	 * @see #getRealisation()
+	 * @generated
+	 */
+	EReference getRealisation_Targets();
+
+	/**
+	 * Returns the meta object for class '{@link fr.inria.diverse.melange.metamodel.melange.Condition <em>Condition</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Condition</em>'.
+	 * @see fr.inria.diverse.melange.metamodel.melange.Condition
+	 * @generated
+	 */
+	EClass getCondition();
+
+	/**
+	 * Returns the meta object for class '{@link fr.inria.diverse.melange.metamodel.melange.Or <em>Or</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Or</em>'.
+	 * @see fr.inria.diverse.melange.metamodel.melange.Or
+	 * @generated
+	 */
+	EClass getOr();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link fr.inria.diverse.melange.metamodel.melange.Or#getLeft <em>Left</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Left</em>'.
+	 * @see fr.inria.diverse.melange.metamodel.melange.Or#getLeft()
+	 * @see #getOr()
+	 * @generated
+	 */
+	EReference getOr_Left();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link fr.inria.diverse.melange.metamodel.melange.Or#getRight <em>Right</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Right</em>'.
+	 * @see fr.inria.diverse.melange.metamodel.melange.Or#getRight()
+	 * @see #getOr()
+	 * @generated
+	 */
+	EReference getOr_Right();
+
+	/**
+	 * Returns the meta object for class '{@link fr.inria.diverse.melange.metamodel.melange.And <em>And</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>And</em>'.
+	 * @see fr.inria.diverse.melange.metamodel.melange.And
+	 * @generated
+	 */
+	EClass getAnd();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link fr.inria.diverse.melange.metamodel.melange.And#getLeft <em>Left</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Left</em>'.
+	 * @see fr.inria.diverse.melange.metamodel.melange.And#getLeft()
+	 * @see #getAnd()
+	 * @generated
+	 */
+	EReference getAnd_Left();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link fr.inria.diverse.melange.metamodel.melange.And#getRight <em>Right</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Right</em>'.
+	 * @see fr.inria.diverse.melange.metamodel.melange.And#getRight()
+	 * @see #getAnd()
+	 * @generated
+	 */
+	EReference getAnd_Right();
+
+	/**
+	 * Returns the meta object for class '{@link fr.inria.diverse.melange.metamodel.melange.Not <em>Not</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Not</em>'.
+	 * @see fr.inria.diverse.melange.metamodel.melange.Not
+	 * @generated
+	 */
+	EClass getNot();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link fr.inria.diverse.melange.metamodel.melange.Not#getContent <em>Content</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Content</em>'.
+	 * @see fr.inria.diverse.melange.metamodel.melange.Not#getContent()
+	 * @see #getNot()
+	 * @generated
+	 */
+	EReference getNot_Content();
+
+	/**
+	 * Returns the meta object for class '{@link fr.inria.diverse.melange.metamodel.melange.FeatureRef <em>Feature Ref</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Feature Ref</em>'.
+	 * @see fr.inria.diverse.melange.metamodel.melange.FeatureRef
+	 * @generated
+	 */
+	EClass getFeatureRef();
+
+	/**
+	 * Returns the meta object for the reference '{@link fr.inria.diverse.melange.metamodel.melange.FeatureRef#getRef <em>Ref</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Ref</em>'.
+	 * @see fr.inria.diverse.melange.metamodel.melange.FeatureRef#getRef()
+	 * @see #getFeatureRef()
+	 * @generated
+	 */
+	EReference getFeatureRef_Ref();
 
 	/**
 	 * Returns the meta object for enum '{@link fr.inria.diverse.melange.metamodel.melange.ResourceType <em>Resource Type</em>}'.
@@ -4027,6 +4435,14 @@ public interface MelangePackage extends EPackage {
 		EReference LANGUAGE_CONCERN__OPERATORS = eINSTANCE.getLanguageConcern_Operators();
 
 		/**
+		 * The meta object literal for the '<em><b>Realisations</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference LANGUAGE_CONCERN__REALISATIONS = eINSTANCE.getLanguageConcern_Realisations();
+
+		/**
 		 * The meta object literal for the '{@link fr.inria.diverse.melange.metamodel.melange.impl.VariabilityImpl <em>Variability</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -4109,12 +4525,136 @@ public interface MelangePackage extends EPackage {
 		EReference TAGGED_OPERATOR__OPERATOR = eINSTANCE.getTaggedOperator_Operator();
 
 		/**
-		 * The meta object literal for the '<em><b>Tag</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute TAGGED_OPERATOR__TAG = eINSTANCE.getTaggedOperator_Tag();
+		EAttribute TAGGED_OPERATOR__NAME = eINSTANCE.getTaggedOperator_Name();
+
+		/**
+		 * The meta object literal for the '{@link fr.inria.diverse.melange.metamodel.melange.impl.RealisationImpl <em>Realisation</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see fr.inria.diverse.melange.metamodel.melange.impl.RealisationImpl
+		 * @see fr.inria.diverse.melange.metamodel.melange.impl.MelangePackageImpl#getRealisation()
+		 * @generated
+		 */
+		EClass REALISATION = eINSTANCE.getRealisation();
+
+		/**
+		 * The meta object literal for the '<em><b>Condition</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference REALISATION__CONDITION = eINSTANCE.getRealisation_Condition();
+
+		/**
+		 * The meta object literal for the '<em><b>Targets</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference REALISATION__TARGETS = eINSTANCE.getRealisation_Targets();
+
+		/**
+		 * The meta object literal for the '{@link fr.inria.diverse.melange.metamodel.melange.impl.ConditionImpl <em>Condition</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see fr.inria.diverse.melange.metamodel.melange.impl.ConditionImpl
+		 * @see fr.inria.diverse.melange.metamodel.melange.impl.MelangePackageImpl#getCondition()
+		 * @generated
+		 */
+		EClass CONDITION = eINSTANCE.getCondition();
+
+		/**
+		 * The meta object literal for the '{@link fr.inria.diverse.melange.metamodel.melange.impl.OrImpl <em>Or</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see fr.inria.diverse.melange.metamodel.melange.impl.OrImpl
+		 * @see fr.inria.diverse.melange.metamodel.melange.impl.MelangePackageImpl#getOr()
+		 * @generated
+		 */
+		EClass OR = eINSTANCE.getOr();
+
+		/**
+		 * The meta object literal for the '<em><b>Left</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference OR__LEFT = eINSTANCE.getOr_Left();
+
+		/**
+		 * The meta object literal for the '<em><b>Right</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference OR__RIGHT = eINSTANCE.getOr_Right();
+
+		/**
+		 * The meta object literal for the '{@link fr.inria.diverse.melange.metamodel.melange.impl.AndImpl <em>And</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see fr.inria.diverse.melange.metamodel.melange.impl.AndImpl
+		 * @see fr.inria.diverse.melange.metamodel.melange.impl.MelangePackageImpl#getAnd()
+		 * @generated
+		 */
+		EClass AND = eINSTANCE.getAnd();
+
+		/**
+		 * The meta object literal for the '<em><b>Left</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference AND__LEFT = eINSTANCE.getAnd_Left();
+
+		/**
+		 * The meta object literal for the '<em><b>Right</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference AND__RIGHT = eINSTANCE.getAnd_Right();
+
+		/**
+		 * The meta object literal for the '{@link fr.inria.diverse.melange.metamodel.melange.impl.NotImpl <em>Not</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see fr.inria.diverse.melange.metamodel.melange.impl.NotImpl
+		 * @see fr.inria.diverse.melange.metamodel.melange.impl.MelangePackageImpl#getNot()
+		 * @generated
+		 */
+		EClass NOT = eINSTANCE.getNot();
+
+		/**
+		 * The meta object literal for the '<em><b>Content</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference NOT__CONTENT = eINSTANCE.getNot_Content();
+
+		/**
+		 * The meta object literal for the '{@link fr.inria.diverse.melange.metamodel.melange.impl.FeatureRefImpl <em>Feature Ref</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see fr.inria.diverse.melange.metamodel.melange.impl.FeatureRefImpl
+		 * @see fr.inria.diverse.melange.metamodel.melange.impl.MelangePackageImpl#getFeatureRef()
+		 * @generated
+		 */
+		EClass FEATURE_REF = eINSTANCE.getFeatureRef();
+
+		/**
+		 * The meta object literal for the '<em><b>Ref</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference FEATURE_REF__REF = eINSTANCE.getFeatureRef_Ref();
 
 		/**
 		 * The meta object literal for the '{@link fr.inria.diverse.melange.metamodel.melange.ResourceType <em>Resource Type</em>}' enum.

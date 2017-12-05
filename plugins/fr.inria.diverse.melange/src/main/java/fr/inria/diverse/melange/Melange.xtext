@@ -32,38 +32,39 @@ LanguageConcern:
 	'concern' name = ValidID '{'
 		'variability' '=' vm=Variability
 		
-//		(realisations+= Realisation)
+		(realisations+= Realisation)*
 		
 		(operators += TaggedOperator)*
 	'}'
 ;
 
-//Realisation:
-//	{Realisation}
-//	condition=Condition
-//	 '->' (targets+=[TaggedOperator|ID])*
-//;
+Realisation:
+	{Realisation}
+	condition=Condition
+	 '->' (targets+=[TaggedOperator|ID])*
+;
 
-//Condition returns Condition:
-//	Or
-//;
+Condition returns Condition:
+	Or
+;
 
-//Or returns Condition:
-//	And ({Or.left=current} 'or' right=Or)*
-//;
+Or returns Condition:
+	And ({Or.left=current} 'or' right=Or)*
+;
 
-//And returns Condition:
-//	Terminal ({And.left=current} 'and' right=And)*
-//;
+And returns Condition:
+	Terminal ({And.left=current} 'and' right=And)*
+;
 
-//Terminal returns Condition:
-//	{Not} '!' content=Condition |
-//	{FeatureRef} ref=[Variability|ID] |
-//	'(' Condition ')'
-//;
+Terminal returns Condition:
+	{Not} '!' content=Condition |
+	{FeatureRef} ref=[Variability|ID] |
+	'(' Condition ')'
+;
 
 TaggedOperator:
-	(tag=ID '|')? operator=Operator
+	{TaggedOperator}
+	(name=ID '|')? operator=Operator
 ;
 
 Variability:
@@ -75,11 +76,11 @@ Feature:
 ;
 
 OneOf:
-	(optional?='?')? 'oneOf' name = ID '{' children+=Variability* '}'
+	(optional?='?')? (=>'oneOf' name = ID '{' children+=Variability* '}')
 ;
 
 SomeOf:
-	(optional?='?')? 'someOf' name = ID '{' children+=Variability* '}'
+	(optional?='?')? (=>'someOf' name = ID '{' children+=Variability* '}')
 ;
 
 Language:

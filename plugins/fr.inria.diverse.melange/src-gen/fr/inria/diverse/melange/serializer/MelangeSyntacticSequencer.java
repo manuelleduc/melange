@@ -34,6 +34,8 @@ public class MelangeSyntacticSequencer extends AbstractSyntacticSequencer {
 	protected AbstractElementAlias match_Merge___RenamingKeyword_2_0_LeftCurlyBracketKeyword_2_1_RightCurlyBracketKeyword_2_3__q;
 	protected AbstractElementAlias match_PackageMapping___LeftCurlyBracketKeyword_3_0_RightCurlyBracketKeyword_3_2__q;
 	protected AbstractElementAlias match_Slice___RenamingKeyword_7_0_LeftCurlyBracketKeyword_7_1_RightCurlyBracketKeyword_7_3__q;
+	protected AbstractElementAlias match_Terminal_LeftParenthesisKeyword_2_0_a;
+	protected AbstractElementAlias match_Terminal_LeftParenthesisKeyword_2_0_p;
 	protected AbstractElementAlias match_XBlockExpression_SemicolonKeyword_2_1_q;
 	protected AbstractElementAlias match_XExpressionInClosure_SemicolonKeyword_1_1_q;
 	protected AbstractElementAlias match_XFunctionTypeRef___LeftParenthesisKeyword_0_0_RightParenthesisKeyword_0_2__q;
@@ -56,6 +58,8 @@ public class MelangeSyntacticSequencer extends AbstractSyntacticSequencer {
 		match_Merge___RenamingKeyword_2_0_LeftCurlyBracketKeyword_2_1_RightCurlyBracketKeyword_2_3__q = new GroupAlias(false, true, new TokenAlias(false, false, grammarAccess.getMergeAccess().getRenamingKeyword_2_0()), new TokenAlias(false, false, grammarAccess.getMergeAccess().getLeftCurlyBracketKeyword_2_1()), new TokenAlias(false, false, grammarAccess.getMergeAccess().getRightCurlyBracketKeyword_2_3()));
 		match_PackageMapping___LeftCurlyBracketKeyword_3_0_RightCurlyBracketKeyword_3_2__q = new GroupAlias(false, true, new TokenAlias(false, false, grammarAccess.getPackageMappingAccess().getLeftCurlyBracketKeyword_3_0()), new TokenAlias(false, false, grammarAccess.getPackageMappingAccess().getRightCurlyBracketKeyword_3_2()));
 		match_Slice___RenamingKeyword_7_0_LeftCurlyBracketKeyword_7_1_RightCurlyBracketKeyword_7_3__q = new GroupAlias(false, true, new TokenAlias(false, false, grammarAccess.getSliceAccess().getRenamingKeyword_7_0()), new TokenAlias(false, false, grammarAccess.getSliceAccess().getLeftCurlyBracketKeyword_7_1()), new TokenAlias(false, false, grammarAccess.getSliceAccess().getRightCurlyBracketKeyword_7_3()));
+		match_Terminal_LeftParenthesisKeyword_2_0_a = new TokenAlias(true, true, grammarAccess.getTerminalAccess().getLeftParenthesisKeyword_2_0());
+		match_Terminal_LeftParenthesisKeyword_2_0_p = new TokenAlias(true, false, grammarAccess.getTerminalAccess().getLeftParenthesisKeyword_2_0());
 		match_XBlockExpression_SemicolonKeyword_2_1_q = new TokenAlias(false, true, grammarAccess.getXBlockExpressionAccess().getSemicolonKeyword_2_1());
 		match_XExpressionInClosure_SemicolonKeyword_1_1_q = new TokenAlias(false, true, grammarAccess.getXExpressionInClosureAccess().getSemicolonKeyword_1_1());
 		match_XFunctionTypeRef___LeftParenthesisKeyword_0_0_RightParenthesisKeyword_0_2__q = new GroupAlias(false, true, new TokenAlias(false, false, grammarAccess.getXFunctionTypeRefAccess().getLeftParenthesisKeyword_0_0()), new TokenAlias(false, false, grammarAccess.getXFunctionTypeRefAccess().getRightParenthesisKeyword_0_2()));
@@ -125,6 +129,10 @@ public class MelangeSyntacticSequencer extends AbstractSyntacticSequencer {
 				emit_PackageMapping___LeftCurlyBracketKeyword_3_0_RightCurlyBracketKeyword_3_2__q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if (match_Slice___RenamingKeyword_7_0_LeftCurlyBracketKeyword_7_1_RightCurlyBracketKeyword_7_3__q.equals(syntax))
 				emit_Slice___RenamingKeyword_7_0_LeftCurlyBracketKeyword_7_1_RightCurlyBracketKeyword_7_3__q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_Terminal_LeftParenthesisKeyword_2_0_a.equals(syntax))
+				emit_Terminal_LeftParenthesisKeyword_2_0_a(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_Terminal_LeftParenthesisKeyword_2_0_p.equals(syntax))
+				emit_Terminal_LeftParenthesisKeyword_2_0_p(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if (match_XBlockExpression_SemicolonKeyword_2_1_q.equals(syntax))
 				emit_XBlockExpression_SemicolonKeyword_2_1_q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if (match_XExpressionInClosure_SemicolonKeyword_1_1_q.equals(syntax))
@@ -154,7 +162,7 @@ public class MelangeSyntacticSequencer extends AbstractSyntacticSequencer {
 	
 	/**
 	 * Ambiguous syntax:
-	 *     ('}'+ | '}'+ | ('external' '}'*))?
+	 *     ('}'+ | ('external' '}'*) | '}'+)?
 	 *
 	 * This ambiguous syntax occurs at:
 	 *     (rule start) (ambiguity) (rule start)
@@ -545,6 +553,32 @@ public class MelangeSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     roots+=STRING ']' (ambiguity) (rule end)
 	 */
 	protected void emit_Slice___RenamingKeyword_7_0_LeftCurlyBracketKeyword_7_1_RightCurlyBracketKeyword_7_3__q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * Ambiguous syntax:
+	 *     '('*
+	 *
+	 * This ambiguous syntax occurs at:
+	 *     (rule start) (ambiguity) '!' content=Condition
+	 *     (rule start) (ambiguity) ref=[Variability|ID]
+	 *     (rule start) (ambiguity) {And.left=}
+	 *     (rule start) (ambiguity) {Or.left=}
+	 */
+	protected void emit_Terminal_LeftParenthesisKeyword_2_0_a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * Ambiguous syntax:
+	 *     '('+
+	 *
+	 * This ambiguous syntax occurs at:
+	 *     (rule start) (ambiguity) {And.left=}
+	 *     (rule start) (ambiguity) {Or.left=}
+	 */
+	protected void emit_Terminal_LeftParenthesisKeyword_2_0_p(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	

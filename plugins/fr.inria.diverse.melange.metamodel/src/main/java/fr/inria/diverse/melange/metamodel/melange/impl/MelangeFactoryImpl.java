@@ -83,6 +83,11 @@ public class MelangeFactoryImpl extends EFactoryImpl implements MelangeFactory {
 			case MelangePackage.ONE_OF: return createOneOf();
 			case MelangePackage.SOME_OF: return createSomeOf();
 			case MelangePackage.TAGGED_OPERATOR: return createTaggedOperator();
+			case MelangePackage.REALISATION: return createRealisation();
+			case MelangePackage.OR: return createOr();
+			case MelangePackage.AND: return createAnd();
+			case MelangePackage.NOT: return createNot();
+			case MelangePackage.FEATURE_REF: return createFeatureRef();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -376,6 +381,56 @@ public class MelangeFactoryImpl extends EFactoryImpl implements MelangeFactory {
 	public TaggedOperator createTaggedOperator() {
 		TaggedOperatorImpl taggedOperator = new TaggedOperatorImpl();
 		return taggedOperator;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Realisation createRealisation() {
+		RealisationImpl realisation = new RealisationImpl();
+		return realisation;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Or createOr() {
+		OrImpl or = new OrImpl();
+		return or;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public And createAnd() {
+		AndImpl and = new AndImpl();
+		return and;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Not createNot() {
+		NotImpl not = new NotImpl();
+		return not;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public FeatureRef createFeatureRef() {
+		FeatureRefImpl featureRef = new FeatureRefImpl();
+		return featureRef;
 	}
 
 	/**
