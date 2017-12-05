@@ -100,7 +100,7 @@
 'uri'=73
 'val'=44
 'var'=123
-'variability'=58
+'variability'=59
 'while'=107
 'with'=96
 'withGenmodel'=89
@@ -109,7 +109,7 @@
 '{'=57
 '|'=64
 '||'=14
-'}'=59
+'}'=58
 RULE_ANY_OTHER=12
 RULE_DECIMAL=7
 RULE_HEX=5

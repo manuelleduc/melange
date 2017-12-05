@@ -308,18 +308,18 @@ ruleLanguageConcern returns [EObject current=null]
     {
     	newLeafNode(otherlv_2, grammarAccess.getLanguageConcernAccess().getLeftCurlyBracketKeyword_2());
     }
-	otherlv_3='variability' 
+(	otherlv_3='variability' 
     {
-    	newLeafNode(otherlv_3, grammarAccess.getLanguageConcernAccess().getVariabilityKeyword_3());
+    	newLeafNode(otherlv_3, grammarAccess.getLanguageConcernAccess().getVariabilityKeyword_3_0());
     }
 	otherlv_4='=' 
     {
-    	newLeafNode(otherlv_4, grammarAccess.getLanguageConcernAccess().getEqualsSignKeyword_4());
+    	newLeafNode(otherlv_4, grammarAccess.getLanguageConcernAccess().getEqualsSignKeyword_3_1());
     }
 (
 (
 		{ 
-	        newCompositeNode(grammarAccess.getLanguageConcernAccess().getVmVariabilityParserRuleCall_5_0()); 
+	        newCompositeNode(grammarAccess.getLanguageConcernAccess().getVmVariabilityParserRuleCall_3_2_0()); 
 	    }
 		lv_vm_5_0=ruleVariability		{
 	        if ($current==null) {
@@ -334,10 +334,10 @@ ruleLanguageConcern returns [EObject current=null]
 	    }
 
 )
-)(
+))?(
 (
 		{ 
-	        newCompositeNode(grammarAccess.getLanguageConcernAccess().getRealisationsRealisationParserRuleCall_6_0()); 
+	        newCompositeNode(grammarAccess.getLanguageConcernAccess().getRealisationsRealisationParserRuleCall_4_0()); 
 	    }
 		lv_realisations_6_0=ruleRealisation		{
 	        if ($current==null) {
@@ -355,7 +355,7 @@ ruleLanguageConcern returns [EObject current=null]
 )*(
 (
 		{ 
-	        newCompositeNode(grammarAccess.getLanguageConcernAccess().getOperatorsTaggedOperatorParserRuleCall_7_0()); 
+	        newCompositeNode(grammarAccess.getLanguageConcernAccess().getOperatorsTaggedOperatorParserRuleCall_5_0()); 
 	    }
 		lv_operators_7_0=ruleTaggedOperator		{
 	        if ($current==null) {
@@ -372,7 +372,7 @@ ruleLanguageConcern returns [EObject current=null]
 )
 )*	otherlv_8='}' 
     {
-    	newLeafNode(otherlv_8, grammarAccess.getLanguageConcernAccess().getRightCurlyBracketKeyword_8());
+    	newLeafNode(otherlv_8, grammarAccess.getLanguageConcernAccess().getRightCurlyBracketKeyword_6());
     }
 )
 ;

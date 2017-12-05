@@ -162,7 +162,7 @@ public class MelangeSyntacticSequencer extends AbstractSyntacticSequencer {
 	
 	/**
 	 * Ambiguous syntax:
-	 *     ('}'+ | ('external' '}'*) | '}'+)?
+	 *     (('external' '}'*) | '}'+ | '}'+)?
 	 *
 	 * This ambiguous syntax occurs at:
 	 *     (rule start) (ambiguity) (rule start)

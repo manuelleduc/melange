@@ -157,7 +157,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="dsl" eType="ecore:EClass ../../org.eclipse.gemoc.dsl/model/generated/Dsl.ecore#//Dsl"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="LanguageConcern" eSuperTypes="#//NamedElement">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="vm" lowerBound="1" eType="#//Variability"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="vm" eType="#//Variability"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="operators" upperBound="-1"
         eType="#//TaggedOperator" containment="true"/>

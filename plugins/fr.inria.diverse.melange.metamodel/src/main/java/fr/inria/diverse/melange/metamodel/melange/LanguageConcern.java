@@ -44,7 +44,7 @@ public interface LanguageConcern extends NamedElement {
 	 * @return the value of the '<em>Vm</em>' containment reference.
 	 * @see #setVm(Variability)
 	 * @see fr.inria.diverse.melange.metamodel.melange.MelangePackage#getLanguageConcern_Vm()
-	 * @model containment="true" required="true"
+	 * @model containment="true"
 	 * @generated
 	 */
 	Variability getVm();

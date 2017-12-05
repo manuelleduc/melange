@@ -32,7 +32,7 @@ class MelangeFormatter extends AbstractDeclarativeFormatter {
 		// LanguageConcern
 		{
 			val lcob = languageConcernAccess.leftCurlyBracketKeyword_2
-			val lccb = languageConcernAccess.rightCurlyBracketKeyword_8
+			val lccb = languageConcernAccess.rightCurlyBracketKeyword_6
 			c.setIndentation(lcob, lccb)
 			c.setLinewrap().after(lcob)
 			c.setLinewrap(2).after(lccb)

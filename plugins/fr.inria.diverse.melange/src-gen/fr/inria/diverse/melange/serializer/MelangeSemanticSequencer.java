@@ -585,9 +585,9 @@ public class MelangeSemanticSequencer extends XbaseSemanticSequencer {
 	 * Constraint:
 	 *     (
 	 *         (operators+=Weave | xmof=STRING | fileExtension=STRING)? 
+	 *         (sirius+=STRING sirius+=STRING*)? 
 	 *         (ecl+=STRING ecl+=STRING*)? 
 	 *         (xtext+=STRING xtext+=STRING*)? 
-	 *         (sirius+=STRING sirius+=STRING*)? 
 	 *         (exactTypeName=ValidID exactTypeUri=STRING?)? 
 	 *         (name=ValidID (implements+=[ModelType|QualifiedName] implements+=[ModelType|QualifiedName]*)? operators+=ExternalImport)?
 	 *     )+
@@ -666,7 +666,7 @@ public class MelangeSemanticSequencer extends XbaseSemanticSequencer {
 	 *     LanguageConcern returns LanguageConcern
 	 *
 	 * Constraint:
-	 *     (name=ValidID vm=Variability realisations+=Realisation* operators+=TaggedOperator*)
+	 *     (name=ValidID vm=Variability? realisations+=Realisation* operators+=TaggedOperator*)
 	 */
 	protected void sequence_LanguageConcern(ISerializationContext context, LanguageConcern semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -681,10 +681,10 @@ public class MelangeSemanticSequencer extends XbaseSemanticSequencer {
 	 * Constraint:
 	 *     (
 	 *         (xmof=STRING | fileExtension=STRING | annotations+=Annotation)? 
-	 *         (exactTypeName=ValidID exactTypeUri=STRING?)? 
+	 *         (ecl+=STRING ecl+=STRING*)? 
 	 *         (xtext+=STRING xtext+=STRING*)? 
 	 *         (sirius+=STRING sirius+=STRING*)? 
-	 *         (ecl+=STRING ecl+=STRING*)? 
+	 *         (exactTypeName=ValidID exactTypeUri=STRING?)? 
 	 *         (resourceType=ResourceType (resourceUri=STRING | xtextSetupRef=JvmTypeReference)?)? 
 	 *         (
 	 *             name=ValidID 

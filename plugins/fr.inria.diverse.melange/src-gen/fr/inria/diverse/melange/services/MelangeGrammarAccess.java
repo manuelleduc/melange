@@ -129,25 +129,25 @@ public class MelangeGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cNameValidIDParserRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
 		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Keyword cVariabilityKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Keyword cEqualsSignKeyword_4 = (Keyword)cGroup.eContents().get(4);
-		private final Assignment cVmAssignment_5 = (Assignment)cGroup.eContents().get(5);
-		private final RuleCall cVmVariabilityParserRuleCall_5_0 = (RuleCall)cVmAssignment_5.eContents().get(0);
-		private final Assignment cRealisationsAssignment_6 = (Assignment)cGroup.eContents().get(6);
-		private final RuleCall cRealisationsRealisationParserRuleCall_6_0 = (RuleCall)cRealisationsAssignment_6.eContents().get(0);
-		private final Assignment cOperatorsAssignment_7 = (Assignment)cGroup.eContents().get(7);
-		private final RuleCall cOperatorsTaggedOperatorParserRuleCall_7_0 = (RuleCall)cOperatorsAssignment_7.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_8 = (Keyword)cGroup.eContents().get(8);
+		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
+		private final Keyword cVariabilityKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
+		private final Keyword cEqualsSignKeyword_3_1 = (Keyword)cGroup_3.eContents().get(1);
+		private final Assignment cVmAssignment_3_2 = (Assignment)cGroup_3.eContents().get(2);
+		private final RuleCall cVmVariabilityParserRuleCall_3_2_0 = (RuleCall)cVmAssignment_3_2.eContents().get(0);
+		private final Assignment cRealisationsAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cRealisationsRealisationParserRuleCall_4_0 = (RuleCall)cRealisationsAssignment_4.eContents().get(0);
+		private final Assignment cOperatorsAssignment_5 = (Assignment)cGroup.eContents().get(5);
+		private final RuleCall cOperatorsTaggedOperatorParserRuleCall_5_0 = (RuleCall)cOperatorsAssignment_5.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_6 = (Keyword)cGroup.eContents().get(6);
 		
 		//LanguageConcern:
-		//	'concern' name=ValidID '{'
-		//	'variability' '=' vm=Variability
+		//	'concern' name=ValidID '{' ('variability' '=' vm=Variability)?
 		//	realisations+=Realisation*
 		//	operators+=TaggedOperator*
 		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 
-		//'concern' name=ValidID '{' 'variability' '=' vm=Variability realisations+=Realisation* operators+=TaggedOperator* '}'
+		//'concern' name=ValidID '{' ('variability' '=' vm=Variability)? realisations+=Realisation* operators+=TaggedOperator* '}'
 		public Group getGroup() { return cGroup; }
 
 		//'concern'
@@ -162,32 +162,35 @@ public class MelangeGrammarAccess extends AbstractGrammarElementFinder {
 		//'{'
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 
+		//('variability' '=' vm=Variability)?
+		public Group getGroup_3() { return cGroup_3; }
+
 		//'variability'
-		public Keyword getVariabilityKeyword_3() { return cVariabilityKeyword_3; }
+		public Keyword getVariabilityKeyword_3_0() { return cVariabilityKeyword_3_0; }
 
 		//'='
-		public Keyword getEqualsSignKeyword_4() { return cEqualsSignKeyword_4; }
+		public Keyword getEqualsSignKeyword_3_1() { return cEqualsSignKeyword_3_1; }
 
 		//vm=Variability
-		public Assignment getVmAssignment_5() { return cVmAssignment_5; }
+		public Assignment getVmAssignment_3_2() { return cVmAssignment_3_2; }
 
 		//Variability
-		public RuleCall getVmVariabilityParserRuleCall_5_0() { return cVmVariabilityParserRuleCall_5_0; }
+		public RuleCall getVmVariabilityParserRuleCall_3_2_0() { return cVmVariabilityParserRuleCall_3_2_0; }
 
 		//realisations+=Realisation*
-		public Assignment getRealisationsAssignment_6() { return cRealisationsAssignment_6; }
+		public Assignment getRealisationsAssignment_4() { return cRealisationsAssignment_4; }
 
 		//Realisation
-		public RuleCall getRealisationsRealisationParserRuleCall_6_0() { return cRealisationsRealisationParserRuleCall_6_0; }
+		public RuleCall getRealisationsRealisationParserRuleCall_4_0() { return cRealisationsRealisationParserRuleCall_4_0; }
 
 		//operators+=TaggedOperator*
-		public Assignment getOperatorsAssignment_7() { return cOperatorsAssignment_7; }
+		public Assignment getOperatorsAssignment_5() { return cOperatorsAssignment_5; }
 
 		//TaggedOperator
-		public RuleCall getOperatorsTaggedOperatorParserRuleCall_7_0() { return cOperatorsTaggedOperatorParserRuleCall_7_0; }
+		public RuleCall getOperatorsTaggedOperatorParserRuleCall_5_0() { return cOperatorsTaggedOperatorParserRuleCall_5_0; }
 
 		//'}'
-		public Keyword getRightCurlyBracketKeyword_8() { return cRightCurlyBracketKeyword_8; }
+		public Keyword getRightCurlyBracketKeyword_6() { return cRightCurlyBracketKeyword_6; }
 	}
 
 	public class RealisationElements extends AbstractParserRuleElementFinder {
@@ -2262,8 +2265,7 @@ public class MelangeGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//LanguageConcern:
-	//	'concern' name=ValidID '{'
-	//	'variability' '=' vm=Variability
+	//	'concern' name=ValidID '{' ('variability' '=' vm=Variability)?
 	//	realisations+=Realisation*
 	//	operators+=TaggedOperator*
 	//	'}';

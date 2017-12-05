@@ -86,6 +86,7 @@ public class MelangeParser extends AbstractContentAssistParser {
 					put(grammarAccess.getModelTypingSpaceAccess().getGroup(), "rule__ModelTypingSpace__Group__0");
 					put(grammarAccess.getElementAccess().getGroup_2(), "rule__Element__Group_2__0");
 					put(grammarAccess.getLanguageConcernAccess().getGroup(), "rule__LanguageConcern__Group__0");
+					put(grammarAccess.getLanguageConcernAccess().getGroup_3(), "rule__LanguageConcern__Group_3__0");
 					put(grammarAccess.getRealisationAccess().getGroup(), "rule__Realisation__Group__0");
 					put(grammarAccess.getOrAccess().getGroup(), "rule__Or__Group__0");
 					put(grammarAccess.getOrAccess().getGroup_1(), "rule__Or__Group_1__0");
@@ -349,9 +350,9 @@ public class MelangeParser extends AbstractContentAssistParser {
 					put(grammarAccess.getModelTypingSpaceAccess().getImportsAssignment_2(), "rule__ModelTypingSpace__ImportsAssignment_2");
 					put(grammarAccess.getModelTypingSpaceAccess().getElementsAssignment_3(), "rule__ModelTypingSpace__ElementsAssignment_3");
 					put(grammarAccess.getLanguageConcernAccess().getNameAssignment_1(), "rule__LanguageConcern__NameAssignment_1");
-					put(grammarAccess.getLanguageConcernAccess().getVmAssignment_5(), "rule__LanguageConcern__VmAssignment_5");
-					put(grammarAccess.getLanguageConcernAccess().getRealisationsAssignment_6(), "rule__LanguageConcern__RealisationsAssignment_6");
-					put(grammarAccess.getLanguageConcernAccess().getOperatorsAssignment_7(), "rule__LanguageConcern__OperatorsAssignment_7");
+					put(grammarAccess.getLanguageConcernAccess().getVmAssignment_3_2(), "rule__LanguageConcern__VmAssignment_3_2");
+					put(grammarAccess.getLanguageConcernAccess().getRealisationsAssignment_4(), "rule__LanguageConcern__RealisationsAssignment_4");
+					put(grammarAccess.getLanguageConcernAccess().getOperatorsAssignment_5(), "rule__LanguageConcern__OperatorsAssignment_5");
 					put(grammarAccess.getRealisationAccess().getConditionAssignment_1(), "rule__Realisation__ConditionAssignment_1");
 					put(grammarAccess.getRealisationAccess().getTargetsAssignment_3(), "rule__Realisation__TargetsAssignment_3");
 					put(grammarAccess.getOrAccess().getRightAssignment_1_2(), "rule__Or__RightAssignment_1_2");

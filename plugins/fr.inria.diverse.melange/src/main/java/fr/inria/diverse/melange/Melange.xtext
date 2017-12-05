@@ -30,7 +30,7 @@ TransformationDecl returns Transformation:
 
 LanguageConcern:
 	'concern' name = ValidID '{'
-		'variability' '=' vm=Variability
+		('variability' '=' vm=Variability)?
 		
 		(realisations+= Realisation)*
 		
