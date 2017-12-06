@@ -164,7 +164,15 @@ PropertyMapping returns PropertyBinding:
 ;
 
 Operator returns Operator:
-	Import | Merge | Slice | Weave
+	Import | Merge | Slice | Weave | Reuse
+;
+
+
+Reuse:
+	{Reuse}
+	'reuse' languageconcern = [LanguageConcern|QualifiedName] '{'
+		('features' '=' (features+=[Variability|QualifiedName])*)?
+	'}'
 ;
 
 Import returns Import:

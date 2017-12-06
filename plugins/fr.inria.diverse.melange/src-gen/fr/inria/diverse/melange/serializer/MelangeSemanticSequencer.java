@@ -26,6 +26,7 @@ import fr.inria.diverse.melange.metamodel.melange.Or;
 import fr.inria.diverse.melange.metamodel.melange.PackageBinding;
 import fr.inria.diverse.melange.metamodel.melange.PropertyBinding;
 import fr.inria.diverse.melange.metamodel.melange.Realisation;
+import fr.inria.diverse.melange.metamodel.melange.Reuse;
 import fr.inria.diverse.melange.metamodel.melange.Slice;
 import fr.inria.diverse.melange.metamodel.melange.SomeOf;
 import fr.inria.diverse.melange.metamodel.melange.TaggedOperator;
@@ -172,6 +173,9 @@ public class MelangeSemanticSequencer extends XbaseSemanticSequencer {
 				return; 
 			case MelangePackage.REALISATION:
 				sequence_Realisation(context, (Realisation) semanticObject); 
+				return; 
+			case MelangePackage.REUSE:
+				sequence_Reuse(context, (Reuse) semanticObject); 
 				return; 
 			case MelangePackage.SLICE:
 				sequence_Slice(context, (Slice) semanticObject); 
@@ -586,8 +590,8 @@ public class MelangeSemanticSequencer extends XbaseSemanticSequencer {
 	 *     (
 	 *         (operators+=Weave | xmof=STRING | fileExtension=STRING)? 
 	 *         (sirius+=STRING sirius+=STRING*)? 
-	 *         (ecl+=STRING ecl+=STRING*)? 
 	 *         (xtext+=STRING xtext+=STRING*)? 
+	 *         (ecl+=STRING ecl+=STRING*)? 
 	 *         (exactTypeName=ValidID exactTypeUri=STRING?)? 
 	 *         (name=ValidID (implements+=[ModelType|QualifiedName] implements+=[ModelType|QualifiedName]*)? operators+=ExternalImport)?
 	 *     )+
@@ -681,8 +685,8 @@ public class MelangeSemanticSequencer extends XbaseSemanticSequencer {
 	 * Constraint:
 	 *     (
 	 *         (xmof=STRING | fileExtension=STRING | annotations+=Annotation)? 
-	 *         (ecl+=STRING ecl+=STRING*)? 
 	 *         (xtext+=STRING xtext+=STRING*)? 
+	 *         (ecl+=STRING ecl+=STRING*)? 
 	 *         (sirius+=STRING sirius+=STRING*)? 
 	 *         (exactTypeName=ValidID exactTypeUri=STRING?)? 
 	 *         (resourceType=ResourceType (resourceUri=STRING | xtextSetupRef=JvmTypeReference)?)? 
@@ -818,6 +822,19 @@ public class MelangeSemanticSequencer extends XbaseSemanticSequencer {
 	 *     (condition=Condition targets+=[TaggedOperator|ID]*)
 	 */
 	protected void sequence_Realisation(ISerializationContext context, Realisation semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     Operator returns Reuse
+	 *     Reuse returns Reuse
+	 *
+	 * Constraint:
+	 *     (languageconcern=[LanguageConcern|QualifiedName] features+=[Variability|QualifiedName]*)
+	 */
+	protected void sequence_Reuse(ISerializationContext context, Reuse semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	

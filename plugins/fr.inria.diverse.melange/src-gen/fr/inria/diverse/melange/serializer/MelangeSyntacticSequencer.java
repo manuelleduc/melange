@@ -33,6 +33,7 @@ public class MelangeSyntacticSequencer extends AbstractSyntacticSequencer {
 	protected AbstractElementAlias match_Language_RightCurlyBracketKeyword_8_1_p;
 	protected AbstractElementAlias match_Merge___RenamingKeyword_2_0_LeftCurlyBracketKeyword_2_1_RightCurlyBracketKeyword_2_3__q;
 	protected AbstractElementAlias match_PackageMapping___LeftCurlyBracketKeyword_3_0_RightCurlyBracketKeyword_3_2__q;
+	protected AbstractElementAlias match_Reuse___FeaturesKeyword_4_0_EqualsSignKeyword_4_1__q;
 	protected AbstractElementAlias match_Slice___RenamingKeyword_7_0_LeftCurlyBracketKeyword_7_1_RightCurlyBracketKeyword_7_3__q;
 	protected AbstractElementAlias match_Terminal_LeftParenthesisKeyword_2_0_a;
 	protected AbstractElementAlias match_Terminal_LeftParenthesisKeyword_2_0_p;
@@ -57,6 +58,7 @@ public class MelangeSyntacticSequencer extends AbstractSyntacticSequencer {
 		match_Language_RightCurlyBracketKeyword_8_1_p = new TokenAlias(true, false, grammarAccess.getLanguageAccess().getRightCurlyBracketKeyword_8_1());
 		match_Merge___RenamingKeyword_2_0_LeftCurlyBracketKeyword_2_1_RightCurlyBracketKeyword_2_3__q = new GroupAlias(false, true, new TokenAlias(false, false, grammarAccess.getMergeAccess().getRenamingKeyword_2_0()), new TokenAlias(false, false, grammarAccess.getMergeAccess().getLeftCurlyBracketKeyword_2_1()), new TokenAlias(false, false, grammarAccess.getMergeAccess().getRightCurlyBracketKeyword_2_3()));
 		match_PackageMapping___LeftCurlyBracketKeyword_3_0_RightCurlyBracketKeyword_3_2__q = new GroupAlias(false, true, new TokenAlias(false, false, grammarAccess.getPackageMappingAccess().getLeftCurlyBracketKeyword_3_0()), new TokenAlias(false, false, grammarAccess.getPackageMappingAccess().getRightCurlyBracketKeyword_3_2()));
+		match_Reuse___FeaturesKeyword_4_0_EqualsSignKeyword_4_1__q = new GroupAlias(false, true, new TokenAlias(false, false, grammarAccess.getReuseAccess().getFeaturesKeyword_4_0()), new TokenAlias(false, false, grammarAccess.getReuseAccess().getEqualsSignKeyword_4_1()));
 		match_Slice___RenamingKeyword_7_0_LeftCurlyBracketKeyword_7_1_RightCurlyBracketKeyword_7_3__q = new GroupAlias(false, true, new TokenAlias(false, false, grammarAccess.getSliceAccess().getRenamingKeyword_7_0()), new TokenAlias(false, false, grammarAccess.getSliceAccess().getLeftCurlyBracketKeyword_7_1()), new TokenAlias(false, false, grammarAccess.getSliceAccess().getRightCurlyBracketKeyword_7_3()));
 		match_Terminal_LeftParenthesisKeyword_2_0_a = new TokenAlias(true, true, grammarAccess.getTerminalAccess().getLeftParenthesisKeyword_2_0());
 		match_Terminal_LeftParenthesisKeyword_2_0_p = new TokenAlias(true, false, grammarAccess.getTerminalAccess().getLeftParenthesisKeyword_2_0());
@@ -127,6 +129,8 @@ public class MelangeSyntacticSequencer extends AbstractSyntacticSequencer {
 				emit_Merge___RenamingKeyword_2_0_LeftCurlyBracketKeyword_2_1_RightCurlyBracketKeyword_2_3__q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if (match_PackageMapping___LeftCurlyBracketKeyword_3_0_RightCurlyBracketKeyword_3_2__q.equals(syntax))
 				emit_PackageMapping___LeftCurlyBracketKeyword_3_0_RightCurlyBracketKeyword_3_2__q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_Reuse___FeaturesKeyword_4_0_EqualsSignKeyword_4_1__q.equals(syntax))
+				emit_Reuse___FeaturesKeyword_4_0_EqualsSignKeyword_4_1__q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if (match_Slice___RenamingKeyword_7_0_LeftCurlyBracketKeyword_7_1_RightCurlyBracketKeyword_7_3__q.equals(syntax))
 				emit_Slice___RenamingKeyword_7_0_LeftCurlyBracketKeyword_7_1_RightCurlyBracketKeyword_7_3__q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if (match_Terminal_LeftParenthesisKeyword_2_0_a.equals(syntax))
@@ -542,6 +546,17 @@ public class MelangeSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     to=STRING (ambiguity) (rule end)
 	 */
 	protected void emit_PackageMapping___LeftCurlyBracketKeyword_3_0_RightCurlyBracketKeyword_3_2__q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * Ambiguous syntax:
+	 *     ('features' '=')?
+	 *
+	 * This ambiguous syntax occurs at:
+	 *     languageconcern=[LanguageConcern|QualifiedName] '{' (ambiguity) '}' (rule end)
+	 */
+	protected void emit_Reuse___FeaturesKeyword_4_0_EqualsSignKeyword_4_1__q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	

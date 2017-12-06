@@ -24,6 +24,7 @@ import org.eclipse.emf.ecore.EReference
 import org.eclipse.emf.edit.ui.provider.AdapterFactoryLabelProvider
 import org.eclipse.xtext.common.types.JvmDeclaredType
 import org.eclipse.xtext.xbase.ui.labeling.XbaseLabelProvider
+import fr.inria.diverse.melange.metamodel.melange.LanguageConcern
 
 class MelangeLabelProvider extends XbaseLabelProvider
 {
@@ -38,6 +39,10 @@ class MelangeLabelProvider extends XbaseLabelProvider
 
 	def String image(Language l) {
 		return "metamodel.png"
+	}
+	
+	def String image(LanguageConcern lc) {
+		return "concern.png"
 	}
 
 	def String image(ModelType mt) {

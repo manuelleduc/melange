@@ -88,6 +88,7 @@ public class MelangeFactoryImpl extends EFactoryImpl implements MelangeFactory {
 			case MelangePackage.AND: return createAnd();
 			case MelangePackage.NOT: return createNot();
 			case MelangePackage.FEATURE_REF: return createFeatureRef();
+			case MelangePackage.REUSE: return createReuse();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -431,6 +432,16 @@ public class MelangeFactoryImpl extends EFactoryImpl implements MelangeFactory {
 	public FeatureRef createFeatureRef() {
 		FeatureRefImpl featureRef = new FeatureRefImpl();
 		return featureRef;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Reuse createReuse() {
+		ReuseImpl reuse = new ReuseImpl();
+		return reuse;
 	}
 
 	/**

@@ -1678,12 +1678,13 @@ public class MelangeGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cMergeParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
 		private final RuleCall cSliceParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
 		private final RuleCall cWeaveParserRuleCall_3 = (RuleCall)cAlternatives.eContents().get(3);
+		private final RuleCall cReuseParserRuleCall_4 = (RuleCall)cAlternatives.eContents().get(4);
 		
 		//Operator:
-		//	Import | Merge | Slice | Weave;
+		//	Import | Merge | Slice | Weave | Reuse;
 		@Override public ParserRule getRule() { return rule; }
 
-		//Import | Merge | Slice | Weave
+		//Import | Merge | Slice | Weave | Reuse
 		public Alternatives getAlternatives() { return cAlternatives; }
 
 		//Import
@@ -1697,6 +1698,76 @@ public class MelangeGrammarAccess extends AbstractGrammarElementFinder {
 
 		//Weave
 		public RuleCall getWeaveParserRuleCall_3() { return cWeaveParserRuleCall_3; }
+
+		//Reuse
+		public RuleCall getReuseParserRuleCall_4() { return cReuseParserRuleCall_4; }
+	}
+
+	public class ReuseElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "fr.inria.diverse.melange.Melange.Reuse");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Action cReuseAction_0 = (Action)cGroup.eContents().get(0);
+		private final Keyword cReuseKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cLanguageconcernAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final CrossReference cLanguageconcernLanguageConcernCrossReference_2_0 = (CrossReference)cLanguageconcernAssignment_2.eContents().get(0);
+		private final RuleCall cLanguageconcernLanguageConcernQualifiedNameParserRuleCall_2_0_1 = (RuleCall)cLanguageconcernLanguageConcernCrossReference_2_0.eContents().get(1);
+		private final Keyword cLeftCurlyBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Group cGroup_4 = (Group)cGroup.eContents().get(4);
+		private final Keyword cFeaturesKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
+		private final Keyword cEqualsSignKeyword_4_1 = (Keyword)cGroup_4.eContents().get(1);
+		private final Assignment cFeaturesAssignment_4_2 = (Assignment)cGroup_4.eContents().get(2);
+		private final CrossReference cFeaturesVariabilityCrossReference_4_2_0 = (CrossReference)cFeaturesAssignment_4_2.eContents().get(0);
+		private final RuleCall cFeaturesVariabilityQualifiedNameParserRuleCall_4_2_0_1 = (RuleCall)cFeaturesVariabilityCrossReference_4_2_0.eContents().get(1);
+		private final Keyword cRightCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		
+		//Reuse:
+		//	{Reuse}
+		//	'reuse' languageconcern=[LanguageConcern|QualifiedName] '{' ('features' '=' features+=[Variability|QualifiedName]*)?
+		//	'}';
+		@Override public ParserRule getRule() { return rule; }
+
+		//{Reuse} 'reuse' languageconcern=[LanguageConcern|QualifiedName] '{' ('features' '='
+		//features+=[Variability|QualifiedName]*)? '}'
+		public Group getGroup() { return cGroup; }
+
+		//{Reuse}
+		public Action getReuseAction_0() { return cReuseAction_0; }
+
+		//'reuse'
+		public Keyword getReuseKeyword_1() { return cReuseKeyword_1; }
+
+		//languageconcern=[LanguageConcern|QualifiedName]
+		public Assignment getLanguageconcernAssignment_2() { return cLanguageconcernAssignment_2; }
+
+		//[LanguageConcern|QualifiedName]
+		public CrossReference getLanguageconcernLanguageConcernCrossReference_2_0() { return cLanguageconcernLanguageConcernCrossReference_2_0; }
+
+		//QualifiedName
+		public RuleCall getLanguageconcernLanguageConcernQualifiedNameParserRuleCall_2_0_1() { return cLanguageconcernLanguageConcernQualifiedNameParserRuleCall_2_0_1; }
+
+		//'{'
+		public Keyword getLeftCurlyBracketKeyword_3() { return cLeftCurlyBracketKeyword_3; }
+
+		//('features' '=' features+=[Variability|QualifiedName]*)?
+		public Group getGroup_4() { return cGroup_4; }
+
+		//'features'
+		public Keyword getFeaturesKeyword_4_0() { return cFeaturesKeyword_4_0; }
+
+		//'='
+		public Keyword getEqualsSignKeyword_4_1() { return cEqualsSignKeyword_4_1; }
+
+		//features+=[Variability|QualifiedName]*
+		public Assignment getFeaturesAssignment_4_2() { return cFeaturesAssignment_4_2; }
+
+		//[Variability|QualifiedName]
+		public CrossReference getFeaturesVariabilityCrossReference_4_2_0() { return cFeaturesVariabilityCrossReference_4_2_0; }
+
+		//QualifiedName
+		public RuleCall getFeaturesVariabilityQualifiedNameParserRuleCall_4_2_0_1() { return cFeaturesVariabilityQualifiedNameParserRuleCall_4_2_0_1; }
+
+		//'}'
+		public Keyword getRightCurlyBracketKeyword_5() { return cRightCurlyBracketKeyword_5; }
 	}
 
 	public class ImportElements extends AbstractParserRuleElementFinder {
@@ -2142,6 +2213,7 @@ public class MelangeGrammarAccess extends AbstractGrammarElementFinder {
 	private final ClassMappingElements pClassMapping;
 	private final PropertyMappingElements pPropertyMapping;
 	private final OperatorElements pOperator;
+	private final ReuseElements pReuse;
 	private final ImportElements pImport;
 	private final ExternalImportElements pExternalImport;
 	private final MergeElements pMerge;
@@ -2190,6 +2262,7 @@ public class MelangeGrammarAccess extends AbstractGrammarElementFinder {
 		this.pClassMapping = new ClassMappingElements();
 		this.pPropertyMapping = new PropertyMappingElements();
 		this.pOperator = new OperatorElements();
+		this.pReuse = new ReuseElements();
 		this.pImport = new ImportElements();
 		this.pExternalImport = new ExternalImportElements();
 		this.pMerge = new MergeElements();
@@ -2516,13 +2589,25 @@ public class MelangeGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Operator:
-	//	Import | Merge | Slice | Weave;
+	//	Import | Merge | Slice | Weave | Reuse;
 	public OperatorElements getOperatorAccess() {
 		return pOperator;
 	}
 	
 	public ParserRule getOperatorRule() {
 		return getOperatorAccess().getRule();
+	}
+
+	//Reuse:
+	//	{Reuse}
+	//	'reuse' languageconcern=[LanguageConcern|QualifiedName] '{' ('features' '=' features+=[Variability|QualifiedName]*)?
+	//	'}';
+	public ReuseElements getReuseAccess() {
+		return pReuse;
+	}
+	
+	public ParserRule getReuseRule() {
+		return getReuseAccess().getRule();
 	}
 
 	//Import:

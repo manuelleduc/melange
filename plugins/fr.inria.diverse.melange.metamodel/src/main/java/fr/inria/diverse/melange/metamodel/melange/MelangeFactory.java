@@ -301,6 +301,15 @@ public interface MelangeFactory extends EFactory {
 	FeatureRef createFeatureRef();
 
 	/**
+	 * Returns a new object of class '<em>Reuse</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Reuse</em>'.
+	 * @generated
+	 */
+	Reuse createReuse();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

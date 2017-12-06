@@ -2372,6 +2372,61 @@ public interface MelangePackage extends EPackage {
 	int FEATURE_REF_OPERATION_COUNT = CONDITION_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link fr.inria.diverse.melange.metamodel.melange.impl.ReuseImpl <em>Reuse</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see fr.inria.diverse.melange.metamodel.melange.impl.ReuseImpl
+	 * @see fr.inria.diverse.melange.metamodel.melange.impl.MelangePackageImpl#getReuse()
+	 * @generated
+	 */
+	int REUSE = 37;
+
+	/**
+	 * The feature id for the '<em><b>Owning Language</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REUSE__OWNING_LANGUAGE = OPERATOR__OWNING_LANGUAGE;
+
+	/**
+	 * The feature id for the '<em><b>Languageconcern</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REUSE__LANGUAGECONCERN = OPERATOR_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Features</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REUSE__FEATURES = OPERATOR_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Reuse</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REUSE_FEATURE_COUNT = OPERATOR_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>Reuse</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REUSE_OPERATION_COUNT = OPERATOR_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link fr.inria.diverse.melange.metamodel.melange.ResourceType <em>Resource Type</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2379,7 +2434,7 @@ public interface MelangePackage extends EPackage {
 	 * @see fr.inria.diverse.melange.metamodel.melange.impl.MelangePackageImpl#getResourceType()
 	 * @generated
 	 */
-	int RESOURCE_TYPE = 37;
+	int RESOURCE_TYPE = 38;
 
 
 	/**
@@ -3622,6 +3677,38 @@ public interface MelangePackage extends EPackage {
 	EReference getFeatureRef_Ref();
 
 	/**
+	 * Returns the meta object for class '{@link fr.inria.diverse.melange.metamodel.melange.Reuse <em>Reuse</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Reuse</em>'.
+	 * @see fr.inria.diverse.melange.metamodel.melange.Reuse
+	 * @generated
+	 */
+	EClass getReuse();
+
+	/**
+	 * Returns the meta object for the reference '{@link fr.inria.diverse.melange.metamodel.melange.Reuse#getLanguageconcern <em>Languageconcern</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Languageconcern</em>'.
+	 * @see fr.inria.diverse.melange.metamodel.melange.Reuse#getLanguageconcern()
+	 * @see #getReuse()
+	 * @generated
+	 */
+	EReference getReuse_Languageconcern();
+
+	/**
+	 * Returns the meta object for the reference list '{@link fr.inria.diverse.melange.metamodel.melange.Reuse#getFeatures <em>Features</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Features</em>'.
+	 * @see fr.inria.diverse.melange.metamodel.melange.Reuse#getFeatures()
+	 * @see #getReuse()
+	 * @generated
+	 */
+	EReference getReuse_Features();
+
+	/**
 	 * Returns the meta object for enum '{@link fr.inria.diverse.melange.metamodel.melange.ResourceType <em>Resource Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4655,6 +4742,32 @@ public interface MelangePackage extends EPackage {
 		 * @generated
 		 */
 		EReference FEATURE_REF__REF = eINSTANCE.getFeatureRef_Ref();
+
+		/**
+		 * The meta object literal for the '{@link fr.inria.diverse.melange.metamodel.melange.impl.ReuseImpl <em>Reuse</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see fr.inria.diverse.melange.metamodel.melange.impl.ReuseImpl
+		 * @see fr.inria.diverse.melange.metamodel.melange.impl.MelangePackageImpl#getReuse()
+		 * @generated
+		 */
+		EClass REUSE = eINSTANCE.getReuse();
+
+		/**
+		 * The meta object literal for the '<em><b>Languageconcern</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference REUSE__LANGUAGECONCERN = eINSTANCE.getReuse_Languageconcern();
+
+		/**
+		 * The meta object literal for the '<em><b>Features</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference REUSE__FEATURES = eINSTANCE.getReuse_Features();
 
 		/**
 		 * The meta object literal for the '{@link fr.inria.diverse.melange.metamodel.melange.ResourceType <em>Resource Type</em>}' enum.

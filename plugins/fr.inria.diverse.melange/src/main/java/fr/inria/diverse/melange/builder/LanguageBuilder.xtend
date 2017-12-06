@@ -14,6 +14,7 @@ import com.google.inject.Inject
 import com.google.inject.Injector
 import fr.inria.diverse.melange.ast.AspectExtensions
 import fr.inria.diverse.melange.ast.LanguageExtensions
+import fr.inria.diverse.melange.lib.EcoreExtensions
 import fr.inria.diverse.melange.lib.EcoreMerger
 import fr.inria.diverse.melange.metamodel.melange.Import
 import fr.inria.diverse.melange.metamodel.melange.Inheritance
@@ -21,15 +22,15 @@ import fr.inria.diverse.melange.metamodel.melange.Language
 import fr.inria.diverse.melange.metamodel.melange.Merge
 import fr.inria.diverse.melange.metamodel.melange.ModelTypingSpace
 import fr.inria.diverse.melange.metamodel.melange.Operator
+import fr.inria.diverse.melange.metamodel.melange.Reuse
 import fr.inria.diverse.melange.metamodel.melange.Slice
 import fr.inria.diverse.melange.metamodel.melange.Weave
 import fr.inria.diverse.melange.utils.ErrorHelper
 import java.util.List
+import java.util.Set
+import org.eclipse.emf.ecore.EClass
 import org.eclipse.emf.ecore.EPackage
 import org.eclipse.emf.ecore.util.EcoreUtil
-import java.util.Set
-import fr.inria.diverse.melange.lib.EcoreExtensions
-import org.eclipse.emf.ecore.EClass
 
 /**
  * General builder for a {@link Language}.
@@ -158,6 +159,7 @@ class LanguageBuilder extends AbstractBuilder {
 				Slice: new SliceBuilder(op, root)
 				Import: new ImportBuilder(op)
 				Weave: new WeaveBuilder(op, model)
+				Reuse: new ReuseBuilder(op)
 			}
 			res.add(builder)
 			injector.injectMembers(builder)

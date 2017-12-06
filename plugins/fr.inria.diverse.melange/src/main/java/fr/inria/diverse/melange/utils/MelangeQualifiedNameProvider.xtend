@@ -27,15 +27,14 @@ class MelangeQualifiedNameProvider extends XbaseQualifiedNameProvider {
 			}
 		} else if (obj instanceof Variability) {
 
+			// lookup for the parent Language Concern
 			var EObject lc = obj.eContainer
 			while (!(lc instanceof LanguageConcern))
 				lc = lc.eContainer
 
-			val lcqn = this.getFullyQualifiedName(lc)
-
-			val res = lcqn.append(obj.name.toQualifiedName)
-			println(res)
-			return res
+			// generate the LC qualified name and append to to the current feature name
+			val lcqn = lc.fullyQualifiedName
+			return  lcqn.append(obj.name.toQualifiedName)
 		}
 
 		super.getFullyQualifiedName(obj)

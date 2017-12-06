@@ -2853,6 +2853,93 @@ ruleOperator returns [EObject current=null]
         $current = $this_Weave_3.current; 
         afterParserOrEnumRuleCall();
     }
+
+    |
+    { 
+        newCompositeNode(grammarAccess.getOperatorAccess().getReuseParserRuleCall_4()); 
+    }
+    this_Reuse_4=ruleReuse
+    { 
+        $current = $this_Reuse_4.current; 
+        afterParserOrEnumRuleCall();
+    }
+)
+;
+
+
+
+
+
+// Entry rule entryRuleReuse
+entryRuleReuse returns [EObject current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getReuseRule()); }
+	 iv_ruleReuse=ruleReuse 
+	 { $current=$iv_ruleReuse.current; } 
+	 EOF 
+;
+
+// Rule Reuse
+ruleReuse returns [EObject current=null] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+((
+    {
+        $current = forceCreateModelElement(
+            grammarAccess.getReuseAccess().getReuseAction_0(),
+            $current);
+    }
+)	otherlv_1='reuse' 
+    {
+    	newLeafNode(otherlv_1, grammarAccess.getReuseAccess().getReuseKeyword_1());
+    }
+(
+(
+		{
+			if ($current==null) {
+	            $current = createModelElement(grammarAccess.getReuseRule());
+	        }
+        }
+		{ 
+	        newCompositeNode(grammarAccess.getReuseAccess().getLanguageconcernLanguageConcernCrossReference_2_0()); 
+	    }
+		ruleQualifiedName		{ 
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+)	otherlv_3='{' 
+    {
+    	newLeafNode(otherlv_3, grammarAccess.getReuseAccess().getLeftCurlyBracketKeyword_3());
+    }
+(	otherlv_4='features' 
+    {
+    	newLeafNode(otherlv_4, grammarAccess.getReuseAccess().getFeaturesKeyword_4_0());
+    }
+	otherlv_5='=' 
+    {
+    	newLeafNode(otherlv_5, grammarAccess.getReuseAccess().getEqualsSignKeyword_4_1());
+    }
+(
+(
+		{
+			if ($current==null) {
+	            $current = createModelElement(grammarAccess.getReuseRule());
+	        }
+        }
+		{ 
+	        newCompositeNode(grammarAccess.getReuseAccess().getFeaturesVariabilityCrossReference_4_2_0()); 
+	    }
+		ruleQualifiedName		{ 
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+)*)?	otherlv_7='}' 
+    {
+    	newLeafNode(otherlv_7, grammarAccess.getReuseAccess().getRightCurlyBracketKeyword_5());
+    }
 )
 ;
 

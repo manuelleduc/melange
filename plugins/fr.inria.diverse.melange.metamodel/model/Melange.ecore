@@ -207,4 +207,10 @@
   <eClassifiers xsi:type="ecore:EClass" name="FeatureRef" eSuperTypes="#//Condition">
     <eStructuralFeatures xsi:type="ecore:EReference" name="ref" lowerBound="1" eType="#//Variability"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Reuse" eSuperTypes="#//Operator">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="languageconcern" lowerBound="1"
+        eType="#//LanguageConcern"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="features" upperBound="-1"
+        eType="#//Variability"/>
+  </eClassifiers>
 </ecore:EPackage>

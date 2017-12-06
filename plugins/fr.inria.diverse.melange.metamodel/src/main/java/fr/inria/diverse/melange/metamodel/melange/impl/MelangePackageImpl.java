@@ -34,6 +34,7 @@ import fr.inria.diverse.melange.metamodel.melange.PackageBinding;
 import fr.inria.diverse.melange.metamodel.melange.PropertyBinding;
 import fr.inria.diverse.melange.metamodel.melange.Realisation;
 import fr.inria.diverse.melange.metamodel.melange.ResourceType;
+import fr.inria.diverse.melange.metamodel.melange.Reuse;
 import fr.inria.diverse.melange.metamodel.melange.Slice;
 import fr.inria.diverse.melange.metamodel.melange.SomeOf;
 import fr.inria.diverse.melange.metamodel.melange.Subtyping;
@@ -324,6 +325,13 @@ public class MelangePackageImpl extends EPackageImpl implements MelangePackage {
 	 * @generated
 	 */
 	private EClass featureRefEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass reuseEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -1449,6 +1457,33 @@ public class MelangePackageImpl extends EPackageImpl implements MelangePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getReuse() {
+		return reuseEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getReuse_Languageconcern() {
+		return (EReference)reuseEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getReuse_Features() {
+		return (EReference)reuseEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getResourceType() {
 		return resourceTypeEEnum;
 	}
@@ -1634,6 +1669,10 @@ public class MelangePackageImpl extends EPackageImpl implements MelangePackage {
 		featureRefEClass = createEClass(FEATURE_REF);
 		createEReference(featureRefEClass, FEATURE_REF__REF);
 
+		reuseEClass = createEClass(REUSE);
+		createEReference(reuseEClass, REUSE__LANGUAGECONCERN);
+		createEReference(reuseEClass, REUSE__FEATURES);
+
 		// Create enums
 		resourceTypeEEnum = createEEnum(RESOURCE_TYPE);
 	}
@@ -1699,6 +1738,7 @@ public class MelangePackageImpl extends EPackageImpl implements MelangePackage {
 		andEClass.getESuperTypes().add(this.getCondition());
 		notEClass.getESuperTypes().add(this.getCondition());
 		featureRefEClass.getESuperTypes().add(this.getCondition());
+		reuseEClass.getESuperTypes().add(this.getOperator());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(modelTypingSpaceEClass, ModelTypingSpace.class, "ModelTypingSpace", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1853,6 +1893,10 @@ public class MelangePackageImpl extends EPackageImpl implements MelangePackage {
 
 		initEClass(featureRefEClass, FeatureRef.class, "FeatureRef", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getFeatureRef_Ref(), this.getVariability(), null, "ref", null, 1, 1, FeatureRef.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(reuseEClass, Reuse.class, "Reuse", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getReuse_Languageconcern(), this.getLanguageConcern(), null, "languageconcern", null, 1, 1, Reuse.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getReuse_Features(), this.getVariability(), null, "features", null, 0, -1, Reuse.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(resourceTypeEEnum, ResourceType.class, "ResourceType");

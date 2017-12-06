@@ -151,6 +151,8 @@ public class MelangeParser extends AbstractContentAssistParser {
 					put(grammarAccess.getClassMappingAccess().getGroup(), "rule__ClassMapping__Group__0");
 					put(grammarAccess.getClassMappingAccess().getGroup_3(), "rule__ClassMapping__Group_3__0");
 					put(grammarAccess.getPropertyMappingAccess().getGroup(), "rule__PropertyMapping__Group__0");
+					put(grammarAccess.getReuseAccess().getGroup(), "rule__Reuse__Group__0");
+					put(grammarAccess.getReuseAccess().getGroup_4(), "rule__Reuse__Group_4__0");
 					put(grammarAccess.getImportAccess().getGroup(), "rule__Import__Group__0");
 					put(grammarAccess.getImportAccess().getGroup_2(), "rule__Import__Group_2__0");
 					put(grammarAccess.getImportAccess().getGroup_2_1(), "rule__Import__Group_2_1__0");
@@ -429,6 +431,8 @@ public class MelangeParser extends AbstractContentAssistParser {
 					put(grammarAccess.getClassMappingAccess().getPropertiesAssignment_3_1(), "rule__ClassMapping__PropertiesAssignment_3_1");
 					put(grammarAccess.getPropertyMappingAccess().getFromAssignment_0(), "rule__PropertyMapping__FromAssignment_0");
 					put(grammarAccess.getPropertyMappingAccess().getToAssignment_2(), "rule__PropertyMapping__ToAssignment_2");
+					put(grammarAccess.getReuseAccess().getLanguageconcernAssignment_2(), "rule__Reuse__LanguageconcernAssignment_2");
+					put(grammarAccess.getReuseAccess().getFeaturesAssignment_4_2(), "rule__Reuse__FeaturesAssignment_4_2");
 					put(grammarAccess.getImportAccess().getEcoreUriAssignment_1(), "rule__Import__EcoreUriAssignment_1");
 					put(grammarAccess.getImportAccess().getGenmodelUrisAssignment_2_1_0(), "rule__Import__GenmodelUrisAssignment_2_1_0");
 					put(grammarAccess.getImportAccess().getGenmodelUrisAssignment_2_1_1_1(), "rule__Import__GenmodelUrisAssignment_2_1_1_1");
