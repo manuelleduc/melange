@@ -1,4 +1,12 @@
 /**
+ * Copyright (c) 2017 Inria and others.
+ *  * All rights reserved. This program and the accompanying materials
+ *  * are made available under the terms of the Eclipse Public License v1.0
+ *  * which accompanies this distribution, and is available at
+ *  * http://www.eclipse.org/legal/epl-v10.html
+ *  *
+ *  * Contributors:
+ *  *     Inria - initial API and implementation
  */
 package fr.inria.diverse.melange.metamodel.melange.util;
 
@@ -292,6 +300,7 @@ public class MelangeSwitch<T> extends Switch<T> {
 			case MelangePackage.TAGGED_OPERATOR: {
 				TaggedOperator taggedOperator = (TaggedOperator)theEObject;
 				T result = caseTaggedOperator(taggedOperator);
+				if (result == null) result = caseTaggedElement(taggedOperator);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -339,6 +348,33 @@ public class MelangeSwitch<T> extends Switch<T> {
 				Reuse reuse = (Reuse)theEObject;
 				T result = caseReuse(reuse);
 				if (result == null) result = caseOperator(reuse);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case MelangePackage.REUSE_FEATURE: {
+				ReuseFeature reuseFeature = (ReuseFeature)theEObject;
+				T result = caseReuseFeature(reuseFeature);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case MelangePackage.REFERENCE_REUSE_FEATURE: {
+				ReferenceReuseFeature referenceReuseFeature = (ReferenceReuseFeature)theEObject;
+				T result = caseReferenceReuseFeature(referenceReuseFeature);
+				if (result == null) result = caseReuseFeature(referenceReuseFeature);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case MelangePackage.TAGGED_REUSE_FEATURE: {
+				TaggedReuseFeature taggedReuseFeature = (TaggedReuseFeature)theEObject;
+				T result = caseTaggedReuseFeature(taggedReuseFeature);
+				if (result == null) result = caseReuseFeature(taggedReuseFeature);
+				if (result == null) result = caseTaggedElement(taggedReuseFeature);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case MelangePackage.TAGGED_ELEMENT: {
+				TaggedElement taggedElement = (TaggedElement)theEObject;
+				T result = caseTaggedElement(taggedElement);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -913,6 +949,66 @@ public class MelangeSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseReuse(Reuse object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Reuse Feature</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Reuse Feature</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseReuseFeature(ReuseFeature object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Reference Reuse Feature</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Reference Reuse Feature</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseReferenceReuseFeature(ReferenceReuseFeature object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Tagged Reuse Feature</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Tagged Reuse Feature</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseTaggedReuseFeature(TaggedReuseFeature object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Tagged Element</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Tagged Element</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseTaggedElement(TaggedElement object) {
 		return null;
 	}
 

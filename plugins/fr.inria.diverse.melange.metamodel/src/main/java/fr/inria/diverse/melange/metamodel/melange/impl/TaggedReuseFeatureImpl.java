@@ -11,7 +11,8 @@
 package fr.inria.diverse.melange.metamodel.melange.impl;
 
 import fr.inria.diverse.melange.metamodel.melange.MelangePackage;
-import fr.inria.diverse.melange.metamodel.melange.NamedElement;
+import fr.inria.diverse.melange.metamodel.melange.TaggedElement;
+import fr.inria.diverse.melange.metamodel.melange.TaggedReuseFeature;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -21,18 +22,18 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Named Element</b></em>'.
+ * An implementation of the model object '<em><b>Tagged Reuse Feature</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link fr.inria.diverse.melange.metamodel.melange.impl.NamedElementImpl#getName <em>Name</em>}</li>
+ *   <li>{@link fr.inria.diverse.melange.metamodel.melange.impl.TaggedReuseFeatureImpl#getName <em>Name</em>}</li>
  * </ul>
  *
  * @generated
  */
-public abstract class NamedElementImpl extends ElementImpl implements NamedElement {
+public class TaggedReuseFeatureImpl extends ReuseFeatureImpl implements TaggedReuseFeature {
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -58,7 +59,7 @@ public abstract class NamedElementImpl extends ElementImpl implements NamedEleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected NamedElementImpl() {
+	protected TaggedReuseFeatureImpl() {
 		super();
 	}
 
@@ -69,7 +70,7 @@ public abstract class NamedElementImpl extends ElementImpl implements NamedEleme
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return MelangePackage.Literals.NAMED_ELEMENT;
+		return MelangePackage.Literals.TAGGED_REUSE_FEATURE;
 	}
 
 	/**
@@ -90,7 +91,7 @@ public abstract class NamedElementImpl extends ElementImpl implements NamedEleme
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MelangePackage.NAMED_ELEMENT__NAME, oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, MelangePackage.TAGGED_REUSE_FEATURE__NAME, oldName, name));
 	}
 
 	/**
@@ -101,7 +102,7 @@ public abstract class NamedElementImpl extends ElementImpl implements NamedEleme
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case MelangePackage.NAMED_ELEMENT__NAME:
+			case MelangePackage.TAGGED_REUSE_FEATURE__NAME:
 				return getName();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -115,7 +116,7 @@ public abstract class NamedElementImpl extends ElementImpl implements NamedEleme
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case MelangePackage.NAMED_ELEMENT__NAME:
+			case MelangePackage.TAGGED_REUSE_FEATURE__NAME:
 				setName((String)newValue);
 				return;
 		}
@@ -130,7 +131,7 @@ public abstract class NamedElementImpl extends ElementImpl implements NamedEleme
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case MelangePackage.NAMED_ELEMENT__NAME:
+			case MelangePackage.TAGGED_REUSE_FEATURE__NAME:
 				setName(NAME_EDEFAULT);
 				return;
 		}
@@ -145,10 +146,42 @@ public abstract class NamedElementImpl extends ElementImpl implements NamedEleme
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case MelangePackage.NAMED_ELEMENT__NAME:
+			case MelangePackage.TAGGED_REUSE_FEATURE__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
+		if (baseClass == TaggedElement.class) {
+			switch (derivedFeatureID) {
+				case MelangePackage.TAGGED_REUSE_FEATURE__NAME: return MelangePackage.TAGGED_ELEMENT__NAME;
+				default: return -1;
+			}
+		}
+		return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
+		if (baseClass == TaggedElement.class) {
+			switch (baseFeatureID) {
+				case MelangePackage.TAGGED_ELEMENT__NAME: return MelangePackage.TAGGED_REUSE_FEATURE__NAME;
+				default: return -1;
+			}
+		}
+		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
 	}
 
 	/**
@@ -167,4 +200,4 @@ public abstract class NamedElementImpl extends ElementImpl implements NamedEleme
 		return result.toString();
 	}
 
-} //NamedElementImpl
+} //TaggedReuseFeatureImpl

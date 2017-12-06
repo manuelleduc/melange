@@ -1,4 +1,12 @@
 /**
+ * Copyright (c) 2017 Inria and others.
+ *  * All rights reserved. This program and the accompanying materials
+ *  * are made available under the terms of the Eclipse Public License v1.0
+ *  * which accompanies this distribution, and is available at
+ *  * http://www.eclipse.org/legal/epl-v10.html
+ *  *
+ *  * Contributors:
+ *  *     Inria - initial API and implementation
  */
 package fr.inria.diverse.melange.metamodel.melange.impl;
 
@@ -33,12 +41,16 @@ import fr.inria.diverse.melange.metamodel.melange.Or;
 import fr.inria.diverse.melange.metamodel.melange.PackageBinding;
 import fr.inria.diverse.melange.metamodel.melange.PropertyBinding;
 import fr.inria.diverse.melange.metamodel.melange.Realisation;
+import fr.inria.diverse.melange.metamodel.melange.ReferenceReuseFeature;
 import fr.inria.diverse.melange.metamodel.melange.ResourceType;
 import fr.inria.diverse.melange.metamodel.melange.Reuse;
+import fr.inria.diverse.melange.metamodel.melange.ReuseFeature;
 import fr.inria.diverse.melange.metamodel.melange.Slice;
 import fr.inria.diverse.melange.metamodel.melange.SomeOf;
 import fr.inria.diverse.melange.metamodel.melange.Subtyping;
+import fr.inria.diverse.melange.metamodel.melange.TaggedElement;
 import fr.inria.diverse.melange.metamodel.melange.TaggedOperator;
+import fr.inria.diverse.melange.metamodel.melange.TaggedReuseFeature;
 import fr.inria.diverse.melange.metamodel.melange.Transformation;
 import fr.inria.diverse.melange.metamodel.melange.Variability;
 import fr.inria.diverse.melange.metamodel.melange.Weave;
@@ -54,6 +66,7 @@ import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 import org.eclipse.gemoc.dsl.DslPackage;
+
 import org.eclipse.xtext.common.types.TypesPackage;
 
 import org.eclipse.xtext.xbase.XbasePackage;
@@ -332,6 +345,34 @@ public class MelangePackageImpl extends EPackageImpl implements MelangePackage {
 	 * @generated
 	 */
 	private EClass reuseEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass reuseFeatureEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass referenceReuseFeatureEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass taggedReuseFeatureEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass taggedElementEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -1322,15 +1363,6 @@ public class MelangePackageImpl extends EPackageImpl implements MelangePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getTaggedOperator_Name() {
-		return (EAttribute)taggedOperatorEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getRealisation() {
 		return realisationEClass;
 	}
@@ -1477,6 +1509,60 @@ public class MelangePackageImpl extends EPackageImpl implements MelangePackage {
 	 */
 	public EReference getReuse_Features() {
 		return (EReference)reuseEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getReuseFeature() {
+		return reuseFeatureEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getReferenceReuseFeature() {
+		return referenceReuseFeatureEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getReferenceReuseFeature_Ref() {
+		return (EReference)referenceReuseFeatureEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getTaggedReuseFeature() {
+		return taggedReuseFeatureEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getTaggedElement() {
+		return taggedElementEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getTaggedElement_Name() {
+		return (EAttribute)taggedElementEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1647,7 +1733,6 @@ public class MelangePackageImpl extends EPackageImpl implements MelangePackage {
 
 		taggedOperatorEClass = createEClass(TAGGED_OPERATOR);
 		createEReference(taggedOperatorEClass, TAGGED_OPERATOR__OPERATOR);
-		createEAttribute(taggedOperatorEClass, TAGGED_OPERATOR__NAME);
 
 		realisationEClass = createEClass(REALISATION);
 		createEReference(realisationEClass, REALISATION__CONDITION);
@@ -1672,6 +1757,16 @@ public class MelangePackageImpl extends EPackageImpl implements MelangePackage {
 		reuseEClass = createEClass(REUSE);
 		createEReference(reuseEClass, REUSE__LANGUAGECONCERN);
 		createEReference(reuseEClass, REUSE__FEATURES);
+
+		reuseFeatureEClass = createEClass(REUSE_FEATURE);
+
+		referenceReuseFeatureEClass = createEClass(REFERENCE_REUSE_FEATURE);
+		createEReference(referenceReuseFeatureEClass, REFERENCE_REUSE_FEATURE__REF);
+
+		taggedReuseFeatureEClass = createEClass(TAGGED_REUSE_FEATURE);
+
+		taggedElementEClass = createEClass(TAGGED_ELEMENT);
+		createEAttribute(taggedElementEClass, TAGGED_ELEMENT__NAME);
 
 		// Create enums
 		resourceTypeEEnum = createEEnum(RESOURCE_TYPE);
@@ -1734,11 +1829,15 @@ public class MelangePackageImpl extends EPackageImpl implements MelangePackage {
 		featureEClass.getESuperTypes().add(this.getVariability());
 		oneOfEClass.getESuperTypes().add(this.getVariability());
 		someOfEClass.getESuperTypes().add(this.getVariability());
+		taggedOperatorEClass.getESuperTypes().add(this.getTaggedElement());
 		orEClass.getESuperTypes().add(this.getCondition());
 		andEClass.getESuperTypes().add(this.getCondition());
 		notEClass.getESuperTypes().add(this.getCondition());
 		featureRefEClass.getESuperTypes().add(this.getCondition());
 		reuseEClass.getESuperTypes().add(this.getOperator());
+		referenceReuseFeatureEClass.getESuperTypes().add(this.getReuseFeature());
+		taggedReuseFeatureEClass.getESuperTypes().add(this.getReuseFeature());
+		taggedReuseFeatureEClass.getESuperTypes().add(this.getTaggedElement());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(modelTypingSpaceEClass, ModelTypingSpace.class, "ModelTypingSpace", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1872,11 +1971,10 @@ public class MelangePackageImpl extends EPackageImpl implements MelangePackage {
 
 		initEClass(taggedOperatorEClass, TaggedOperator.class, "TaggedOperator", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getTaggedOperator_Operator(), this.getOperator(), null, "operator", null, 1, 1, TaggedOperator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getTaggedOperator_Name(), theEcorePackage.getEString(), "name", null, 0, 1, TaggedOperator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(realisationEClass, Realisation.class, "Realisation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getRealisation_Condition(), this.getCondition(), null, "condition", null, 1, 1, Realisation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getRealisation_Targets(), this.getTaggedOperator(), null, "targets", null, 0, -1, Realisation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getRealisation_Targets(), this.getTaggedElement(), null, "targets", null, 0, -1, Realisation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(conditionEClass, Condition.class, "Condition", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -1896,7 +1994,17 @@ public class MelangePackageImpl extends EPackageImpl implements MelangePackage {
 
 		initEClass(reuseEClass, Reuse.class, "Reuse", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getReuse_Languageconcern(), this.getLanguageConcern(), null, "languageconcern", null, 1, 1, Reuse.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getReuse_Features(), this.getVariability(), null, "features", null, 0, -1, Reuse.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getReuse_Features(), this.getReuseFeature(), null, "features", null, 0, -1, Reuse.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(reuseFeatureEClass, ReuseFeature.class, "ReuseFeature", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(referenceReuseFeatureEClass, ReferenceReuseFeature.class, "ReferenceReuseFeature", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getReferenceReuseFeature_Ref(), this.getVariability(), null, "ref", null, 1, 1, ReferenceReuseFeature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(taggedReuseFeatureEClass, TaggedReuseFeature.class, "TaggedReuseFeature", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(taggedElementEClass, TaggedElement.class, "TaggedElement", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getTaggedElement_Name(), theEcorePackage.getEString(), "name", null, 0, 1, TaggedElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(resourceTypeEEnum, ResourceType.class, "ResourceType");

@@ -1,4 +1,12 @@
 /**
+ * Copyright (c) 2017 Inria and others.
+ *  * All rights reserved. This program and the accompanying materials
+ *  * are made available under the terms of the Eclipse Public License v1.0
+ *  * which accompanies this distribution, and is available at
+ *  * http://www.eclipse.org/legal/epl-v10.html
+ *  *
+ *  * Contributors:
+ *  *     Inria - initial API and implementation
  */
 package fr.inria.diverse.melange.metamodel.melange.impl;
 
@@ -89,6 +97,8 @@ public class MelangeFactoryImpl extends EFactoryImpl implements MelangeFactory {
 			case MelangePackage.NOT: return createNot();
 			case MelangePackage.FEATURE_REF: return createFeatureRef();
 			case MelangePackage.REUSE: return createReuse();
+			case MelangePackage.REFERENCE_REUSE_FEATURE: return createReferenceReuseFeature();
+			case MelangePackage.TAGGED_REUSE_FEATURE: return createTaggedReuseFeature();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -442,6 +452,26 @@ public class MelangeFactoryImpl extends EFactoryImpl implements MelangeFactory {
 	public Reuse createReuse() {
 		ReuseImpl reuse = new ReuseImpl();
 		return reuse;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ReferenceReuseFeature createReferenceReuseFeature() {
+		ReferenceReuseFeatureImpl referenceReuseFeature = new ReferenceReuseFeatureImpl();
+		return referenceReuseFeature;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public TaggedReuseFeature createTaggedReuseFeature() {
+		TaggedReuseFeatureImpl taggedReuseFeature = new TaggedReuseFeatureImpl();
+		return taggedReuseFeature;
 	}
 
 	/**

@@ -10,25 +10,27 @@
  */
 package fr.inria.diverse.melange.metamodel.melange.impl;
 
-import fr.inria.diverse.melange.metamodel.melange.Inheritance;
 import fr.inria.diverse.melange.metamodel.melange.MelangePackage;
+import fr.inria.diverse.melange.metamodel.melange.ReuseFeature;
 
 import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Inheritance</b></em>'.
+ * An implementation of the model object '<em><b>Reuse Feature</b></em>'.
  * <!-- end-user-doc -->
  *
  * @generated
  */
-public class InheritanceImpl extends LanguageOperatorImpl implements Inheritance {
+public abstract class ReuseFeatureImpl extends MinimalEObjectImpl.Container implements ReuseFeature {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected InheritanceImpl() {
+	protected ReuseFeatureImpl() {
 		super();
 	}
 
@@ -39,7 +41,7 @@ public class InheritanceImpl extends LanguageOperatorImpl implements Inheritance
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return MelangePackage.Literals.INHERITANCE;
+		return MelangePackage.Literals.REUSE_FEATURE;
 	}
 
-} //InheritanceImpl
+} //ReuseFeatureImpl

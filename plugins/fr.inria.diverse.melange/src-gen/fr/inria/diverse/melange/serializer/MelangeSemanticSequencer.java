@@ -26,10 +26,12 @@ import fr.inria.diverse.melange.metamodel.melange.Or;
 import fr.inria.diverse.melange.metamodel.melange.PackageBinding;
 import fr.inria.diverse.melange.metamodel.melange.PropertyBinding;
 import fr.inria.diverse.melange.metamodel.melange.Realisation;
+import fr.inria.diverse.melange.metamodel.melange.ReferenceReuseFeature;
 import fr.inria.diverse.melange.metamodel.melange.Reuse;
 import fr.inria.diverse.melange.metamodel.melange.Slice;
 import fr.inria.diverse.melange.metamodel.melange.SomeOf;
 import fr.inria.diverse.melange.metamodel.melange.TaggedOperator;
+import fr.inria.diverse.melange.metamodel.melange.TaggedReuseFeature;
 import fr.inria.diverse.melange.metamodel.melange.Weave;
 import fr.inria.diverse.melange.metamodel.melange.XbaseTransformation;
 import fr.inria.diverse.melange.services.MelangeGrammarAccess;
@@ -174,6 +176,9 @@ public class MelangeSemanticSequencer extends XbaseSemanticSequencer {
 			case MelangePackage.REALISATION:
 				sequence_Realisation(context, (Realisation) semanticObject); 
 				return; 
+			case MelangePackage.REFERENCE_REUSE_FEATURE:
+				sequence_ReuseFeature(context, (ReferenceReuseFeature) semanticObject); 
+				return; 
 			case MelangePackage.REUSE:
 				sequence_Reuse(context, (Reuse) semanticObject); 
 				return; 
@@ -185,6 +190,9 @@ public class MelangeSemanticSequencer extends XbaseSemanticSequencer {
 				return; 
 			case MelangePackage.TAGGED_OPERATOR:
 				sequence_TaggedOperator(context, (TaggedOperator) semanticObject); 
+				return; 
+			case MelangePackage.TAGGED_REUSE_FEATURE:
+				sequence_ReuseFeature(context, (TaggedReuseFeature) semanticObject); 
 				return; 
 			case MelangePackage.WEAVE:
 				if (rule == grammarAccess.getOperatorRule()
@@ -589,9 +597,9 @@ public class MelangeSemanticSequencer extends XbaseSemanticSequencer {
 	 * Constraint:
 	 *     (
 	 *         (operators+=Weave | xmof=STRING | fileExtension=STRING)? 
+	 *         (ecl+=STRING ecl+=STRING*)? 
 	 *         (sirius+=STRING sirius+=STRING*)? 
 	 *         (xtext+=STRING xtext+=STRING*)? 
-	 *         (ecl+=STRING ecl+=STRING*)? 
 	 *         (exactTypeName=ValidID exactTypeUri=STRING?)? 
 	 *         (name=ValidID (implements+=[ModelType|QualifiedName] implements+=[ModelType|QualifiedName]*)? operators+=ExternalImport)?
 	 *     )+
@@ -686,9 +694,9 @@ public class MelangeSemanticSequencer extends XbaseSemanticSequencer {
 	 *     (
 	 *         (xmof=STRING | fileExtension=STRING | annotations+=Annotation)? 
 	 *         (xtext+=STRING xtext+=STRING*)? 
-	 *         (ecl+=STRING ecl+=STRING*)? 
-	 *         (sirius+=STRING sirius+=STRING*)? 
 	 *         (exactTypeName=ValidID exactTypeUri=STRING?)? 
+	 *         (sirius+=STRING sirius+=STRING*)? 
+	 *         (ecl+=STRING ecl+=STRING*)? 
 	 *         (resourceType=ResourceType (resourceUri=STRING | xtextSetupRef=JvmTypeReference)?)? 
 	 *         (
 	 *             name=ValidID 
@@ -819,10 +827,46 @@ public class MelangeSemanticSequencer extends XbaseSemanticSequencer {
 	 *     Realisation returns Realisation
 	 *
 	 * Constraint:
-	 *     (condition=Condition targets+=[TaggedOperator|ID]*)
+	 *     (condition=Condition targets+=[TaggedElement|ID]*)
 	 */
 	protected void sequence_Realisation(ISerializationContext context, Realisation semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     ReuseFeature returns ReferenceReuseFeature
+	 *
+	 * Constraint:
+	 *     ref=[Variability|QualifiedName]
+	 */
+	protected void sequence_ReuseFeature(ISerializationContext context, ReferenceReuseFeature semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, MelangePackage.Literals.REFERENCE_REUSE_FEATURE__REF) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MelangePackage.Literals.REFERENCE_REUSE_FEATURE__REF));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getReuseFeatureAccess().getRefVariabilityQualifiedNameParserRuleCall_0_1_0_1(), semanticObject.eGet(MelangePackage.Literals.REFERENCE_REUSE_FEATURE__REF, false));
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     ReuseFeature returns TaggedReuseFeature
+	 *
+	 * Constraint:
+	 *     name=ID
+	 */
+	protected void sequence_ReuseFeature(ISerializationContext context, TaggedReuseFeature semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, MelangePackage.Literals.TAGGED_ELEMENT__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MelangePackage.Literals.TAGGED_ELEMENT__NAME));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getReuseFeatureAccess().getNameIDTerminalRuleCall_1_2_0(), semanticObject.getName());
+		feeder.finish();
 	}
 	
 	
@@ -832,7 +876,7 @@ public class MelangeSemanticSequencer extends XbaseSemanticSequencer {
 	 *     Reuse returns Reuse
 	 *
 	 * Constraint:
-	 *     (languageconcern=[LanguageConcern|QualifiedName] features+=[Variability|QualifiedName]*)
+	 *     (languageconcern=[LanguageConcern|QualifiedName] (features+=ReuseFeature features+=ReuseFeature*)?)
 	 */
 	protected void sequence_Reuse(ISerializationContext context, Reuse semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

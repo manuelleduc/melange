@@ -21,7 +21,6 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -32,12 +31,11 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * </p>
  * <ul>
  *   <li>{@link fr.inria.diverse.melange.metamodel.melange.impl.TaggedOperatorImpl#getOperator <em>Operator</em>}</li>
- *   <li>{@link fr.inria.diverse.melange.metamodel.melange.impl.TaggedOperatorImpl#getName <em>Name</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class TaggedOperatorImpl extends MinimalEObjectImpl.Container implements TaggedOperator {
+public class TaggedOperatorImpl extends TaggedElementImpl implements TaggedOperator {
 	/**
 	 * The cached value of the '{@link #getOperator() <em>Operator</em>}' containment reference.
 	 * <!-- begin-user-doc -->
@@ -47,26 +45,6 @@ public class TaggedOperatorImpl extends MinimalEObjectImpl.Container implements 
 	 * @ordered
 	 */
 	protected Operator operator;
-
-	/**
-	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String NAME_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected String name = NAME_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -135,27 +113,6 @@ public class TaggedOperatorImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getName() {
-		return name;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setName(String newName) {
-		String oldName = name;
-		name = newName;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MelangePackage.TAGGED_OPERATOR__NAME, oldName, name));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -175,8 +132,6 @@ public class TaggedOperatorImpl extends MinimalEObjectImpl.Container implements 
 		switch (featureID) {
 			case MelangePackage.TAGGED_OPERATOR__OPERATOR:
 				return getOperator();
-			case MelangePackage.TAGGED_OPERATOR__NAME:
-				return getName();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -191,9 +146,6 @@ public class TaggedOperatorImpl extends MinimalEObjectImpl.Container implements 
 		switch (featureID) {
 			case MelangePackage.TAGGED_OPERATOR__OPERATOR:
 				setOperator((Operator)newValue);
-				return;
-			case MelangePackage.TAGGED_OPERATOR__NAME:
-				setName((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -210,9 +162,6 @@ public class TaggedOperatorImpl extends MinimalEObjectImpl.Container implements 
 			case MelangePackage.TAGGED_OPERATOR__OPERATOR:
 				setOperator((Operator)null);
 				return;
-			case MelangePackage.TAGGED_OPERATOR__NAME:
-				setName(NAME_EDEFAULT);
-				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -227,26 +176,8 @@ public class TaggedOperatorImpl extends MinimalEObjectImpl.Container implements 
 		switch (featureID) {
 			case MelangePackage.TAGGED_OPERATOR__OPERATOR:
 				return operator != null;
-			case MelangePackage.TAGGED_OPERATOR__NAME:
-				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy()) return super.toString();
-
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (name: ");
-		result.append(name);
-		result.append(')');
-		return result.toString();
 	}
 
 } //TaggedOperatorImpl

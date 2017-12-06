@@ -10,16 +10,17 @@
  */
 package fr.inria.diverse.melange.metamodel.melange;
 
+import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Transformation</b></em>'.
+ * A representation of the model object '<em><b>Reuse Feature</b></em>'.
  * <!-- end-user-doc -->
  *
  *
- * @see fr.inria.diverse.melange.metamodel.melange.MelangePackage#getTransformation()
+ * @see fr.inria.diverse.melange.metamodel.melange.MelangePackage#getReuseFeature()
  * @model abstract="true"
  * @generated
  */
-public interface Transformation extends NamedElement {
-} // Transformation
+public interface ReuseFeature extends EObject {
+} // ReuseFeature

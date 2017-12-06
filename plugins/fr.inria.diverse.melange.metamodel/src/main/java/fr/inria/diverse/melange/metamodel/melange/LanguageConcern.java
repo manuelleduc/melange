@@ -12,7 +12,6 @@ package fr.inria.diverse.melange.metamodel.melange;
 
 import org.eclipse.emf.common.util.EList;
 
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Language Concern</b></em>'.
@@ -32,7 +31,6 @@ import org.eclipse.emf.common.util.EList;
  * @generated
  */
 public interface LanguageConcern extends NamedElement {
-
 	/**
 	 * Returns the value of the '<em><b>Vm</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
@@ -90,4 +88,5 @@ public interface LanguageConcern extends NamedElement {
 	 * @generated
 	 */
 	EList<Realisation> getRealisations();
+
 } // LanguageConcern

@@ -41,7 +41,7 @@ LanguageConcern:
 Realisation:
 	{Realisation}
 	condition=Condition
-	 '->' (targets+=[TaggedOperator|ID])*
+	 '->' (targets+=[TaggedElement|ID])*
 ;
 
 Condition returns Condition:
@@ -64,7 +64,7 @@ Terminal returns Condition:
 
 TaggedOperator:
 	{TaggedOperator}
-	(name=ID '|')? operator=Operator
+	('$' name=ID '|')? operator=Operator
 ;
 
 Variability:
@@ -171,8 +171,13 @@ Operator returns Operator:
 Reuse:
 	{Reuse}
 	'reuse' languageconcern = [LanguageConcern|QualifiedName] '{'
-		('features' '=' (features+=[Variability|QualifiedName])*)?
+		('features' '=' features+=ReuseFeature (',' features+=ReuseFeature)*)?
 	'}'
+;
+
+ReuseFeature:
+	{ReferenceReuseFeature} ref=[Variability|QualifiedName] |
+	{TaggedReuseFeature} '$' name=ID
 ;
 
 Import returns Import:

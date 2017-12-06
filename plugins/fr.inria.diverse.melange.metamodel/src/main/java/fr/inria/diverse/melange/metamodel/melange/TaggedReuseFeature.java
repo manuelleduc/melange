@@ -13,13 +13,13 @@ package fr.inria.diverse.melange.metamodel.melange;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Transformation</b></em>'.
+ * A representation of the model object '<em><b>Tagged Reuse Feature</b></em>'.
  * <!-- end-user-doc -->
  *
  *
- * @see fr.inria.diverse.melange.metamodel.melange.MelangePackage#getTransformation()
- * @model abstract="true"
+ * @see fr.inria.diverse.melange.metamodel.melange.MelangePackage#getTaggedReuseFeature()
+ * @model
  * @generated
  */
-public interface Transformation extends NamedElement {
-} // Transformation
+public interface TaggedReuseFeature extends ReuseFeature, TaggedElement {
+} // TaggedReuseFeature

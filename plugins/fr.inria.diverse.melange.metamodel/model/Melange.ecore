@@ -176,16 +176,15 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="children" upperBound="-1"
         eType="#//Variability" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="TaggedOperator">
+  <eClassifiers xsi:type="ecore:EClass" name="TaggedOperator" eSuperTypes="#//TaggedElement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="operator" lowerBound="1"
         eType="#//Operator" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Realisation">
     <eStructuralFeatures xsi:type="ecore:EReference" name="condition" lowerBound="1"
         eType="#//Condition" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="targets" upperBound="-1"
-        eType="#//TaggedOperator"/>
+        eType="#//TaggedElement"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Condition" abstract="true"/>
   <eClassifiers xsi:type="ecore:EClass" name="Or" eSuperTypes="#//Condition">
@@ -211,6 +210,14 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="languageconcern" lowerBound="1"
         eType="#//LanguageConcern"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="features" upperBound="-1"
-        eType="#//Variability"/>
+        eType="#//ReuseFeature" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ReuseFeature" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ReferenceReuseFeature" eSuperTypes="#//ReuseFeature">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ref" lowerBound="1" eType="#//Variability"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TaggedReuseFeature" eSuperTypes="#//ReuseFeature #//TaggedElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="TaggedElement" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
   </eClassifiers>
 </ecore:EPackage>

@@ -13,7 +13,7 @@ package fr.inria.diverse.melange.metamodel.melange.impl;
 import fr.inria.diverse.melange.metamodel.melange.Condition;
 import fr.inria.diverse.melange.metamodel.melange.MelangePackage;
 import fr.inria.diverse.melange.metamodel.melange.Realisation;
-import fr.inria.diverse.melange.metamodel.melange.TaggedOperator;
+import fr.inria.diverse.melange.metamodel.melange.TaggedElement;
 
 import java.util.Collection;
 
@@ -63,7 +63,7 @@ public class RealisationImpl extends MinimalEObjectImpl.Container implements Rea
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<TaggedOperator> targets;
+	protected EList<TaggedElement> targets;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -132,9 +132,9 @@ public class RealisationImpl extends MinimalEObjectImpl.Container implements Rea
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<TaggedOperator> getTargets() {
+	public EList<TaggedElement> getTargets() {
 		if (targets == null) {
-			targets = new EObjectResolvingEList<TaggedOperator>(TaggedOperator.class, this, MelangePackage.REALISATION__TARGETS);
+			targets = new EObjectResolvingEList<TaggedElement>(TaggedElement.class, this, MelangePackage.REALISATION__TARGETS);
 		}
 		return targets;
 	}
@@ -183,7 +183,7 @@ public class RealisationImpl extends MinimalEObjectImpl.Container implements Rea
 				return;
 			case MelangePackage.REALISATION__TARGETS:
 				getTargets().clear();
-				getTargets().addAll((Collection<? extends TaggedOperator>)newValue);
+				getTargets().addAll((Collection<? extends TaggedElement>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);

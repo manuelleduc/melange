@@ -60,7 +60,7 @@ public interface Realisation extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Targets</b></em>' reference list.
-	 * The list contents are of type {@link fr.inria.diverse.melange.metamodel.melange.TaggedOperator}.
+	 * The list contents are of type {@link fr.inria.diverse.melange.metamodel.melange.TaggedElement}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Targets</em>' reference list isn't clear,
@@ -72,6 +72,6 @@ public interface Realisation extends EObject {
 	 * @model
 	 * @generated
 	 */
-	EList<TaggedOperator> getTargets();
+	EList<TaggedElement> getTargets();
 
 } // Realisation

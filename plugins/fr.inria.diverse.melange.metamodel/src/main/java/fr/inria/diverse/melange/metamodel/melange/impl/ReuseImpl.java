@@ -13,11 +13,12 @@ package fr.inria.diverse.melange.metamodel.melange.impl;
 import fr.inria.diverse.melange.metamodel.melange.LanguageConcern;
 import fr.inria.diverse.melange.metamodel.melange.MelangePackage;
 import fr.inria.diverse.melange.metamodel.melange.Reuse;
-import fr.inria.diverse.melange.metamodel.melange.Variability;
+import fr.inria.diverse.melange.metamodel.melange.ReuseFeature;
 
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
 
@@ -26,7 +27,8 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -54,14 +56,14 @@ public class ReuseImpl extends OperatorImpl implements Reuse {
 	protected LanguageConcern languageconcern;
 
 	/**
-	 * The cached value of the '{@link #getFeatures() <em>Features</em>}' reference list.
+	 * The cached value of the '{@link #getFeatures() <em>Features</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getFeatures()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Variability> features;
+	protected EList<ReuseFeature> features;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -125,11 +127,25 @@ public class ReuseImpl extends OperatorImpl implements Reuse {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Variability> getFeatures() {
+	public EList<ReuseFeature> getFeatures() {
 		if (features == null) {
-			features = new EObjectResolvingEList<Variability>(Variability.class, this, MelangePackage.REUSE__FEATURES);
+			features = new EObjectContainmentEList<ReuseFeature>(ReuseFeature.class, this, MelangePackage.REUSE__FEATURES);
 		}
 		return features;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case MelangePackage.REUSE__FEATURES:
+				return ((InternalEList<?>)getFeatures()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**
@@ -163,7 +179,7 @@ public class ReuseImpl extends OperatorImpl implements Reuse {
 				return;
 			case MelangePackage.REUSE__FEATURES:
 				getFeatures().clear();
-				getFeatures().addAll((Collection<? extends Variability>)newValue);
+				getFeatures().addAll((Collection<? extends ReuseFeature>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);

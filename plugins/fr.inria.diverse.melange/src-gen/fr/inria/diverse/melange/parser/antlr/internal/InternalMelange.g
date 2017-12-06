@@ -432,7 +432,7 @@ ruleRealisation returns [EObject current=null]
         }
 	otherlv_3=RULE_ID
 	{
-		newLeafNode(otherlv_3, grammarAccess.getRealisationAccess().getTargetsTaggedOperatorCrossReference_3_0()); 
+		newLeafNode(otherlv_3, grammarAccess.getRealisationAccess().getTargetsTaggedElementCrossReference_3_0()); 
 	}
 
 )
@@ -696,11 +696,15 @@ ruleTaggedOperator returns [EObject current=null]
             grammarAccess.getTaggedOperatorAccess().getTaggedOperatorAction_0(),
             $current);
     }
-)((
+)(	otherlv_1='$' 
+    {
+    	newLeafNode(otherlv_1, grammarAccess.getTaggedOperatorAccess().getDollarSignKeyword_1_0());
+    }
 (
-		lv_name_1_0=RULE_ID
+(
+		lv_name_2_0=RULE_ID
 		{
-			newLeafNode(lv_name_1_0, grammarAccess.getTaggedOperatorAccess().getNameIDTerminalRuleCall_1_0_0()); 
+			newLeafNode(lv_name_2_0, grammarAccess.getTaggedOperatorAccess().getNameIDTerminalRuleCall_1_1_0()); 
 		}
 		{
 	        if ($current==null) {
@@ -709,28 +713,28 @@ ruleTaggedOperator returns [EObject current=null]
        		setWithLastConsumed(
        			$current, 
        			"name",
-        		lv_name_1_0, 
+        		lv_name_2_0, 
         		"org.eclipse.xtext.xbase.Xtype.ID");
 	    }
 
 )
-)	otherlv_2='|' 
+)	otherlv_3='|' 
     {
-    	newLeafNode(otherlv_2, grammarAccess.getTaggedOperatorAccess().getVerticalLineKeyword_1_1());
+    	newLeafNode(otherlv_3, grammarAccess.getTaggedOperatorAccess().getVerticalLineKeyword_1_2());
     }
 )?(
 (
 		{ 
 	        newCompositeNode(grammarAccess.getTaggedOperatorAccess().getOperatorOperatorParserRuleCall_2_0()); 
 	    }
-		lv_operator_3_0=ruleOperator		{
+		lv_operator_4_0=ruleOperator		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getTaggedOperatorRule());
 	        }
        		set(
        			$current, 
        			"operator",
-        		lv_operator_3_0, 
+        		lv_operator_4_0, 
         		"fr.inria.diverse.melange.Melange.Operator");
 	        afterParserOrEnumRuleCall();
 	    }
@@ -2923,24 +2927,120 @@ ruleReuse returns [EObject current=null]
     }
 (
 (
+		{ 
+	        newCompositeNode(grammarAccess.getReuseAccess().getFeaturesReuseFeatureParserRuleCall_4_2_0()); 
+	    }
+		lv_features_6_0=ruleReuseFeature		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getReuseRule());
+	        }
+       		add(
+       			$current, 
+       			"features",
+        		lv_features_6_0, 
+        		"fr.inria.diverse.melange.Melange.ReuseFeature");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+)(	otherlv_7=',' 
+    {
+    	newLeafNode(otherlv_7, grammarAccess.getReuseAccess().getCommaKeyword_4_3_0());
+    }
+(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getReuseAccess().getFeaturesReuseFeatureParserRuleCall_4_3_1_0()); 
+	    }
+		lv_features_8_0=ruleReuseFeature		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getReuseRule());
+	        }
+       		add(
+       			$current, 
+       			"features",
+        		lv_features_8_0, 
+        		"fr.inria.diverse.melange.Melange.ReuseFeature");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+))*)?	otherlv_9='}' 
+    {
+    	newLeafNode(otherlv_9, grammarAccess.getReuseAccess().getRightCurlyBracketKeyword_5());
+    }
+)
+;
+
+
+
+
+
+// Entry rule entryRuleReuseFeature
+entryRuleReuseFeature returns [EObject current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getReuseFeatureRule()); }
+	 iv_ruleReuseFeature=ruleReuseFeature 
+	 { $current=$iv_ruleReuseFeature.current; } 
+	 EOF 
+;
+
+// Rule ReuseFeature
+ruleReuseFeature returns [EObject current=null] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+(((
+    {
+        $current = forceCreateModelElement(
+            grammarAccess.getReuseFeatureAccess().getReferenceReuseFeatureAction_0_0(),
+            $current);
+    }
+)(
+(
 		{
 			if ($current==null) {
-	            $current = createModelElement(grammarAccess.getReuseRule());
+	            $current = createModelElement(grammarAccess.getReuseFeatureRule());
 	        }
         }
 		{ 
-	        newCompositeNode(grammarAccess.getReuseAccess().getFeaturesVariabilityCrossReference_4_2_0()); 
+	        newCompositeNode(grammarAccess.getReuseFeatureAccess().getRefVariabilityCrossReference_0_1_0()); 
 	    }
 		ruleQualifiedName		{ 
 	        afterParserOrEnumRuleCall();
 	    }
 
 )
-)*)?	otherlv_7='}' 
+))
+    |((
     {
-    	newLeafNode(otherlv_7, grammarAccess.getReuseAccess().getRightCurlyBracketKeyword_5());
+        $current = forceCreateModelElement(
+            grammarAccess.getReuseFeatureAccess().getTaggedReuseFeatureAction_1_0(),
+            $current);
     }
+)	otherlv_3='$' 
+    {
+    	newLeafNode(otherlv_3, grammarAccess.getReuseFeatureAccess().getDollarSignKeyword_1_1());
+    }
+(
+(
+		lv_name_4_0=RULE_ID
+		{
+			newLeafNode(lv_name_4_0, grammarAccess.getReuseFeatureAccess().getNameIDTerminalRuleCall_1_2_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getReuseFeatureRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"name",
+        		lv_name_4_0, 
+        		"org.eclipse.xtext.xbase.Xtype.ID");
+	    }
+
 )
+)))
 ;
 
 

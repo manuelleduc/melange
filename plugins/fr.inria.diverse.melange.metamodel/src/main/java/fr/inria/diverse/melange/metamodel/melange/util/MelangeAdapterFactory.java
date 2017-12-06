@@ -1,4 +1,12 @@
 /**
+ * Copyright (c) 2017 Inria and others.
+ *  * All rights reserved. This program and the accompanying materials
+ *  * are made available under the terms of the Eclipse Public License v1.0
+ *  * which accompanies this distribution, and is available at
+ *  * http://www.eclipse.org/legal/epl-v10.html
+ *  *
+ *  * Contributors:
+ *  *     Inria - initial API and implementation
  */
 package fr.inria.diverse.melange.metamodel.melange.util;
 
@@ -218,6 +226,22 @@ public class MelangeAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseReuse(Reuse object) {
 				return createReuseAdapter();
+			}
+			@Override
+			public Adapter caseReuseFeature(ReuseFeature object) {
+				return createReuseFeatureAdapter();
+			}
+			@Override
+			public Adapter caseReferenceReuseFeature(ReferenceReuseFeature object) {
+				return createReferenceReuseFeatureAdapter();
+			}
+			@Override
+			public Adapter caseTaggedReuseFeature(TaggedReuseFeature object) {
+				return createTaggedReuseFeatureAdapter();
+			}
+			@Override
+			public Adapter caseTaggedElement(TaggedElement object) {
+				return createTaggedElementAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -768,6 +792,62 @@ public class MelangeAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createReuseAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link fr.inria.diverse.melange.metamodel.melange.ReuseFeature <em>Reuse Feature</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see fr.inria.diverse.melange.metamodel.melange.ReuseFeature
+	 * @generated
+	 */
+	public Adapter createReuseFeatureAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link fr.inria.diverse.melange.metamodel.melange.ReferenceReuseFeature <em>Reference Reuse Feature</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see fr.inria.diverse.melange.metamodel.melange.ReferenceReuseFeature
+	 * @generated
+	 */
+	public Adapter createReferenceReuseFeatureAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link fr.inria.diverse.melange.metamodel.melange.TaggedReuseFeature <em>Tagged Reuse Feature</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see fr.inria.diverse.melange.metamodel.melange.TaggedReuseFeature
+	 * @generated
+	 */
+	public Adapter createTaggedReuseFeatureAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link fr.inria.diverse.melange.metamodel.melange.TaggedElement <em>Tagged Element</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see fr.inria.diverse.melange.metamodel.melange.TaggedElement
+	 * @generated
+	 */
+	public Adapter createTaggedElementAdapter() {
 		return null;
 	}
 

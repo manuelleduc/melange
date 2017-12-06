@@ -201,15 +201,15 @@ public class MelangeGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cConditionConditionParserRuleCall_1_0 = (RuleCall)cConditionAssignment_1.eContents().get(0);
 		private final Keyword cHyphenMinusGreaterThanSignKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		private final Assignment cTargetsAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final CrossReference cTargetsTaggedOperatorCrossReference_3_0 = (CrossReference)cTargetsAssignment_3.eContents().get(0);
-		private final RuleCall cTargetsTaggedOperatorIDTerminalRuleCall_3_0_1 = (RuleCall)cTargetsTaggedOperatorCrossReference_3_0.eContents().get(1);
+		private final CrossReference cTargetsTaggedElementCrossReference_3_0 = (CrossReference)cTargetsAssignment_3.eContents().get(0);
+		private final RuleCall cTargetsTaggedElementIDTerminalRuleCall_3_0_1 = (RuleCall)cTargetsTaggedElementCrossReference_3_0.eContents().get(1);
 		
 		//Realisation:
 		//	{Realisation} condition=Condition
-		//	'->' targets+=[TaggedOperator]*;
+		//	'->' targets+=[TaggedElement]*;
 		@Override public ParserRule getRule() { return rule; }
 
-		//{Realisation} condition=Condition '->' targets+=[TaggedOperator]*
+		//{Realisation} condition=Condition '->' targets+=[TaggedElement]*
 		public Group getGroup() { return cGroup; }
 
 		//{Realisation}
@@ -224,14 +224,14 @@ public class MelangeGrammarAccess extends AbstractGrammarElementFinder {
 		//'->'
 		public Keyword getHyphenMinusGreaterThanSignKeyword_2() { return cHyphenMinusGreaterThanSignKeyword_2; }
 
-		//targets+=[TaggedOperator]*
+		//targets+=[TaggedElement]*
 		public Assignment getTargetsAssignment_3() { return cTargetsAssignment_3; }
 
-		//[TaggedOperator]
-		public CrossReference getTargetsTaggedOperatorCrossReference_3_0() { return cTargetsTaggedOperatorCrossReference_3_0; }
+		//[TaggedElement]
+		public CrossReference getTargetsTaggedElementCrossReference_3_0() { return cTargetsTaggedElementCrossReference_3_0; }
 
 		//ID
-		public RuleCall getTargetsTaggedOperatorIDTerminalRuleCall_3_0_1() { return cTargetsTaggedOperatorIDTerminalRuleCall_3_0_1; }
+		public RuleCall getTargetsTaggedElementIDTerminalRuleCall_3_0_1() { return cTargetsTaggedElementIDTerminalRuleCall_3_0_1; }
 	}
 
 	public class ConditionElements extends AbstractParserRuleElementFinder {
@@ -392,33 +392,40 @@ public class MelangeGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Action cTaggedOperatorAction_0 = (Action)cGroup.eContents().get(0);
 		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
-		private final Assignment cNameAssignment_1_0 = (Assignment)cGroup_1.eContents().get(0);
-		private final RuleCall cNameIDTerminalRuleCall_1_0_0 = (RuleCall)cNameAssignment_1_0.eContents().get(0);
-		private final Keyword cVerticalLineKeyword_1_1 = (Keyword)cGroup_1.eContents().get(1);
+		private final Keyword cDollarSignKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
+		private final Assignment cNameAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
+		private final RuleCall cNameIDTerminalRuleCall_1_1_0 = (RuleCall)cNameAssignment_1_1.eContents().get(0);
+		private final Keyword cVerticalLineKeyword_1_2 = (Keyword)cGroup_1.eContents().get(2);
 		private final Assignment cOperatorAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final RuleCall cOperatorOperatorParserRuleCall_2_0 = (RuleCall)cOperatorAssignment_2.eContents().get(0);
 		
+		////TaggedElement:
+		////	TaggedOperator | 
+		////;
 		//TaggedOperator:
-		//	{TaggedOperator} (name=ID '|')? operator=Operator;
+		//	{TaggedOperator} ('$' name=ID '|')? operator=Operator;
 		@Override public ParserRule getRule() { return rule; }
 
-		//{TaggedOperator} (name=ID '|')? operator=Operator
+		//{TaggedOperator} ('$' name=ID '|')? operator=Operator
 		public Group getGroup() { return cGroup; }
 
 		//{TaggedOperator}
 		public Action getTaggedOperatorAction_0() { return cTaggedOperatorAction_0; }
 
-		//(name=ID '|')?
+		//('$' name=ID '|')?
 		public Group getGroup_1() { return cGroup_1; }
 
+		//'$'
+		public Keyword getDollarSignKeyword_1_0() { return cDollarSignKeyword_1_0; }
+
 		//name=ID
-		public Assignment getNameAssignment_1_0() { return cNameAssignment_1_0; }
+		public Assignment getNameAssignment_1_1() { return cNameAssignment_1_1; }
 
 		//ID
-		public RuleCall getNameIDTerminalRuleCall_1_0_0() { return cNameIDTerminalRuleCall_1_0_0; }
+		public RuleCall getNameIDTerminalRuleCall_1_1_0() { return cNameIDTerminalRuleCall_1_1_0; }
 
 		//'|'
-		public Keyword getVerticalLineKeyword_1_1() { return cVerticalLineKeyword_1_1; }
+		public Keyword getVerticalLineKeyword_1_2() { return cVerticalLineKeyword_1_2; }
 
 		//operator=Operator
 		public Assignment getOperatorAssignment_2() { return cOperatorAssignment_2; }
@@ -1716,18 +1723,22 @@ public class MelangeGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cFeaturesKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
 		private final Keyword cEqualsSignKeyword_4_1 = (Keyword)cGroup_4.eContents().get(1);
 		private final Assignment cFeaturesAssignment_4_2 = (Assignment)cGroup_4.eContents().get(2);
-		private final CrossReference cFeaturesVariabilityCrossReference_4_2_0 = (CrossReference)cFeaturesAssignment_4_2.eContents().get(0);
-		private final RuleCall cFeaturesVariabilityQualifiedNameParserRuleCall_4_2_0_1 = (RuleCall)cFeaturesVariabilityCrossReference_4_2_0.eContents().get(1);
+		private final RuleCall cFeaturesReuseFeatureParserRuleCall_4_2_0 = (RuleCall)cFeaturesAssignment_4_2.eContents().get(0);
+		private final Group cGroup_4_3 = (Group)cGroup_4.eContents().get(3);
+		private final Keyword cCommaKeyword_4_3_0 = (Keyword)cGroup_4_3.eContents().get(0);
+		private final Assignment cFeaturesAssignment_4_3_1 = (Assignment)cGroup_4_3.eContents().get(1);
+		private final RuleCall cFeaturesReuseFeatureParserRuleCall_4_3_1_0 = (RuleCall)cFeaturesAssignment_4_3_1.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
 		//Reuse:
 		//	{Reuse}
-		//	'reuse' languageconcern=[LanguageConcern|QualifiedName] '{' ('features' '=' features+=[Variability|QualifiedName]*)?
+		//	'reuse' languageconcern=[LanguageConcern|QualifiedName] '{' ('features' '=' features+=ReuseFeature (','
+		//	features+=ReuseFeature)*)?
 		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 
-		//{Reuse} 'reuse' languageconcern=[LanguageConcern|QualifiedName] '{' ('features' '='
-		//features+=[Variability|QualifiedName]*)? '}'
+		//{Reuse} 'reuse' languageconcern=[LanguageConcern|QualifiedName] '{' ('features' '=' features+=ReuseFeature (','
+		//features+=ReuseFeature)*)? '}'
 		public Group getGroup() { return cGroup; }
 
 		//{Reuse}
@@ -1748,7 +1759,7 @@ public class MelangeGrammarAccess extends AbstractGrammarElementFinder {
 		//'{'
 		public Keyword getLeftCurlyBracketKeyword_3() { return cLeftCurlyBracketKeyword_3; }
 
-		//('features' '=' features+=[Variability|QualifiedName]*)?
+		//('features' '=' features+=ReuseFeature (',' features+=ReuseFeature)*)?
 		public Group getGroup_4() { return cGroup_4; }
 
 		//'features'
@@ -1757,17 +1768,78 @@ public class MelangeGrammarAccess extends AbstractGrammarElementFinder {
 		//'='
 		public Keyword getEqualsSignKeyword_4_1() { return cEqualsSignKeyword_4_1; }
 
-		//features+=[Variability|QualifiedName]*
+		//features+=ReuseFeature
 		public Assignment getFeaturesAssignment_4_2() { return cFeaturesAssignment_4_2; }
 
-		//[Variability|QualifiedName]
-		public CrossReference getFeaturesVariabilityCrossReference_4_2_0() { return cFeaturesVariabilityCrossReference_4_2_0; }
+		//ReuseFeature
+		public RuleCall getFeaturesReuseFeatureParserRuleCall_4_2_0() { return cFeaturesReuseFeatureParserRuleCall_4_2_0; }
 
-		//QualifiedName
-		public RuleCall getFeaturesVariabilityQualifiedNameParserRuleCall_4_2_0_1() { return cFeaturesVariabilityQualifiedNameParserRuleCall_4_2_0_1; }
+		//(',' features+=ReuseFeature)*
+		public Group getGroup_4_3() { return cGroup_4_3; }
+
+		//','
+		public Keyword getCommaKeyword_4_3_0() { return cCommaKeyword_4_3_0; }
+
+		//features+=ReuseFeature
+		public Assignment getFeaturesAssignment_4_3_1() { return cFeaturesAssignment_4_3_1; }
+
+		//ReuseFeature
+		public RuleCall getFeaturesReuseFeatureParserRuleCall_4_3_1_0() { return cFeaturesReuseFeatureParserRuleCall_4_3_1_0; }
 
 		//'}'
 		public Keyword getRightCurlyBracketKeyword_5() { return cRightCurlyBracketKeyword_5; }
+	}
+
+	public class ReuseFeatureElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "fr.inria.diverse.melange.Melange.ReuseFeature");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final Group cGroup_0 = (Group)cAlternatives.eContents().get(0);
+		private final Action cReferenceReuseFeatureAction_0_0 = (Action)cGroup_0.eContents().get(0);
+		private final Assignment cRefAssignment_0_1 = (Assignment)cGroup_0.eContents().get(1);
+		private final CrossReference cRefVariabilityCrossReference_0_1_0 = (CrossReference)cRefAssignment_0_1.eContents().get(0);
+		private final RuleCall cRefVariabilityQualifiedNameParserRuleCall_0_1_0_1 = (RuleCall)cRefVariabilityCrossReference_0_1_0.eContents().get(1);
+		private final Group cGroup_1 = (Group)cAlternatives.eContents().get(1);
+		private final Action cTaggedReuseFeatureAction_1_0 = (Action)cGroup_1.eContents().get(0);
+		private final Keyword cDollarSignKeyword_1_1 = (Keyword)cGroup_1.eContents().get(1);
+		private final Assignment cNameAssignment_1_2 = (Assignment)cGroup_1.eContents().get(2);
+		private final RuleCall cNameIDTerminalRuleCall_1_2_0 = (RuleCall)cNameAssignment_1_2.eContents().get(0);
+		
+		//ReuseFeature:
+		//	{ReferenceReuseFeature} ref=[Variability|QualifiedName] | {TaggedReuseFeature} '$' name=ID;
+		@Override public ParserRule getRule() { return rule; }
+
+		//{ReferenceReuseFeature} ref=[Variability|QualifiedName] | {TaggedReuseFeature} '$' name=ID
+		public Alternatives getAlternatives() { return cAlternatives; }
+
+		//{ReferenceReuseFeature} ref=[Variability|QualifiedName]
+		public Group getGroup_0() { return cGroup_0; }
+
+		//{ReferenceReuseFeature}
+		public Action getReferenceReuseFeatureAction_0_0() { return cReferenceReuseFeatureAction_0_0; }
+
+		//ref=[Variability|QualifiedName]
+		public Assignment getRefAssignment_0_1() { return cRefAssignment_0_1; }
+
+		//[Variability|QualifiedName]
+		public CrossReference getRefVariabilityCrossReference_0_1_0() { return cRefVariabilityCrossReference_0_1_0; }
+
+		//QualifiedName
+		public RuleCall getRefVariabilityQualifiedNameParserRuleCall_0_1_0_1() { return cRefVariabilityQualifiedNameParserRuleCall_0_1_0_1; }
+
+		//{TaggedReuseFeature} '$' name=ID
+		public Group getGroup_1() { return cGroup_1; }
+
+		//{TaggedReuseFeature}
+		public Action getTaggedReuseFeatureAction_1_0() { return cTaggedReuseFeatureAction_1_0; }
+
+		//'$'
+		public Keyword getDollarSignKeyword_1_1() { return cDollarSignKeyword_1_1; }
+
+		//name=ID
+		public Assignment getNameAssignment_1_2() { return cNameAssignment_1_2; }
+
+		//ID
+		public RuleCall getNameIDTerminalRuleCall_1_2_0() { return cNameIDTerminalRuleCall_1_2_0; }
 	}
 
 	public class ImportElements extends AbstractParserRuleElementFinder {
@@ -2214,6 +2286,7 @@ public class MelangeGrammarAccess extends AbstractGrammarElementFinder {
 	private final PropertyMappingElements pPropertyMapping;
 	private final OperatorElements pOperator;
 	private final ReuseElements pReuse;
+	private final ReuseFeatureElements pReuseFeature;
 	private final ImportElements pImport;
 	private final ExternalImportElements pExternalImport;
 	private final MergeElements pMerge;
@@ -2263,6 +2336,7 @@ public class MelangeGrammarAccess extends AbstractGrammarElementFinder {
 		this.pPropertyMapping = new PropertyMappingElements();
 		this.pOperator = new OperatorElements();
 		this.pReuse = new ReuseElements();
+		this.pReuseFeature = new ReuseFeatureElements();
 		this.pImport = new ImportElements();
 		this.pExternalImport = new ExternalImportElements();
 		this.pMerge = new MergeElements();
@@ -2352,7 +2426,7 @@ public class MelangeGrammarAccess extends AbstractGrammarElementFinder {
 
 	//Realisation:
 	//	{Realisation} condition=Condition
-	//	'->' targets+=[TaggedOperator]*;
+	//	'->' targets+=[TaggedElement]*;
 	public RealisationElements getRealisationAccess() {
 		return pRealisation;
 	}
@@ -2402,8 +2476,11 @@ public class MelangeGrammarAccess extends AbstractGrammarElementFinder {
 		return getTerminalAccess().getRule();
 	}
 
+	////TaggedElement:
+	////	TaggedOperator | 
+	////;
 	//TaggedOperator:
-	//	{TaggedOperator} (name=ID '|')? operator=Operator;
+	//	{TaggedOperator} ('$' name=ID '|')? operator=Operator;
 	public TaggedOperatorElements getTaggedOperatorAccess() {
 		return pTaggedOperator;
 	}
@@ -2600,7 +2677,8 @@ public class MelangeGrammarAccess extends AbstractGrammarElementFinder {
 
 	//Reuse:
 	//	{Reuse}
-	//	'reuse' languageconcern=[LanguageConcern|QualifiedName] '{' ('features' '=' features+=[Variability|QualifiedName]*)?
+	//	'reuse' languageconcern=[LanguageConcern|QualifiedName] '{' ('features' '=' features+=ReuseFeature (','
+	//	features+=ReuseFeature)*)?
 	//	'}';
 	public ReuseElements getReuseAccess() {
 		return pReuse;
@@ -2608,6 +2686,16 @@ public class MelangeGrammarAccess extends AbstractGrammarElementFinder {
 	
 	public ParserRule getReuseRule() {
 		return getReuseAccess().getRule();
+	}
+
+	//ReuseFeature:
+	//	{ReferenceReuseFeature} ref=[Variability|QualifiedName] | {TaggedReuseFeature} '$' name=ID;
+	public ReuseFeatureElements getReuseFeatureAccess() {
+		return pReuseFeature;
+	}
+	
+	public ParserRule getReuseFeatureRule() {
+		return getReuseFeatureAccess().getRule();
 	}
 
 	//Import:

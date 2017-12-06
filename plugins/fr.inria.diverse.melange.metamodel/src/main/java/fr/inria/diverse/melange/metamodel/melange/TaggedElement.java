@@ -10,24 +10,25 @@
  */
 package fr.inria.diverse.melange.metamodel.melange;
 
+import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Named Element</b></em>'.
+ * A representation of the model object '<em><b>Tagged Element</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link fr.inria.diverse.melange.metamodel.melange.NamedElement#getName <em>Name</em>}</li>
+ *   <li>{@link fr.inria.diverse.melange.metamodel.melange.TaggedElement#getName <em>Name</em>}</li>
  * </ul>
  *
- * @see fr.inria.diverse.melange.metamodel.melange.MelangePackage#getNamedElement()
+ * @see fr.inria.diverse.melange.metamodel.melange.MelangePackage#getTaggedElement()
  * @model abstract="true"
  * @generated
  */
-public interface NamedElement extends Element {
+public interface TaggedElement extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -38,14 +39,14 @@ public interface NamedElement extends Element {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
-	 * @see fr.inria.diverse.melange.metamodel.melange.MelangePackage#getNamedElement_Name()
-	 * @model required="true"
+	 * @see fr.inria.diverse.melange.metamodel.melange.MelangePackage#getTaggedElement_Name()
+	 * @model
 	 * @generated
 	 */
 	String getName();
 
 	/**
-	 * Sets the value of the '{@link fr.inria.diverse.melange.metamodel.melange.NamedElement#getName <em>Name</em>}' attribute.
+	 * Sets the value of the '{@link fr.inria.diverse.melange.metamodel.melange.TaggedElement#getName <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Name</em>' attribute.
@@ -54,4 +55,4 @@ public interface NamedElement extends Element {
 	 */
 	void setName(String value);
 
-} // NamedElement
+} // TaggedElement

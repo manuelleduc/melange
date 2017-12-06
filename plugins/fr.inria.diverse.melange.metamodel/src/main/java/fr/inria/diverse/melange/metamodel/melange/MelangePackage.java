@@ -1,4 +1,12 @@
 /**
+ * Copyright (c) 2017 Inria and others.
+ *  * All rights reserved. This program and the accompanying materials
+ *  * are made available under the terms of the Eclipse Public License v1.0
+ *  * which accompanies this distribution, and is available at
+ *  * http://www.eclipse.org/legal/epl-v10.html
+ *  *
+ *  * Contributors:
+ *  *     Inria - initial API and implementation
  */
 package fr.inria.diverse.melange.metamodel.melange;
 
@@ -2086,6 +2094,43 @@ public interface MelangePackage extends EPackage {
 	int SOME_OF_OPERATION_COUNT = VARIABILITY_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link fr.inria.diverse.melange.metamodel.melange.impl.TaggedElementImpl <em>Tagged Element</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see fr.inria.diverse.melange.metamodel.melange.impl.TaggedElementImpl
+	 * @see fr.inria.diverse.melange.metamodel.melange.impl.MelangePackageImpl#getTaggedElement()
+	 * @generated
+	 */
+	int TAGGED_ELEMENT = 41;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TAGGED_ELEMENT__NAME = 0;
+
+	/**
+	 * The number of structural features of the '<em>Tagged Element</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TAGGED_ELEMENT_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Tagged Element</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TAGGED_ELEMENT_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link fr.inria.diverse.melange.metamodel.melange.impl.TaggedOperatorImpl <em>Tagged Operator</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2096,22 +2141,22 @@ public interface MelangePackage extends EPackage {
 	int TAGGED_OPERATOR = 30;
 
 	/**
-	 * The feature id for the '<em><b>Operator</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TAGGED_OPERATOR__OPERATOR = 0;
-
-	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TAGGED_OPERATOR__NAME = 1;
+	int TAGGED_OPERATOR__NAME = TAGGED_ELEMENT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Operator</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TAGGED_OPERATOR__OPERATOR = TAGGED_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Tagged Operator</em>' class.
@@ -2120,7 +2165,7 @@ public interface MelangePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TAGGED_OPERATOR_FEATURE_COUNT = 2;
+	int TAGGED_OPERATOR_FEATURE_COUNT = TAGGED_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Tagged Operator</em>' class.
@@ -2129,7 +2174,7 @@ public interface MelangePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TAGGED_OPERATOR_OPERATION_COUNT = 0;
+	int TAGGED_OPERATOR_OPERATION_COUNT = TAGGED_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link fr.inria.diverse.melange.metamodel.melange.impl.RealisationImpl <em>Realisation</em>}' class.
@@ -2400,7 +2445,7 @@ public interface MelangePackage extends EPackage {
 	int REUSE__LANGUAGECONCERN = OPERATOR_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Features</b></em>' reference list.
+	 * The feature id for the '<em><b>Features</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2427,6 +2472,108 @@ public interface MelangePackage extends EPackage {
 	int REUSE_OPERATION_COUNT = OPERATOR_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link fr.inria.diverse.melange.metamodel.melange.impl.ReuseFeatureImpl <em>Reuse Feature</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see fr.inria.diverse.melange.metamodel.melange.impl.ReuseFeatureImpl
+	 * @see fr.inria.diverse.melange.metamodel.melange.impl.MelangePackageImpl#getReuseFeature()
+	 * @generated
+	 */
+	int REUSE_FEATURE = 38;
+
+	/**
+	 * The number of structural features of the '<em>Reuse Feature</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REUSE_FEATURE_FEATURE_COUNT = 0;
+
+	/**
+	 * The number of operations of the '<em>Reuse Feature</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REUSE_FEATURE_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link fr.inria.diverse.melange.metamodel.melange.impl.ReferenceReuseFeatureImpl <em>Reference Reuse Feature</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see fr.inria.diverse.melange.metamodel.melange.impl.ReferenceReuseFeatureImpl
+	 * @see fr.inria.diverse.melange.metamodel.melange.impl.MelangePackageImpl#getReferenceReuseFeature()
+	 * @generated
+	 */
+	int REFERENCE_REUSE_FEATURE = 39;
+
+	/**
+	 * The feature id for the '<em><b>Ref</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REFERENCE_REUSE_FEATURE__REF = REUSE_FEATURE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Reference Reuse Feature</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REFERENCE_REUSE_FEATURE_FEATURE_COUNT = REUSE_FEATURE_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Reference Reuse Feature</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REFERENCE_REUSE_FEATURE_OPERATION_COUNT = REUSE_FEATURE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link fr.inria.diverse.melange.metamodel.melange.impl.TaggedReuseFeatureImpl <em>Tagged Reuse Feature</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see fr.inria.diverse.melange.metamodel.melange.impl.TaggedReuseFeatureImpl
+	 * @see fr.inria.diverse.melange.metamodel.melange.impl.MelangePackageImpl#getTaggedReuseFeature()
+	 * @generated
+	 */
+	int TAGGED_REUSE_FEATURE = 40;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TAGGED_REUSE_FEATURE__NAME = REUSE_FEATURE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Tagged Reuse Feature</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TAGGED_REUSE_FEATURE_FEATURE_COUNT = REUSE_FEATURE_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Tagged Reuse Feature</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TAGGED_REUSE_FEATURE_OPERATION_COUNT = REUSE_FEATURE_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link fr.inria.diverse.melange.metamodel.melange.ResourceType <em>Resource Type</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2434,7 +2581,7 @@ public interface MelangePackage extends EPackage {
 	 * @see fr.inria.diverse.melange.metamodel.melange.impl.MelangePackageImpl#getResourceType()
 	 * @generated
 	 */
-	int RESOURCE_TYPE = 38;
+	int RESOURCE_TYPE = 42;
 
 
 	/**
@@ -3518,17 +3665,6 @@ public interface MelangePackage extends EPackage {
 	EReference getTaggedOperator_Operator();
 
 	/**
-	 * Returns the meta object for the attribute '{@link fr.inria.diverse.melange.metamodel.melange.TaggedOperator#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see fr.inria.diverse.melange.metamodel.melange.TaggedOperator#getName()
-	 * @see #getTaggedOperator()
-	 * @generated
-	 */
-	EAttribute getTaggedOperator_Name();
-
-	/**
 	 * Returns the meta object for class '{@link fr.inria.diverse.melange.metamodel.melange.Realisation <em>Realisation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3698,15 +3834,77 @@ public interface MelangePackage extends EPackage {
 	EReference getReuse_Languageconcern();
 
 	/**
-	 * Returns the meta object for the reference list '{@link fr.inria.diverse.melange.metamodel.melange.Reuse#getFeatures <em>Features</em>}'.
+	 * Returns the meta object for the containment reference list '{@link fr.inria.diverse.melange.metamodel.melange.Reuse#getFeatures <em>Features</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Features</em>'.
+	 * @return the meta object for the containment reference list '<em>Features</em>'.
 	 * @see fr.inria.diverse.melange.metamodel.melange.Reuse#getFeatures()
 	 * @see #getReuse()
 	 * @generated
 	 */
 	EReference getReuse_Features();
+
+	/**
+	 * Returns the meta object for class '{@link fr.inria.diverse.melange.metamodel.melange.ReuseFeature <em>Reuse Feature</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Reuse Feature</em>'.
+	 * @see fr.inria.diverse.melange.metamodel.melange.ReuseFeature
+	 * @generated
+	 */
+	EClass getReuseFeature();
+
+	/**
+	 * Returns the meta object for class '{@link fr.inria.diverse.melange.metamodel.melange.ReferenceReuseFeature <em>Reference Reuse Feature</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Reference Reuse Feature</em>'.
+	 * @see fr.inria.diverse.melange.metamodel.melange.ReferenceReuseFeature
+	 * @generated
+	 */
+	EClass getReferenceReuseFeature();
+
+	/**
+	 * Returns the meta object for the reference '{@link fr.inria.diverse.melange.metamodel.melange.ReferenceReuseFeature#getRef <em>Ref</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Ref</em>'.
+	 * @see fr.inria.diverse.melange.metamodel.melange.ReferenceReuseFeature#getRef()
+	 * @see #getReferenceReuseFeature()
+	 * @generated
+	 */
+	EReference getReferenceReuseFeature_Ref();
+
+	/**
+	 * Returns the meta object for class '{@link fr.inria.diverse.melange.metamodel.melange.TaggedReuseFeature <em>Tagged Reuse Feature</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Tagged Reuse Feature</em>'.
+	 * @see fr.inria.diverse.melange.metamodel.melange.TaggedReuseFeature
+	 * @generated
+	 */
+	EClass getTaggedReuseFeature();
+
+	/**
+	 * Returns the meta object for class '{@link fr.inria.diverse.melange.metamodel.melange.TaggedElement <em>Tagged Element</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Tagged Element</em>'.
+	 * @see fr.inria.diverse.melange.metamodel.melange.TaggedElement
+	 * @generated
+	 */
+	EClass getTaggedElement();
+
+	/**
+	 * Returns the meta object for the attribute '{@link fr.inria.diverse.melange.metamodel.melange.TaggedElement#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see fr.inria.diverse.melange.metamodel.melange.TaggedElement#getName()
+	 * @see #getTaggedElement()
+	 * @generated
+	 */
+	EAttribute getTaggedElement_Name();
 
 	/**
 	 * Returns the meta object for enum '{@link fr.inria.diverse.melange.metamodel.melange.ResourceType <em>Resource Type</em>}'.
@@ -4612,14 +4810,6 @@ public interface MelangePackage extends EPackage {
 		EReference TAGGED_OPERATOR__OPERATOR = eINSTANCE.getTaggedOperator_Operator();
 
 		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute TAGGED_OPERATOR__NAME = eINSTANCE.getTaggedOperator_Name();
-
-		/**
 		 * The meta object literal for the '{@link fr.inria.diverse.melange.metamodel.melange.impl.RealisationImpl <em>Realisation</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -4762,12 +4952,68 @@ public interface MelangePackage extends EPackage {
 		EReference REUSE__LANGUAGECONCERN = eINSTANCE.getReuse_Languageconcern();
 
 		/**
-		 * The meta object literal for the '<em><b>Features</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Features</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EReference REUSE__FEATURES = eINSTANCE.getReuse_Features();
+
+		/**
+		 * The meta object literal for the '{@link fr.inria.diverse.melange.metamodel.melange.impl.ReuseFeatureImpl <em>Reuse Feature</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see fr.inria.diverse.melange.metamodel.melange.impl.ReuseFeatureImpl
+		 * @see fr.inria.diverse.melange.metamodel.melange.impl.MelangePackageImpl#getReuseFeature()
+		 * @generated
+		 */
+		EClass REUSE_FEATURE = eINSTANCE.getReuseFeature();
+
+		/**
+		 * The meta object literal for the '{@link fr.inria.diverse.melange.metamodel.melange.impl.ReferenceReuseFeatureImpl <em>Reference Reuse Feature</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see fr.inria.diverse.melange.metamodel.melange.impl.ReferenceReuseFeatureImpl
+		 * @see fr.inria.diverse.melange.metamodel.melange.impl.MelangePackageImpl#getReferenceReuseFeature()
+		 * @generated
+		 */
+		EClass REFERENCE_REUSE_FEATURE = eINSTANCE.getReferenceReuseFeature();
+
+		/**
+		 * The meta object literal for the '<em><b>Ref</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference REFERENCE_REUSE_FEATURE__REF = eINSTANCE.getReferenceReuseFeature_Ref();
+
+		/**
+		 * The meta object literal for the '{@link fr.inria.diverse.melange.metamodel.melange.impl.TaggedReuseFeatureImpl <em>Tagged Reuse Feature</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see fr.inria.diverse.melange.metamodel.melange.impl.TaggedReuseFeatureImpl
+		 * @see fr.inria.diverse.melange.metamodel.melange.impl.MelangePackageImpl#getTaggedReuseFeature()
+		 * @generated
+		 */
+		EClass TAGGED_REUSE_FEATURE = eINSTANCE.getTaggedReuseFeature();
+
+		/**
+		 * The meta object literal for the '{@link fr.inria.diverse.melange.metamodel.melange.impl.TaggedElementImpl <em>Tagged Element</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see fr.inria.diverse.melange.metamodel.melange.impl.TaggedElementImpl
+		 * @see fr.inria.diverse.melange.metamodel.melange.impl.MelangePackageImpl#getTaggedElement()
+		 * @generated
+		 */
+		EClass TAGGED_ELEMENT = eINSTANCE.getTaggedElement();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TAGGED_ELEMENT__NAME = eINSTANCE.getTaggedElement_Name();
 
 		/**
 		 * The meta object literal for the '{@link fr.inria.diverse.melange.metamodel.melange.ResourceType <em>Resource Type</em>}' enum.
