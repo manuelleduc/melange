@@ -3055,6 +3055,25 @@ ruleReuseFeature returns [EObject current=null]
 	    }
 
 )
+)	otherlv_6='<-' 
+    {
+    	newLeafNode(otherlv_6, grammarAccess.getReuseFeatureAccess().getLessThanSignHyphenMinusKeyword_1_3());
+    }
+(
+(
+		{
+			if ($current==null) {
+	            $current = createModelElement(grammarAccess.getReuseFeatureRule());
+	        }
+        }
+		{ 
+	        newCompositeNode(grammarAccess.getReuseFeatureAccess().getRefVariabilityCrossReference_1_4_0()); 
+	    }
+		ruleQualifiedName		{ 
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
 )))
 ;
 

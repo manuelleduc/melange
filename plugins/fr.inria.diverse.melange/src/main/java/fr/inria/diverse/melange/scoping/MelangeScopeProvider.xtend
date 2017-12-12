@@ -18,7 +18,7 @@ import javax.swing.text.html.parser.TagElement
 
 class MelangeScopeProvider extends XbaseBatchScopeProvider {
 	override IScope getScope(EObject context, EReference reference) {
-		if (reference == MelangePackage::eINSTANCE.referenceReuseFeature_Ref) {
+		if (reference == MelangePackage::eINSTANCE.reuseFeature_Ref) {
 			val reuse = context.eContainer as Reuse
 			val Collection<IEObjectDescription> map = reuse.languageconcern.eAllContents.filter(Variability).map [
 				EObjectDescription::create(it.name, it)

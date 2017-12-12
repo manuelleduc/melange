@@ -1802,12 +1802,18 @@ public class MelangeGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cDollarSignKeyword_1_1 = (Keyword)cGroup_1.eContents().get(1);
 		private final Assignment cNameAssignment_1_2 = (Assignment)cGroup_1.eContents().get(2);
 		private final RuleCall cNameIDTerminalRuleCall_1_2_0 = (RuleCall)cNameAssignment_1_2.eContents().get(0);
+		private final Keyword cLessThanSignHyphenMinusKeyword_1_3 = (Keyword)cGroup_1.eContents().get(3);
+		private final Assignment cRefAssignment_1_4 = (Assignment)cGroup_1.eContents().get(4);
+		private final CrossReference cRefVariabilityCrossReference_1_4_0 = (CrossReference)cRefAssignment_1_4.eContents().get(0);
+		private final RuleCall cRefVariabilityQualifiedNameParserRuleCall_1_4_0_1 = (RuleCall)cRefVariabilityCrossReference_1_4_0.eContents().get(1);
 		
 		//ReuseFeature:
-		//	{ReferenceReuseFeature} unselected?='-'? ref=[Variability|QualifiedName] | {TaggedReuseFeature} '$' name=ID;
+		//	{ReferenceReuseFeature} unselected?='-'? ref=[Variability|QualifiedName] | {TaggedReuseFeature} '$' name=ID '<-'
+		//	ref=[Variability|QualifiedName];
 		@Override public ParserRule getRule() { return rule; }
 
-		//{ReferenceReuseFeature} unselected?='-'? ref=[Variability|QualifiedName] | {TaggedReuseFeature} '$' name=ID
+		//{ReferenceReuseFeature} unselected?='-'? ref=[Variability|QualifiedName] | {TaggedReuseFeature} '$' name=ID '<-'
+		//ref=[Variability|QualifiedName]
 		public Alternatives getAlternatives() { return cAlternatives; }
 
 		//{ReferenceReuseFeature} unselected?='-'? ref=[Variability|QualifiedName]
@@ -1831,7 +1837,7 @@ public class MelangeGrammarAccess extends AbstractGrammarElementFinder {
 		//QualifiedName
 		public RuleCall getRefVariabilityQualifiedNameParserRuleCall_0_2_0_1() { return cRefVariabilityQualifiedNameParserRuleCall_0_2_0_1; }
 
-		//{TaggedReuseFeature} '$' name=ID
+		//{TaggedReuseFeature} '$' name=ID '<-' ref=[Variability|QualifiedName]
 		public Group getGroup_1() { return cGroup_1; }
 
 		//{TaggedReuseFeature}
@@ -1845,6 +1851,18 @@ public class MelangeGrammarAccess extends AbstractGrammarElementFinder {
 
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_1_2_0() { return cNameIDTerminalRuleCall_1_2_0; }
+
+		//'<-'
+		public Keyword getLessThanSignHyphenMinusKeyword_1_3() { return cLessThanSignHyphenMinusKeyword_1_3; }
+
+		//ref=[Variability|QualifiedName]
+		public Assignment getRefAssignment_1_4() { return cRefAssignment_1_4; }
+
+		//[Variability|QualifiedName]
+		public CrossReference getRefVariabilityCrossReference_1_4_0() { return cRefVariabilityCrossReference_1_4_0; }
+
+		//QualifiedName
+		public RuleCall getRefVariabilityQualifiedNameParserRuleCall_1_4_0_1() { return cRefVariabilityQualifiedNameParserRuleCall_1_4_0_1; }
 	}
 
 	public class ImportElements extends AbstractParserRuleElementFinder {
@@ -2691,7 +2709,8 @@ public class MelangeGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//ReuseFeature:
-	//	{ReferenceReuseFeature} unselected?='-'? ref=[Variability|QualifiedName] | {TaggedReuseFeature} '$' name=ID;
+	//	{ReferenceReuseFeature} unselected?='-'? ref=[Variability|QualifiedName] | {TaggedReuseFeature} '$' name=ID '<-'
+	//	ref=[Variability|QualifiedName];
 	public ReuseFeatureElements getReuseFeatureAccess() {
 		return pReuseFeature;
 	}

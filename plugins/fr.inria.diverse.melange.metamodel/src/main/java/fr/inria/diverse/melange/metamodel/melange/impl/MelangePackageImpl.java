@@ -1525,6 +1525,15 @@ public class MelangePackageImpl extends EPackageImpl implements MelangePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getReuseFeature_Ref() {
+		return (EReference)reuseFeatureEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getReferenceReuseFeature() {
 		return referenceReuseFeatureEClass;
 	}
@@ -1534,17 +1543,8 @@ public class MelangePackageImpl extends EPackageImpl implements MelangePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getReferenceReuseFeature_Ref() {
-		return (EReference)referenceReuseFeatureEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EAttribute getReferenceReuseFeature_Unselected() {
-		return (EAttribute)referenceReuseFeatureEClass.getEStructuralFeatures().get(1);
+		return (EAttribute)referenceReuseFeatureEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1768,9 +1768,9 @@ public class MelangePackageImpl extends EPackageImpl implements MelangePackage {
 		createEReference(reuseEClass, REUSE__FEATURES);
 
 		reuseFeatureEClass = createEClass(REUSE_FEATURE);
+		createEReference(reuseFeatureEClass, REUSE_FEATURE__REF);
 
 		referenceReuseFeatureEClass = createEClass(REFERENCE_REUSE_FEATURE);
-		createEReference(referenceReuseFeatureEClass, REFERENCE_REUSE_FEATURE__REF);
 		createEAttribute(referenceReuseFeatureEClass, REFERENCE_REUSE_FEATURE__UNSELECTED);
 
 		taggedReuseFeatureEClass = createEClass(TAGGED_REUSE_FEATURE);
@@ -2007,9 +2007,9 @@ public class MelangePackageImpl extends EPackageImpl implements MelangePackage {
 		initEReference(getReuse_Features(), this.getReuseFeature(), null, "features", null, 0, -1, Reuse.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(reuseFeatureEClass, ReuseFeature.class, "ReuseFeature", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getReuseFeature_Ref(), this.getVariability(), null, "ref", null, 1, 1, ReuseFeature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(referenceReuseFeatureEClass, ReferenceReuseFeature.class, "ReferenceReuseFeature", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getReferenceReuseFeature_Ref(), this.getVariability(), null, "ref", null, 1, 1, ReferenceReuseFeature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getReferenceReuseFeature_Unselected(), theEcorePackage.getEBoolean(), "unselected", null, 0, 1, ReferenceReuseFeature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(taggedReuseFeatureEClass, TaggedReuseFeature.class, "TaggedReuseFeature", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

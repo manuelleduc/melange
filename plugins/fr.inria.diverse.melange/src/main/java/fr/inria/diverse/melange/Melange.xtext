@@ -15,208 +15,170 @@ import "http://www.eclipse.org/emf/2002/Ecore" as ecore
 import "http://www.eclipse.org/gemoc/Dsl"
 
 ModelTypingSpace:
-	'package' name = QualifiedName
-	(imports = XImportSection)?
-	(elements += Element)*
-;
+	'package' name=QualifiedName
+	(imports=XImportSection)?
+	(elements+=Element)*;
 
 Element:
-	 LanguageConcern | Language | (=> 'external' ExternalLanguage) | ImportDsl | EcoreModelType | TransformationDecl | Mapping
-;
+	LanguageConcern | Language | (=> 'external' ExternalLanguage) | ImportDsl | EcoreModelType | TransformationDecl |
+	Mapping;
 
 TransformationDecl returns Transformation:
-	XbaseTransformation
-;
+	XbaseTransformation;
 
 LanguageConcern:
-	'concern' name = ValidID '{'
-		('variability' '=' vm=Variability)?
-		
-		(realisations+= Realisation)*
-		
-		(operators += TaggedOperator)*
-	'}'
-;
+	'concern' name=ValidID '{'
+	('variability' '=' vm=Variability)?
+	(realisations+=Realisation)*
+	(operators+=TaggedOperator)*
+	'}';
 
 Realisation:
 	{Realisation}
 	condition=Condition
-	 '->' (targets+=[TaggedElement|ID])*
-;
+	'->' (targets+=[TaggedElement|ID])*;
 
 Condition returns Condition:
-	Or
-;
+	Or;
 
 Or returns Condition:
-	And ({Or.left=current} 'or' right=Or)*
-;
+	And ({Or.left=current} 'or' right=Or)*;
 
 And returns Condition:
-	Terminal ({And.left=current} 'and' right=And)*
-;
+	Terminal ({And.left=current} 'and' right=And)*;
 
 Terminal returns Condition:
 	{Not} '!' content=Condition |
 	{FeatureRef} ref=[Variability|ID] |
-	'(' Condition ')'
-;
+	'(' Condition ')';
 
 TaggedOperator:
 	{TaggedOperator}
-	('$' name=ID '|')? operator=Operator
-;
+	('$' name=ID '|')? operator=Operator;
 
 Variability:
-	Feature | OneOf | SomeOf
-;
+	Feature | OneOf | SomeOf;
 
 Feature:
-	(optional?='?')? name = ID
-;
+	(optional?='?')? name=ID;
 
 OneOf:
-	(optional?='?')? (=>'oneOf' name = ID '{' children+=Variability* '}')
-;
+	(optional?='?')? (=> 'oneOf' name=ID '{' children+=Variability* '}');
 
 SomeOf:
-	(optional?='?')? (=>'someOf' name = ID '{' children+=Variability* '}')
-;
+	(optional?='?')? (=> 'someOf' name=ID '{' children+=Variability* '}');
 
 Language:
-	'language' name = ValidID ('inherits' operators += Inherit ("," operators += Inherit)*)?
-	('implements' implements += [ModelType | QualifiedName] (',' implements += [ModelType | QualifiedName])*)?
-	('requires' requires += [ModelType | QualifiedName] (',' requires += [ModelType | QualifiedName])*)?
+	'language' name=ValidID ('inherits' operators+=Inherit ("," operators+=Inherit)*)?
+	('implements' implements+=[ModelType|QualifiedName] (',' implements+=[ModelType|QualifiedName])*)?
+	('requires' requires+=[ModelType|QualifiedName] (',' requires+=[ModelType|QualifiedName])*)?
 	'{'
-		(operators += Operator)* &
-		('resource' resourceType = ResourceType (=> 'uri' resourceUri = STRING | 'setup' xtextSetupRef = JvmTypeReference)?)? &
-		('xtext' xtext+=STRING (',' xtext+=STRING)* )? &
-		('sirius' sirius+=STRING (',' sirius+=STRING)* )? &
-		('ecl' ecl+=STRING (',' ecl+=STRING)* )? &
-		('xmof' xmof=STRING)? &
-		('fileExtension' fileExtension=STRING)? &
-		('exactType' exactTypeName = ValidID (=> 'uri' exactTypeUri = STRING)?)? &
-		annotations+=(Annotation)*
-	'}'
-;
+	(operators+=Operator)* &
+	('resource' resourceType=ResourceType (=> 'uri' resourceUri=STRING | 'setup' xtextSetupRef=JvmTypeReference)?)? &
+	('xtext' xtext+=STRING (',' xtext+=STRING)*)? &
+	('sirius' sirius+=STRING (',' sirius+=STRING)*)? &
+	('ecl' ecl+=STRING (',' ecl+=STRING)*)? &
+	('xmof' xmof=STRING)? &
+	('fileExtension' fileExtension=STRING)? &
+	('exactType' exactTypeName=ValidID (=> 'uri' exactTypeUri=STRING)?)? &
+	annotations+=(Annotation)*
+	'}';
 
 Annotation:
-	'annotation' key=STRING ":" value=STRING
-;
+	'annotation' key=STRING ":" value=STRING;
 
 ExternalLanguage:
-	'language' name = ValidID 
-	('implements' implements += [ModelType | QualifiedName] (',' implements += [ModelType | QualifiedName])*)?
+	'language' name=ValidID
+	('implements' implements+=[ModelType|QualifiedName] (',' implements+=[ModelType|QualifiedName])*)?
 	'{'
-		operators += ExternalImport &
-		(operators += Weave)* &
-		('xtext' xtext+=STRING (',' xtext+=STRING)* )? &
-		('sirius' sirius+=STRING (',' sirius+=STRING)* )? &
-		('ecl' ecl+=STRING (',' ecl+=STRING)* )? &
-		('xmof' xmof=STRING)? &
-		('fileExtension' fileExtension=STRING)? &
-		('exactType' exactTypeName = ValidID (=> 'uri' exactTypeUri = STRING)?)?
-	'}'
-;
+	operators+=ExternalImport &
+	(operators+=Weave)* &
+	('xtext' xtext+=STRING (',' xtext+=STRING)*)? &
+	('sirius' sirius+=STRING (',' sirius+=STRING)*)? &
+	('ecl' ecl+=STRING (',' ecl+=STRING)*)? &
+	('xmof' xmof=STRING)? &
+	('fileExtension' fileExtension=STRING)? &
+	('exactType' exactTypeName=ValidID (=> 'uri' exactTypeUri=STRING)?)?
+	'}';
 
 ImportDsl:
-	'import-dsl' dsl=[Dsl | QualifiedName]
-;
+	'import-dsl' dsl=[Dsl|QualifiedName];
 
 enum ResourceType:
-	MELANGE = 'Melange' | EMF = 'EMF' | XTEXT = 'Xtext'
-;
+	MELANGE='Melange' | EMF='EMF' | XTEXT='Xtext';
 
 EcoreModelType returns ModelType:
-	'modeltype' name = ValidID '{'
-		'syntax' ecoreUri = STRING &
-		('uri' mtUri = STRING)?
-	'}'
-;
+	'modeltype' name=ValidID '{'
+	'syntax' ecoreUri=STRING &
+	('uri' mtUri=STRING)?
+	'}';
 
 XbaseTransformation:
-	(main ?= '@Main')?
-	'transformation' (returnTypeRef = JvmTypeReference)? name = ValidID
-	'(' (parameters += FullJvmFormalParameter (',' parameters += FullJvmFormalParameter)*)? ')'
-	body = XBlockExpression
-;
+	(main?='@Main')?
+	'transformation' (returnTypeRef=JvmTypeReference)? name=ValidID
+	'(' (parameters+=FullJvmFormalParameter (',' parameters+=FullJvmFormalParameter)*)? ')'
+	body=XBlockExpression;
 
 Mapping returns Mapping:
-	"map" from=[Language | QualifiedName] "to" to=[ModelType | QualifiedName] "{"
-		(rules+=ClassMapping)*
-	"}" 
-;
+	"map" from=[Language|QualifiedName] "to" to=[ModelType|QualifiedName] "{"
+	(rules+=ClassMapping)*
+	"}";
 
 PackageMapping returns PackageBinding:
 	from=STRING "to" to=STRING ("{"
-		(classes+=ClassMapping)*
-	"}")?
-;
+	(classes+=ClassMapping)*
+	"}")?;
 
 ClassMapping returns ClassBinding:
 	from=STRING "to" to=STRING ("{"
-		(properties+=PropertyMapping)*
-	"}")?
-;
+	(properties+=PropertyMapping)*
+	"}")?;
 
 PropertyMapping returns PropertyBinding:
-	from=STRING "to" to=STRING
-;
+	from=STRING "to" to=STRING;
 
 Operator returns Operator:
-	Import | Merge | Slice | Weave | Reuse
-;
-
+	Import | Merge | Slice | Weave | Reuse;
 
 Reuse:
 	{Reuse}
-	'reuse' languageconcern = [LanguageConcern|QualifiedName] '{'
-		('features' '=' features+=ReuseFeature (',' features+=ReuseFeature)*)?
-	'}'
-;
+	'reuse' languageconcern=[LanguageConcern|QualifiedName] '{'
+	('features' '=' features+=ReuseFeature (',' features+=ReuseFeature)*)?
+	'}';
 
 ReuseFeature:
 	{ReferenceReuseFeature} (unselected?='-')? ref=[Variability|QualifiedName] |
-	{TaggedReuseFeature} '$' name=ID
-;
+	{TaggedReuseFeature} '$' name=ID '<-' ref=[Variability|QualifiedName];
 
 Import returns Import:
-	'syntax' ecoreUri = STRING ('withGenmodel' (genmodelUris += STRING (',' genmodelUris += STRING)*))?
+	'syntax' ecoreUri=STRING ('withGenmodel' (genmodelUris+=STRING (',' genmodelUris+=STRING)*))?
 	('renaming' '{'
-		(mappingRules+=PackageMapping)*
-	'}')?
-;
+	(mappingRules+=PackageMapping)*
+	'}')?;
 
 ExternalImport returns Import:
-	'syntax' ecoreUri = STRING ('withGenmodel' (genmodelUris += STRING (',' genmodelUris += STRING)*))?
-;
+	'syntax' ecoreUri=STRING ('withGenmodel' (genmodelUris+=STRING (',' genmodelUris+=STRING)*))?;
 
 Merge returns Merge:
-	'merge' targetLanguage = [Language | QualifiedName] 
+	'merge' targetLanguage=[Language|QualifiedName]
 	('renaming' '{'
-		(mappingRules+=PackageMapping)*
-	'}')?
-;
+	(mappingRules+=PackageMapping)*
+	'}')?;
 
 Slice returns Slice:
-	'slice' targetLanguage = [Language | QualifiedName] 'on' '[' roots += STRING (',' roots += STRING)* ']'
+	'slice' targetLanguage=[Language|QualifiedName] 'on' '[' roots+=STRING (',' roots+=STRING)* ']'
 	('renaming' '{'
-		(mappingRules+=PackageMapping)*
-	'}')?
-;
+	(mappingRules+=PackageMapping)*
+	'}')?;
 
 Inherit returns Inheritance:
-	targetLanguage = [Language | QualifiedName]
-;
+	targetLanguage=[Language|QualifiedName];
 
 Weave:
-	AspectTypeRef | AspectWildcard
-;
+	AspectTypeRef | AspectWildcard;
 
 AspectTypeRef returns Weave:
-	'with' aspectTypeRef = JvmTypeReference
-;
+	'with' aspectTypeRef=JvmTypeReference;
 
 AspectWildcard returns Weave:
-	'with' aspectWildcardImport = QualifiedNameWithWildcard
-;
+	'with' aspectWildcardImport=QualifiedNameWithWildcard;

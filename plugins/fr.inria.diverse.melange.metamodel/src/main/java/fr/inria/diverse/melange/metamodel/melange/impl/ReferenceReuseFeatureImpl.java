@@ -12,13 +12,9 @@ package fr.inria.diverse.melange.metamodel.melange.impl;
 
 import fr.inria.diverse.melange.metamodel.melange.MelangePackage;
 import fr.inria.diverse.melange.metamodel.melange.ReferenceReuseFeature;
-import fr.inria.diverse.melange.metamodel.melange.Variability;
-
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
@@ -29,23 +25,12 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link fr.inria.diverse.melange.metamodel.melange.impl.ReferenceReuseFeatureImpl#getRef <em>Ref</em>}</li>
  *   <li>{@link fr.inria.diverse.melange.metamodel.melange.impl.ReferenceReuseFeatureImpl#isUnselected <em>Unselected</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class ReferenceReuseFeatureImpl extends ReuseFeatureImpl implements ReferenceReuseFeature {
-	/**
-	 * The cached value of the '{@link #getRef() <em>Ref</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getRef()
-	 * @generated
-	 * @ordered
-	 */
-	protected Variability ref;
-
 	/**
 	 * The default value of the '{@link #isUnselected() <em>Unselected</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -89,44 +74,6 @@ public class ReferenceReuseFeatureImpl extends ReuseFeatureImpl implements Refer
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Variability getRef() {
-		if (ref != null && ref.eIsProxy()) {
-			InternalEObject oldRef = (InternalEObject)ref;
-			ref = (Variability)eResolveProxy(oldRef);
-			if (ref != oldRef) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, MelangePackage.REFERENCE_REUSE_FEATURE__REF, oldRef, ref));
-			}
-		}
-		return ref;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Variability basicGetRef() {
-		return ref;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setRef(Variability newRef) {
-		Variability oldRef = ref;
-		ref = newRef;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MelangePackage.REFERENCE_REUSE_FEATURE__REF, oldRef, ref));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public boolean isUnselected() {
 		return unselected;
 	}
@@ -151,9 +98,6 @@ public class ReferenceReuseFeatureImpl extends ReuseFeatureImpl implements Refer
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case MelangePackage.REFERENCE_REUSE_FEATURE__REF:
-				if (resolve) return getRef();
-				return basicGetRef();
 			case MelangePackage.REFERENCE_REUSE_FEATURE__UNSELECTED:
 				return isUnselected();
 		}
@@ -168,9 +112,6 @@ public class ReferenceReuseFeatureImpl extends ReuseFeatureImpl implements Refer
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case MelangePackage.REFERENCE_REUSE_FEATURE__REF:
-				setRef((Variability)newValue);
-				return;
 			case MelangePackage.REFERENCE_REUSE_FEATURE__UNSELECTED:
 				setUnselected((Boolean)newValue);
 				return;
@@ -186,9 +127,6 @@ public class ReferenceReuseFeatureImpl extends ReuseFeatureImpl implements Refer
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case MelangePackage.REFERENCE_REUSE_FEATURE__REF:
-				setRef((Variability)null);
-				return;
 			case MelangePackage.REFERENCE_REUSE_FEATURE__UNSELECTED:
 				setUnselected(UNSELECTED_EDEFAULT);
 				return;
@@ -204,8 +142,6 @@ public class ReferenceReuseFeatureImpl extends ReuseFeatureImpl implements Refer
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case MelangePackage.REFERENCE_REUSE_FEATURE__REF:
-				return ref != null;
 			case MelangePackage.REFERENCE_REUSE_FEATURE__UNSELECTED:
 				return unselected != UNSELECTED_EDEFAULT;
 		}

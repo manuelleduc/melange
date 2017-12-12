@@ -441,6 +441,7 @@ public class MelangeParser extends AbstractContentAssistParser {
 					put(grammarAccess.getReuseFeatureAccess().getUnselectedAssignment_0_1(), "rule__ReuseFeature__UnselectedAssignment_0_1");
 					put(grammarAccess.getReuseFeatureAccess().getRefAssignment_0_2(), "rule__ReuseFeature__RefAssignment_0_2");
 					put(grammarAccess.getReuseFeatureAccess().getNameAssignment_1_2(), "rule__ReuseFeature__NameAssignment_1_2");
+					put(grammarAccess.getReuseFeatureAccess().getRefAssignment_1_4(), "rule__ReuseFeature__RefAssignment_1_4");
 					put(grammarAccess.getImportAccess().getEcoreUriAssignment_1(), "rule__Import__EcoreUriAssignment_1");
 					put(grammarAccess.getImportAccess().getGenmodelUrisAssignment_2_1_0(), "rule__Import__GenmodelUrisAssignment_2_1_0");
 					put(grammarAccess.getImportAccess().getGenmodelUrisAssignment_2_1_1_1(), "rule__Import__GenmodelUrisAssignment_2_1_1_1");

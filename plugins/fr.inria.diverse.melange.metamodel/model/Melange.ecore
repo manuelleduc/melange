@@ -212,9 +212,10 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="features" upperBound="-1"
         eType="#//ReuseFeature" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ReuseFeature" abstract="true"/>
-  <eClassifiers xsi:type="ecore:EClass" name="ReferenceReuseFeature" eSuperTypes="#//ReuseFeature">
+  <eClassifiers xsi:type="ecore:EClass" name="ReuseFeature" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EReference" name="ref" lowerBound="1" eType="#//Variability"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ReferenceReuseFeature" eSuperTypes="#//ReuseFeature">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="unselected" eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EBoolean"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="TaggedReuseFeature" eSuperTypes="#//ReuseFeature #//TaggedElement"/>

@@ -2482,13 +2482,22 @@ public interface MelangePackage extends EPackage {
 	int REUSE_FEATURE = 38;
 
 	/**
+	 * The feature id for the '<em><b>Ref</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REUSE_FEATURE__REF = 0;
+
+	/**
 	 * The number of structural features of the '<em>Reuse Feature</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int REUSE_FEATURE_FEATURE_COUNT = 0;
+	int REUSE_FEATURE_FEATURE_COUNT = 1;
 
 	/**
 	 * The number of operations of the '<em>Reuse Feature</em>' class.
@@ -2516,7 +2525,7 @@ public interface MelangePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REFERENCE_REUSE_FEATURE__REF = REUSE_FEATURE_FEATURE_COUNT + 0;
+	int REFERENCE_REUSE_FEATURE__REF = REUSE_FEATURE__REF;
 
 	/**
 	 * The feature id for the '<em><b>Unselected</b></em>' attribute.
@@ -2525,7 +2534,7 @@ public interface MelangePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REFERENCE_REUSE_FEATURE__UNSELECTED = REUSE_FEATURE_FEATURE_COUNT + 1;
+	int REFERENCE_REUSE_FEATURE__UNSELECTED = REUSE_FEATURE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Reference Reuse Feature</em>' class.
@@ -2534,7 +2543,7 @@ public interface MelangePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REFERENCE_REUSE_FEATURE_FEATURE_COUNT = REUSE_FEATURE_FEATURE_COUNT + 2;
+	int REFERENCE_REUSE_FEATURE_FEATURE_COUNT = REUSE_FEATURE_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Reference Reuse Feature</em>' class.
@@ -2554,6 +2563,15 @@ public interface MelangePackage extends EPackage {
 	 * @generated
 	 */
 	int TAGGED_REUSE_FEATURE = 40;
+
+	/**
+	 * The feature id for the '<em><b>Ref</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TAGGED_REUSE_FEATURE__REF = REUSE_FEATURE__REF;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -3864,6 +3882,17 @@ public interface MelangePackage extends EPackage {
 	EClass getReuseFeature();
 
 	/**
+	 * Returns the meta object for the reference '{@link fr.inria.diverse.melange.metamodel.melange.ReuseFeature#getRef <em>Ref</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Ref</em>'.
+	 * @see fr.inria.diverse.melange.metamodel.melange.ReuseFeature#getRef()
+	 * @see #getReuseFeature()
+	 * @generated
+	 */
+	EReference getReuseFeature_Ref();
+
+	/**
 	 * Returns the meta object for class '{@link fr.inria.diverse.melange.metamodel.melange.ReferenceReuseFeature <em>Reference Reuse Feature</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3872,17 +3901,6 @@ public interface MelangePackage extends EPackage {
 	 * @generated
 	 */
 	EClass getReferenceReuseFeature();
-
-	/**
-	 * Returns the meta object for the reference '{@link fr.inria.diverse.melange.metamodel.melange.ReferenceReuseFeature#getRef <em>Ref</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Ref</em>'.
-	 * @see fr.inria.diverse.melange.metamodel.melange.ReferenceReuseFeature#getRef()
-	 * @see #getReferenceReuseFeature()
-	 * @generated
-	 */
-	EReference getReferenceReuseFeature_Ref();
 
 	/**
 	 * Returns the meta object for the attribute '{@link fr.inria.diverse.melange.metamodel.melange.ReferenceReuseFeature#isUnselected <em>Unselected</em>}'.
@@ -4990,6 +5008,14 @@ public interface MelangePackage extends EPackage {
 		EClass REUSE_FEATURE = eINSTANCE.getReuseFeature();
 
 		/**
+		 * The meta object literal for the '<em><b>Ref</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference REUSE_FEATURE__REF = eINSTANCE.getReuseFeature_Ref();
+
+		/**
 		 * The meta object literal for the '{@link fr.inria.diverse.melange.metamodel.melange.impl.ReferenceReuseFeatureImpl <em>Reference Reuse Feature</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -4998,14 +5024,6 @@ public interface MelangePackage extends EPackage {
 		 * @generated
 		 */
 		EClass REFERENCE_REUSE_FEATURE = eINSTANCE.getReferenceReuseFeature();
-
-		/**
-		 * The meta object literal for the '<em><b>Ref</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference REFERENCE_REUSE_FEATURE__REF = eINSTANCE.getReferenceReuseFeature_Ref();
 
 		/**
 		 * The meta object literal for the '<em><b>Unselected</b></em>' attribute feature.

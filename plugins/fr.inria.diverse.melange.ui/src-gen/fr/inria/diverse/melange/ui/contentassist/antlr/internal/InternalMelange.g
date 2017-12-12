@@ -11575,6 +11575,7 @@ rule__ReuseFeature__Group_1__2
     }
 :
 	rule__ReuseFeature__Group_1__2__Impl
+	rule__ReuseFeature__Group_1__3
 ;
 finally {
 	restoreStackSize(stackSize);
@@ -11595,6 +11596,69 @@ rule__ReuseFeature__Group_1__2__Impl
 finally {
 	restoreStackSize(stackSize);
 }
+
+
+rule__ReuseFeature__Group_1__3
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+	rule__ReuseFeature__Group_1__3__Impl
+	rule__ReuseFeature__Group_1__4
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__ReuseFeature__Group_1__3__Impl
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getReuseFeatureAccess().getLessThanSignHyphenMinusKeyword_1_3()); }
+
+	'<-' 
+
+{ after(grammarAccess.getReuseFeatureAccess().getLessThanSignHyphenMinusKeyword_1_3()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+rule__ReuseFeature__Group_1__4
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+	rule__ReuseFeature__Group_1__4__Impl
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__ReuseFeature__Group_1__4__Impl
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getReuseFeatureAccess().getRefAssignment_1_4()); }
+(rule__ReuseFeature__RefAssignment_1_4)
+{ after(grammarAccess.getReuseFeatureAccess().getRefAssignment_1_4()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+
+
 
 
 
@@ -28787,6 +28851,25 @@ rule__ReuseFeature__NameAssignment_1_2
 (
 { before(grammarAccess.getReuseFeatureAccess().getNameIDTerminalRuleCall_1_2_0()); }
 	RULE_ID{ after(grammarAccess.getReuseFeatureAccess().getNameIDTerminalRuleCall_1_2_0()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__ReuseFeature__RefAssignment_1_4
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getReuseFeatureAccess().getRefVariabilityCrossReference_1_4_0()); }
+(
+{ before(grammarAccess.getReuseFeatureAccess().getRefVariabilityQualifiedNameParserRuleCall_1_4_0_1()); }
+	ruleQualifiedName{ after(grammarAccess.getReuseFeatureAccess().getRefVariabilityQualifiedNameParserRuleCall_1_4_0_1()); }
+)
+{ after(grammarAccess.getReuseFeatureAccess().getRefVariabilityCrossReference_1_4_0()); }
 )
 
 ;

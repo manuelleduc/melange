@@ -597,9 +597,9 @@ public class MelangeSemanticSequencer extends XbaseSemanticSequencer {
 	 * Constraint:
 	 *     (
 	 *         (operators+=Weave | xmof=STRING | fileExtension=STRING)? 
+	 *         (xtext+=STRING xtext+=STRING*)? 
 	 *         (sirius+=STRING sirius+=STRING*)? 
 	 *         (ecl+=STRING ecl+=STRING*)? 
-	 *         (xtext+=STRING xtext+=STRING*)? 
 	 *         (exactTypeName=ValidID exactTypeUri=STRING?)? 
 	 *         (name=ValidID (implements+=[ModelType|QualifiedName] implements+=[ModelType|QualifiedName]*)? operators+=ExternalImport)?
 	 *     )+
@@ -693,9 +693,9 @@ public class MelangeSemanticSequencer extends XbaseSemanticSequencer {
 	 * Constraint:
 	 *     (
 	 *         (xmof=STRING | fileExtension=STRING | annotations+=Annotation)? 
-	 *         (sirius+=STRING sirius+=STRING*)? 
 	 *         (exactTypeName=ValidID exactTypeUri=STRING?)? 
 	 *         (xtext+=STRING xtext+=STRING*)? 
+	 *         (sirius+=STRING sirius+=STRING*)? 
 	 *         (ecl+=STRING ecl+=STRING*)? 
 	 *         (resourceType=ResourceType (resourceUri=STRING | xtextSetupRef=JvmTypeReference)?)? 
 	 *         (
@@ -851,15 +851,18 @@ public class MelangeSemanticSequencer extends XbaseSemanticSequencer {
 	 *     ReuseFeature returns TaggedReuseFeature
 	 *
 	 * Constraint:
-	 *     name=ID
+	 *     (name=ID ref=[Variability|QualifiedName])
 	 */
 	protected void sequence_ReuseFeature(ISerializationContext context, TaggedReuseFeature semanticObject) {
 		if (errorAcceptor != null) {
 			if (transientValues.isValueTransient(semanticObject, MelangePackage.Literals.TAGGED_ELEMENT__NAME) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MelangePackage.Literals.TAGGED_ELEMENT__NAME));
+			if (transientValues.isValueTransient(semanticObject, MelangePackage.Literals.REUSE_FEATURE__REF) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MelangePackage.Literals.REUSE_FEATURE__REF));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getReuseFeatureAccess().getNameIDTerminalRuleCall_1_2_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getReuseFeatureAccess().getRefVariabilityQualifiedNameParserRuleCall_1_4_0_1(), semanticObject.eGet(MelangePackage.Literals.REUSE_FEATURE__REF, false));
 		feeder.finish();
 	}
 	

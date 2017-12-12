@@ -23,7 +23,7 @@ import java.util.HashMap;
 @SuppressWarnings("all")
 public class InternalMelangeParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_STRING", "RULE_HEX", "RULE_INT", "RULE_DECIMAL", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'package'", "'external'", "'concern'", "'{'", "'variability'", "'='", "'}'", "'->'", "'or'", "'and'", "'!'", "'('", "')'", "'$'", "'|'", "'?'", "'oneOf'", "'someOf'", "'language'", "'inherits'", "','", "'implements'", "'requires'", "'resource'", "'uri'", "'setup'", "'xtext'", "'sirius'", "'ecl'", "'xmof'", "'fileExtension'", "'exactType'", "'annotation'", "':'", "'import-dsl'", "'modeltype'", "'syntax'", "'@Main'", "'transformation'", "'map'", "'to'", "'reuse'", "'features'", "'-'", "'withGenmodel'", "'renaming'", "'merge'", "'slice'", "'on'", "'['", "']'", "'with'", "'+='", "'-='", "'*='", "'/='", "'%='", "'<'", "'>'", "'>='", "'||'", "'&&'", "'=='", "'!='", "'==='", "'!=='", "'instanceof'", "'..<'", "'..'", "'=>'", "'<>'", "'?:'", "'+'", "'*'", "'**'", "'/'", "'%'", "'as'", "'++'", "'--'", "'.'", "'::'", "'?.'", "'#'", "';'", "'if'", "'else'", "'switch'", "'default'", "'case'", "'for'", "'while'", "'do'", "'var'", "'val'", "'extends'", "'static'", "'import'", "'extension'", "'super'", "'new'", "'false'", "'true'", "'null'", "'typeof'", "'throw'", "'return'", "'try'", "'finally'", "'synchronized'", "'catch'", "'&'", "'Melange'", "'EMF'", "'Xtext'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_STRING", "RULE_HEX", "RULE_INT", "RULE_DECIMAL", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'package'", "'external'", "'concern'", "'{'", "'variability'", "'='", "'}'", "'->'", "'or'", "'and'", "'!'", "'('", "')'", "'$'", "'|'", "'?'", "'oneOf'", "'someOf'", "'language'", "'inherits'", "','", "'implements'", "'requires'", "'resource'", "'uri'", "'setup'", "'xtext'", "'sirius'", "'ecl'", "'xmof'", "'fileExtension'", "'exactType'", "'annotation'", "':'", "'import-dsl'", "'modeltype'", "'syntax'", "'@Main'", "'transformation'", "'map'", "'to'", "'reuse'", "'features'", "'-'", "'<-'", "'withGenmodel'", "'renaming'", "'merge'", "'slice'", "'on'", "'['", "']'", "'with'", "'+='", "'-='", "'*='", "'/='", "'%='", "'<'", "'>'", "'>='", "'||'", "'&&'", "'=='", "'!='", "'==='", "'!=='", "'instanceof'", "'..<'", "'..'", "'=>'", "'<>'", "'?:'", "'+'", "'*'", "'**'", "'/'", "'%'", "'as'", "'++'", "'--'", "'.'", "'::'", "'?.'", "'#'", "';'", "'if'", "'else'", "'switch'", "'default'", "'case'", "'for'", "'while'", "'do'", "'var'", "'val'", "'extends'", "'static'", "'import'", "'extension'", "'super'", "'new'", "'false'", "'true'", "'null'", "'typeof'", "'throw'", "'return'", "'try'", "'finally'", "'synchronized'", "'catch'", "'&'", "'Melange'", "'EMF'", "'Xtext'"
     };
     public static final int RULE_HEX=6;
     public static final int T__50=50;
@@ -50,6 +50,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
     public static final int T__63=63;
     public static final int T__125=125;
     public static final int T__64=64;
+    public static final int T__128=128;
     public static final int T__65=65;
     public static final int T__127=127;
     public static final int T__37=37;
@@ -296,7 +297,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
             int alt1=2;
             int LA1_0 = input.LA(1);
 
-            if ( (LA1_0==110) ) {
+            if ( (LA1_0==111) ) {
                 alt1=1;
             }
             switch (alt1) {
@@ -1037,7 +1038,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                 int alt6=2;
                 int LA6_0 = input.LA(1);
 
-                if ( (LA6_0==26||LA6_0==49||LA6_0==54||(LA6_0>=59 && LA6_0<=60)||LA6_0==64) ) {
+                if ( (LA6_0==26||LA6_0==49||LA6_0==54||(LA6_0>=60 && LA6_0<=61)||LA6_0==65) ) {
                     alt6=1;
                 }
 
@@ -1234,7 +1235,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                 if ( (LA7_0==RULE_ID) ) {
                     int LA7_2 = input.LA(2);
 
-                    if ( (LA7_2==EOF||LA7_2==RULE_ID||LA7_2==19||(LA7_2>=23 && LA7_2<=24)||LA7_2==26||LA7_2==49||LA7_2==54||(LA7_2>=59 && LA7_2<=60)||LA7_2==64) ) {
+                    if ( (LA7_2==EOF||LA7_2==RULE_ID||LA7_2==19||(LA7_2>=23 && LA7_2<=24)||LA7_2==26||LA7_2==49||LA7_2==54||(LA7_2>=60 && LA7_2<=61)||LA7_2==65) ) {
                         alt7=1;
                     }
 
@@ -3565,7 +3566,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
             	        int alt24=2;
             	        int LA24_0 = input.LA(1);
 
-            	        if ( (LA24_0==49||LA24_0==54||(LA24_0>=59 && LA24_0<=60)||LA24_0==64) ) {
+            	        if ( (LA24_0==49||LA24_0==54||(LA24_0>=60 && LA24_0<=61)||LA24_0==65) ) {
             	            alt24=1;
             	        }
 
@@ -5207,7 +5208,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
             	        int alt34=2;
             	        int LA34_0 = input.LA(1);
 
-            	        if ( (LA34_0==64) ) {
+            	        if ( (LA34_0==65) ) {
             	            int LA34_2 = input.LA(2);
 
             	            if ( ((true)) ) {
@@ -6670,11 +6671,11 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
             if ( (LA44_0==RULE_ID) ) {
                 int LA44_1 = input.LA(2);
 
-                if ( (LA44_1==RULE_ID||LA44_1==62||LA44_1==70||LA44_1==93) ) {
+                if ( (LA44_1==RULE_ID||LA44_1==63||LA44_1==71||LA44_1==94) ) {
                     alt44=1;
                 }
             }
-            else if ( (LA44_0==24||LA44_0==82) ) {
+            else if ( (LA44_0==24||LA44_0==83) ) {
                 alt44=1;
             }
             switch (alt44) {
@@ -6761,7 +6762,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
             int alt46=2;
             int LA46_0 = input.LA(1);
 
-            if ( (LA46_0==RULE_ID||LA46_0==24||LA46_0==82) ) {
+            if ( (LA46_0==RULE_ID||LA46_0==24||LA46_0==83) ) {
                 alt46=1;
             }
             switch (alt46) {
@@ -7845,17 +7846,17 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                 alt52=1;
                 }
                 break;
-            case 59:
+            case 60:
                 {
                 alt52=2;
                 }
                 break;
-            case 60:
+            case 61:
                 {
                 alt52=3;
                 }
                 break;
-            case 64:
+            case 65:
                 {
                 alt52=4;
                 }
@@ -8328,21 +8329,22 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleReuseFeature"
-    // InternalMelange.g:2989:1: ruleReuseFeature returns [EObject current=null] : ( ( () ( (lv_unselected_1_0= '-' ) )? ( ( ruleQualifiedName ) ) ) | ( () otherlv_4= '$' ( (lv_name_5_0= RULE_ID ) ) ) ) ;
+    // InternalMelange.g:2989:1: ruleReuseFeature returns [EObject current=null] : ( ( () ( (lv_unselected_1_0= '-' ) )? ( ( ruleQualifiedName ) ) ) | ( () otherlv_4= '$' ( (lv_name_5_0= RULE_ID ) ) otherlv_6= '<-' ( ( ruleQualifiedName ) ) ) ) ;
     public final EObject ruleReuseFeature() throws RecognitionException {
         EObject current = null;
 
         Token lv_unselected_1_0=null;
         Token otherlv_4=null;
         Token lv_name_5_0=null;
+        Token otherlv_6=null;
 
          enterRule(); 
             
         try {
-            // InternalMelange.g:2992:28: ( ( ( () ( (lv_unselected_1_0= '-' ) )? ( ( ruleQualifiedName ) ) ) | ( () otherlv_4= '$' ( (lv_name_5_0= RULE_ID ) ) ) ) )
-            // InternalMelange.g:2993:1: ( ( () ( (lv_unselected_1_0= '-' ) )? ( ( ruleQualifiedName ) ) ) | ( () otherlv_4= '$' ( (lv_name_5_0= RULE_ID ) ) ) )
+            // InternalMelange.g:2992:28: ( ( ( () ( (lv_unselected_1_0= '-' ) )? ( ( ruleQualifiedName ) ) ) | ( () otherlv_4= '$' ( (lv_name_5_0= RULE_ID ) ) otherlv_6= '<-' ( ( ruleQualifiedName ) ) ) ) )
+            // InternalMelange.g:2993:1: ( ( () ( (lv_unselected_1_0= '-' ) )? ( ( ruleQualifiedName ) ) ) | ( () otherlv_4= '$' ( (lv_name_5_0= RULE_ID ) ) otherlv_6= '<-' ( ( ruleQualifiedName ) ) ) )
             {
-            // InternalMelange.g:2993:1: ( ( () ( (lv_unselected_1_0= '-' ) )? ( ( ruleQualifiedName ) ) ) | ( () otherlv_4= '$' ( (lv_name_5_0= RULE_ID ) ) ) )
+            // InternalMelange.g:2993:1: ( ( () ( (lv_unselected_1_0= '-' ) )? ( ( ruleQualifiedName ) ) ) | ( () otherlv_4= '$' ( (lv_name_5_0= RULE_ID ) ) otherlv_6= '<-' ( ( ruleQualifiedName ) ) ) )
             int alt56=2;
             int LA56_0 = input.LA(1);
 
@@ -8457,10 +8459,10 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalMelange.g:3030:6: ( () otherlv_4= '$' ( (lv_name_5_0= RULE_ID ) ) )
+                    // InternalMelange.g:3030:6: ( () otherlv_4= '$' ( (lv_name_5_0= RULE_ID ) ) otherlv_6= '<-' ( ( ruleQualifiedName ) ) )
                     {
-                    // InternalMelange.g:3030:6: ( () otherlv_4= '$' ( (lv_name_5_0= RULE_ID ) ) )
-                    // InternalMelange.g:3030:7: () otherlv_4= '$' ( (lv_name_5_0= RULE_ID ) )
+                    // InternalMelange.g:3030:6: ( () otherlv_4= '$' ( (lv_name_5_0= RULE_ID ) ) otherlv_6= '<-' ( ( ruleQualifiedName ) ) )
+                    // InternalMelange.g:3030:7: () otherlv_4= '$' ( (lv_name_5_0= RULE_ID ) ) otherlv_6= '<-' ( ( ruleQualifiedName ) )
                     {
                     // InternalMelange.g:3030:7: ()
                     // InternalMelange.g:3031:5: 
@@ -8487,7 +8489,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                     // InternalMelange.g:3041:1: (lv_name_5_0= RULE_ID )
                     // InternalMelange.g:3042:3: lv_name_5_0= RULE_ID
                     {
-                    lv_name_5_0=(Token)match(input,RULE_ID,FOLLOW_2); if (state.failed) return current;
+                    lv_name_5_0=(Token)match(input,RULE_ID,FOLLOW_55); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       			newLeafNode(lv_name_5_0, grammarAccess.getReuseFeatureAccess().getNameIDTerminalRuleCall_1_2_0()); 
@@ -8503,6 +8505,46 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                              			"name",
                               		lv_name_5_0, 
                               		"org.eclipse.xtext.xbase.Xtype.ID");
+                      	    
+                    }
+
+                    }
+
+
+                    }
+
+                    otherlv_6=(Token)match(input,57,FOLLOW_3); if (state.failed) return current;
+                    if ( state.backtracking==0 ) {
+
+                          	newLeafNode(otherlv_6, grammarAccess.getReuseFeatureAccess().getLessThanSignHyphenMinusKeyword_1_3());
+                          
+                    }
+                    // InternalMelange.g:3062:1: ( ( ruleQualifiedName ) )
+                    // InternalMelange.g:3063:1: ( ruleQualifiedName )
+                    {
+                    // InternalMelange.g:3063:1: ( ruleQualifiedName )
+                    // InternalMelange.g:3064:3: ruleQualifiedName
+                    {
+                    if ( state.backtracking==0 ) {
+
+                      			if (current==null) {
+                      	            current = createModelElement(grammarAccess.getReuseFeatureRule());
+                      	        }
+                              
+                    }
+                    if ( state.backtracking==0 ) {
+                       
+                      	        newCompositeNode(grammarAccess.getReuseFeatureAccess().getRefVariabilityCrossReference_1_4_0()); 
+                      	    
+                    }
+                    pushFollow(FOLLOW_2);
+                    ruleQualifiedName();
+
+                    state._fsp--;
+                    if (state.failed) return current;
+                    if ( state.backtracking==0 ) {
+                       
+                      	        afterParserOrEnumRuleCall();
                       	    
                     }
 
@@ -8540,7 +8582,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleImport"
-    // InternalMelange.g:3066:1: entryRuleImport returns [EObject current=null] : iv_ruleImport= ruleImport EOF ;
+    // InternalMelange.g:3085:1: entryRuleImport returns [EObject current=null] : iv_ruleImport= ruleImport EOF ;
     public final EObject entryRuleImport() throws RecognitionException {
         EObject current = null;
 
@@ -8548,8 +8590,8 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalMelange.g:3067:2: (iv_ruleImport= ruleImport EOF )
-            // InternalMelange.g:3068:2: iv_ruleImport= ruleImport EOF
+            // InternalMelange.g:3086:2: (iv_ruleImport= ruleImport EOF )
+            // InternalMelange.g:3087:2: iv_ruleImport= ruleImport EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getImportRule()); 
@@ -8580,7 +8622,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleImport"
-    // InternalMelange.g:3075:1: ruleImport returns [EObject current=null] : (otherlv_0= 'syntax' ( (lv_ecoreUri_1_0= RULE_STRING ) ) (otherlv_2= 'withGenmodel' ( ( (lv_genmodelUris_3_0= RULE_STRING ) ) (otherlv_4= ',' ( (lv_genmodelUris_5_0= RULE_STRING ) ) )* ) )? (otherlv_6= 'renaming' otherlv_7= '{' ( (lv_mappingRules_8_0= rulePackageMapping ) )* otherlv_9= '}' )? ) ;
+    // InternalMelange.g:3094:1: ruleImport returns [EObject current=null] : (otherlv_0= 'syntax' ( (lv_ecoreUri_1_0= RULE_STRING ) ) (otherlv_2= 'withGenmodel' ( ( (lv_genmodelUris_3_0= RULE_STRING ) ) (otherlv_4= ',' ( (lv_genmodelUris_5_0= RULE_STRING ) ) )* ) )? (otherlv_6= 'renaming' otherlv_7= '{' ( (lv_mappingRules_8_0= rulePackageMapping ) )* otherlv_9= '}' )? ) ;
     public final EObject ruleImport() throws RecognitionException {
         EObject current = null;
 
@@ -8599,11 +8641,11 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // InternalMelange.g:3078:28: ( (otherlv_0= 'syntax' ( (lv_ecoreUri_1_0= RULE_STRING ) ) (otherlv_2= 'withGenmodel' ( ( (lv_genmodelUris_3_0= RULE_STRING ) ) (otherlv_4= ',' ( (lv_genmodelUris_5_0= RULE_STRING ) ) )* ) )? (otherlv_6= 'renaming' otherlv_7= '{' ( (lv_mappingRules_8_0= rulePackageMapping ) )* otherlv_9= '}' )? ) )
-            // InternalMelange.g:3079:1: (otherlv_0= 'syntax' ( (lv_ecoreUri_1_0= RULE_STRING ) ) (otherlv_2= 'withGenmodel' ( ( (lv_genmodelUris_3_0= RULE_STRING ) ) (otherlv_4= ',' ( (lv_genmodelUris_5_0= RULE_STRING ) ) )* ) )? (otherlv_6= 'renaming' otherlv_7= '{' ( (lv_mappingRules_8_0= rulePackageMapping ) )* otherlv_9= '}' )? )
+            // InternalMelange.g:3097:28: ( (otherlv_0= 'syntax' ( (lv_ecoreUri_1_0= RULE_STRING ) ) (otherlv_2= 'withGenmodel' ( ( (lv_genmodelUris_3_0= RULE_STRING ) ) (otherlv_4= ',' ( (lv_genmodelUris_5_0= RULE_STRING ) ) )* ) )? (otherlv_6= 'renaming' otherlv_7= '{' ( (lv_mappingRules_8_0= rulePackageMapping ) )* otherlv_9= '}' )? ) )
+            // InternalMelange.g:3098:1: (otherlv_0= 'syntax' ( (lv_ecoreUri_1_0= RULE_STRING ) ) (otherlv_2= 'withGenmodel' ( ( (lv_genmodelUris_3_0= RULE_STRING ) ) (otherlv_4= ',' ( (lv_genmodelUris_5_0= RULE_STRING ) ) )* ) )? (otherlv_6= 'renaming' otherlv_7= '{' ( (lv_mappingRules_8_0= rulePackageMapping ) )* otherlv_9= '}' )? )
             {
-            // InternalMelange.g:3079:1: (otherlv_0= 'syntax' ( (lv_ecoreUri_1_0= RULE_STRING ) ) (otherlv_2= 'withGenmodel' ( ( (lv_genmodelUris_3_0= RULE_STRING ) ) (otherlv_4= ',' ( (lv_genmodelUris_5_0= RULE_STRING ) ) )* ) )? (otherlv_6= 'renaming' otherlv_7= '{' ( (lv_mappingRules_8_0= rulePackageMapping ) )* otherlv_9= '}' )? )
-            // InternalMelange.g:3079:3: otherlv_0= 'syntax' ( (lv_ecoreUri_1_0= RULE_STRING ) ) (otherlv_2= 'withGenmodel' ( ( (lv_genmodelUris_3_0= RULE_STRING ) ) (otherlv_4= ',' ( (lv_genmodelUris_5_0= RULE_STRING ) ) )* ) )? (otherlv_6= 'renaming' otherlv_7= '{' ( (lv_mappingRules_8_0= rulePackageMapping ) )* otherlv_9= '}' )?
+            // InternalMelange.g:3098:1: (otherlv_0= 'syntax' ( (lv_ecoreUri_1_0= RULE_STRING ) ) (otherlv_2= 'withGenmodel' ( ( (lv_genmodelUris_3_0= RULE_STRING ) ) (otherlv_4= ',' ( (lv_genmodelUris_5_0= RULE_STRING ) ) )* ) )? (otherlv_6= 'renaming' otherlv_7= '{' ( (lv_mappingRules_8_0= rulePackageMapping ) )* otherlv_9= '}' )? )
+            // InternalMelange.g:3098:3: otherlv_0= 'syntax' ( (lv_ecoreUri_1_0= RULE_STRING ) ) (otherlv_2= 'withGenmodel' ( ( (lv_genmodelUris_3_0= RULE_STRING ) ) (otherlv_4= ',' ( (lv_genmodelUris_5_0= RULE_STRING ) ) )* ) )? (otherlv_6= 'renaming' otherlv_7= '{' ( (lv_mappingRules_8_0= rulePackageMapping ) )* otherlv_9= '}' )?
             {
             otherlv_0=(Token)match(input,49,FOLLOW_31); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -8611,13 +8653,13 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                   	newLeafNode(otherlv_0, grammarAccess.getImportAccess().getSyntaxKeyword_0());
                   
             }
-            // InternalMelange.g:3083:1: ( (lv_ecoreUri_1_0= RULE_STRING ) )
-            // InternalMelange.g:3084:1: (lv_ecoreUri_1_0= RULE_STRING )
+            // InternalMelange.g:3102:1: ( (lv_ecoreUri_1_0= RULE_STRING ) )
+            // InternalMelange.g:3103:1: (lv_ecoreUri_1_0= RULE_STRING )
             {
-            // InternalMelange.g:3084:1: (lv_ecoreUri_1_0= RULE_STRING )
-            // InternalMelange.g:3085:3: lv_ecoreUri_1_0= RULE_STRING
+            // InternalMelange.g:3103:1: (lv_ecoreUri_1_0= RULE_STRING )
+            // InternalMelange.g:3104:3: lv_ecoreUri_1_0= RULE_STRING
             {
-            lv_ecoreUri_1_0=(Token)match(input,RULE_STRING,FOLLOW_55); if (state.failed) return current;
+            lv_ecoreUri_1_0=(Token)match(input,RULE_STRING,FOLLOW_56); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(lv_ecoreUri_1_0, grammarAccess.getImportAccess().getEcoreUriSTRINGTerminalRuleCall_1_0()); 
@@ -8641,33 +8683,33 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalMelange.g:3101:2: (otherlv_2= 'withGenmodel' ( ( (lv_genmodelUris_3_0= RULE_STRING ) ) (otherlv_4= ',' ( (lv_genmodelUris_5_0= RULE_STRING ) ) )* ) )?
+            // InternalMelange.g:3120:2: (otherlv_2= 'withGenmodel' ( ( (lv_genmodelUris_3_0= RULE_STRING ) ) (otherlv_4= ',' ( (lv_genmodelUris_5_0= RULE_STRING ) ) )* ) )?
             int alt58=2;
             int LA58_0 = input.LA(1);
 
-            if ( (LA58_0==57) ) {
+            if ( (LA58_0==58) ) {
                 alt58=1;
             }
             switch (alt58) {
                 case 1 :
-                    // InternalMelange.g:3101:4: otherlv_2= 'withGenmodel' ( ( (lv_genmodelUris_3_0= RULE_STRING ) ) (otherlv_4= ',' ( (lv_genmodelUris_5_0= RULE_STRING ) ) )* )
+                    // InternalMelange.g:3120:4: otherlv_2= 'withGenmodel' ( ( (lv_genmodelUris_3_0= RULE_STRING ) ) (otherlv_4= ',' ( (lv_genmodelUris_5_0= RULE_STRING ) ) )* )
                     {
-                    otherlv_2=(Token)match(input,57,FOLLOW_31); if (state.failed) return current;
+                    otherlv_2=(Token)match(input,58,FOLLOW_31); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_2, grammarAccess.getImportAccess().getWithGenmodelKeyword_2_0());
                           
                     }
-                    // InternalMelange.g:3105:1: ( ( (lv_genmodelUris_3_0= RULE_STRING ) ) (otherlv_4= ',' ( (lv_genmodelUris_5_0= RULE_STRING ) ) )* )
-                    // InternalMelange.g:3105:2: ( (lv_genmodelUris_3_0= RULE_STRING ) ) (otherlv_4= ',' ( (lv_genmodelUris_5_0= RULE_STRING ) ) )*
+                    // InternalMelange.g:3124:1: ( ( (lv_genmodelUris_3_0= RULE_STRING ) ) (otherlv_4= ',' ( (lv_genmodelUris_5_0= RULE_STRING ) ) )* )
+                    // InternalMelange.g:3124:2: ( (lv_genmodelUris_3_0= RULE_STRING ) ) (otherlv_4= ',' ( (lv_genmodelUris_5_0= RULE_STRING ) ) )*
                     {
-                    // InternalMelange.g:3105:2: ( (lv_genmodelUris_3_0= RULE_STRING ) )
-                    // InternalMelange.g:3106:1: (lv_genmodelUris_3_0= RULE_STRING )
+                    // InternalMelange.g:3124:2: ( (lv_genmodelUris_3_0= RULE_STRING ) )
+                    // InternalMelange.g:3125:1: (lv_genmodelUris_3_0= RULE_STRING )
                     {
-                    // InternalMelange.g:3106:1: (lv_genmodelUris_3_0= RULE_STRING )
-                    // InternalMelange.g:3107:3: lv_genmodelUris_3_0= RULE_STRING
+                    // InternalMelange.g:3125:1: (lv_genmodelUris_3_0= RULE_STRING )
+                    // InternalMelange.g:3126:3: lv_genmodelUris_3_0= RULE_STRING
                     {
-                    lv_genmodelUris_3_0=(Token)match(input,RULE_STRING,FOLLOW_56); if (state.failed) return current;
+                    lv_genmodelUris_3_0=(Token)match(input,RULE_STRING,FOLLOW_57); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       			newLeafNode(lv_genmodelUris_3_0, grammarAccess.getImportAccess().getGenmodelUrisSTRINGTerminalRuleCall_2_1_0_0()); 
@@ -8691,7 +8733,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // InternalMelange.g:3123:2: (otherlv_4= ',' ( (lv_genmodelUris_5_0= RULE_STRING ) ) )*
+                    // InternalMelange.g:3142:2: (otherlv_4= ',' ( (lv_genmodelUris_5_0= RULE_STRING ) ) )*
                     loop57:
                     do {
                         int alt57=2;
@@ -8704,7 +8746,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
                         switch (alt57) {
                     	case 1 :
-                    	    // InternalMelange.g:3123:4: otherlv_4= ',' ( (lv_genmodelUris_5_0= RULE_STRING ) )
+                    	    // InternalMelange.g:3142:4: otherlv_4= ',' ( (lv_genmodelUris_5_0= RULE_STRING ) )
                     	    {
                     	    otherlv_4=(Token)match(input,33,FOLLOW_31); if (state.failed) return current;
                     	    if ( state.backtracking==0 ) {
@@ -8712,13 +8754,13 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                     	          	newLeafNode(otherlv_4, grammarAccess.getImportAccess().getCommaKeyword_2_1_1_0());
                     	          
                     	    }
-                    	    // InternalMelange.g:3127:1: ( (lv_genmodelUris_5_0= RULE_STRING ) )
-                    	    // InternalMelange.g:3128:1: (lv_genmodelUris_5_0= RULE_STRING )
+                    	    // InternalMelange.g:3146:1: ( (lv_genmodelUris_5_0= RULE_STRING ) )
+                    	    // InternalMelange.g:3147:1: (lv_genmodelUris_5_0= RULE_STRING )
                     	    {
-                    	    // InternalMelange.g:3128:1: (lv_genmodelUris_5_0= RULE_STRING )
-                    	    // InternalMelange.g:3129:3: lv_genmodelUris_5_0= RULE_STRING
+                    	    // InternalMelange.g:3147:1: (lv_genmodelUris_5_0= RULE_STRING )
+                    	    // InternalMelange.g:3148:3: lv_genmodelUris_5_0= RULE_STRING
                     	    {
-                    	    lv_genmodelUris_5_0=(Token)match(input,RULE_STRING,FOLLOW_56); if (state.failed) return current;
+                    	    lv_genmodelUris_5_0=(Token)match(input,RULE_STRING,FOLLOW_57); if (state.failed) return current;
                     	    if ( state.backtracking==0 ) {
 
                     	      			newLeafNode(lv_genmodelUris_5_0, grammarAccess.getImportAccess().getGenmodelUrisSTRINGTerminalRuleCall_2_1_1_1_0()); 
@@ -8760,18 +8802,18 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalMelange.g:3145:7: (otherlv_6= 'renaming' otherlv_7= '{' ( (lv_mappingRules_8_0= rulePackageMapping ) )* otherlv_9= '}' )?
+            // InternalMelange.g:3164:7: (otherlv_6= 'renaming' otherlv_7= '{' ( (lv_mappingRules_8_0= rulePackageMapping ) )* otherlv_9= '}' )?
             int alt60=2;
             int LA60_0 = input.LA(1);
 
-            if ( (LA60_0==58) ) {
+            if ( (LA60_0==59) ) {
                 alt60=1;
             }
             switch (alt60) {
                 case 1 :
-                    // InternalMelange.g:3145:9: otherlv_6= 'renaming' otherlv_7= '{' ( (lv_mappingRules_8_0= rulePackageMapping ) )* otherlv_9= '}'
+                    // InternalMelange.g:3164:9: otherlv_6= 'renaming' otherlv_7= '{' ( (lv_mappingRules_8_0= rulePackageMapping ) )* otherlv_9= '}'
                     {
-                    otherlv_6=(Token)match(input,58,FOLLOW_7); if (state.failed) return current;
+                    otherlv_6=(Token)match(input,59,FOLLOW_7); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_6, grammarAccess.getImportAccess().getRenamingKeyword_3_0());
@@ -8783,7 +8825,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                           	newLeafNode(otherlv_7, grammarAccess.getImportAccess().getLeftCurlyBracketKeyword_3_1());
                           
                     }
-                    // InternalMelange.g:3153:1: ( (lv_mappingRules_8_0= rulePackageMapping ) )*
+                    // InternalMelange.g:3172:1: ( (lv_mappingRules_8_0= rulePackageMapping ) )*
                     loop59:
                     do {
                         int alt59=2;
@@ -8796,10 +8838,10 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
                         switch (alt59) {
                     	case 1 :
-                    	    // InternalMelange.g:3154:1: (lv_mappingRules_8_0= rulePackageMapping )
+                    	    // InternalMelange.g:3173:1: (lv_mappingRules_8_0= rulePackageMapping )
                     	    {
-                    	    // InternalMelange.g:3154:1: (lv_mappingRules_8_0= rulePackageMapping )
-                    	    // InternalMelange.g:3155:3: lv_mappingRules_8_0= rulePackageMapping
+                    	    // InternalMelange.g:3173:1: (lv_mappingRules_8_0= rulePackageMapping )
+                    	    // InternalMelange.g:3174:3: lv_mappingRules_8_0= rulePackageMapping
                     	    {
                     	    if ( state.backtracking==0 ) {
                     	       
@@ -8871,7 +8913,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleExternalImport"
-    // InternalMelange.g:3183:1: entryRuleExternalImport returns [EObject current=null] : iv_ruleExternalImport= ruleExternalImport EOF ;
+    // InternalMelange.g:3202:1: entryRuleExternalImport returns [EObject current=null] : iv_ruleExternalImport= ruleExternalImport EOF ;
     public final EObject entryRuleExternalImport() throws RecognitionException {
         EObject current = null;
 
@@ -8879,8 +8921,8 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalMelange.g:3184:2: (iv_ruleExternalImport= ruleExternalImport EOF )
-            // InternalMelange.g:3185:2: iv_ruleExternalImport= ruleExternalImport EOF
+            // InternalMelange.g:3203:2: (iv_ruleExternalImport= ruleExternalImport EOF )
+            // InternalMelange.g:3204:2: iv_ruleExternalImport= ruleExternalImport EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getExternalImportRule()); 
@@ -8911,7 +8953,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleExternalImport"
-    // InternalMelange.g:3192:1: ruleExternalImport returns [EObject current=null] : (otherlv_0= 'syntax' ( (lv_ecoreUri_1_0= RULE_STRING ) ) (otherlv_2= 'withGenmodel' ( ( (lv_genmodelUris_3_0= RULE_STRING ) ) (otherlv_4= ',' ( (lv_genmodelUris_5_0= RULE_STRING ) ) )* ) )? ) ;
+    // InternalMelange.g:3211:1: ruleExternalImport returns [EObject current=null] : (otherlv_0= 'syntax' ( (lv_ecoreUri_1_0= RULE_STRING ) ) (otherlv_2= 'withGenmodel' ( ( (lv_genmodelUris_3_0= RULE_STRING ) ) (otherlv_4= ',' ( (lv_genmodelUris_5_0= RULE_STRING ) ) )* ) )? ) ;
     public final EObject ruleExternalImport() throws RecognitionException {
         EObject current = null;
 
@@ -8925,11 +8967,11 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // InternalMelange.g:3195:28: ( (otherlv_0= 'syntax' ( (lv_ecoreUri_1_0= RULE_STRING ) ) (otherlv_2= 'withGenmodel' ( ( (lv_genmodelUris_3_0= RULE_STRING ) ) (otherlv_4= ',' ( (lv_genmodelUris_5_0= RULE_STRING ) ) )* ) )? ) )
-            // InternalMelange.g:3196:1: (otherlv_0= 'syntax' ( (lv_ecoreUri_1_0= RULE_STRING ) ) (otherlv_2= 'withGenmodel' ( ( (lv_genmodelUris_3_0= RULE_STRING ) ) (otherlv_4= ',' ( (lv_genmodelUris_5_0= RULE_STRING ) ) )* ) )? )
+            // InternalMelange.g:3214:28: ( (otherlv_0= 'syntax' ( (lv_ecoreUri_1_0= RULE_STRING ) ) (otherlv_2= 'withGenmodel' ( ( (lv_genmodelUris_3_0= RULE_STRING ) ) (otherlv_4= ',' ( (lv_genmodelUris_5_0= RULE_STRING ) ) )* ) )? ) )
+            // InternalMelange.g:3215:1: (otherlv_0= 'syntax' ( (lv_ecoreUri_1_0= RULE_STRING ) ) (otherlv_2= 'withGenmodel' ( ( (lv_genmodelUris_3_0= RULE_STRING ) ) (otherlv_4= ',' ( (lv_genmodelUris_5_0= RULE_STRING ) ) )* ) )? )
             {
-            // InternalMelange.g:3196:1: (otherlv_0= 'syntax' ( (lv_ecoreUri_1_0= RULE_STRING ) ) (otherlv_2= 'withGenmodel' ( ( (lv_genmodelUris_3_0= RULE_STRING ) ) (otherlv_4= ',' ( (lv_genmodelUris_5_0= RULE_STRING ) ) )* ) )? )
-            // InternalMelange.g:3196:3: otherlv_0= 'syntax' ( (lv_ecoreUri_1_0= RULE_STRING ) ) (otherlv_2= 'withGenmodel' ( ( (lv_genmodelUris_3_0= RULE_STRING ) ) (otherlv_4= ',' ( (lv_genmodelUris_5_0= RULE_STRING ) ) )* ) )?
+            // InternalMelange.g:3215:1: (otherlv_0= 'syntax' ( (lv_ecoreUri_1_0= RULE_STRING ) ) (otherlv_2= 'withGenmodel' ( ( (lv_genmodelUris_3_0= RULE_STRING ) ) (otherlv_4= ',' ( (lv_genmodelUris_5_0= RULE_STRING ) ) )* ) )? )
+            // InternalMelange.g:3215:3: otherlv_0= 'syntax' ( (lv_ecoreUri_1_0= RULE_STRING ) ) (otherlv_2= 'withGenmodel' ( ( (lv_genmodelUris_3_0= RULE_STRING ) ) (otherlv_4= ',' ( (lv_genmodelUris_5_0= RULE_STRING ) ) )* ) )?
             {
             otherlv_0=(Token)match(input,49,FOLLOW_31); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -8937,13 +8979,13 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                   	newLeafNode(otherlv_0, grammarAccess.getExternalImportAccess().getSyntaxKeyword_0());
                   
             }
-            // InternalMelange.g:3200:1: ( (lv_ecoreUri_1_0= RULE_STRING ) )
-            // InternalMelange.g:3201:1: (lv_ecoreUri_1_0= RULE_STRING )
+            // InternalMelange.g:3219:1: ( (lv_ecoreUri_1_0= RULE_STRING ) )
+            // InternalMelange.g:3220:1: (lv_ecoreUri_1_0= RULE_STRING )
             {
-            // InternalMelange.g:3201:1: (lv_ecoreUri_1_0= RULE_STRING )
-            // InternalMelange.g:3202:3: lv_ecoreUri_1_0= RULE_STRING
+            // InternalMelange.g:3220:1: (lv_ecoreUri_1_0= RULE_STRING )
+            // InternalMelange.g:3221:3: lv_ecoreUri_1_0= RULE_STRING
             {
-            lv_ecoreUri_1_0=(Token)match(input,RULE_STRING,FOLLOW_57); if (state.failed) return current;
+            lv_ecoreUri_1_0=(Token)match(input,RULE_STRING,FOLLOW_58); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(lv_ecoreUri_1_0, grammarAccess.getExternalImportAccess().getEcoreUriSTRINGTerminalRuleCall_1_0()); 
@@ -8967,33 +9009,33 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalMelange.g:3218:2: (otherlv_2= 'withGenmodel' ( ( (lv_genmodelUris_3_0= RULE_STRING ) ) (otherlv_4= ',' ( (lv_genmodelUris_5_0= RULE_STRING ) ) )* ) )?
+            // InternalMelange.g:3237:2: (otherlv_2= 'withGenmodel' ( ( (lv_genmodelUris_3_0= RULE_STRING ) ) (otherlv_4= ',' ( (lv_genmodelUris_5_0= RULE_STRING ) ) )* ) )?
             int alt62=2;
             int LA62_0 = input.LA(1);
 
-            if ( (LA62_0==57) ) {
+            if ( (LA62_0==58) ) {
                 alt62=1;
             }
             switch (alt62) {
                 case 1 :
-                    // InternalMelange.g:3218:4: otherlv_2= 'withGenmodel' ( ( (lv_genmodelUris_3_0= RULE_STRING ) ) (otherlv_4= ',' ( (lv_genmodelUris_5_0= RULE_STRING ) ) )* )
+                    // InternalMelange.g:3237:4: otherlv_2= 'withGenmodel' ( ( (lv_genmodelUris_3_0= RULE_STRING ) ) (otherlv_4= ',' ( (lv_genmodelUris_5_0= RULE_STRING ) ) )* )
                     {
-                    otherlv_2=(Token)match(input,57,FOLLOW_31); if (state.failed) return current;
+                    otherlv_2=(Token)match(input,58,FOLLOW_31); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_2, grammarAccess.getExternalImportAccess().getWithGenmodelKeyword_2_0());
                           
                     }
-                    // InternalMelange.g:3222:1: ( ( (lv_genmodelUris_3_0= RULE_STRING ) ) (otherlv_4= ',' ( (lv_genmodelUris_5_0= RULE_STRING ) ) )* )
-                    // InternalMelange.g:3222:2: ( (lv_genmodelUris_3_0= RULE_STRING ) ) (otherlv_4= ',' ( (lv_genmodelUris_5_0= RULE_STRING ) ) )*
+                    // InternalMelange.g:3241:1: ( ( (lv_genmodelUris_3_0= RULE_STRING ) ) (otherlv_4= ',' ( (lv_genmodelUris_5_0= RULE_STRING ) ) )* )
+                    // InternalMelange.g:3241:2: ( (lv_genmodelUris_3_0= RULE_STRING ) ) (otherlv_4= ',' ( (lv_genmodelUris_5_0= RULE_STRING ) ) )*
                     {
-                    // InternalMelange.g:3222:2: ( (lv_genmodelUris_3_0= RULE_STRING ) )
-                    // InternalMelange.g:3223:1: (lv_genmodelUris_3_0= RULE_STRING )
+                    // InternalMelange.g:3241:2: ( (lv_genmodelUris_3_0= RULE_STRING ) )
+                    // InternalMelange.g:3242:1: (lv_genmodelUris_3_0= RULE_STRING )
                     {
-                    // InternalMelange.g:3223:1: (lv_genmodelUris_3_0= RULE_STRING )
-                    // InternalMelange.g:3224:3: lv_genmodelUris_3_0= RULE_STRING
+                    // InternalMelange.g:3242:1: (lv_genmodelUris_3_0= RULE_STRING )
+                    // InternalMelange.g:3243:3: lv_genmodelUris_3_0= RULE_STRING
                     {
-                    lv_genmodelUris_3_0=(Token)match(input,RULE_STRING,FOLLOW_58); if (state.failed) return current;
+                    lv_genmodelUris_3_0=(Token)match(input,RULE_STRING,FOLLOW_59); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       			newLeafNode(lv_genmodelUris_3_0, grammarAccess.getExternalImportAccess().getGenmodelUrisSTRINGTerminalRuleCall_2_1_0_0()); 
@@ -9017,7 +9059,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // InternalMelange.g:3240:2: (otherlv_4= ',' ( (lv_genmodelUris_5_0= RULE_STRING ) ) )*
+                    // InternalMelange.g:3259:2: (otherlv_4= ',' ( (lv_genmodelUris_5_0= RULE_STRING ) ) )*
                     loop61:
                     do {
                         int alt61=2;
@@ -9030,7 +9072,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
                         switch (alt61) {
                     	case 1 :
-                    	    // InternalMelange.g:3240:4: otherlv_4= ',' ( (lv_genmodelUris_5_0= RULE_STRING ) )
+                    	    // InternalMelange.g:3259:4: otherlv_4= ',' ( (lv_genmodelUris_5_0= RULE_STRING ) )
                     	    {
                     	    otherlv_4=(Token)match(input,33,FOLLOW_31); if (state.failed) return current;
                     	    if ( state.backtracking==0 ) {
@@ -9038,13 +9080,13 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                     	          	newLeafNode(otherlv_4, grammarAccess.getExternalImportAccess().getCommaKeyword_2_1_1_0());
                     	          
                     	    }
-                    	    // InternalMelange.g:3244:1: ( (lv_genmodelUris_5_0= RULE_STRING ) )
-                    	    // InternalMelange.g:3245:1: (lv_genmodelUris_5_0= RULE_STRING )
+                    	    // InternalMelange.g:3263:1: ( (lv_genmodelUris_5_0= RULE_STRING ) )
+                    	    // InternalMelange.g:3264:1: (lv_genmodelUris_5_0= RULE_STRING )
                     	    {
-                    	    // InternalMelange.g:3245:1: (lv_genmodelUris_5_0= RULE_STRING )
-                    	    // InternalMelange.g:3246:3: lv_genmodelUris_5_0= RULE_STRING
+                    	    // InternalMelange.g:3264:1: (lv_genmodelUris_5_0= RULE_STRING )
+                    	    // InternalMelange.g:3265:3: lv_genmodelUris_5_0= RULE_STRING
                     	    {
-                    	    lv_genmodelUris_5_0=(Token)match(input,RULE_STRING,FOLLOW_58); if (state.failed) return current;
+                    	    lv_genmodelUris_5_0=(Token)match(input,RULE_STRING,FOLLOW_59); if (state.failed) return current;
                     	    if ( state.backtracking==0 ) {
 
                     	      			newLeafNode(lv_genmodelUris_5_0, grammarAccess.getExternalImportAccess().getGenmodelUrisSTRINGTerminalRuleCall_2_1_1_1_0()); 
@@ -9109,7 +9151,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleMerge"
-    // InternalMelange.g:3270:1: entryRuleMerge returns [EObject current=null] : iv_ruleMerge= ruleMerge EOF ;
+    // InternalMelange.g:3289:1: entryRuleMerge returns [EObject current=null] : iv_ruleMerge= ruleMerge EOF ;
     public final EObject entryRuleMerge() throws RecognitionException {
         EObject current = null;
 
@@ -9117,8 +9159,8 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalMelange.g:3271:2: (iv_ruleMerge= ruleMerge EOF )
-            // InternalMelange.g:3272:2: iv_ruleMerge= ruleMerge EOF
+            // InternalMelange.g:3290:2: (iv_ruleMerge= ruleMerge EOF )
+            // InternalMelange.g:3291:2: iv_ruleMerge= ruleMerge EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getMergeRule()); 
@@ -9149,7 +9191,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleMerge"
-    // InternalMelange.g:3279:1: ruleMerge returns [EObject current=null] : (otherlv_0= 'merge' ( ( ruleQualifiedName ) ) (otherlv_2= 'renaming' otherlv_3= '{' ( (lv_mappingRules_4_0= rulePackageMapping ) )* otherlv_5= '}' )? ) ;
+    // InternalMelange.g:3298:1: ruleMerge returns [EObject current=null] : (otherlv_0= 'merge' ( ( ruleQualifiedName ) ) (otherlv_2= 'renaming' otherlv_3= '{' ( (lv_mappingRules_4_0= rulePackageMapping ) )* otherlv_5= '}' )? ) ;
     public final EObject ruleMerge() throws RecognitionException {
         EObject current = null;
 
@@ -9163,23 +9205,23 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // InternalMelange.g:3282:28: ( (otherlv_0= 'merge' ( ( ruleQualifiedName ) ) (otherlv_2= 'renaming' otherlv_3= '{' ( (lv_mappingRules_4_0= rulePackageMapping ) )* otherlv_5= '}' )? ) )
-            // InternalMelange.g:3283:1: (otherlv_0= 'merge' ( ( ruleQualifiedName ) ) (otherlv_2= 'renaming' otherlv_3= '{' ( (lv_mappingRules_4_0= rulePackageMapping ) )* otherlv_5= '}' )? )
+            // InternalMelange.g:3301:28: ( (otherlv_0= 'merge' ( ( ruleQualifiedName ) ) (otherlv_2= 'renaming' otherlv_3= '{' ( (lv_mappingRules_4_0= rulePackageMapping ) )* otherlv_5= '}' )? ) )
+            // InternalMelange.g:3302:1: (otherlv_0= 'merge' ( ( ruleQualifiedName ) ) (otherlv_2= 'renaming' otherlv_3= '{' ( (lv_mappingRules_4_0= rulePackageMapping ) )* otherlv_5= '}' )? )
             {
-            // InternalMelange.g:3283:1: (otherlv_0= 'merge' ( ( ruleQualifiedName ) ) (otherlv_2= 'renaming' otherlv_3= '{' ( (lv_mappingRules_4_0= rulePackageMapping ) )* otherlv_5= '}' )? )
-            // InternalMelange.g:3283:3: otherlv_0= 'merge' ( ( ruleQualifiedName ) ) (otherlv_2= 'renaming' otherlv_3= '{' ( (lv_mappingRules_4_0= rulePackageMapping ) )* otherlv_5= '}' )?
+            // InternalMelange.g:3302:1: (otherlv_0= 'merge' ( ( ruleQualifiedName ) ) (otherlv_2= 'renaming' otherlv_3= '{' ( (lv_mappingRules_4_0= rulePackageMapping ) )* otherlv_5= '}' )? )
+            // InternalMelange.g:3302:3: otherlv_0= 'merge' ( ( ruleQualifiedName ) ) (otherlv_2= 'renaming' otherlv_3= '{' ( (lv_mappingRules_4_0= rulePackageMapping ) )* otherlv_5= '}' )?
             {
-            otherlv_0=(Token)match(input,59,FOLLOW_3); if (state.failed) return current;
+            otherlv_0=(Token)match(input,60,FOLLOW_3); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_0, grammarAccess.getMergeAccess().getMergeKeyword_0());
                   
             }
-            // InternalMelange.g:3287:1: ( ( ruleQualifiedName ) )
-            // InternalMelange.g:3288:1: ( ruleQualifiedName )
+            // InternalMelange.g:3306:1: ( ( ruleQualifiedName ) )
+            // InternalMelange.g:3307:1: ( ruleQualifiedName )
             {
-            // InternalMelange.g:3288:1: ( ruleQualifiedName )
-            // InternalMelange.g:3289:3: ruleQualifiedName
+            // InternalMelange.g:3307:1: ( ruleQualifiedName )
+            // InternalMelange.g:3308:3: ruleQualifiedName
             {
             if ( state.backtracking==0 ) {
 
@@ -9193,7 +9235,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
               	        newCompositeNode(grammarAccess.getMergeAccess().getTargetLanguageLanguageCrossReference_1_0()); 
               	    
             }
-            pushFollow(FOLLOW_59);
+            pushFollow(FOLLOW_60);
             ruleQualifiedName();
 
             state._fsp--;
@@ -9209,18 +9251,18 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalMelange.g:3302:2: (otherlv_2= 'renaming' otherlv_3= '{' ( (lv_mappingRules_4_0= rulePackageMapping ) )* otherlv_5= '}' )?
+            // InternalMelange.g:3321:2: (otherlv_2= 'renaming' otherlv_3= '{' ( (lv_mappingRules_4_0= rulePackageMapping ) )* otherlv_5= '}' )?
             int alt64=2;
             int LA64_0 = input.LA(1);
 
-            if ( (LA64_0==58) ) {
+            if ( (LA64_0==59) ) {
                 alt64=1;
             }
             switch (alt64) {
                 case 1 :
-                    // InternalMelange.g:3302:4: otherlv_2= 'renaming' otherlv_3= '{' ( (lv_mappingRules_4_0= rulePackageMapping ) )* otherlv_5= '}'
+                    // InternalMelange.g:3321:4: otherlv_2= 'renaming' otherlv_3= '{' ( (lv_mappingRules_4_0= rulePackageMapping ) )* otherlv_5= '}'
                     {
-                    otherlv_2=(Token)match(input,58,FOLLOW_7); if (state.failed) return current;
+                    otherlv_2=(Token)match(input,59,FOLLOW_7); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_2, grammarAccess.getMergeAccess().getRenamingKeyword_2_0());
@@ -9232,7 +9274,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                           	newLeafNode(otherlv_3, grammarAccess.getMergeAccess().getLeftCurlyBracketKeyword_2_1());
                           
                     }
-                    // InternalMelange.g:3310:1: ( (lv_mappingRules_4_0= rulePackageMapping ) )*
+                    // InternalMelange.g:3329:1: ( (lv_mappingRules_4_0= rulePackageMapping ) )*
                     loop63:
                     do {
                         int alt63=2;
@@ -9245,10 +9287,10 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
                         switch (alt63) {
                     	case 1 :
-                    	    // InternalMelange.g:3311:1: (lv_mappingRules_4_0= rulePackageMapping )
+                    	    // InternalMelange.g:3330:1: (lv_mappingRules_4_0= rulePackageMapping )
                     	    {
-                    	    // InternalMelange.g:3311:1: (lv_mappingRules_4_0= rulePackageMapping )
-                    	    // InternalMelange.g:3312:3: lv_mappingRules_4_0= rulePackageMapping
+                    	    // InternalMelange.g:3330:1: (lv_mappingRules_4_0= rulePackageMapping )
+                    	    // InternalMelange.g:3331:3: lv_mappingRules_4_0= rulePackageMapping
                     	    {
                     	    if ( state.backtracking==0 ) {
                     	       
@@ -9320,7 +9362,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleSlice"
-    // InternalMelange.g:3340:1: entryRuleSlice returns [EObject current=null] : iv_ruleSlice= ruleSlice EOF ;
+    // InternalMelange.g:3359:1: entryRuleSlice returns [EObject current=null] : iv_ruleSlice= ruleSlice EOF ;
     public final EObject entryRuleSlice() throws RecognitionException {
         EObject current = null;
 
@@ -9328,8 +9370,8 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalMelange.g:3341:2: (iv_ruleSlice= ruleSlice EOF )
-            // InternalMelange.g:3342:2: iv_ruleSlice= ruleSlice EOF
+            // InternalMelange.g:3360:2: (iv_ruleSlice= ruleSlice EOF )
+            // InternalMelange.g:3361:2: iv_ruleSlice= ruleSlice EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getSliceRule()); 
@@ -9360,7 +9402,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleSlice"
-    // InternalMelange.g:3349:1: ruleSlice returns [EObject current=null] : (otherlv_0= 'slice' ( ( ruleQualifiedName ) ) otherlv_2= 'on' otherlv_3= '[' ( (lv_roots_4_0= RULE_STRING ) ) (otherlv_5= ',' ( (lv_roots_6_0= RULE_STRING ) ) )* otherlv_7= ']' (otherlv_8= 'renaming' otherlv_9= '{' ( (lv_mappingRules_10_0= rulePackageMapping ) )* otherlv_11= '}' )? ) ;
+    // InternalMelange.g:3368:1: ruleSlice returns [EObject current=null] : (otherlv_0= 'slice' ( ( ruleQualifiedName ) ) otherlv_2= 'on' otherlv_3= '[' ( (lv_roots_4_0= RULE_STRING ) ) (otherlv_5= ',' ( (lv_roots_6_0= RULE_STRING ) ) )* otherlv_7= ']' (otherlv_8= 'renaming' otherlv_9= '{' ( (lv_mappingRules_10_0= rulePackageMapping ) )* otherlv_11= '}' )? ) ;
     public final EObject ruleSlice() throws RecognitionException {
         EObject current = null;
 
@@ -9380,23 +9422,23 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // InternalMelange.g:3352:28: ( (otherlv_0= 'slice' ( ( ruleQualifiedName ) ) otherlv_2= 'on' otherlv_3= '[' ( (lv_roots_4_0= RULE_STRING ) ) (otherlv_5= ',' ( (lv_roots_6_0= RULE_STRING ) ) )* otherlv_7= ']' (otherlv_8= 'renaming' otherlv_9= '{' ( (lv_mappingRules_10_0= rulePackageMapping ) )* otherlv_11= '}' )? ) )
-            // InternalMelange.g:3353:1: (otherlv_0= 'slice' ( ( ruleQualifiedName ) ) otherlv_2= 'on' otherlv_3= '[' ( (lv_roots_4_0= RULE_STRING ) ) (otherlv_5= ',' ( (lv_roots_6_0= RULE_STRING ) ) )* otherlv_7= ']' (otherlv_8= 'renaming' otherlv_9= '{' ( (lv_mappingRules_10_0= rulePackageMapping ) )* otherlv_11= '}' )? )
+            // InternalMelange.g:3371:28: ( (otherlv_0= 'slice' ( ( ruleQualifiedName ) ) otherlv_2= 'on' otherlv_3= '[' ( (lv_roots_4_0= RULE_STRING ) ) (otherlv_5= ',' ( (lv_roots_6_0= RULE_STRING ) ) )* otherlv_7= ']' (otherlv_8= 'renaming' otherlv_9= '{' ( (lv_mappingRules_10_0= rulePackageMapping ) )* otherlv_11= '}' )? ) )
+            // InternalMelange.g:3372:1: (otherlv_0= 'slice' ( ( ruleQualifiedName ) ) otherlv_2= 'on' otherlv_3= '[' ( (lv_roots_4_0= RULE_STRING ) ) (otherlv_5= ',' ( (lv_roots_6_0= RULE_STRING ) ) )* otherlv_7= ']' (otherlv_8= 'renaming' otherlv_9= '{' ( (lv_mappingRules_10_0= rulePackageMapping ) )* otherlv_11= '}' )? )
             {
-            // InternalMelange.g:3353:1: (otherlv_0= 'slice' ( ( ruleQualifiedName ) ) otherlv_2= 'on' otherlv_3= '[' ( (lv_roots_4_0= RULE_STRING ) ) (otherlv_5= ',' ( (lv_roots_6_0= RULE_STRING ) ) )* otherlv_7= ']' (otherlv_8= 'renaming' otherlv_9= '{' ( (lv_mappingRules_10_0= rulePackageMapping ) )* otherlv_11= '}' )? )
-            // InternalMelange.g:3353:3: otherlv_0= 'slice' ( ( ruleQualifiedName ) ) otherlv_2= 'on' otherlv_3= '[' ( (lv_roots_4_0= RULE_STRING ) ) (otherlv_5= ',' ( (lv_roots_6_0= RULE_STRING ) ) )* otherlv_7= ']' (otherlv_8= 'renaming' otherlv_9= '{' ( (lv_mappingRules_10_0= rulePackageMapping ) )* otherlv_11= '}' )?
+            // InternalMelange.g:3372:1: (otherlv_0= 'slice' ( ( ruleQualifiedName ) ) otherlv_2= 'on' otherlv_3= '[' ( (lv_roots_4_0= RULE_STRING ) ) (otherlv_5= ',' ( (lv_roots_6_0= RULE_STRING ) ) )* otherlv_7= ']' (otherlv_8= 'renaming' otherlv_9= '{' ( (lv_mappingRules_10_0= rulePackageMapping ) )* otherlv_11= '}' )? )
+            // InternalMelange.g:3372:3: otherlv_0= 'slice' ( ( ruleQualifiedName ) ) otherlv_2= 'on' otherlv_3= '[' ( (lv_roots_4_0= RULE_STRING ) ) (otherlv_5= ',' ( (lv_roots_6_0= RULE_STRING ) ) )* otherlv_7= ']' (otherlv_8= 'renaming' otherlv_9= '{' ( (lv_mappingRules_10_0= rulePackageMapping ) )* otherlv_11= '}' )?
             {
-            otherlv_0=(Token)match(input,60,FOLLOW_3); if (state.failed) return current;
+            otherlv_0=(Token)match(input,61,FOLLOW_3); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_0, grammarAccess.getSliceAccess().getSliceKeyword_0());
                   
             }
-            // InternalMelange.g:3357:1: ( ( ruleQualifiedName ) )
-            // InternalMelange.g:3358:1: ( ruleQualifiedName )
+            // InternalMelange.g:3376:1: ( ( ruleQualifiedName ) )
+            // InternalMelange.g:3377:1: ( ruleQualifiedName )
             {
-            // InternalMelange.g:3358:1: ( ruleQualifiedName )
-            // InternalMelange.g:3359:3: ruleQualifiedName
+            // InternalMelange.g:3377:1: ( ruleQualifiedName )
+            // InternalMelange.g:3378:3: ruleQualifiedName
             {
             if ( state.backtracking==0 ) {
 
@@ -9410,7 +9452,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
               	        newCompositeNode(grammarAccess.getSliceAccess().getTargetLanguageLanguageCrossReference_1_0()); 
               	    
             }
-            pushFollow(FOLLOW_60);
+            pushFollow(FOLLOW_61);
             ruleQualifiedName();
 
             state._fsp--;
@@ -9426,25 +9468,25 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_2=(Token)match(input,61,FOLLOW_61); if (state.failed) return current;
+            otherlv_2=(Token)match(input,62,FOLLOW_62); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_2, grammarAccess.getSliceAccess().getOnKeyword_2());
                   
             }
-            otherlv_3=(Token)match(input,62,FOLLOW_31); if (state.failed) return current;
+            otherlv_3=(Token)match(input,63,FOLLOW_31); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_3, grammarAccess.getSliceAccess().getLeftSquareBracketKeyword_3());
                   
             }
-            // InternalMelange.g:3380:1: ( (lv_roots_4_0= RULE_STRING ) )
-            // InternalMelange.g:3381:1: (lv_roots_4_0= RULE_STRING )
+            // InternalMelange.g:3399:1: ( (lv_roots_4_0= RULE_STRING ) )
+            // InternalMelange.g:3400:1: (lv_roots_4_0= RULE_STRING )
             {
-            // InternalMelange.g:3381:1: (lv_roots_4_0= RULE_STRING )
-            // InternalMelange.g:3382:3: lv_roots_4_0= RULE_STRING
+            // InternalMelange.g:3400:1: (lv_roots_4_0= RULE_STRING )
+            // InternalMelange.g:3401:3: lv_roots_4_0= RULE_STRING
             {
-            lv_roots_4_0=(Token)match(input,RULE_STRING,FOLLOW_62); if (state.failed) return current;
+            lv_roots_4_0=(Token)match(input,RULE_STRING,FOLLOW_63); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(lv_roots_4_0, grammarAccess.getSliceAccess().getRootsSTRINGTerminalRuleCall_4_0()); 
@@ -9468,7 +9510,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalMelange.g:3398:2: (otherlv_5= ',' ( (lv_roots_6_0= RULE_STRING ) ) )*
+            // InternalMelange.g:3417:2: (otherlv_5= ',' ( (lv_roots_6_0= RULE_STRING ) ) )*
             loop65:
             do {
                 int alt65=2;
@@ -9481,7 +9523,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
                 switch (alt65) {
             	case 1 :
-            	    // InternalMelange.g:3398:4: otherlv_5= ',' ( (lv_roots_6_0= RULE_STRING ) )
+            	    // InternalMelange.g:3417:4: otherlv_5= ',' ( (lv_roots_6_0= RULE_STRING ) )
             	    {
             	    otherlv_5=(Token)match(input,33,FOLLOW_31); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
@@ -9489,13 +9531,13 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
             	          	newLeafNode(otherlv_5, grammarAccess.getSliceAccess().getCommaKeyword_5_0());
             	          
             	    }
-            	    // InternalMelange.g:3402:1: ( (lv_roots_6_0= RULE_STRING ) )
-            	    // InternalMelange.g:3403:1: (lv_roots_6_0= RULE_STRING )
+            	    // InternalMelange.g:3421:1: ( (lv_roots_6_0= RULE_STRING ) )
+            	    // InternalMelange.g:3422:1: (lv_roots_6_0= RULE_STRING )
             	    {
-            	    // InternalMelange.g:3403:1: (lv_roots_6_0= RULE_STRING )
-            	    // InternalMelange.g:3404:3: lv_roots_6_0= RULE_STRING
+            	    // InternalMelange.g:3422:1: (lv_roots_6_0= RULE_STRING )
+            	    // InternalMelange.g:3423:3: lv_roots_6_0= RULE_STRING
             	    {
-            	    lv_roots_6_0=(Token)match(input,RULE_STRING,FOLLOW_62); if (state.failed) return current;
+            	    lv_roots_6_0=(Token)match(input,RULE_STRING,FOLLOW_63); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
             	      			newLeafNode(lv_roots_6_0, grammarAccess.getSliceAccess().getRootsSTRINGTerminalRuleCall_5_1_0()); 
@@ -9528,24 +9570,24 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                 }
             } while (true);
 
-            otherlv_7=(Token)match(input,63,FOLLOW_59); if (state.failed) return current;
+            otherlv_7=(Token)match(input,64,FOLLOW_60); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_7, grammarAccess.getSliceAccess().getRightSquareBracketKeyword_6());
                   
             }
-            // InternalMelange.g:3424:1: (otherlv_8= 'renaming' otherlv_9= '{' ( (lv_mappingRules_10_0= rulePackageMapping ) )* otherlv_11= '}' )?
+            // InternalMelange.g:3443:1: (otherlv_8= 'renaming' otherlv_9= '{' ( (lv_mappingRules_10_0= rulePackageMapping ) )* otherlv_11= '}' )?
             int alt67=2;
             int LA67_0 = input.LA(1);
 
-            if ( (LA67_0==58) ) {
+            if ( (LA67_0==59) ) {
                 alt67=1;
             }
             switch (alt67) {
                 case 1 :
-                    // InternalMelange.g:3424:3: otherlv_8= 'renaming' otherlv_9= '{' ( (lv_mappingRules_10_0= rulePackageMapping ) )* otherlv_11= '}'
+                    // InternalMelange.g:3443:3: otherlv_8= 'renaming' otherlv_9= '{' ( (lv_mappingRules_10_0= rulePackageMapping ) )* otherlv_11= '}'
                     {
-                    otherlv_8=(Token)match(input,58,FOLLOW_7); if (state.failed) return current;
+                    otherlv_8=(Token)match(input,59,FOLLOW_7); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_8, grammarAccess.getSliceAccess().getRenamingKeyword_7_0());
@@ -9557,7 +9599,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                           	newLeafNode(otherlv_9, grammarAccess.getSliceAccess().getLeftCurlyBracketKeyword_7_1());
                           
                     }
-                    // InternalMelange.g:3432:1: ( (lv_mappingRules_10_0= rulePackageMapping ) )*
+                    // InternalMelange.g:3451:1: ( (lv_mappingRules_10_0= rulePackageMapping ) )*
                     loop66:
                     do {
                         int alt66=2;
@@ -9570,10 +9612,10 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
                         switch (alt66) {
                     	case 1 :
-                    	    // InternalMelange.g:3433:1: (lv_mappingRules_10_0= rulePackageMapping )
+                    	    // InternalMelange.g:3452:1: (lv_mappingRules_10_0= rulePackageMapping )
                     	    {
-                    	    // InternalMelange.g:3433:1: (lv_mappingRules_10_0= rulePackageMapping )
-                    	    // InternalMelange.g:3434:3: lv_mappingRules_10_0= rulePackageMapping
+                    	    // InternalMelange.g:3452:1: (lv_mappingRules_10_0= rulePackageMapping )
+                    	    // InternalMelange.g:3453:3: lv_mappingRules_10_0= rulePackageMapping
                     	    {
                     	    if ( state.backtracking==0 ) {
                     	       
@@ -9645,7 +9687,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleInherit"
-    // InternalMelange.g:3462:1: entryRuleInherit returns [EObject current=null] : iv_ruleInherit= ruleInherit EOF ;
+    // InternalMelange.g:3481:1: entryRuleInherit returns [EObject current=null] : iv_ruleInherit= ruleInherit EOF ;
     public final EObject entryRuleInherit() throws RecognitionException {
         EObject current = null;
 
@@ -9653,8 +9695,8 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalMelange.g:3463:2: (iv_ruleInherit= ruleInherit EOF )
-            // InternalMelange.g:3464:2: iv_ruleInherit= ruleInherit EOF
+            // InternalMelange.g:3482:2: (iv_ruleInherit= ruleInherit EOF )
+            // InternalMelange.g:3483:2: iv_ruleInherit= ruleInherit EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getInheritRule()); 
@@ -9685,21 +9727,21 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleInherit"
-    // InternalMelange.g:3471:1: ruleInherit returns [EObject current=null] : ( ( ruleQualifiedName ) ) ;
+    // InternalMelange.g:3490:1: ruleInherit returns [EObject current=null] : ( ( ruleQualifiedName ) ) ;
     public final EObject ruleInherit() throws RecognitionException {
         EObject current = null;
 
          enterRule(); 
             
         try {
-            // InternalMelange.g:3474:28: ( ( ( ruleQualifiedName ) ) )
-            // InternalMelange.g:3475:1: ( ( ruleQualifiedName ) )
+            // InternalMelange.g:3493:28: ( ( ( ruleQualifiedName ) ) )
+            // InternalMelange.g:3494:1: ( ( ruleQualifiedName ) )
             {
-            // InternalMelange.g:3475:1: ( ( ruleQualifiedName ) )
-            // InternalMelange.g:3476:1: ( ruleQualifiedName )
+            // InternalMelange.g:3494:1: ( ( ruleQualifiedName ) )
+            // InternalMelange.g:3495:1: ( ruleQualifiedName )
             {
-            // InternalMelange.g:3476:1: ( ruleQualifiedName )
-            // InternalMelange.g:3477:3: ruleQualifiedName
+            // InternalMelange.g:3495:1: ( ruleQualifiedName )
+            // InternalMelange.g:3496:3: ruleQualifiedName
             {
             if ( state.backtracking==0 ) {
 
@@ -9749,7 +9791,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleWeave"
-    // InternalMelange.g:3498:1: entryRuleWeave returns [EObject current=null] : iv_ruleWeave= ruleWeave EOF ;
+    // InternalMelange.g:3517:1: entryRuleWeave returns [EObject current=null] : iv_ruleWeave= ruleWeave EOF ;
     public final EObject entryRuleWeave() throws RecognitionException {
         EObject current = null;
 
@@ -9757,8 +9799,8 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalMelange.g:3499:2: (iv_ruleWeave= ruleWeave EOF )
-            // InternalMelange.g:3500:2: iv_ruleWeave= ruleWeave EOF
+            // InternalMelange.g:3518:2: (iv_ruleWeave= ruleWeave EOF )
+            // InternalMelange.g:3519:2: iv_ruleWeave= ruleWeave EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getWeaveRule()); 
@@ -9789,7 +9831,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleWeave"
-    // InternalMelange.g:3507:1: ruleWeave returns [EObject current=null] : (this_AspectTypeRef_0= ruleAspectTypeRef | this_AspectWildcard_1= ruleAspectWildcard ) ;
+    // InternalMelange.g:3526:1: ruleWeave returns [EObject current=null] : (this_AspectTypeRef_0= ruleAspectTypeRef | this_AspectWildcard_1= ruleAspectWildcard ) ;
     public final EObject ruleWeave() throws RecognitionException {
         EObject current = null;
 
@@ -9801,15 +9843,15 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // InternalMelange.g:3510:28: ( (this_AspectTypeRef_0= ruleAspectTypeRef | this_AspectWildcard_1= ruleAspectWildcard ) )
-            // InternalMelange.g:3511:1: (this_AspectTypeRef_0= ruleAspectTypeRef | this_AspectWildcard_1= ruleAspectWildcard )
+            // InternalMelange.g:3529:28: ( (this_AspectTypeRef_0= ruleAspectTypeRef | this_AspectWildcard_1= ruleAspectWildcard ) )
+            // InternalMelange.g:3530:1: (this_AspectTypeRef_0= ruleAspectTypeRef | this_AspectWildcard_1= ruleAspectWildcard )
             {
-            // InternalMelange.g:3511:1: (this_AspectTypeRef_0= ruleAspectTypeRef | this_AspectWildcard_1= ruleAspectWildcard )
+            // InternalMelange.g:3530:1: (this_AspectTypeRef_0= ruleAspectTypeRef | this_AspectWildcard_1= ruleAspectWildcard )
             int alt68=2;
             alt68 = dfa68.predict(input);
             switch (alt68) {
                 case 1 :
-                    // InternalMelange.g:3512:5: this_AspectTypeRef_0= ruleAspectTypeRef
+                    // InternalMelange.g:3531:5: this_AspectTypeRef_0= ruleAspectTypeRef
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -9831,7 +9873,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalMelange.g:3522:5: this_AspectWildcard_1= ruleAspectWildcard
+                    // InternalMelange.g:3541:5: this_AspectWildcard_1= ruleAspectWildcard
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -9875,7 +9917,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleAspectTypeRef"
-    // InternalMelange.g:3538:1: entryRuleAspectTypeRef returns [EObject current=null] : iv_ruleAspectTypeRef= ruleAspectTypeRef EOF ;
+    // InternalMelange.g:3557:1: entryRuleAspectTypeRef returns [EObject current=null] : iv_ruleAspectTypeRef= ruleAspectTypeRef EOF ;
     public final EObject entryRuleAspectTypeRef() throws RecognitionException {
         EObject current = null;
 
@@ -9883,8 +9925,8 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalMelange.g:3539:2: (iv_ruleAspectTypeRef= ruleAspectTypeRef EOF )
-            // InternalMelange.g:3540:2: iv_ruleAspectTypeRef= ruleAspectTypeRef EOF
+            // InternalMelange.g:3558:2: (iv_ruleAspectTypeRef= ruleAspectTypeRef EOF )
+            // InternalMelange.g:3559:2: iv_ruleAspectTypeRef= ruleAspectTypeRef EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getAspectTypeRefRule()); 
@@ -9915,7 +9957,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleAspectTypeRef"
-    // InternalMelange.g:3547:1: ruleAspectTypeRef returns [EObject current=null] : (otherlv_0= 'with' ( (lv_aspectTypeRef_1_0= ruleJvmTypeReference ) ) ) ;
+    // InternalMelange.g:3566:1: ruleAspectTypeRef returns [EObject current=null] : (otherlv_0= 'with' ( (lv_aspectTypeRef_1_0= ruleJvmTypeReference ) ) ) ;
     public final EObject ruleAspectTypeRef() throws RecognitionException {
         EObject current = null;
 
@@ -9926,23 +9968,23 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // InternalMelange.g:3550:28: ( (otherlv_0= 'with' ( (lv_aspectTypeRef_1_0= ruleJvmTypeReference ) ) ) )
-            // InternalMelange.g:3551:1: (otherlv_0= 'with' ( (lv_aspectTypeRef_1_0= ruleJvmTypeReference ) ) )
+            // InternalMelange.g:3569:28: ( (otherlv_0= 'with' ( (lv_aspectTypeRef_1_0= ruleJvmTypeReference ) ) ) )
+            // InternalMelange.g:3570:1: (otherlv_0= 'with' ( (lv_aspectTypeRef_1_0= ruleJvmTypeReference ) ) )
             {
-            // InternalMelange.g:3551:1: (otherlv_0= 'with' ( (lv_aspectTypeRef_1_0= ruleJvmTypeReference ) ) )
-            // InternalMelange.g:3551:3: otherlv_0= 'with' ( (lv_aspectTypeRef_1_0= ruleJvmTypeReference ) )
+            // InternalMelange.g:3570:1: (otherlv_0= 'with' ( (lv_aspectTypeRef_1_0= ruleJvmTypeReference ) ) )
+            // InternalMelange.g:3570:3: otherlv_0= 'with' ( (lv_aspectTypeRef_1_0= ruleJvmTypeReference ) )
             {
-            otherlv_0=(Token)match(input,64,FOLLOW_33); if (state.failed) return current;
+            otherlv_0=(Token)match(input,65,FOLLOW_33); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_0, grammarAccess.getAspectTypeRefAccess().getWithKeyword_0());
                   
             }
-            // InternalMelange.g:3555:1: ( (lv_aspectTypeRef_1_0= ruleJvmTypeReference ) )
-            // InternalMelange.g:3556:1: (lv_aspectTypeRef_1_0= ruleJvmTypeReference )
+            // InternalMelange.g:3574:1: ( (lv_aspectTypeRef_1_0= ruleJvmTypeReference ) )
+            // InternalMelange.g:3575:1: (lv_aspectTypeRef_1_0= ruleJvmTypeReference )
             {
-            // InternalMelange.g:3556:1: (lv_aspectTypeRef_1_0= ruleJvmTypeReference )
-            // InternalMelange.g:3557:3: lv_aspectTypeRef_1_0= ruleJvmTypeReference
+            // InternalMelange.g:3575:1: (lv_aspectTypeRef_1_0= ruleJvmTypeReference )
+            // InternalMelange.g:3576:3: lv_aspectTypeRef_1_0= ruleJvmTypeReference
             {
             if ( state.backtracking==0 ) {
                
@@ -9996,7 +10038,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleAspectWildcard"
-    // InternalMelange.g:3581:1: entryRuleAspectWildcard returns [EObject current=null] : iv_ruleAspectWildcard= ruleAspectWildcard EOF ;
+    // InternalMelange.g:3600:1: entryRuleAspectWildcard returns [EObject current=null] : iv_ruleAspectWildcard= ruleAspectWildcard EOF ;
     public final EObject entryRuleAspectWildcard() throws RecognitionException {
         EObject current = null;
 
@@ -10004,8 +10046,8 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalMelange.g:3582:2: (iv_ruleAspectWildcard= ruleAspectWildcard EOF )
-            // InternalMelange.g:3583:2: iv_ruleAspectWildcard= ruleAspectWildcard EOF
+            // InternalMelange.g:3601:2: (iv_ruleAspectWildcard= ruleAspectWildcard EOF )
+            // InternalMelange.g:3602:2: iv_ruleAspectWildcard= ruleAspectWildcard EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getAspectWildcardRule()); 
@@ -10036,7 +10078,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleAspectWildcard"
-    // InternalMelange.g:3590:1: ruleAspectWildcard returns [EObject current=null] : (otherlv_0= 'with' ( (lv_aspectWildcardImport_1_0= ruleQualifiedNameWithWildcard ) ) ) ;
+    // InternalMelange.g:3609:1: ruleAspectWildcard returns [EObject current=null] : (otherlv_0= 'with' ( (lv_aspectWildcardImport_1_0= ruleQualifiedNameWithWildcard ) ) ) ;
     public final EObject ruleAspectWildcard() throws RecognitionException {
         EObject current = null;
 
@@ -10047,23 +10089,23 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // InternalMelange.g:3593:28: ( (otherlv_0= 'with' ( (lv_aspectWildcardImport_1_0= ruleQualifiedNameWithWildcard ) ) ) )
-            // InternalMelange.g:3594:1: (otherlv_0= 'with' ( (lv_aspectWildcardImport_1_0= ruleQualifiedNameWithWildcard ) ) )
+            // InternalMelange.g:3612:28: ( (otherlv_0= 'with' ( (lv_aspectWildcardImport_1_0= ruleQualifiedNameWithWildcard ) ) ) )
+            // InternalMelange.g:3613:1: (otherlv_0= 'with' ( (lv_aspectWildcardImport_1_0= ruleQualifiedNameWithWildcard ) ) )
             {
-            // InternalMelange.g:3594:1: (otherlv_0= 'with' ( (lv_aspectWildcardImport_1_0= ruleQualifiedNameWithWildcard ) ) )
-            // InternalMelange.g:3594:3: otherlv_0= 'with' ( (lv_aspectWildcardImport_1_0= ruleQualifiedNameWithWildcard ) )
+            // InternalMelange.g:3613:1: (otherlv_0= 'with' ( (lv_aspectWildcardImport_1_0= ruleQualifiedNameWithWildcard ) ) )
+            // InternalMelange.g:3613:3: otherlv_0= 'with' ( (lv_aspectWildcardImport_1_0= ruleQualifiedNameWithWildcard ) )
             {
-            otherlv_0=(Token)match(input,64,FOLLOW_3); if (state.failed) return current;
+            otherlv_0=(Token)match(input,65,FOLLOW_3); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_0, grammarAccess.getAspectWildcardAccess().getWithKeyword_0());
                   
             }
-            // InternalMelange.g:3598:1: ( (lv_aspectWildcardImport_1_0= ruleQualifiedNameWithWildcard ) )
-            // InternalMelange.g:3599:1: (lv_aspectWildcardImport_1_0= ruleQualifiedNameWithWildcard )
+            // InternalMelange.g:3617:1: ( (lv_aspectWildcardImport_1_0= ruleQualifiedNameWithWildcard ) )
+            // InternalMelange.g:3618:1: (lv_aspectWildcardImport_1_0= ruleQualifiedNameWithWildcard )
             {
-            // InternalMelange.g:3599:1: (lv_aspectWildcardImport_1_0= ruleQualifiedNameWithWildcard )
-            // InternalMelange.g:3600:3: lv_aspectWildcardImport_1_0= ruleQualifiedNameWithWildcard
+            // InternalMelange.g:3618:1: (lv_aspectWildcardImport_1_0= ruleQualifiedNameWithWildcard )
+            // InternalMelange.g:3619:3: lv_aspectWildcardImport_1_0= ruleQualifiedNameWithWildcard
             {
             if ( state.backtracking==0 ) {
                
@@ -10117,7 +10159,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleXExpression"
-    // InternalMelange.g:3624:1: entryRuleXExpression returns [EObject current=null] : iv_ruleXExpression= ruleXExpression EOF ;
+    // InternalMelange.g:3643:1: entryRuleXExpression returns [EObject current=null] : iv_ruleXExpression= ruleXExpression EOF ;
     public final EObject entryRuleXExpression() throws RecognitionException {
         EObject current = null;
 
@@ -10125,8 +10167,8 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalMelange.g:3625:2: (iv_ruleXExpression= ruleXExpression EOF )
-            // InternalMelange.g:3626:2: iv_ruleXExpression= ruleXExpression EOF
+            // InternalMelange.g:3644:2: (iv_ruleXExpression= ruleXExpression EOF )
+            // InternalMelange.g:3645:2: iv_ruleXExpression= ruleXExpression EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getXExpressionRule()); 
@@ -10157,7 +10199,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleXExpression"
-    // InternalMelange.g:3633:1: ruleXExpression returns [EObject current=null] : this_XAssignment_0= ruleXAssignment ;
+    // InternalMelange.g:3652:1: ruleXExpression returns [EObject current=null] : this_XAssignment_0= ruleXAssignment ;
     public final EObject ruleXExpression() throws RecognitionException {
         EObject current = null;
 
@@ -10167,8 +10209,8 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // InternalMelange.g:3636:28: (this_XAssignment_0= ruleXAssignment )
-            // InternalMelange.g:3638:5: this_XAssignment_0= ruleXAssignment
+            // InternalMelange.g:3655:28: (this_XAssignment_0= ruleXAssignment )
+            // InternalMelange.g:3657:5: this_XAssignment_0= ruleXAssignment
             {
             if ( state.backtracking==0 ) {
                
@@ -10206,7 +10248,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleXAssignment"
-    // InternalMelange.g:3654:1: entryRuleXAssignment returns [EObject current=null] : iv_ruleXAssignment= ruleXAssignment EOF ;
+    // InternalMelange.g:3673:1: entryRuleXAssignment returns [EObject current=null] : iv_ruleXAssignment= ruleXAssignment EOF ;
     public final EObject entryRuleXAssignment() throws RecognitionException {
         EObject current = null;
 
@@ -10214,8 +10256,8 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalMelange.g:3655:2: (iv_ruleXAssignment= ruleXAssignment EOF )
-            // InternalMelange.g:3656:2: iv_ruleXAssignment= ruleXAssignment EOF
+            // InternalMelange.g:3674:2: (iv_ruleXAssignment= ruleXAssignment EOF )
+            // InternalMelange.g:3675:2: iv_ruleXAssignment= ruleXAssignment EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getXAssignmentRule()); 
@@ -10246,7 +10288,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleXAssignment"
-    // InternalMelange.g:3663:1: ruleXAssignment returns [EObject current=null] : ( ( () ( ( ruleFeatureCallID ) ) ruleOpSingleAssign ( (lv_value_3_0= ruleXAssignment ) ) ) | (this_XOrExpression_4= ruleXOrExpression ( ( ( ( () ( ( ruleOpMultiAssign ) ) ) )=> ( () ( ( ruleOpMultiAssign ) ) ) ) ( (lv_rightOperand_7_0= ruleXAssignment ) ) )? ) ) ;
+    // InternalMelange.g:3682:1: ruleXAssignment returns [EObject current=null] : ( ( () ( ( ruleFeatureCallID ) ) ruleOpSingleAssign ( (lv_value_3_0= ruleXAssignment ) ) ) | (this_XOrExpression_4= ruleXOrExpression ( ( ( ( () ( ( ruleOpMultiAssign ) ) ) )=> ( () ( ( ruleOpMultiAssign ) ) ) ) ( (lv_rightOperand_7_0= ruleXAssignment ) ) )? ) ) ;
     public final EObject ruleXAssignment() throws RecognitionException {
         EObject current = null;
 
@@ -10260,10 +10302,10 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // InternalMelange.g:3666:28: ( ( ( () ( ( ruleFeatureCallID ) ) ruleOpSingleAssign ( (lv_value_3_0= ruleXAssignment ) ) ) | (this_XOrExpression_4= ruleXOrExpression ( ( ( ( () ( ( ruleOpMultiAssign ) ) ) )=> ( () ( ( ruleOpMultiAssign ) ) ) ) ( (lv_rightOperand_7_0= ruleXAssignment ) ) )? ) ) )
-            // InternalMelange.g:3667:1: ( ( () ( ( ruleFeatureCallID ) ) ruleOpSingleAssign ( (lv_value_3_0= ruleXAssignment ) ) ) | (this_XOrExpression_4= ruleXOrExpression ( ( ( ( () ( ( ruleOpMultiAssign ) ) ) )=> ( () ( ( ruleOpMultiAssign ) ) ) ) ( (lv_rightOperand_7_0= ruleXAssignment ) ) )? ) )
+            // InternalMelange.g:3685:28: ( ( ( () ( ( ruleFeatureCallID ) ) ruleOpSingleAssign ( (lv_value_3_0= ruleXAssignment ) ) ) | (this_XOrExpression_4= ruleXOrExpression ( ( ( ( () ( ( ruleOpMultiAssign ) ) ) )=> ( () ( ( ruleOpMultiAssign ) ) ) ) ( (lv_rightOperand_7_0= ruleXAssignment ) ) )? ) ) )
+            // InternalMelange.g:3686:1: ( ( () ( ( ruleFeatureCallID ) ) ruleOpSingleAssign ( (lv_value_3_0= ruleXAssignment ) ) ) | (this_XOrExpression_4= ruleXOrExpression ( ( ( ( () ( ( ruleOpMultiAssign ) ) ) )=> ( () ( ( ruleOpMultiAssign ) ) ) ) ( (lv_rightOperand_7_0= ruleXAssignment ) ) )? ) )
             {
-            // InternalMelange.g:3667:1: ( ( () ( ( ruleFeatureCallID ) ) ruleOpSingleAssign ( (lv_value_3_0= ruleXAssignment ) ) ) | (this_XOrExpression_4= ruleXOrExpression ( ( ( ( () ( ( ruleOpMultiAssign ) ) ) )=> ( () ( ( ruleOpMultiAssign ) ) ) ) ( (lv_rightOperand_7_0= ruleXAssignment ) ) )? ) )
+            // InternalMelange.g:3686:1: ( ( () ( ( ruleFeatureCallID ) ) ruleOpSingleAssign ( (lv_value_3_0= ruleXAssignment ) ) ) | (this_XOrExpression_4= ruleXOrExpression ( ( ( ( () ( ( ruleOpMultiAssign ) ) ) )=> ( () ( ( ruleOpMultiAssign ) ) ) ) ( (lv_rightOperand_7_0= ruleXAssignment ) ) )? ) )
             int alt70=2;
             switch ( input.LA(1) ) {
             case RULE_ID:
@@ -10273,7 +10315,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                 if ( (LA70_1==18) ) {
                     alt70=1;
                 }
-                else if ( (LA70_1==EOF||(LA70_1>=RULE_ID && LA70_1<=RULE_DECIMAL)||LA70_1==16||(LA70_1>=19 && LA70_1<=20)||(LA70_1>=23 && LA70_1<=25)||LA70_1==33||LA70_1==46||LA70_1==56||(LA70_1>=62 && LA70_1<=63)||(LA70_1>=65 && LA70_1<=123)) ) {
+                else if ( (LA70_1==EOF||(LA70_1>=RULE_ID && LA70_1<=RULE_DECIMAL)||LA70_1==16||(LA70_1>=19 && LA70_1<=20)||(LA70_1>=23 && LA70_1<=25)||LA70_1==33||LA70_1==46||LA70_1==56||(LA70_1>=63 && LA70_1<=64)||(LA70_1>=66 && LA70_1<=124)) ) {
                     alt70=2;
                 }
                 else {
@@ -10285,14 +10327,14 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                 }
                 }
                 break;
-            case 108:
+            case 109:
                 {
                 int LA70_2 = input.LA(2);
 
                 if ( (LA70_2==18) ) {
                     alt70=1;
                 }
-                else if ( (LA70_2==EOF||(LA70_2>=RULE_ID && LA70_2<=RULE_DECIMAL)||LA70_2==16||(LA70_2>=19 && LA70_2<=20)||(LA70_2>=23 && LA70_2<=25)||LA70_2==33||LA70_2==46||LA70_2==56||(LA70_2>=62 && LA70_2<=63)||(LA70_2>=65 && LA70_2<=123)) ) {
+                else if ( (LA70_2==EOF||(LA70_2>=RULE_ID && LA70_2<=RULE_DECIMAL)||LA70_2==16||(LA70_2>=19 && LA70_2<=20)||(LA70_2>=23 && LA70_2<=25)||LA70_2==33||LA70_2==46||LA70_2==56||(LA70_2>=63 && LA70_2<=64)||(LA70_2>=66 && LA70_2<=124)) ) {
                     alt70=2;
                 }
                 else {
@@ -10304,14 +10346,14 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                 }
                 }
                 break;
-            case 109:
+            case 110:
                 {
                 int LA70_3 = input.LA(2);
 
                 if ( (LA70_3==18) ) {
                     alt70=1;
                 }
-                else if ( (LA70_3==EOF||(LA70_3>=RULE_ID && LA70_3<=RULE_DECIMAL)||LA70_3==16||(LA70_3>=19 && LA70_3<=20)||(LA70_3>=23 && LA70_3<=25)||LA70_3==33||LA70_3==46||LA70_3==56||(LA70_3>=62 && LA70_3<=63)||(LA70_3>=65 && LA70_3<=123)) ) {
+                else if ( (LA70_3==EOF||(LA70_3>=RULE_ID && LA70_3<=RULE_DECIMAL)||LA70_3==16||(LA70_3>=19 && LA70_3<=20)||(LA70_3>=23 && LA70_3<=25)||LA70_3==33||LA70_3==46||LA70_3==56||(LA70_3>=63 && LA70_3<=64)||(LA70_3>=66 && LA70_3<=124)) ) {
                     alt70=2;
                 }
                 else {
@@ -10323,14 +10365,14 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                 }
                 }
                 break;
-            case 110:
+            case 111:
                 {
                 int LA70_4 = input.LA(2);
 
                 if ( (LA70_4==18) ) {
                     alt70=1;
                 }
-                else if ( (LA70_4==EOF||(LA70_4>=RULE_ID && LA70_4<=RULE_DECIMAL)||LA70_4==16||(LA70_4>=19 && LA70_4<=20)||(LA70_4>=23 && LA70_4<=25)||LA70_4==33||LA70_4==46||LA70_4==56||(LA70_4>=62 && LA70_4<=63)||(LA70_4>=65 && LA70_4<=123)) ) {
+                else if ( (LA70_4==EOF||(LA70_4>=RULE_ID && LA70_4<=RULE_DECIMAL)||LA70_4==16||(LA70_4>=19 && LA70_4<=20)||(LA70_4>=23 && LA70_4<=25)||LA70_4==33||LA70_4==46||LA70_4==56||(LA70_4>=63 && LA70_4<=64)||(LA70_4>=66 && LA70_4<=124)) ) {
                     alt70=2;
                 }
                 else {
@@ -10342,14 +10384,14 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                 }
                 }
                 break;
-            case 111:
+            case 112:
                 {
                 int LA70_5 = input.LA(2);
 
                 if ( (LA70_5==18) ) {
                     alt70=1;
                 }
-                else if ( (LA70_5==EOF||(LA70_5>=RULE_ID && LA70_5<=RULE_DECIMAL)||LA70_5==16||(LA70_5>=19 && LA70_5<=20)||(LA70_5>=23 && LA70_5<=25)||LA70_5==33||LA70_5==46||LA70_5==56||(LA70_5>=62 && LA70_5<=63)||(LA70_5>=65 && LA70_5<=123)) ) {
+                else if ( (LA70_5==EOF||(LA70_5>=RULE_ID && LA70_5<=RULE_DECIMAL)||LA70_5==16||(LA70_5>=19 && LA70_5<=20)||(LA70_5>=23 && LA70_5<=25)||LA70_5==33||LA70_5==46||LA70_5==56||(LA70_5>=63 && LA70_5<=64)||(LA70_5>=66 && LA70_5<=124)) ) {
                     alt70=2;
                 }
                 else {
@@ -10369,16 +10411,15 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
             case 23:
             case 24:
             case 56:
-            case 62:
-            case 70:
-            case 85:
-            case 96:
-            case 98:
-            case 100:
-            case 103:
+            case 63:
+            case 71:
+            case 86:
+            case 97:
+            case 99:
+            case 101:
             case 104:
             case 105:
-            case 112:
+            case 106:
             case 113:
             case 114:
             case 115:
@@ -10387,7 +10428,8 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
             case 118:
             case 119:
             case 120:
-            case 122:
+            case 121:
+            case 123:
                 {
                 alt70=2;
                 }
@@ -10402,13 +10444,13 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
             switch (alt70) {
                 case 1 :
-                    // InternalMelange.g:3667:2: ( () ( ( ruleFeatureCallID ) ) ruleOpSingleAssign ( (lv_value_3_0= ruleXAssignment ) ) )
+                    // InternalMelange.g:3686:2: ( () ( ( ruleFeatureCallID ) ) ruleOpSingleAssign ( (lv_value_3_0= ruleXAssignment ) ) )
                     {
-                    // InternalMelange.g:3667:2: ( () ( ( ruleFeatureCallID ) ) ruleOpSingleAssign ( (lv_value_3_0= ruleXAssignment ) ) )
-                    // InternalMelange.g:3667:3: () ( ( ruleFeatureCallID ) ) ruleOpSingleAssign ( (lv_value_3_0= ruleXAssignment ) )
+                    // InternalMelange.g:3686:2: ( () ( ( ruleFeatureCallID ) ) ruleOpSingleAssign ( (lv_value_3_0= ruleXAssignment ) ) )
+                    // InternalMelange.g:3686:3: () ( ( ruleFeatureCallID ) ) ruleOpSingleAssign ( (lv_value_3_0= ruleXAssignment ) )
                     {
-                    // InternalMelange.g:3667:3: ()
-                    // InternalMelange.g:3668:5: 
+                    // InternalMelange.g:3686:3: ()
+                    // InternalMelange.g:3687:5: 
                     {
                     if ( state.backtracking==0 ) {
 
@@ -10420,11 +10462,11 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // InternalMelange.g:3673:2: ( ( ruleFeatureCallID ) )
-                    // InternalMelange.g:3674:1: ( ruleFeatureCallID )
+                    // InternalMelange.g:3692:2: ( ( ruleFeatureCallID ) )
+                    // InternalMelange.g:3693:1: ( ruleFeatureCallID )
                     {
-                    // InternalMelange.g:3674:1: ( ruleFeatureCallID )
-                    // InternalMelange.g:3675:3: ruleFeatureCallID
+                    // InternalMelange.g:3693:1: ( ruleFeatureCallID )
+                    // InternalMelange.g:3694:3: ruleFeatureCallID
                     {
                     if ( state.backtracking==0 ) {
 
@@ -10459,7 +10501,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                               newCompositeNode(grammarAccess.getXAssignmentAccess().getOpSingleAssignParserRuleCall_0_2()); 
                           
                     }
-                    pushFollow(FOLLOW_63);
+                    pushFollow(FOLLOW_64);
                     ruleOpSingleAssign();
 
                     state._fsp--;
@@ -10469,11 +10511,11 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                               afterParserOrEnumRuleCall();
                           
                     }
-                    // InternalMelange.g:3696:1: ( (lv_value_3_0= ruleXAssignment ) )
-                    // InternalMelange.g:3697:1: (lv_value_3_0= ruleXAssignment )
+                    // InternalMelange.g:3715:1: ( (lv_value_3_0= ruleXAssignment ) )
+                    // InternalMelange.g:3716:1: (lv_value_3_0= ruleXAssignment )
                     {
-                    // InternalMelange.g:3697:1: (lv_value_3_0= ruleXAssignment )
-                    // InternalMelange.g:3698:3: lv_value_3_0= ruleXAssignment
+                    // InternalMelange.g:3716:1: (lv_value_3_0= ruleXAssignment )
+                    // InternalMelange.g:3717:3: lv_value_3_0= ruleXAssignment
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -10511,17 +10553,17 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalMelange.g:3715:6: (this_XOrExpression_4= ruleXOrExpression ( ( ( ( () ( ( ruleOpMultiAssign ) ) ) )=> ( () ( ( ruleOpMultiAssign ) ) ) ) ( (lv_rightOperand_7_0= ruleXAssignment ) ) )? )
+                    // InternalMelange.g:3734:6: (this_XOrExpression_4= ruleXOrExpression ( ( ( ( () ( ( ruleOpMultiAssign ) ) ) )=> ( () ( ( ruleOpMultiAssign ) ) ) ) ( (lv_rightOperand_7_0= ruleXAssignment ) ) )? )
                     {
-                    // InternalMelange.g:3715:6: (this_XOrExpression_4= ruleXOrExpression ( ( ( ( () ( ( ruleOpMultiAssign ) ) ) )=> ( () ( ( ruleOpMultiAssign ) ) ) ) ( (lv_rightOperand_7_0= ruleXAssignment ) ) )? )
-                    // InternalMelange.g:3716:5: this_XOrExpression_4= ruleXOrExpression ( ( ( ( () ( ( ruleOpMultiAssign ) ) ) )=> ( () ( ( ruleOpMultiAssign ) ) ) ) ( (lv_rightOperand_7_0= ruleXAssignment ) ) )?
+                    // InternalMelange.g:3734:6: (this_XOrExpression_4= ruleXOrExpression ( ( ( ( () ( ( ruleOpMultiAssign ) ) ) )=> ( () ( ( ruleOpMultiAssign ) ) ) ) ( (lv_rightOperand_7_0= ruleXAssignment ) ) )? )
+                    // InternalMelange.g:3735:5: this_XOrExpression_4= ruleXOrExpression ( ( ( ( () ( ( ruleOpMultiAssign ) ) ) )=> ( () ( ( ruleOpMultiAssign ) ) ) ) ( (lv_rightOperand_7_0= ruleXAssignment ) ) )?
                     {
                     if ( state.backtracking==0 ) {
                        
                               newCompositeNode(grammarAccess.getXAssignmentAccess().getXOrExpressionParserRuleCall_1_0()); 
                           
                     }
-                    pushFollow(FOLLOW_64);
+                    pushFollow(FOLLOW_65);
                     this_XOrExpression_4=ruleXOrExpression();
 
                     state._fsp--;
@@ -10532,21 +10574,21 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                               afterParserOrEnumRuleCall();
                           
                     }
-                    // InternalMelange.g:3724:1: ( ( ( ( () ( ( ruleOpMultiAssign ) ) ) )=> ( () ( ( ruleOpMultiAssign ) ) ) ) ( (lv_rightOperand_7_0= ruleXAssignment ) ) )?
+                    // InternalMelange.g:3743:1: ( ( ( ( () ( ( ruleOpMultiAssign ) ) ) )=> ( () ( ( ruleOpMultiAssign ) ) ) ) ( (lv_rightOperand_7_0= ruleXAssignment ) ) )?
                     int alt69=2;
                     alt69 = dfa69.predict(input);
                     switch (alt69) {
                         case 1 :
-                            // InternalMelange.g:3724:2: ( ( ( () ( ( ruleOpMultiAssign ) ) ) )=> ( () ( ( ruleOpMultiAssign ) ) ) ) ( (lv_rightOperand_7_0= ruleXAssignment ) )
+                            // InternalMelange.g:3743:2: ( ( ( () ( ( ruleOpMultiAssign ) ) ) )=> ( () ( ( ruleOpMultiAssign ) ) ) ) ( (lv_rightOperand_7_0= ruleXAssignment ) )
                             {
-                            // InternalMelange.g:3724:2: ( ( ( () ( ( ruleOpMultiAssign ) ) ) )=> ( () ( ( ruleOpMultiAssign ) ) ) )
-                            // InternalMelange.g:3724:3: ( ( () ( ( ruleOpMultiAssign ) ) ) )=> ( () ( ( ruleOpMultiAssign ) ) )
+                            // InternalMelange.g:3743:2: ( ( ( () ( ( ruleOpMultiAssign ) ) ) )=> ( () ( ( ruleOpMultiAssign ) ) ) )
+                            // InternalMelange.g:3743:3: ( ( () ( ( ruleOpMultiAssign ) ) ) )=> ( () ( ( ruleOpMultiAssign ) ) )
                             {
-                            // InternalMelange.g:3729:6: ( () ( ( ruleOpMultiAssign ) ) )
-                            // InternalMelange.g:3729:7: () ( ( ruleOpMultiAssign ) )
+                            // InternalMelange.g:3748:6: ( () ( ( ruleOpMultiAssign ) ) )
+                            // InternalMelange.g:3748:7: () ( ( ruleOpMultiAssign ) )
                             {
-                            // InternalMelange.g:3729:7: ()
-                            // InternalMelange.g:3730:5: 
+                            // InternalMelange.g:3748:7: ()
+                            // InternalMelange.g:3749:5: 
                             {
                             if ( state.backtracking==0 ) {
 
@@ -10558,11 +10600,11 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
                             }
 
-                            // InternalMelange.g:3735:2: ( ( ruleOpMultiAssign ) )
-                            // InternalMelange.g:3736:1: ( ruleOpMultiAssign )
+                            // InternalMelange.g:3754:2: ( ( ruleOpMultiAssign ) )
+                            // InternalMelange.g:3755:1: ( ruleOpMultiAssign )
                             {
-                            // InternalMelange.g:3736:1: ( ruleOpMultiAssign )
-                            // InternalMelange.g:3737:3: ruleOpMultiAssign
+                            // InternalMelange.g:3755:1: ( ruleOpMultiAssign )
+                            // InternalMelange.g:3756:3: ruleOpMultiAssign
                             {
                             if ( state.backtracking==0 ) {
 
@@ -10576,7 +10618,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                               	        newCompositeNode(grammarAccess.getXAssignmentAccess().getFeatureJvmIdentifiableElementCrossReference_1_1_0_0_1_0()); 
                               	    
                             }
-                            pushFollow(FOLLOW_63);
+                            pushFollow(FOLLOW_64);
                             ruleOpMultiAssign();
 
                             state._fsp--;
@@ -10598,11 +10640,11 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
                             }
 
-                            // InternalMelange.g:3750:4: ( (lv_rightOperand_7_0= ruleXAssignment ) )
-                            // InternalMelange.g:3751:1: (lv_rightOperand_7_0= ruleXAssignment )
+                            // InternalMelange.g:3769:4: ( (lv_rightOperand_7_0= ruleXAssignment ) )
+                            // InternalMelange.g:3770:1: (lv_rightOperand_7_0= ruleXAssignment )
                             {
-                            // InternalMelange.g:3751:1: (lv_rightOperand_7_0= ruleXAssignment )
-                            // InternalMelange.g:3752:3: lv_rightOperand_7_0= ruleXAssignment
+                            // InternalMelange.g:3770:1: (lv_rightOperand_7_0= ruleXAssignment )
+                            // InternalMelange.g:3771:3: lv_rightOperand_7_0= ruleXAssignment
                             {
                             if ( state.backtracking==0 ) {
                                
@@ -10668,7 +10710,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleOpSingleAssign"
-    // InternalMelange.g:3776:1: entryRuleOpSingleAssign returns [String current=null] : iv_ruleOpSingleAssign= ruleOpSingleAssign EOF ;
+    // InternalMelange.g:3795:1: entryRuleOpSingleAssign returns [String current=null] : iv_ruleOpSingleAssign= ruleOpSingleAssign EOF ;
     public final String entryRuleOpSingleAssign() throws RecognitionException {
         String current = null;
 
@@ -10676,8 +10718,8 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalMelange.g:3777:2: (iv_ruleOpSingleAssign= ruleOpSingleAssign EOF )
-            // InternalMelange.g:3778:2: iv_ruleOpSingleAssign= ruleOpSingleAssign EOF
+            // InternalMelange.g:3796:2: (iv_ruleOpSingleAssign= ruleOpSingleAssign EOF )
+            // InternalMelange.g:3797:2: iv_ruleOpSingleAssign= ruleOpSingleAssign EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getOpSingleAssignRule()); 
@@ -10708,7 +10750,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleOpSingleAssign"
-    // InternalMelange.g:3785:1: ruleOpSingleAssign returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : kw= '=' ;
+    // InternalMelange.g:3804:1: ruleOpSingleAssign returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : kw= '=' ;
     public final AntlrDatatypeRuleToken ruleOpSingleAssign() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -10717,8 +10759,8 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // InternalMelange.g:3788:28: (kw= '=' )
-            // InternalMelange.g:3790:2: kw= '='
+            // InternalMelange.g:3807:28: (kw= '=' )
+            // InternalMelange.g:3809:2: kw= '='
             {
             kw=(Token)match(input,18,FOLLOW_2); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -10747,7 +10789,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleOpMultiAssign"
-    // InternalMelange.g:3803:1: entryRuleOpMultiAssign returns [String current=null] : iv_ruleOpMultiAssign= ruleOpMultiAssign EOF ;
+    // InternalMelange.g:3822:1: entryRuleOpMultiAssign returns [String current=null] : iv_ruleOpMultiAssign= ruleOpMultiAssign EOF ;
     public final String entryRuleOpMultiAssign() throws RecognitionException {
         String current = null;
 
@@ -10755,8 +10797,8 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalMelange.g:3804:2: (iv_ruleOpMultiAssign= ruleOpMultiAssign EOF )
-            // InternalMelange.g:3805:2: iv_ruleOpMultiAssign= ruleOpMultiAssign EOF
+            // InternalMelange.g:3823:2: (iv_ruleOpMultiAssign= ruleOpMultiAssign EOF )
+            // InternalMelange.g:3824:2: iv_ruleOpMultiAssign= ruleOpMultiAssign EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getOpMultiAssignRule()); 
@@ -10787,7 +10829,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleOpMultiAssign"
-    // InternalMelange.g:3812:1: ruleOpMultiAssign returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= '+=' | kw= '-=' | kw= '*=' | kw= '/=' | kw= '%=' | (kw= '<' kw= '<' kw= '=' ) | (kw= '>' (kw= '>' )? kw= '>=' ) ) ;
+    // InternalMelange.g:3831:1: ruleOpMultiAssign returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= '+=' | kw= '-=' | kw= '*=' | kw= '/=' | kw= '%=' | (kw= '<' kw= '<' kw= '=' ) | (kw= '>' (kw= '>' )? kw= '>=' ) ) ;
     public final AntlrDatatypeRuleToken ruleOpMultiAssign() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -10796,43 +10838,43 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // InternalMelange.g:3815:28: ( (kw= '+=' | kw= '-=' | kw= '*=' | kw= '/=' | kw= '%=' | (kw= '<' kw= '<' kw= '=' ) | (kw= '>' (kw= '>' )? kw= '>=' ) ) )
-            // InternalMelange.g:3816:1: (kw= '+=' | kw= '-=' | kw= '*=' | kw= '/=' | kw= '%=' | (kw= '<' kw= '<' kw= '=' ) | (kw= '>' (kw= '>' )? kw= '>=' ) )
+            // InternalMelange.g:3834:28: ( (kw= '+=' | kw= '-=' | kw= '*=' | kw= '/=' | kw= '%=' | (kw= '<' kw= '<' kw= '=' ) | (kw= '>' (kw= '>' )? kw= '>=' ) ) )
+            // InternalMelange.g:3835:1: (kw= '+=' | kw= '-=' | kw= '*=' | kw= '/=' | kw= '%=' | (kw= '<' kw= '<' kw= '=' ) | (kw= '>' (kw= '>' )? kw= '>=' ) )
             {
-            // InternalMelange.g:3816:1: (kw= '+=' | kw= '-=' | kw= '*=' | kw= '/=' | kw= '%=' | (kw= '<' kw= '<' kw= '=' ) | (kw= '>' (kw= '>' )? kw= '>=' ) )
+            // InternalMelange.g:3835:1: (kw= '+=' | kw= '-=' | kw= '*=' | kw= '/=' | kw= '%=' | (kw= '<' kw= '<' kw= '=' ) | (kw= '>' (kw= '>' )? kw= '>=' ) )
             int alt72=7;
             switch ( input.LA(1) ) {
-            case 65:
+            case 66:
                 {
                 alt72=1;
                 }
                 break;
-            case 66:
+            case 67:
                 {
                 alt72=2;
                 }
                 break;
-            case 67:
+            case 68:
                 {
                 alt72=3;
                 }
                 break;
-            case 68:
+            case 69:
                 {
                 alt72=4;
                 }
                 break;
-            case 69:
+            case 70:
                 {
                 alt72=5;
                 }
                 break;
-            case 70:
+            case 71:
                 {
                 alt72=6;
                 }
                 break;
-            case 71:
+            case 72:
                 {
                 alt72=7;
                 }
@@ -10847,9 +10889,9 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
             switch (alt72) {
                 case 1 :
-                    // InternalMelange.g:3817:2: kw= '+='
+                    // InternalMelange.g:3836:2: kw= '+='
                     {
-                    kw=(Token)match(input,65,FOLLOW_2); if (state.failed) return current;
+                    kw=(Token)match(input,66,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
@@ -10860,9 +10902,9 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalMelange.g:3824:2: kw= '-='
+                    // InternalMelange.g:3843:2: kw= '-='
                     {
-                    kw=(Token)match(input,66,FOLLOW_2); if (state.failed) return current;
+                    kw=(Token)match(input,67,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
@@ -10873,9 +10915,9 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalMelange.g:3831:2: kw= '*='
+                    // InternalMelange.g:3850:2: kw= '*='
                     {
-                    kw=(Token)match(input,67,FOLLOW_2); if (state.failed) return current;
+                    kw=(Token)match(input,68,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
@@ -10886,9 +10928,9 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // InternalMelange.g:3838:2: kw= '/='
+                    // InternalMelange.g:3857:2: kw= '/='
                     {
-                    kw=(Token)match(input,68,FOLLOW_2); if (state.failed) return current;
+                    kw=(Token)match(input,69,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
@@ -10899,9 +10941,9 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // InternalMelange.g:3845:2: kw= '%='
+                    // InternalMelange.g:3864:2: kw= '%='
                     {
-                    kw=(Token)match(input,69,FOLLOW_2); if (state.failed) return current;
+                    kw=(Token)match(input,70,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
@@ -10912,19 +10954,19 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 6 :
-                    // InternalMelange.g:3851:6: (kw= '<' kw= '<' kw= '=' )
+                    // InternalMelange.g:3870:6: (kw= '<' kw= '<' kw= '=' )
                     {
-                    // InternalMelange.g:3851:6: (kw= '<' kw= '<' kw= '=' )
-                    // InternalMelange.g:3852:2: kw= '<' kw= '<' kw= '='
+                    // InternalMelange.g:3870:6: (kw= '<' kw= '<' kw= '=' )
+                    // InternalMelange.g:3871:2: kw= '<' kw= '<' kw= '='
                     {
-                    kw=(Token)match(input,70,FOLLOW_65); if (state.failed) return current;
+                    kw=(Token)match(input,71,FOLLOW_66); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
                               newLeafNode(kw, grammarAccess.getOpMultiAssignAccess().getLessThanSignKeyword_5_0()); 
                           
                     }
-                    kw=(Token)match(input,70,FOLLOW_9); if (state.failed) return current;
+                    kw=(Token)match(input,71,FOLLOW_9); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
@@ -10945,30 +10987,30 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 7 :
-                    // InternalMelange.g:3870:6: (kw= '>' (kw= '>' )? kw= '>=' )
+                    // InternalMelange.g:3889:6: (kw= '>' (kw= '>' )? kw= '>=' )
                     {
-                    // InternalMelange.g:3870:6: (kw= '>' (kw= '>' )? kw= '>=' )
-                    // InternalMelange.g:3871:2: kw= '>' (kw= '>' )? kw= '>='
+                    // InternalMelange.g:3889:6: (kw= '>' (kw= '>' )? kw= '>=' )
+                    // InternalMelange.g:3890:2: kw= '>' (kw= '>' )? kw= '>='
                     {
-                    kw=(Token)match(input,71,FOLLOW_66); if (state.failed) return current;
+                    kw=(Token)match(input,72,FOLLOW_67); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
                               newLeafNode(kw, grammarAccess.getOpMultiAssignAccess().getGreaterThanSignKeyword_6_0()); 
                           
                     }
-                    // InternalMelange.g:3876:1: (kw= '>' )?
+                    // InternalMelange.g:3895:1: (kw= '>' )?
                     int alt71=2;
                     int LA71_0 = input.LA(1);
 
-                    if ( (LA71_0==71) ) {
+                    if ( (LA71_0==72) ) {
                         alt71=1;
                     }
                     switch (alt71) {
                         case 1 :
-                            // InternalMelange.g:3877:2: kw= '>'
+                            // InternalMelange.g:3896:2: kw= '>'
                             {
-                            kw=(Token)match(input,71,FOLLOW_67); if (state.failed) return current;
+                            kw=(Token)match(input,72,FOLLOW_68); if (state.failed) return current;
                             if ( state.backtracking==0 ) {
 
                                       current.merge(kw);
@@ -10981,7 +11023,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    kw=(Token)match(input,72,FOLLOW_2); if (state.failed) return current;
+                    kw=(Token)match(input,73,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
@@ -11017,7 +11059,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleXOrExpression"
-    // InternalMelange.g:3896:1: entryRuleXOrExpression returns [EObject current=null] : iv_ruleXOrExpression= ruleXOrExpression EOF ;
+    // InternalMelange.g:3915:1: entryRuleXOrExpression returns [EObject current=null] : iv_ruleXOrExpression= ruleXOrExpression EOF ;
     public final EObject entryRuleXOrExpression() throws RecognitionException {
         EObject current = null;
 
@@ -11025,8 +11067,8 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalMelange.g:3897:2: (iv_ruleXOrExpression= ruleXOrExpression EOF )
-            // InternalMelange.g:3898:2: iv_ruleXOrExpression= ruleXOrExpression EOF
+            // InternalMelange.g:3916:2: (iv_ruleXOrExpression= ruleXOrExpression EOF )
+            // InternalMelange.g:3917:2: iv_ruleXOrExpression= ruleXOrExpression EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getXOrExpressionRule()); 
@@ -11057,7 +11099,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleXOrExpression"
-    // InternalMelange.g:3905:1: ruleXOrExpression returns [EObject current=null] : (this_XAndExpression_0= ruleXAndExpression ( ( ( ( () ( ( ruleOpOr ) ) ) )=> ( () ( ( ruleOpOr ) ) ) ) ( (lv_rightOperand_3_0= ruleXAndExpression ) ) )* ) ;
+    // InternalMelange.g:3924:1: ruleXOrExpression returns [EObject current=null] : (this_XAndExpression_0= ruleXAndExpression ( ( ( ( () ( ( ruleOpOr ) ) ) )=> ( () ( ( ruleOpOr ) ) ) ) ( (lv_rightOperand_3_0= ruleXAndExpression ) ) )* ) ;
     public final EObject ruleXOrExpression() throws RecognitionException {
         EObject current = null;
 
@@ -11069,18 +11111,18 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // InternalMelange.g:3908:28: ( (this_XAndExpression_0= ruleXAndExpression ( ( ( ( () ( ( ruleOpOr ) ) ) )=> ( () ( ( ruleOpOr ) ) ) ) ( (lv_rightOperand_3_0= ruleXAndExpression ) ) )* ) )
-            // InternalMelange.g:3909:1: (this_XAndExpression_0= ruleXAndExpression ( ( ( ( () ( ( ruleOpOr ) ) ) )=> ( () ( ( ruleOpOr ) ) ) ) ( (lv_rightOperand_3_0= ruleXAndExpression ) ) )* )
+            // InternalMelange.g:3927:28: ( (this_XAndExpression_0= ruleXAndExpression ( ( ( ( () ( ( ruleOpOr ) ) ) )=> ( () ( ( ruleOpOr ) ) ) ) ( (lv_rightOperand_3_0= ruleXAndExpression ) ) )* ) )
+            // InternalMelange.g:3928:1: (this_XAndExpression_0= ruleXAndExpression ( ( ( ( () ( ( ruleOpOr ) ) ) )=> ( () ( ( ruleOpOr ) ) ) ) ( (lv_rightOperand_3_0= ruleXAndExpression ) ) )* )
             {
-            // InternalMelange.g:3909:1: (this_XAndExpression_0= ruleXAndExpression ( ( ( ( () ( ( ruleOpOr ) ) ) )=> ( () ( ( ruleOpOr ) ) ) ) ( (lv_rightOperand_3_0= ruleXAndExpression ) ) )* )
-            // InternalMelange.g:3910:5: this_XAndExpression_0= ruleXAndExpression ( ( ( ( () ( ( ruleOpOr ) ) ) )=> ( () ( ( ruleOpOr ) ) ) ) ( (lv_rightOperand_3_0= ruleXAndExpression ) ) )*
+            // InternalMelange.g:3928:1: (this_XAndExpression_0= ruleXAndExpression ( ( ( ( () ( ( ruleOpOr ) ) ) )=> ( () ( ( ruleOpOr ) ) ) ) ( (lv_rightOperand_3_0= ruleXAndExpression ) ) )* )
+            // InternalMelange.g:3929:5: this_XAndExpression_0= ruleXAndExpression ( ( ( ( () ( ( ruleOpOr ) ) ) )=> ( () ( ( ruleOpOr ) ) ) ) ( (lv_rightOperand_3_0= ruleXAndExpression ) ) )*
             {
             if ( state.backtracking==0 ) {
                
                       newCompositeNode(grammarAccess.getXOrExpressionAccess().getXAndExpressionParserRuleCall_0()); 
                   
             }
-            pushFollow(FOLLOW_68);
+            pushFollow(FOLLOW_69);
             this_XAndExpression_0=ruleXAndExpression();
 
             state._fsp--;
@@ -11091,13 +11133,13 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                       afterParserOrEnumRuleCall();
                   
             }
-            // InternalMelange.g:3918:1: ( ( ( ( () ( ( ruleOpOr ) ) ) )=> ( () ( ( ruleOpOr ) ) ) ) ( (lv_rightOperand_3_0= ruleXAndExpression ) ) )*
+            // InternalMelange.g:3937:1: ( ( ( ( () ( ( ruleOpOr ) ) ) )=> ( () ( ( ruleOpOr ) ) ) ) ( (lv_rightOperand_3_0= ruleXAndExpression ) ) )*
             loop73:
             do {
                 int alt73=2;
                 int LA73_0 = input.LA(1);
 
-                if ( (LA73_0==73) ) {
+                if ( (LA73_0==74) ) {
                     int LA73_2 = input.LA(2);
 
                     if ( (synpred8_InternalMelange()) ) {
@@ -11110,16 +11152,16 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
                 switch (alt73) {
             	case 1 :
-            	    // InternalMelange.g:3918:2: ( ( ( () ( ( ruleOpOr ) ) ) )=> ( () ( ( ruleOpOr ) ) ) ) ( (lv_rightOperand_3_0= ruleXAndExpression ) )
+            	    // InternalMelange.g:3937:2: ( ( ( () ( ( ruleOpOr ) ) ) )=> ( () ( ( ruleOpOr ) ) ) ) ( (lv_rightOperand_3_0= ruleXAndExpression ) )
             	    {
-            	    // InternalMelange.g:3918:2: ( ( ( () ( ( ruleOpOr ) ) ) )=> ( () ( ( ruleOpOr ) ) ) )
-            	    // InternalMelange.g:3918:3: ( ( () ( ( ruleOpOr ) ) ) )=> ( () ( ( ruleOpOr ) ) )
+            	    // InternalMelange.g:3937:2: ( ( ( () ( ( ruleOpOr ) ) ) )=> ( () ( ( ruleOpOr ) ) ) )
+            	    // InternalMelange.g:3937:3: ( ( () ( ( ruleOpOr ) ) ) )=> ( () ( ( ruleOpOr ) ) )
             	    {
-            	    // InternalMelange.g:3923:6: ( () ( ( ruleOpOr ) ) )
-            	    // InternalMelange.g:3923:7: () ( ( ruleOpOr ) )
+            	    // InternalMelange.g:3942:6: ( () ( ( ruleOpOr ) ) )
+            	    // InternalMelange.g:3942:7: () ( ( ruleOpOr ) )
             	    {
-            	    // InternalMelange.g:3923:7: ()
-            	    // InternalMelange.g:3924:5: 
+            	    // InternalMelange.g:3942:7: ()
+            	    // InternalMelange.g:3943:5: 
             	    {
             	    if ( state.backtracking==0 ) {
 
@@ -11131,11 +11173,11 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    // InternalMelange.g:3929:2: ( ( ruleOpOr ) )
-            	    // InternalMelange.g:3930:1: ( ruleOpOr )
+            	    // InternalMelange.g:3948:2: ( ( ruleOpOr ) )
+            	    // InternalMelange.g:3949:1: ( ruleOpOr )
             	    {
-            	    // InternalMelange.g:3930:1: ( ruleOpOr )
-            	    // InternalMelange.g:3931:3: ruleOpOr
+            	    // InternalMelange.g:3949:1: ( ruleOpOr )
+            	    // InternalMelange.g:3950:3: ruleOpOr
             	    {
             	    if ( state.backtracking==0 ) {
 
@@ -11149,7 +11191,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
             	      	        newCompositeNode(grammarAccess.getXOrExpressionAccess().getFeatureJvmIdentifiableElementCrossReference_1_0_0_1_0()); 
             	      	    
             	    }
-            	    pushFollow(FOLLOW_63);
+            	    pushFollow(FOLLOW_64);
             	    ruleOpOr();
 
             	    state._fsp--;
@@ -11171,18 +11213,18 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    // InternalMelange.g:3944:4: ( (lv_rightOperand_3_0= ruleXAndExpression ) )
-            	    // InternalMelange.g:3945:1: (lv_rightOperand_3_0= ruleXAndExpression )
+            	    // InternalMelange.g:3963:4: ( (lv_rightOperand_3_0= ruleXAndExpression ) )
+            	    // InternalMelange.g:3964:1: (lv_rightOperand_3_0= ruleXAndExpression )
             	    {
-            	    // InternalMelange.g:3945:1: (lv_rightOperand_3_0= ruleXAndExpression )
-            	    // InternalMelange.g:3946:3: lv_rightOperand_3_0= ruleXAndExpression
+            	    // InternalMelange.g:3964:1: (lv_rightOperand_3_0= ruleXAndExpression )
+            	    // InternalMelange.g:3965:3: lv_rightOperand_3_0= ruleXAndExpression
             	    {
             	    if ( state.backtracking==0 ) {
             	       
             	      	        newCompositeNode(grammarAccess.getXOrExpressionAccess().getRightOperandXAndExpressionParserRuleCall_1_1_0()); 
             	      	    
             	    }
-            	    pushFollow(FOLLOW_68);
+            	    pushFollow(FOLLOW_69);
             	    lv_rightOperand_3_0=ruleXAndExpression();
 
             	    state._fsp--;
@@ -11238,7 +11280,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleOpOr"
-    // InternalMelange.g:3970:1: entryRuleOpOr returns [String current=null] : iv_ruleOpOr= ruleOpOr EOF ;
+    // InternalMelange.g:3989:1: entryRuleOpOr returns [String current=null] : iv_ruleOpOr= ruleOpOr EOF ;
     public final String entryRuleOpOr() throws RecognitionException {
         String current = null;
 
@@ -11246,8 +11288,8 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalMelange.g:3971:2: (iv_ruleOpOr= ruleOpOr EOF )
-            // InternalMelange.g:3972:2: iv_ruleOpOr= ruleOpOr EOF
+            // InternalMelange.g:3990:2: (iv_ruleOpOr= ruleOpOr EOF )
+            // InternalMelange.g:3991:2: iv_ruleOpOr= ruleOpOr EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getOpOrRule()); 
@@ -11278,7 +11320,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleOpOr"
-    // InternalMelange.g:3979:1: ruleOpOr returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : kw= '||' ;
+    // InternalMelange.g:3998:1: ruleOpOr returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : kw= '||' ;
     public final AntlrDatatypeRuleToken ruleOpOr() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -11287,10 +11329,10 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // InternalMelange.g:3982:28: (kw= '||' )
-            // InternalMelange.g:3984:2: kw= '||'
+            // InternalMelange.g:4001:28: (kw= '||' )
+            // InternalMelange.g:4003:2: kw= '||'
             {
-            kw=(Token)match(input,73,FOLLOW_2); if (state.failed) return current;
+            kw=(Token)match(input,74,FOLLOW_2); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                       current.merge(kw);
@@ -11317,7 +11359,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleXAndExpression"
-    // InternalMelange.g:3997:1: entryRuleXAndExpression returns [EObject current=null] : iv_ruleXAndExpression= ruleXAndExpression EOF ;
+    // InternalMelange.g:4016:1: entryRuleXAndExpression returns [EObject current=null] : iv_ruleXAndExpression= ruleXAndExpression EOF ;
     public final EObject entryRuleXAndExpression() throws RecognitionException {
         EObject current = null;
 
@@ -11325,8 +11367,8 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalMelange.g:3998:2: (iv_ruleXAndExpression= ruleXAndExpression EOF )
-            // InternalMelange.g:3999:2: iv_ruleXAndExpression= ruleXAndExpression EOF
+            // InternalMelange.g:4017:2: (iv_ruleXAndExpression= ruleXAndExpression EOF )
+            // InternalMelange.g:4018:2: iv_ruleXAndExpression= ruleXAndExpression EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getXAndExpressionRule()); 
@@ -11357,7 +11399,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleXAndExpression"
-    // InternalMelange.g:4006:1: ruleXAndExpression returns [EObject current=null] : (this_XEqualityExpression_0= ruleXEqualityExpression ( ( ( ( () ( ( ruleOpAnd ) ) ) )=> ( () ( ( ruleOpAnd ) ) ) ) ( (lv_rightOperand_3_0= ruleXEqualityExpression ) ) )* ) ;
+    // InternalMelange.g:4025:1: ruleXAndExpression returns [EObject current=null] : (this_XEqualityExpression_0= ruleXEqualityExpression ( ( ( ( () ( ( ruleOpAnd ) ) ) )=> ( () ( ( ruleOpAnd ) ) ) ) ( (lv_rightOperand_3_0= ruleXEqualityExpression ) ) )* ) ;
     public final EObject ruleXAndExpression() throws RecognitionException {
         EObject current = null;
 
@@ -11369,18 +11411,18 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // InternalMelange.g:4009:28: ( (this_XEqualityExpression_0= ruleXEqualityExpression ( ( ( ( () ( ( ruleOpAnd ) ) ) )=> ( () ( ( ruleOpAnd ) ) ) ) ( (lv_rightOperand_3_0= ruleXEqualityExpression ) ) )* ) )
-            // InternalMelange.g:4010:1: (this_XEqualityExpression_0= ruleXEqualityExpression ( ( ( ( () ( ( ruleOpAnd ) ) ) )=> ( () ( ( ruleOpAnd ) ) ) ) ( (lv_rightOperand_3_0= ruleXEqualityExpression ) ) )* )
+            // InternalMelange.g:4028:28: ( (this_XEqualityExpression_0= ruleXEqualityExpression ( ( ( ( () ( ( ruleOpAnd ) ) ) )=> ( () ( ( ruleOpAnd ) ) ) ) ( (lv_rightOperand_3_0= ruleXEqualityExpression ) ) )* ) )
+            // InternalMelange.g:4029:1: (this_XEqualityExpression_0= ruleXEqualityExpression ( ( ( ( () ( ( ruleOpAnd ) ) ) )=> ( () ( ( ruleOpAnd ) ) ) ) ( (lv_rightOperand_3_0= ruleXEqualityExpression ) ) )* )
             {
-            // InternalMelange.g:4010:1: (this_XEqualityExpression_0= ruleXEqualityExpression ( ( ( ( () ( ( ruleOpAnd ) ) ) )=> ( () ( ( ruleOpAnd ) ) ) ) ( (lv_rightOperand_3_0= ruleXEqualityExpression ) ) )* )
-            // InternalMelange.g:4011:5: this_XEqualityExpression_0= ruleXEqualityExpression ( ( ( ( () ( ( ruleOpAnd ) ) ) )=> ( () ( ( ruleOpAnd ) ) ) ) ( (lv_rightOperand_3_0= ruleXEqualityExpression ) ) )*
+            // InternalMelange.g:4029:1: (this_XEqualityExpression_0= ruleXEqualityExpression ( ( ( ( () ( ( ruleOpAnd ) ) ) )=> ( () ( ( ruleOpAnd ) ) ) ) ( (lv_rightOperand_3_0= ruleXEqualityExpression ) ) )* )
+            // InternalMelange.g:4030:5: this_XEqualityExpression_0= ruleXEqualityExpression ( ( ( ( () ( ( ruleOpAnd ) ) ) )=> ( () ( ( ruleOpAnd ) ) ) ) ( (lv_rightOperand_3_0= ruleXEqualityExpression ) ) )*
             {
             if ( state.backtracking==0 ) {
                
                       newCompositeNode(grammarAccess.getXAndExpressionAccess().getXEqualityExpressionParserRuleCall_0()); 
                   
             }
-            pushFollow(FOLLOW_69);
+            pushFollow(FOLLOW_70);
             this_XEqualityExpression_0=ruleXEqualityExpression();
 
             state._fsp--;
@@ -11391,13 +11433,13 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                       afterParserOrEnumRuleCall();
                   
             }
-            // InternalMelange.g:4019:1: ( ( ( ( () ( ( ruleOpAnd ) ) ) )=> ( () ( ( ruleOpAnd ) ) ) ) ( (lv_rightOperand_3_0= ruleXEqualityExpression ) ) )*
+            // InternalMelange.g:4038:1: ( ( ( ( () ( ( ruleOpAnd ) ) ) )=> ( () ( ( ruleOpAnd ) ) ) ) ( (lv_rightOperand_3_0= ruleXEqualityExpression ) ) )*
             loop74:
             do {
                 int alt74=2;
                 int LA74_0 = input.LA(1);
 
-                if ( (LA74_0==74) ) {
+                if ( (LA74_0==75) ) {
                     int LA74_2 = input.LA(2);
 
                     if ( (synpred9_InternalMelange()) ) {
@@ -11410,16 +11452,16 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
                 switch (alt74) {
             	case 1 :
-            	    // InternalMelange.g:4019:2: ( ( ( () ( ( ruleOpAnd ) ) ) )=> ( () ( ( ruleOpAnd ) ) ) ) ( (lv_rightOperand_3_0= ruleXEqualityExpression ) )
+            	    // InternalMelange.g:4038:2: ( ( ( () ( ( ruleOpAnd ) ) ) )=> ( () ( ( ruleOpAnd ) ) ) ) ( (lv_rightOperand_3_0= ruleXEqualityExpression ) )
             	    {
-            	    // InternalMelange.g:4019:2: ( ( ( () ( ( ruleOpAnd ) ) ) )=> ( () ( ( ruleOpAnd ) ) ) )
-            	    // InternalMelange.g:4019:3: ( ( () ( ( ruleOpAnd ) ) ) )=> ( () ( ( ruleOpAnd ) ) )
+            	    // InternalMelange.g:4038:2: ( ( ( () ( ( ruleOpAnd ) ) ) )=> ( () ( ( ruleOpAnd ) ) ) )
+            	    // InternalMelange.g:4038:3: ( ( () ( ( ruleOpAnd ) ) ) )=> ( () ( ( ruleOpAnd ) ) )
             	    {
-            	    // InternalMelange.g:4024:6: ( () ( ( ruleOpAnd ) ) )
-            	    // InternalMelange.g:4024:7: () ( ( ruleOpAnd ) )
+            	    // InternalMelange.g:4043:6: ( () ( ( ruleOpAnd ) ) )
+            	    // InternalMelange.g:4043:7: () ( ( ruleOpAnd ) )
             	    {
-            	    // InternalMelange.g:4024:7: ()
-            	    // InternalMelange.g:4025:5: 
+            	    // InternalMelange.g:4043:7: ()
+            	    // InternalMelange.g:4044:5: 
             	    {
             	    if ( state.backtracking==0 ) {
 
@@ -11431,11 +11473,11 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    // InternalMelange.g:4030:2: ( ( ruleOpAnd ) )
-            	    // InternalMelange.g:4031:1: ( ruleOpAnd )
+            	    // InternalMelange.g:4049:2: ( ( ruleOpAnd ) )
+            	    // InternalMelange.g:4050:1: ( ruleOpAnd )
             	    {
-            	    // InternalMelange.g:4031:1: ( ruleOpAnd )
-            	    // InternalMelange.g:4032:3: ruleOpAnd
+            	    // InternalMelange.g:4050:1: ( ruleOpAnd )
+            	    // InternalMelange.g:4051:3: ruleOpAnd
             	    {
             	    if ( state.backtracking==0 ) {
 
@@ -11449,7 +11491,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
             	      	        newCompositeNode(grammarAccess.getXAndExpressionAccess().getFeatureJvmIdentifiableElementCrossReference_1_0_0_1_0()); 
             	      	    
             	    }
-            	    pushFollow(FOLLOW_63);
+            	    pushFollow(FOLLOW_64);
             	    ruleOpAnd();
 
             	    state._fsp--;
@@ -11471,18 +11513,18 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    // InternalMelange.g:4045:4: ( (lv_rightOperand_3_0= ruleXEqualityExpression ) )
-            	    // InternalMelange.g:4046:1: (lv_rightOperand_3_0= ruleXEqualityExpression )
+            	    // InternalMelange.g:4064:4: ( (lv_rightOperand_3_0= ruleXEqualityExpression ) )
+            	    // InternalMelange.g:4065:1: (lv_rightOperand_3_0= ruleXEqualityExpression )
             	    {
-            	    // InternalMelange.g:4046:1: (lv_rightOperand_3_0= ruleXEqualityExpression )
-            	    // InternalMelange.g:4047:3: lv_rightOperand_3_0= ruleXEqualityExpression
+            	    // InternalMelange.g:4065:1: (lv_rightOperand_3_0= ruleXEqualityExpression )
+            	    // InternalMelange.g:4066:3: lv_rightOperand_3_0= ruleXEqualityExpression
             	    {
             	    if ( state.backtracking==0 ) {
             	       
             	      	        newCompositeNode(grammarAccess.getXAndExpressionAccess().getRightOperandXEqualityExpressionParserRuleCall_1_1_0()); 
             	      	    
             	    }
-            	    pushFollow(FOLLOW_69);
+            	    pushFollow(FOLLOW_70);
             	    lv_rightOperand_3_0=ruleXEqualityExpression();
 
             	    state._fsp--;
@@ -11538,7 +11580,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleOpAnd"
-    // InternalMelange.g:4071:1: entryRuleOpAnd returns [String current=null] : iv_ruleOpAnd= ruleOpAnd EOF ;
+    // InternalMelange.g:4090:1: entryRuleOpAnd returns [String current=null] : iv_ruleOpAnd= ruleOpAnd EOF ;
     public final String entryRuleOpAnd() throws RecognitionException {
         String current = null;
 
@@ -11546,8 +11588,8 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalMelange.g:4072:2: (iv_ruleOpAnd= ruleOpAnd EOF )
-            // InternalMelange.g:4073:2: iv_ruleOpAnd= ruleOpAnd EOF
+            // InternalMelange.g:4091:2: (iv_ruleOpAnd= ruleOpAnd EOF )
+            // InternalMelange.g:4092:2: iv_ruleOpAnd= ruleOpAnd EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getOpAndRule()); 
@@ -11578,7 +11620,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleOpAnd"
-    // InternalMelange.g:4080:1: ruleOpAnd returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : kw= '&&' ;
+    // InternalMelange.g:4099:1: ruleOpAnd returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : kw= '&&' ;
     public final AntlrDatatypeRuleToken ruleOpAnd() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -11587,10 +11629,10 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // InternalMelange.g:4083:28: (kw= '&&' )
-            // InternalMelange.g:4085:2: kw= '&&'
+            // InternalMelange.g:4102:28: (kw= '&&' )
+            // InternalMelange.g:4104:2: kw= '&&'
             {
-            kw=(Token)match(input,74,FOLLOW_2); if (state.failed) return current;
+            kw=(Token)match(input,75,FOLLOW_2); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                       current.merge(kw);
@@ -11617,7 +11659,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleXEqualityExpression"
-    // InternalMelange.g:4098:1: entryRuleXEqualityExpression returns [EObject current=null] : iv_ruleXEqualityExpression= ruleXEqualityExpression EOF ;
+    // InternalMelange.g:4117:1: entryRuleXEqualityExpression returns [EObject current=null] : iv_ruleXEqualityExpression= ruleXEqualityExpression EOF ;
     public final EObject entryRuleXEqualityExpression() throws RecognitionException {
         EObject current = null;
 
@@ -11625,8 +11667,8 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalMelange.g:4099:2: (iv_ruleXEqualityExpression= ruleXEqualityExpression EOF )
-            // InternalMelange.g:4100:2: iv_ruleXEqualityExpression= ruleXEqualityExpression EOF
+            // InternalMelange.g:4118:2: (iv_ruleXEqualityExpression= ruleXEqualityExpression EOF )
+            // InternalMelange.g:4119:2: iv_ruleXEqualityExpression= ruleXEqualityExpression EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getXEqualityExpressionRule()); 
@@ -11657,7 +11699,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleXEqualityExpression"
-    // InternalMelange.g:4107:1: ruleXEqualityExpression returns [EObject current=null] : (this_XRelationalExpression_0= ruleXRelationalExpression ( ( ( ( () ( ( ruleOpEquality ) ) ) )=> ( () ( ( ruleOpEquality ) ) ) ) ( (lv_rightOperand_3_0= ruleXRelationalExpression ) ) )* ) ;
+    // InternalMelange.g:4126:1: ruleXEqualityExpression returns [EObject current=null] : (this_XRelationalExpression_0= ruleXRelationalExpression ( ( ( ( () ( ( ruleOpEquality ) ) ) )=> ( () ( ( ruleOpEquality ) ) ) ) ( (lv_rightOperand_3_0= ruleXRelationalExpression ) ) )* ) ;
     public final EObject ruleXEqualityExpression() throws RecognitionException {
         EObject current = null;
 
@@ -11669,18 +11711,18 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // InternalMelange.g:4110:28: ( (this_XRelationalExpression_0= ruleXRelationalExpression ( ( ( ( () ( ( ruleOpEquality ) ) ) )=> ( () ( ( ruleOpEquality ) ) ) ) ( (lv_rightOperand_3_0= ruleXRelationalExpression ) ) )* ) )
-            // InternalMelange.g:4111:1: (this_XRelationalExpression_0= ruleXRelationalExpression ( ( ( ( () ( ( ruleOpEquality ) ) ) )=> ( () ( ( ruleOpEquality ) ) ) ) ( (lv_rightOperand_3_0= ruleXRelationalExpression ) ) )* )
+            // InternalMelange.g:4129:28: ( (this_XRelationalExpression_0= ruleXRelationalExpression ( ( ( ( () ( ( ruleOpEquality ) ) ) )=> ( () ( ( ruleOpEquality ) ) ) ) ( (lv_rightOperand_3_0= ruleXRelationalExpression ) ) )* ) )
+            // InternalMelange.g:4130:1: (this_XRelationalExpression_0= ruleXRelationalExpression ( ( ( ( () ( ( ruleOpEquality ) ) ) )=> ( () ( ( ruleOpEquality ) ) ) ) ( (lv_rightOperand_3_0= ruleXRelationalExpression ) ) )* )
             {
-            // InternalMelange.g:4111:1: (this_XRelationalExpression_0= ruleXRelationalExpression ( ( ( ( () ( ( ruleOpEquality ) ) ) )=> ( () ( ( ruleOpEquality ) ) ) ) ( (lv_rightOperand_3_0= ruleXRelationalExpression ) ) )* )
-            // InternalMelange.g:4112:5: this_XRelationalExpression_0= ruleXRelationalExpression ( ( ( ( () ( ( ruleOpEquality ) ) ) )=> ( () ( ( ruleOpEquality ) ) ) ) ( (lv_rightOperand_3_0= ruleXRelationalExpression ) ) )*
+            // InternalMelange.g:4130:1: (this_XRelationalExpression_0= ruleXRelationalExpression ( ( ( ( () ( ( ruleOpEquality ) ) ) )=> ( () ( ( ruleOpEquality ) ) ) ) ( (lv_rightOperand_3_0= ruleXRelationalExpression ) ) )* )
+            // InternalMelange.g:4131:5: this_XRelationalExpression_0= ruleXRelationalExpression ( ( ( ( () ( ( ruleOpEquality ) ) ) )=> ( () ( ( ruleOpEquality ) ) ) ) ( (lv_rightOperand_3_0= ruleXRelationalExpression ) ) )*
             {
             if ( state.backtracking==0 ) {
                
                       newCompositeNode(grammarAccess.getXEqualityExpressionAccess().getXRelationalExpressionParserRuleCall_0()); 
                   
             }
-            pushFollow(FOLLOW_70);
+            pushFollow(FOLLOW_71);
             this_XRelationalExpression_0=ruleXRelationalExpression();
 
             state._fsp--;
@@ -11691,12 +11733,12 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                       afterParserOrEnumRuleCall();
                   
             }
-            // InternalMelange.g:4120:1: ( ( ( ( () ( ( ruleOpEquality ) ) ) )=> ( () ( ( ruleOpEquality ) ) ) ) ( (lv_rightOperand_3_0= ruleXRelationalExpression ) ) )*
+            // InternalMelange.g:4139:1: ( ( ( ( () ( ( ruleOpEquality ) ) ) )=> ( () ( ( ruleOpEquality ) ) ) ) ( (lv_rightOperand_3_0= ruleXRelationalExpression ) ) )*
             loop75:
             do {
                 int alt75=2;
                 switch ( input.LA(1) ) {
-                case 75:
+                case 76:
                     {
                     int LA75_2 = input.LA(2);
 
@@ -11707,7 +11749,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
                     }
                     break;
-                case 76:
+                case 77:
                     {
                     int LA75_3 = input.LA(2);
 
@@ -11718,7 +11760,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
                     }
                     break;
-                case 77:
+                case 78:
                     {
                     int LA75_4 = input.LA(2);
 
@@ -11729,7 +11771,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
                     }
                     break;
-                case 78:
+                case 79:
                     {
                     int LA75_5 = input.LA(2);
 
@@ -11745,16 +11787,16 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
                 switch (alt75) {
             	case 1 :
-            	    // InternalMelange.g:4120:2: ( ( ( () ( ( ruleOpEquality ) ) ) )=> ( () ( ( ruleOpEquality ) ) ) ) ( (lv_rightOperand_3_0= ruleXRelationalExpression ) )
+            	    // InternalMelange.g:4139:2: ( ( ( () ( ( ruleOpEquality ) ) ) )=> ( () ( ( ruleOpEquality ) ) ) ) ( (lv_rightOperand_3_0= ruleXRelationalExpression ) )
             	    {
-            	    // InternalMelange.g:4120:2: ( ( ( () ( ( ruleOpEquality ) ) ) )=> ( () ( ( ruleOpEquality ) ) ) )
-            	    // InternalMelange.g:4120:3: ( ( () ( ( ruleOpEquality ) ) ) )=> ( () ( ( ruleOpEquality ) ) )
+            	    // InternalMelange.g:4139:2: ( ( ( () ( ( ruleOpEquality ) ) ) )=> ( () ( ( ruleOpEquality ) ) ) )
+            	    // InternalMelange.g:4139:3: ( ( () ( ( ruleOpEquality ) ) ) )=> ( () ( ( ruleOpEquality ) ) )
             	    {
-            	    // InternalMelange.g:4125:6: ( () ( ( ruleOpEquality ) ) )
-            	    // InternalMelange.g:4125:7: () ( ( ruleOpEquality ) )
+            	    // InternalMelange.g:4144:6: ( () ( ( ruleOpEquality ) ) )
+            	    // InternalMelange.g:4144:7: () ( ( ruleOpEquality ) )
             	    {
-            	    // InternalMelange.g:4125:7: ()
-            	    // InternalMelange.g:4126:5: 
+            	    // InternalMelange.g:4144:7: ()
+            	    // InternalMelange.g:4145:5: 
             	    {
             	    if ( state.backtracking==0 ) {
 
@@ -11766,11 +11808,11 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    // InternalMelange.g:4131:2: ( ( ruleOpEquality ) )
-            	    // InternalMelange.g:4132:1: ( ruleOpEquality )
+            	    // InternalMelange.g:4150:2: ( ( ruleOpEquality ) )
+            	    // InternalMelange.g:4151:1: ( ruleOpEquality )
             	    {
-            	    // InternalMelange.g:4132:1: ( ruleOpEquality )
-            	    // InternalMelange.g:4133:3: ruleOpEquality
+            	    // InternalMelange.g:4151:1: ( ruleOpEquality )
+            	    // InternalMelange.g:4152:3: ruleOpEquality
             	    {
             	    if ( state.backtracking==0 ) {
 
@@ -11784,7 +11826,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
             	      	        newCompositeNode(grammarAccess.getXEqualityExpressionAccess().getFeatureJvmIdentifiableElementCrossReference_1_0_0_1_0()); 
             	      	    
             	    }
-            	    pushFollow(FOLLOW_63);
+            	    pushFollow(FOLLOW_64);
             	    ruleOpEquality();
 
             	    state._fsp--;
@@ -11806,18 +11848,18 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    // InternalMelange.g:4146:4: ( (lv_rightOperand_3_0= ruleXRelationalExpression ) )
-            	    // InternalMelange.g:4147:1: (lv_rightOperand_3_0= ruleXRelationalExpression )
+            	    // InternalMelange.g:4165:4: ( (lv_rightOperand_3_0= ruleXRelationalExpression ) )
+            	    // InternalMelange.g:4166:1: (lv_rightOperand_3_0= ruleXRelationalExpression )
             	    {
-            	    // InternalMelange.g:4147:1: (lv_rightOperand_3_0= ruleXRelationalExpression )
-            	    // InternalMelange.g:4148:3: lv_rightOperand_3_0= ruleXRelationalExpression
+            	    // InternalMelange.g:4166:1: (lv_rightOperand_3_0= ruleXRelationalExpression )
+            	    // InternalMelange.g:4167:3: lv_rightOperand_3_0= ruleXRelationalExpression
             	    {
             	    if ( state.backtracking==0 ) {
             	       
             	      	        newCompositeNode(grammarAccess.getXEqualityExpressionAccess().getRightOperandXRelationalExpressionParserRuleCall_1_1_0()); 
             	      	    
             	    }
-            	    pushFollow(FOLLOW_70);
+            	    pushFollow(FOLLOW_71);
             	    lv_rightOperand_3_0=ruleXRelationalExpression();
 
             	    state._fsp--;
@@ -11873,7 +11915,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleOpEquality"
-    // InternalMelange.g:4172:1: entryRuleOpEquality returns [String current=null] : iv_ruleOpEquality= ruleOpEquality EOF ;
+    // InternalMelange.g:4191:1: entryRuleOpEquality returns [String current=null] : iv_ruleOpEquality= ruleOpEquality EOF ;
     public final String entryRuleOpEquality() throws RecognitionException {
         String current = null;
 
@@ -11881,8 +11923,8 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalMelange.g:4173:2: (iv_ruleOpEquality= ruleOpEquality EOF )
-            // InternalMelange.g:4174:2: iv_ruleOpEquality= ruleOpEquality EOF
+            // InternalMelange.g:4192:2: (iv_ruleOpEquality= ruleOpEquality EOF )
+            // InternalMelange.g:4193:2: iv_ruleOpEquality= ruleOpEquality EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getOpEqualityRule()); 
@@ -11913,7 +11955,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleOpEquality"
-    // InternalMelange.g:4181:1: ruleOpEquality returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= '==' | kw= '!=' | kw= '===' | kw= '!==' ) ;
+    // InternalMelange.g:4200:1: ruleOpEquality returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= '==' | kw= '!=' | kw= '===' | kw= '!==' ) ;
     public final AntlrDatatypeRuleToken ruleOpEquality() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -11922,28 +11964,28 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // InternalMelange.g:4184:28: ( (kw= '==' | kw= '!=' | kw= '===' | kw= '!==' ) )
-            // InternalMelange.g:4185:1: (kw= '==' | kw= '!=' | kw= '===' | kw= '!==' )
+            // InternalMelange.g:4203:28: ( (kw= '==' | kw= '!=' | kw= '===' | kw= '!==' ) )
+            // InternalMelange.g:4204:1: (kw= '==' | kw= '!=' | kw= '===' | kw= '!==' )
             {
-            // InternalMelange.g:4185:1: (kw= '==' | kw= '!=' | kw= '===' | kw= '!==' )
+            // InternalMelange.g:4204:1: (kw= '==' | kw= '!=' | kw= '===' | kw= '!==' )
             int alt76=4;
             switch ( input.LA(1) ) {
-            case 75:
+            case 76:
                 {
                 alt76=1;
                 }
                 break;
-            case 76:
+            case 77:
                 {
                 alt76=2;
                 }
                 break;
-            case 77:
+            case 78:
                 {
                 alt76=3;
                 }
                 break;
-            case 78:
+            case 79:
                 {
                 alt76=4;
                 }
@@ -11958,9 +12000,9 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
             switch (alt76) {
                 case 1 :
-                    // InternalMelange.g:4186:2: kw= '=='
+                    // InternalMelange.g:4205:2: kw= '=='
                     {
-                    kw=(Token)match(input,75,FOLLOW_2); if (state.failed) return current;
+                    kw=(Token)match(input,76,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
@@ -11971,9 +12013,9 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalMelange.g:4193:2: kw= '!='
+                    // InternalMelange.g:4212:2: kw= '!='
                     {
-                    kw=(Token)match(input,76,FOLLOW_2); if (state.failed) return current;
+                    kw=(Token)match(input,77,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
@@ -11984,9 +12026,9 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalMelange.g:4200:2: kw= '==='
+                    // InternalMelange.g:4219:2: kw= '==='
                     {
-                    kw=(Token)match(input,77,FOLLOW_2); if (state.failed) return current;
+                    kw=(Token)match(input,78,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
@@ -11997,9 +12039,9 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // InternalMelange.g:4207:2: kw= '!=='
+                    // InternalMelange.g:4226:2: kw= '!=='
                     {
-                    kw=(Token)match(input,78,FOLLOW_2); if (state.failed) return current;
+                    kw=(Token)match(input,79,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
@@ -12032,7 +12074,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleXRelationalExpression"
-    // InternalMelange.g:4220:1: entryRuleXRelationalExpression returns [EObject current=null] : iv_ruleXRelationalExpression= ruleXRelationalExpression EOF ;
+    // InternalMelange.g:4239:1: entryRuleXRelationalExpression returns [EObject current=null] : iv_ruleXRelationalExpression= ruleXRelationalExpression EOF ;
     public final EObject entryRuleXRelationalExpression() throws RecognitionException {
         EObject current = null;
 
@@ -12040,8 +12082,8 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalMelange.g:4221:2: (iv_ruleXRelationalExpression= ruleXRelationalExpression EOF )
-            // InternalMelange.g:4222:2: iv_ruleXRelationalExpression= ruleXRelationalExpression EOF
+            // InternalMelange.g:4240:2: (iv_ruleXRelationalExpression= ruleXRelationalExpression EOF )
+            // InternalMelange.g:4241:2: iv_ruleXRelationalExpression= ruleXRelationalExpression EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getXRelationalExpressionRule()); 
@@ -12072,7 +12114,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleXRelationalExpression"
-    // InternalMelange.g:4229:1: ruleXRelationalExpression returns [EObject current=null] : (this_XOtherOperatorExpression_0= ruleXOtherOperatorExpression ( ( ( ( ( () 'instanceof' ) )=> ( () otherlv_2= 'instanceof' ) ) ( (lv_type_3_0= ruleJvmTypeReference ) ) ) | ( ( ( ( () ( ( ruleOpCompare ) ) ) )=> ( () ( ( ruleOpCompare ) ) ) ) ( (lv_rightOperand_6_0= ruleXOtherOperatorExpression ) ) ) )* ) ;
+    // InternalMelange.g:4248:1: ruleXRelationalExpression returns [EObject current=null] : (this_XOtherOperatorExpression_0= ruleXOtherOperatorExpression ( ( ( ( ( () 'instanceof' ) )=> ( () otherlv_2= 'instanceof' ) ) ( (lv_type_3_0= ruleJvmTypeReference ) ) ) | ( ( ( ( () ( ( ruleOpCompare ) ) ) )=> ( () ( ( ruleOpCompare ) ) ) ) ( (lv_rightOperand_6_0= ruleXOtherOperatorExpression ) ) ) )* ) ;
     public final EObject ruleXRelationalExpression() throws RecognitionException {
         EObject current = null;
 
@@ -12087,18 +12129,18 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // InternalMelange.g:4232:28: ( (this_XOtherOperatorExpression_0= ruleXOtherOperatorExpression ( ( ( ( ( () 'instanceof' ) )=> ( () otherlv_2= 'instanceof' ) ) ( (lv_type_3_0= ruleJvmTypeReference ) ) ) | ( ( ( ( () ( ( ruleOpCompare ) ) ) )=> ( () ( ( ruleOpCompare ) ) ) ) ( (lv_rightOperand_6_0= ruleXOtherOperatorExpression ) ) ) )* ) )
-            // InternalMelange.g:4233:1: (this_XOtherOperatorExpression_0= ruleXOtherOperatorExpression ( ( ( ( ( () 'instanceof' ) )=> ( () otherlv_2= 'instanceof' ) ) ( (lv_type_3_0= ruleJvmTypeReference ) ) ) | ( ( ( ( () ( ( ruleOpCompare ) ) ) )=> ( () ( ( ruleOpCompare ) ) ) ) ( (lv_rightOperand_6_0= ruleXOtherOperatorExpression ) ) ) )* )
+            // InternalMelange.g:4251:28: ( (this_XOtherOperatorExpression_0= ruleXOtherOperatorExpression ( ( ( ( ( () 'instanceof' ) )=> ( () otherlv_2= 'instanceof' ) ) ( (lv_type_3_0= ruleJvmTypeReference ) ) ) | ( ( ( ( () ( ( ruleOpCompare ) ) ) )=> ( () ( ( ruleOpCompare ) ) ) ) ( (lv_rightOperand_6_0= ruleXOtherOperatorExpression ) ) ) )* ) )
+            // InternalMelange.g:4252:1: (this_XOtherOperatorExpression_0= ruleXOtherOperatorExpression ( ( ( ( ( () 'instanceof' ) )=> ( () otherlv_2= 'instanceof' ) ) ( (lv_type_3_0= ruleJvmTypeReference ) ) ) | ( ( ( ( () ( ( ruleOpCompare ) ) ) )=> ( () ( ( ruleOpCompare ) ) ) ) ( (lv_rightOperand_6_0= ruleXOtherOperatorExpression ) ) ) )* )
             {
-            // InternalMelange.g:4233:1: (this_XOtherOperatorExpression_0= ruleXOtherOperatorExpression ( ( ( ( ( () 'instanceof' ) )=> ( () otherlv_2= 'instanceof' ) ) ( (lv_type_3_0= ruleJvmTypeReference ) ) ) | ( ( ( ( () ( ( ruleOpCompare ) ) ) )=> ( () ( ( ruleOpCompare ) ) ) ) ( (lv_rightOperand_6_0= ruleXOtherOperatorExpression ) ) ) )* )
-            // InternalMelange.g:4234:5: this_XOtherOperatorExpression_0= ruleXOtherOperatorExpression ( ( ( ( ( () 'instanceof' ) )=> ( () otherlv_2= 'instanceof' ) ) ( (lv_type_3_0= ruleJvmTypeReference ) ) ) | ( ( ( ( () ( ( ruleOpCompare ) ) ) )=> ( () ( ( ruleOpCompare ) ) ) ) ( (lv_rightOperand_6_0= ruleXOtherOperatorExpression ) ) ) )*
+            // InternalMelange.g:4252:1: (this_XOtherOperatorExpression_0= ruleXOtherOperatorExpression ( ( ( ( ( () 'instanceof' ) )=> ( () otherlv_2= 'instanceof' ) ) ( (lv_type_3_0= ruleJvmTypeReference ) ) ) | ( ( ( ( () ( ( ruleOpCompare ) ) ) )=> ( () ( ( ruleOpCompare ) ) ) ) ( (lv_rightOperand_6_0= ruleXOtherOperatorExpression ) ) ) )* )
+            // InternalMelange.g:4253:5: this_XOtherOperatorExpression_0= ruleXOtherOperatorExpression ( ( ( ( ( () 'instanceof' ) )=> ( () otherlv_2= 'instanceof' ) ) ( (lv_type_3_0= ruleJvmTypeReference ) ) ) | ( ( ( ( () ( ( ruleOpCompare ) ) ) )=> ( () ( ( ruleOpCompare ) ) ) ) ( (lv_rightOperand_6_0= ruleXOtherOperatorExpression ) ) ) )*
             {
             if ( state.backtracking==0 ) {
                
                       newCompositeNode(grammarAccess.getXRelationalExpressionAccess().getXOtherOperatorExpressionParserRuleCall_0()); 
                   
             }
-            pushFollow(FOLLOW_71);
+            pushFollow(FOLLOW_72);
             this_XOtherOperatorExpression_0=ruleXOtherOperatorExpression();
 
             state._fsp--;
@@ -12109,12 +12151,12 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                       afterParserOrEnumRuleCall();
                   
             }
-            // InternalMelange.g:4242:1: ( ( ( ( ( () 'instanceof' ) )=> ( () otherlv_2= 'instanceof' ) ) ( (lv_type_3_0= ruleJvmTypeReference ) ) ) | ( ( ( ( () ( ( ruleOpCompare ) ) ) )=> ( () ( ( ruleOpCompare ) ) ) ) ( (lv_rightOperand_6_0= ruleXOtherOperatorExpression ) ) ) )*
+            // InternalMelange.g:4261:1: ( ( ( ( ( () 'instanceof' ) )=> ( () otherlv_2= 'instanceof' ) ) ( (lv_type_3_0= ruleJvmTypeReference ) ) ) | ( ( ( ( () ( ( ruleOpCompare ) ) ) )=> ( () ( ( ruleOpCompare ) ) ) ) ( (lv_rightOperand_6_0= ruleXOtherOperatorExpression ) ) ) )*
             loop77:
             do {
                 int alt77=3;
                 switch ( input.LA(1) ) {
-                case 70:
+                case 71:
                     {
                     int LA77_2 = input.LA(2);
 
@@ -12125,7 +12167,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
                     }
                     break;
-                case 71:
+                case 72:
                     {
                     int LA77_3 = input.LA(2);
 
@@ -12136,7 +12178,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
                     }
                     break;
-                case 79:
+                case 80:
                     {
                     int LA77_4 = input.LA(2);
 
@@ -12147,7 +12189,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
                     }
                     break;
-                case 72:
+                case 73:
                     {
                     int LA77_5 = input.LA(2);
 
@@ -12163,19 +12205,19 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
                 switch (alt77) {
             	case 1 :
-            	    // InternalMelange.g:4242:2: ( ( ( ( () 'instanceof' ) )=> ( () otherlv_2= 'instanceof' ) ) ( (lv_type_3_0= ruleJvmTypeReference ) ) )
+            	    // InternalMelange.g:4261:2: ( ( ( ( () 'instanceof' ) )=> ( () otherlv_2= 'instanceof' ) ) ( (lv_type_3_0= ruleJvmTypeReference ) ) )
             	    {
-            	    // InternalMelange.g:4242:2: ( ( ( ( () 'instanceof' ) )=> ( () otherlv_2= 'instanceof' ) ) ( (lv_type_3_0= ruleJvmTypeReference ) ) )
-            	    // InternalMelange.g:4242:3: ( ( ( () 'instanceof' ) )=> ( () otherlv_2= 'instanceof' ) ) ( (lv_type_3_0= ruleJvmTypeReference ) )
+            	    // InternalMelange.g:4261:2: ( ( ( ( () 'instanceof' ) )=> ( () otherlv_2= 'instanceof' ) ) ( (lv_type_3_0= ruleJvmTypeReference ) ) )
+            	    // InternalMelange.g:4261:3: ( ( ( () 'instanceof' ) )=> ( () otherlv_2= 'instanceof' ) ) ( (lv_type_3_0= ruleJvmTypeReference ) )
             	    {
-            	    // InternalMelange.g:4242:3: ( ( ( () 'instanceof' ) )=> ( () otherlv_2= 'instanceof' ) )
-            	    // InternalMelange.g:4242:4: ( ( () 'instanceof' ) )=> ( () otherlv_2= 'instanceof' )
+            	    // InternalMelange.g:4261:3: ( ( ( () 'instanceof' ) )=> ( () otherlv_2= 'instanceof' ) )
+            	    // InternalMelange.g:4261:4: ( ( () 'instanceof' ) )=> ( () otherlv_2= 'instanceof' )
             	    {
-            	    // InternalMelange.g:4244:5: ( () otherlv_2= 'instanceof' )
-            	    // InternalMelange.g:4244:6: () otherlv_2= 'instanceof'
+            	    // InternalMelange.g:4263:5: ( () otherlv_2= 'instanceof' )
+            	    // InternalMelange.g:4263:6: () otherlv_2= 'instanceof'
             	    {
-            	    // InternalMelange.g:4244:6: ()
-            	    // InternalMelange.g:4245:5: 
+            	    // InternalMelange.g:4263:6: ()
+            	    // InternalMelange.g:4264:5: 
             	    {
             	    if ( state.backtracking==0 ) {
 
@@ -12187,7 +12229,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    otherlv_2=(Token)match(input,79,FOLLOW_33); if (state.failed) return current;
+            	    otherlv_2=(Token)match(input,80,FOLLOW_33); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
             	          	newLeafNode(otherlv_2, grammarAccess.getXRelationalExpressionAccess().getInstanceofKeyword_1_0_0_0_1());
@@ -12199,18 +12241,18 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    // InternalMelange.g:4254:3: ( (lv_type_3_0= ruleJvmTypeReference ) )
-            	    // InternalMelange.g:4255:1: (lv_type_3_0= ruleJvmTypeReference )
+            	    // InternalMelange.g:4273:3: ( (lv_type_3_0= ruleJvmTypeReference ) )
+            	    // InternalMelange.g:4274:1: (lv_type_3_0= ruleJvmTypeReference )
             	    {
-            	    // InternalMelange.g:4255:1: (lv_type_3_0= ruleJvmTypeReference )
-            	    // InternalMelange.g:4256:3: lv_type_3_0= ruleJvmTypeReference
+            	    // InternalMelange.g:4274:1: (lv_type_3_0= ruleJvmTypeReference )
+            	    // InternalMelange.g:4275:3: lv_type_3_0= ruleJvmTypeReference
             	    {
             	    if ( state.backtracking==0 ) {
             	       
             	      	        newCompositeNode(grammarAccess.getXRelationalExpressionAccess().getTypeJvmTypeReferenceParserRuleCall_1_0_1_0()); 
             	      	    
             	    }
-            	    pushFollow(FOLLOW_71);
+            	    pushFollow(FOLLOW_72);
             	    lv_type_3_0=ruleJvmTypeReference();
 
             	    state._fsp--;
@@ -12241,19 +12283,19 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
             	    }
             	    break;
             	case 2 :
-            	    // InternalMelange.g:4273:6: ( ( ( ( () ( ( ruleOpCompare ) ) ) )=> ( () ( ( ruleOpCompare ) ) ) ) ( (lv_rightOperand_6_0= ruleXOtherOperatorExpression ) ) )
+            	    // InternalMelange.g:4292:6: ( ( ( ( () ( ( ruleOpCompare ) ) ) )=> ( () ( ( ruleOpCompare ) ) ) ) ( (lv_rightOperand_6_0= ruleXOtherOperatorExpression ) ) )
             	    {
-            	    // InternalMelange.g:4273:6: ( ( ( ( () ( ( ruleOpCompare ) ) ) )=> ( () ( ( ruleOpCompare ) ) ) ) ( (lv_rightOperand_6_0= ruleXOtherOperatorExpression ) ) )
-            	    // InternalMelange.g:4273:7: ( ( ( () ( ( ruleOpCompare ) ) ) )=> ( () ( ( ruleOpCompare ) ) ) ) ( (lv_rightOperand_6_0= ruleXOtherOperatorExpression ) )
+            	    // InternalMelange.g:4292:6: ( ( ( ( () ( ( ruleOpCompare ) ) ) )=> ( () ( ( ruleOpCompare ) ) ) ) ( (lv_rightOperand_6_0= ruleXOtherOperatorExpression ) ) )
+            	    // InternalMelange.g:4292:7: ( ( ( () ( ( ruleOpCompare ) ) ) )=> ( () ( ( ruleOpCompare ) ) ) ) ( (lv_rightOperand_6_0= ruleXOtherOperatorExpression ) )
             	    {
-            	    // InternalMelange.g:4273:7: ( ( ( () ( ( ruleOpCompare ) ) ) )=> ( () ( ( ruleOpCompare ) ) ) )
-            	    // InternalMelange.g:4273:8: ( ( () ( ( ruleOpCompare ) ) ) )=> ( () ( ( ruleOpCompare ) ) )
+            	    // InternalMelange.g:4292:7: ( ( ( () ( ( ruleOpCompare ) ) ) )=> ( () ( ( ruleOpCompare ) ) ) )
+            	    // InternalMelange.g:4292:8: ( ( () ( ( ruleOpCompare ) ) ) )=> ( () ( ( ruleOpCompare ) ) )
             	    {
-            	    // InternalMelange.g:4278:6: ( () ( ( ruleOpCompare ) ) )
-            	    // InternalMelange.g:4278:7: () ( ( ruleOpCompare ) )
+            	    // InternalMelange.g:4297:6: ( () ( ( ruleOpCompare ) ) )
+            	    // InternalMelange.g:4297:7: () ( ( ruleOpCompare ) )
             	    {
-            	    // InternalMelange.g:4278:7: ()
-            	    // InternalMelange.g:4279:5: 
+            	    // InternalMelange.g:4297:7: ()
+            	    // InternalMelange.g:4298:5: 
             	    {
             	    if ( state.backtracking==0 ) {
 
@@ -12265,11 +12307,11 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    // InternalMelange.g:4284:2: ( ( ruleOpCompare ) )
-            	    // InternalMelange.g:4285:1: ( ruleOpCompare )
+            	    // InternalMelange.g:4303:2: ( ( ruleOpCompare ) )
+            	    // InternalMelange.g:4304:1: ( ruleOpCompare )
             	    {
-            	    // InternalMelange.g:4285:1: ( ruleOpCompare )
-            	    // InternalMelange.g:4286:3: ruleOpCompare
+            	    // InternalMelange.g:4304:1: ( ruleOpCompare )
+            	    // InternalMelange.g:4305:3: ruleOpCompare
             	    {
             	    if ( state.backtracking==0 ) {
 
@@ -12283,7 +12325,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
             	      	        newCompositeNode(grammarAccess.getXRelationalExpressionAccess().getFeatureJvmIdentifiableElementCrossReference_1_1_0_0_1_0()); 
             	      	    
             	    }
-            	    pushFollow(FOLLOW_63);
+            	    pushFollow(FOLLOW_64);
             	    ruleOpCompare();
 
             	    state._fsp--;
@@ -12305,18 +12347,18 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    // InternalMelange.g:4299:4: ( (lv_rightOperand_6_0= ruleXOtherOperatorExpression ) )
-            	    // InternalMelange.g:4300:1: (lv_rightOperand_6_0= ruleXOtherOperatorExpression )
+            	    // InternalMelange.g:4318:4: ( (lv_rightOperand_6_0= ruleXOtherOperatorExpression ) )
+            	    // InternalMelange.g:4319:1: (lv_rightOperand_6_0= ruleXOtherOperatorExpression )
             	    {
-            	    // InternalMelange.g:4300:1: (lv_rightOperand_6_0= ruleXOtherOperatorExpression )
-            	    // InternalMelange.g:4301:3: lv_rightOperand_6_0= ruleXOtherOperatorExpression
+            	    // InternalMelange.g:4319:1: (lv_rightOperand_6_0= ruleXOtherOperatorExpression )
+            	    // InternalMelange.g:4320:3: lv_rightOperand_6_0= ruleXOtherOperatorExpression
             	    {
             	    if ( state.backtracking==0 ) {
             	       
             	      	        newCompositeNode(grammarAccess.getXRelationalExpressionAccess().getRightOperandXOtherOperatorExpressionParserRuleCall_1_1_1_0()); 
             	      	    
             	    }
-            	    pushFollow(FOLLOW_71);
+            	    pushFollow(FOLLOW_72);
             	    lv_rightOperand_6_0=ruleXOtherOperatorExpression();
 
             	    state._fsp--;
@@ -12375,7 +12417,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleOpCompare"
-    // InternalMelange.g:4325:1: entryRuleOpCompare returns [String current=null] : iv_ruleOpCompare= ruleOpCompare EOF ;
+    // InternalMelange.g:4344:1: entryRuleOpCompare returns [String current=null] : iv_ruleOpCompare= ruleOpCompare EOF ;
     public final String entryRuleOpCompare() throws RecognitionException {
         String current = null;
 
@@ -12383,8 +12425,8 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalMelange.g:4326:2: (iv_ruleOpCompare= ruleOpCompare EOF )
-            // InternalMelange.g:4327:2: iv_ruleOpCompare= ruleOpCompare EOF
+            // InternalMelange.g:4345:2: (iv_ruleOpCompare= ruleOpCompare EOF )
+            // InternalMelange.g:4346:2: iv_ruleOpCompare= ruleOpCompare EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getOpCompareRule()); 
@@ -12415,7 +12457,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleOpCompare"
-    // InternalMelange.g:4334:1: ruleOpCompare returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= '>=' | (kw= '<' kw= '=' ) | kw= '>' | kw= '<' ) ;
+    // InternalMelange.g:4353:1: ruleOpCompare returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= '>=' | (kw= '<' kw= '=' ) | kw= '>' | kw= '<' ) ;
     public final AntlrDatatypeRuleToken ruleOpCompare() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -12424,22 +12466,22 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // InternalMelange.g:4337:28: ( (kw= '>=' | (kw= '<' kw= '=' ) | kw= '>' | kw= '<' ) )
-            // InternalMelange.g:4338:1: (kw= '>=' | (kw= '<' kw= '=' ) | kw= '>' | kw= '<' )
+            // InternalMelange.g:4356:28: ( (kw= '>=' | (kw= '<' kw= '=' ) | kw= '>' | kw= '<' ) )
+            // InternalMelange.g:4357:1: (kw= '>=' | (kw= '<' kw= '=' ) | kw= '>' | kw= '<' )
             {
-            // InternalMelange.g:4338:1: (kw= '>=' | (kw= '<' kw= '=' ) | kw= '>' | kw= '<' )
+            // InternalMelange.g:4357:1: (kw= '>=' | (kw= '<' kw= '=' ) | kw= '>' | kw= '<' )
             int alt78=4;
             switch ( input.LA(1) ) {
-            case 72:
+            case 73:
                 {
                 alt78=1;
                 }
                 break;
-            case 70:
+            case 71:
                 {
                 int LA78_2 = input.LA(2);
 
-                if ( (LA78_2==EOF||(LA78_2>=RULE_ID && LA78_2<=RULE_DECIMAL)||LA78_2==16||(LA78_2>=23 && LA78_2<=24)||LA78_2==56||LA78_2==62||LA78_2==70||LA78_2==85||LA78_2==96||LA78_2==98||LA78_2==100||(LA78_2>=103 && LA78_2<=105)||(LA78_2>=108 && LA78_2<=120)||LA78_2==122) ) {
+                if ( (LA78_2==EOF||(LA78_2>=RULE_ID && LA78_2<=RULE_DECIMAL)||LA78_2==16||(LA78_2>=23 && LA78_2<=24)||LA78_2==56||LA78_2==63||LA78_2==71||LA78_2==86||LA78_2==97||LA78_2==99||LA78_2==101||(LA78_2>=104 && LA78_2<=106)||(LA78_2>=109 && LA78_2<=121)||LA78_2==123) ) {
                     alt78=4;
                 }
                 else if ( (LA78_2==18) ) {
@@ -12454,7 +12496,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                 }
                 }
                 break;
-            case 71:
+            case 72:
                 {
                 alt78=3;
                 }
@@ -12469,9 +12511,9 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
             switch (alt78) {
                 case 1 :
-                    // InternalMelange.g:4339:2: kw= '>='
+                    // InternalMelange.g:4358:2: kw= '>='
                     {
-                    kw=(Token)match(input,72,FOLLOW_2); if (state.failed) return current;
+                    kw=(Token)match(input,73,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
@@ -12482,12 +12524,12 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalMelange.g:4345:6: (kw= '<' kw= '=' )
+                    // InternalMelange.g:4364:6: (kw= '<' kw= '=' )
                     {
-                    // InternalMelange.g:4345:6: (kw= '<' kw= '=' )
-                    // InternalMelange.g:4346:2: kw= '<' kw= '='
+                    // InternalMelange.g:4364:6: (kw= '<' kw= '=' )
+                    // InternalMelange.g:4365:2: kw= '<' kw= '='
                     {
-                    kw=(Token)match(input,70,FOLLOW_9); if (state.failed) return current;
+                    kw=(Token)match(input,71,FOLLOW_9); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
@@ -12508,9 +12550,9 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalMelange.g:4359:2: kw= '>'
+                    // InternalMelange.g:4378:2: kw= '>'
                     {
-                    kw=(Token)match(input,71,FOLLOW_2); if (state.failed) return current;
+                    kw=(Token)match(input,72,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
@@ -12521,9 +12563,9 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // InternalMelange.g:4366:2: kw= '<'
+                    // InternalMelange.g:4385:2: kw= '<'
                     {
-                    kw=(Token)match(input,70,FOLLOW_2); if (state.failed) return current;
+                    kw=(Token)match(input,71,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
@@ -12556,7 +12598,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleXOtherOperatorExpression"
-    // InternalMelange.g:4379:1: entryRuleXOtherOperatorExpression returns [EObject current=null] : iv_ruleXOtherOperatorExpression= ruleXOtherOperatorExpression EOF ;
+    // InternalMelange.g:4398:1: entryRuleXOtherOperatorExpression returns [EObject current=null] : iv_ruleXOtherOperatorExpression= ruleXOtherOperatorExpression EOF ;
     public final EObject entryRuleXOtherOperatorExpression() throws RecognitionException {
         EObject current = null;
 
@@ -12564,8 +12606,8 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalMelange.g:4380:2: (iv_ruleXOtherOperatorExpression= ruleXOtherOperatorExpression EOF )
-            // InternalMelange.g:4381:2: iv_ruleXOtherOperatorExpression= ruleXOtherOperatorExpression EOF
+            // InternalMelange.g:4399:2: (iv_ruleXOtherOperatorExpression= ruleXOtherOperatorExpression EOF )
+            // InternalMelange.g:4400:2: iv_ruleXOtherOperatorExpression= ruleXOtherOperatorExpression EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getXOtherOperatorExpressionRule()); 
@@ -12596,7 +12638,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleXOtherOperatorExpression"
-    // InternalMelange.g:4388:1: ruleXOtherOperatorExpression returns [EObject current=null] : (this_XAdditiveExpression_0= ruleXAdditiveExpression ( ( ( ( () ( ( ruleOpOther ) ) ) )=> ( () ( ( ruleOpOther ) ) ) ) ( (lv_rightOperand_3_0= ruleXAdditiveExpression ) ) )* ) ;
+    // InternalMelange.g:4407:1: ruleXOtherOperatorExpression returns [EObject current=null] : (this_XAdditiveExpression_0= ruleXAdditiveExpression ( ( ( ( () ( ( ruleOpOther ) ) ) )=> ( () ( ( ruleOpOther ) ) ) ) ( (lv_rightOperand_3_0= ruleXAdditiveExpression ) ) )* ) ;
     public final EObject ruleXOtherOperatorExpression() throws RecognitionException {
         EObject current = null;
 
@@ -12608,18 +12650,18 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // InternalMelange.g:4391:28: ( (this_XAdditiveExpression_0= ruleXAdditiveExpression ( ( ( ( () ( ( ruleOpOther ) ) ) )=> ( () ( ( ruleOpOther ) ) ) ) ( (lv_rightOperand_3_0= ruleXAdditiveExpression ) ) )* ) )
-            // InternalMelange.g:4392:1: (this_XAdditiveExpression_0= ruleXAdditiveExpression ( ( ( ( () ( ( ruleOpOther ) ) ) )=> ( () ( ( ruleOpOther ) ) ) ) ( (lv_rightOperand_3_0= ruleXAdditiveExpression ) ) )* )
+            // InternalMelange.g:4410:28: ( (this_XAdditiveExpression_0= ruleXAdditiveExpression ( ( ( ( () ( ( ruleOpOther ) ) ) )=> ( () ( ( ruleOpOther ) ) ) ) ( (lv_rightOperand_3_0= ruleXAdditiveExpression ) ) )* ) )
+            // InternalMelange.g:4411:1: (this_XAdditiveExpression_0= ruleXAdditiveExpression ( ( ( ( () ( ( ruleOpOther ) ) ) )=> ( () ( ( ruleOpOther ) ) ) ) ( (lv_rightOperand_3_0= ruleXAdditiveExpression ) ) )* )
             {
-            // InternalMelange.g:4392:1: (this_XAdditiveExpression_0= ruleXAdditiveExpression ( ( ( ( () ( ( ruleOpOther ) ) ) )=> ( () ( ( ruleOpOther ) ) ) ) ( (lv_rightOperand_3_0= ruleXAdditiveExpression ) ) )* )
-            // InternalMelange.g:4393:5: this_XAdditiveExpression_0= ruleXAdditiveExpression ( ( ( ( () ( ( ruleOpOther ) ) ) )=> ( () ( ( ruleOpOther ) ) ) ) ( (lv_rightOperand_3_0= ruleXAdditiveExpression ) ) )*
+            // InternalMelange.g:4411:1: (this_XAdditiveExpression_0= ruleXAdditiveExpression ( ( ( ( () ( ( ruleOpOther ) ) ) )=> ( () ( ( ruleOpOther ) ) ) ) ( (lv_rightOperand_3_0= ruleXAdditiveExpression ) ) )* )
+            // InternalMelange.g:4412:5: this_XAdditiveExpression_0= ruleXAdditiveExpression ( ( ( ( () ( ( ruleOpOther ) ) ) )=> ( () ( ( ruleOpOther ) ) ) ) ( (lv_rightOperand_3_0= ruleXAdditiveExpression ) ) )*
             {
             if ( state.backtracking==0 ) {
                
                       newCompositeNode(grammarAccess.getXOtherOperatorExpressionAccess().getXAdditiveExpressionParserRuleCall_0()); 
                   
             }
-            pushFollow(FOLLOW_72);
+            pushFollow(FOLLOW_73);
             this_XAdditiveExpression_0=ruleXAdditiveExpression();
 
             state._fsp--;
@@ -12630,23 +12672,23 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                       afterParserOrEnumRuleCall();
                   
             }
-            // InternalMelange.g:4401:1: ( ( ( ( () ( ( ruleOpOther ) ) ) )=> ( () ( ( ruleOpOther ) ) ) ) ( (lv_rightOperand_3_0= ruleXAdditiveExpression ) ) )*
+            // InternalMelange.g:4420:1: ( ( ( ( () ( ( ruleOpOther ) ) ) )=> ( () ( ( ruleOpOther ) ) ) ) ( (lv_rightOperand_3_0= ruleXAdditiveExpression ) ) )*
             loop79:
             do {
                 int alt79=2;
                 alt79 = dfa79.predict(input);
                 switch (alt79) {
             	case 1 :
-            	    // InternalMelange.g:4401:2: ( ( ( () ( ( ruleOpOther ) ) ) )=> ( () ( ( ruleOpOther ) ) ) ) ( (lv_rightOperand_3_0= ruleXAdditiveExpression ) )
+            	    // InternalMelange.g:4420:2: ( ( ( () ( ( ruleOpOther ) ) ) )=> ( () ( ( ruleOpOther ) ) ) ) ( (lv_rightOperand_3_0= ruleXAdditiveExpression ) )
             	    {
-            	    // InternalMelange.g:4401:2: ( ( ( () ( ( ruleOpOther ) ) ) )=> ( () ( ( ruleOpOther ) ) ) )
-            	    // InternalMelange.g:4401:3: ( ( () ( ( ruleOpOther ) ) ) )=> ( () ( ( ruleOpOther ) ) )
+            	    // InternalMelange.g:4420:2: ( ( ( () ( ( ruleOpOther ) ) ) )=> ( () ( ( ruleOpOther ) ) ) )
+            	    // InternalMelange.g:4420:3: ( ( () ( ( ruleOpOther ) ) ) )=> ( () ( ( ruleOpOther ) ) )
             	    {
-            	    // InternalMelange.g:4406:6: ( () ( ( ruleOpOther ) ) )
-            	    // InternalMelange.g:4406:7: () ( ( ruleOpOther ) )
+            	    // InternalMelange.g:4425:6: ( () ( ( ruleOpOther ) ) )
+            	    // InternalMelange.g:4425:7: () ( ( ruleOpOther ) )
             	    {
-            	    // InternalMelange.g:4406:7: ()
-            	    // InternalMelange.g:4407:5: 
+            	    // InternalMelange.g:4425:7: ()
+            	    // InternalMelange.g:4426:5: 
             	    {
             	    if ( state.backtracking==0 ) {
 
@@ -12658,11 +12700,11 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    // InternalMelange.g:4412:2: ( ( ruleOpOther ) )
-            	    // InternalMelange.g:4413:1: ( ruleOpOther )
+            	    // InternalMelange.g:4431:2: ( ( ruleOpOther ) )
+            	    // InternalMelange.g:4432:1: ( ruleOpOther )
             	    {
-            	    // InternalMelange.g:4413:1: ( ruleOpOther )
-            	    // InternalMelange.g:4414:3: ruleOpOther
+            	    // InternalMelange.g:4432:1: ( ruleOpOther )
+            	    // InternalMelange.g:4433:3: ruleOpOther
             	    {
             	    if ( state.backtracking==0 ) {
 
@@ -12676,7 +12718,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
             	      	        newCompositeNode(grammarAccess.getXOtherOperatorExpressionAccess().getFeatureJvmIdentifiableElementCrossReference_1_0_0_1_0()); 
             	      	    
             	    }
-            	    pushFollow(FOLLOW_63);
+            	    pushFollow(FOLLOW_64);
             	    ruleOpOther();
 
             	    state._fsp--;
@@ -12698,18 +12740,18 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    // InternalMelange.g:4427:4: ( (lv_rightOperand_3_0= ruleXAdditiveExpression ) )
-            	    // InternalMelange.g:4428:1: (lv_rightOperand_3_0= ruleXAdditiveExpression )
+            	    // InternalMelange.g:4446:4: ( (lv_rightOperand_3_0= ruleXAdditiveExpression ) )
+            	    // InternalMelange.g:4447:1: (lv_rightOperand_3_0= ruleXAdditiveExpression )
             	    {
-            	    // InternalMelange.g:4428:1: (lv_rightOperand_3_0= ruleXAdditiveExpression )
-            	    // InternalMelange.g:4429:3: lv_rightOperand_3_0= ruleXAdditiveExpression
+            	    // InternalMelange.g:4447:1: (lv_rightOperand_3_0= ruleXAdditiveExpression )
+            	    // InternalMelange.g:4448:3: lv_rightOperand_3_0= ruleXAdditiveExpression
             	    {
             	    if ( state.backtracking==0 ) {
             	       
             	      	        newCompositeNode(grammarAccess.getXOtherOperatorExpressionAccess().getRightOperandXAdditiveExpressionParserRuleCall_1_1_0()); 
             	      	    
             	    }
-            	    pushFollow(FOLLOW_72);
+            	    pushFollow(FOLLOW_73);
             	    lv_rightOperand_3_0=ruleXAdditiveExpression();
 
             	    state._fsp--;
@@ -12765,7 +12807,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleOpOther"
-    // InternalMelange.g:4453:1: entryRuleOpOther returns [String current=null] : iv_ruleOpOther= ruleOpOther EOF ;
+    // InternalMelange.g:4472:1: entryRuleOpOther returns [String current=null] : iv_ruleOpOther= ruleOpOther EOF ;
     public final String entryRuleOpOther() throws RecognitionException {
         String current = null;
 
@@ -12773,8 +12815,8 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalMelange.g:4454:2: (iv_ruleOpOther= ruleOpOther EOF )
-            // InternalMelange.g:4455:2: iv_ruleOpOther= ruleOpOther EOF
+            // InternalMelange.g:4473:2: (iv_ruleOpOther= ruleOpOther EOF )
+            // InternalMelange.g:4474:2: iv_ruleOpOther= ruleOpOther EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getOpOtherRule()); 
@@ -12805,7 +12847,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleOpOther"
-    // InternalMelange.g:4462:1: ruleOpOther returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= '->' | kw= '..<' | (kw= '>' kw= '..' ) | kw= '..' | kw= '=>' | (kw= '>' ( ( ( ( '>' '>' ) )=> (kw= '>' kw= '>' ) ) | kw= '>' ) ) | (kw= '<' ( ( ( ( '<' '<' ) )=> (kw= '<' kw= '<' ) ) | kw= '<' | kw= '=>' ) ) | kw= '<>' | kw= '?:' ) ;
+    // InternalMelange.g:4481:1: ruleOpOther returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= '->' | kw= '..<' | (kw= '>' kw= '..' ) | kw= '..' | kw= '=>' | (kw= '>' ( ( ( ( '>' '>' ) )=> (kw= '>' kw= '>' ) ) | kw= '>' ) ) | (kw= '<' ( ( ( ( '<' '<' ) )=> (kw= '<' kw= '<' ) ) | kw= '<' | kw= '=>' ) ) | kw= '<>' | kw= '?:' ) ;
     public final AntlrDatatypeRuleToken ruleOpOther() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -12814,15 +12856,15 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // InternalMelange.g:4465:28: ( (kw= '->' | kw= '..<' | (kw= '>' kw= '..' ) | kw= '..' | kw= '=>' | (kw= '>' ( ( ( ( '>' '>' ) )=> (kw= '>' kw= '>' ) ) | kw= '>' ) ) | (kw= '<' ( ( ( ( '<' '<' ) )=> (kw= '<' kw= '<' ) ) | kw= '<' | kw= '=>' ) ) | kw= '<>' | kw= '?:' ) )
-            // InternalMelange.g:4466:1: (kw= '->' | kw= '..<' | (kw= '>' kw= '..' ) | kw= '..' | kw= '=>' | (kw= '>' ( ( ( ( '>' '>' ) )=> (kw= '>' kw= '>' ) ) | kw= '>' ) ) | (kw= '<' ( ( ( ( '<' '<' ) )=> (kw= '<' kw= '<' ) ) | kw= '<' | kw= '=>' ) ) | kw= '<>' | kw= '?:' )
+            // InternalMelange.g:4484:28: ( (kw= '->' | kw= '..<' | (kw= '>' kw= '..' ) | kw= '..' | kw= '=>' | (kw= '>' ( ( ( ( '>' '>' ) )=> (kw= '>' kw= '>' ) ) | kw= '>' ) ) | (kw= '<' ( ( ( ( '<' '<' ) )=> (kw= '<' kw= '<' ) ) | kw= '<' | kw= '=>' ) ) | kw= '<>' | kw= '?:' ) )
+            // InternalMelange.g:4485:1: (kw= '->' | kw= '..<' | (kw= '>' kw= '..' ) | kw= '..' | kw= '=>' | (kw= '>' ( ( ( ( '>' '>' ) )=> (kw= '>' kw= '>' ) ) | kw= '>' ) ) | (kw= '<' ( ( ( ( '<' '<' ) )=> (kw= '<' kw= '<' ) ) | kw= '<' | kw= '=>' ) ) | kw= '<>' | kw= '?:' )
             {
-            // InternalMelange.g:4466:1: (kw= '->' | kw= '..<' | (kw= '>' kw= '..' ) | kw= '..' | kw= '=>' | (kw= '>' ( ( ( ( '>' '>' ) )=> (kw= '>' kw= '>' ) ) | kw= '>' ) ) | (kw= '<' ( ( ( ( '<' '<' ) )=> (kw= '<' kw= '<' ) ) | kw= '<' | kw= '=>' ) ) | kw= '<>' | kw= '?:' )
+            // InternalMelange.g:4485:1: (kw= '->' | kw= '..<' | (kw= '>' kw= '..' ) | kw= '..' | kw= '=>' | (kw= '>' ( ( ( ( '>' '>' ) )=> (kw= '>' kw= '>' ) ) | kw= '>' ) ) | (kw= '<' ( ( ( ( '<' '<' ) )=> (kw= '<' kw= '<' ) ) | kw= '<' | kw= '=>' ) ) | kw= '<>' | kw= '?:' )
             int alt82=9;
             alt82 = dfa82.predict(input);
             switch (alt82) {
                 case 1 :
-                    // InternalMelange.g:4467:2: kw= '->'
+                    // InternalMelange.g:4486:2: kw= '->'
                     {
                     kw=(Token)match(input,20,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -12835,9 +12877,9 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalMelange.g:4474:2: kw= '..<'
+                    // InternalMelange.g:4493:2: kw= '..<'
                     {
-                    kw=(Token)match(input,80,FOLLOW_2); if (state.failed) return current;
+                    kw=(Token)match(input,81,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
@@ -12848,19 +12890,19 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalMelange.g:4480:6: (kw= '>' kw= '..' )
+                    // InternalMelange.g:4499:6: (kw= '>' kw= '..' )
                     {
-                    // InternalMelange.g:4480:6: (kw= '>' kw= '..' )
-                    // InternalMelange.g:4481:2: kw= '>' kw= '..'
+                    // InternalMelange.g:4499:6: (kw= '>' kw= '..' )
+                    // InternalMelange.g:4500:2: kw= '>' kw= '..'
                     {
-                    kw=(Token)match(input,71,FOLLOW_73); if (state.failed) return current;
+                    kw=(Token)match(input,72,FOLLOW_74); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
                               newLeafNode(kw, grammarAccess.getOpOtherAccess().getGreaterThanSignKeyword_2_0()); 
                           
                     }
-                    kw=(Token)match(input,81,FOLLOW_2); if (state.failed) return current;
+                    kw=(Token)match(input,82,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
@@ -12874,9 +12916,9 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // InternalMelange.g:4494:2: kw= '..'
+                    // InternalMelange.g:4513:2: kw= '..'
                     {
-                    kw=(Token)match(input,81,FOLLOW_2); if (state.failed) return current;
+                    kw=(Token)match(input,82,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
@@ -12887,9 +12929,9 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // InternalMelange.g:4501:2: kw= '=>'
+                    // InternalMelange.g:4520:2: kw= '=>'
                     {
-                    kw=(Token)match(input,82,FOLLOW_2); if (state.failed) return current;
+                    kw=(Token)match(input,83,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
@@ -12900,29 +12942,29 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 6 :
-                    // InternalMelange.g:4507:6: (kw= '>' ( ( ( ( '>' '>' ) )=> (kw= '>' kw= '>' ) ) | kw= '>' ) )
+                    // InternalMelange.g:4526:6: (kw= '>' ( ( ( ( '>' '>' ) )=> (kw= '>' kw= '>' ) ) | kw= '>' ) )
                     {
-                    // InternalMelange.g:4507:6: (kw= '>' ( ( ( ( '>' '>' ) )=> (kw= '>' kw= '>' ) ) | kw= '>' ) )
-                    // InternalMelange.g:4508:2: kw= '>' ( ( ( ( '>' '>' ) )=> (kw= '>' kw= '>' ) ) | kw= '>' )
+                    // InternalMelange.g:4526:6: (kw= '>' ( ( ( ( '>' '>' ) )=> (kw= '>' kw= '>' ) ) | kw= '>' ) )
+                    // InternalMelange.g:4527:2: kw= '>' ( ( ( ( '>' '>' ) )=> (kw= '>' kw= '>' ) ) | kw= '>' )
                     {
-                    kw=(Token)match(input,71,FOLLOW_74); if (state.failed) return current;
+                    kw=(Token)match(input,72,FOLLOW_75); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
                               newLeafNode(kw, grammarAccess.getOpOtherAccess().getGreaterThanSignKeyword_5_0()); 
                           
                     }
-                    // InternalMelange.g:4513:1: ( ( ( ( '>' '>' ) )=> (kw= '>' kw= '>' ) ) | kw= '>' )
+                    // InternalMelange.g:4532:1: ( ( ( ( '>' '>' ) )=> (kw= '>' kw= '>' ) ) | kw= '>' )
                     int alt80=2;
                     int LA80_0 = input.LA(1);
 
-                    if ( (LA80_0==71) ) {
+                    if ( (LA80_0==72) ) {
                         int LA80_1 = input.LA(2);
 
-                        if ( (LA80_1==EOF||(LA80_1>=RULE_ID && LA80_1<=RULE_DECIMAL)||LA80_1==16||(LA80_1>=23 && LA80_1<=24)||LA80_1==56||LA80_1==62||LA80_1==70||LA80_1==85||LA80_1==96||LA80_1==98||LA80_1==100||(LA80_1>=103 && LA80_1<=105)||(LA80_1>=108 && LA80_1<=120)||LA80_1==122) ) {
+                        if ( (LA80_1==EOF||(LA80_1>=RULE_ID && LA80_1<=RULE_DECIMAL)||LA80_1==16||(LA80_1>=23 && LA80_1<=24)||LA80_1==56||LA80_1==63||LA80_1==71||LA80_1==86||LA80_1==97||LA80_1==99||LA80_1==101||(LA80_1>=104 && LA80_1<=106)||(LA80_1>=109 && LA80_1<=121)||LA80_1==123) ) {
                             alt80=2;
                         }
-                        else if ( (LA80_1==71) && (synpred14_InternalMelange())) {
+                        else if ( (LA80_1==72) && (synpred14_InternalMelange())) {
                             alt80=1;
                         }
                         else {
@@ -12942,22 +12984,22 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                     }
                     switch (alt80) {
                         case 1 :
-                            // InternalMelange.g:4513:2: ( ( ( '>' '>' ) )=> (kw= '>' kw= '>' ) )
+                            // InternalMelange.g:4532:2: ( ( ( '>' '>' ) )=> (kw= '>' kw= '>' ) )
                             {
-                            // InternalMelange.g:4513:2: ( ( ( '>' '>' ) )=> (kw= '>' kw= '>' ) )
-                            // InternalMelange.g:4513:3: ( ( '>' '>' ) )=> (kw= '>' kw= '>' )
+                            // InternalMelange.g:4532:2: ( ( ( '>' '>' ) )=> (kw= '>' kw= '>' ) )
+                            // InternalMelange.g:4532:3: ( ( '>' '>' ) )=> (kw= '>' kw= '>' )
                             {
-                            // InternalMelange.g:4517:5: (kw= '>' kw= '>' )
-                            // InternalMelange.g:4518:2: kw= '>' kw= '>'
+                            // InternalMelange.g:4536:5: (kw= '>' kw= '>' )
+                            // InternalMelange.g:4537:2: kw= '>' kw= '>'
                             {
-                            kw=(Token)match(input,71,FOLLOW_74); if (state.failed) return current;
+                            kw=(Token)match(input,72,FOLLOW_75); if (state.failed) return current;
                             if ( state.backtracking==0 ) {
 
                                       current.merge(kw);
                                       newLeafNode(kw, grammarAccess.getOpOtherAccess().getGreaterThanSignKeyword_5_1_0_0_0()); 
                                   
                             }
-                            kw=(Token)match(input,71,FOLLOW_2); if (state.failed) return current;
+                            kw=(Token)match(input,72,FOLLOW_2); if (state.failed) return current;
                             if ( state.backtracking==0 ) {
 
                                       current.merge(kw);
@@ -12974,9 +13016,9 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                             }
                             break;
                         case 2 :
-                            // InternalMelange.g:4531:2: kw= '>'
+                            // InternalMelange.g:4550:2: kw= '>'
                             {
-                            kw=(Token)match(input,71,FOLLOW_2); if (state.failed) return current;
+                            kw=(Token)match(input,72,FOLLOW_2); if (state.failed) return current;
                             if ( state.backtracking==0 ) {
 
                                       current.merge(kw);
@@ -12996,23 +13038,23 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 7 :
-                    // InternalMelange.g:4537:6: (kw= '<' ( ( ( ( '<' '<' ) )=> (kw= '<' kw= '<' ) ) | kw= '<' | kw= '=>' ) )
+                    // InternalMelange.g:4556:6: (kw= '<' ( ( ( ( '<' '<' ) )=> (kw= '<' kw= '<' ) ) | kw= '<' | kw= '=>' ) )
                     {
-                    // InternalMelange.g:4537:6: (kw= '<' ( ( ( ( '<' '<' ) )=> (kw= '<' kw= '<' ) ) | kw= '<' | kw= '=>' ) )
-                    // InternalMelange.g:4538:2: kw= '<' ( ( ( ( '<' '<' ) )=> (kw= '<' kw= '<' ) ) | kw= '<' | kw= '=>' )
+                    // InternalMelange.g:4556:6: (kw= '<' ( ( ( ( '<' '<' ) )=> (kw= '<' kw= '<' ) ) | kw= '<' | kw= '=>' ) )
+                    // InternalMelange.g:4557:2: kw= '<' ( ( ( ( '<' '<' ) )=> (kw= '<' kw= '<' ) ) | kw= '<' | kw= '=>' )
                     {
-                    kw=(Token)match(input,70,FOLLOW_75); if (state.failed) return current;
+                    kw=(Token)match(input,71,FOLLOW_76); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
                               newLeafNode(kw, grammarAccess.getOpOtherAccess().getLessThanSignKeyword_6_0()); 
                           
                     }
-                    // InternalMelange.g:4543:1: ( ( ( ( '<' '<' ) )=> (kw= '<' kw= '<' ) ) | kw= '<' | kw= '=>' )
+                    // InternalMelange.g:4562:1: ( ( ( ( '<' '<' ) )=> (kw= '<' kw= '<' ) ) | kw= '<' | kw= '=>' )
                     int alt81=3;
                     int LA81_0 = input.LA(1);
 
-                    if ( (LA81_0==70) ) {
+                    if ( (LA81_0==71) ) {
                         int LA81_1 = input.LA(2);
 
                         if ( (synpred15_InternalMelange()) ) {
@@ -13029,7 +13071,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                             throw nvae;
                         }
                     }
-                    else if ( (LA81_0==82) ) {
+                    else if ( (LA81_0==83) ) {
                         alt81=3;
                     }
                     else {
@@ -13041,22 +13083,22 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                     }
                     switch (alt81) {
                         case 1 :
-                            // InternalMelange.g:4543:2: ( ( ( '<' '<' ) )=> (kw= '<' kw= '<' ) )
+                            // InternalMelange.g:4562:2: ( ( ( '<' '<' ) )=> (kw= '<' kw= '<' ) )
                             {
-                            // InternalMelange.g:4543:2: ( ( ( '<' '<' ) )=> (kw= '<' kw= '<' ) )
-                            // InternalMelange.g:4543:3: ( ( '<' '<' ) )=> (kw= '<' kw= '<' )
+                            // InternalMelange.g:4562:2: ( ( ( '<' '<' ) )=> (kw= '<' kw= '<' ) )
+                            // InternalMelange.g:4562:3: ( ( '<' '<' ) )=> (kw= '<' kw= '<' )
                             {
-                            // InternalMelange.g:4547:5: (kw= '<' kw= '<' )
-                            // InternalMelange.g:4548:2: kw= '<' kw= '<'
+                            // InternalMelange.g:4566:5: (kw= '<' kw= '<' )
+                            // InternalMelange.g:4567:2: kw= '<' kw= '<'
                             {
-                            kw=(Token)match(input,70,FOLLOW_65); if (state.failed) return current;
+                            kw=(Token)match(input,71,FOLLOW_66); if (state.failed) return current;
                             if ( state.backtracking==0 ) {
 
                                       current.merge(kw);
                                       newLeafNode(kw, grammarAccess.getOpOtherAccess().getLessThanSignKeyword_6_1_0_0_0()); 
                                   
                             }
-                            kw=(Token)match(input,70,FOLLOW_2); if (state.failed) return current;
+                            kw=(Token)match(input,71,FOLLOW_2); if (state.failed) return current;
                             if ( state.backtracking==0 ) {
 
                                       current.merge(kw);
@@ -13073,9 +13115,9 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                             }
                             break;
                         case 2 :
-                            // InternalMelange.g:4561:2: kw= '<'
+                            // InternalMelange.g:4580:2: kw= '<'
                             {
-                            kw=(Token)match(input,70,FOLLOW_2); if (state.failed) return current;
+                            kw=(Token)match(input,71,FOLLOW_2); if (state.failed) return current;
                             if ( state.backtracking==0 ) {
 
                                       current.merge(kw);
@@ -13086,9 +13128,9 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                             }
                             break;
                         case 3 :
-                            // InternalMelange.g:4568:2: kw= '=>'
+                            // InternalMelange.g:4587:2: kw= '=>'
                             {
-                            kw=(Token)match(input,82,FOLLOW_2); if (state.failed) return current;
+                            kw=(Token)match(input,83,FOLLOW_2); if (state.failed) return current;
                             if ( state.backtracking==0 ) {
 
                                       current.merge(kw);
@@ -13108,9 +13150,9 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 8 :
-                    // InternalMelange.g:4575:2: kw= '<>'
+                    // InternalMelange.g:4594:2: kw= '<>'
                     {
-                    kw=(Token)match(input,83,FOLLOW_2); if (state.failed) return current;
+                    kw=(Token)match(input,84,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
@@ -13121,9 +13163,9 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 9 :
-                    // InternalMelange.g:4582:2: kw= '?:'
+                    // InternalMelange.g:4601:2: kw= '?:'
                     {
-                    kw=(Token)match(input,84,FOLLOW_2); if (state.failed) return current;
+                    kw=(Token)match(input,85,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
@@ -13156,7 +13198,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleXAdditiveExpression"
-    // InternalMelange.g:4595:1: entryRuleXAdditiveExpression returns [EObject current=null] : iv_ruleXAdditiveExpression= ruleXAdditiveExpression EOF ;
+    // InternalMelange.g:4614:1: entryRuleXAdditiveExpression returns [EObject current=null] : iv_ruleXAdditiveExpression= ruleXAdditiveExpression EOF ;
     public final EObject entryRuleXAdditiveExpression() throws RecognitionException {
         EObject current = null;
 
@@ -13164,8 +13206,8 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalMelange.g:4596:2: (iv_ruleXAdditiveExpression= ruleXAdditiveExpression EOF )
-            // InternalMelange.g:4597:2: iv_ruleXAdditiveExpression= ruleXAdditiveExpression EOF
+            // InternalMelange.g:4615:2: (iv_ruleXAdditiveExpression= ruleXAdditiveExpression EOF )
+            // InternalMelange.g:4616:2: iv_ruleXAdditiveExpression= ruleXAdditiveExpression EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getXAdditiveExpressionRule()); 
@@ -13196,7 +13238,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleXAdditiveExpression"
-    // InternalMelange.g:4604:1: ruleXAdditiveExpression returns [EObject current=null] : (this_XMultiplicativeExpression_0= ruleXMultiplicativeExpression ( ( ( ( () ( ( ruleOpAdd ) ) ) )=> ( () ( ( ruleOpAdd ) ) ) ) ( (lv_rightOperand_3_0= ruleXMultiplicativeExpression ) ) )* ) ;
+    // InternalMelange.g:4623:1: ruleXAdditiveExpression returns [EObject current=null] : (this_XMultiplicativeExpression_0= ruleXMultiplicativeExpression ( ( ( ( () ( ( ruleOpAdd ) ) ) )=> ( () ( ( ruleOpAdd ) ) ) ) ( (lv_rightOperand_3_0= ruleXMultiplicativeExpression ) ) )* ) ;
     public final EObject ruleXAdditiveExpression() throws RecognitionException {
         EObject current = null;
 
@@ -13208,18 +13250,18 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // InternalMelange.g:4607:28: ( (this_XMultiplicativeExpression_0= ruleXMultiplicativeExpression ( ( ( ( () ( ( ruleOpAdd ) ) ) )=> ( () ( ( ruleOpAdd ) ) ) ) ( (lv_rightOperand_3_0= ruleXMultiplicativeExpression ) ) )* ) )
-            // InternalMelange.g:4608:1: (this_XMultiplicativeExpression_0= ruleXMultiplicativeExpression ( ( ( ( () ( ( ruleOpAdd ) ) ) )=> ( () ( ( ruleOpAdd ) ) ) ) ( (lv_rightOperand_3_0= ruleXMultiplicativeExpression ) ) )* )
+            // InternalMelange.g:4626:28: ( (this_XMultiplicativeExpression_0= ruleXMultiplicativeExpression ( ( ( ( () ( ( ruleOpAdd ) ) ) )=> ( () ( ( ruleOpAdd ) ) ) ) ( (lv_rightOperand_3_0= ruleXMultiplicativeExpression ) ) )* ) )
+            // InternalMelange.g:4627:1: (this_XMultiplicativeExpression_0= ruleXMultiplicativeExpression ( ( ( ( () ( ( ruleOpAdd ) ) ) )=> ( () ( ( ruleOpAdd ) ) ) ) ( (lv_rightOperand_3_0= ruleXMultiplicativeExpression ) ) )* )
             {
-            // InternalMelange.g:4608:1: (this_XMultiplicativeExpression_0= ruleXMultiplicativeExpression ( ( ( ( () ( ( ruleOpAdd ) ) ) )=> ( () ( ( ruleOpAdd ) ) ) ) ( (lv_rightOperand_3_0= ruleXMultiplicativeExpression ) ) )* )
-            // InternalMelange.g:4609:5: this_XMultiplicativeExpression_0= ruleXMultiplicativeExpression ( ( ( ( () ( ( ruleOpAdd ) ) ) )=> ( () ( ( ruleOpAdd ) ) ) ) ( (lv_rightOperand_3_0= ruleXMultiplicativeExpression ) ) )*
+            // InternalMelange.g:4627:1: (this_XMultiplicativeExpression_0= ruleXMultiplicativeExpression ( ( ( ( () ( ( ruleOpAdd ) ) ) )=> ( () ( ( ruleOpAdd ) ) ) ) ( (lv_rightOperand_3_0= ruleXMultiplicativeExpression ) ) )* )
+            // InternalMelange.g:4628:5: this_XMultiplicativeExpression_0= ruleXMultiplicativeExpression ( ( ( ( () ( ( ruleOpAdd ) ) ) )=> ( () ( ( ruleOpAdd ) ) ) ) ( (lv_rightOperand_3_0= ruleXMultiplicativeExpression ) ) )*
             {
             if ( state.backtracking==0 ) {
                
                       newCompositeNode(grammarAccess.getXAdditiveExpressionAccess().getXMultiplicativeExpressionParserRuleCall_0()); 
                   
             }
-            pushFollow(FOLLOW_76);
+            pushFollow(FOLLOW_77);
             this_XMultiplicativeExpression_0=ruleXMultiplicativeExpression();
 
             state._fsp--;
@@ -13230,13 +13272,13 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                       afterParserOrEnumRuleCall();
                   
             }
-            // InternalMelange.g:4617:1: ( ( ( ( () ( ( ruleOpAdd ) ) ) )=> ( () ( ( ruleOpAdd ) ) ) ) ( (lv_rightOperand_3_0= ruleXMultiplicativeExpression ) ) )*
+            // InternalMelange.g:4636:1: ( ( ( ( () ( ( ruleOpAdd ) ) ) )=> ( () ( ( ruleOpAdd ) ) ) ) ( (lv_rightOperand_3_0= ruleXMultiplicativeExpression ) ) )*
             loop83:
             do {
                 int alt83=2;
                 int LA83_0 = input.LA(1);
 
-                if ( (LA83_0==85) ) {
+                if ( (LA83_0==86) ) {
                     int LA83_2 = input.LA(2);
 
                     if ( (synpred16_InternalMelange()) ) {
@@ -13258,16 +13300,16 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
                 switch (alt83) {
             	case 1 :
-            	    // InternalMelange.g:4617:2: ( ( ( () ( ( ruleOpAdd ) ) ) )=> ( () ( ( ruleOpAdd ) ) ) ) ( (lv_rightOperand_3_0= ruleXMultiplicativeExpression ) )
+            	    // InternalMelange.g:4636:2: ( ( ( () ( ( ruleOpAdd ) ) ) )=> ( () ( ( ruleOpAdd ) ) ) ) ( (lv_rightOperand_3_0= ruleXMultiplicativeExpression ) )
             	    {
-            	    // InternalMelange.g:4617:2: ( ( ( () ( ( ruleOpAdd ) ) ) )=> ( () ( ( ruleOpAdd ) ) ) )
-            	    // InternalMelange.g:4617:3: ( ( () ( ( ruleOpAdd ) ) ) )=> ( () ( ( ruleOpAdd ) ) )
+            	    // InternalMelange.g:4636:2: ( ( ( () ( ( ruleOpAdd ) ) ) )=> ( () ( ( ruleOpAdd ) ) ) )
+            	    // InternalMelange.g:4636:3: ( ( () ( ( ruleOpAdd ) ) ) )=> ( () ( ( ruleOpAdd ) ) )
             	    {
-            	    // InternalMelange.g:4622:6: ( () ( ( ruleOpAdd ) ) )
-            	    // InternalMelange.g:4622:7: () ( ( ruleOpAdd ) )
+            	    // InternalMelange.g:4641:6: ( () ( ( ruleOpAdd ) ) )
+            	    // InternalMelange.g:4641:7: () ( ( ruleOpAdd ) )
             	    {
-            	    // InternalMelange.g:4622:7: ()
-            	    // InternalMelange.g:4623:5: 
+            	    // InternalMelange.g:4641:7: ()
+            	    // InternalMelange.g:4642:5: 
             	    {
             	    if ( state.backtracking==0 ) {
 
@@ -13279,11 +13321,11 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    // InternalMelange.g:4628:2: ( ( ruleOpAdd ) )
-            	    // InternalMelange.g:4629:1: ( ruleOpAdd )
+            	    // InternalMelange.g:4647:2: ( ( ruleOpAdd ) )
+            	    // InternalMelange.g:4648:1: ( ruleOpAdd )
             	    {
-            	    // InternalMelange.g:4629:1: ( ruleOpAdd )
-            	    // InternalMelange.g:4630:3: ruleOpAdd
+            	    // InternalMelange.g:4648:1: ( ruleOpAdd )
+            	    // InternalMelange.g:4649:3: ruleOpAdd
             	    {
             	    if ( state.backtracking==0 ) {
 
@@ -13297,7 +13339,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
             	      	        newCompositeNode(grammarAccess.getXAdditiveExpressionAccess().getFeatureJvmIdentifiableElementCrossReference_1_0_0_1_0()); 
             	      	    
             	    }
-            	    pushFollow(FOLLOW_63);
+            	    pushFollow(FOLLOW_64);
             	    ruleOpAdd();
 
             	    state._fsp--;
@@ -13319,18 +13361,18 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    // InternalMelange.g:4643:4: ( (lv_rightOperand_3_0= ruleXMultiplicativeExpression ) )
-            	    // InternalMelange.g:4644:1: (lv_rightOperand_3_0= ruleXMultiplicativeExpression )
+            	    // InternalMelange.g:4662:4: ( (lv_rightOperand_3_0= ruleXMultiplicativeExpression ) )
+            	    // InternalMelange.g:4663:1: (lv_rightOperand_3_0= ruleXMultiplicativeExpression )
             	    {
-            	    // InternalMelange.g:4644:1: (lv_rightOperand_3_0= ruleXMultiplicativeExpression )
-            	    // InternalMelange.g:4645:3: lv_rightOperand_3_0= ruleXMultiplicativeExpression
+            	    // InternalMelange.g:4663:1: (lv_rightOperand_3_0= ruleXMultiplicativeExpression )
+            	    // InternalMelange.g:4664:3: lv_rightOperand_3_0= ruleXMultiplicativeExpression
             	    {
             	    if ( state.backtracking==0 ) {
             	       
             	      	        newCompositeNode(grammarAccess.getXAdditiveExpressionAccess().getRightOperandXMultiplicativeExpressionParserRuleCall_1_1_0()); 
             	      	    
             	    }
-            	    pushFollow(FOLLOW_76);
+            	    pushFollow(FOLLOW_77);
             	    lv_rightOperand_3_0=ruleXMultiplicativeExpression();
 
             	    state._fsp--;
@@ -13386,7 +13428,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleOpAdd"
-    // InternalMelange.g:4669:1: entryRuleOpAdd returns [String current=null] : iv_ruleOpAdd= ruleOpAdd EOF ;
+    // InternalMelange.g:4688:1: entryRuleOpAdd returns [String current=null] : iv_ruleOpAdd= ruleOpAdd EOF ;
     public final String entryRuleOpAdd() throws RecognitionException {
         String current = null;
 
@@ -13394,8 +13436,8 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalMelange.g:4670:2: (iv_ruleOpAdd= ruleOpAdd EOF )
-            // InternalMelange.g:4671:2: iv_ruleOpAdd= ruleOpAdd EOF
+            // InternalMelange.g:4689:2: (iv_ruleOpAdd= ruleOpAdd EOF )
+            // InternalMelange.g:4690:2: iv_ruleOpAdd= ruleOpAdd EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getOpAddRule()); 
@@ -13426,7 +13468,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleOpAdd"
-    // InternalMelange.g:4678:1: ruleOpAdd returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= '+' | kw= '-' ) ;
+    // InternalMelange.g:4697:1: ruleOpAdd returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= '+' | kw= '-' ) ;
     public final AntlrDatatypeRuleToken ruleOpAdd() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -13435,14 +13477,14 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // InternalMelange.g:4681:28: ( (kw= '+' | kw= '-' ) )
-            // InternalMelange.g:4682:1: (kw= '+' | kw= '-' )
+            // InternalMelange.g:4700:28: ( (kw= '+' | kw= '-' ) )
+            // InternalMelange.g:4701:1: (kw= '+' | kw= '-' )
             {
-            // InternalMelange.g:4682:1: (kw= '+' | kw= '-' )
+            // InternalMelange.g:4701:1: (kw= '+' | kw= '-' )
             int alt84=2;
             int LA84_0 = input.LA(1);
 
-            if ( (LA84_0==85) ) {
+            if ( (LA84_0==86) ) {
                 alt84=1;
             }
             else if ( (LA84_0==56) ) {
@@ -13457,9 +13499,9 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
             }
             switch (alt84) {
                 case 1 :
-                    // InternalMelange.g:4683:2: kw= '+'
+                    // InternalMelange.g:4702:2: kw= '+'
                     {
-                    kw=(Token)match(input,85,FOLLOW_2); if (state.failed) return current;
+                    kw=(Token)match(input,86,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
@@ -13470,7 +13512,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalMelange.g:4690:2: kw= '-'
+                    // InternalMelange.g:4709:2: kw= '-'
                     {
                     kw=(Token)match(input,56,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -13505,7 +13547,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleXMultiplicativeExpression"
-    // InternalMelange.g:4703:1: entryRuleXMultiplicativeExpression returns [EObject current=null] : iv_ruleXMultiplicativeExpression= ruleXMultiplicativeExpression EOF ;
+    // InternalMelange.g:4722:1: entryRuleXMultiplicativeExpression returns [EObject current=null] : iv_ruleXMultiplicativeExpression= ruleXMultiplicativeExpression EOF ;
     public final EObject entryRuleXMultiplicativeExpression() throws RecognitionException {
         EObject current = null;
 
@@ -13513,8 +13555,8 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalMelange.g:4704:2: (iv_ruleXMultiplicativeExpression= ruleXMultiplicativeExpression EOF )
-            // InternalMelange.g:4705:2: iv_ruleXMultiplicativeExpression= ruleXMultiplicativeExpression EOF
+            // InternalMelange.g:4723:2: (iv_ruleXMultiplicativeExpression= ruleXMultiplicativeExpression EOF )
+            // InternalMelange.g:4724:2: iv_ruleXMultiplicativeExpression= ruleXMultiplicativeExpression EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getXMultiplicativeExpressionRule()); 
@@ -13545,7 +13587,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleXMultiplicativeExpression"
-    // InternalMelange.g:4712:1: ruleXMultiplicativeExpression returns [EObject current=null] : (this_XUnaryOperation_0= ruleXUnaryOperation ( ( ( ( () ( ( ruleOpMulti ) ) ) )=> ( () ( ( ruleOpMulti ) ) ) ) ( (lv_rightOperand_3_0= ruleXUnaryOperation ) ) )* ) ;
+    // InternalMelange.g:4731:1: ruleXMultiplicativeExpression returns [EObject current=null] : (this_XUnaryOperation_0= ruleXUnaryOperation ( ( ( ( () ( ( ruleOpMulti ) ) ) )=> ( () ( ( ruleOpMulti ) ) ) ) ( (lv_rightOperand_3_0= ruleXUnaryOperation ) ) )* ) ;
     public final EObject ruleXMultiplicativeExpression() throws RecognitionException {
         EObject current = null;
 
@@ -13557,18 +13599,18 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // InternalMelange.g:4715:28: ( (this_XUnaryOperation_0= ruleXUnaryOperation ( ( ( ( () ( ( ruleOpMulti ) ) ) )=> ( () ( ( ruleOpMulti ) ) ) ) ( (lv_rightOperand_3_0= ruleXUnaryOperation ) ) )* ) )
-            // InternalMelange.g:4716:1: (this_XUnaryOperation_0= ruleXUnaryOperation ( ( ( ( () ( ( ruleOpMulti ) ) ) )=> ( () ( ( ruleOpMulti ) ) ) ) ( (lv_rightOperand_3_0= ruleXUnaryOperation ) ) )* )
+            // InternalMelange.g:4734:28: ( (this_XUnaryOperation_0= ruleXUnaryOperation ( ( ( ( () ( ( ruleOpMulti ) ) ) )=> ( () ( ( ruleOpMulti ) ) ) ) ( (lv_rightOperand_3_0= ruleXUnaryOperation ) ) )* ) )
+            // InternalMelange.g:4735:1: (this_XUnaryOperation_0= ruleXUnaryOperation ( ( ( ( () ( ( ruleOpMulti ) ) ) )=> ( () ( ( ruleOpMulti ) ) ) ) ( (lv_rightOperand_3_0= ruleXUnaryOperation ) ) )* )
             {
-            // InternalMelange.g:4716:1: (this_XUnaryOperation_0= ruleXUnaryOperation ( ( ( ( () ( ( ruleOpMulti ) ) ) )=> ( () ( ( ruleOpMulti ) ) ) ) ( (lv_rightOperand_3_0= ruleXUnaryOperation ) ) )* )
-            // InternalMelange.g:4717:5: this_XUnaryOperation_0= ruleXUnaryOperation ( ( ( ( () ( ( ruleOpMulti ) ) ) )=> ( () ( ( ruleOpMulti ) ) ) ) ( (lv_rightOperand_3_0= ruleXUnaryOperation ) ) )*
+            // InternalMelange.g:4735:1: (this_XUnaryOperation_0= ruleXUnaryOperation ( ( ( ( () ( ( ruleOpMulti ) ) ) )=> ( () ( ( ruleOpMulti ) ) ) ) ( (lv_rightOperand_3_0= ruleXUnaryOperation ) ) )* )
+            // InternalMelange.g:4736:5: this_XUnaryOperation_0= ruleXUnaryOperation ( ( ( ( () ( ( ruleOpMulti ) ) ) )=> ( () ( ( ruleOpMulti ) ) ) ) ( (lv_rightOperand_3_0= ruleXUnaryOperation ) ) )*
             {
             if ( state.backtracking==0 ) {
                
                       newCompositeNode(grammarAccess.getXMultiplicativeExpressionAccess().getXUnaryOperationParserRuleCall_0()); 
                   
             }
-            pushFollow(FOLLOW_77);
+            pushFollow(FOLLOW_78);
             this_XUnaryOperation_0=ruleXUnaryOperation();
 
             state._fsp--;
@@ -13579,12 +13621,12 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                       afterParserOrEnumRuleCall();
                   
             }
-            // InternalMelange.g:4725:1: ( ( ( ( () ( ( ruleOpMulti ) ) ) )=> ( () ( ( ruleOpMulti ) ) ) ) ( (lv_rightOperand_3_0= ruleXUnaryOperation ) ) )*
+            // InternalMelange.g:4744:1: ( ( ( ( () ( ( ruleOpMulti ) ) ) )=> ( () ( ( ruleOpMulti ) ) ) ) ( (lv_rightOperand_3_0= ruleXUnaryOperation ) ) )*
             loop85:
             do {
                 int alt85=2;
                 switch ( input.LA(1) ) {
-                case 86:
+                case 87:
                     {
                     int LA85_2 = input.LA(2);
 
@@ -13595,7 +13637,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
                     }
                     break;
-                case 87:
+                case 88:
                     {
                     int LA85_3 = input.LA(2);
 
@@ -13606,7 +13648,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
                     }
                     break;
-                case 88:
+                case 89:
                     {
                     int LA85_4 = input.LA(2);
 
@@ -13617,7 +13659,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
                     }
                     break;
-                case 89:
+                case 90:
                     {
                     int LA85_5 = input.LA(2);
 
@@ -13633,16 +13675,16 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
                 switch (alt85) {
             	case 1 :
-            	    // InternalMelange.g:4725:2: ( ( ( () ( ( ruleOpMulti ) ) ) )=> ( () ( ( ruleOpMulti ) ) ) ) ( (lv_rightOperand_3_0= ruleXUnaryOperation ) )
+            	    // InternalMelange.g:4744:2: ( ( ( () ( ( ruleOpMulti ) ) ) )=> ( () ( ( ruleOpMulti ) ) ) ) ( (lv_rightOperand_3_0= ruleXUnaryOperation ) )
             	    {
-            	    // InternalMelange.g:4725:2: ( ( ( () ( ( ruleOpMulti ) ) ) )=> ( () ( ( ruleOpMulti ) ) ) )
-            	    // InternalMelange.g:4725:3: ( ( () ( ( ruleOpMulti ) ) ) )=> ( () ( ( ruleOpMulti ) ) )
+            	    // InternalMelange.g:4744:2: ( ( ( () ( ( ruleOpMulti ) ) ) )=> ( () ( ( ruleOpMulti ) ) ) )
+            	    // InternalMelange.g:4744:3: ( ( () ( ( ruleOpMulti ) ) ) )=> ( () ( ( ruleOpMulti ) ) )
             	    {
-            	    // InternalMelange.g:4730:6: ( () ( ( ruleOpMulti ) ) )
-            	    // InternalMelange.g:4730:7: () ( ( ruleOpMulti ) )
+            	    // InternalMelange.g:4749:6: ( () ( ( ruleOpMulti ) ) )
+            	    // InternalMelange.g:4749:7: () ( ( ruleOpMulti ) )
             	    {
-            	    // InternalMelange.g:4730:7: ()
-            	    // InternalMelange.g:4731:5: 
+            	    // InternalMelange.g:4749:7: ()
+            	    // InternalMelange.g:4750:5: 
             	    {
             	    if ( state.backtracking==0 ) {
 
@@ -13654,11 +13696,11 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    // InternalMelange.g:4736:2: ( ( ruleOpMulti ) )
-            	    // InternalMelange.g:4737:1: ( ruleOpMulti )
+            	    // InternalMelange.g:4755:2: ( ( ruleOpMulti ) )
+            	    // InternalMelange.g:4756:1: ( ruleOpMulti )
             	    {
-            	    // InternalMelange.g:4737:1: ( ruleOpMulti )
-            	    // InternalMelange.g:4738:3: ruleOpMulti
+            	    // InternalMelange.g:4756:1: ( ruleOpMulti )
+            	    // InternalMelange.g:4757:3: ruleOpMulti
             	    {
             	    if ( state.backtracking==0 ) {
 
@@ -13672,7 +13714,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
             	      	        newCompositeNode(grammarAccess.getXMultiplicativeExpressionAccess().getFeatureJvmIdentifiableElementCrossReference_1_0_0_1_0()); 
             	      	    
             	    }
-            	    pushFollow(FOLLOW_63);
+            	    pushFollow(FOLLOW_64);
             	    ruleOpMulti();
 
             	    state._fsp--;
@@ -13694,18 +13736,18 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    // InternalMelange.g:4751:4: ( (lv_rightOperand_3_0= ruleXUnaryOperation ) )
-            	    // InternalMelange.g:4752:1: (lv_rightOperand_3_0= ruleXUnaryOperation )
+            	    // InternalMelange.g:4770:4: ( (lv_rightOperand_3_0= ruleXUnaryOperation ) )
+            	    // InternalMelange.g:4771:1: (lv_rightOperand_3_0= ruleXUnaryOperation )
             	    {
-            	    // InternalMelange.g:4752:1: (lv_rightOperand_3_0= ruleXUnaryOperation )
-            	    // InternalMelange.g:4753:3: lv_rightOperand_3_0= ruleXUnaryOperation
+            	    // InternalMelange.g:4771:1: (lv_rightOperand_3_0= ruleXUnaryOperation )
+            	    // InternalMelange.g:4772:3: lv_rightOperand_3_0= ruleXUnaryOperation
             	    {
             	    if ( state.backtracking==0 ) {
             	       
             	      	        newCompositeNode(grammarAccess.getXMultiplicativeExpressionAccess().getRightOperandXUnaryOperationParserRuleCall_1_1_0()); 
             	      	    
             	    }
-            	    pushFollow(FOLLOW_77);
+            	    pushFollow(FOLLOW_78);
             	    lv_rightOperand_3_0=ruleXUnaryOperation();
 
             	    state._fsp--;
@@ -13761,7 +13803,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleOpMulti"
-    // InternalMelange.g:4777:1: entryRuleOpMulti returns [String current=null] : iv_ruleOpMulti= ruleOpMulti EOF ;
+    // InternalMelange.g:4796:1: entryRuleOpMulti returns [String current=null] : iv_ruleOpMulti= ruleOpMulti EOF ;
     public final String entryRuleOpMulti() throws RecognitionException {
         String current = null;
 
@@ -13769,8 +13811,8 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalMelange.g:4778:2: (iv_ruleOpMulti= ruleOpMulti EOF )
-            // InternalMelange.g:4779:2: iv_ruleOpMulti= ruleOpMulti EOF
+            // InternalMelange.g:4797:2: (iv_ruleOpMulti= ruleOpMulti EOF )
+            // InternalMelange.g:4798:2: iv_ruleOpMulti= ruleOpMulti EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getOpMultiRule()); 
@@ -13801,7 +13843,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleOpMulti"
-    // InternalMelange.g:4786:1: ruleOpMulti returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= '*' | kw= '**' | kw= '/' | kw= '%' ) ;
+    // InternalMelange.g:4805:1: ruleOpMulti returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= '*' | kw= '**' | kw= '/' | kw= '%' ) ;
     public final AntlrDatatypeRuleToken ruleOpMulti() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -13810,28 +13852,28 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // InternalMelange.g:4789:28: ( (kw= '*' | kw= '**' | kw= '/' | kw= '%' ) )
-            // InternalMelange.g:4790:1: (kw= '*' | kw= '**' | kw= '/' | kw= '%' )
+            // InternalMelange.g:4808:28: ( (kw= '*' | kw= '**' | kw= '/' | kw= '%' ) )
+            // InternalMelange.g:4809:1: (kw= '*' | kw= '**' | kw= '/' | kw= '%' )
             {
-            // InternalMelange.g:4790:1: (kw= '*' | kw= '**' | kw= '/' | kw= '%' )
+            // InternalMelange.g:4809:1: (kw= '*' | kw= '**' | kw= '/' | kw= '%' )
             int alt86=4;
             switch ( input.LA(1) ) {
-            case 86:
+            case 87:
                 {
                 alt86=1;
                 }
                 break;
-            case 87:
+            case 88:
                 {
                 alt86=2;
                 }
                 break;
-            case 88:
+            case 89:
                 {
                 alt86=3;
                 }
                 break;
-            case 89:
+            case 90:
                 {
                 alt86=4;
                 }
@@ -13846,9 +13888,9 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
             switch (alt86) {
                 case 1 :
-                    // InternalMelange.g:4791:2: kw= '*'
+                    // InternalMelange.g:4810:2: kw= '*'
                     {
-                    kw=(Token)match(input,86,FOLLOW_2); if (state.failed) return current;
+                    kw=(Token)match(input,87,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
@@ -13859,9 +13901,9 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalMelange.g:4798:2: kw= '**'
+                    // InternalMelange.g:4817:2: kw= '**'
                     {
-                    kw=(Token)match(input,87,FOLLOW_2); if (state.failed) return current;
+                    kw=(Token)match(input,88,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
@@ -13872,9 +13914,9 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalMelange.g:4805:2: kw= '/'
+                    // InternalMelange.g:4824:2: kw= '/'
                     {
-                    kw=(Token)match(input,88,FOLLOW_2); if (state.failed) return current;
+                    kw=(Token)match(input,89,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
@@ -13885,9 +13927,9 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // InternalMelange.g:4812:2: kw= '%'
+                    // InternalMelange.g:4831:2: kw= '%'
                     {
-                    kw=(Token)match(input,89,FOLLOW_2); if (state.failed) return current;
+                    kw=(Token)match(input,90,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
@@ -13920,7 +13962,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleXUnaryOperation"
-    // InternalMelange.g:4825:1: entryRuleXUnaryOperation returns [EObject current=null] : iv_ruleXUnaryOperation= ruleXUnaryOperation EOF ;
+    // InternalMelange.g:4844:1: entryRuleXUnaryOperation returns [EObject current=null] : iv_ruleXUnaryOperation= ruleXUnaryOperation EOF ;
     public final EObject entryRuleXUnaryOperation() throws RecognitionException {
         EObject current = null;
 
@@ -13928,8 +13970,8 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalMelange.g:4826:2: (iv_ruleXUnaryOperation= ruleXUnaryOperation EOF )
-            // InternalMelange.g:4827:2: iv_ruleXUnaryOperation= ruleXUnaryOperation EOF
+            // InternalMelange.g:4845:2: (iv_ruleXUnaryOperation= ruleXUnaryOperation EOF )
+            // InternalMelange.g:4846:2: iv_ruleXUnaryOperation= ruleXUnaryOperation EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getXUnaryOperationRule()); 
@@ -13960,7 +14002,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleXUnaryOperation"
-    // InternalMelange.g:4834:1: ruleXUnaryOperation returns [EObject current=null] : ( ( () ( ( ruleOpUnary ) ) ( (lv_operand_2_0= ruleXUnaryOperation ) ) ) | this_XCastedExpression_3= ruleXCastedExpression ) ;
+    // InternalMelange.g:4853:1: ruleXUnaryOperation returns [EObject current=null] : ( ( () ( ( ruleOpUnary ) ) ( (lv_operand_2_0= ruleXUnaryOperation ) ) ) | this_XCastedExpression_3= ruleXCastedExpression ) ;
     public final EObject ruleXUnaryOperation() throws RecognitionException {
         EObject current = null;
 
@@ -13972,17 +14014,17 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // InternalMelange.g:4837:28: ( ( ( () ( ( ruleOpUnary ) ) ( (lv_operand_2_0= ruleXUnaryOperation ) ) ) | this_XCastedExpression_3= ruleXCastedExpression ) )
-            // InternalMelange.g:4838:1: ( ( () ( ( ruleOpUnary ) ) ( (lv_operand_2_0= ruleXUnaryOperation ) ) ) | this_XCastedExpression_3= ruleXCastedExpression )
+            // InternalMelange.g:4856:28: ( ( ( () ( ( ruleOpUnary ) ) ( (lv_operand_2_0= ruleXUnaryOperation ) ) ) | this_XCastedExpression_3= ruleXCastedExpression ) )
+            // InternalMelange.g:4857:1: ( ( () ( ( ruleOpUnary ) ) ( (lv_operand_2_0= ruleXUnaryOperation ) ) ) | this_XCastedExpression_3= ruleXCastedExpression )
             {
-            // InternalMelange.g:4838:1: ( ( () ( ( ruleOpUnary ) ) ( (lv_operand_2_0= ruleXUnaryOperation ) ) ) | this_XCastedExpression_3= ruleXCastedExpression )
+            // InternalMelange.g:4857:1: ( ( () ( ( ruleOpUnary ) ) ( (lv_operand_2_0= ruleXUnaryOperation ) ) ) | this_XCastedExpression_3= ruleXCastedExpression )
             int alt87=2;
             int LA87_0 = input.LA(1);
 
-            if ( (LA87_0==23||LA87_0==56||LA87_0==85) ) {
+            if ( (LA87_0==23||LA87_0==56||LA87_0==86) ) {
                 alt87=1;
             }
-            else if ( ((LA87_0>=RULE_ID && LA87_0<=RULE_DECIMAL)||LA87_0==16||LA87_0==24||LA87_0==62||LA87_0==70||LA87_0==96||LA87_0==98||LA87_0==100||(LA87_0>=103 && LA87_0<=105)||(LA87_0>=108 && LA87_0<=120)||LA87_0==122) ) {
+            else if ( ((LA87_0>=RULE_ID && LA87_0<=RULE_DECIMAL)||LA87_0==16||LA87_0==24||LA87_0==63||LA87_0==71||LA87_0==97||LA87_0==99||LA87_0==101||(LA87_0>=104 && LA87_0<=106)||(LA87_0>=109 && LA87_0<=121)||LA87_0==123) ) {
                 alt87=2;
             }
             else {
@@ -13994,13 +14036,13 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
             }
             switch (alt87) {
                 case 1 :
-                    // InternalMelange.g:4838:2: ( () ( ( ruleOpUnary ) ) ( (lv_operand_2_0= ruleXUnaryOperation ) ) )
+                    // InternalMelange.g:4857:2: ( () ( ( ruleOpUnary ) ) ( (lv_operand_2_0= ruleXUnaryOperation ) ) )
                     {
-                    // InternalMelange.g:4838:2: ( () ( ( ruleOpUnary ) ) ( (lv_operand_2_0= ruleXUnaryOperation ) ) )
-                    // InternalMelange.g:4838:3: () ( ( ruleOpUnary ) ) ( (lv_operand_2_0= ruleXUnaryOperation ) )
+                    // InternalMelange.g:4857:2: ( () ( ( ruleOpUnary ) ) ( (lv_operand_2_0= ruleXUnaryOperation ) ) )
+                    // InternalMelange.g:4857:3: () ( ( ruleOpUnary ) ) ( (lv_operand_2_0= ruleXUnaryOperation ) )
                     {
-                    // InternalMelange.g:4838:3: ()
-                    // InternalMelange.g:4839:5: 
+                    // InternalMelange.g:4857:3: ()
+                    // InternalMelange.g:4858:5: 
                     {
                     if ( state.backtracking==0 ) {
 
@@ -14012,11 +14054,11 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // InternalMelange.g:4844:2: ( ( ruleOpUnary ) )
-                    // InternalMelange.g:4845:1: ( ruleOpUnary )
+                    // InternalMelange.g:4863:2: ( ( ruleOpUnary ) )
+                    // InternalMelange.g:4864:1: ( ruleOpUnary )
                     {
-                    // InternalMelange.g:4845:1: ( ruleOpUnary )
-                    // InternalMelange.g:4846:3: ruleOpUnary
+                    // InternalMelange.g:4864:1: ( ruleOpUnary )
+                    // InternalMelange.g:4865:3: ruleOpUnary
                     {
                     if ( state.backtracking==0 ) {
 
@@ -14030,7 +14072,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                       	        newCompositeNode(grammarAccess.getXUnaryOperationAccess().getFeatureJvmIdentifiableElementCrossReference_0_1_0()); 
                       	    
                     }
-                    pushFollow(FOLLOW_63);
+                    pushFollow(FOLLOW_64);
                     ruleOpUnary();
 
                     state._fsp--;
@@ -14046,11 +14088,11 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // InternalMelange.g:4859:2: ( (lv_operand_2_0= ruleXUnaryOperation ) )
-                    // InternalMelange.g:4860:1: (lv_operand_2_0= ruleXUnaryOperation )
+                    // InternalMelange.g:4878:2: ( (lv_operand_2_0= ruleXUnaryOperation ) )
+                    // InternalMelange.g:4879:1: (lv_operand_2_0= ruleXUnaryOperation )
                     {
-                    // InternalMelange.g:4860:1: (lv_operand_2_0= ruleXUnaryOperation )
-                    // InternalMelange.g:4861:3: lv_operand_2_0= ruleXUnaryOperation
+                    // InternalMelange.g:4879:1: (lv_operand_2_0= ruleXUnaryOperation )
+                    // InternalMelange.g:4880:3: lv_operand_2_0= ruleXUnaryOperation
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -14088,7 +14130,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalMelange.g:4879:5: this_XCastedExpression_3= ruleXCastedExpression
+                    // InternalMelange.g:4898:5: this_XCastedExpression_3= ruleXCastedExpression
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -14132,7 +14174,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleOpUnary"
-    // InternalMelange.g:4895:1: entryRuleOpUnary returns [String current=null] : iv_ruleOpUnary= ruleOpUnary EOF ;
+    // InternalMelange.g:4914:1: entryRuleOpUnary returns [String current=null] : iv_ruleOpUnary= ruleOpUnary EOF ;
     public final String entryRuleOpUnary() throws RecognitionException {
         String current = null;
 
@@ -14140,8 +14182,8 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalMelange.g:4896:2: (iv_ruleOpUnary= ruleOpUnary EOF )
-            // InternalMelange.g:4897:2: iv_ruleOpUnary= ruleOpUnary EOF
+            // InternalMelange.g:4915:2: (iv_ruleOpUnary= ruleOpUnary EOF )
+            // InternalMelange.g:4916:2: iv_ruleOpUnary= ruleOpUnary EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getOpUnaryRule()); 
@@ -14172,7 +14214,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleOpUnary"
-    // InternalMelange.g:4904:1: ruleOpUnary returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= '!' | kw= '-' | kw= '+' ) ;
+    // InternalMelange.g:4923:1: ruleOpUnary returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= '!' | kw= '-' | kw= '+' ) ;
     public final AntlrDatatypeRuleToken ruleOpUnary() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -14181,10 +14223,10 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // InternalMelange.g:4907:28: ( (kw= '!' | kw= '-' | kw= '+' ) )
-            // InternalMelange.g:4908:1: (kw= '!' | kw= '-' | kw= '+' )
+            // InternalMelange.g:4926:28: ( (kw= '!' | kw= '-' | kw= '+' ) )
+            // InternalMelange.g:4927:1: (kw= '!' | kw= '-' | kw= '+' )
             {
-            // InternalMelange.g:4908:1: (kw= '!' | kw= '-' | kw= '+' )
+            // InternalMelange.g:4927:1: (kw= '!' | kw= '-' | kw= '+' )
             int alt88=3;
             switch ( input.LA(1) ) {
             case 23:
@@ -14197,7 +14239,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                 alt88=2;
                 }
                 break;
-            case 85:
+            case 86:
                 {
                 alt88=3;
                 }
@@ -14212,7 +14254,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
             switch (alt88) {
                 case 1 :
-                    // InternalMelange.g:4909:2: kw= '!'
+                    // InternalMelange.g:4928:2: kw= '!'
                     {
                     kw=(Token)match(input,23,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -14225,7 +14267,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalMelange.g:4916:2: kw= '-'
+                    // InternalMelange.g:4935:2: kw= '-'
                     {
                     kw=(Token)match(input,56,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -14238,9 +14280,9 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalMelange.g:4923:2: kw= '+'
+                    // InternalMelange.g:4942:2: kw= '+'
                     {
-                    kw=(Token)match(input,85,FOLLOW_2); if (state.failed) return current;
+                    kw=(Token)match(input,86,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
@@ -14273,7 +14315,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleXCastedExpression"
-    // InternalMelange.g:4936:1: entryRuleXCastedExpression returns [EObject current=null] : iv_ruleXCastedExpression= ruleXCastedExpression EOF ;
+    // InternalMelange.g:4955:1: entryRuleXCastedExpression returns [EObject current=null] : iv_ruleXCastedExpression= ruleXCastedExpression EOF ;
     public final EObject entryRuleXCastedExpression() throws RecognitionException {
         EObject current = null;
 
@@ -14281,8 +14323,8 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalMelange.g:4937:2: (iv_ruleXCastedExpression= ruleXCastedExpression EOF )
-            // InternalMelange.g:4938:2: iv_ruleXCastedExpression= ruleXCastedExpression EOF
+            // InternalMelange.g:4956:2: (iv_ruleXCastedExpression= ruleXCastedExpression EOF )
+            // InternalMelange.g:4957:2: iv_ruleXCastedExpression= ruleXCastedExpression EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getXCastedExpressionRule()); 
@@ -14313,7 +14355,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleXCastedExpression"
-    // InternalMelange.g:4945:1: ruleXCastedExpression returns [EObject current=null] : (this_XPostfixOperation_0= ruleXPostfixOperation ( ( ( ( () 'as' ) )=> ( () otherlv_2= 'as' ) ) ( (lv_type_3_0= ruleJvmTypeReference ) ) )* ) ;
+    // InternalMelange.g:4964:1: ruleXCastedExpression returns [EObject current=null] : (this_XPostfixOperation_0= ruleXPostfixOperation ( ( ( ( () 'as' ) )=> ( () otherlv_2= 'as' ) ) ( (lv_type_3_0= ruleJvmTypeReference ) ) )* ) ;
     public final EObject ruleXCastedExpression() throws RecognitionException {
         EObject current = null;
 
@@ -14326,18 +14368,18 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // InternalMelange.g:4948:28: ( (this_XPostfixOperation_0= ruleXPostfixOperation ( ( ( ( () 'as' ) )=> ( () otherlv_2= 'as' ) ) ( (lv_type_3_0= ruleJvmTypeReference ) ) )* ) )
-            // InternalMelange.g:4949:1: (this_XPostfixOperation_0= ruleXPostfixOperation ( ( ( ( () 'as' ) )=> ( () otherlv_2= 'as' ) ) ( (lv_type_3_0= ruleJvmTypeReference ) ) )* )
+            // InternalMelange.g:4967:28: ( (this_XPostfixOperation_0= ruleXPostfixOperation ( ( ( ( () 'as' ) )=> ( () otherlv_2= 'as' ) ) ( (lv_type_3_0= ruleJvmTypeReference ) ) )* ) )
+            // InternalMelange.g:4968:1: (this_XPostfixOperation_0= ruleXPostfixOperation ( ( ( ( () 'as' ) )=> ( () otherlv_2= 'as' ) ) ( (lv_type_3_0= ruleJvmTypeReference ) ) )* )
             {
-            // InternalMelange.g:4949:1: (this_XPostfixOperation_0= ruleXPostfixOperation ( ( ( ( () 'as' ) )=> ( () otherlv_2= 'as' ) ) ( (lv_type_3_0= ruleJvmTypeReference ) ) )* )
-            // InternalMelange.g:4950:5: this_XPostfixOperation_0= ruleXPostfixOperation ( ( ( ( () 'as' ) )=> ( () otherlv_2= 'as' ) ) ( (lv_type_3_0= ruleJvmTypeReference ) ) )*
+            // InternalMelange.g:4968:1: (this_XPostfixOperation_0= ruleXPostfixOperation ( ( ( ( () 'as' ) )=> ( () otherlv_2= 'as' ) ) ( (lv_type_3_0= ruleJvmTypeReference ) ) )* )
+            // InternalMelange.g:4969:5: this_XPostfixOperation_0= ruleXPostfixOperation ( ( ( ( () 'as' ) )=> ( () otherlv_2= 'as' ) ) ( (lv_type_3_0= ruleJvmTypeReference ) ) )*
             {
             if ( state.backtracking==0 ) {
                
                       newCompositeNode(grammarAccess.getXCastedExpressionAccess().getXPostfixOperationParserRuleCall_0()); 
                   
             }
-            pushFollow(FOLLOW_78);
+            pushFollow(FOLLOW_79);
             this_XPostfixOperation_0=ruleXPostfixOperation();
 
             state._fsp--;
@@ -14348,13 +14390,13 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                       afterParserOrEnumRuleCall();
                   
             }
-            // InternalMelange.g:4958:1: ( ( ( ( () 'as' ) )=> ( () otherlv_2= 'as' ) ) ( (lv_type_3_0= ruleJvmTypeReference ) ) )*
+            // InternalMelange.g:4977:1: ( ( ( ( () 'as' ) )=> ( () otherlv_2= 'as' ) ) ( (lv_type_3_0= ruleJvmTypeReference ) ) )*
             loop89:
             do {
                 int alt89=2;
                 int LA89_0 = input.LA(1);
 
-                if ( (LA89_0==90) ) {
+                if ( (LA89_0==91) ) {
                     int LA89_2 = input.LA(2);
 
                     if ( (synpred18_InternalMelange()) ) {
@@ -14367,16 +14409,16 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
                 switch (alt89) {
             	case 1 :
-            	    // InternalMelange.g:4958:2: ( ( ( () 'as' ) )=> ( () otherlv_2= 'as' ) ) ( (lv_type_3_0= ruleJvmTypeReference ) )
+            	    // InternalMelange.g:4977:2: ( ( ( () 'as' ) )=> ( () otherlv_2= 'as' ) ) ( (lv_type_3_0= ruleJvmTypeReference ) )
             	    {
-            	    // InternalMelange.g:4958:2: ( ( ( () 'as' ) )=> ( () otherlv_2= 'as' ) )
-            	    // InternalMelange.g:4958:3: ( ( () 'as' ) )=> ( () otherlv_2= 'as' )
+            	    // InternalMelange.g:4977:2: ( ( ( () 'as' ) )=> ( () otherlv_2= 'as' ) )
+            	    // InternalMelange.g:4977:3: ( ( () 'as' ) )=> ( () otherlv_2= 'as' )
             	    {
-            	    // InternalMelange.g:4960:5: ( () otherlv_2= 'as' )
-            	    // InternalMelange.g:4960:6: () otherlv_2= 'as'
+            	    // InternalMelange.g:4979:5: ( () otherlv_2= 'as' )
+            	    // InternalMelange.g:4979:6: () otherlv_2= 'as'
             	    {
-            	    // InternalMelange.g:4960:6: ()
-            	    // InternalMelange.g:4961:5: 
+            	    // InternalMelange.g:4979:6: ()
+            	    // InternalMelange.g:4980:5: 
             	    {
             	    if ( state.backtracking==0 ) {
 
@@ -14388,7 +14430,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    otherlv_2=(Token)match(input,90,FOLLOW_33); if (state.failed) return current;
+            	    otherlv_2=(Token)match(input,91,FOLLOW_33); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
             	          	newLeafNode(otherlv_2, grammarAccess.getXCastedExpressionAccess().getAsKeyword_1_0_0_1());
@@ -14400,18 +14442,18 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    // InternalMelange.g:4970:3: ( (lv_type_3_0= ruleJvmTypeReference ) )
-            	    // InternalMelange.g:4971:1: (lv_type_3_0= ruleJvmTypeReference )
+            	    // InternalMelange.g:4989:3: ( (lv_type_3_0= ruleJvmTypeReference ) )
+            	    // InternalMelange.g:4990:1: (lv_type_3_0= ruleJvmTypeReference )
             	    {
-            	    // InternalMelange.g:4971:1: (lv_type_3_0= ruleJvmTypeReference )
-            	    // InternalMelange.g:4972:3: lv_type_3_0= ruleJvmTypeReference
+            	    // InternalMelange.g:4990:1: (lv_type_3_0= ruleJvmTypeReference )
+            	    // InternalMelange.g:4991:3: lv_type_3_0= ruleJvmTypeReference
             	    {
             	    if ( state.backtracking==0 ) {
             	       
             	      	        newCompositeNode(grammarAccess.getXCastedExpressionAccess().getTypeJvmTypeReferenceParserRuleCall_1_1_0()); 
             	      	    
             	    }
-            	    pushFollow(FOLLOW_78);
+            	    pushFollow(FOLLOW_79);
             	    lv_type_3_0=ruleJvmTypeReference();
 
             	    state._fsp--;
@@ -14467,7 +14509,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleXPostfixOperation"
-    // InternalMelange.g:4996:1: entryRuleXPostfixOperation returns [EObject current=null] : iv_ruleXPostfixOperation= ruleXPostfixOperation EOF ;
+    // InternalMelange.g:5015:1: entryRuleXPostfixOperation returns [EObject current=null] : iv_ruleXPostfixOperation= ruleXPostfixOperation EOF ;
     public final EObject entryRuleXPostfixOperation() throws RecognitionException {
         EObject current = null;
 
@@ -14475,8 +14517,8 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalMelange.g:4997:2: (iv_ruleXPostfixOperation= ruleXPostfixOperation EOF )
-            // InternalMelange.g:4998:2: iv_ruleXPostfixOperation= ruleXPostfixOperation EOF
+            // InternalMelange.g:5016:2: (iv_ruleXPostfixOperation= ruleXPostfixOperation EOF )
+            // InternalMelange.g:5017:2: iv_ruleXPostfixOperation= ruleXPostfixOperation EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getXPostfixOperationRule()); 
@@ -14507,7 +14549,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleXPostfixOperation"
-    // InternalMelange.g:5005:1: ruleXPostfixOperation returns [EObject current=null] : (this_XMemberFeatureCall_0= ruleXMemberFeatureCall ( ( ( () ( ( ruleOpPostfix ) ) ) )=> ( () ( ( ruleOpPostfix ) ) ) )? ) ;
+    // InternalMelange.g:5024:1: ruleXPostfixOperation returns [EObject current=null] : (this_XMemberFeatureCall_0= ruleXMemberFeatureCall ( ( ( () ( ( ruleOpPostfix ) ) ) )=> ( () ( ( ruleOpPostfix ) ) ) )? ) ;
     public final EObject ruleXPostfixOperation() throws RecognitionException {
         EObject current = null;
 
@@ -14517,18 +14559,18 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // InternalMelange.g:5008:28: ( (this_XMemberFeatureCall_0= ruleXMemberFeatureCall ( ( ( () ( ( ruleOpPostfix ) ) ) )=> ( () ( ( ruleOpPostfix ) ) ) )? ) )
-            // InternalMelange.g:5009:1: (this_XMemberFeatureCall_0= ruleXMemberFeatureCall ( ( ( () ( ( ruleOpPostfix ) ) ) )=> ( () ( ( ruleOpPostfix ) ) ) )? )
+            // InternalMelange.g:5027:28: ( (this_XMemberFeatureCall_0= ruleXMemberFeatureCall ( ( ( () ( ( ruleOpPostfix ) ) ) )=> ( () ( ( ruleOpPostfix ) ) ) )? ) )
+            // InternalMelange.g:5028:1: (this_XMemberFeatureCall_0= ruleXMemberFeatureCall ( ( ( () ( ( ruleOpPostfix ) ) ) )=> ( () ( ( ruleOpPostfix ) ) ) )? )
             {
-            // InternalMelange.g:5009:1: (this_XMemberFeatureCall_0= ruleXMemberFeatureCall ( ( ( () ( ( ruleOpPostfix ) ) ) )=> ( () ( ( ruleOpPostfix ) ) ) )? )
-            // InternalMelange.g:5010:5: this_XMemberFeatureCall_0= ruleXMemberFeatureCall ( ( ( () ( ( ruleOpPostfix ) ) ) )=> ( () ( ( ruleOpPostfix ) ) ) )?
+            // InternalMelange.g:5028:1: (this_XMemberFeatureCall_0= ruleXMemberFeatureCall ( ( ( () ( ( ruleOpPostfix ) ) ) )=> ( () ( ( ruleOpPostfix ) ) ) )? )
+            // InternalMelange.g:5029:5: this_XMemberFeatureCall_0= ruleXMemberFeatureCall ( ( ( () ( ( ruleOpPostfix ) ) ) )=> ( () ( ( ruleOpPostfix ) ) ) )?
             {
             if ( state.backtracking==0 ) {
                
                       newCompositeNode(grammarAccess.getXPostfixOperationAccess().getXMemberFeatureCallParserRuleCall_0()); 
                   
             }
-            pushFollow(FOLLOW_79);
+            pushFollow(FOLLOW_80);
             this_XMemberFeatureCall_0=ruleXMemberFeatureCall();
 
             state._fsp--;
@@ -14539,18 +14581,18 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                       afterParserOrEnumRuleCall();
                   
             }
-            // InternalMelange.g:5018:1: ( ( ( () ( ( ruleOpPostfix ) ) ) )=> ( () ( ( ruleOpPostfix ) ) ) )?
+            // InternalMelange.g:5037:1: ( ( ( () ( ( ruleOpPostfix ) ) ) )=> ( () ( ( ruleOpPostfix ) ) ) )?
             int alt90=2;
             int LA90_0 = input.LA(1);
 
-            if ( (LA90_0==91) ) {
+            if ( (LA90_0==92) ) {
                 int LA90_1 = input.LA(2);
 
                 if ( (synpred19_InternalMelange()) ) {
                     alt90=1;
                 }
             }
-            else if ( (LA90_0==92) ) {
+            else if ( (LA90_0==93) ) {
                 int LA90_2 = input.LA(2);
 
                 if ( (synpred19_InternalMelange()) ) {
@@ -14559,13 +14601,13 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
             }
             switch (alt90) {
                 case 1 :
-                    // InternalMelange.g:5018:2: ( ( () ( ( ruleOpPostfix ) ) ) )=> ( () ( ( ruleOpPostfix ) ) )
+                    // InternalMelange.g:5037:2: ( ( () ( ( ruleOpPostfix ) ) ) )=> ( () ( ( ruleOpPostfix ) ) )
                     {
-                    // InternalMelange.g:5023:6: ( () ( ( ruleOpPostfix ) ) )
-                    // InternalMelange.g:5023:7: () ( ( ruleOpPostfix ) )
+                    // InternalMelange.g:5042:6: ( () ( ( ruleOpPostfix ) ) )
+                    // InternalMelange.g:5042:7: () ( ( ruleOpPostfix ) )
                     {
-                    // InternalMelange.g:5023:7: ()
-                    // InternalMelange.g:5024:5: 
+                    // InternalMelange.g:5042:7: ()
+                    // InternalMelange.g:5043:5: 
                     {
                     if ( state.backtracking==0 ) {
 
@@ -14577,11 +14619,11 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // InternalMelange.g:5029:2: ( ( ruleOpPostfix ) )
-                    // InternalMelange.g:5030:1: ( ruleOpPostfix )
+                    // InternalMelange.g:5048:2: ( ( ruleOpPostfix ) )
+                    // InternalMelange.g:5049:1: ( ruleOpPostfix )
                     {
-                    // InternalMelange.g:5030:1: ( ruleOpPostfix )
-                    // InternalMelange.g:5031:3: ruleOpPostfix
+                    // InternalMelange.g:5049:1: ( ruleOpPostfix )
+                    // InternalMelange.g:5050:3: ruleOpPostfix
                     {
                     if ( state.backtracking==0 ) {
 
@@ -14643,7 +14685,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleOpPostfix"
-    // InternalMelange.g:5052:1: entryRuleOpPostfix returns [String current=null] : iv_ruleOpPostfix= ruleOpPostfix EOF ;
+    // InternalMelange.g:5071:1: entryRuleOpPostfix returns [String current=null] : iv_ruleOpPostfix= ruleOpPostfix EOF ;
     public final String entryRuleOpPostfix() throws RecognitionException {
         String current = null;
 
@@ -14651,8 +14693,8 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalMelange.g:5053:2: (iv_ruleOpPostfix= ruleOpPostfix EOF )
-            // InternalMelange.g:5054:2: iv_ruleOpPostfix= ruleOpPostfix EOF
+            // InternalMelange.g:5072:2: (iv_ruleOpPostfix= ruleOpPostfix EOF )
+            // InternalMelange.g:5073:2: iv_ruleOpPostfix= ruleOpPostfix EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getOpPostfixRule()); 
@@ -14683,7 +14725,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleOpPostfix"
-    // InternalMelange.g:5061:1: ruleOpPostfix returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= '++' | kw= '--' ) ;
+    // InternalMelange.g:5080:1: ruleOpPostfix returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= '++' | kw= '--' ) ;
     public final AntlrDatatypeRuleToken ruleOpPostfix() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -14692,17 +14734,17 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // InternalMelange.g:5064:28: ( (kw= '++' | kw= '--' ) )
-            // InternalMelange.g:5065:1: (kw= '++' | kw= '--' )
+            // InternalMelange.g:5083:28: ( (kw= '++' | kw= '--' ) )
+            // InternalMelange.g:5084:1: (kw= '++' | kw= '--' )
             {
-            // InternalMelange.g:5065:1: (kw= '++' | kw= '--' )
+            // InternalMelange.g:5084:1: (kw= '++' | kw= '--' )
             int alt91=2;
             int LA91_0 = input.LA(1);
 
-            if ( (LA91_0==91) ) {
+            if ( (LA91_0==92) ) {
                 alt91=1;
             }
-            else if ( (LA91_0==92) ) {
+            else if ( (LA91_0==93) ) {
                 alt91=2;
             }
             else {
@@ -14714,9 +14756,9 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
             }
             switch (alt91) {
                 case 1 :
-                    // InternalMelange.g:5066:2: kw= '++'
+                    // InternalMelange.g:5085:2: kw= '++'
                     {
-                    kw=(Token)match(input,91,FOLLOW_2); if (state.failed) return current;
+                    kw=(Token)match(input,92,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
@@ -14727,9 +14769,9 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalMelange.g:5073:2: kw= '--'
+                    // InternalMelange.g:5092:2: kw= '--'
                     {
-                    kw=(Token)match(input,92,FOLLOW_2); if (state.failed) return current;
+                    kw=(Token)match(input,93,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
@@ -14762,7 +14804,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleXMemberFeatureCall"
-    // InternalMelange.g:5086:1: entryRuleXMemberFeatureCall returns [EObject current=null] : iv_ruleXMemberFeatureCall= ruleXMemberFeatureCall EOF ;
+    // InternalMelange.g:5105:1: entryRuleXMemberFeatureCall returns [EObject current=null] : iv_ruleXMemberFeatureCall= ruleXMemberFeatureCall EOF ;
     public final EObject entryRuleXMemberFeatureCall() throws RecognitionException {
         EObject current = null;
 
@@ -14770,8 +14812,8 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalMelange.g:5087:2: (iv_ruleXMemberFeatureCall= ruleXMemberFeatureCall EOF )
-            // InternalMelange.g:5088:2: iv_ruleXMemberFeatureCall= ruleXMemberFeatureCall EOF
+            // InternalMelange.g:5106:2: (iv_ruleXMemberFeatureCall= ruleXMemberFeatureCall EOF )
+            // InternalMelange.g:5107:2: iv_ruleXMemberFeatureCall= ruleXMemberFeatureCall EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getXMemberFeatureCallRule()); 
@@ -14802,7 +14844,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleXMemberFeatureCall"
-    // InternalMelange.g:5095:1: ruleXMemberFeatureCall returns [EObject current=null] : (this_XPrimaryExpression_0= ruleXPrimaryExpression ( ( ( ( ( () ( '.' | ( ( '::' ) ) ) ( ( ruleFeatureCallID ) ) ruleOpSingleAssign ) )=> ( () (otherlv_2= '.' | ( (lv_explicitStatic_3_0= '::' ) ) ) ( ( ruleFeatureCallID ) ) ruleOpSingleAssign ) ) ( (lv_value_6_0= ruleXAssignment ) ) ) | ( ( ( ( () ( '.' | ( ( '?.' ) ) | ( ( '::' ) ) ) ) )=> ( () (otherlv_8= '.' | ( (lv_nullSafe_9_0= '?.' ) ) | ( (lv_explicitStatic_10_0= '::' ) ) ) ) ) (otherlv_11= '<' ( (lv_typeArguments_12_0= ruleJvmArgumentTypeReference ) ) (otherlv_13= ',' ( (lv_typeArguments_14_0= ruleJvmArgumentTypeReference ) ) )* otherlv_15= '>' )? ( ( ruleIdOrSuper ) ) ( ( ( ( '(' ) )=> (lv_explicitOperationCall_17_0= '(' ) ) ( ( ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> (lv_memberCallArguments_18_0= ruleXShortClosure ) ) | ( ( (lv_memberCallArguments_19_0= ruleXExpression ) ) (otherlv_20= ',' ( (lv_memberCallArguments_21_0= ruleXExpression ) ) )* ) )? otherlv_22= ')' )? ( ( ( () '[' ) )=> (lv_memberCallArguments_23_0= ruleXClosure ) )? ) )* ) ;
+    // InternalMelange.g:5114:1: ruleXMemberFeatureCall returns [EObject current=null] : (this_XPrimaryExpression_0= ruleXPrimaryExpression ( ( ( ( ( () ( '.' | ( ( '::' ) ) ) ( ( ruleFeatureCallID ) ) ruleOpSingleAssign ) )=> ( () (otherlv_2= '.' | ( (lv_explicitStatic_3_0= '::' ) ) ) ( ( ruleFeatureCallID ) ) ruleOpSingleAssign ) ) ( (lv_value_6_0= ruleXAssignment ) ) ) | ( ( ( ( () ( '.' | ( ( '?.' ) ) | ( ( '::' ) ) ) ) )=> ( () (otherlv_8= '.' | ( (lv_nullSafe_9_0= '?.' ) ) | ( (lv_explicitStatic_10_0= '::' ) ) ) ) ) (otherlv_11= '<' ( (lv_typeArguments_12_0= ruleJvmArgumentTypeReference ) ) (otherlv_13= ',' ( (lv_typeArguments_14_0= ruleJvmArgumentTypeReference ) ) )* otherlv_15= '>' )? ( ( ruleIdOrSuper ) ) ( ( ( ( '(' ) )=> (lv_explicitOperationCall_17_0= '(' ) ) ( ( ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> (lv_memberCallArguments_18_0= ruleXShortClosure ) ) | ( ( (lv_memberCallArguments_19_0= ruleXExpression ) ) (otherlv_20= ',' ( (lv_memberCallArguments_21_0= ruleXExpression ) ) )* ) )? otherlv_22= ')' )? ( ( ( () '[' ) )=> (lv_memberCallArguments_23_0= ruleXClosure ) )? ) )* ) ;
     public final EObject ruleXMemberFeatureCall() throws RecognitionException {
         EObject current = null;
 
@@ -14837,18 +14879,18 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // InternalMelange.g:5098:28: ( (this_XPrimaryExpression_0= ruleXPrimaryExpression ( ( ( ( ( () ( '.' | ( ( '::' ) ) ) ( ( ruleFeatureCallID ) ) ruleOpSingleAssign ) )=> ( () (otherlv_2= '.' | ( (lv_explicitStatic_3_0= '::' ) ) ) ( ( ruleFeatureCallID ) ) ruleOpSingleAssign ) ) ( (lv_value_6_0= ruleXAssignment ) ) ) | ( ( ( ( () ( '.' | ( ( '?.' ) ) | ( ( '::' ) ) ) ) )=> ( () (otherlv_8= '.' | ( (lv_nullSafe_9_0= '?.' ) ) | ( (lv_explicitStatic_10_0= '::' ) ) ) ) ) (otherlv_11= '<' ( (lv_typeArguments_12_0= ruleJvmArgumentTypeReference ) ) (otherlv_13= ',' ( (lv_typeArguments_14_0= ruleJvmArgumentTypeReference ) ) )* otherlv_15= '>' )? ( ( ruleIdOrSuper ) ) ( ( ( ( '(' ) )=> (lv_explicitOperationCall_17_0= '(' ) ) ( ( ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> (lv_memberCallArguments_18_0= ruleXShortClosure ) ) | ( ( (lv_memberCallArguments_19_0= ruleXExpression ) ) (otherlv_20= ',' ( (lv_memberCallArguments_21_0= ruleXExpression ) ) )* ) )? otherlv_22= ')' )? ( ( ( () '[' ) )=> (lv_memberCallArguments_23_0= ruleXClosure ) )? ) )* ) )
-            // InternalMelange.g:5099:1: (this_XPrimaryExpression_0= ruleXPrimaryExpression ( ( ( ( ( () ( '.' | ( ( '::' ) ) ) ( ( ruleFeatureCallID ) ) ruleOpSingleAssign ) )=> ( () (otherlv_2= '.' | ( (lv_explicitStatic_3_0= '::' ) ) ) ( ( ruleFeatureCallID ) ) ruleOpSingleAssign ) ) ( (lv_value_6_0= ruleXAssignment ) ) ) | ( ( ( ( () ( '.' | ( ( '?.' ) ) | ( ( '::' ) ) ) ) )=> ( () (otherlv_8= '.' | ( (lv_nullSafe_9_0= '?.' ) ) | ( (lv_explicitStatic_10_0= '::' ) ) ) ) ) (otherlv_11= '<' ( (lv_typeArguments_12_0= ruleJvmArgumentTypeReference ) ) (otherlv_13= ',' ( (lv_typeArguments_14_0= ruleJvmArgumentTypeReference ) ) )* otherlv_15= '>' )? ( ( ruleIdOrSuper ) ) ( ( ( ( '(' ) )=> (lv_explicitOperationCall_17_0= '(' ) ) ( ( ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> (lv_memberCallArguments_18_0= ruleXShortClosure ) ) | ( ( (lv_memberCallArguments_19_0= ruleXExpression ) ) (otherlv_20= ',' ( (lv_memberCallArguments_21_0= ruleXExpression ) ) )* ) )? otherlv_22= ')' )? ( ( ( () '[' ) )=> (lv_memberCallArguments_23_0= ruleXClosure ) )? ) )* )
+            // InternalMelange.g:5117:28: ( (this_XPrimaryExpression_0= ruleXPrimaryExpression ( ( ( ( ( () ( '.' | ( ( '::' ) ) ) ( ( ruleFeatureCallID ) ) ruleOpSingleAssign ) )=> ( () (otherlv_2= '.' | ( (lv_explicitStatic_3_0= '::' ) ) ) ( ( ruleFeatureCallID ) ) ruleOpSingleAssign ) ) ( (lv_value_6_0= ruleXAssignment ) ) ) | ( ( ( ( () ( '.' | ( ( '?.' ) ) | ( ( '::' ) ) ) ) )=> ( () (otherlv_8= '.' | ( (lv_nullSafe_9_0= '?.' ) ) | ( (lv_explicitStatic_10_0= '::' ) ) ) ) ) (otherlv_11= '<' ( (lv_typeArguments_12_0= ruleJvmArgumentTypeReference ) ) (otherlv_13= ',' ( (lv_typeArguments_14_0= ruleJvmArgumentTypeReference ) ) )* otherlv_15= '>' )? ( ( ruleIdOrSuper ) ) ( ( ( ( '(' ) )=> (lv_explicitOperationCall_17_0= '(' ) ) ( ( ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> (lv_memberCallArguments_18_0= ruleXShortClosure ) ) | ( ( (lv_memberCallArguments_19_0= ruleXExpression ) ) (otherlv_20= ',' ( (lv_memberCallArguments_21_0= ruleXExpression ) ) )* ) )? otherlv_22= ')' )? ( ( ( () '[' ) )=> (lv_memberCallArguments_23_0= ruleXClosure ) )? ) )* ) )
+            // InternalMelange.g:5118:1: (this_XPrimaryExpression_0= ruleXPrimaryExpression ( ( ( ( ( () ( '.' | ( ( '::' ) ) ) ( ( ruleFeatureCallID ) ) ruleOpSingleAssign ) )=> ( () (otherlv_2= '.' | ( (lv_explicitStatic_3_0= '::' ) ) ) ( ( ruleFeatureCallID ) ) ruleOpSingleAssign ) ) ( (lv_value_6_0= ruleXAssignment ) ) ) | ( ( ( ( () ( '.' | ( ( '?.' ) ) | ( ( '::' ) ) ) ) )=> ( () (otherlv_8= '.' | ( (lv_nullSafe_9_0= '?.' ) ) | ( (lv_explicitStatic_10_0= '::' ) ) ) ) ) (otherlv_11= '<' ( (lv_typeArguments_12_0= ruleJvmArgumentTypeReference ) ) (otherlv_13= ',' ( (lv_typeArguments_14_0= ruleJvmArgumentTypeReference ) ) )* otherlv_15= '>' )? ( ( ruleIdOrSuper ) ) ( ( ( ( '(' ) )=> (lv_explicitOperationCall_17_0= '(' ) ) ( ( ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> (lv_memberCallArguments_18_0= ruleXShortClosure ) ) | ( ( (lv_memberCallArguments_19_0= ruleXExpression ) ) (otherlv_20= ',' ( (lv_memberCallArguments_21_0= ruleXExpression ) ) )* ) )? otherlv_22= ')' )? ( ( ( () '[' ) )=> (lv_memberCallArguments_23_0= ruleXClosure ) )? ) )* )
             {
-            // InternalMelange.g:5099:1: (this_XPrimaryExpression_0= ruleXPrimaryExpression ( ( ( ( ( () ( '.' | ( ( '::' ) ) ) ( ( ruleFeatureCallID ) ) ruleOpSingleAssign ) )=> ( () (otherlv_2= '.' | ( (lv_explicitStatic_3_0= '::' ) ) ) ( ( ruleFeatureCallID ) ) ruleOpSingleAssign ) ) ( (lv_value_6_0= ruleXAssignment ) ) ) | ( ( ( ( () ( '.' | ( ( '?.' ) ) | ( ( '::' ) ) ) ) )=> ( () (otherlv_8= '.' | ( (lv_nullSafe_9_0= '?.' ) ) | ( (lv_explicitStatic_10_0= '::' ) ) ) ) ) (otherlv_11= '<' ( (lv_typeArguments_12_0= ruleJvmArgumentTypeReference ) ) (otherlv_13= ',' ( (lv_typeArguments_14_0= ruleJvmArgumentTypeReference ) ) )* otherlv_15= '>' )? ( ( ruleIdOrSuper ) ) ( ( ( ( '(' ) )=> (lv_explicitOperationCall_17_0= '(' ) ) ( ( ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> (lv_memberCallArguments_18_0= ruleXShortClosure ) ) | ( ( (lv_memberCallArguments_19_0= ruleXExpression ) ) (otherlv_20= ',' ( (lv_memberCallArguments_21_0= ruleXExpression ) ) )* ) )? otherlv_22= ')' )? ( ( ( () '[' ) )=> (lv_memberCallArguments_23_0= ruleXClosure ) )? ) )* )
-            // InternalMelange.g:5100:5: this_XPrimaryExpression_0= ruleXPrimaryExpression ( ( ( ( ( () ( '.' | ( ( '::' ) ) ) ( ( ruleFeatureCallID ) ) ruleOpSingleAssign ) )=> ( () (otherlv_2= '.' | ( (lv_explicitStatic_3_0= '::' ) ) ) ( ( ruleFeatureCallID ) ) ruleOpSingleAssign ) ) ( (lv_value_6_0= ruleXAssignment ) ) ) | ( ( ( ( () ( '.' | ( ( '?.' ) ) | ( ( '::' ) ) ) ) )=> ( () (otherlv_8= '.' | ( (lv_nullSafe_9_0= '?.' ) ) | ( (lv_explicitStatic_10_0= '::' ) ) ) ) ) (otherlv_11= '<' ( (lv_typeArguments_12_0= ruleJvmArgumentTypeReference ) ) (otherlv_13= ',' ( (lv_typeArguments_14_0= ruleJvmArgumentTypeReference ) ) )* otherlv_15= '>' )? ( ( ruleIdOrSuper ) ) ( ( ( ( '(' ) )=> (lv_explicitOperationCall_17_0= '(' ) ) ( ( ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> (lv_memberCallArguments_18_0= ruleXShortClosure ) ) | ( ( (lv_memberCallArguments_19_0= ruleXExpression ) ) (otherlv_20= ',' ( (lv_memberCallArguments_21_0= ruleXExpression ) ) )* ) )? otherlv_22= ')' )? ( ( ( () '[' ) )=> (lv_memberCallArguments_23_0= ruleXClosure ) )? ) )*
+            // InternalMelange.g:5118:1: (this_XPrimaryExpression_0= ruleXPrimaryExpression ( ( ( ( ( () ( '.' | ( ( '::' ) ) ) ( ( ruleFeatureCallID ) ) ruleOpSingleAssign ) )=> ( () (otherlv_2= '.' | ( (lv_explicitStatic_3_0= '::' ) ) ) ( ( ruleFeatureCallID ) ) ruleOpSingleAssign ) ) ( (lv_value_6_0= ruleXAssignment ) ) ) | ( ( ( ( () ( '.' | ( ( '?.' ) ) | ( ( '::' ) ) ) ) )=> ( () (otherlv_8= '.' | ( (lv_nullSafe_9_0= '?.' ) ) | ( (lv_explicitStatic_10_0= '::' ) ) ) ) ) (otherlv_11= '<' ( (lv_typeArguments_12_0= ruleJvmArgumentTypeReference ) ) (otherlv_13= ',' ( (lv_typeArguments_14_0= ruleJvmArgumentTypeReference ) ) )* otherlv_15= '>' )? ( ( ruleIdOrSuper ) ) ( ( ( ( '(' ) )=> (lv_explicitOperationCall_17_0= '(' ) ) ( ( ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> (lv_memberCallArguments_18_0= ruleXShortClosure ) ) | ( ( (lv_memberCallArguments_19_0= ruleXExpression ) ) (otherlv_20= ',' ( (lv_memberCallArguments_21_0= ruleXExpression ) ) )* ) )? otherlv_22= ')' )? ( ( ( () '[' ) )=> (lv_memberCallArguments_23_0= ruleXClosure ) )? ) )* )
+            // InternalMelange.g:5119:5: this_XPrimaryExpression_0= ruleXPrimaryExpression ( ( ( ( ( () ( '.' | ( ( '::' ) ) ) ( ( ruleFeatureCallID ) ) ruleOpSingleAssign ) )=> ( () (otherlv_2= '.' | ( (lv_explicitStatic_3_0= '::' ) ) ) ( ( ruleFeatureCallID ) ) ruleOpSingleAssign ) ) ( (lv_value_6_0= ruleXAssignment ) ) ) | ( ( ( ( () ( '.' | ( ( '?.' ) ) | ( ( '::' ) ) ) ) )=> ( () (otherlv_8= '.' | ( (lv_nullSafe_9_0= '?.' ) ) | ( (lv_explicitStatic_10_0= '::' ) ) ) ) ) (otherlv_11= '<' ( (lv_typeArguments_12_0= ruleJvmArgumentTypeReference ) ) (otherlv_13= ',' ( (lv_typeArguments_14_0= ruleJvmArgumentTypeReference ) ) )* otherlv_15= '>' )? ( ( ruleIdOrSuper ) ) ( ( ( ( '(' ) )=> (lv_explicitOperationCall_17_0= '(' ) ) ( ( ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> (lv_memberCallArguments_18_0= ruleXShortClosure ) ) | ( ( (lv_memberCallArguments_19_0= ruleXExpression ) ) (otherlv_20= ',' ( (lv_memberCallArguments_21_0= ruleXExpression ) ) )* ) )? otherlv_22= ')' )? ( ( ( () '[' ) )=> (lv_memberCallArguments_23_0= ruleXClosure ) )? ) )*
             {
             if ( state.backtracking==0 ) {
                
                       newCompositeNode(grammarAccess.getXMemberFeatureCallAccess().getXPrimaryExpressionParserRuleCall_0()); 
                   
             }
-            pushFollow(FOLLOW_80);
+            pushFollow(FOLLOW_81);
             this_XPrimaryExpression_0=ruleXPrimaryExpression();
 
             state._fsp--;
@@ -14859,12 +14901,12 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                       afterParserOrEnumRuleCall();
                   
             }
-            // InternalMelange.g:5108:1: ( ( ( ( ( () ( '.' | ( ( '::' ) ) ) ( ( ruleFeatureCallID ) ) ruleOpSingleAssign ) )=> ( () (otherlv_2= '.' | ( (lv_explicitStatic_3_0= '::' ) ) ) ( ( ruleFeatureCallID ) ) ruleOpSingleAssign ) ) ( (lv_value_6_0= ruleXAssignment ) ) ) | ( ( ( ( () ( '.' | ( ( '?.' ) ) | ( ( '::' ) ) ) ) )=> ( () (otherlv_8= '.' | ( (lv_nullSafe_9_0= '?.' ) ) | ( (lv_explicitStatic_10_0= '::' ) ) ) ) ) (otherlv_11= '<' ( (lv_typeArguments_12_0= ruleJvmArgumentTypeReference ) ) (otherlv_13= ',' ( (lv_typeArguments_14_0= ruleJvmArgumentTypeReference ) ) )* otherlv_15= '>' )? ( ( ruleIdOrSuper ) ) ( ( ( ( '(' ) )=> (lv_explicitOperationCall_17_0= '(' ) ) ( ( ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> (lv_memberCallArguments_18_0= ruleXShortClosure ) ) | ( ( (lv_memberCallArguments_19_0= ruleXExpression ) ) (otherlv_20= ',' ( (lv_memberCallArguments_21_0= ruleXExpression ) ) )* ) )? otherlv_22= ')' )? ( ( ( () '[' ) )=> (lv_memberCallArguments_23_0= ruleXClosure ) )? ) )*
+            // InternalMelange.g:5127:1: ( ( ( ( ( () ( '.' | ( ( '::' ) ) ) ( ( ruleFeatureCallID ) ) ruleOpSingleAssign ) )=> ( () (otherlv_2= '.' | ( (lv_explicitStatic_3_0= '::' ) ) ) ( ( ruleFeatureCallID ) ) ruleOpSingleAssign ) ) ( (lv_value_6_0= ruleXAssignment ) ) ) | ( ( ( ( () ( '.' | ( ( '?.' ) ) | ( ( '::' ) ) ) ) )=> ( () (otherlv_8= '.' | ( (lv_nullSafe_9_0= '?.' ) ) | ( (lv_explicitStatic_10_0= '::' ) ) ) ) ) (otherlv_11= '<' ( (lv_typeArguments_12_0= ruleJvmArgumentTypeReference ) ) (otherlv_13= ',' ( (lv_typeArguments_14_0= ruleJvmArgumentTypeReference ) ) )* otherlv_15= '>' )? ( ( ruleIdOrSuper ) ) ( ( ( ( '(' ) )=> (lv_explicitOperationCall_17_0= '(' ) ) ( ( ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> (lv_memberCallArguments_18_0= ruleXShortClosure ) ) | ( ( (lv_memberCallArguments_19_0= ruleXExpression ) ) (otherlv_20= ',' ( (lv_memberCallArguments_21_0= ruleXExpression ) ) )* ) )? otherlv_22= ')' )? ( ( ( () '[' ) )=> (lv_memberCallArguments_23_0= ruleXClosure ) )? ) )*
             loop100:
             do {
                 int alt100=3;
                 switch ( input.LA(1) ) {
-                case 93:
+                case 94:
                     {
                     int LA100_2 = input.LA(2);
 
@@ -14878,7 +14920,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
                     }
                     break;
-                case 94:
+                case 95:
                     {
                     int LA100_3 = input.LA(2);
 
@@ -14892,7 +14934,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
                     }
                     break;
-                case 95:
+                case 96:
                     {
                     int LA100_4 = input.LA(2);
 
@@ -14908,19 +14950,19 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
                 switch (alt100) {
             	case 1 :
-            	    // InternalMelange.g:5108:2: ( ( ( ( () ( '.' | ( ( '::' ) ) ) ( ( ruleFeatureCallID ) ) ruleOpSingleAssign ) )=> ( () (otherlv_2= '.' | ( (lv_explicitStatic_3_0= '::' ) ) ) ( ( ruleFeatureCallID ) ) ruleOpSingleAssign ) ) ( (lv_value_6_0= ruleXAssignment ) ) )
+            	    // InternalMelange.g:5127:2: ( ( ( ( () ( '.' | ( ( '::' ) ) ) ( ( ruleFeatureCallID ) ) ruleOpSingleAssign ) )=> ( () (otherlv_2= '.' | ( (lv_explicitStatic_3_0= '::' ) ) ) ( ( ruleFeatureCallID ) ) ruleOpSingleAssign ) ) ( (lv_value_6_0= ruleXAssignment ) ) )
             	    {
-            	    // InternalMelange.g:5108:2: ( ( ( ( () ( '.' | ( ( '::' ) ) ) ( ( ruleFeatureCallID ) ) ruleOpSingleAssign ) )=> ( () (otherlv_2= '.' | ( (lv_explicitStatic_3_0= '::' ) ) ) ( ( ruleFeatureCallID ) ) ruleOpSingleAssign ) ) ( (lv_value_6_0= ruleXAssignment ) ) )
-            	    // InternalMelange.g:5108:3: ( ( ( () ( '.' | ( ( '::' ) ) ) ( ( ruleFeatureCallID ) ) ruleOpSingleAssign ) )=> ( () (otherlv_2= '.' | ( (lv_explicitStatic_3_0= '::' ) ) ) ( ( ruleFeatureCallID ) ) ruleOpSingleAssign ) ) ( (lv_value_6_0= ruleXAssignment ) )
+            	    // InternalMelange.g:5127:2: ( ( ( ( () ( '.' | ( ( '::' ) ) ) ( ( ruleFeatureCallID ) ) ruleOpSingleAssign ) )=> ( () (otherlv_2= '.' | ( (lv_explicitStatic_3_0= '::' ) ) ) ( ( ruleFeatureCallID ) ) ruleOpSingleAssign ) ) ( (lv_value_6_0= ruleXAssignment ) ) )
+            	    // InternalMelange.g:5127:3: ( ( ( () ( '.' | ( ( '::' ) ) ) ( ( ruleFeatureCallID ) ) ruleOpSingleAssign ) )=> ( () (otherlv_2= '.' | ( (lv_explicitStatic_3_0= '::' ) ) ) ( ( ruleFeatureCallID ) ) ruleOpSingleAssign ) ) ( (lv_value_6_0= ruleXAssignment ) )
             	    {
-            	    // InternalMelange.g:5108:3: ( ( ( () ( '.' | ( ( '::' ) ) ) ( ( ruleFeatureCallID ) ) ruleOpSingleAssign ) )=> ( () (otherlv_2= '.' | ( (lv_explicitStatic_3_0= '::' ) ) ) ( ( ruleFeatureCallID ) ) ruleOpSingleAssign ) )
-            	    // InternalMelange.g:5108:4: ( ( () ( '.' | ( ( '::' ) ) ) ( ( ruleFeatureCallID ) ) ruleOpSingleAssign ) )=> ( () (otherlv_2= '.' | ( (lv_explicitStatic_3_0= '::' ) ) ) ( ( ruleFeatureCallID ) ) ruleOpSingleAssign )
+            	    // InternalMelange.g:5127:3: ( ( ( () ( '.' | ( ( '::' ) ) ) ( ( ruleFeatureCallID ) ) ruleOpSingleAssign ) )=> ( () (otherlv_2= '.' | ( (lv_explicitStatic_3_0= '::' ) ) ) ( ( ruleFeatureCallID ) ) ruleOpSingleAssign ) )
+            	    // InternalMelange.g:5127:4: ( ( () ( '.' | ( ( '::' ) ) ) ( ( ruleFeatureCallID ) ) ruleOpSingleAssign ) )=> ( () (otherlv_2= '.' | ( (lv_explicitStatic_3_0= '::' ) ) ) ( ( ruleFeatureCallID ) ) ruleOpSingleAssign )
             	    {
-            	    // InternalMelange.g:5121:25: ( () (otherlv_2= '.' | ( (lv_explicitStatic_3_0= '::' ) ) ) ( ( ruleFeatureCallID ) ) ruleOpSingleAssign )
-            	    // InternalMelange.g:5121:26: () (otherlv_2= '.' | ( (lv_explicitStatic_3_0= '::' ) ) ) ( ( ruleFeatureCallID ) ) ruleOpSingleAssign
+            	    // InternalMelange.g:5140:25: ( () (otherlv_2= '.' | ( (lv_explicitStatic_3_0= '::' ) ) ) ( ( ruleFeatureCallID ) ) ruleOpSingleAssign )
+            	    // InternalMelange.g:5140:26: () (otherlv_2= '.' | ( (lv_explicitStatic_3_0= '::' ) ) ) ( ( ruleFeatureCallID ) ) ruleOpSingleAssign
             	    {
-            	    // InternalMelange.g:5121:26: ()
-            	    // InternalMelange.g:5122:5: 
+            	    // InternalMelange.g:5140:26: ()
+            	    // InternalMelange.g:5141:5: 
             	    {
             	    if ( state.backtracking==0 ) {
 
@@ -14932,14 +14974,14 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    // InternalMelange.g:5127:2: (otherlv_2= '.' | ( (lv_explicitStatic_3_0= '::' ) ) )
+            	    // InternalMelange.g:5146:2: (otherlv_2= '.' | ( (lv_explicitStatic_3_0= '::' ) ) )
             	    int alt92=2;
             	    int LA92_0 = input.LA(1);
 
-            	    if ( (LA92_0==93) ) {
+            	    if ( (LA92_0==94) ) {
             	        alt92=1;
             	    }
-            	    else if ( (LA92_0==94) ) {
+            	    else if ( (LA92_0==95) ) {
             	        alt92=2;
             	    }
             	    else {
@@ -14951,9 +14993,9 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
             	    }
             	    switch (alt92) {
             	        case 1 :
-            	            // InternalMelange.g:5127:4: otherlv_2= '.'
+            	            // InternalMelange.g:5146:4: otherlv_2= '.'
             	            {
-            	            otherlv_2=(Token)match(input,93,FOLLOW_81); if (state.failed) return current;
+            	            otherlv_2=(Token)match(input,94,FOLLOW_82); if (state.failed) return current;
             	            if ( state.backtracking==0 ) {
 
             	                  	newLeafNode(otherlv_2, grammarAccess.getXMemberFeatureCallAccess().getFullStopKeyword_1_0_0_0_1_0());
@@ -14963,15 +15005,15 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
             	            }
             	            break;
             	        case 2 :
-            	            // InternalMelange.g:5132:6: ( (lv_explicitStatic_3_0= '::' ) )
+            	            // InternalMelange.g:5151:6: ( (lv_explicitStatic_3_0= '::' ) )
             	            {
-            	            // InternalMelange.g:5132:6: ( (lv_explicitStatic_3_0= '::' ) )
-            	            // InternalMelange.g:5133:1: (lv_explicitStatic_3_0= '::' )
+            	            // InternalMelange.g:5151:6: ( (lv_explicitStatic_3_0= '::' ) )
+            	            // InternalMelange.g:5152:1: (lv_explicitStatic_3_0= '::' )
             	            {
-            	            // InternalMelange.g:5133:1: (lv_explicitStatic_3_0= '::' )
-            	            // InternalMelange.g:5134:3: lv_explicitStatic_3_0= '::'
+            	            // InternalMelange.g:5152:1: (lv_explicitStatic_3_0= '::' )
+            	            // InternalMelange.g:5153:3: lv_explicitStatic_3_0= '::'
             	            {
-            	            lv_explicitStatic_3_0=(Token)match(input,94,FOLLOW_81); if (state.failed) return current;
+            	            lv_explicitStatic_3_0=(Token)match(input,95,FOLLOW_82); if (state.failed) return current;
             	            if ( state.backtracking==0 ) {
 
             	                      newLeafNode(lv_explicitStatic_3_0, grammarAccess.getXMemberFeatureCallAccess().getExplicitStaticColonColonKeyword_1_0_0_0_1_1_0());
@@ -14997,11 +15039,11 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    // InternalMelange.g:5147:3: ( ( ruleFeatureCallID ) )
-            	    // InternalMelange.g:5148:1: ( ruleFeatureCallID )
+            	    // InternalMelange.g:5166:3: ( ( ruleFeatureCallID ) )
+            	    // InternalMelange.g:5167:1: ( ruleFeatureCallID )
             	    {
-            	    // InternalMelange.g:5148:1: ( ruleFeatureCallID )
-            	    // InternalMelange.g:5149:3: ruleFeatureCallID
+            	    // InternalMelange.g:5167:1: ( ruleFeatureCallID )
+            	    // InternalMelange.g:5168:3: ruleFeatureCallID
             	    {
             	    if ( state.backtracking==0 ) {
 
@@ -15036,7 +15078,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
             	              newCompositeNode(grammarAccess.getXMemberFeatureCallAccess().getOpSingleAssignParserRuleCall_1_0_0_0_3()); 
             	          
             	    }
-            	    pushFollow(FOLLOW_63);
+            	    pushFollow(FOLLOW_64);
             	    ruleOpSingleAssign();
 
             	    state._fsp--;
@@ -15052,18 +15094,18 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    // InternalMelange.g:5170:3: ( (lv_value_6_0= ruleXAssignment ) )
-            	    // InternalMelange.g:5171:1: (lv_value_6_0= ruleXAssignment )
+            	    // InternalMelange.g:5189:3: ( (lv_value_6_0= ruleXAssignment ) )
+            	    // InternalMelange.g:5190:1: (lv_value_6_0= ruleXAssignment )
             	    {
-            	    // InternalMelange.g:5171:1: (lv_value_6_0= ruleXAssignment )
-            	    // InternalMelange.g:5172:3: lv_value_6_0= ruleXAssignment
+            	    // InternalMelange.g:5190:1: (lv_value_6_0= ruleXAssignment )
+            	    // InternalMelange.g:5191:3: lv_value_6_0= ruleXAssignment
             	    {
             	    if ( state.backtracking==0 ) {
             	       
             	      	        newCompositeNode(grammarAccess.getXMemberFeatureCallAccess().getValueXAssignmentParserRuleCall_1_0_1_0()); 
             	      	    
             	    }
-            	    pushFollow(FOLLOW_80);
+            	    pushFollow(FOLLOW_81);
             	    lv_value_6_0=ruleXAssignment();
 
             	    state._fsp--;
@@ -15094,19 +15136,19 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
             	    }
             	    break;
             	case 2 :
-            	    // InternalMelange.g:5189:6: ( ( ( ( () ( '.' | ( ( '?.' ) ) | ( ( '::' ) ) ) ) )=> ( () (otherlv_8= '.' | ( (lv_nullSafe_9_0= '?.' ) ) | ( (lv_explicitStatic_10_0= '::' ) ) ) ) ) (otherlv_11= '<' ( (lv_typeArguments_12_0= ruleJvmArgumentTypeReference ) ) (otherlv_13= ',' ( (lv_typeArguments_14_0= ruleJvmArgumentTypeReference ) ) )* otherlv_15= '>' )? ( ( ruleIdOrSuper ) ) ( ( ( ( '(' ) )=> (lv_explicitOperationCall_17_0= '(' ) ) ( ( ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> (lv_memberCallArguments_18_0= ruleXShortClosure ) ) | ( ( (lv_memberCallArguments_19_0= ruleXExpression ) ) (otherlv_20= ',' ( (lv_memberCallArguments_21_0= ruleXExpression ) ) )* ) )? otherlv_22= ')' )? ( ( ( () '[' ) )=> (lv_memberCallArguments_23_0= ruleXClosure ) )? )
+            	    // InternalMelange.g:5208:6: ( ( ( ( () ( '.' | ( ( '?.' ) ) | ( ( '::' ) ) ) ) )=> ( () (otherlv_8= '.' | ( (lv_nullSafe_9_0= '?.' ) ) | ( (lv_explicitStatic_10_0= '::' ) ) ) ) ) (otherlv_11= '<' ( (lv_typeArguments_12_0= ruleJvmArgumentTypeReference ) ) (otherlv_13= ',' ( (lv_typeArguments_14_0= ruleJvmArgumentTypeReference ) ) )* otherlv_15= '>' )? ( ( ruleIdOrSuper ) ) ( ( ( ( '(' ) )=> (lv_explicitOperationCall_17_0= '(' ) ) ( ( ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> (lv_memberCallArguments_18_0= ruleXShortClosure ) ) | ( ( (lv_memberCallArguments_19_0= ruleXExpression ) ) (otherlv_20= ',' ( (lv_memberCallArguments_21_0= ruleXExpression ) ) )* ) )? otherlv_22= ')' )? ( ( ( () '[' ) )=> (lv_memberCallArguments_23_0= ruleXClosure ) )? )
             	    {
-            	    // InternalMelange.g:5189:6: ( ( ( ( () ( '.' | ( ( '?.' ) ) | ( ( '::' ) ) ) ) )=> ( () (otherlv_8= '.' | ( (lv_nullSafe_9_0= '?.' ) ) | ( (lv_explicitStatic_10_0= '::' ) ) ) ) ) (otherlv_11= '<' ( (lv_typeArguments_12_0= ruleJvmArgumentTypeReference ) ) (otherlv_13= ',' ( (lv_typeArguments_14_0= ruleJvmArgumentTypeReference ) ) )* otherlv_15= '>' )? ( ( ruleIdOrSuper ) ) ( ( ( ( '(' ) )=> (lv_explicitOperationCall_17_0= '(' ) ) ( ( ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> (lv_memberCallArguments_18_0= ruleXShortClosure ) ) | ( ( (lv_memberCallArguments_19_0= ruleXExpression ) ) (otherlv_20= ',' ( (lv_memberCallArguments_21_0= ruleXExpression ) ) )* ) )? otherlv_22= ')' )? ( ( ( () '[' ) )=> (lv_memberCallArguments_23_0= ruleXClosure ) )? )
-            	    // InternalMelange.g:5189:7: ( ( ( () ( '.' | ( ( '?.' ) ) | ( ( '::' ) ) ) ) )=> ( () (otherlv_8= '.' | ( (lv_nullSafe_9_0= '?.' ) ) | ( (lv_explicitStatic_10_0= '::' ) ) ) ) ) (otherlv_11= '<' ( (lv_typeArguments_12_0= ruleJvmArgumentTypeReference ) ) (otherlv_13= ',' ( (lv_typeArguments_14_0= ruleJvmArgumentTypeReference ) ) )* otherlv_15= '>' )? ( ( ruleIdOrSuper ) ) ( ( ( ( '(' ) )=> (lv_explicitOperationCall_17_0= '(' ) ) ( ( ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> (lv_memberCallArguments_18_0= ruleXShortClosure ) ) | ( ( (lv_memberCallArguments_19_0= ruleXExpression ) ) (otherlv_20= ',' ( (lv_memberCallArguments_21_0= ruleXExpression ) ) )* ) )? otherlv_22= ')' )? ( ( ( () '[' ) )=> (lv_memberCallArguments_23_0= ruleXClosure ) )?
+            	    // InternalMelange.g:5208:6: ( ( ( ( () ( '.' | ( ( '?.' ) ) | ( ( '::' ) ) ) ) )=> ( () (otherlv_8= '.' | ( (lv_nullSafe_9_0= '?.' ) ) | ( (lv_explicitStatic_10_0= '::' ) ) ) ) ) (otherlv_11= '<' ( (lv_typeArguments_12_0= ruleJvmArgumentTypeReference ) ) (otherlv_13= ',' ( (lv_typeArguments_14_0= ruleJvmArgumentTypeReference ) ) )* otherlv_15= '>' )? ( ( ruleIdOrSuper ) ) ( ( ( ( '(' ) )=> (lv_explicitOperationCall_17_0= '(' ) ) ( ( ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> (lv_memberCallArguments_18_0= ruleXShortClosure ) ) | ( ( (lv_memberCallArguments_19_0= ruleXExpression ) ) (otherlv_20= ',' ( (lv_memberCallArguments_21_0= ruleXExpression ) ) )* ) )? otherlv_22= ')' )? ( ( ( () '[' ) )=> (lv_memberCallArguments_23_0= ruleXClosure ) )? )
+            	    // InternalMelange.g:5208:7: ( ( ( () ( '.' | ( ( '?.' ) ) | ( ( '::' ) ) ) ) )=> ( () (otherlv_8= '.' | ( (lv_nullSafe_9_0= '?.' ) ) | ( (lv_explicitStatic_10_0= '::' ) ) ) ) ) (otherlv_11= '<' ( (lv_typeArguments_12_0= ruleJvmArgumentTypeReference ) ) (otherlv_13= ',' ( (lv_typeArguments_14_0= ruleJvmArgumentTypeReference ) ) )* otherlv_15= '>' )? ( ( ruleIdOrSuper ) ) ( ( ( ( '(' ) )=> (lv_explicitOperationCall_17_0= '(' ) ) ( ( ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> (lv_memberCallArguments_18_0= ruleXShortClosure ) ) | ( ( (lv_memberCallArguments_19_0= ruleXExpression ) ) (otherlv_20= ',' ( (lv_memberCallArguments_21_0= ruleXExpression ) ) )* ) )? otherlv_22= ')' )? ( ( ( () '[' ) )=> (lv_memberCallArguments_23_0= ruleXClosure ) )?
             	    {
-            	    // InternalMelange.g:5189:7: ( ( ( () ( '.' | ( ( '?.' ) ) | ( ( '::' ) ) ) ) )=> ( () (otherlv_8= '.' | ( (lv_nullSafe_9_0= '?.' ) ) | ( (lv_explicitStatic_10_0= '::' ) ) ) ) )
-            	    // InternalMelange.g:5189:8: ( ( () ( '.' | ( ( '?.' ) ) | ( ( '::' ) ) ) ) )=> ( () (otherlv_8= '.' | ( (lv_nullSafe_9_0= '?.' ) ) | ( (lv_explicitStatic_10_0= '::' ) ) ) )
+            	    // InternalMelange.g:5208:7: ( ( ( () ( '.' | ( ( '?.' ) ) | ( ( '::' ) ) ) ) )=> ( () (otherlv_8= '.' | ( (lv_nullSafe_9_0= '?.' ) ) | ( (lv_explicitStatic_10_0= '::' ) ) ) ) )
+            	    // InternalMelange.g:5208:8: ( ( () ( '.' | ( ( '?.' ) ) | ( ( '::' ) ) ) ) )=> ( () (otherlv_8= '.' | ( (lv_nullSafe_9_0= '?.' ) ) | ( (lv_explicitStatic_10_0= '::' ) ) ) )
             	    {
-            	    // InternalMelange.g:5205:7: ( () (otherlv_8= '.' | ( (lv_nullSafe_9_0= '?.' ) ) | ( (lv_explicitStatic_10_0= '::' ) ) ) )
-            	    // InternalMelange.g:5205:8: () (otherlv_8= '.' | ( (lv_nullSafe_9_0= '?.' ) ) | ( (lv_explicitStatic_10_0= '::' ) ) )
+            	    // InternalMelange.g:5224:7: ( () (otherlv_8= '.' | ( (lv_nullSafe_9_0= '?.' ) ) | ( (lv_explicitStatic_10_0= '::' ) ) ) )
+            	    // InternalMelange.g:5224:8: () (otherlv_8= '.' | ( (lv_nullSafe_9_0= '?.' ) ) | ( (lv_explicitStatic_10_0= '::' ) ) )
             	    {
-            	    // InternalMelange.g:5205:8: ()
-            	    // InternalMelange.g:5206:5: 
+            	    // InternalMelange.g:5224:8: ()
+            	    // InternalMelange.g:5225:5: 
             	    {
             	    if ( state.backtracking==0 ) {
 
@@ -15118,20 +15160,20 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    // InternalMelange.g:5211:2: (otherlv_8= '.' | ( (lv_nullSafe_9_0= '?.' ) ) | ( (lv_explicitStatic_10_0= '::' ) ) )
+            	    // InternalMelange.g:5230:2: (otherlv_8= '.' | ( (lv_nullSafe_9_0= '?.' ) ) | ( (lv_explicitStatic_10_0= '::' ) ) )
             	    int alt93=3;
             	    switch ( input.LA(1) ) {
-            	    case 93:
+            	    case 94:
             	        {
             	        alt93=1;
             	        }
             	        break;
-            	    case 95:
+            	    case 96:
             	        {
             	        alt93=2;
             	        }
             	        break;
-            	    case 94:
+            	    case 95:
             	        {
             	        alt93=3;
             	        }
@@ -15146,9 +15188,9 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
             	    switch (alt93) {
             	        case 1 :
-            	            // InternalMelange.g:5211:4: otherlv_8= '.'
+            	            // InternalMelange.g:5230:4: otherlv_8= '.'
             	            {
-            	            otherlv_8=(Token)match(input,93,FOLLOW_82); if (state.failed) return current;
+            	            otherlv_8=(Token)match(input,94,FOLLOW_83); if (state.failed) return current;
             	            if ( state.backtracking==0 ) {
 
             	                  	newLeafNode(otherlv_8, grammarAccess.getXMemberFeatureCallAccess().getFullStopKeyword_1_1_0_0_1_0());
@@ -15158,15 +15200,15 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
             	            }
             	            break;
             	        case 2 :
-            	            // InternalMelange.g:5216:6: ( (lv_nullSafe_9_0= '?.' ) )
+            	            // InternalMelange.g:5235:6: ( (lv_nullSafe_9_0= '?.' ) )
             	            {
-            	            // InternalMelange.g:5216:6: ( (lv_nullSafe_9_0= '?.' ) )
-            	            // InternalMelange.g:5217:1: (lv_nullSafe_9_0= '?.' )
+            	            // InternalMelange.g:5235:6: ( (lv_nullSafe_9_0= '?.' ) )
+            	            // InternalMelange.g:5236:1: (lv_nullSafe_9_0= '?.' )
             	            {
-            	            // InternalMelange.g:5217:1: (lv_nullSafe_9_0= '?.' )
-            	            // InternalMelange.g:5218:3: lv_nullSafe_9_0= '?.'
+            	            // InternalMelange.g:5236:1: (lv_nullSafe_9_0= '?.' )
+            	            // InternalMelange.g:5237:3: lv_nullSafe_9_0= '?.'
             	            {
-            	            lv_nullSafe_9_0=(Token)match(input,95,FOLLOW_82); if (state.failed) return current;
+            	            lv_nullSafe_9_0=(Token)match(input,96,FOLLOW_83); if (state.failed) return current;
             	            if ( state.backtracking==0 ) {
 
             	                      newLeafNode(lv_nullSafe_9_0, grammarAccess.getXMemberFeatureCallAccess().getNullSafeQuestionMarkFullStopKeyword_1_1_0_0_1_1_0());
@@ -15190,15 +15232,15 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
             	            }
             	            break;
             	        case 3 :
-            	            // InternalMelange.g:5232:6: ( (lv_explicitStatic_10_0= '::' ) )
+            	            // InternalMelange.g:5251:6: ( (lv_explicitStatic_10_0= '::' ) )
             	            {
-            	            // InternalMelange.g:5232:6: ( (lv_explicitStatic_10_0= '::' ) )
-            	            // InternalMelange.g:5233:1: (lv_explicitStatic_10_0= '::' )
+            	            // InternalMelange.g:5251:6: ( (lv_explicitStatic_10_0= '::' ) )
+            	            // InternalMelange.g:5252:1: (lv_explicitStatic_10_0= '::' )
             	            {
-            	            // InternalMelange.g:5233:1: (lv_explicitStatic_10_0= '::' )
-            	            // InternalMelange.g:5234:3: lv_explicitStatic_10_0= '::'
+            	            // InternalMelange.g:5252:1: (lv_explicitStatic_10_0= '::' )
+            	            // InternalMelange.g:5253:3: lv_explicitStatic_10_0= '::'
             	            {
-            	            lv_explicitStatic_10_0=(Token)match(input,94,FOLLOW_82); if (state.failed) return current;
+            	            lv_explicitStatic_10_0=(Token)match(input,95,FOLLOW_83); if (state.failed) return current;
             	            if ( state.backtracking==0 ) {
 
             	                      newLeafNode(lv_explicitStatic_10_0, grammarAccess.getXMemberFeatureCallAccess().getExplicitStaticColonColonKeyword_1_1_0_0_1_2_0());
@@ -15230,35 +15272,35 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    // InternalMelange.g:5247:5: (otherlv_11= '<' ( (lv_typeArguments_12_0= ruleJvmArgumentTypeReference ) ) (otherlv_13= ',' ( (lv_typeArguments_14_0= ruleJvmArgumentTypeReference ) ) )* otherlv_15= '>' )?
+            	    // InternalMelange.g:5266:5: (otherlv_11= '<' ( (lv_typeArguments_12_0= ruleJvmArgumentTypeReference ) ) (otherlv_13= ',' ( (lv_typeArguments_14_0= ruleJvmArgumentTypeReference ) ) )* otherlv_15= '>' )?
             	    int alt95=2;
             	    int LA95_0 = input.LA(1);
 
-            	    if ( (LA95_0==70) ) {
+            	    if ( (LA95_0==71) ) {
             	        alt95=1;
             	    }
             	    switch (alt95) {
             	        case 1 :
-            	            // InternalMelange.g:5247:7: otherlv_11= '<' ( (lv_typeArguments_12_0= ruleJvmArgumentTypeReference ) ) (otherlv_13= ',' ( (lv_typeArguments_14_0= ruleJvmArgumentTypeReference ) ) )* otherlv_15= '>'
+            	            // InternalMelange.g:5266:7: otherlv_11= '<' ( (lv_typeArguments_12_0= ruleJvmArgumentTypeReference ) ) (otherlv_13= ',' ( (lv_typeArguments_14_0= ruleJvmArgumentTypeReference ) ) )* otherlv_15= '>'
             	            {
-            	            otherlv_11=(Token)match(input,70,FOLLOW_83); if (state.failed) return current;
+            	            otherlv_11=(Token)match(input,71,FOLLOW_84); if (state.failed) return current;
             	            if ( state.backtracking==0 ) {
 
             	                  	newLeafNode(otherlv_11, grammarAccess.getXMemberFeatureCallAccess().getLessThanSignKeyword_1_1_1_0());
             	                  
             	            }
-            	            // InternalMelange.g:5251:1: ( (lv_typeArguments_12_0= ruleJvmArgumentTypeReference ) )
-            	            // InternalMelange.g:5252:1: (lv_typeArguments_12_0= ruleJvmArgumentTypeReference )
+            	            // InternalMelange.g:5270:1: ( (lv_typeArguments_12_0= ruleJvmArgumentTypeReference ) )
+            	            // InternalMelange.g:5271:1: (lv_typeArguments_12_0= ruleJvmArgumentTypeReference )
             	            {
-            	            // InternalMelange.g:5252:1: (lv_typeArguments_12_0= ruleJvmArgumentTypeReference )
-            	            // InternalMelange.g:5253:3: lv_typeArguments_12_0= ruleJvmArgumentTypeReference
+            	            // InternalMelange.g:5271:1: (lv_typeArguments_12_0= ruleJvmArgumentTypeReference )
+            	            // InternalMelange.g:5272:3: lv_typeArguments_12_0= ruleJvmArgumentTypeReference
             	            {
             	            if ( state.backtracking==0 ) {
             	               
             	              	        newCompositeNode(grammarAccess.getXMemberFeatureCallAccess().getTypeArgumentsJvmArgumentTypeReferenceParserRuleCall_1_1_1_1_0()); 
             	              	    
             	            }
-            	            pushFollow(FOLLOW_84);
+            	            pushFollow(FOLLOW_85);
             	            lv_typeArguments_12_0=ruleJvmArgumentTypeReference();
 
             	            state._fsp--;
@@ -15282,7 +15324,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
             	            }
 
-            	            // InternalMelange.g:5269:2: (otherlv_13= ',' ( (lv_typeArguments_14_0= ruleJvmArgumentTypeReference ) ) )*
+            	            // InternalMelange.g:5288:2: (otherlv_13= ',' ( (lv_typeArguments_14_0= ruleJvmArgumentTypeReference ) ) )*
             	            loop94:
             	            do {
             	                int alt94=2;
@@ -15295,26 +15337,26 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
             	                switch (alt94) {
             	            	case 1 :
-            	            	    // InternalMelange.g:5269:4: otherlv_13= ',' ( (lv_typeArguments_14_0= ruleJvmArgumentTypeReference ) )
+            	            	    // InternalMelange.g:5288:4: otherlv_13= ',' ( (lv_typeArguments_14_0= ruleJvmArgumentTypeReference ) )
             	            	    {
-            	            	    otherlv_13=(Token)match(input,33,FOLLOW_83); if (state.failed) return current;
+            	            	    otherlv_13=(Token)match(input,33,FOLLOW_84); if (state.failed) return current;
             	            	    if ( state.backtracking==0 ) {
 
             	            	          	newLeafNode(otherlv_13, grammarAccess.getXMemberFeatureCallAccess().getCommaKeyword_1_1_1_2_0());
             	            	          
             	            	    }
-            	            	    // InternalMelange.g:5273:1: ( (lv_typeArguments_14_0= ruleJvmArgumentTypeReference ) )
-            	            	    // InternalMelange.g:5274:1: (lv_typeArguments_14_0= ruleJvmArgumentTypeReference )
+            	            	    // InternalMelange.g:5292:1: ( (lv_typeArguments_14_0= ruleJvmArgumentTypeReference ) )
+            	            	    // InternalMelange.g:5293:1: (lv_typeArguments_14_0= ruleJvmArgumentTypeReference )
             	            	    {
-            	            	    // InternalMelange.g:5274:1: (lv_typeArguments_14_0= ruleJvmArgumentTypeReference )
-            	            	    // InternalMelange.g:5275:3: lv_typeArguments_14_0= ruleJvmArgumentTypeReference
+            	            	    // InternalMelange.g:5293:1: (lv_typeArguments_14_0= ruleJvmArgumentTypeReference )
+            	            	    // InternalMelange.g:5294:3: lv_typeArguments_14_0= ruleJvmArgumentTypeReference
             	            	    {
             	            	    if ( state.backtracking==0 ) {
             	            	       
             	            	      	        newCompositeNode(grammarAccess.getXMemberFeatureCallAccess().getTypeArgumentsJvmArgumentTypeReferenceParserRuleCall_1_1_1_2_1_0()); 
             	            	      	    
             	            	    }
-            	            	    pushFollow(FOLLOW_84);
+            	            	    pushFollow(FOLLOW_85);
             	            	    lv_typeArguments_14_0=ruleJvmArgumentTypeReference();
 
             	            	    state._fsp--;
@@ -15347,7 +15389,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
             	                }
             	            } while (true);
 
-            	            otherlv_15=(Token)match(input,71,FOLLOW_82); if (state.failed) return current;
+            	            otherlv_15=(Token)match(input,72,FOLLOW_83); if (state.failed) return current;
             	            if ( state.backtracking==0 ) {
 
             	                  	newLeafNode(otherlv_15, grammarAccess.getXMemberFeatureCallAccess().getGreaterThanSignKeyword_1_1_1_3());
@@ -15359,11 +15401,11 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    // InternalMelange.g:5295:3: ( ( ruleIdOrSuper ) )
-            	    // InternalMelange.g:5296:1: ( ruleIdOrSuper )
+            	    // InternalMelange.g:5314:3: ( ( ruleIdOrSuper ) )
+            	    // InternalMelange.g:5315:1: ( ruleIdOrSuper )
             	    {
-            	    // InternalMelange.g:5296:1: ( ruleIdOrSuper )
-            	    // InternalMelange.g:5297:3: ruleIdOrSuper
+            	    // InternalMelange.g:5315:1: ( ruleIdOrSuper )
+            	    // InternalMelange.g:5316:3: ruleIdOrSuper
             	    {
             	    if ( state.backtracking==0 ) {
 
@@ -15377,7 +15419,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
             	      	        newCompositeNode(grammarAccess.getXMemberFeatureCallAccess().getFeatureJvmIdentifiableElementCrossReference_1_1_2_0()); 
             	      	    
             	    }
-            	    pushFollow(FOLLOW_85);
+            	    pushFollow(FOLLOW_86);
             	    ruleIdOrSuper();
 
             	    state._fsp--;
@@ -15393,20 +15435,20 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    // InternalMelange.g:5310:2: ( ( ( ( '(' ) )=> (lv_explicitOperationCall_17_0= '(' ) ) ( ( ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> (lv_memberCallArguments_18_0= ruleXShortClosure ) ) | ( ( (lv_memberCallArguments_19_0= ruleXExpression ) ) (otherlv_20= ',' ( (lv_memberCallArguments_21_0= ruleXExpression ) ) )* ) )? otherlv_22= ')' )?
+            	    // InternalMelange.g:5329:2: ( ( ( ( '(' ) )=> (lv_explicitOperationCall_17_0= '(' ) ) ( ( ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> (lv_memberCallArguments_18_0= ruleXShortClosure ) ) | ( ( (lv_memberCallArguments_19_0= ruleXExpression ) ) (otherlv_20= ',' ( (lv_memberCallArguments_21_0= ruleXExpression ) ) )* ) )? otherlv_22= ')' )?
             	    int alt98=2;
             	    alt98 = dfa98.predict(input);
             	    switch (alt98) {
             	        case 1 :
-            	            // InternalMelange.g:5310:3: ( ( ( '(' ) )=> (lv_explicitOperationCall_17_0= '(' ) ) ( ( ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> (lv_memberCallArguments_18_0= ruleXShortClosure ) ) | ( ( (lv_memberCallArguments_19_0= ruleXExpression ) ) (otherlv_20= ',' ( (lv_memberCallArguments_21_0= ruleXExpression ) ) )* ) )? otherlv_22= ')'
+            	            // InternalMelange.g:5329:3: ( ( ( '(' ) )=> (lv_explicitOperationCall_17_0= '(' ) ) ( ( ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> (lv_memberCallArguments_18_0= ruleXShortClosure ) ) | ( ( (lv_memberCallArguments_19_0= ruleXExpression ) ) (otherlv_20= ',' ( (lv_memberCallArguments_21_0= ruleXExpression ) ) )* ) )? otherlv_22= ')'
             	            {
-            	            // InternalMelange.g:5310:3: ( ( ( '(' ) )=> (lv_explicitOperationCall_17_0= '(' ) )
-            	            // InternalMelange.g:5310:4: ( ( '(' ) )=> (lv_explicitOperationCall_17_0= '(' )
+            	            // InternalMelange.g:5329:3: ( ( ( '(' ) )=> (lv_explicitOperationCall_17_0= '(' ) )
+            	            // InternalMelange.g:5329:4: ( ( '(' ) )=> (lv_explicitOperationCall_17_0= '(' )
             	            {
-            	            // InternalMelange.g:5317:1: (lv_explicitOperationCall_17_0= '(' )
-            	            // InternalMelange.g:5318:3: lv_explicitOperationCall_17_0= '('
+            	            // InternalMelange.g:5336:1: (lv_explicitOperationCall_17_0= '(' )
+            	            // InternalMelange.g:5337:3: lv_explicitOperationCall_17_0= '('
             	            {
-            	            lv_explicitOperationCall_17_0=(Token)match(input,24,FOLLOW_86); if (state.failed) return current;
+            	            lv_explicitOperationCall_17_0=(Token)match(input,24,FOLLOW_87); if (state.failed) return current;
             	            if ( state.backtracking==0 ) {
 
             	                      newLeafNode(lv_explicitOperationCall_17_0, grammarAccess.getXMemberFeatureCallAccess().getExplicitOperationCallLeftParenthesisKeyword_1_1_3_0_0());
@@ -15426,18 +15468,18 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
             	            }
 
-            	            // InternalMelange.g:5331:2: ( ( ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> (lv_memberCallArguments_18_0= ruleXShortClosure ) ) | ( ( (lv_memberCallArguments_19_0= ruleXExpression ) ) (otherlv_20= ',' ( (lv_memberCallArguments_21_0= ruleXExpression ) ) )* ) )?
+            	            // InternalMelange.g:5350:2: ( ( ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> (lv_memberCallArguments_18_0= ruleXShortClosure ) ) | ( ( (lv_memberCallArguments_19_0= ruleXExpression ) ) (otherlv_20= ',' ( (lv_memberCallArguments_21_0= ruleXExpression ) ) )* ) )?
             	            int alt97=3;
             	            alt97 = dfa97.predict(input);
             	            switch (alt97) {
             	                case 1 :
-            	                    // InternalMelange.g:5331:3: ( ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> (lv_memberCallArguments_18_0= ruleXShortClosure ) )
+            	                    // InternalMelange.g:5350:3: ( ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> (lv_memberCallArguments_18_0= ruleXShortClosure ) )
             	                    {
-            	                    // InternalMelange.g:5331:3: ( ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> (lv_memberCallArguments_18_0= ruleXShortClosure ) )
-            	                    // InternalMelange.g:5331:4: ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> (lv_memberCallArguments_18_0= ruleXShortClosure )
+            	                    // InternalMelange.g:5350:3: ( ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> (lv_memberCallArguments_18_0= ruleXShortClosure ) )
+            	                    // InternalMelange.g:5350:4: ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> (lv_memberCallArguments_18_0= ruleXShortClosure )
             	                    {
-            	                    // InternalMelange.g:5348:1: (lv_memberCallArguments_18_0= ruleXShortClosure )
-            	                    // InternalMelange.g:5349:3: lv_memberCallArguments_18_0= ruleXShortClosure
+            	                    // InternalMelange.g:5367:1: (lv_memberCallArguments_18_0= ruleXShortClosure )
+            	                    // InternalMelange.g:5368:3: lv_memberCallArguments_18_0= ruleXShortClosure
             	                    {
             	                    if ( state.backtracking==0 ) {
             	                       
@@ -15472,16 +15514,16 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
             	                    }
             	                    break;
             	                case 2 :
-            	                    // InternalMelange.g:5366:6: ( ( (lv_memberCallArguments_19_0= ruleXExpression ) ) (otherlv_20= ',' ( (lv_memberCallArguments_21_0= ruleXExpression ) ) )* )
+            	                    // InternalMelange.g:5385:6: ( ( (lv_memberCallArguments_19_0= ruleXExpression ) ) (otherlv_20= ',' ( (lv_memberCallArguments_21_0= ruleXExpression ) ) )* )
             	                    {
-            	                    // InternalMelange.g:5366:6: ( ( (lv_memberCallArguments_19_0= ruleXExpression ) ) (otherlv_20= ',' ( (lv_memberCallArguments_21_0= ruleXExpression ) ) )* )
-            	                    // InternalMelange.g:5366:7: ( (lv_memberCallArguments_19_0= ruleXExpression ) ) (otherlv_20= ',' ( (lv_memberCallArguments_21_0= ruleXExpression ) ) )*
+            	                    // InternalMelange.g:5385:6: ( ( (lv_memberCallArguments_19_0= ruleXExpression ) ) (otherlv_20= ',' ( (lv_memberCallArguments_21_0= ruleXExpression ) ) )* )
+            	                    // InternalMelange.g:5385:7: ( (lv_memberCallArguments_19_0= ruleXExpression ) ) (otherlv_20= ',' ( (lv_memberCallArguments_21_0= ruleXExpression ) ) )*
             	                    {
-            	                    // InternalMelange.g:5366:7: ( (lv_memberCallArguments_19_0= ruleXExpression ) )
-            	                    // InternalMelange.g:5367:1: (lv_memberCallArguments_19_0= ruleXExpression )
+            	                    // InternalMelange.g:5385:7: ( (lv_memberCallArguments_19_0= ruleXExpression ) )
+            	                    // InternalMelange.g:5386:1: (lv_memberCallArguments_19_0= ruleXExpression )
             	                    {
-            	                    // InternalMelange.g:5367:1: (lv_memberCallArguments_19_0= ruleXExpression )
-            	                    // InternalMelange.g:5368:3: lv_memberCallArguments_19_0= ruleXExpression
+            	                    // InternalMelange.g:5386:1: (lv_memberCallArguments_19_0= ruleXExpression )
+            	                    // InternalMelange.g:5387:3: lv_memberCallArguments_19_0= ruleXExpression
             	                    {
             	                    if ( state.backtracking==0 ) {
             	                       
@@ -15512,7 +15554,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
             	                    }
 
-            	                    // InternalMelange.g:5384:2: (otherlv_20= ',' ( (lv_memberCallArguments_21_0= ruleXExpression ) ) )*
+            	                    // InternalMelange.g:5403:2: (otherlv_20= ',' ( (lv_memberCallArguments_21_0= ruleXExpression ) ) )*
             	                    loop96:
             	                    do {
             	                        int alt96=2;
@@ -15525,19 +15567,19 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
             	                        switch (alt96) {
             	                    	case 1 :
-            	                    	    // InternalMelange.g:5384:4: otherlv_20= ',' ( (lv_memberCallArguments_21_0= ruleXExpression ) )
+            	                    	    // InternalMelange.g:5403:4: otherlv_20= ',' ( (lv_memberCallArguments_21_0= ruleXExpression ) )
             	                    	    {
-            	                    	    otherlv_20=(Token)match(input,33,FOLLOW_63); if (state.failed) return current;
+            	                    	    otherlv_20=(Token)match(input,33,FOLLOW_64); if (state.failed) return current;
             	                    	    if ( state.backtracking==0 ) {
 
             	                    	          	newLeafNode(otherlv_20, grammarAccess.getXMemberFeatureCallAccess().getCommaKeyword_1_1_3_1_1_1_0());
             	                    	          
             	                    	    }
-            	                    	    // InternalMelange.g:5388:1: ( (lv_memberCallArguments_21_0= ruleXExpression ) )
-            	                    	    // InternalMelange.g:5389:1: (lv_memberCallArguments_21_0= ruleXExpression )
+            	                    	    // InternalMelange.g:5407:1: ( (lv_memberCallArguments_21_0= ruleXExpression ) )
+            	                    	    // InternalMelange.g:5408:1: (lv_memberCallArguments_21_0= ruleXExpression )
             	                    	    {
-            	                    	    // InternalMelange.g:5389:1: (lv_memberCallArguments_21_0= ruleXExpression )
-            	                    	    // InternalMelange.g:5390:3: lv_memberCallArguments_21_0= ruleXExpression
+            	                    	    // InternalMelange.g:5408:1: (lv_memberCallArguments_21_0= ruleXExpression )
+            	                    	    // InternalMelange.g:5409:3: lv_memberCallArguments_21_0= ruleXExpression
             	                    	    {
             	                    	    if ( state.backtracking==0 ) {
             	                    	       
@@ -15586,7 +15628,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
             	            }
 
-            	            otherlv_22=(Token)match(input,25,FOLLOW_87); if (state.failed) return current;
+            	            otherlv_22=(Token)match(input,25,FOLLOW_88); if (state.failed) return current;
             	            if ( state.backtracking==0 ) {
 
             	                  	newLeafNode(otherlv_22, grammarAccess.getXMemberFeatureCallAccess().getRightParenthesisKeyword_1_1_3_2());
@@ -15598,22 +15640,22 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    // InternalMelange.g:5410:3: ( ( ( () '[' ) )=> (lv_memberCallArguments_23_0= ruleXClosure ) )?
+            	    // InternalMelange.g:5429:3: ( ( ( () '[' ) )=> (lv_memberCallArguments_23_0= ruleXClosure ) )?
             	    int alt99=2;
             	    alt99 = dfa99.predict(input);
             	    switch (alt99) {
             	        case 1 :
-            	            // InternalMelange.g:5410:4: ( ( () '[' ) )=> (lv_memberCallArguments_23_0= ruleXClosure )
+            	            // InternalMelange.g:5429:4: ( ( () '[' ) )=> (lv_memberCallArguments_23_0= ruleXClosure )
             	            {
-            	            // InternalMelange.g:5413:1: (lv_memberCallArguments_23_0= ruleXClosure )
-            	            // InternalMelange.g:5414:3: lv_memberCallArguments_23_0= ruleXClosure
+            	            // InternalMelange.g:5432:1: (lv_memberCallArguments_23_0= ruleXClosure )
+            	            // InternalMelange.g:5433:3: lv_memberCallArguments_23_0= ruleXClosure
             	            {
             	            if ( state.backtracking==0 ) {
             	               
             	              	        newCompositeNode(grammarAccess.getXMemberFeatureCallAccess().getMemberCallArgumentsXClosureParserRuleCall_1_1_4_0()); 
             	              	    
             	            }
-            	            pushFollow(FOLLOW_80);
+            	            pushFollow(FOLLOW_81);
             	            lv_memberCallArguments_23_0=ruleXClosure();
 
             	            state._fsp--;
@@ -15675,7 +15717,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleXPrimaryExpression"
-    // InternalMelange.g:5438:1: entryRuleXPrimaryExpression returns [EObject current=null] : iv_ruleXPrimaryExpression= ruleXPrimaryExpression EOF ;
+    // InternalMelange.g:5457:1: entryRuleXPrimaryExpression returns [EObject current=null] : iv_ruleXPrimaryExpression= ruleXPrimaryExpression EOF ;
     public final EObject entryRuleXPrimaryExpression() throws RecognitionException {
         EObject current = null;
 
@@ -15683,8 +15725,8 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalMelange.g:5439:2: (iv_ruleXPrimaryExpression= ruleXPrimaryExpression EOF )
-            // InternalMelange.g:5440:2: iv_ruleXPrimaryExpression= ruleXPrimaryExpression EOF
+            // InternalMelange.g:5458:2: (iv_ruleXPrimaryExpression= ruleXPrimaryExpression EOF )
+            // InternalMelange.g:5459:2: iv_ruleXPrimaryExpression= ruleXPrimaryExpression EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getXPrimaryExpressionRule()); 
@@ -15715,7 +15757,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleXPrimaryExpression"
-    // InternalMelange.g:5447:1: ruleXPrimaryExpression returns [EObject current=null] : (this_XConstructorCall_0= ruleXConstructorCall | this_XBlockExpression_1= ruleXBlockExpression | this_XSwitchExpression_2= ruleXSwitchExpression | ( ( ( () 'synchronized' '(' ) )=>this_XSynchronizedExpression_3= ruleXSynchronizedExpression ) | this_XFeatureCall_4= ruleXFeatureCall | this_XLiteral_5= ruleXLiteral | this_XIfExpression_6= ruleXIfExpression | ( ( ( () 'for' '(' ( ( ruleJvmFormalParameter ) ) ':' ) )=>this_XForLoopExpression_7= ruleXForLoopExpression ) | this_XBasicForLoopExpression_8= ruleXBasicForLoopExpression | this_XWhileExpression_9= ruleXWhileExpression | this_XDoWhileExpression_10= ruleXDoWhileExpression | this_XThrowExpression_11= ruleXThrowExpression | this_XReturnExpression_12= ruleXReturnExpression | this_XTryCatchFinallyExpression_13= ruleXTryCatchFinallyExpression | this_XParenthesizedExpression_14= ruleXParenthesizedExpression ) ;
+    // InternalMelange.g:5466:1: ruleXPrimaryExpression returns [EObject current=null] : (this_XConstructorCall_0= ruleXConstructorCall | this_XBlockExpression_1= ruleXBlockExpression | this_XSwitchExpression_2= ruleXSwitchExpression | ( ( ( () 'synchronized' '(' ) )=>this_XSynchronizedExpression_3= ruleXSynchronizedExpression ) | this_XFeatureCall_4= ruleXFeatureCall | this_XLiteral_5= ruleXLiteral | this_XIfExpression_6= ruleXIfExpression | ( ( ( () 'for' '(' ( ( ruleJvmFormalParameter ) ) ':' ) )=>this_XForLoopExpression_7= ruleXForLoopExpression ) | this_XBasicForLoopExpression_8= ruleXBasicForLoopExpression | this_XWhileExpression_9= ruleXWhileExpression | this_XDoWhileExpression_10= ruleXDoWhileExpression | this_XThrowExpression_11= ruleXThrowExpression | this_XReturnExpression_12= ruleXReturnExpression | this_XTryCatchFinallyExpression_13= ruleXTryCatchFinallyExpression | this_XParenthesizedExpression_14= ruleXParenthesizedExpression ) ;
     public final EObject ruleXPrimaryExpression() throws RecognitionException {
         EObject current = null;
 
@@ -15753,15 +15795,15 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // InternalMelange.g:5450:28: ( (this_XConstructorCall_0= ruleXConstructorCall | this_XBlockExpression_1= ruleXBlockExpression | this_XSwitchExpression_2= ruleXSwitchExpression | ( ( ( () 'synchronized' '(' ) )=>this_XSynchronizedExpression_3= ruleXSynchronizedExpression ) | this_XFeatureCall_4= ruleXFeatureCall | this_XLiteral_5= ruleXLiteral | this_XIfExpression_6= ruleXIfExpression | ( ( ( () 'for' '(' ( ( ruleJvmFormalParameter ) ) ':' ) )=>this_XForLoopExpression_7= ruleXForLoopExpression ) | this_XBasicForLoopExpression_8= ruleXBasicForLoopExpression | this_XWhileExpression_9= ruleXWhileExpression | this_XDoWhileExpression_10= ruleXDoWhileExpression | this_XThrowExpression_11= ruleXThrowExpression | this_XReturnExpression_12= ruleXReturnExpression | this_XTryCatchFinallyExpression_13= ruleXTryCatchFinallyExpression | this_XParenthesizedExpression_14= ruleXParenthesizedExpression ) )
-            // InternalMelange.g:5451:1: (this_XConstructorCall_0= ruleXConstructorCall | this_XBlockExpression_1= ruleXBlockExpression | this_XSwitchExpression_2= ruleXSwitchExpression | ( ( ( () 'synchronized' '(' ) )=>this_XSynchronizedExpression_3= ruleXSynchronizedExpression ) | this_XFeatureCall_4= ruleXFeatureCall | this_XLiteral_5= ruleXLiteral | this_XIfExpression_6= ruleXIfExpression | ( ( ( () 'for' '(' ( ( ruleJvmFormalParameter ) ) ':' ) )=>this_XForLoopExpression_7= ruleXForLoopExpression ) | this_XBasicForLoopExpression_8= ruleXBasicForLoopExpression | this_XWhileExpression_9= ruleXWhileExpression | this_XDoWhileExpression_10= ruleXDoWhileExpression | this_XThrowExpression_11= ruleXThrowExpression | this_XReturnExpression_12= ruleXReturnExpression | this_XTryCatchFinallyExpression_13= ruleXTryCatchFinallyExpression | this_XParenthesizedExpression_14= ruleXParenthesizedExpression )
+            // InternalMelange.g:5469:28: ( (this_XConstructorCall_0= ruleXConstructorCall | this_XBlockExpression_1= ruleXBlockExpression | this_XSwitchExpression_2= ruleXSwitchExpression | ( ( ( () 'synchronized' '(' ) )=>this_XSynchronizedExpression_3= ruleXSynchronizedExpression ) | this_XFeatureCall_4= ruleXFeatureCall | this_XLiteral_5= ruleXLiteral | this_XIfExpression_6= ruleXIfExpression | ( ( ( () 'for' '(' ( ( ruleJvmFormalParameter ) ) ':' ) )=>this_XForLoopExpression_7= ruleXForLoopExpression ) | this_XBasicForLoopExpression_8= ruleXBasicForLoopExpression | this_XWhileExpression_9= ruleXWhileExpression | this_XDoWhileExpression_10= ruleXDoWhileExpression | this_XThrowExpression_11= ruleXThrowExpression | this_XReturnExpression_12= ruleXReturnExpression | this_XTryCatchFinallyExpression_13= ruleXTryCatchFinallyExpression | this_XParenthesizedExpression_14= ruleXParenthesizedExpression ) )
+            // InternalMelange.g:5470:1: (this_XConstructorCall_0= ruleXConstructorCall | this_XBlockExpression_1= ruleXBlockExpression | this_XSwitchExpression_2= ruleXSwitchExpression | ( ( ( () 'synchronized' '(' ) )=>this_XSynchronizedExpression_3= ruleXSynchronizedExpression ) | this_XFeatureCall_4= ruleXFeatureCall | this_XLiteral_5= ruleXLiteral | this_XIfExpression_6= ruleXIfExpression | ( ( ( () 'for' '(' ( ( ruleJvmFormalParameter ) ) ':' ) )=>this_XForLoopExpression_7= ruleXForLoopExpression ) | this_XBasicForLoopExpression_8= ruleXBasicForLoopExpression | this_XWhileExpression_9= ruleXWhileExpression | this_XDoWhileExpression_10= ruleXDoWhileExpression | this_XThrowExpression_11= ruleXThrowExpression | this_XReturnExpression_12= ruleXReturnExpression | this_XTryCatchFinallyExpression_13= ruleXTryCatchFinallyExpression | this_XParenthesizedExpression_14= ruleXParenthesizedExpression )
             {
-            // InternalMelange.g:5451:1: (this_XConstructorCall_0= ruleXConstructorCall | this_XBlockExpression_1= ruleXBlockExpression | this_XSwitchExpression_2= ruleXSwitchExpression | ( ( ( () 'synchronized' '(' ) )=>this_XSynchronizedExpression_3= ruleXSynchronizedExpression ) | this_XFeatureCall_4= ruleXFeatureCall | this_XLiteral_5= ruleXLiteral | this_XIfExpression_6= ruleXIfExpression | ( ( ( () 'for' '(' ( ( ruleJvmFormalParameter ) ) ':' ) )=>this_XForLoopExpression_7= ruleXForLoopExpression ) | this_XBasicForLoopExpression_8= ruleXBasicForLoopExpression | this_XWhileExpression_9= ruleXWhileExpression | this_XDoWhileExpression_10= ruleXDoWhileExpression | this_XThrowExpression_11= ruleXThrowExpression | this_XReturnExpression_12= ruleXReturnExpression | this_XTryCatchFinallyExpression_13= ruleXTryCatchFinallyExpression | this_XParenthesizedExpression_14= ruleXParenthesizedExpression )
+            // InternalMelange.g:5470:1: (this_XConstructorCall_0= ruleXConstructorCall | this_XBlockExpression_1= ruleXBlockExpression | this_XSwitchExpression_2= ruleXSwitchExpression | ( ( ( () 'synchronized' '(' ) )=>this_XSynchronizedExpression_3= ruleXSynchronizedExpression ) | this_XFeatureCall_4= ruleXFeatureCall | this_XLiteral_5= ruleXLiteral | this_XIfExpression_6= ruleXIfExpression | ( ( ( () 'for' '(' ( ( ruleJvmFormalParameter ) ) ':' ) )=>this_XForLoopExpression_7= ruleXForLoopExpression ) | this_XBasicForLoopExpression_8= ruleXBasicForLoopExpression | this_XWhileExpression_9= ruleXWhileExpression | this_XDoWhileExpression_10= ruleXDoWhileExpression | this_XThrowExpression_11= ruleXThrowExpression | this_XReturnExpression_12= ruleXReturnExpression | this_XTryCatchFinallyExpression_13= ruleXTryCatchFinallyExpression | this_XParenthesizedExpression_14= ruleXParenthesizedExpression )
             int alt101=15;
             alt101 = dfa101.predict(input);
             switch (alt101) {
                 case 1 :
-                    // InternalMelange.g:5452:5: this_XConstructorCall_0= ruleXConstructorCall
+                    // InternalMelange.g:5471:5: this_XConstructorCall_0= ruleXConstructorCall
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -15783,7 +15825,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalMelange.g:5462:5: this_XBlockExpression_1= ruleXBlockExpression
+                    // InternalMelange.g:5481:5: this_XBlockExpression_1= ruleXBlockExpression
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -15805,7 +15847,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalMelange.g:5472:5: this_XSwitchExpression_2= ruleXSwitchExpression
+                    // InternalMelange.g:5491:5: this_XSwitchExpression_2= ruleXSwitchExpression
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -15827,10 +15869,10 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // InternalMelange.g:5481:6: ( ( ( () 'synchronized' '(' ) )=>this_XSynchronizedExpression_3= ruleXSynchronizedExpression )
+                    // InternalMelange.g:5500:6: ( ( ( () 'synchronized' '(' ) )=>this_XSynchronizedExpression_3= ruleXSynchronizedExpression )
                     {
-                    // InternalMelange.g:5481:6: ( ( ( () 'synchronized' '(' ) )=>this_XSynchronizedExpression_3= ruleXSynchronizedExpression )
-                    // InternalMelange.g:5481:7: ( ( () 'synchronized' '(' ) )=>this_XSynchronizedExpression_3= ruleXSynchronizedExpression
+                    // InternalMelange.g:5500:6: ( ( ( () 'synchronized' '(' ) )=>this_XSynchronizedExpression_3= ruleXSynchronizedExpression )
+                    // InternalMelange.g:5500:7: ( ( () 'synchronized' '(' ) )=>this_XSynchronizedExpression_3= ruleXSynchronizedExpression
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -15855,7 +15897,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // InternalMelange.g:5495:5: this_XFeatureCall_4= ruleXFeatureCall
+                    // InternalMelange.g:5514:5: this_XFeatureCall_4= ruleXFeatureCall
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -15877,7 +15919,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 6 :
-                    // InternalMelange.g:5505:5: this_XLiteral_5= ruleXLiteral
+                    // InternalMelange.g:5524:5: this_XLiteral_5= ruleXLiteral
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -15899,7 +15941,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 7 :
-                    // InternalMelange.g:5515:5: this_XIfExpression_6= ruleXIfExpression
+                    // InternalMelange.g:5534:5: this_XIfExpression_6= ruleXIfExpression
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -15921,10 +15963,10 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 8 :
-                    // InternalMelange.g:5524:6: ( ( ( () 'for' '(' ( ( ruleJvmFormalParameter ) ) ':' ) )=>this_XForLoopExpression_7= ruleXForLoopExpression )
+                    // InternalMelange.g:5543:6: ( ( ( () 'for' '(' ( ( ruleJvmFormalParameter ) ) ':' ) )=>this_XForLoopExpression_7= ruleXForLoopExpression )
                     {
-                    // InternalMelange.g:5524:6: ( ( ( () 'for' '(' ( ( ruleJvmFormalParameter ) ) ':' ) )=>this_XForLoopExpression_7= ruleXForLoopExpression )
-                    // InternalMelange.g:5524:7: ( ( () 'for' '(' ( ( ruleJvmFormalParameter ) ) ':' ) )=>this_XForLoopExpression_7= ruleXForLoopExpression
+                    // InternalMelange.g:5543:6: ( ( ( () 'for' '(' ( ( ruleJvmFormalParameter ) ) ':' ) )=>this_XForLoopExpression_7= ruleXForLoopExpression )
+                    // InternalMelange.g:5543:7: ( ( () 'for' '(' ( ( ruleJvmFormalParameter ) ) ':' ) )=>this_XForLoopExpression_7= ruleXForLoopExpression
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -15949,7 +15991,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 9 :
-                    // InternalMelange.g:5543:5: this_XBasicForLoopExpression_8= ruleXBasicForLoopExpression
+                    // InternalMelange.g:5562:5: this_XBasicForLoopExpression_8= ruleXBasicForLoopExpression
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -15971,7 +16013,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 10 :
-                    // InternalMelange.g:5553:5: this_XWhileExpression_9= ruleXWhileExpression
+                    // InternalMelange.g:5572:5: this_XWhileExpression_9= ruleXWhileExpression
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -15993,7 +16035,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 11 :
-                    // InternalMelange.g:5563:5: this_XDoWhileExpression_10= ruleXDoWhileExpression
+                    // InternalMelange.g:5582:5: this_XDoWhileExpression_10= ruleXDoWhileExpression
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -16015,7 +16057,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 12 :
-                    // InternalMelange.g:5573:5: this_XThrowExpression_11= ruleXThrowExpression
+                    // InternalMelange.g:5592:5: this_XThrowExpression_11= ruleXThrowExpression
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -16037,7 +16079,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 13 :
-                    // InternalMelange.g:5583:5: this_XReturnExpression_12= ruleXReturnExpression
+                    // InternalMelange.g:5602:5: this_XReturnExpression_12= ruleXReturnExpression
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -16059,7 +16101,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 14 :
-                    // InternalMelange.g:5593:5: this_XTryCatchFinallyExpression_13= ruleXTryCatchFinallyExpression
+                    // InternalMelange.g:5612:5: this_XTryCatchFinallyExpression_13= ruleXTryCatchFinallyExpression
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -16081,7 +16123,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 15 :
-                    // InternalMelange.g:5603:5: this_XParenthesizedExpression_14= ruleXParenthesizedExpression
+                    // InternalMelange.g:5622:5: this_XParenthesizedExpression_14= ruleXParenthesizedExpression
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -16125,7 +16167,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleXLiteral"
-    // InternalMelange.g:5619:1: entryRuleXLiteral returns [EObject current=null] : iv_ruleXLiteral= ruleXLiteral EOF ;
+    // InternalMelange.g:5638:1: entryRuleXLiteral returns [EObject current=null] : iv_ruleXLiteral= ruleXLiteral EOF ;
     public final EObject entryRuleXLiteral() throws RecognitionException {
         EObject current = null;
 
@@ -16133,8 +16175,8 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalMelange.g:5620:2: (iv_ruleXLiteral= ruleXLiteral EOF )
-            // InternalMelange.g:5621:2: iv_ruleXLiteral= ruleXLiteral EOF
+            // InternalMelange.g:5639:2: (iv_ruleXLiteral= ruleXLiteral EOF )
+            // InternalMelange.g:5640:2: iv_ruleXLiteral= ruleXLiteral EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getXLiteralRule()); 
@@ -16165,7 +16207,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleXLiteral"
-    // InternalMelange.g:5628:1: ruleXLiteral returns [EObject current=null] : (this_XCollectionLiteral_0= ruleXCollectionLiteral | ( ( ( () '[' ) )=>this_XClosure_1= ruleXClosure ) | this_XBooleanLiteral_2= ruleXBooleanLiteral | this_XNumberLiteral_3= ruleXNumberLiteral | this_XNullLiteral_4= ruleXNullLiteral | this_XStringLiteral_5= ruleXStringLiteral | this_XTypeLiteral_6= ruleXTypeLiteral ) ;
+    // InternalMelange.g:5647:1: ruleXLiteral returns [EObject current=null] : (this_XCollectionLiteral_0= ruleXCollectionLiteral | ( ( ( () '[' ) )=>this_XClosure_1= ruleXClosure ) | this_XBooleanLiteral_2= ruleXBooleanLiteral | this_XNumberLiteral_3= ruleXNumberLiteral | this_XNullLiteral_4= ruleXNullLiteral | this_XStringLiteral_5= ruleXStringLiteral | this_XTypeLiteral_6= ruleXTypeLiteral ) ;
     public final EObject ruleXLiteral() throws RecognitionException {
         EObject current = null;
 
@@ -16187,32 +16229,32 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // InternalMelange.g:5631:28: ( (this_XCollectionLiteral_0= ruleXCollectionLiteral | ( ( ( () '[' ) )=>this_XClosure_1= ruleXClosure ) | this_XBooleanLiteral_2= ruleXBooleanLiteral | this_XNumberLiteral_3= ruleXNumberLiteral | this_XNullLiteral_4= ruleXNullLiteral | this_XStringLiteral_5= ruleXStringLiteral | this_XTypeLiteral_6= ruleXTypeLiteral ) )
-            // InternalMelange.g:5632:1: (this_XCollectionLiteral_0= ruleXCollectionLiteral | ( ( ( () '[' ) )=>this_XClosure_1= ruleXClosure ) | this_XBooleanLiteral_2= ruleXBooleanLiteral | this_XNumberLiteral_3= ruleXNumberLiteral | this_XNullLiteral_4= ruleXNullLiteral | this_XStringLiteral_5= ruleXStringLiteral | this_XTypeLiteral_6= ruleXTypeLiteral )
+            // InternalMelange.g:5650:28: ( (this_XCollectionLiteral_0= ruleXCollectionLiteral | ( ( ( () '[' ) )=>this_XClosure_1= ruleXClosure ) | this_XBooleanLiteral_2= ruleXBooleanLiteral | this_XNumberLiteral_3= ruleXNumberLiteral | this_XNullLiteral_4= ruleXNullLiteral | this_XStringLiteral_5= ruleXStringLiteral | this_XTypeLiteral_6= ruleXTypeLiteral ) )
+            // InternalMelange.g:5651:1: (this_XCollectionLiteral_0= ruleXCollectionLiteral | ( ( ( () '[' ) )=>this_XClosure_1= ruleXClosure ) | this_XBooleanLiteral_2= ruleXBooleanLiteral | this_XNumberLiteral_3= ruleXNumberLiteral | this_XNullLiteral_4= ruleXNullLiteral | this_XStringLiteral_5= ruleXStringLiteral | this_XTypeLiteral_6= ruleXTypeLiteral )
             {
-            // InternalMelange.g:5632:1: (this_XCollectionLiteral_0= ruleXCollectionLiteral | ( ( ( () '[' ) )=>this_XClosure_1= ruleXClosure ) | this_XBooleanLiteral_2= ruleXBooleanLiteral | this_XNumberLiteral_3= ruleXNumberLiteral | this_XNullLiteral_4= ruleXNullLiteral | this_XStringLiteral_5= ruleXStringLiteral | this_XTypeLiteral_6= ruleXTypeLiteral )
+            // InternalMelange.g:5651:1: (this_XCollectionLiteral_0= ruleXCollectionLiteral | ( ( ( () '[' ) )=>this_XClosure_1= ruleXClosure ) | this_XBooleanLiteral_2= ruleXBooleanLiteral | this_XNumberLiteral_3= ruleXNumberLiteral | this_XNullLiteral_4= ruleXNullLiteral | this_XStringLiteral_5= ruleXStringLiteral | this_XTypeLiteral_6= ruleXTypeLiteral )
             int alt102=7;
             int LA102_0 = input.LA(1);
 
-            if ( (LA102_0==96) ) {
+            if ( (LA102_0==97) ) {
                 alt102=1;
             }
-            else if ( (LA102_0==62) && (synpred27_InternalMelange())) {
+            else if ( (LA102_0==63) && (synpred27_InternalMelange())) {
                 alt102=2;
             }
-            else if ( ((LA102_0>=114 && LA102_0<=115)) ) {
+            else if ( ((LA102_0>=115 && LA102_0<=116)) ) {
                 alt102=3;
             }
             else if ( ((LA102_0>=RULE_HEX && LA102_0<=RULE_DECIMAL)) ) {
                 alt102=4;
             }
-            else if ( (LA102_0==116) ) {
+            else if ( (LA102_0==117) ) {
                 alt102=5;
             }
             else if ( (LA102_0==RULE_STRING) ) {
                 alt102=6;
             }
-            else if ( (LA102_0==117) ) {
+            else if ( (LA102_0==118) ) {
                 alt102=7;
             }
             else {
@@ -16224,7 +16266,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
             }
             switch (alt102) {
                 case 1 :
-                    // InternalMelange.g:5633:5: this_XCollectionLiteral_0= ruleXCollectionLiteral
+                    // InternalMelange.g:5652:5: this_XCollectionLiteral_0= ruleXCollectionLiteral
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -16246,10 +16288,10 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalMelange.g:5642:6: ( ( ( () '[' ) )=>this_XClosure_1= ruleXClosure )
+                    // InternalMelange.g:5661:6: ( ( ( () '[' ) )=>this_XClosure_1= ruleXClosure )
                     {
-                    // InternalMelange.g:5642:6: ( ( ( () '[' ) )=>this_XClosure_1= ruleXClosure )
-                    // InternalMelange.g:5642:7: ( ( () '[' ) )=>this_XClosure_1= ruleXClosure
+                    // InternalMelange.g:5661:6: ( ( ( () '[' ) )=>this_XClosure_1= ruleXClosure )
+                    // InternalMelange.g:5661:7: ( ( () '[' ) )=>this_XClosure_1= ruleXClosure
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -16274,7 +16316,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalMelange.g:5655:5: this_XBooleanLiteral_2= ruleXBooleanLiteral
+                    // InternalMelange.g:5674:5: this_XBooleanLiteral_2= ruleXBooleanLiteral
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -16296,7 +16338,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // InternalMelange.g:5665:5: this_XNumberLiteral_3= ruleXNumberLiteral
+                    // InternalMelange.g:5684:5: this_XNumberLiteral_3= ruleXNumberLiteral
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -16318,7 +16360,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // InternalMelange.g:5675:5: this_XNullLiteral_4= ruleXNullLiteral
+                    // InternalMelange.g:5694:5: this_XNullLiteral_4= ruleXNullLiteral
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -16340,7 +16382,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 6 :
-                    // InternalMelange.g:5685:5: this_XStringLiteral_5= ruleXStringLiteral
+                    // InternalMelange.g:5704:5: this_XStringLiteral_5= ruleXStringLiteral
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -16362,7 +16404,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 7 :
-                    // InternalMelange.g:5695:5: this_XTypeLiteral_6= ruleXTypeLiteral
+                    // InternalMelange.g:5714:5: this_XTypeLiteral_6= ruleXTypeLiteral
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -16406,7 +16448,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleXCollectionLiteral"
-    // InternalMelange.g:5711:1: entryRuleXCollectionLiteral returns [EObject current=null] : iv_ruleXCollectionLiteral= ruleXCollectionLiteral EOF ;
+    // InternalMelange.g:5730:1: entryRuleXCollectionLiteral returns [EObject current=null] : iv_ruleXCollectionLiteral= ruleXCollectionLiteral EOF ;
     public final EObject entryRuleXCollectionLiteral() throws RecognitionException {
         EObject current = null;
 
@@ -16414,8 +16456,8 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalMelange.g:5712:2: (iv_ruleXCollectionLiteral= ruleXCollectionLiteral EOF )
-            // InternalMelange.g:5713:2: iv_ruleXCollectionLiteral= ruleXCollectionLiteral EOF
+            // InternalMelange.g:5731:2: (iv_ruleXCollectionLiteral= ruleXCollectionLiteral EOF )
+            // InternalMelange.g:5732:2: iv_ruleXCollectionLiteral= ruleXCollectionLiteral EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getXCollectionLiteralRule()); 
@@ -16446,7 +16488,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleXCollectionLiteral"
-    // InternalMelange.g:5720:1: ruleXCollectionLiteral returns [EObject current=null] : (this_XSetLiteral_0= ruleXSetLiteral | this_XListLiteral_1= ruleXListLiteral ) ;
+    // InternalMelange.g:5739:1: ruleXCollectionLiteral returns [EObject current=null] : (this_XSetLiteral_0= ruleXSetLiteral | this_XListLiteral_1= ruleXListLiteral ) ;
     public final EObject ruleXCollectionLiteral() throws RecognitionException {
         EObject current = null;
 
@@ -16458,17 +16500,17 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // InternalMelange.g:5723:28: ( (this_XSetLiteral_0= ruleXSetLiteral | this_XListLiteral_1= ruleXListLiteral ) )
-            // InternalMelange.g:5724:1: (this_XSetLiteral_0= ruleXSetLiteral | this_XListLiteral_1= ruleXListLiteral )
+            // InternalMelange.g:5742:28: ( (this_XSetLiteral_0= ruleXSetLiteral | this_XListLiteral_1= ruleXListLiteral ) )
+            // InternalMelange.g:5743:1: (this_XSetLiteral_0= ruleXSetLiteral | this_XListLiteral_1= ruleXListLiteral )
             {
-            // InternalMelange.g:5724:1: (this_XSetLiteral_0= ruleXSetLiteral | this_XListLiteral_1= ruleXListLiteral )
+            // InternalMelange.g:5743:1: (this_XSetLiteral_0= ruleXSetLiteral | this_XListLiteral_1= ruleXListLiteral )
             int alt103=2;
             int LA103_0 = input.LA(1);
 
-            if ( (LA103_0==96) ) {
+            if ( (LA103_0==97) ) {
                 int LA103_1 = input.LA(2);
 
-                if ( (LA103_1==62) ) {
+                if ( (LA103_1==63) ) {
                     alt103=2;
                 }
                 else if ( (LA103_1==16) ) {
@@ -16491,7 +16533,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
             }
             switch (alt103) {
                 case 1 :
-                    // InternalMelange.g:5725:5: this_XSetLiteral_0= ruleXSetLiteral
+                    // InternalMelange.g:5744:5: this_XSetLiteral_0= ruleXSetLiteral
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -16513,7 +16555,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalMelange.g:5735:5: this_XListLiteral_1= ruleXListLiteral
+                    // InternalMelange.g:5754:5: this_XListLiteral_1= ruleXListLiteral
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -16557,7 +16599,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleXSetLiteral"
-    // InternalMelange.g:5751:1: entryRuleXSetLiteral returns [EObject current=null] : iv_ruleXSetLiteral= ruleXSetLiteral EOF ;
+    // InternalMelange.g:5770:1: entryRuleXSetLiteral returns [EObject current=null] : iv_ruleXSetLiteral= ruleXSetLiteral EOF ;
     public final EObject entryRuleXSetLiteral() throws RecognitionException {
         EObject current = null;
 
@@ -16565,8 +16607,8 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalMelange.g:5752:2: (iv_ruleXSetLiteral= ruleXSetLiteral EOF )
-            // InternalMelange.g:5753:2: iv_ruleXSetLiteral= ruleXSetLiteral EOF
+            // InternalMelange.g:5771:2: (iv_ruleXSetLiteral= ruleXSetLiteral EOF )
+            // InternalMelange.g:5772:2: iv_ruleXSetLiteral= ruleXSetLiteral EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getXSetLiteralRule()); 
@@ -16597,7 +16639,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleXSetLiteral"
-    // InternalMelange.g:5760:1: ruleXSetLiteral returns [EObject current=null] : ( () otherlv_1= '#' otherlv_2= '{' ( ( (lv_elements_3_0= ruleXExpression ) ) (otherlv_4= ',' ( (lv_elements_5_0= ruleXExpression ) ) )* )? otherlv_6= '}' ) ;
+    // InternalMelange.g:5779:1: ruleXSetLiteral returns [EObject current=null] : ( () otherlv_1= '#' otherlv_2= '{' ( ( (lv_elements_3_0= ruleXExpression ) ) (otherlv_4= ',' ( (lv_elements_5_0= ruleXExpression ) ) )* )? otherlv_6= '}' ) ;
     public final EObject ruleXSetLiteral() throws RecognitionException {
         EObject current = null;
 
@@ -16613,14 +16655,14 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // InternalMelange.g:5763:28: ( ( () otherlv_1= '#' otherlv_2= '{' ( ( (lv_elements_3_0= ruleXExpression ) ) (otherlv_4= ',' ( (lv_elements_5_0= ruleXExpression ) ) )* )? otherlv_6= '}' ) )
-            // InternalMelange.g:5764:1: ( () otherlv_1= '#' otherlv_2= '{' ( ( (lv_elements_3_0= ruleXExpression ) ) (otherlv_4= ',' ( (lv_elements_5_0= ruleXExpression ) ) )* )? otherlv_6= '}' )
+            // InternalMelange.g:5782:28: ( ( () otherlv_1= '#' otherlv_2= '{' ( ( (lv_elements_3_0= ruleXExpression ) ) (otherlv_4= ',' ( (lv_elements_5_0= ruleXExpression ) ) )* )? otherlv_6= '}' ) )
+            // InternalMelange.g:5783:1: ( () otherlv_1= '#' otherlv_2= '{' ( ( (lv_elements_3_0= ruleXExpression ) ) (otherlv_4= ',' ( (lv_elements_5_0= ruleXExpression ) ) )* )? otherlv_6= '}' )
             {
-            // InternalMelange.g:5764:1: ( () otherlv_1= '#' otherlv_2= '{' ( ( (lv_elements_3_0= ruleXExpression ) ) (otherlv_4= ',' ( (lv_elements_5_0= ruleXExpression ) ) )* )? otherlv_6= '}' )
-            // InternalMelange.g:5764:2: () otherlv_1= '#' otherlv_2= '{' ( ( (lv_elements_3_0= ruleXExpression ) ) (otherlv_4= ',' ( (lv_elements_5_0= ruleXExpression ) ) )* )? otherlv_6= '}'
+            // InternalMelange.g:5783:1: ( () otherlv_1= '#' otherlv_2= '{' ( ( (lv_elements_3_0= ruleXExpression ) ) (otherlv_4= ',' ( (lv_elements_5_0= ruleXExpression ) ) )* )? otherlv_6= '}' )
+            // InternalMelange.g:5783:2: () otherlv_1= '#' otherlv_2= '{' ( ( (lv_elements_3_0= ruleXExpression ) ) (otherlv_4= ',' ( (lv_elements_5_0= ruleXExpression ) ) )* )? otherlv_6= '}'
             {
-            // InternalMelange.g:5764:2: ()
-            // InternalMelange.g:5765:5: 
+            // InternalMelange.g:5783:2: ()
+            // InternalMelange.g:5784:5: 
             {
             if ( state.backtracking==0 ) {
 
@@ -16632,34 +16674,34 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,96,FOLLOW_7); if (state.failed) return current;
+            otherlv_1=(Token)match(input,97,FOLLOW_7); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_1, grammarAccess.getXSetLiteralAccess().getNumberSignKeyword_1());
                   
             }
-            otherlv_2=(Token)match(input,16,FOLLOW_88); if (state.failed) return current;
+            otherlv_2=(Token)match(input,16,FOLLOW_89); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_2, grammarAccess.getXSetLiteralAccess().getLeftCurlyBracketKeyword_2());
                   
             }
-            // InternalMelange.g:5778:1: ( ( (lv_elements_3_0= ruleXExpression ) ) (otherlv_4= ',' ( (lv_elements_5_0= ruleXExpression ) ) )* )?
+            // InternalMelange.g:5797:1: ( ( (lv_elements_3_0= ruleXExpression ) ) (otherlv_4= ',' ( (lv_elements_5_0= ruleXExpression ) ) )* )?
             int alt105=2;
             int LA105_0 = input.LA(1);
 
-            if ( ((LA105_0>=RULE_ID && LA105_0<=RULE_DECIMAL)||LA105_0==16||(LA105_0>=23 && LA105_0<=24)||LA105_0==56||LA105_0==62||LA105_0==70||LA105_0==85||LA105_0==96||LA105_0==98||LA105_0==100||(LA105_0>=103 && LA105_0<=105)||(LA105_0>=108 && LA105_0<=120)||LA105_0==122) ) {
+            if ( ((LA105_0>=RULE_ID && LA105_0<=RULE_DECIMAL)||LA105_0==16||(LA105_0>=23 && LA105_0<=24)||LA105_0==56||LA105_0==63||LA105_0==71||LA105_0==86||LA105_0==97||LA105_0==99||LA105_0==101||(LA105_0>=104 && LA105_0<=106)||(LA105_0>=109 && LA105_0<=121)||LA105_0==123) ) {
                 alt105=1;
             }
             switch (alt105) {
                 case 1 :
-                    // InternalMelange.g:5778:2: ( (lv_elements_3_0= ruleXExpression ) ) (otherlv_4= ',' ( (lv_elements_5_0= ruleXExpression ) ) )*
+                    // InternalMelange.g:5797:2: ( (lv_elements_3_0= ruleXExpression ) ) (otherlv_4= ',' ( (lv_elements_5_0= ruleXExpression ) ) )*
                     {
-                    // InternalMelange.g:5778:2: ( (lv_elements_3_0= ruleXExpression ) )
-                    // InternalMelange.g:5779:1: (lv_elements_3_0= ruleXExpression )
+                    // InternalMelange.g:5797:2: ( (lv_elements_3_0= ruleXExpression ) )
+                    // InternalMelange.g:5798:1: (lv_elements_3_0= ruleXExpression )
                     {
-                    // InternalMelange.g:5779:1: (lv_elements_3_0= ruleXExpression )
-                    // InternalMelange.g:5780:3: lv_elements_3_0= ruleXExpression
+                    // InternalMelange.g:5798:1: (lv_elements_3_0= ruleXExpression )
+                    // InternalMelange.g:5799:3: lv_elements_3_0= ruleXExpression
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -16690,7 +16732,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // InternalMelange.g:5796:2: (otherlv_4= ',' ( (lv_elements_5_0= ruleXExpression ) ) )*
+                    // InternalMelange.g:5815:2: (otherlv_4= ',' ( (lv_elements_5_0= ruleXExpression ) ) )*
                     loop104:
                     do {
                         int alt104=2;
@@ -16703,19 +16745,19 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
                         switch (alt104) {
                     	case 1 :
-                    	    // InternalMelange.g:5796:4: otherlv_4= ',' ( (lv_elements_5_0= ruleXExpression ) )
+                    	    // InternalMelange.g:5815:4: otherlv_4= ',' ( (lv_elements_5_0= ruleXExpression ) )
                     	    {
-                    	    otherlv_4=(Token)match(input,33,FOLLOW_63); if (state.failed) return current;
+                    	    otherlv_4=(Token)match(input,33,FOLLOW_64); if (state.failed) return current;
                     	    if ( state.backtracking==0 ) {
 
                     	          	newLeafNode(otherlv_4, grammarAccess.getXSetLiteralAccess().getCommaKeyword_3_1_0());
                     	          
                     	    }
-                    	    // InternalMelange.g:5800:1: ( (lv_elements_5_0= ruleXExpression ) )
-                    	    // InternalMelange.g:5801:1: (lv_elements_5_0= ruleXExpression )
+                    	    // InternalMelange.g:5819:1: ( (lv_elements_5_0= ruleXExpression ) )
+                    	    // InternalMelange.g:5820:1: (lv_elements_5_0= ruleXExpression )
                     	    {
-                    	    // InternalMelange.g:5801:1: (lv_elements_5_0= ruleXExpression )
-                    	    // InternalMelange.g:5802:3: lv_elements_5_0= ruleXExpression
+                    	    // InternalMelange.g:5820:1: (lv_elements_5_0= ruleXExpression )
+                    	    // InternalMelange.g:5821:3: lv_elements_5_0= ruleXExpression
                     	    {
                     	    if ( state.backtracking==0 ) {
                     	       
@@ -16790,7 +16832,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleXListLiteral"
-    // InternalMelange.g:5830:1: entryRuleXListLiteral returns [EObject current=null] : iv_ruleXListLiteral= ruleXListLiteral EOF ;
+    // InternalMelange.g:5849:1: entryRuleXListLiteral returns [EObject current=null] : iv_ruleXListLiteral= ruleXListLiteral EOF ;
     public final EObject entryRuleXListLiteral() throws RecognitionException {
         EObject current = null;
 
@@ -16798,8 +16840,8 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalMelange.g:5831:2: (iv_ruleXListLiteral= ruleXListLiteral EOF )
-            // InternalMelange.g:5832:2: iv_ruleXListLiteral= ruleXListLiteral EOF
+            // InternalMelange.g:5850:2: (iv_ruleXListLiteral= ruleXListLiteral EOF )
+            // InternalMelange.g:5851:2: iv_ruleXListLiteral= ruleXListLiteral EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getXListLiteralRule()); 
@@ -16830,7 +16872,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleXListLiteral"
-    // InternalMelange.g:5839:1: ruleXListLiteral returns [EObject current=null] : ( () otherlv_1= '#' otherlv_2= '[' ( ( (lv_elements_3_0= ruleXExpression ) ) (otherlv_4= ',' ( (lv_elements_5_0= ruleXExpression ) ) )* )? otherlv_6= ']' ) ;
+    // InternalMelange.g:5858:1: ruleXListLiteral returns [EObject current=null] : ( () otherlv_1= '#' otherlv_2= '[' ( ( (lv_elements_3_0= ruleXExpression ) ) (otherlv_4= ',' ( (lv_elements_5_0= ruleXExpression ) ) )* )? otherlv_6= ']' ) ;
     public final EObject ruleXListLiteral() throws RecognitionException {
         EObject current = null;
 
@@ -16846,14 +16888,14 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // InternalMelange.g:5842:28: ( ( () otherlv_1= '#' otherlv_2= '[' ( ( (lv_elements_3_0= ruleXExpression ) ) (otherlv_4= ',' ( (lv_elements_5_0= ruleXExpression ) ) )* )? otherlv_6= ']' ) )
-            // InternalMelange.g:5843:1: ( () otherlv_1= '#' otherlv_2= '[' ( ( (lv_elements_3_0= ruleXExpression ) ) (otherlv_4= ',' ( (lv_elements_5_0= ruleXExpression ) ) )* )? otherlv_6= ']' )
+            // InternalMelange.g:5861:28: ( ( () otherlv_1= '#' otherlv_2= '[' ( ( (lv_elements_3_0= ruleXExpression ) ) (otherlv_4= ',' ( (lv_elements_5_0= ruleXExpression ) ) )* )? otherlv_6= ']' ) )
+            // InternalMelange.g:5862:1: ( () otherlv_1= '#' otherlv_2= '[' ( ( (lv_elements_3_0= ruleXExpression ) ) (otherlv_4= ',' ( (lv_elements_5_0= ruleXExpression ) ) )* )? otherlv_6= ']' )
             {
-            // InternalMelange.g:5843:1: ( () otherlv_1= '#' otherlv_2= '[' ( ( (lv_elements_3_0= ruleXExpression ) ) (otherlv_4= ',' ( (lv_elements_5_0= ruleXExpression ) ) )* )? otherlv_6= ']' )
-            // InternalMelange.g:5843:2: () otherlv_1= '#' otherlv_2= '[' ( ( (lv_elements_3_0= ruleXExpression ) ) (otherlv_4= ',' ( (lv_elements_5_0= ruleXExpression ) ) )* )? otherlv_6= ']'
+            // InternalMelange.g:5862:1: ( () otherlv_1= '#' otherlv_2= '[' ( ( (lv_elements_3_0= ruleXExpression ) ) (otherlv_4= ',' ( (lv_elements_5_0= ruleXExpression ) ) )* )? otherlv_6= ']' )
+            // InternalMelange.g:5862:2: () otherlv_1= '#' otherlv_2= '[' ( ( (lv_elements_3_0= ruleXExpression ) ) (otherlv_4= ',' ( (lv_elements_5_0= ruleXExpression ) ) )* )? otherlv_6= ']'
             {
-            // InternalMelange.g:5843:2: ()
-            // InternalMelange.g:5844:5: 
+            // InternalMelange.g:5862:2: ()
+            // InternalMelange.g:5863:5: 
             {
             if ( state.backtracking==0 ) {
 
@@ -16865,41 +16907,41 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,96,FOLLOW_61); if (state.failed) return current;
+            otherlv_1=(Token)match(input,97,FOLLOW_62); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_1, grammarAccess.getXListLiteralAccess().getNumberSignKeyword_1());
                   
             }
-            otherlv_2=(Token)match(input,62,FOLLOW_89); if (state.failed) return current;
+            otherlv_2=(Token)match(input,63,FOLLOW_90); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_2, grammarAccess.getXListLiteralAccess().getLeftSquareBracketKeyword_2());
                   
             }
-            // InternalMelange.g:5857:1: ( ( (lv_elements_3_0= ruleXExpression ) ) (otherlv_4= ',' ( (lv_elements_5_0= ruleXExpression ) ) )* )?
+            // InternalMelange.g:5876:1: ( ( (lv_elements_3_0= ruleXExpression ) ) (otherlv_4= ',' ( (lv_elements_5_0= ruleXExpression ) ) )* )?
             int alt107=2;
             int LA107_0 = input.LA(1);
 
-            if ( ((LA107_0>=RULE_ID && LA107_0<=RULE_DECIMAL)||LA107_0==16||(LA107_0>=23 && LA107_0<=24)||LA107_0==56||LA107_0==62||LA107_0==70||LA107_0==85||LA107_0==96||LA107_0==98||LA107_0==100||(LA107_0>=103 && LA107_0<=105)||(LA107_0>=108 && LA107_0<=120)||LA107_0==122) ) {
+            if ( ((LA107_0>=RULE_ID && LA107_0<=RULE_DECIMAL)||LA107_0==16||(LA107_0>=23 && LA107_0<=24)||LA107_0==56||LA107_0==63||LA107_0==71||LA107_0==86||LA107_0==97||LA107_0==99||LA107_0==101||(LA107_0>=104 && LA107_0<=106)||(LA107_0>=109 && LA107_0<=121)||LA107_0==123) ) {
                 alt107=1;
             }
             switch (alt107) {
                 case 1 :
-                    // InternalMelange.g:5857:2: ( (lv_elements_3_0= ruleXExpression ) ) (otherlv_4= ',' ( (lv_elements_5_0= ruleXExpression ) ) )*
+                    // InternalMelange.g:5876:2: ( (lv_elements_3_0= ruleXExpression ) ) (otherlv_4= ',' ( (lv_elements_5_0= ruleXExpression ) ) )*
                     {
-                    // InternalMelange.g:5857:2: ( (lv_elements_3_0= ruleXExpression ) )
-                    // InternalMelange.g:5858:1: (lv_elements_3_0= ruleXExpression )
+                    // InternalMelange.g:5876:2: ( (lv_elements_3_0= ruleXExpression ) )
+                    // InternalMelange.g:5877:1: (lv_elements_3_0= ruleXExpression )
                     {
-                    // InternalMelange.g:5858:1: (lv_elements_3_0= ruleXExpression )
-                    // InternalMelange.g:5859:3: lv_elements_3_0= ruleXExpression
+                    // InternalMelange.g:5877:1: (lv_elements_3_0= ruleXExpression )
+                    // InternalMelange.g:5878:3: lv_elements_3_0= ruleXExpression
                     {
                     if ( state.backtracking==0 ) {
                        
                       	        newCompositeNode(grammarAccess.getXListLiteralAccess().getElementsXExpressionParserRuleCall_3_0_0()); 
                       	    
                     }
-                    pushFollow(FOLLOW_62);
+                    pushFollow(FOLLOW_63);
                     lv_elements_3_0=ruleXExpression();
 
                     state._fsp--;
@@ -16923,7 +16965,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // InternalMelange.g:5875:2: (otherlv_4= ',' ( (lv_elements_5_0= ruleXExpression ) ) )*
+                    // InternalMelange.g:5894:2: (otherlv_4= ',' ( (lv_elements_5_0= ruleXExpression ) ) )*
                     loop106:
                     do {
                         int alt106=2;
@@ -16936,26 +16978,26 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
                         switch (alt106) {
                     	case 1 :
-                    	    // InternalMelange.g:5875:4: otherlv_4= ',' ( (lv_elements_5_0= ruleXExpression ) )
+                    	    // InternalMelange.g:5894:4: otherlv_4= ',' ( (lv_elements_5_0= ruleXExpression ) )
                     	    {
-                    	    otherlv_4=(Token)match(input,33,FOLLOW_63); if (state.failed) return current;
+                    	    otherlv_4=(Token)match(input,33,FOLLOW_64); if (state.failed) return current;
                     	    if ( state.backtracking==0 ) {
 
                     	          	newLeafNode(otherlv_4, grammarAccess.getXListLiteralAccess().getCommaKeyword_3_1_0());
                     	          
                     	    }
-                    	    // InternalMelange.g:5879:1: ( (lv_elements_5_0= ruleXExpression ) )
-                    	    // InternalMelange.g:5880:1: (lv_elements_5_0= ruleXExpression )
+                    	    // InternalMelange.g:5898:1: ( (lv_elements_5_0= ruleXExpression ) )
+                    	    // InternalMelange.g:5899:1: (lv_elements_5_0= ruleXExpression )
                     	    {
-                    	    // InternalMelange.g:5880:1: (lv_elements_5_0= ruleXExpression )
-                    	    // InternalMelange.g:5881:3: lv_elements_5_0= ruleXExpression
+                    	    // InternalMelange.g:5899:1: (lv_elements_5_0= ruleXExpression )
+                    	    // InternalMelange.g:5900:3: lv_elements_5_0= ruleXExpression
                     	    {
                     	    if ( state.backtracking==0 ) {
                     	       
                     	      	        newCompositeNode(grammarAccess.getXListLiteralAccess().getElementsXExpressionParserRuleCall_3_1_1_0()); 
                     	      	    
                     	    }
-                    	    pushFollow(FOLLOW_62);
+                    	    pushFollow(FOLLOW_63);
                     	    lv_elements_5_0=ruleXExpression();
 
                     	    state._fsp--;
@@ -16994,7 +17036,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_6=(Token)match(input,63,FOLLOW_2); if (state.failed) return current;
+            otherlv_6=(Token)match(input,64,FOLLOW_2); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_6, grammarAccess.getXListLiteralAccess().getRightSquareBracketKeyword_4());
@@ -17023,7 +17065,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleXClosure"
-    // InternalMelange.g:5909:1: entryRuleXClosure returns [EObject current=null] : iv_ruleXClosure= ruleXClosure EOF ;
+    // InternalMelange.g:5928:1: entryRuleXClosure returns [EObject current=null] : iv_ruleXClosure= ruleXClosure EOF ;
     public final EObject entryRuleXClosure() throws RecognitionException {
         EObject current = null;
 
@@ -17031,8 +17073,8 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalMelange.g:5910:2: (iv_ruleXClosure= ruleXClosure EOF )
-            // InternalMelange.g:5911:2: iv_ruleXClosure= ruleXClosure EOF
+            // InternalMelange.g:5929:2: (iv_ruleXClosure= ruleXClosure EOF )
+            // InternalMelange.g:5930:2: iv_ruleXClosure= ruleXClosure EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getXClosureRule()); 
@@ -17063,7 +17105,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleXClosure"
-    // InternalMelange.g:5918:1: ruleXClosure returns [EObject current=null] : ( ( ( ( () '[' ) )=> ( () otherlv_1= '[' ) ) ( ( ( ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> ( ( ( (lv_declaredFormalParameters_2_0= ruleJvmFormalParameter ) ) (otherlv_3= ',' ( (lv_declaredFormalParameters_4_0= ruleJvmFormalParameter ) ) )* )? ( (lv_explicitSyntax_5_0= '|' ) ) ) )? ( (lv_expression_6_0= ruleXExpressionInClosure ) ) otherlv_7= ']' ) ;
+    // InternalMelange.g:5937:1: ruleXClosure returns [EObject current=null] : ( ( ( ( () '[' ) )=> ( () otherlv_1= '[' ) ) ( ( ( ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> ( ( ( (lv_declaredFormalParameters_2_0= ruleJvmFormalParameter ) ) (otherlv_3= ',' ( (lv_declaredFormalParameters_4_0= ruleJvmFormalParameter ) ) )* )? ( (lv_explicitSyntax_5_0= '|' ) ) ) )? ( (lv_expression_6_0= ruleXExpressionInClosure ) ) otherlv_7= ']' ) ;
     public final EObject ruleXClosure() throws RecognitionException {
         EObject current = null;
 
@@ -17081,20 +17123,20 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // InternalMelange.g:5921:28: ( ( ( ( ( () '[' ) )=> ( () otherlv_1= '[' ) ) ( ( ( ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> ( ( ( (lv_declaredFormalParameters_2_0= ruleJvmFormalParameter ) ) (otherlv_3= ',' ( (lv_declaredFormalParameters_4_0= ruleJvmFormalParameter ) ) )* )? ( (lv_explicitSyntax_5_0= '|' ) ) ) )? ( (lv_expression_6_0= ruleXExpressionInClosure ) ) otherlv_7= ']' ) )
-            // InternalMelange.g:5922:1: ( ( ( ( () '[' ) )=> ( () otherlv_1= '[' ) ) ( ( ( ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> ( ( ( (lv_declaredFormalParameters_2_0= ruleJvmFormalParameter ) ) (otherlv_3= ',' ( (lv_declaredFormalParameters_4_0= ruleJvmFormalParameter ) ) )* )? ( (lv_explicitSyntax_5_0= '|' ) ) ) )? ( (lv_expression_6_0= ruleXExpressionInClosure ) ) otherlv_7= ']' )
+            // InternalMelange.g:5940:28: ( ( ( ( ( () '[' ) )=> ( () otherlv_1= '[' ) ) ( ( ( ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> ( ( ( (lv_declaredFormalParameters_2_0= ruleJvmFormalParameter ) ) (otherlv_3= ',' ( (lv_declaredFormalParameters_4_0= ruleJvmFormalParameter ) ) )* )? ( (lv_explicitSyntax_5_0= '|' ) ) ) )? ( (lv_expression_6_0= ruleXExpressionInClosure ) ) otherlv_7= ']' ) )
+            // InternalMelange.g:5941:1: ( ( ( ( () '[' ) )=> ( () otherlv_1= '[' ) ) ( ( ( ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> ( ( ( (lv_declaredFormalParameters_2_0= ruleJvmFormalParameter ) ) (otherlv_3= ',' ( (lv_declaredFormalParameters_4_0= ruleJvmFormalParameter ) ) )* )? ( (lv_explicitSyntax_5_0= '|' ) ) ) )? ( (lv_expression_6_0= ruleXExpressionInClosure ) ) otherlv_7= ']' )
             {
-            // InternalMelange.g:5922:1: ( ( ( ( () '[' ) )=> ( () otherlv_1= '[' ) ) ( ( ( ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> ( ( ( (lv_declaredFormalParameters_2_0= ruleJvmFormalParameter ) ) (otherlv_3= ',' ( (lv_declaredFormalParameters_4_0= ruleJvmFormalParameter ) ) )* )? ( (lv_explicitSyntax_5_0= '|' ) ) ) )? ( (lv_expression_6_0= ruleXExpressionInClosure ) ) otherlv_7= ']' )
-            // InternalMelange.g:5922:2: ( ( ( () '[' ) )=> ( () otherlv_1= '[' ) ) ( ( ( ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> ( ( ( (lv_declaredFormalParameters_2_0= ruleJvmFormalParameter ) ) (otherlv_3= ',' ( (lv_declaredFormalParameters_4_0= ruleJvmFormalParameter ) ) )* )? ( (lv_explicitSyntax_5_0= '|' ) ) ) )? ( (lv_expression_6_0= ruleXExpressionInClosure ) ) otherlv_7= ']'
+            // InternalMelange.g:5941:1: ( ( ( ( () '[' ) )=> ( () otherlv_1= '[' ) ) ( ( ( ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> ( ( ( (lv_declaredFormalParameters_2_0= ruleJvmFormalParameter ) ) (otherlv_3= ',' ( (lv_declaredFormalParameters_4_0= ruleJvmFormalParameter ) ) )* )? ( (lv_explicitSyntax_5_0= '|' ) ) ) )? ( (lv_expression_6_0= ruleXExpressionInClosure ) ) otherlv_7= ']' )
+            // InternalMelange.g:5941:2: ( ( ( () '[' ) )=> ( () otherlv_1= '[' ) ) ( ( ( ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> ( ( ( (lv_declaredFormalParameters_2_0= ruleJvmFormalParameter ) ) (otherlv_3= ',' ( (lv_declaredFormalParameters_4_0= ruleJvmFormalParameter ) ) )* )? ( (lv_explicitSyntax_5_0= '|' ) ) ) )? ( (lv_expression_6_0= ruleXExpressionInClosure ) ) otherlv_7= ']'
             {
-            // InternalMelange.g:5922:2: ( ( ( () '[' ) )=> ( () otherlv_1= '[' ) )
-            // InternalMelange.g:5922:3: ( ( () '[' ) )=> ( () otherlv_1= '[' )
+            // InternalMelange.g:5941:2: ( ( ( () '[' ) )=> ( () otherlv_1= '[' ) )
+            // InternalMelange.g:5941:3: ( ( () '[' ) )=> ( () otherlv_1= '[' )
             {
-            // InternalMelange.g:5924:5: ( () otherlv_1= '[' )
-            // InternalMelange.g:5924:6: () otherlv_1= '['
+            // InternalMelange.g:5943:5: ( () otherlv_1= '[' )
+            // InternalMelange.g:5943:6: () otherlv_1= '['
             {
-            // InternalMelange.g:5924:6: ()
-            // InternalMelange.g:5925:5: 
+            // InternalMelange.g:5943:6: ()
+            // InternalMelange.g:5944:5: 
             {
             if ( state.backtracking==0 ) {
 
@@ -17106,7 +17148,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,62,FOLLOW_90); if (state.failed) return current;
+            otherlv_1=(Token)match(input,63,FOLLOW_91); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_1, grammarAccess.getXClosureAccess().getLeftSquareBracketKeyword_0_0_1());
@@ -17118,39 +17160,39 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalMelange.g:5934:3: ( ( ( ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> ( ( ( (lv_declaredFormalParameters_2_0= ruleJvmFormalParameter ) ) (otherlv_3= ',' ( (lv_declaredFormalParameters_4_0= ruleJvmFormalParameter ) ) )* )? ( (lv_explicitSyntax_5_0= '|' ) ) ) )?
+            // InternalMelange.g:5953:3: ( ( ( ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> ( ( ( (lv_declaredFormalParameters_2_0= ruleJvmFormalParameter ) ) (otherlv_3= ',' ( (lv_declaredFormalParameters_4_0= ruleJvmFormalParameter ) ) )* )? ( (lv_explicitSyntax_5_0= '|' ) ) ) )?
             int alt110=2;
             alt110 = dfa110.predict(input);
             switch (alt110) {
                 case 1 :
-                    // InternalMelange.g:5934:4: ( ( ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> ( ( ( (lv_declaredFormalParameters_2_0= ruleJvmFormalParameter ) ) (otherlv_3= ',' ( (lv_declaredFormalParameters_4_0= ruleJvmFormalParameter ) ) )* )? ( (lv_explicitSyntax_5_0= '|' ) ) )
+                    // InternalMelange.g:5953:4: ( ( ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> ( ( ( (lv_declaredFormalParameters_2_0= ruleJvmFormalParameter ) ) (otherlv_3= ',' ( (lv_declaredFormalParameters_4_0= ruleJvmFormalParameter ) ) )* )? ( (lv_explicitSyntax_5_0= '|' ) ) )
                     {
-                    // InternalMelange.g:5949:6: ( ( ( (lv_declaredFormalParameters_2_0= ruleJvmFormalParameter ) ) (otherlv_3= ',' ( (lv_declaredFormalParameters_4_0= ruleJvmFormalParameter ) ) )* )? ( (lv_explicitSyntax_5_0= '|' ) ) )
-                    // InternalMelange.g:5949:7: ( ( (lv_declaredFormalParameters_2_0= ruleJvmFormalParameter ) ) (otherlv_3= ',' ( (lv_declaredFormalParameters_4_0= ruleJvmFormalParameter ) ) )* )? ( (lv_explicitSyntax_5_0= '|' ) )
+                    // InternalMelange.g:5968:6: ( ( ( (lv_declaredFormalParameters_2_0= ruleJvmFormalParameter ) ) (otherlv_3= ',' ( (lv_declaredFormalParameters_4_0= ruleJvmFormalParameter ) ) )* )? ( (lv_explicitSyntax_5_0= '|' ) ) )
+                    // InternalMelange.g:5968:7: ( ( (lv_declaredFormalParameters_2_0= ruleJvmFormalParameter ) ) (otherlv_3= ',' ( (lv_declaredFormalParameters_4_0= ruleJvmFormalParameter ) ) )* )? ( (lv_explicitSyntax_5_0= '|' ) )
                     {
-                    // InternalMelange.g:5949:7: ( ( (lv_declaredFormalParameters_2_0= ruleJvmFormalParameter ) ) (otherlv_3= ',' ( (lv_declaredFormalParameters_4_0= ruleJvmFormalParameter ) ) )* )?
+                    // InternalMelange.g:5968:7: ( ( (lv_declaredFormalParameters_2_0= ruleJvmFormalParameter ) ) (otherlv_3= ',' ( (lv_declaredFormalParameters_4_0= ruleJvmFormalParameter ) ) )* )?
                     int alt109=2;
                     int LA109_0 = input.LA(1);
 
-                    if ( (LA109_0==RULE_ID||LA109_0==24||LA109_0==82) ) {
+                    if ( (LA109_0==RULE_ID||LA109_0==24||LA109_0==83) ) {
                         alt109=1;
                     }
                     switch (alt109) {
                         case 1 :
-                            // InternalMelange.g:5949:8: ( (lv_declaredFormalParameters_2_0= ruleJvmFormalParameter ) ) (otherlv_3= ',' ( (lv_declaredFormalParameters_4_0= ruleJvmFormalParameter ) ) )*
+                            // InternalMelange.g:5968:8: ( (lv_declaredFormalParameters_2_0= ruleJvmFormalParameter ) ) (otherlv_3= ',' ( (lv_declaredFormalParameters_4_0= ruleJvmFormalParameter ) ) )*
                             {
-                            // InternalMelange.g:5949:8: ( (lv_declaredFormalParameters_2_0= ruleJvmFormalParameter ) )
-                            // InternalMelange.g:5950:1: (lv_declaredFormalParameters_2_0= ruleJvmFormalParameter )
+                            // InternalMelange.g:5968:8: ( (lv_declaredFormalParameters_2_0= ruleJvmFormalParameter ) )
+                            // InternalMelange.g:5969:1: (lv_declaredFormalParameters_2_0= ruleJvmFormalParameter )
                             {
-                            // InternalMelange.g:5950:1: (lv_declaredFormalParameters_2_0= ruleJvmFormalParameter )
-                            // InternalMelange.g:5951:3: lv_declaredFormalParameters_2_0= ruleJvmFormalParameter
+                            // InternalMelange.g:5969:1: (lv_declaredFormalParameters_2_0= ruleJvmFormalParameter )
+                            // InternalMelange.g:5970:3: lv_declaredFormalParameters_2_0= ruleJvmFormalParameter
                             {
                             if ( state.backtracking==0 ) {
                                
                               	        newCompositeNode(grammarAccess.getXClosureAccess().getDeclaredFormalParametersJvmFormalParameterParserRuleCall_1_0_0_0_0()); 
                               	    
                             }
-                            pushFollow(FOLLOW_91);
+                            pushFollow(FOLLOW_92);
                             lv_declaredFormalParameters_2_0=ruleJvmFormalParameter();
 
                             state._fsp--;
@@ -17174,7 +17216,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
                             }
 
-                            // InternalMelange.g:5967:2: (otherlv_3= ',' ( (lv_declaredFormalParameters_4_0= ruleJvmFormalParameter ) ) )*
+                            // InternalMelange.g:5986:2: (otherlv_3= ',' ( (lv_declaredFormalParameters_4_0= ruleJvmFormalParameter ) ) )*
                             loop108:
                             do {
                                 int alt108=2;
@@ -17187,7 +17229,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
                                 switch (alt108) {
                             	case 1 :
-                            	    // InternalMelange.g:5967:4: otherlv_3= ',' ( (lv_declaredFormalParameters_4_0= ruleJvmFormalParameter ) )
+                            	    // InternalMelange.g:5986:4: otherlv_3= ',' ( (lv_declaredFormalParameters_4_0= ruleJvmFormalParameter ) )
                             	    {
                             	    otherlv_3=(Token)match(input,33,FOLLOW_33); if (state.failed) return current;
                             	    if ( state.backtracking==0 ) {
@@ -17195,18 +17237,18 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                             	          	newLeafNode(otherlv_3, grammarAccess.getXClosureAccess().getCommaKeyword_1_0_0_1_0());
                             	          
                             	    }
-                            	    // InternalMelange.g:5971:1: ( (lv_declaredFormalParameters_4_0= ruleJvmFormalParameter ) )
-                            	    // InternalMelange.g:5972:1: (lv_declaredFormalParameters_4_0= ruleJvmFormalParameter )
+                            	    // InternalMelange.g:5990:1: ( (lv_declaredFormalParameters_4_0= ruleJvmFormalParameter ) )
+                            	    // InternalMelange.g:5991:1: (lv_declaredFormalParameters_4_0= ruleJvmFormalParameter )
                             	    {
-                            	    // InternalMelange.g:5972:1: (lv_declaredFormalParameters_4_0= ruleJvmFormalParameter )
-                            	    // InternalMelange.g:5973:3: lv_declaredFormalParameters_4_0= ruleJvmFormalParameter
+                            	    // InternalMelange.g:5991:1: (lv_declaredFormalParameters_4_0= ruleJvmFormalParameter )
+                            	    // InternalMelange.g:5992:3: lv_declaredFormalParameters_4_0= ruleJvmFormalParameter
                             	    {
                             	    if ( state.backtracking==0 ) {
                             	       
                             	      	        newCompositeNode(grammarAccess.getXClosureAccess().getDeclaredFormalParametersJvmFormalParameterParserRuleCall_1_0_0_1_1_0()); 
                             	      	    
                             	    }
-                            	    pushFollow(FOLLOW_91);
+                            	    pushFollow(FOLLOW_92);
                             	    lv_declaredFormalParameters_4_0=ruleJvmFormalParameter();
 
                             	    state._fsp--;
@@ -17245,13 +17287,13 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // InternalMelange.g:5989:6: ( (lv_explicitSyntax_5_0= '|' ) )
-                    // InternalMelange.g:5990:1: (lv_explicitSyntax_5_0= '|' )
+                    // InternalMelange.g:6008:6: ( (lv_explicitSyntax_5_0= '|' ) )
+                    // InternalMelange.g:6009:1: (lv_explicitSyntax_5_0= '|' )
                     {
-                    // InternalMelange.g:5990:1: (lv_explicitSyntax_5_0= '|' )
-                    // InternalMelange.g:5991:3: lv_explicitSyntax_5_0= '|'
+                    // InternalMelange.g:6009:1: (lv_explicitSyntax_5_0= '|' )
+                    // InternalMelange.g:6010:3: lv_explicitSyntax_5_0= '|'
                     {
-                    lv_explicitSyntax_5_0=(Token)match(input,27,FOLLOW_92); if (state.failed) return current;
+                    lv_explicitSyntax_5_0=(Token)match(input,27,FOLLOW_93); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               newLeafNode(lv_explicitSyntax_5_0, grammarAccess.getXClosureAccess().getExplicitSyntaxVerticalLineKeyword_1_0_1_0());
@@ -17280,18 +17322,18 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalMelange.g:6004:5: ( (lv_expression_6_0= ruleXExpressionInClosure ) )
-            // InternalMelange.g:6005:1: (lv_expression_6_0= ruleXExpressionInClosure )
+            // InternalMelange.g:6023:5: ( (lv_expression_6_0= ruleXExpressionInClosure ) )
+            // InternalMelange.g:6024:1: (lv_expression_6_0= ruleXExpressionInClosure )
             {
-            // InternalMelange.g:6005:1: (lv_expression_6_0= ruleXExpressionInClosure )
-            // InternalMelange.g:6006:3: lv_expression_6_0= ruleXExpressionInClosure
+            // InternalMelange.g:6024:1: (lv_expression_6_0= ruleXExpressionInClosure )
+            // InternalMelange.g:6025:3: lv_expression_6_0= ruleXExpressionInClosure
             {
             if ( state.backtracking==0 ) {
                
               	        newCompositeNode(grammarAccess.getXClosureAccess().getExpressionXExpressionInClosureParserRuleCall_2_0()); 
               	    
             }
-            pushFollow(FOLLOW_93);
+            pushFollow(FOLLOW_94);
             lv_expression_6_0=ruleXExpressionInClosure();
 
             state._fsp--;
@@ -17315,7 +17357,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_7=(Token)match(input,63,FOLLOW_2); if (state.failed) return current;
+            otherlv_7=(Token)match(input,64,FOLLOW_2); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_7, grammarAccess.getXClosureAccess().getRightSquareBracketKeyword_3());
@@ -17344,7 +17386,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleXExpressionInClosure"
-    // InternalMelange.g:6034:1: entryRuleXExpressionInClosure returns [EObject current=null] : iv_ruleXExpressionInClosure= ruleXExpressionInClosure EOF ;
+    // InternalMelange.g:6053:1: entryRuleXExpressionInClosure returns [EObject current=null] : iv_ruleXExpressionInClosure= ruleXExpressionInClosure EOF ;
     public final EObject entryRuleXExpressionInClosure() throws RecognitionException {
         EObject current = null;
 
@@ -17352,8 +17394,8 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalMelange.g:6035:2: (iv_ruleXExpressionInClosure= ruleXExpressionInClosure EOF )
-            // InternalMelange.g:6036:2: iv_ruleXExpressionInClosure= ruleXExpressionInClosure EOF
+            // InternalMelange.g:6054:2: (iv_ruleXExpressionInClosure= ruleXExpressionInClosure EOF )
+            // InternalMelange.g:6055:2: iv_ruleXExpressionInClosure= ruleXExpressionInClosure EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getXExpressionInClosureRule()); 
@@ -17384,7 +17426,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleXExpressionInClosure"
-    // InternalMelange.g:6043:1: ruleXExpressionInClosure returns [EObject current=null] : ( () ( ( (lv_expressions_1_0= ruleXExpressionOrVarDeclaration ) ) (otherlv_2= ';' )? )* ) ;
+    // InternalMelange.g:6062:1: ruleXExpressionInClosure returns [EObject current=null] : ( () ( ( (lv_expressions_1_0= ruleXExpressionOrVarDeclaration ) ) (otherlv_2= ';' )? )* ) ;
     public final EObject ruleXExpressionInClosure() throws RecognitionException {
         EObject current = null;
 
@@ -17395,14 +17437,14 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // InternalMelange.g:6046:28: ( ( () ( ( (lv_expressions_1_0= ruleXExpressionOrVarDeclaration ) ) (otherlv_2= ';' )? )* ) )
-            // InternalMelange.g:6047:1: ( () ( ( (lv_expressions_1_0= ruleXExpressionOrVarDeclaration ) ) (otherlv_2= ';' )? )* )
+            // InternalMelange.g:6065:28: ( ( () ( ( (lv_expressions_1_0= ruleXExpressionOrVarDeclaration ) ) (otherlv_2= ';' )? )* ) )
+            // InternalMelange.g:6066:1: ( () ( ( (lv_expressions_1_0= ruleXExpressionOrVarDeclaration ) ) (otherlv_2= ';' )? )* )
             {
-            // InternalMelange.g:6047:1: ( () ( ( (lv_expressions_1_0= ruleXExpressionOrVarDeclaration ) ) (otherlv_2= ';' )? )* )
-            // InternalMelange.g:6047:2: () ( ( (lv_expressions_1_0= ruleXExpressionOrVarDeclaration ) ) (otherlv_2= ';' )? )*
+            // InternalMelange.g:6066:1: ( () ( ( (lv_expressions_1_0= ruleXExpressionOrVarDeclaration ) ) (otherlv_2= ';' )? )* )
+            // InternalMelange.g:6066:2: () ( ( (lv_expressions_1_0= ruleXExpressionOrVarDeclaration ) ) (otherlv_2= ';' )? )*
             {
-            // InternalMelange.g:6047:2: ()
-            // InternalMelange.g:6048:5: 
+            // InternalMelange.g:6066:2: ()
+            // InternalMelange.g:6067:5: 
             {
             if ( state.backtracking==0 ) {
 
@@ -17414,33 +17456,33 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalMelange.g:6053:2: ( ( (lv_expressions_1_0= ruleXExpressionOrVarDeclaration ) ) (otherlv_2= ';' )? )*
+            // InternalMelange.g:6072:2: ( ( (lv_expressions_1_0= ruleXExpressionOrVarDeclaration ) ) (otherlv_2= ';' )? )*
             loop112:
             do {
                 int alt112=2;
                 int LA112_0 = input.LA(1);
 
-                if ( ((LA112_0>=RULE_ID && LA112_0<=RULE_DECIMAL)||LA112_0==16||(LA112_0>=23 && LA112_0<=24)||LA112_0==56||LA112_0==62||LA112_0==70||LA112_0==85||LA112_0==96||LA112_0==98||LA112_0==100||(LA112_0>=103 && LA112_0<=120)||LA112_0==122) ) {
+                if ( ((LA112_0>=RULE_ID && LA112_0<=RULE_DECIMAL)||LA112_0==16||(LA112_0>=23 && LA112_0<=24)||LA112_0==56||LA112_0==63||LA112_0==71||LA112_0==86||LA112_0==97||LA112_0==99||LA112_0==101||(LA112_0>=104 && LA112_0<=121)||LA112_0==123) ) {
                     alt112=1;
                 }
 
 
                 switch (alt112) {
             	case 1 :
-            	    // InternalMelange.g:6053:3: ( (lv_expressions_1_0= ruleXExpressionOrVarDeclaration ) ) (otherlv_2= ';' )?
+            	    // InternalMelange.g:6072:3: ( (lv_expressions_1_0= ruleXExpressionOrVarDeclaration ) ) (otherlv_2= ';' )?
             	    {
-            	    // InternalMelange.g:6053:3: ( (lv_expressions_1_0= ruleXExpressionOrVarDeclaration ) )
-            	    // InternalMelange.g:6054:1: (lv_expressions_1_0= ruleXExpressionOrVarDeclaration )
+            	    // InternalMelange.g:6072:3: ( (lv_expressions_1_0= ruleXExpressionOrVarDeclaration ) )
+            	    // InternalMelange.g:6073:1: (lv_expressions_1_0= ruleXExpressionOrVarDeclaration )
             	    {
-            	    // InternalMelange.g:6054:1: (lv_expressions_1_0= ruleXExpressionOrVarDeclaration )
-            	    // InternalMelange.g:6055:3: lv_expressions_1_0= ruleXExpressionOrVarDeclaration
+            	    // InternalMelange.g:6073:1: (lv_expressions_1_0= ruleXExpressionOrVarDeclaration )
+            	    // InternalMelange.g:6074:3: lv_expressions_1_0= ruleXExpressionOrVarDeclaration
             	    {
             	    if ( state.backtracking==0 ) {
             	       
             	      	        newCompositeNode(grammarAccess.getXExpressionInClosureAccess().getExpressionsXExpressionOrVarDeclarationParserRuleCall_1_0_0()); 
             	      	    
             	    }
-            	    pushFollow(FOLLOW_94);
+            	    pushFollow(FOLLOW_95);
             	    lv_expressions_1_0=ruleXExpressionOrVarDeclaration();
 
             	    state._fsp--;
@@ -17464,18 +17506,18 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    // InternalMelange.g:6071:2: (otherlv_2= ';' )?
+            	    // InternalMelange.g:6090:2: (otherlv_2= ';' )?
             	    int alt111=2;
             	    int LA111_0 = input.LA(1);
 
-            	    if ( (LA111_0==97) ) {
+            	    if ( (LA111_0==98) ) {
             	        alt111=1;
             	    }
             	    switch (alt111) {
             	        case 1 :
-            	            // InternalMelange.g:6071:4: otherlv_2= ';'
+            	            // InternalMelange.g:6090:4: otherlv_2= ';'
             	            {
-            	            otherlv_2=(Token)match(input,97,FOLLOW_95); if (state.failed) return current;
+            	            otherlv_2=(Token)match(input,98,FOLLOW_96); if (state.failed) return current;
             	            if ( state.backtracking==0 ) {
 
             	                  	newLeafNode(otherlv_2, grammarAccess.getXExpressionInClosureAccess().getSemicolonKeyword_1_1());
@@ -17519,7 +17561,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleXShortClosure"
-    // InternalMelange.g:6083:1: entryRuleXShortClosure returns [EObject current=null] : iv_ruleXShortClosure= ruleXShortClosure EOF ;
+    // InternalMelange.g:6102:1: entryRuleXShortClosure returns [EObject current=null] : iv_ruleXShortClosure= ruleXShortClosure EOF ;
     public final EObject entryRuleXShortClosure() throws RecognitionException {
         EObject current = null;
 
@@ -17527,8 +17569,8 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalMelange.g:6084:2: (iv_ruleXShortClosure= ruleXShortClosure EOF )
-            // InternalMelange.g:6085:2: iv_ruleXShortClosure= ruleXShortClosure EOF
+            // InternalMelange.g:6103:2: (iv_ruleXShortClosure= ruleXShortClosure EOF )
+            // InternalMelange.g:6104:2: iv_ruleXShortClosure= ruleXShortClosure EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getXShortClosureRule()); 
@@ -17559,7 +17601,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleXShortClosure"
-    // InternalMelange.g:6092:1: ruleXShortClosure returns [EObject current=null] : ( ( ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> ( () ( ( (lv_declaredFormalParameters_1_0= ruleJvmFormalParameter ) ) (otherlv_2= ',' ( (lv_declaredFormalParameters_3_0= ruleJvmFormalParameter ) ) )* )? ( (lv_explicitSyntax_4_0= '|' ) ) ) ) ( (lv_expression_5_0= ruleXExpression ) ) ) ;
+    // InternalMelange.g:6111:1: ruleXShortClosure returns [EObject current=null] : ( ( ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> ( () ( ( (lv_declaredFormalParameters_1_0= ruleJvmFormalParameter ) ) (otherlv_2= ',' ( (lv_declaredFormalParameters_3_0= ruleJvmFormalParameter ) ) )* )? ( (lv_explicitSyntax_4_0= '|' ) ) ) ) ( (lv_expression_5_0= ruleXExpression ) ) ) ;
     public final EObject ruleXShortClosure() throws RecognitionException {
         EObject current = null;
 
@@ -17575,20 +17617,20 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // InternalMelange.g:6095:28: ( ( ( ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> ( () ( ( (lv_declaredFormalParameters_1_0= ruleJvmFormalParameter ) ) (otherlv_2= ',' ( (lv_declaredFormalParameters_3_0= ruleJvmFormalParameter ) ) )* )? ( (lv_explicitSyntax_4_0= '|' ) ) ) ) ( (lv_expression_5_0= ruleXExpression ) ) ) )
-            // InternalMelange.g:6096:1: ( ( ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> ( () ( ( (lv_declaredFormalParameters_1_0= ruleJvmFormalParameter ) ) (otherlv_2= ',' ( (lv_declaredFormalParameters_3_0= ruleJvmFormalParameter ) ) )* )? ( (lv_explicitSyntax_4_0= '|' ) ) ) ) ( (lv_expression_5_0= ruleXExpression ) ) )
+            // InternalMelange.g:6114:28: ( ( ( ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> ( () ( ( (lv_declaredFormalParameters_1_0= ruleJvmFormalParameter ) ) (otherlv_2= ',' ( (lv_declaredFormalParameters_3_0= ruleJvmFormalParameter ) ) )* )? ( (lv_explicitSyntax_4_0= '|' ) ) ) ) ( (lv_expression_5_0= ruleXExpression ) ) ) )
+            // InternalMelange.g:6115:1: ( ( ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> ( () ( ( (lv_declaredFormalParameters_1_0= ruleJvmFormalParameter ) ) (otherlv_2= ',' ( (lv_declaredFormalParameters_3_0= ruleJvmFormalParameter ) ) )* )? ( (lv_explicitSyntax_4_0= '|' ) ) ) ) ( (lv_expression_5_0= ruleXExpression ) ) )
             {
-            // InternalMelange.g:6096:1: ( ( ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> ( () ( ( (lv_declaredFormalParameters_1_0= ruleJvmFormalParameter ) ) (otherlv_2= ',' ( (lv_declaredFormalParameters_3_0= ruleJvmFormalParameter ) ) )* )? ( (lv_explicitSyntax_4_0= '|' ) ) ) ) ( (lv_expression_5_0= ruleXExpression ) ) )
-            // InternalMelange.g:6096:2: ( ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> ( () ( ( (lv_declaredFormalParameters_1_0= ruleJvmFormalParameter ) ) (otherlv_2= ',' ( (lv_declaredFormalParameters_3_0= ruleJvmFormalParameter ) ) )* )? ( (lv_explicitSyntax_4_0= '|' ) ) ) ) ( (lv_expression_5_0= ruleXExpression ) )
+            // InternalMelange.g:6115:1: ( ( ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> ( () ( ( (lv_declaredFormalParameters_1_0= ruleJvmFormalParameter ) ) (otherlv_2= ',' ( (lv_declaredFormalParameters_3_0= ruleJvmFormalParameter ) ) )* )? ( (lv_explicitSyntax_4_0= '|' ) ) ) ) ( (lv_expression_5_0= ruleXExpression ) ) )
+            // InternalMelange.g:6115:2: ( ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> ( () ( ( (lv_declaredFormalParameters_1_0= ruleJvmFormalParameter ) ) (otherlv_2= ',' ( (lv_declaredFormalParameters_3_0= ruleJvmFormalParameter ) ) )* )? ( (lv_explicitSyntax_4_0= '|' ) ) ) ) ( (lv_expression_5_0= ruleXExpression ) )
             {
-            // InternalMelange.g:6096:2: ( ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> ( () ( ( (lv_declaredFormalParameters_1_0= ruleJvmFormalParameter ) ) (otherlv_2= ',' ( (lv_declaredFormalParameters_3_0= ruleJvmFormalParameter ) ) )* )? ( (lv_explicitSyntax_4_0= '|' ) ) ) )
-            // InternalMelange.g:6096:3: ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> ( () ( ( (lv_declaredFormalParameters_1_0= ruleJvmFormalParameter ) ) (otherlv_2= ',' ( (lv_declaredFormalParameters_3_0= ruleJvmFormalParameter ) ) )* )? ( (lv_explicitSyntax_4_0= '|' ) ) )
+            // InternalMelange.g:6115:2: ( ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> ( () ( ( (lv_declaredFormalParameters_1_0= ruleJvmFormalParameter ) ) (otherlv_2= ',' ( (lv_declaredFormalParameters_3_0= ruleJvmFormalParameter ) ) )* )? ( (lv_explicitSyntax_4_0= '|' ) ) ) )
+            // InternalMelange.g:6115:3: ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> ( () ( ( (lv_declaredFormalParameters_1_0= ruleJvmFormalParameter ) ) (otherlv_2= ',' ( (lv_declaredFormalParameters_3_0= ruleJvmFormalParameter ) ) )* )? ( (lv_explicitSyntax_4_0= '|' ) ) )
             {
-            // InternalMelange.g:6112:6: ( () ( ( (lv_declaredFormalParameters_1_0= ruleJvmFormalParameter ) ) (otherlv_2= ',' ( (lv_declaredFormalParameters_3_0= ruleJvmFormalParameter ) ) )* )? ( (lv_explicitSyntax_4_0= '|' ) ) )
-            // InternalMelange.g:6112:7: () ( ( (lv_declaredFormalParameters_1_0= ruleJvmFormalParameter ) ) (otherlv_2= ',' ( (lv_declaredFormalParameters_3_0= ruleJvmFormalParameter ) ) )* )? ( (lv_explicitSyntax_4_0= '|' ) )
+            // InternalMelange.g:6131:6: ( () ( ( (lv_declaredFormalParameters_1_0= ruleJvmFormalParameter ) ) (otherlv_2= ',' ( (lv_declaredFormalParameters_3_0= ruleJvmFormalParameter ) ) )* )? ( (lv_explicitSyntax_4_0= '|' ) ) )
+            // InternalMelange.g:6131:7: () ( ( (lv_declaredFormalParameters_1_0= ruleJvmFormalParameter ) ) (otherlv_2= ',' ( (lv_declaredFormalParameters_3_0= ruleJvmFormalParameter ) ) )* )? ( (lv_explicitSyntax_4_0= '|' ) )
             {
-            // InternalMelange.g:6112:7: ()
-            // InternalMelange.g:6113:5: 
+            // InternalMelange.g:6131:7: ()
+            // InternalMelange.g:6132:5: 
             {
             if ( state.backtracking==0 ) {
 
@@ -17600,29 +17642,29 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalMelange.g:6118:2: ( ( (lv_declaredFormalParameters_1_0= ruleJvmFormalParameter ) ) (otherlv_2= ',' ( (lv_declaredFormalParameters_3_0= ruleJvmFormalParameter ) ) )* )?
+            // InternalMelange.g:6137:2: ( ( (lv_declaredFormalParameters_1_0= ruleJvmFormalParameter ) ) (otherlv_2= ',' ( (lv_declaredFormalParameters_3_0= ruleJvmFormalParameter ) ) )* )?
             int alt114=2;
             int LA114_0 = input.LA(1);
 
-            if ( (LA114_0==RULE_ID||LA114_0==24||LA114_0==82) ) {
+            if ( (LA114_0==RULE_ID||LA114_0==24||LA114_0==83) ) {
                 alt114=1;
             }
             switch (alt114) {
                 case 1 :
-                    // InternalMelange.g:6118:3: ( (lv_declaredFormalParameters_1_0= ruleJvmFormalParameter ) ) (otherlv_2= ',' ( (lv_declaredFormalParameters_3_0= ruleJvmFormalParameter ) ) )*
+                    // InternalMelange.g:6137:3: ( (lv_declaredFormalParameters_1_0= ruleJvmFormalParameter ) ) (otherlv_2= ',' ( (lv_declaredFormalParameters_3_0= ruleJvmFormalParameter ) ) )*
                     {
-                    // InternalMelange.g:6118:3: ( (lv_declaredFormalParameters_1_0= ruleJvmFormalParameter ) )
-                    // InternalMelange.g:6119:1: (lv_declaredFormalParameters_1_0= ruleJvmFormalParameter )
+                    // InternalMelange.g:6137:3: ( (lv_declaredFormalParameters_1_0= ruleJvmFormalParameter ) )
+                    // InternalMelange.g:6138:1: (lv_declaredFormalParameters_1_0= ruleJvmFormalParameter )
                     {
-                    // InternalMelange.g:6119:1: (lv_declaredFormalParameters_1_0= ruleJvmFormalParameter )
-                    // InternalMelange.g:6120:3: lv_declaredFormalParameters_1_0= ruleJvmFormalParameter
+                    // InternalMelange.g:6138:1: (lv_declaredFormalParameters_1_0= ruleJvmFormalParameter )
+                    // InternalMelange.g:6139:3: lv_declaredFormalParameters_1_0= ruleJvmFormalParameter
                     {
                     if ( state.backtracking==0 ) {
                        
                       	        newCompositeNode(grammarAccess.getXShortClosureAccess().getDeclaredFormalParametersJvmFormalParameterParserRuleCall_0_0_1_0_0()); 
                       	    
                     }
-                    pushFollow(FOLLOW_91);
+                    pushFollow(FOLLOW_92);
                     lv_declaredFormalParameters_1_0=ruleJvmFormalParameter();
 
                     state._fsp--;
@@ -17646,7 +17688,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // InternalMelange.g:6136:2: (otherlv_2= ',' ( (lv_declaredFormalParameters_3_0= ruleJvmFormalParameter ) ) )*
+                    // InternalMelange.g:6155:2: (otherlv_2= ',' ( (lv_declaredFormalParameters_3_0= ruleJvmFormalParameter ) ) )*
                     loop113:
                     do {
                         int alt113=2;
@@ -17659,7 +17701,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
                         switch (alt113) {
                     	case 1 :
-                    	    // InternalMelange.g:6136:4: otherlv_2= ',' ( (lv_declaredFormalParameters_3_0= ruleJvmFormalParameter ) )
+                    	    // InternalMelange.g:6155:4: otherlv_2= ',' ( (lv_declaredFormalParameters_3_0= ruleJvmFormalParameter ) )
                     	    {
                     	    otherlv_2=(Token)match(input,33,FOLLOW_33); if (state.failed) return current;
                     	    if ( state.backtracking==0 ) {
@@ -17667,18 +17709,18 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                     	          	newLeafNode(otherlv_2, grammarAccess.getXShortClosureAccess().getCommaKeyword_0_0_1_1_0());
                     	          
                     	    }
-                    	    // InternalMelange.g:6140:1: ( (lv_declaredFormalParameters_3_0= ruleJvmFormalParameter ) )
-                    	    // InternalMelange.g:6141:1: (lv_declaredFormalParameters_3_0= ruleJvmFormalParameter )
+                    	    // InternalMelange.g:6159:1: ( (lv_declaredFormalParameters_3_0= ruleJvmFormalParameter ) )
+                    	    // InternalMelange.g:6160:1: (lv_declaredFormalParameters_3_0= ruleJvmFormalParameter )
                     	    {
-                    	    // InternalMelange.g:6141:1: (lv_declaredFormalParameters_3_0= ruleJvmFormalParameter )
-                    	    // InternalMelange.g:6142:3: lv_declaredFormalParameters_3_0= ruleJvmFormalParameter
+                    	    // InternalMelange.g:6160:1: (lv_declaredFormalParameters_3_0= ruleJvmFormalParameter )
+                    	    // InternalMelange.g:6161:3: lv_declaredFormalParameters_3_0= ruleJvmFormalParameter
                     	    {
                     	    if ( state.backtracking==0 ) {
                     	       
                     	      	        newCompositeNode(grammarAccess.getXShortClosureAccess().getDeclaredFormalParametersJvmFormalParameterParserRuleCall_0_0_1_1_1_0()); 
                     	      	    
                     	    }
-                    	    pushFollow(FOLLOW_91);
+                    	    pushFollow(FOLLOW_92);
                     	    lv_declaredFormalParameters_3_0=ruleJvmFormalParameter();
 
                     	    state._fsp--;
@@ -17717,13 +17759,13 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalMelange.g:6158:6: ( (lv_explicitSyntax_4_0= '|' ) )
-            // InternalMelange.g:6159:1: (lv_explicitSyntax_4_0= '|' )
+            // InternalMelange.g:6177:6: ( (lv_explicitSyntax_4_0= '|' ) )
+            // InternalMelange.g:6178:1: (lv_explicitSyntax_4_0= '|' )
             {
-            // InternalMelange.g:6159:1: (lv_explicitSyntax_4_0= '|' )
-            // InternalMelange.g:6160:3: lv_explicitSyntax_4_0= '|'
+            // InternalMelange.g:6178:1: (lv_explicitSyntax_4_0= '|' )
+            // InternalMelange.g:6179:3: lv_explicitSyntax_4_0= '|'
             {
-            lv_explicitSyntax_4_0=(Token)match(input,27,FOLLOW_63); if (state.failed) return current;
+            lv_explicitSyntax_4_0=(Token)match(input,27,FOLLOW_64); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                       newLeafNode(lv_explicitSyntax_4_0, grammarAccess.getXShortClosureAccess().getExplicitSyntaxVerticalLineKeyword_0_0_2_0());
@@ -17749,11 +17791,11 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalMelange.g:6173:4: ( (lv_expression_5_0= ruleXExpression ) )
-            // InternalMelange.g:6174:1: (lv_expression_5_0= ruleXExpression )
+            // InternalMelange.g:6192:4: ( (lv_expression_5_0= ruleXExpression ) )
+            // InternalMelange.g:6193:1: (lv_expression_5_0= ruleXExpression )
             {
-            // InternalMelange.g:6174:1: (lv_expression_5_0= ruleXExpression )
-            // InternalMelange.g:6175:3: lv_expression_5_0= ruleXExpression
+            // InternalMelange.g:6193:1: (lv_expression_5_0= ruleXExpression )
+            // InternalMelange.g:6194:3: lv_expression_5_0= ruleXExpression
             {
             if ( state.backtracking==0 ) {
                
@@ -17807,7 +17849,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleXParenthesizedExpression"
-    // InternalMelange.g:6199:1: entryRuleXParenthesizedExpression returns [EObject current=null] : iv_ruleXParenthesizedExpression= ruleXParenthesizedExpression EOF ;
+    // InternalMelange.g:6218:1: entryRuleXParenthesizedExpression returns [EObject current=null] : iv_ruleXParenthesizedExpression= ruleXParenthesizedExpression EOF ;
     public final EObject entryRuleXParenthesizedExpression() throws RecognitionException {
         EObject current = null;
 
@@ -17815,8 +17857,8 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalMelange.g:6200:2: (iv_ruleXParenthesizedExpression= ruleXParenthesizedExpression EOF )
-            // InternalMelange.g:6201:2: iv_ruleXParenthesizedExpression= ruleXParenthesizedExpression EOF
+            // InternalMelange.g:6219:2: (iv_ruleXParenthesizedExpression= ruleXParenthesizedExpression EOF )
+            // InternalMelange.g:6220:2: iv_ruleXParenthesizedExpression= ruleXParenthesizedExpression EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getXParenthesizedExpressionRule()); 
@@ -17847,7 +17889,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleXParenthesizedExpression"
-    // InternalMelange.g:6208:1: ruleXParenthesizedExpression returns [EObject current=null] : (otherlv_0= '(' this_XExpression_1= ruleXExpression otherlv_2= ')' ) ;
+    // InternalMelange.g:6227:1: ruleXParenthesizedExpression returns [EObject current=null] : (otherlv_0= '(' this_XExpression_1= ruleXExpression otherlv_2= ')' ) ;
     public final EObject ruleXParenthesizedExpression() throws RecognitionException {
         EObject current = null;
 
@@ -17859,13 +17901,13 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // InternalMelange.g:6211:28: ( (otherlv_0= '(' this_XExpression_1= ruleXExpression otherlv_2= ')' ) )
-            // InternalMelange.g:6212:1: (otherlv_0= '(' this_XExpression_1= ruleXExpression otherlv_2= ')' )
+            // InternalMelange.g:6230:28: ( (otherlv_0= '(' this_XExpression_1= ruleXExpression otherlv_2= ')' ) )
+            // InternalMelange.g:6231:1: (otherlv_0= '(' this_XExpression_1= ruleXExpression otherlv_2= ')' )
             {
-            // InternalMelange.g:6212:1: (otherlv_0= '(' this_XExpression_1= ruleXExpression otherlv_2= ')' )
-            // InternalMelange.g:6212:3: otherlv_0= '(' this_XExpression_1= ruleXExpression otherlv_2= ')'
+            // InternalMelange.g:6231:1: (otherlv_0= '(' this_XExpression_1= ruleXExpression otherlv_2= ')' )
+            // InternalMelange.g:6231:3: otherlv_0= '(' this_XExpression_1= ruleXExpression otherlv_2= ')'
             {
-            otherlv_0=(Token)match(input,24,FOLLOW_63); if (state.failed) return current;
+            otherlv_0=(Token)match(input,24,FOLLOW_64); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_0, grammarAccess.getXParenthesizedExpressionAccess().getLeftParenthesisKeyword_0());
@@ -17916,7 +17958,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleXIfExpression"
-    // InternalMelange.g:6237:1: entryRuleXIfExpression returns [EObject current=null] : iv_ruleXIfExpression= ruleXIfExpression EOF ;
+    // InternalMelange.g:6256:1: entryRuleXIfExpression returns [EObject current=null] : iv_ruleXIfExpression= ruleXIfExpression EOF ;
     public final EObject entryRuleXIfExpression() throws RecognitionException {
         EObject current = null;
 
@@ -17924,8 +17966,8 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalMelange.g:6238:2: (iv_ruleXIfExpression= ruleXIfExpression EOF )
-            // InternalMelange.g:6239:2: iv_ruleXIfExpression= ruleXIfExpression EOF
+            // InternalMelange.g:6257:2: (iv_ruleXIfExpression= ruleXIfExpression EOF )
+            // InternalMelange.g:6258:2: iv_ruleXIfExpression= ruleXIfExpression EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getXIfExpressionRule()); 
@@ -17956,7 +17998,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleXIfExpression"
-    // InternalMelange.g:6246:1: ruleXIfExpression returns [EObject current=null] : ( () otherlv_1= 'if' otherlv_2= '(' ( (lv_if_3_0= ruleXExpression ) ) otherlv_4= ')' ( (lv_then_5_0= ruleXExpression ) ) ( ( ( 'else' )=>otherlv_6= 'else' ) ( (lv_else_7_0= ruleXExpression ) ) )? ) ;
+    // InternalMelange.g:6265:1: ruleXIfExpression returns [EObject current=null] : ( () otherlv_1= 'if' otherlv_2= '(' ( (lv_if_3_0= ruleXExpression ) ) otherlv_4= ')' ( (lv_then_5_0= ruleXExpression ) ) ( ( ( 'else' )=>otherlv_6= 'else' ) ( (lv_else_7_0= ruleXExpression ) ) )? ) ;
     public final EObject ruleXIfExpression() throws RecognitionException {
         EObject current = null;
 
@@ -17974,14 +18016,14 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // InternalMelange.g:6249:28: ( ( () otherlv_1= 'if' otherlv_2= '(' ( (lv_if_3_0= ruleXExpression ) ) otherlv_4= ')' ( (lv_then_5_0= ruleXExpression ) ) ( ( ( 'else' )=>otherlv_6= 'else' ) ( (lv_else_7_0= ruleXExpression ) ) )? ) )
-            // InternalMelange.g:6250:1: ( () otherlv_1= 'if' otherlv_2= '(' ( (lv_if_3_0= ruleXExpression ) ) otherlv_4= ')' ( (lv_then_5_0= ruleXExpression ) ) ( ( ( 'else' )=>otherlv_6= 'else' ) ( (lv_else_7_0= ruleXExpression ) ) )? )
+            // InternalMelange.g:6268:28: ( ( () otherlv_1= 'if' otherlv_2= '(' ( (lv_if_3_0= ruleXExpression ) ) otherlv_4= ')' ( (lv_then_5_0= ruleXExpression ) ) ( ( ( 'else' )=>otherlv_6= 'else' ) ( (lv_else_7_0= ruleXExpression ) ) )? ) )
+            // InternalMelange.g:6269:1: ( () otherlv_1= 'if' otherlv_2= '(' ( (lv_if_3_0= ruleXExpression ) ) otherlv_4= ')' ( (lv_then_5_0= ruleXExpression ) ) ( ( ( 'else' )=>otherlv_6= 'else' ) ( (lv_else_7_0= ruleXExpression ) ) )? )
             {
-            // InternalMelange.g:6250:1: ( () otherlv_1= 'if' otherlv_2= '(' ( (lv_if_3_0= ruleXExpression ) ) otherlv_4= ')' ( (lv_then_5_0= ruleXExpression ) ) ( ( ( 'else' )=>otherlv_6= 'else' ) ( (lv_else_7_0= ruleXExpression ) ) )? )
-            // InternalMelange.g:6250:2: () otherlv_1= 'if' otherlv_2= '(' ( (lv_if_3_0= ruleXExpression ) ) otherlv_4= ')' ( (lv_then_5_0= ruleXExpression ) ) ( ( ( 'else' )=>otherlv_6= 'else' ) ( (lv_else_7_0= ruleXExpression ) ) )?
+            // InternalMelange.g:6269:1: ( () otherlv_1= 'if' otherlv_2= '(' ( (lv_if_3_0= ruleXExpression ) ) otherlv_4= ')' ( (lv_then_5_0= ruleXExpression ) ) ( ( ( 'else' )=>otherlv_6= 'else' ) ( (lv_else_7_0= ruleXExpression ) ) )? )
+            // InternalMelange.g:6269:2: () otherlv_1= 'if' otherlv_2= '(' ( (lv_if_3_0= ruleXExpression ) ) otherlv_4= ')' ( (lv_then_5_0= ruleXExpression ) ) ( ( ( 'else' )=>otherlv_6= 'else' ) ( (lv_else_7_0= ruleXExpression ) ) )?
             {
-            // InternalMelange.g:6250:2: ()
-            // InternalMelange.g:6251:5: 
+            // InternalMelange.g:6269:2: ()
+            // InternalMelange.g:6270:5: 
             {
             if ( state.backtracking==0 ) {
 
@@ -17993,23 +18035,23 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,98,FOLLOW_46); if (state.failed) return current;
+            otherlv_1=(Token)match(input,99,FOLLOW_46); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_1, grammarAccess.getXIfExpressionAccess().getIfKeyword_1());
                   
             }
-            otherlv_2=(Token)match(input,24,FOLLOW_63); if (state.failed) return current;
+            otherlv_2=(Token)match(input,24,FOLLOW_64); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_2, grammarAccess.getXIfExpressionAccess().getLeftParenthesisKeyword_2());
                   
             }
-            // InternalMelange.g:6264:1: ( (lv_if_3_0= ruleXExpression ) )
-            // InternalMelange.g:6265:1: (lv_if_3_0= ruleXExpression )
+            // InternalMelange.g:6283:1: ( (lv_if_3_0= ruleXExpression ) )
+            // InternalMelange.g:6284:1: (lv_if_3_0= ruleXExpression )
             {
-            // InternalMelange.g:6265:1: (lv_if_3_0= ruleXExpression )
-            // InternalMelange.g:6266:3: lv_if_3_0= ruleXExpression
+            // InternalMelange.g:6284:1: (lv_if_3_0= ruleXExpression )
+            // InternalMelange.g:6285:3: lv_if_3_0= ruleXExpression
             {
             if ( state.backtracking==0 ) {
                
@@ -18040,24 +18082,24 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_4=(Token)match(input,25,FOLLOW_63); if (state.failed) return current;
+            otherlv_4=(Token)match(input,25,FOLLOW_64); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_4, grammarAccess.getXIfExpressionAccess().getRightParenthesisKeyword_4());
                   
             }
-            // InternalMelange.g:6286:1: ( (lv_then_5_0= ruleXExpression ) )
-            // InternalMelange.g:6287:1: (lv_then_5_0= ruleXExpression )
+            // InternalMelange.g:6305:1: ( (lv_then_5_0= ruleXExpression ) )
+            // InternalMelange.g:6306:1: (lv_then_5_0= ruleXExpression )
             {
-            // InternalMelange.g:6287:1: (lv_then_5_0= ruleXExpression )
-            // InternalMelange.g:6288:3: lv_then_5_0= ruleXExpression
+            // InternalMelange.g:6306:1: (lv_then_5_0= ruleXExpression )
+            // InternalMelange.g:6307:3: lv_then_5_0= ruleXExpression
             {
             if ( state.backtracking==0 ) {
                
               	        newCompositeNode(grammarAccess.getXIfExpressionAccess().getThenXExpressionParserRuleCall_5_0()); 
               	    
             }
-            pushFollow(FOLLOW_96);
+            pushFollow(FOLLOW_97);
             lv_then_5_0=ruleXExpression();
 
             state._fsp--;
@@ -18081,11 +18123,11 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalMelange.g:6304:2: ( ( ( 'else' )=>otherlv_6= 'else' ) ( (lv_else_7_0= ruleXExpression ) ) )?
+            // InternalMelange.g:6323:2: ( ( ( 'else' )=>otherlv_6= 'else' ) ( (lv_else_7_0= ruleXExpression ) ) )?
             int alt115=2;
             int LA115_0 = input.LA(1);
 
-            if ( (LA115_0==99) ) {
+            if ( (LA115_0==100) ) {
                 int LA115_1 = input.LA(2);
 
                 if ( (synpred31_InternalMelange()) ) {
@@ -18094,12 +18136,12 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
             }
             switch (alt115) {
                 case 1 :
-                    // InternalMelange.g:6304:3: ( ( 'else' )=>otherlv_6= 'else' ) ( (lv_else_7_0= ruleXExpression ) )
+                    // InternalMelange.g:6323:3: ( ( 'else' )=>otherlv_6= 'else' ) ( (lv_else_7_0= ruleXExpression ) )
                     {
-                    // InternalMelange.g:6304:3: ( ( 'else' )=>otherlv_6= 'else' )
-                    // InternalMelange.g:6304:4: ( 'else' )=>otherlv_6= 'else'
+                    // InternalMelange.g:6323:3: ( ( 'else' )=>otherlv_6= 'else' )
+                    // InternalMelange.g:6323:4: ( 'else' )=>otherlv_6= 'else'
                     {
-                    otherlv_6=(Token)match(input,99,FOLLOW_63); if (state.failed) return current;
+                    otherlv_6=(Token)match(input,100,FOLLOW_64); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_6, grammarAccess.getXIfExpressionAccess().getElseKeyword_6_0());
@@ -18108,11 +18150,11 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // InternalMelange.g:6309:2: ( (lv_else_7_0= ruleXExpression ) )
-                    // InternalMelange.g:6310:1: (lv_else_7_0= ruleXExpression )
+                    // InternalMelange.g:6328:2: ( (lv_else_7_0= ruleXExpression ) )
+                    // InternalMelange.g:6329:1: (lv_else_7_0= ruleXExpression )
                     {
-                    // InternalMelange.g:6310:1: (lv_else_7_0= ruleXExpression )
-                    // InternalMelange.g:6311:3: lv_else_7_0= ruleXExpression
+                    // InternalMelange.g:6329:1: (lv_else_7_0= ruleXExpression )
+                    // InternalMelange.g:6330:3: lv_else_7_0= ruleXExpression
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -18172,7 +18214,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleXSwitchExpression"
-    // InternalMelange.g:6335:1: entryRuleXSwitchExpression returns [EObject current=null] : iv_ruleXSwitchExpression= ruleXSwitchExpression EOF ;
+    // InternalMelange.g:6354:1: entryRuleXSwitchExpression returns [EObject current=null] : iv_ruleXSwitchExpression= ruleXSwitchExpression EOF ;
     public final EObject entryRuleXSwitchExpression() throws RecognitionException {
         EObject current = null;
 
@@ -18180,8 +18222,8 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalMelange.g:6336:2: (iv_ruleXSwitchExpression= ruleXSwitchExpression EOF )
-            // InternalMelange.g:6337:2: iv_ruleXSwitchExpression= ruleXSwitchExpression EOF
+            // InternalMelange.g:6355:2: (iv_ruleXSwitchExpression= ruleXSwitchExpression EOF )
+            // InternalMelange.g:6356:2: iv_ruleXSwitchExpression= ruleXSwitchExpression EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getXSwitchExpressionRule()); 
@@ -18212,7 +18254,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleXSwitchExpression"
-    // InternalMelange.g:6344:1: ruleXSwitchExpression returns [EObject current=null] : ( () otherlv_1= 'switch' ( ( ( ( ( '(' ( ( ruleJvmFormalParameter ) ) ':' ) )=> (otherlv_2= '(' ( (lv_declaredParam_3_0= ruleJvmFormalParameter ) ) otherlv_4= ':' ) ) ( (lv_switch_5_0= ruleXExpression ) ) otherlv_6= ')' ) | ( ( ( ( ( ( ruleJvmFormalParameter ) ) ':' ) )=> ( ( (lv_declaredParam_7_0= ruleJvmFormalParameter ) ) otherlv_8= ':' ) )? ( (lv_switch_9_0= ruleXExpression ) ) ) ) otherlv_10= '{' ( (lv_cases_11_0= ruleXCasePart ) )* (otherlv_12= 'default' otherlv_13= ':' ( (lv_default_14_0= ruleXExpression ) ) )? otherlv_15= '}' ) ;
+    // InternalMelange.g:6363:1: ruleXSwitchExpression returns [EObject current=null] : ( () otherlv_1= 'switch' ( ( ( ( ( '(' ( ( ruleJvmFormalParameter ) ) ':' ) )=> (otherlv_2= '(' ( (lv_declaredParam_3_0= ruleJvmFormalParameter ) ) otherlv_4= ':' ) ) ( (lv_switch_5_0= ruleXExpression ) ) otherlv_6= ')' ) | ( ( ( ( ( ( ruleJvmFormalParameter ) ) ':' ) )=> ( ( (lv_declaredParam_7_0= ruleJvmFormalParameter ) ) otherlv_8= ':' ) )? ( (lv_switch_9_0= ruleXExpression ) ) ) ) otherlv_10= '{' ( (lv_cases_11_0= ruleXCasePart ) )* (otherlv_12= 'default' otherlv_13= ':' ( (lv_default_14_0= ruleXExpression ) ) )? otherlv_15= '}' ) ;
     public final EObject ruleXSwitchExpression() throws RecognitionException {
         EObject current = null;
 
@@ -18241,14 +18283,14 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // InternalMelange.g:6347:28: ( ( () otherlv_1= 'switch' ( ( ( ( ( '(' ( ( ruleJvmFormalParameter ) ) ':' ) )=> (otherlv_2= '(' ( (lv_declaredParam_3_0= ruleJvmFormalParameter ) ) otherlv_4= ':' ) ) ( (lv_switch_5_0= ruleXExpression ) ) otherlv_6= ')' ) | ( ( ( ( ( ( ruleJvmFormalParameter ) ) ':' ) )=> ( ( (lv_declaredParam_7_0= ruleJvmFormalParameter ) ) otherlv_8= ':' ) )? ( (lv_switch_9_0= ruleXExpression ) ) ) ) otherlv_10= '{' ( (lv_cases_11_0= ruleXCasePart ) )* (otherlv_12= 'default' otherlv_13= ':' ( (lv_default_14_0= ruleXExpression ) ) )? otherlv_15= '}' ) )
-            // InternalMelange.g:6348:1: ( () otherlv_1= 'switch' ( ( ( ( ( '(' ( ( ruleJvmFormalParameter ) ) ':' ) )=> (otherlv_2= '(' ( (lv_declaredParam_3_0= ruleJvmFormalParameter ) ) otherlv_4= ':' ) ) ( (lv_switch_5_0= ruleXExpression ) ) otherlv_6= ')' ) | ( ( ( ( ( ( ruleJvmFormalParameter ) ) ':' ) )=> ( ( (lv_declaredParam_7_0= ruleJvmFormalParameter ) ) otherlv_8= ':' ) )? ( (lv_switch_9_0= ruleXExpression ) ) ) ) otherlv_10= '{' ( (lv_cases_11_0= ruleXCasePart ) )* (otherlv_12= 'default' otherlv_13= ':' ( (lv_default_14_0= ruleXExpression ) ) )? otherlv_15= '}' )
+            // InternalMelange.g:6366:28: ( ( () otherlv_1= 'switch' ( ( ( ( ( '(' ( ( ruleJvmFormalParameter ) ) ':' ) )=> (otherlv_2= '(' ( (lv_declaredParam_3_0= ruleJvmFormalParameter ) ) otherlv_4= ':' ) ) ( (lv_switch_5_0= ruleXExpression ) ) otherlv_6= ')' ) | ( ( ( ( ( ( ruleJvmFormalParameter ) ) ':' ) )=> ( ( (lv_declaredParam_7_0= ruleJvmFormalParameter ) ) otherlv_8= ':' ) )? ( (lv_switch_9_0= ruleXExpression ) ) ) ) otherlv_10= '{' ( (lv_cases_11_0= ruleXCasePart ) )* (otherlv_12= 'default' otherlv_13= ':' ( (lv_default_14_0= ruleXExpression ) ) )? otherlv_15= '}' ) )
+            // InternalMelange.g:6367:1: ( () otherlv_1= 'switch' ( ( ( ( ( '(' ( ( ruleJvmFormalParameter ) ) ':' ) )=> (otherlv_2= '(' ( (lv_declaredParam_3_0= ruleJvmFormalParameter ) ) otherlv_4= ':' ) ) ( (lv_switch_5_0= ruleXExpression ) ) otherlv_6= ')' ) | ( ( ( ( ( ( ruleJvmFormalParameter ) ) ':' ) )=> ( ( (lv_declaredParam_7_0= ruleJvmFormalParameter ) ) otherlv_8= ':' ) )? ( (lv_switch_9_0= ruleXExpression ) ) ) ) otherlv_10= '{' ( (lv_cases_11_0= ruleXCasePart ) )* (otherlv_12= 'default' otherlv_13= ':' ( (lv_default_14_0= ruleXExpression ) ) )? otherlv_15= '}' )
             {
-            // InternalMelange.g:6348:1: ( () otherlv_1= 'switch' ( ( ( ( ( '(' ( ( ruleJvmFormalParameter ) ) ':' ) )=> (otherlv_2= '(' ( (lv_declaredParam_3_0= ruleJvmFormalParameter ) ) otherlv_4= ':' ) ) ( (lv_switch_5_0= ruleXExpression ) ) otherlv_6= ')' ) | ( ( ( ( ( ( ruleJvmFormalParameter ) ) ':' ) )=> ( ( (lv_declaredParam_7_0= ruleJvmFormalParameter ) ) otherlv_8= ':' ) )? ( (lv_switch_9_0= ruleXExpression ) ) ) ) otherlv_10= '{' ( (lv_cases_11_0= ruleXCasePart ) )* (otherlv_12= 'default' otherlv_13= ':' ( (lv_default_14_0= ruleXExpression ) ) )? otherlv_15= '}' )
-            // InternalMelange.g:6348:2: () otherlv_1= 'switch' ( ( ( ( ( '(' ( ( ruleJvmFormalParameter ) ) ':' ) )=> (otherlv_2= '(' ( (lv_declaredParam_3_0= ruleJvmFormalParameter ) ) otherlv_4= ':' ) ) ( (lv_switch_5_0= ruleXExpression ) ) otherlv_6= ')' ) | ( ( ( ( ( ( ruleJvmFormalParameter ) ) ':' ) )=> ( ( (lv_declaredParam_7_0= ruleJvmFormalParameter ) ) otherlv_8= ':' ) )? ( (lv_switch_9_0= ruleXExpression ) ) ) ) otherlv_10= '{' ( (lv_cases_11_0= ruleXCasePart ) )* (otherlv_12= 'default' otherlv_13= ':' ( (lv_default_14_0= ruleXExpression ) ) )? otherlv_15= '}'
+            // InternalMelange.g:6367:1: ( () otherlv_1= 'switch' ( ( ( ( ( '(' ( ( ruleJvmFormalParameter ) ) ':' ) )=> (otherlv_2= '(' ( (lv_declaredParam_3_0= ruleJvmFormalParameter ) ) otherlv_4= ':' ) ) ( (lv_switch_5_0= ruleXExpression ) ) otherlv_6= ')' ) | ( ( ( ( ( ( ruleJvmFormalParameter ) ) ':' ) )=> ( ( (lv_declaredParam_7_0= ruleJvmFormalParameter ) ) otherlv_8= ':' ) )? ( (lv_switch_9_0= ruleXExpression ) ) ) ) otherlv_10= '{' ( (lv_cases_11_0= ruleXCasePart ) )* (otherlv_12= 'default' otherlv_13= ':' ( (lv_default_14_0= ruleXExpression ) ) )? otherlv_15= '}' )
+            // InternalMelange.g:6367:2: () otherlv_1= 'switch' ( ( ( ( ( '(' ( ( ruleJvmFormalParameter ) ) ':' ) )=> (otherlv_2= '(' ( (lv_declaredParam_3_0= ruleJvmFormalParameter ) ) otherlv_4= ':' ) ) ( (lv_switch_5_0= ruleXExpression ) ) otherlv_6= ')' ) | ( ( ( ( ( ( ruleJvmFormalParameter ) ) ':' ) )=> ( ( (lv_declaredParam_7_0= ruleJvmFormalParameter ) ) otherlv_8= ':' ) )? ( (lv_switch_9_0= ruleXExpression ) ) ) ) otherlv_10= '{' ( (lv_cases_11_0= ruleXCasePart ) )* (otherlv_12= 'default' otherlv_13= ':' ( (lv_default_14_0= ruleXExpression ) ) )? otherlv_15= '}'
             {
-            // InternalMelange.g:6348:2: ()
-            // InternalMelange.g:6349:5: 
+            // InternalMelange.g:6367:2: ()
+            // InternalMelange.g:6368:5: 
             {
             if ( state.backtracking==0 ) {
 
@@ -18260,27 +18302,27 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,100,FOLLOW_97); if (state.failed) return current;
+            otherlv_1=(Token)match(input,101,FOLLOW_98); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_1, grammarAccess.getXSwitchExpressionAccess().getSwitchKeyword_1());
                   
             }
-            // InternalMelange.g:6358:1: ( ( ( ( ( '(' ( ( ruleJvmFormalParameter ) ) ':' ) )=> (otherlv_2= '(' ( (lv_declaredParam_3_0= ruleJvmFormalParameter ) ) otherlv_4= ':' ) ) ( (lv_switch_5_0= ruleXExpression ) ) otherlv_6= ')' ) | ( ( ( ( ( ( ruleJvmFormalParameter ) ) ':' ) )=> ( ( (lv_declaredParam_7_0= ruleJvmFormalParameter ) ) otherlv_8= ':' ) )? ( (lv_switch_9_0= ruleXExpression ) ) ) )
+            // InternalMelange.g:6377:1: ( ( ( ( ( '(' ( ( ruleJvmFormalParameter ) ) ':' ) )=> (otherlv_2= '(' ( (lv_declaredParam_3_0= ruleJvmFormalParameter ) ) otherlv_4= ':' ) ) ( (lv_switch_5_0= ruleXExpression ) ) otherlv_6= ')' ) | ( ( ( ( ( ( ruleJvmFormalParameter ) ) ':' ) )=> ( ( (lv_declaredParam_7_0= ruleJvmFormalParameter ) ) otherlv_8= ':' ) )? ( (lv_switch_9_0= ruleXExpression ) ) ) )
             int alt117=2;
             alt117 = dfa117.predict(input);
             switch (alt117) {
                 case 1 :
-                    // InternalMelange.g:6358:2: ( ( ( ( '(' ( ( ruleJvmFormalParameter ) ) ':' ) )=> (otherlv_2= '(' ( (lv_declaredParam_3_0= ruleJvmFormalParameter ) ) otherlv_4= ':' ) ) ( (lv_switch_5_0= ruleXExpression ) ) otherlv_6= ')' )
+                    // InternalMelange.g:6377:2: ( ( ( ( '(' ( ( ruleJvmFormalParameter ) ) ':' ) )=> (otherlv_2= '(' ( (lv_declaredParam_3_0= ruleJvmFormalParameter ) ) otherlv_4= ':' ) ) ( (lv_switch_5_0= ruleXExpression ) ) otherlv_6= ')' )
                     {
-                    // InternalMelange.g:6358:2: ( ( ( ( '(' ( ( ruleJvmFormalParameter ) ) ':' ) )=> (otherlv_2= '(' ( (lv_declaredParam_3_0= ruleJvmFormalParameter ) ) otherlv_4= ':' ) ) ( (lv_switch_5_0= ruleXExpression ) ) otherlv_6= ')' )
-                    // InternalMelange.g:6358:3: ( ( ( '(' ( ( ruleJvmFormalParameter ) ) ':' ) )=> (otherlv_2= '(' ( (lv_declaredParam_3_0= ruleJvmFormalParameter ) ) otherlv_4= ':' ) ) ( (lv_switch_5_0= ruleXExpression ) ) otherlv_6= ')'
+                    // InternalMelange.g:6377:2: ( ( ( ( '(' ( ( ruleJvmFormalParameter ) ) ':' ) )=> (otherlv_2= '(' ( (lv_declaredParam_3_0= ruleJvmFormalParameter ) ) otherlv_4= ':' ) ) ( (lv_switch_5_0= ruleXExpression ) ) otherlv_6= ')' )
+                    // InternalMelange.g:6377:3: ( ( ( '(' ( ( ruleJvmFormalParameter ) ) ':' ) )=> (otherlv_2= '(' ( (lv_declaredParam_3_0= ruleJvmFormalParameter ) ) otherlv_4= ':' ) ) ( (lv_switch_5_0= ruleXExpression ) ) otherlv_6= ')'
                     {
-                    // InternalMelange.g:6358:3: ( ( ( '(' ( ( ruleJvmFormalParameter ) ) ':' ) )=> (otherlv_2= '(' ( (lv_declaredParam_3_0= ruleJvmFormalParameter ) ) otherlv_4= ':' ) )
-                    // InternalMelange.g:6358:4: ( ( '(' ( ( ruleJvmFormalParameter ) ) ':' ) )=> (otherlv_2= '(' ( (lv_declaredParam_3_0= ruleJvmFormalParameter ) ) otherlv_4= ':' )
+                    // InternalMelange.g:6377:3: ( ( ( '(' ( ( ruleJvmFormalParameter ) ) ':' ) )=> (otherlv_2= '(' ( (lv_declaredParam_3_0= ruleJvmFormalParameter ) ) otherlv_4= ':' ) )
+                    // InternalMelange.g:6377:4: ( ( '(' ( ( ruleJvmFormalParameter ) ) ':' ) )=> (otherlv_2= '(' ( (lv_declaredParam_3_0= ruleJvmFormalParameter ) ) otherlv_4= ':' )
                     {
-                    // InternalMelange.g:6364:5: (otherlv_2= '(' ( (lv_declaredParam_3_0= ruleJvmFormalParameter ) ) otherlv_4= ':' )
-                    // InternalMelange.g:6364:7: otherlv_2= '(' ( (lv_declaredParam_3_0= ruleJvmFormalParameter ) ) otherlv_4= ':'
+                    // InternalMelange.g:6383:5: (otherlv_2= '(' ( (lv_declaredParam_3_0= ruleJvmFormalParameter ) ) otherlv_4= ':' )
+                    // InternalMelange.g:6383:7: otherlv_2= '(' ( (lv_declaredParam_3_0= ruleJvmFormalParameter ) ) otherlv_4= ':'
                     {
                     otherlv_2=(Token)match(input,24,FOLLOW_33); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -18288,11 +18330,11 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                           	newLeafNode(otherlv_2, grammarAccess.getXSwitchExpressionAccess().getLeftParenthesisKeyword_2_0_0_0_0());
                           
                     }
-                    // InternalMelange.g:6368:1: ( (lv_declaredParam_3_0= ruleJvmFormalParameter ) )
-                    // InternalMelange.g:6369:1: (lv_declaredParam_3_0= ruleJvmFormalParameter )
+                    // InternalMelange.g:6387:1: ( (lv_declaredParam_3_0= ruleJvmFormalParameter ) )
+                    // InternalMelange.g:6388:1: (lv_declaredParam_3_0= ruleJvmFormalParameter )
                     {
-                    // InternalMelange.g:6369:1: (lv_declaredParam_3_0= ruleJvmFormalParameter )
-                    // InternalMelange.g:6370:3: lv_declaredParam_3_0= ruleJvmFormalParameter
+                    // InternalMelange.g:6388:1: (lv_declaredParam_3_0= ruleJvmFormalParameter )
+                    // InternalMelange.g:6389:3: lv_declaredParam_3_0= ruleJvmFormalParameter
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -18323,7 +18365,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_4=(Token)match(input,46,FOLLOW_63); if (state.failed) return current;
+                    otherlv_4=(Token)match(input,46,FOLLOW_64); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_4, grammarAccess.getXSwitchExpressionAccess().getColonKeyword_2_0_0_0_2());
@@ -18335,11 +18377,11 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // InternalMelange.g:6390:3: ( (lv_switch_5_0= ruleXExpression ) )
-                    // InternalMelange.g:6391:1: (lv_switch_5_0= ruleXExpression )
+                    // InternalMelange.g:6409:3: ( (lv_switch_5_0= ruleXExpression ) )
+                    // InternalMelange.g:6410:1: (lv_switch_5_0= ruleXExpression )
                     {
-                    // InternalMelange.g:6391:1: (lv_switch_5_0= ruleXExpression )
-                    // InternalMelange.g:6392:3: lv_switch_5_0= ruleXExpression
+                    // InternalMelange.g:6410:1: (lv_switch_5_0= ruleXExpression )
+                    // InternalMelange.g:6411:3: lv_switch_5_0= ruleXExpression
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -18383,26 +18425,26 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalMelange.g:6413:6: ( ( ( ( ( ( ruleJvmFormalParameter ) ) ':' ) )=> ( ( (lv_declaredParam_7_0= ruleJvmFormalParameter ) ) otherlv_8= ':' ) )? ( (lv_switch_9_0= ruleXExpression ) ) )
+                    // InternalMelange.g:6432:6: ( ( ( ( ( ( ruleJvmFormalParameter ) ) ':' ) )=> ( ( (lv_declaredParam_7_0= ruleJvmFormalParameter ) ) otherlv_8= ':' ) )? ( (lv_switch_9_0= ruleXExpression ) ) )
                     {
-                    // InternalMelange.g:6413:6: ( ( ( ( ( ( ruleJvmFormalParameter ) ) ':' ) )=> ( ( (lv_declaredParam_7_0= ruleJvmFormalParameter ) ) otherlv_8= ':' ) )? ( (lv_switch_9_0= ruleXExpression ) ) )
-                    // InternalMelange.g:6413:7: ( ( ( ( ( ruleJvmFormalParameter ) ) ':' ) )=> ( ( (lv_declaredParam_7_0= ruleJvmFormalParameter ) ) otherlv_8= ':' ) )? ( (lv_switch_9_0= ruleXExpression ) )
+                    // InternalMelange.g:6432:6: ( ( ( ( ( ( ruleJvmFormalParameter ) ) ':' ) )=> ( ( (lv_declaredParam_7_0= ruleJvmFormalParameter ) ) otherlv_8= ':' ) )? ( (lv_switch_9_0= ruleXExpression ) ) )
+                    // InternalMelange.g:6432:7: ( ( ( ( ( ruleJvmFormalParameter ) ) ':' ) )=> ( ( (lv_declaredParam_7_0= ruleJvmFormalParameter ) ) otherlv_8= ':' ) )? ( (lv_switch_9_0= ruleXExpression ) )
                     {
-                    // InternalMelange.g:6413:7: ( ( ( ( ( ruleJvmFormalParameter ) ) ':' ) )=> ( ( (lv_declaredParam_7_0= ruleJvmFormalParameter ) ) otherlv_8= ':' ) )?
+                    // InternalMelange.g:6432:7: ( ( ( ( ( ruleJvmFormalParameter ) ) ':' ) )=> ( ( (lv_declaredParam_7_0= ruleJvmFormalParameter ) ) otherlv_8= ':' ) )?
                     int alt116=2;
                     alt116 = dfa116.predict(input);
                     switch (alt116) {
                         case 1 :
-                            // InternalMelange.g:6413:8: ( ( ( ( ruleJvmFormalParameter ) ) ':' ) )=> ( ( (lv_declaredParam_7_0= ruleJvmFormalParameter ) ) otherlv_8= ':' )
+                            // InternalMelange.g:6432:8: ( ( ( ( ruleJvmFormalParameter ) ) ':' ) )=> ( ( (lv_declaredParam_7_0= ruleJvmFormalParameter ) ) otherlv_8= ':' )
                             {
-                            // InternalMelange.g:6418:5: ( ( (lv_declaredParam_7_0= ruleJvmFormalParameter ) ) otherlv_8= ':' )
-                            // InternalMelange.g:6418:6: ( (lv_declaredParam_7_0= ruleJvmFormalParameter ) ) otherlv_8= ':'
+                            // InternalMelange.g:6437:5: ( ( (lv_declaredParam_7_0= ruleJvmFormalParameter ) ) otherlv_8= ':' )
+                            // InternalMelange.g:6437:6: ( (lv_declaredParam_7_0= ruleJvmFormalParameter ) ) otherlv_8= ':'
                             {
-                            // InternalMelange.g:6418:6: ( (lv_declaredParam_7_0= ruleJvmFormalParameter ) )
-                            // InternalMelange.g:6419:1: (lv_declaredParam_7_0= ruleJvmFormalParameter )
+                            // InternalMelange.g:6437:6: ( (lv_declaredParam_7_0= ruleJvmFormalParameter ) )
+                            // InternalMelange.g:6438:1: (lv_declaredParam_7_0= ruleJvmFormalParameter )
                             {
-                            // InternalMelange.g:6419:1: (lv_declaredParam_7_0= ruleJvmFormalParameter )
-                            // InternalMelange.g:6420:3: lv_declaredParam_7_0= ruleJvmFormalParameter
+                            // InternalMelange.g:6438:1: (lv_declaredParam_7_0= ruleJvmFormalParameter )
+                            // InternalMelange.g:6439:3: lv_declaredParam_7_0= ruleJvmFormalParameter
                             {
                             if ( state.backtracking==0 ) {
                                
@@ -18433,7 +18475,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
                             }
 
-                            otherlv_8=(Token)match(input,46,FOLLOW_63); if (state.failed) return current;
+                            otherlv_8=(Token)match(input,46,FOLLOW_64); if (state.failed) return current;
                             if ( state.backtracking==0 ) {
 
                                   	newLeafNode(otherlv_8, grammarAccess.getXSwitchExpressionAccess().getColonKeyword_2_1_0_0_1());
@@ -18448,11 +18490,11 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // InternalMelange.g:6440:4: ( (lv_switch_9_0= ruleXExpression ) )
-                    // InternalMelange.g:6441:1: (lv_switch_9_0= ruleXExpression )
+                    // InternalMelange.g:6459:4: ( (lv_switch_9_0= ruleXExpression ) )
+                    // InternalMelange.g:6460:1: (lv_switch_9_0= ruleXExpression )
                     {
-                    // InternalMelange.g:6441:1: (lv_switch_9_0= ruleXExpression )
-                    // InternalMelange.g:6442:3: lv_switch_9_0= ruleXExpression
+                    // InternalMelange.g:6460:1: (lv_switch_9_0= ruleXExpression )
+                    // InternalMelange.g:6461:3: lv_switch_9_0= ruleXExpression
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -18492,36 +18534,36 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_10=(Token)match(input,16,FOLLOW_98); if (state.failed) return current;
+            otherlv_10=(Token)match(input,16,FOLLOW_99); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_10, grammarAccess.getXSwitchExpressionAccess().getLeftCurlyBracketKeyword_3());
                   
             }
-            // InternalMelange.g:6462:1: ( (lv_cases_11_0= ruleXCasePart ) )*
+            // InternalMelange.g:6481:1: ( (lv_cases_11_0= ruleXCasePart ) )*
             loop118:
             do {
                 int alt118=2;
                 int LA118_0 = input.LA(1);
 
-                if ( (LA118_0==RULE_ID||LA118_0==24||LA118_0==33||LA118_0==46||LA118_0==82||LA118_0==102) ) {
+                if ( (LA118_0==RULE_ID||LA118_0==24||LA118_0==33||LA118_0==46||LA118_0==83||LA118_0==103) ) {
                     alt118=1;
                 }
 
 
                 switch (alt118) {
             	case 1 :
-            	    // InternalMelange.g:6463:1: (lv_cases_11_0= ruleXCasePart )
+            	    // InternalMelange.g:6482:1: (lv_cases_11_0= ruleXCasePart )
             	    {
-            	    // InternalMelange.g:6463:1: (lv_cases_11_0= ruleXCasePart )
-            	    // InternalMelange.g:6464:3: lv_cases_11_0= ruleXCasePart
+            	    // InternalMelange.g:6482:1: (lv_cases_11_0= ruleXCasePart )
+            	    // InternalMelange.g:6483:3: lv_cases_11_0= ruleXCasePart
             	    {
             	    if ( state.backtracking==0 ) {
             	       
             	      	        newCompositeNode(grammarAccess.getXSwitchExpressionAccess().getCasesXCasePartParserRuleCall_4_0()); 
             	      	    
             	    }
-            	    pushFollow(FOLLOW_98);
+            	    pushFollow(FOLLOW_99);
             	    lv_cases_11_0=ruleXCasePart();
 
             	    state._fsp--;
@@ -18551,34 +18593,34 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                 }
             } while (true);
 
-            // InternalMelange.g:6480:3: (otherlv_12= 'default' otherlv_13= ':' ( (lv_default_14_0= ruleXExpression ) ) )?
+            // InternalMelange.g:6499:3: (otherlv_12= 'default' otherlv_13= ':' ( (lv_default_14_0= ruleXExpression ) ) )?
             int alt119=2;
             int LA119_0 = input.LA(1);
 
-            if ( (LA119_0==101) ) {
+            if ( (LA119_0==102) ) {
                 alt119=1;
             }
             switch (alt119) {
                 case 1 :
-                    // InternalMelange.g:6480:5: otherlv_12= 'default' otherlv_13= ':' ( (lv_default_14_0= ruleXExpression ) )
+                    // InternalMelange.g:6499:5: otherlv_12= 'default' otherlv_13= ':' ( (lv_default_14_0= ruleXExpression ) )
                     {
-                    otherlv_12=(Token)match(input,101,FOLLOW_37); if (state.failed) return current;
+                    otherlv_12=(Token)match(input,102,FOLLOW_37); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_12, grammarAccess.getXSwitchExpressionAccess().getDefaultKeyword_5_0());
                           
                     }
-                    otherlv_13=(Token)match(input,46,FOLLOW_63); if (state.failed) return current;
+                    otherlv_13=(Token)match(input,46,FOLLOW_64); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_13, grammarAccess.getXSwitchExpressionAccess().getColonKeyword_5_1());
                           
                     }
-                    // InternalMelange.g:6488:1: ( (lv_default_14_0= ruleXExpression ) )
-                    // InternalMelange.g:6489:1: (lv_default_14_0= ruleXExpression )
+                    // InternalMelange.g:6507:1: ( (lv_default_14_0= ruleXExpression ) )
+                    // InternalMelange.g:6508:1: (lv_default_14_0= ruleXExpression )
                     {
-                    // InternalMelange.g:6489:1: (lv_default_14_0= ruleXExpression )
-                    // InternalMelange.g:6490:3: lv_default_14_0= ruleXExpression
+                    // InternalMelange.g:6508:1: (lv_default_14_0= ruleXExpression )
+                    // InternalMelange.g:6509:3: lv_default_14_0= ruleXExpression
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -18644,7 +18686,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleXCasePart"
-    // InternalMelange.g:6518:1: entryRuleXCasePart returns [EObject current=null] : iv_ruleXCasePart= ruleXCasePart EOF ;
+    // InternalMelange.g:6537:1: entryRuleXCasePart returns [EObject current=null] : iv_ruleXCasePart= ruleXCasePart EOF ;
     public final EObject entryRuleXCasePart() throws RecognitionException {
         EObject current = null;
 
@@ -18652,8 +18694,8 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalMelange.g:6519:2: (iv_ruleXCasePart= ruleXCasePart EOF )
-            // InternalMelange.g:6520:2: iv_ruleXCasePart= ruleXCasePart EOF
+            // InternalMelange.g:6538:2: (iv_ruleXCasePart= ruleXCasePart EOF )
+            // InternalMelange.g:6539:2: iv_ruleXCasePart= ruleXCasePart EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getXCasePartRule()); 
@@ -18684,7 +18726,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleXCasePart"
-    // InternalMelange.g:6527:1: ruleXCasePart returns [EObject current=null] : ( () ( (lv_typeGuard_1_0= ruleJvmTypeReference ) )? (otherlv_2= 'case' ( (lv_case_3_0= ruleXExpression ) ) )? ( (otherlv_4= ':' ( (lv_then_5_0= ruleXExpression ) ) ) | ( (lv_fallThrough_6_0= ',' ) ) ) ) ;
+    // InternalMelange.g:6546:1: ruleXCasePart returns [EObject current=null] : ( () ( (lv_typeGuard_1_0= ruleJvmTypeReference ) )? (otherlv_2= 'case' ( (lv_case_3_0= ruleXExpression ) ) )? ( (otherlv_4= ':' ( (lv_then_5_0= ruleXExpression ) ) ) | ( (lv_fallThrough_6_0= ',' ) ) ) ) ;
     public final EObject ruleXCasePart() throws RecognitionException {
         EObject current = null;
 
@@ -18701,14 +18743,14 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // InternalMelange.g:6530:28: ( ( () ( (lv_typeGuard_1_0= ruleJvmTypeReference ) )? (otherlv_2= 'case' ( (lv_case_3_0= ruleXExpression ) ) )? ( (otherlv_4= ':' ( (lv_then_5_0= ruleXExpression ) ) ) | ( (lv_fallThrough_6_0= ',' ) ) ) ) )
-            // InternalMelange.g:6531:1: ( () ( (lv_typeGuard_1_0= ruleJvmTypeReference ) )? (otherlv_2= 'case' ( (lv_case_3_0= ruleXExpression ) ) )? ( (otherlv_4= ':' ( (lv_then_5_0= ruleXExpression ) ) ) | ( (lv_fallThrough_6_0= ',' ) ) ) )
+            // InternalMelange.g:6549:28: ( ( () ( (lv_typeGuard_1_0= ruleJvmTypeReference ) )? (otherlv_2= 'case' ( (lv_case_3_0= ruleXExpression ) ) )? ( (otherlv_4= ':' ( (lv_then_5_0= ruleXExpression ) ) ) | ( (lv_fallThrough_6_0= ',' ) ) ) ) )
+            // InternalMelange.g:6550:1: ( () ( (lv_typeGuard_1_0= ruleJvmTypeReference ) )? (otherlv_2= 'case' ( (lv_case_3_0= ruleXExpression ) ) )? ( (otherlv_4= ':' ( (lv_then_5_0= ruleXExpression ) ) ) | ( (lv_fallThrough_6_0= ',' ) ) ) )
             {
-            // InternalMelange.g:6531:1: ( () ( (lv_typeGuard_1_0= ruleJvmTypeReference ) )? (otherlv_2= 'case' ( (lv_case_3_0= ruleXExpression ) ) )? ( (otherlv_4= ':' ( (lv_then_5_0= ruleXExpression ) ) ) | ( (lv_fallThrough_6_0= ',' ) ) ) )
-            // InternalMelange.g:6531:2: () ( (lv_typeGuard_1_0= ruleJvmTypeReference ) )? (otherlv_2= 'case' ( (lv_case_3_0= ruleXExpression ) ) )? ( (otherlv_4= ':' ( (lv_then_5_0= ruleXExpression ) ) ) | ( (lv_fallThrough_6_0= ',' ) ) )
+            // InternalMelange.g:6550:1: ( () ( (lv_typeGuard_1_0= ruleJvmTypeReference ) )? (otherlv_2= 'case' ( (lv_case_3_0= ruleXExpression ) ) )? ( (otherlv_4= ':' ( (lv_then_5_0= ruleXExpression ) ) ) | ( (lv_fallThrough_6_0= ',' ) ) ) )
+            // InternalMelange.g:6550:2: () ( (lv_typeGuard_1_0= ruleJvmTypeReference ) )? (otherlv_2= 'case' ( (lv_case_3_0= ruleXExpression ) ) )? ( (otherlv_4= ':' ( (lv_then_5_0= ruleXExpression ) ) ) | ( (lv_fallThrough_6_0= ',' ) ) )
             {
-            // InternalMelange.g:6531:2: ()
-            // InternalMelange.g:6532:5: 
+            // InternalMelange.g:6550:2: ()
+            // InternalMelange.g:6551:5: 
             {
             if ( state.backtracking==0 ) {
 
@@ -18720,26 +18762,26 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalMelange.g:6537:2: ( (lv_typeGuard_1_0= ruleJvmTypeReference ) )?
+            // InternalMelange.g:6556:2: ( (lv_typeGuard_1_0= ruleJvmTypeReference ) )?
             int alt120=2;
             int LA120_0 = input.LA(1);
 
-            if ( (LA120_0==RULE_ID||LA120_0==24||LA120_0==82) ) {
+            if ( (LA120_0==RULE_ID||LA120_0==24||LA120_0==83) ) {
                 alt120=1;
             }
             switch (alt120) {
                 case 1 :
-                    // InternalMelange.g:6538:1: (lv_typeGuard_1_0= ruleJvmTypeReference )
+                    // InternalMelange.g:6557:1: (lv_typeGuard_1_0= ruleJvmTypeReference )
                     {
-                    // InternalMelange.g:6538:1: (lv_typeGuard_1_0= ruleJvmTypeReference )
-                    // InternalMelange.g:6539:3: lv_typeGuard_1_0= ruleJvmTypeReference
+                    // InternalMelange.g:6557:1: (lv_typeGuard_1_0= ruleJvmTypeReference )
+                    // InternalMelange.g:6558:3: lv_typeGuard_1_0= ruleJvmTypeReference
                     {
                     if ( state.backtracking==0 ) {
                        
                       	        newCompositeNode(grammarAccess.getXCasePartAccess().getTypeGuardJvmTypeReferenceParserRuleCall_1_0()); 
                       	    
                     }
-                    pushFollow(FOLLOW_99);
+                    pushFollow(FOLLOW_100);
                     lv_typeGuard_1_0=ruleJvmTypeReference();
 
                     state._fsp--;
@@ -18766,35 +18808,35 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalMelange.g:6555:3: (otherlv_2= 'case' ( (lv_case_3_0= ruleXExpression ) ) )?
+            // InternalMelange.g:6574:3: (otherlv_2= 'case' ( (lv_case_3_0= ruleXExpression ) ) )?
             int alt121=2;
             int LA121_0 = input.LA(1);
 
-            if ( (LA121_0==102) ) {
+            if ( (LA121_0==103) ) {
                 alt121=1;
             }
             switch (alt121) {
                 case 1 :
-                    // InternalMelange.g:6555:5: otherlv_2= 'case' ( (lv_case_3_0= ruleXExpression ) )
+                    // InternalMelange.g:6574:5: otherlv_2= 'case' ( (lv_case_3_0= ruleXExpression ) )
                     {
-                    otherlv_2=(Token)match(input,102,FOLLOW_63); if (state.failed) return current;
+                    otherlv_2=(Token)match(input,103,FOLLOW_64); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_2, grammarAccess.getXCasePartAccess().getCaseKeyword_2_0());
                           
                     }
-                    // InternalMelange.g:6559:1: ( (lv_case_3_0= ruleXExpression ) )
-                    // InternalMelange.g:6560:1: (lv_case_3_0= ruleXExpression )
+                    // InternalMelange.g:6578:1: ( (lv_case_3_0= ruleXExpression ) )
+                    // InternalMelange.g:6579:1: (lv_case_3_0= ruleXExpression )
                     {
-                    // InternalMelange.g:6560:1: (lv_case_3_0= ruleXExpression )
-                    // InternalMelange.g:6561:3: lv_case_3_0= ruleXExpression
+                    // InternalMelange.g:6579:1: (lv_case_3_0= ruleXExpression )
+                    // InternalMelange.g:6580:3: lv_case_3_0= ruleXExpression
                     {
                     if ( state.backtracking==0 ) {
                        
                       	        newCompositeNode(grammarAccess.getXCasePartAccess().getCaseXExpressionParserRuleCall_2_1_0()); 
                       	    
                     }
-                    pushFollow(FOLLOW_100);
+                    pushFollow(FOLLOW_101);
                     lv_case_3_0=ruleXExpression();
 
                     state._fsp--;
@@ -18824,7 +18866,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalMelange.g:6577:4: ( (otherlv_4= ':' ( (lv_then_5_0= ruleXExpression ) ) ) | ( (lv_fallThrough_6_0= ',' ) ) )
+            // InternalMelange.g:6596:4: ( (otherlv_4= ':' ( (lv_then_5_0= ruleXExpression ) ) ) | ( (lv_fallThrough_6_0= ',' ) ) )
             int alt122=2;
             int LA122_0 = input.LA(1);
 
@@ -18843,22 +18885,22 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
             }
             switch (alt122) {
                 case 1 :
-                    // InternalMelange.g:6577:5: (otherlv_4= ':' ( (lv_then_5_0= ruleXExpression ) ) )
+                    // InternalMelange.g:6596:5: (otherlv_4= ':' ( (lv_then_5_0= ruleXExpression ) ) )
                     {
-                    // InternalMelange.g:6577:5: (otherlv_4= ':' ( (lv_then_5_0= ruleXExpression ) ) )
-                    // InternalMelange.g:6577:7: otherlv_4= ':' ( (lv_then_5_0= ruleXExpression ) )
+                    // InternalMelange.g:6596:5: (otherlv_4= ':' ( (lv_then_5_0= ruleXExpression ) ) )
+                    // InternalMelange.g:6596:7: otherlv_4= ':' ( (lv_then_5_0= ruleXExpression ) )
                     {
-                    otherlv_4=(Token)match(input,46,FOLLOW_63); if (state.failed) return current;
+                    otherlv_4=(Token)match(input,46,FOLLOW_64); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_4, grammarAccess.getXCasePartAccess().getColonKeyword_3_0_0());
                           
                     }
-                    // InternalMelange.g:6581:1: ( (lv_then_5_0= ruleXExpression ) )
-                    // InternalMelange.g:6582:1: (lv_then_5_0= ruleXExpression )
+                    // InternalMelange.g:6600:1: ( (lv_then_5_0= ruleXExpression ) )
+                    // InternalMelange.g:6601:1: (lv_then_5_0= ruleXExpression )
                     {
-                    // InternalMelange.g:6582:1: (lv_then_5_0= ruleXExpression )
-                    // InternalMelange.g:6583:3: lv_then_5_0= ruleXExpression
+                    // InternalMelange.g:6601:1: (lv_then_5_0= ruleXExpression )
+                    // InternalMelange.g:6602:3: lv_then_5_0= ruleXExpression
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -18896,13 +18938,13 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalMelange.g:6600:6: ( (lv_fallThrough_6_0= ',' ) )
+                    // InternalMelange.g:6619:6: ( (lv_fallThrough_6_0= ',' ) )
                     {
-                    // InternalMelange.g:6600:6: ( (lv_fallThrough_6_0= ',' ) )
-                    // InternalMelange.g:6601:1: (lv_fallThrough_6_0= ',' )
+                    // InternalMelange.g:6619:6: ( (lv_fallThrough_6_0= ',' ) )
+                    // InternalMelange.g:6620:1: (lv_fallThrough_6_0= ',' )
                     {
-                    // InternalMelange.g:6601:1: (lv_fallThrough_6_0= ',' )
-                    // InternalMelange.g:6602:3: lv_fallThrough_6_0= ','
+                    // InternalMelange.g:6620:1: (lv_fallThrough_6_0= ',' )
+                    // InternalMelange.g:6621:3: lv_fallThrough_6_0= ','
                     {
                     lv_fallThrough_6_0=(Token)match(input,33,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -18953,7 +18995,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleXForLoopExpression"
-    // InternalMelange.g:6623:1: entryRuleXForLoopExpression returns [EObject current=null] : iv_ruleXForLoopExpression= ruleXForLoopExpression EOF ;
+    // InternalMelange.g:6642:1: entryRuleXForLoopExpression returns [EObject current=null] : iv_ruleXForLoopExpression= ruleXForLoopExpression EOF ;
     public final EObject entryRuleXForLoopExpression() throws RecognitionException {
         EObject current = null;
 
@@ -18961,8 +19003,8 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalMelange.g:6624:2: (iv_ruleXForLoopExpression= ruleXForLoopExpression EOF )
-            // InternalMelange.g:6625:2: iv_ruleXForLoopExpression= ruleXForLoopExpression EOF
+            // InternalMelange.g:6643:2: (iv_ruleXForLoopExpression= ruleXForLoopExpression EOF )
+            // InternalMelange.g:6644:2: iv_ruleXForLoopExpression= ruleXForLoopExpression EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getXForLoopExpressionRule()); 
@@ -18993,7 +19035,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleXForLoopExpression"
-    // InternalMelange.g:6632:1: ruleXForLoopExpression returns [EObject current=null] : ( ( ( ( () 'for' '(' ( ( ruleJvmFormalParameter ) ) ':' ) )=> ( () otherlv_1= 'for' otherlv_2= '(' ( (lv_declaredParam_3_0= ruleJvmFormalParameter ) ) otherlv_4= ':' ) ) ( (lv_forExpression_5_0= ruleXExpression ) ) otherlv_6= ')' ( (lv_eachExpression_7_0= ruleXExpression ) ) ) ;
+    // InternalMelange.g:6651:1: ruleXForLoopExpression returns [EObject current=null] : ( ( ( ( () 'for' '(' ( ( ruleJvmFormalParameter ) ) ':' ) )=> ( () otherlv_1= 'for' otherlv_2= '(' ( (lv_declaredParam_3_0= ruleJvmFormalParameter ) ) otherlv_4= ':' ) ) ( (lv_forExpression_5_0= ruleXExpression ) ) otherlv_6= ')' ( (lv_eachExpression_7_0= ruleXExpression ) ) ) ;
     public final EObject ruleXForLoopExpression() throws RecognitionException {
         EObject current = null;
 
@@ -19011,20 +19053,20 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // InternalMelange.g:6635:28: ( ( ( ( ( () 'for' '(' ( ( ruleJvmFormalParameter ) ) ':' ) )=> ( () otherlv_1= 'for' otherlv_2= '(' ( (lv_declaredParam_3_0= ruleJvmFormalParameter ) ) otherlv_4= ':' ) ) ( (lv_forExpression_5_0= ruleXExpression ) ) otherlv_6= ')' ( (lv_eachExpression_7_0= ruleXExpression ) ) ) )
-            // InternalMelange.g:6636:1: ( ( ( ( () 'for' '(' ( ( ruleJvmFormalParameter ) ) ':' ) )=> ( () otherlv_1= 'for' otherlv_2= '(' ( (lv_declaredParam_3_0= ruleJvmFormalParameter ) ) otherlv_4= ':' ) ) ( (lv_forExpression_5_0= ruleXExpression ) ) otherlv_6= ')' ( (lv_eachExpression_7_0= ruleXExpression ) ) )
+            // InternalMelange.g:6654:28: ( ( ( ( ( () 'for' '(' ( ( ruleJvmFormalParameter ) ) ':' ) )=> ( () otherlv_1= 'for' otherlv_2= '(' ( (lv_declaredParam_3_0= ruleJvmFormalParameter ) ) otherlv_4= ':' ) ) ( (lv_forExpression_5_0= ruleXExpression ) ) otherlv_6= ')' ( (lv_eachExpression_7_0= ruleXExpression ) ) ) )
+            // InternalMelange.g:6655:1: ( ( ( ( () 'for' '(' ( ( ruleJvmFormalParameter ) ) ':' ) )=> ( () otherlv_1= 'for' otherlv_2= '(' ( (lv_declaredParam_3_0= ruleJvmFormalParameter ) ) otherlv_4= ':' ) ) ( (lv_forExpression_5_0= ruleXExpression ) ) otherlv_6= ')' ( (lv_eachExpression_7_0= ruleXExpression ) ) )
             {
-            // InternalMelange.g:6636:1: ( ( ( ( () 'for' '(' ( ( ruleJvmFormalParameter ) ) ':' ) )=> ( () otherlv_1= 'for' otherlv_2= '(' ( (lv_declaredParam_3_0= ruleJvmFormalParameter ) ) otherlv_4= ':' ) ) ( (lv_forExpression_5_0= ruleXExpression ) ) otherlv_6= ')' ( (lv_eachExpression_7_0= ruleXExpression ) ) )
-            // InternalMelange.g:6636:2: ( ( ( () 'for' '(' ( ( ruleJvmFormalParameter ) ) ':' ) )=> ( () otherlv_1= 'for' otherlv_2= '(' ( (lv_declaredParam_3_0= ruleJvmFormalParameter ) ) otherlv_4= ':' ) ) ( (lv_forExpression_5_0= ruleXExpression ) ) otherlv_6= ')' ( (lv_eachExpression_7_0= ruleXExpression ) )
+            // InternalMelange.g:6655:1: ( ( ( ( () 'for' '(' ( ( ruleJvmFormalParameter ) ) ':' ) )=> ( () otherlv_1= 'for' otherlv_2= '(' ( (lv_declaredParam_3_0= ruleJvmFormalParameter ) ) otherlv_4= ':' ) ) ( (lv_forExpression_5_0= ruleXExpression ) ) otherlv_6= ')' ( (lv_eachExpression_7_0= ruleXExpression ) ) )
+            // InternalMelange.g:6655:2: ( ( ( () 'for' '(' ( ( ruleJvmFormalParameter ) ) ':' ) )=> ( () otherlv_1= 'for' otherlv_2= '(' ( (lv_declaredParam_3_0= ruleJvmFormalParameter ) ) otherlv_4= ':' ) ) ( (lv_forExpression_5_0= ruleXExpression ) ) otherlv_6= ')' ( (lv_eachExpression_7_0= ruleXExpression ) )
             {
-            // InternalMelange.g:6636:2: ( ( ( () 'for' '(' ( ( ruleJvmFormalParameter ) ) ':' ) )=> ( () otherlv_1= 'for' otherlv_2= '(' ( (lv_declaredParam_3_0= ruleJvmFormalParameter ) ) otherlv_4= ':' ) )
-            // InternalMelange.g:6636:3: ( ( () 'for' '(' ( ( ruleJvmFormalParameter ) ) ':' ) )=> ( () otherlv_1= 'for' otherlv_2= '(' ( (lv_declaredParam_3_0= ruleJvmFormalParameter ) ) otherlv_4= ':' )
+            // InternalMelange.g:6655:2: ( ( ( () 'for' '(' ( ( ruleJvmFormalParameter ) ) ':' ) )=> ( () otherlv_1= 'for' otherlv_2= '(' ( (lv_declaredParam_3_0= ruleJvmFormalParameter ) ) otherlv_4= ':' ) )
+            // InternalMelange.g:6655:3: ( ( () 'for' '(' ( ( ruleJvmFormalParameter ) ) ':' ) )=> ( () otherlv_1= 'for' otherlv_2= '(' ( (lv_declaredParam_3_0= ruleJvmFormalParameter ) ) otherlv_4= ':' )
             {
-            // InternalMelange.g:6644:5: ( () otherlv_1= 'for' otherlv_2= '(' ( (lv_declaredParam_3_0= ruleJvmFormalParameter ) ) otherlv_4= ':' )
-            // InternalMelange.g:6644:6: () otherlv_1= 'for' otherlv_2= '(' ( (lv_declaredParam_3_0= ruleJvmFormalParameter ) ) otherlv_4= ':'
+            // InternalMelange.g:6663:5: ( () otherlv_1= 'for' otherlv_2= '(' ( (lv_declaredParam_3_0= ruleJvmFormalParameter ) ) otherlv_4= ':' )
+            // InternalMelange.g:6663:6: () otherlv_1= 'for' otherlv_2= '(' ( (lv_declaredParam_3_0= ruleJvmFormalParameter ) ) otherlv_4= ':'
             {
-            // InternalMelange.g:6644:6: ()
-            // InternalMelange.g:6645:5: 
+            // InternalMelange.g:6663:6: ()
+            // InternalMelange.g:6664:5: 
             {
             if ( state.backtracking==0 ) {
 
@@ -19036,7 +19078,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,103,FOLLOW_46); if (state.failed) return current;
+            otherlv_1=(Token)match(input,104,FOLLOW_46); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_1, grammarAccess.getXForLoopExpressionAccess().getForKeyword_0_0_1());
@@ -19048,11 +19090,11 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                   	newLeafNode(otherlv_2, grammarAccess.getXForLoopExpressionAccess().getLeftParenthesisKeyword_0_0_2());
                   
             }
-            // InternalMelange.g:6658:1: ( (lv_declaredParam_3_0= ruleJvmFormalParameter ) )
-            // InternalMelange.g:6659:1: (lv_declaredParam_3_0= ruleJvmFormalParameter )
+            // InternalMelange.g:6677:1: ( (lv_declaredParam_3_0= ruleJvmFormalParameter ) )
+            // InternalMelange.g:6678:1: (lv_declaredParam_3_0= ruleJvmFormalParameter )
             {
-            // InternalMelange.g:6659:1: (lv_declaredParam_3_0= ruleJvmFormalParameter )
-            // InternalMelange.g:6660:3: lv_declaredParam_3_0= ruleJvmFormalParameter
+            // InternalMelange.g:6678:1: (lv_declaredParam_3_0= ruleJvmFormalParameter )
+            // InternalMelange.g:6679:3: lv_declaredParam_3_0= ruleJvmFormalParameter
             {
             if ( state.backtracking==0 ) {
                
@@ -19083,7 +19125,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_4=(Token)match(input,46,FOLLOW_63); if (state.failed) return current;
+            otherlv_4=(Token)match(input,46,FOLLOW_64); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_4, grammarAccess.getXForLoopExpressionAccess().getColonKeyword_0_0_4());
@@ -19095,11 +19137,11 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalMelange.g:6680:3: ( (lv_forExpression_5_0= ruleXExpression ) )
-            // InternalMelange.g:6681:1: (lv_forExpression_5_0= ruleXExpression )
+            // InternalMelange.g:6699:3: ( (lv_forExpression_5_0= ruleXExpression ) )
+            // InternalMelange.g:6700:1: (lv_forExpression_5_0= ruleXExpression )
             {
-            // InternalMelange.g:6681:1: (lv_forExpression_5_0= ruleXExpression )
-            // InternalMelange.g:6682:3: lv_forExpression_5_0= ruleXExpression
+            // InternalMelange.g:6700:1: (lv_forExpression_5_0= ruleXExpression )
+            // InternalMelange.g:6701:3: lv_forExpression_5_0= ruleXExpression
             {
             if ( state.backtracking==0 ) {
                
@@ -19130,17 +19172,17 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_6=(Token)match(input,25,FOLLOW_63); if (state.failed) return current;
+            otherlv_6=(Token)match(input,25,FOLLOW_64); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_6, grammarAccess.getXForLoopExpressionAccess().getRightParenthesisKeyword_2());
                   
             }
-            // InternalMelange.g:6702:1: ( (lv_eachExpression_7_0= ruleXExpression ) )
-            // InternalMelange.g:6703:1: (lv_eachExpression_7_0= ruleXExpression )
+            // InternalMelange.g:6721:1: ( (lv_eachExpression_7_0= ruleXExpression ) )
+            // InternalMelange.g:6722:1: (lv_eachExpression_7_0= ruleXExpression )
             {
-            // InternalMelange.g:6703:1: (lv_eachExpression_7_0= ruleXExpression )
-            // InternalMelange.g:6704:3: lv_eachExpression_7_0= ruleXExpression
+            // InternalMelange.g:6722:1: (lv_eachExpression_7_0= ruleXExpression )
+            // InternalMelange.g:6723:3: lv_eachExpression_7_0= ruleXExpression
             {
             if ( state.backtracking==0 ) {
                
@@ -19194,7 +19236,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleXBasicForLoopExpression"
-    // InternalMelange.g:6728:1: entryRuleXBasicForLoopExpression returns [EObject current=null] : iv_ruleXBasicForLoopExpression= ruleXBasicForLoopExpression EOF ;
+    // InternalMelange.g:6747:1: entryRuleXBasicForLoopExpression returns [EObject current=null] : iv_ruleXBasicForLoopExpression= ruleXBasicForLoopExpression EOF ;
     public final EObject entryRuleXBasicForLoopExpression() throws RecognitionException {
         EObject current = null;
 
@@ -19202,8 +19244,8 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalMelange.g:6729:2: (iv_ruleXBasicForLoopExpression= ruleXBasicForLoopExpression EOF )
-            // InternalMelange.g:6730:2: iv_ruleXBasicForLoopExpression= ruleXBasicForLoopExpression EOF
+            // InternalMelange.g:6748:2: (iv_ruleXBasicForLoopExpression= ruleXBasicForLoopExpression EOF )
+            // InternalMelange.g:6749:2: iv_ruleXBasicForLoopExpression= ruleXBasicForLoopExpression EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getXBasicForLoopExpressionRule()); 
@@ -19234,7 +19276,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleXBasicForLoopExpression"
-    // InternalMelange.g:6737:1: ruleXBasicForLoopExpression returns [EObject current=null] : ( () otherlv_1= 'for' otherlv_2= '(' ( ( (lv_initExpressions_3_0= ruleXExpressionOrVarDeclaration ) ) (otherlv_4= ',' ( (lv_initExpressions_5_0= ruleXExpressionOrVarDeclaration ) ) )* )? otherlv_6= ';' ( (lv_expression_7_0= ruleXExpression ) )? otherlv_8= ';' ( ( (lv_updateExpressions_9_0= ruleXExpression ) ) (otherlv_10= ',' ( (lv_updateExpressions_11_0= ruleXExpression ) ) )* )? otherlv_12= ')' ( (lv_eachExpression_13_0= ruleXExpression ) ) ) ;
+    // InternalMelange.g:6756:1: ruleXBasicForLoopExpression returns [EObject current=null] : ( () otherlv_1= 'for' otherlv_2= '(' ( ( (lv_initExpressions_3_0= ruleXExpressionOrVarDeclaration ) ) (otherlv_4= ',' ( (lv_initExpressions_5_0= ruleXExpressionOrVarDeclaration ) ) )* )? otherlv_6= ';' ( (lv_expression_7_0= ruleXExpression ) )? otherlv_8= ';' ( ( (lv_updateExpressions_9_0= ruleXExpression ) ) (otherlv_10= ',' ( (lv_updateExpressions_11_0= ruleXExpression ) ) )* )? otherlv_12= ')' ( (lv_eachExpression_13_0= ruleXExpression ) ) ) ;
     public final EObject ruleXBasicForLoopExpression() throws RecognitionException {
         EObject current = null;
 
@@ -19261,14 +19303,14 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // InternalMelange.g:6740:28: ( ( () otherlv_1= 'for' otherlv_2= '(' ( ( (lv_initExpressions_3_0= ruleXExpressionOrVarDeclaration ) ) (otherlv_4= ',' ( (lv_initExpressions_5_0= ruleXExpressionOrVarDeclaration ) ) )* )? otherlv_6= ';' ( (lv_expression_7_0= ruleXExpression ) )? otherlv_8= ';' ( ( (lv_updateExpressions_9_0= ruleXExpression ) ) (otherlv_10= ',' ( (lv_updateExpressions_11_0= ruleXExpression ) ) )* )? otherlv_12= ')' ( (lv_eachExpression_13_0= ruleXExpression ) ) ) )
-            // InternalMelange.g:6741:1: ( () otherlv_1= 'for' otherlv_2= '(' ( ( (lv_initExpressions_3_0= ruleXExpressionOrVarDeclaration ) ) (otherlv_4= ',' ( (lv_initExpressions_5_0= ruleXExpressionOrVarDeclaration ) ) )* )? otherlv_6= ';' ( (lv_expression_7_0= ruleXExpression ) )? otherlv_8= ';' ( ( (lv_updateExpressions_9_0= ruleXExpression ) ) (otherlv_10= ',' ( (lv_updateExpressions_11_0= ruleXExpression ) ) )* )? otherlv_12= ')' ( (lv_eachExpression_13_0= ruleXExpression ) ) )
+            // InternalMelange.g:6759:28: ( ( () otherlv_1= 'for' otherlv_2= '(' ( ( (lv_initExpressions_3_0= ruleXExpressionOrVarDeclaration ) ) (otherlv_4= ',' ( (lv_initExpressions_5_0= ruleXExpressionOrVarDeclaration ) ) )* )? otherlv_6= ';' ( (lv_expression_7_0= ruleXExpression ) )? otherlv_8= ';' ( ( (lv_updateExpressions_9_0= ruleXExpression ) ) (otherlv_10= ',' ( (lv_updateExpressions_11_0= ruleXExpression ) ) )* )? otherlv_12= ')' ( (lv_eachExpression_13_0= ruleXExpression ) ) ) )
+            // InternalMelange.g:6760:1: ( () otherlv_1= 'for' otherlv_2= '(' ( ( (lv_initExpressions_3_0= ruleXExpressionOrVarDeclaration ) ) (otherlv_4= ',' ( (lv_initExpressions_5_0= ruleXExpressionOrVarDeclaration ) ) )* )? otherlv_6= ';' ( (lv_expression_7_0= ruleXExpression ) )? otherlv_8= ';' ( ( (lv_updateExpressions_9_0= ruleXExpression ) ) (otherlv_10= ',' ( (lv_updateExpressions_11_0= ruleXExpression ) ) )* )? otherlv_12= ')' ( (lv_eachExpression_13_0= ruleXExpression ) ) )
             {
-            // InternalMelange.g:6741:1: ( () otherlv_1= 'for' otherlv_2= '(' ( ( (lv_initExpressions_3_0= ruleXExpressionOrVarDeclaration ) ) (otherlv_4= ',' ( (lv_initExpressions_5_0= ruleXExpressionOrVarDeclaration ) ) )* )? otherlv_6= ';' ( (lv_expression_7_0= ruleXExpression ) )? otherlv_8= ';' ( ( (lv_updateExpressions_9_0= ruleXExpression ) ) (otherlv_10= ',' ( (lv_updateExpressions_11_0= ruleXExpression ) ) )* )? otherlv_12= ')' ( (lv_eachExpression_13_0= ruleXExpression ) ) )
-            // InternalMelange.g:6741:2: () otherlv_1= 'for' otherlv_2= '(' ( ( (lv_initExpressions_3_0= ruleXExpressionOrVarDeclaration ) ) (otherlv_4= ',' ( (lv_initExpressions_5_0= ruleXExpressionOrVarDeclaration ) ) )* )? otherlv_6= ';' ( (lv_expression_7_0= ruleXExpression ) )? otherlv_8= ';' ( ( (lv_updateExpressions_9_0= ruleXExpression ) ) (otherlv_10= ',' ( (lv_updateExpressions_11_0= ruleXExpression ) ) )* )? otherlv_12= ')' ( (lv_eachExpression_13_0= ruleXExpression ) )
+            // InternalMelange.g:6760:1: ( () otherlv_1= 'for' otherlv_2= '(' ( ( (lv_initExpressions_3_0= ruleXExpressionOrVarDeclaration ) ) (otherlv_4= ',' ( (lv_initExpressions_5_0= ruleXExpressionOrVarDeclaration ) ) )* )? otherlv_6= ';' ( (lv_expression_7_0= ruleXExpression ) )? otherlv_8= ';' ( ( (lv_updateExpressions_9_0= ruleXExpression ) ) (otherlv_10= ',' ( (lv_updateExpressions_11_0= ruleXExpression ) ) )* )? otherlv_12= ')' ( (lv_eachExpression_13_0= ruleXExpression ) ) )
+            // InternalMelange.g:6760:2: () otherlv_1= 'for' otherlv_2= '(' ( ( (lv_initExpressions_3_0= ruleXExpressionOrVarDeclaration ) ) (otherlv_4= ',' ( (lv_initExpressions_5_0= ruleXExpressionOrVarDeclaration ) ) )* )? otherlv_6= ';' ( (lv_expression_7_0= ruleXExpression ) )? otherlv_8= ';' ( ( (lv_updateExpressions_9_0= ruleXExpression ) ) (otherlv_10= ',' ( (lv_updateExpressions_11_0= ruleXExpression ) ) )* )? otherlv_12= ')' ( (lv_eachExpression_13_0= ruleXExpression ) )
             {
-            // InternalMelange.g:6741:2: ()
-            // InternalMelange.g:6742:5: 
+            // InternalMelange.g:6760:2: ()
+            // InternalMelange.g:6761:5: 
             {
             if ( state.backtracking==0 ) {
 
@@ -19280,41 +19322,41 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,103,FOLLOW_46); if (state.failed) return current;
+            otherlv_1=(Token)match(input,104,FOLLOW_46); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_1, grammarAccess.getXBasicForLoopExpressionAccess().getForKeyword_1());
                   
             }
-            otherlv_2=(Token)match(input,24,FOLLOW_101); if (state.failed) return current;
+            otherlv_2=(Token)match(input,24,FOLLOW_102); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_2, grammarAccess.getXBasicForLoopExpressionAccess().getLeftParenthesisKeyword_2());
                   
             }
-            // InternalMelange.g:6755:1: ( ( (lv_initExpressions_3_0= ruleXExpressionOrVarDeclaration ) ) (otherlv_4= ',' ( (lv_initExpressions_5_0= ruleXExpressionOrVarDeclaration ) ) )* )?
+            // InternalMelange.g:6774:1: ( ( (lv_initExpressions_3_0= ruleXExpressionOrVarDeclaration ) ) (otherlv_4= ',' ( (lv_initExpressions_5_0= ruleXExpressionOrVarDeclaration ) ) )* )?
             int alt124=2;
             int LA124_0 = input.LA(1);
 
-            if ( ((LA124_0>=RULE_ID && LA124_0<=RULE_DECIMAL)||LA124_0==16||(LA124_0>=23 && LA124_0<=24)||LA124_0==56||LA124_0==62||LA124_0==70||LA124_0==85||LA124_0==96||LA124_0==98||LA124_0==100||(LA124_0>=103 && LA124_0<=120)||LA124_0==122) ) {
+            if ( ((LA124_0>=RULE_ID && LA124_0<=RULE_DECIMAL)||LA124_0==16||(LA124_0>=23 && LA124_0<=24)||LA124_0==56||LA124_0==63||LA124_0==71||LA124_0==86||LA124_0==97||LA124_0==99||LA124_0==101||(LA124_0>=104 && LA124_0<=121)||LA124_0==123) ) {
                 alt124=1;
             }
             switch (alt124) {
                 case 1 :
-                    // InternalMelange.g:6755:2: ( (lv_initExpressions_3_0= ruleXExpressionOrVarDeclaration ) ) (otherlv_4= ',' ( (lv_initExpressions_5_0= ruleXExpressionOrVarDeclaration ) ) )*
+                    // InternalMelange.g:6774:2: ( (lv_initExpressions_3_0= ruleXExpressionOrVarDeclaration ) ) (otherlv_4= ',' ( (lv_initExpressions_5_0= ruleXExpressionOrVarDeclaration ) ) )*
                     {
-                    // InternalMelange.g:6755:2: ( (lv_initExpressions_3_0= ruleXExpressionOrVarDeclaration ) )
-                    // InternalMelange.g:6756:1: (lv_initExpressions_3_0= ruleXExpressionOrVarDeclaration )
+                    // InternalMelange.g:6774:2: ( (lv_initExpressions_3_0= ruleXExpressionOrVarDeclaration ) )
+                    // InternalMelange.g:6775:1: (lv_initExpressions_3_0= ruleXExpressionOrVarDeclaration )
                     {
-                    // InternalMelange.g:6756:1: (lv_initExpressions_3_0= ruleXExpressionOrVarDeclaration )
-                    // InternalMelange.g:6757:3: lv_initExpressions_3_0= ruleXExpressionOrVarDeclaration
+                    // InternalMelange.g:6775:1: (lv_initExpressions_3_0= ruleXExpressionOrVarDeclaration )
+                    // InternalMelange.g:6776:3: lv_initExpressions_3_0= ruleXExpressionOrVarDeclaration
                     {
                     if ( state.backtracking==0 ) {
                        
                       	        newCompositeNode(grammarAccess.getXBasicForLoopExpressionAccess().getInitExpressionsXExpressionOrVarDeclarationParserRuleCall_3_0_0()); 
                       	    
                     }
-                    pushFollow(FOLLOW_102);
+                    pushFollow(FOLLOW_103);
                     lv_initExpressions_3_0=ruleXExpressionOrVarDeclaration();
 
                     state._fsp--;
@@ -19338,7 +19380,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // InternalMelange.g:6773:2: (otherlv_4= ',' ( (lv_initExpressions_5_0= ruleXExpressionOrVarDeclaration ) ) )*
+                    // InternalMelange.g:6792:2: (otherlv_4= ',' ( (lv_initExpressions_5_0= ruleXExpressionOrVarDeclaration ) ) )*
                     loop123:
                     do {
                         int alt123=2;
@@ -19351,26 +19393,26 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
                         switch (alt123) {
                     	case 1 :
-                    	    // InternalMelange.g:6773:4: otherlv_4= ',' ( (lv_initExpressions_5_0= ruleXExpressionOrVarDeclaration ) )
+                    	    // InternalMelange.g:6792:4: otherlv_4= ',' ( (lv_initExpressions_5_0= ruleXExpressionOrVarDeclaration ) )
                     	    {
-                    	    otherlv_4=(Token)match(input,33,FOLLOW_103); if (state.failed) return current;
+                    	    otherlv_4=(Token)match(input,33,FOLLOW_104); if (state.failed) return current;
                     	    if ( state.backtracking==0 ) {
 
                     	          	newLeafNode(otherlv_4, grammarAccess.getXBasicForLoopExpressionAccess().getCommaKeyword_3_1_0());
                     	          
                     	    }
-                    	    // InternalMelange.g:6777:1: ( (lv_initExpressions_5_0= ruleXExpressionOrVarDeclaration ) )
-                    	    // InternalMelange.g:6778:1: (lv_initExpressions_5_0= ruleXExpressionOrVarDeclaration )
+                    	    // InternalMelange.g:6796:1: ( (lv_initExpressions_5_0= ruleXExpressionOrVarDeclaration ) )
+                    	    // InternalMelange.g:6797:1: (lv_initExpressions_5_0= ruleXExpressionOrVarDeclaration )
                     	    {
-                    	    // InternalMelange.g:6778:1: (lv_initExpressions_5_0= ruleXExpressionOrVarDeclaration )
-                    	    // InternalMelange.g:6779:3: lv_initExpressions_5_0= ruleXExpressionOrVarDeclaration
+                    	    // InternalMelange.g:6797:1: (lv_initExpressions_5_0= ruleXExpressionOrVarDeclaration )
+                    	    // InternalMelange.g:6798:3: lv_initExpressions_5_0= ruleXExpressionOrVarDeclaration
                     	    {
                     	    if ( state.backtracking==0 ) {
                     	       
                     	      	        newCompositeNode(grammarAccess.getXBasicForLoopExpressionAccess().getInitExpressionsXExpressionOrVarDeclarationParserRuleCall_3_1_1_0()); 
                     	      	    
                     	    }
-                    	    pushFollow(FOLLOW_102);
+                    	    pushFollow(FOLLOW_103);
                     	    lv_initExpressions_5_0=ruleXExpressionOrVarDeclaration();
 
                     	    state._fsp--;
@@ -19409,32 +19451,32 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_6=(Token)match(input,97,FOLLOW_104); if (state.failed) return current;
+            otherlv_6=(Token)match(input,98,FOLLOW_105); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_6, grammarAccess.getXBasicForLoopExpressionAccess().getSemicolonKeyword_4());
                   
             }
-            // InternalMelange.g:6799:1: ( (lv_expression_7_0= ruleXExpression ) )?
+            // InternalMelange.g:6818:1: ( (lv_expression_7_0= ruleXExpression ) )?
             int alt125=2;
             int LA125_0 = input.LA(1);
 
-            if ( ((LA125_0>=RULE_ID && LA125_0<=RULE_DECIMAL)||LA125_0==16||(LA125_0>=23 && LA125_0<=24)||LA125_0==56||LA125_0==62||LA125_0==70||LA125_0==85||LA125_0==96||LA125_0==98||LA125_0==100||(LA125_0>=103 && LA125_0<=105)||(LA125_0>=108 && LA125_0<=120)||LA125_0==122) ) {
+            if ( ((LA125_0>=RULE_ID && LA125_0<=RULE_DECIMAL)||LA125_0==16||(LA125_0>=23 && LA125_0<=24)||LA125_0==56||LA125_0==63||LA125_0==71||LA125_0==86||LA125_0==97||LA125_0==99||LA125_0==101||(LA125_0>=104 && LA125_0<=106)||(LA125_0>=109 && LA125_0<=121)||LA125_0==123) ) {
                 alt125=1;
             }
             switch (alt125) {
                 case 1 :
-                    // InternalMelange.g:6800:1: (lv_expression_7_0= ruleXExpression )
+                    // InternalMelange.g:6819:1: (lv_expression_7_0= ruleXExpression )
                     {
-                    // InternalMelange.g:6800:1: (lv_expression_7_0= ruleXExpression )
-                    // InternalMelange.g:6801:3: lv_expression_7_0= ruleXExpression
+                    // InternalMelange.g:6819:1: (lv_expression_7_0= ruleXExpression )
+                    // InternalMelange.g:6820:3: lv_expression_7_0= ruleXExpression
                     {
                     if ( state.backtracking==0 ) {
                        
                       	        newCompositeNode(grammarAccess.getXBasicForLoopExpressionAccess().getExpressionXExpressionParserRuleCall_5_0()); 
                       	    
                     }
-                    pushFollow(FOLLOW_105);
+                    pushFollow(FOLLOW_106);
                     lv_expression_7_0=ruleXExpression();
 
                     state._fsp--;
@@ -19461,28 +19503,28 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_8=(Token)match(input,97,FOLLOW_106); if (state.failed) return current;
+            otherlv_8=(Token)match(input,98,FOLLOW_107); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_8, grammarAccess.getXBasicForLoopExpressionAccess().getSemicolonKeyword_6());
                   
             }
-            // InternalMelange.g:6821:1: ( ( (lv_updateExpressions_9_0= ruleXExpression ) ) (otherlv_10= ',' ( (lv_updateExpressions_11_0= ruleXExpression ) ) )* )?
+            // InternalMelange.g:6840:1: ( ( (lv_updateExpressions_9_0= ruleXExpression ) ) (otherlv_10= ',' ( (lv_updateExpressions_11_0= ruleXExpression ) ) )* )?
             int alt127=2;
             int LA127_0 = input.LA(1);
 
-            if ( ((LA127_0>=RULE_ID && LA127_0<=RULE_DECIMAL)||LA127_0==16||(LA127_0>=23 && LA127_0<=24)||LA127_0==56||LA127_0==62||LA127_0==70||LA127_0==85||LA127_0==96||LA127_0==98||LA127_0==100||(LA127_0>=103 && LA127_0<=105)||(LA127_0>=108 && LA127_0<=120)||LA127_0==122) ) {
+            if ( ((LA127_0>=RULE_ID && LA127_0<=RULE_DECIMAL)||LA127_0==16||(LA127_0>=23 && LA127_0<=24)||LA127_0==56||LA127_0==63||LA127_0==71||LA127_0==86||LA127_0==97||LA127_0==99||LA127_0==101||(LA127_0>=104 && LA127_0<=106)||(LA127_0>=109 && LA127_0<=121)||LA127_0==123) ) {
                 alt127=1;
             }
             switch (alt127) {
                 case 1 :
-                    // InternalMelange.g:6821:2: ( (lv_updateExpressions_9_0= ruleXExpression ) ) (otherlv_10= ',' ( (lv_updateExpressions_11_0= ruleXExpression ) ) )*
+                    // InternalMelange.g:6840:2: ( (lv_updateExpressions_9_0= ruleXExpression ) ) (otherlv_10= ',' ( (lv_updateExpressions_11_0= ruleXExpression ) ) )*
                     {
-                    // InternalMelange.g:6821:2: ( (lv_updateExpressions_9_0= ruleXExpression ) )
-                    // InternalMelange.g:6822:1: (lv_updateExpressions_9_0= ruleXExpression )
+                    // InternalMelange.g:6840:2: ( (lv_updateExpressions_9_0= ruleXExpression ) )
+                    // InternalMelange.g:6841:1: (lv_updateExpressions_9_0= ruleXExpression )
                     {
-                    // InternalMelange.g:6822:1: (lv_updateExpressions_9_0= ruleXExpression )
-                    // InternalMelange.g:6823:3: lv_updateExpressions_9_0= ruleXExpression
+                    // InternalMelange.g:6841:1: (lv_updateExpressions_9_0= ruleXExpression )
+                    // InternalMelange.g:6842:3: lv_updateExpressions_9_0= ruleXExpression
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -19513,7 +19555,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // InternalMelange.g:6839:2: (otherlv_10= ',' ( (lv_updateExpressions_11_0= ruleXExpression ) ) )*
+                    // InternalMelange.g:6858:2: (otherlv_10= ',' ( (lv_updateExpressions_11_0= ruleXExpression ) ) )*
                     loop126:
                     do {
                         int alt126=2;
@@ -19526,19 +19568,19 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
                         switch (alt126) {
                     	case 1 :
-                    	    // InternalMelange.g:6839:4: otherlv_10= ',' ( (lv_updateExpressions_11_0= ruleXExpression ) )
+                    	    // InternalMelange.g:6858:4: otherlv_10= ',' ( (lv_updateExpressions_11_0= ruleXExpression ) )
                     	    {
-                    	    otherlv_10=(Token)match(input,33,FOLLOW_63); if (state.failed) return current;
+                    	    otherlv_10=(Token)match(input,33,FOLLOW_64); if (state.failed) return current;
                     	    if ( state.backtracking==0 ) {
 
                     	          	newLeafNode(otherlv_10, grammarAccess.getXBasicForLoopExpressionAccess().getCommaKeyword_7_1_0());
                     	          
                     	    }
-                    	    // InternalMelange.g:6843:1: ( (lv_updateExpressions_11_0= ruleXExpression ) )
-                    	    // InternalMelange.g:6844:1: (lv_updateExpressions_11_0= ruleXExpression )
+                    	    // InternalMelange.g:6862:1: ( (lv_updateExpressions_11_0= ruleXExpression ) )
+                    	    // InternalMelange.g:6863:1: (lv_updateExpressions_11_0= ruleXExpression )
                     	    {
-                    	    // InternalMelange.g:6844:1: (lv_updateExpressions_11_0= ruleXExpression )
-                    	    // InternalMelange.g:6845:3: lv_updateExpressions_11_0= ruleXExpression
+                    	    // InternalMelange.g:6863:1: (lv_updateExpressions_11_0= ruleXExpression )
+                    	    // InternalMelange.g:6864:3: lv_updateExpressions_11_0= ruleXExpression
                     	    {
                     	    if ( state.backtracking==0 ) {
                     	       
@@ -19584,17 +19626,17 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_12=(Token)match(input,25,FOLLOW_63); if (state.failed) return current;
+            otherlv_12=(Token)match(input,25,FOLLOW_64); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_12, grammarAccess.getXBasicForLoopExpressionAccess().getRightParenthesisKeyword_8());
                   
             }
-            // InternalMelange.g:6865:1: ( (lv_eachExpression_13_0= ruleXExpression ) )
-            // InternalMelange.g:6866:1: (lv_eachExpression_13_0= ruleXExpression )
+            // InternalMelange.g:6884:1: ( (lv_eachExpression_13_0= ruleXExpression ) )
+            // InternalMelange.g:6885:1: (lv_eachExpression_13_0= ruleXExpression )
             {
-            // InternalMelange.g:6866:1: (lv_eachExpression_13_0= ruleXExpression )
-            // InternalMelange.g:6867:3: lv_eachExpression_13_0= ruleXExpression
+            // InternalMelange.g:6885:1: (lv_eachExpression_13_0= ruleXExpression )
+            // InternalMelange.g:6886:3: lv_eachExpression_13_0= ruleXExpression
             {
             if ( state.backtracking==0 ) {
                
@@ -19648,7 +19690,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleXWhileExpression"
-    // InternalMelange.g:6891:1: entryRuleXWhileExpression returns [EObject current=null] : iv_ruleXWhileExpression= ruleXWhileExpression EOF ;
+    // InternalMelange.g:6910:1: entryRuleXWhileExpression returns [EObject current=null] : iv_ruleXWhileExpression= ruleXWhileExpression EOF ;
     public final EObject entryRuleXWhileExpression() throws RecognitionException {
         EObject current = null;
 
@@ -19656,8 +19698,8 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalMelange.g:6892:2: (iv_ruleXWhileExpression= ruleXWhileExpression EOF )
-            // InternalMelange.g:6893:2: iv_ruleXWhileExpression= ruleXWhileExpression EOF
+            // InternalMelange.g:6911:2: (iv_ruleXWhileExpression= ruleXWhileExpression EOF )
+            // InternalMelange.g:6912:2: iv_ruleXWhileExpression= ruleXWhileExpression EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getXWhileExpressionRule()); 
@@ -19688,7 +19730,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleXWhileExpression"
-    // InternalMelange.g:6900:1: ruleXWhileExpression returns [EObject current=null] : ( () otherlv_1= 'while' otherlv_2= '(' ( (lv_predicate_3_0= ruleXExpression ) ) otherlv_4= ')' ( (lv_body_5_0= ruleXExpression ) ) ) ;
+    // InternalMelange.g:6919:1: ruleXWhileExpression returns [EObject current=null] : ( () otherlv_1= 'while' otherlv_2= '(' ( (lv_predicate_3_0= ruleXExpression ) ) otherlv_4= ')' ( (lv_body_5_0= ruleXExpression ) ) ) ;
     public final EObject ruleXWhileExpression() throws RecognitionException {
         EObject current = null;
 
@@ -19703,14 +19745,14 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // InternalMelange.g:6903:28: ( ( () otherlv_1= 'while' otherlv_2= '(' ( (lv_predicate_3_0= ruleXExpression ) ) otherlv_4= ')' ( (lv_body_5_0= ruleXExpression ) ) ) )
-            // InternalMelange.g:6904:1: ( () otherlv_1= 'while' otherlv_2= '(' ( (lv_predicate_3_0= ruleXExpression ) ) otherlv_4= ')' ( (lv_body_5_0= ruleXExpression ) ) )
+            // InternalMelange.g:6922:28: ( ( () otherlv_1= 'while' otherlv_2= '(' ( (lv_predicate_3_0= ruleXExpression ) ) otherlv_4= ')' ( (lv_body_5_0= ruleXExpression ) ) ) )
+            // InternalMelange.g:6923:1: ( () otherlv_1= 'while' otherlv_2= '(' ( (lv_predicate_3_0= ruleXExpression ) ) otherlv_4= ')' ( (lv_body_5_0= ruleXExpression ) ) )
             {
-            // InternalMelange.g:6904:1: ( () otherlv_1= 'while' otherlv_2= '(' ( (lv_predicate_3_0= ruleXExpression ) ) otherlv_4= ')' ( (lv_body_5_0= ruleXExpression ) ) )
-            // InternalMelange.g:6904:2: () otherlv_1= 'while' otherlv_2= '(' ( (lv_predicate_3_0= ruleXExpression ) ) otherlv_4= ')' ( (lv_body_5_0= ruleXExpression ) )
+            // InternalMelange.g:6923:1: ( () otherlv_1= 'while' otherlv_2= '(' ( (lv_predicate_3_0= ruleXExpression ) ) otherlv_4= ')' ( (lv_body_5_0= ruleXExpression ) ) )
+            // InternalMelange.g:6923:2: () otherlv_1= 'while' otherlv_2= '(' ( (lv_predicate_3_0= ruleXExpression ) ) otherlv_4= ')' ( (lv_body_5_0= ruleXExpression ) )
             {
-            // InternalMelange.g:6904:2: ()
-            // InternalMelange.g:6905:5: 
+            // InternalMelange.g:6923:2: ()
+            // InternalMelange.g:6924:5: 
             {
             if ( state.backtracking==0 ) {
 
@@ -19722,23 +19764,23 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,104,FOLLOW_46); if (state.failed) return current;
+            otherlv_1=(Token)match(input,105,FOLLOW_46); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_1, grammarAccess.getXWhileExpressionAccess().getWhileKeyword_1());
                   
             }
-            otherlv_2=(Token)match(input,24,FOLLOW_63); if (state.failed) return current;
+            otherlv_2=(Token)match(input,24,FOLLOW_64); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_2, grammarAccess.getXWhileExpressionAccess().getLeftParenthesisKeyword_2());
                   
             }
-            // InternalMelange.g:6918:1: ( (lv_predicate_3_0= ruleXExpression ) )
-            // InternalMelange.g:6919:1: (lv_predicate_3_0= ruleXExpression )
+            // InternalMelange.g:6937:1: ( (lv_predicate_3_0= ruleXExpression ) )
+            // InternalMelange.g:6938:1: (lv_predicate_3_0= ruleXExpression )
             {
-            // InternalMelange.g:6919:1: (lv_predicate_3_0= ruleXExpression )
-            // InternalMelange.g:6920:3: lv_predicate_3_0= ruleXExpression
+            // InternalMelange.g:6938:1: (lv_predicate_3_0= ruleXExpression )
+            // InternalMelange.g:6939:3: lv_predicate_3_0= ruleXExpression
             {
             if ( state.backtracking==0 ) {
                
@@ -19769,17 +19811,17 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_4=(Token)match(input,25,FOLLOW_63); if (state.failed) return current;
+            otherlv_4=(Token)match(input,25,FOLLOW_64); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_4, grammarAccess.getXWhileExpressionAccess().getRightParenthesisKeyword_4());
                   
             }
-            // InternalMelange.g:6940:1: ( (lv_body_5_0= ruleXExpression ) )
-            // InternalMelange.g:6941:1: (lv_body_5_0= ruleXExpression )
+            // InternalMelange.g:6959:1: ( (lv_body_5_0= ruleXExpression ) )
+            // InternalMelange.g:6960:1: (lv_body_5_0= ruleXExpression )
             {
-            // InternalMelange.g:6941:1: (lv_body_5_0= ruleXExpression )
-            // InternalMelange.g:6942:3: lv_body_5_0= ruleXExpression
+            // InternalMelange.g:6960:1: (lv_body_5_0= ruleXExpression )
+            // InternalMelange.g:6961:3: lv_body_5_0= ruleXExpression
             {
             if ( state.backtracking==0 ) {
                
@@ -19833,7 +19875,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleXDoWhileExpression"
-    // InternalMelange.g:6966:1: entryRuleXDoWhileExpression returns [EObject current=null] : iv_ruleXDoWhileExpression= ruleXDoWhileExpression EOF ;
+    // InternalMelange.g:6985:1: entryRuleXDoWhileExpression returns [EObject current=null] : iv_ruleXDoWhileExpression= ruleXDoWhileExpression EOF ;
     public final EObject entryRuleXDoWhileExpression() throws RecognitionException {
         EObject current = null;
 
@@ -19841,8 +19883,8 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalMelange.g:6967:2: (iv_ruleXDoWhileExpression= ruleXDoWhileExpression EOF )
-            // InternalMelange.g:6968:2: iv_ruleXDoWhileExpression= ruleXDoWhileExpression EOF
+            // InternalMelange.g:6986:2: (iv_ruleXDoWhileExpression= ruleXDoWhileExpression EOF )
+            // InternalMelange.g:6987:2: iv_ruleXDoWhileExpression= ruleXDoWhileExpression EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getXDoWhileExpressionRule()); 
@@ -19873,7 +19915,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleXDoWhileExpression"
-    // InternalMelange.g:6975:1: ruleXDoWhileExpression returns [EObject current=null] : ( () otherlv_1= 'do' ( (lv_body_2_0= ruleXExpression ) ) otherlv_3= 'while' otherlv_4= '(' ( (lv_predicate_5_0= ruleXExpression ) ) otherlv_6= ')' ) ;
+    // InternalMelange.g:6994:1: ruleXDoWhileExpression returns [EObject current=null] : ( () otherlv_1= 'do' ( (lv_body_2_0= ruleXExpression ) ) otherlv_3= 'while' otherlv_4= '(' ( (lv_predicate_5_0= ruleXExpression ) ) otherlv_6= ')' ) ;
     public final EObject ruleXDoWhileExpression() throws RecognitionException {
         EObject current = null;
 
@@ -19889,14 +19931,14 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // InternalMelange.g:6978:28: ( ( () otherlv_1= 'do' ( (lv_body_2_0= ruleXExpression ) ) otherlv_3= 'while' otherlv_4= '(' ( (lv_predicate_5_0= ruleXExpression ) ) otherlv_6= ')' ) )
-            // InternalMelange.g:6979:1: ( () otherlv_1= 'do' ( (lv_body_2_0= ruleXExpression ) ) otherlv_3= 'while' otherlv_4= '(' ( (lv_predicate_5_0= ruleXExpression ) ) otherlv_6= ')' )
+            // InternalMelange.g:6997:28: ( ( () otherlv_1= 'do' ( (lv_body_2_0= ruleXExpression ) ) otherlv_3= 'while' otherlv_4= '(' ( (lv_predicate_5_0= ruleXExpression ) ) otherlv_6= ')' ) )
+            // InternalMelange.g:6998:1: ( () otherlv_1= 'do' ( (lv_body_2_0= ruleXExpression ) ) otherlv_3= 'while' otherlv_4= '(' ( (lv_predicate_5_0= ruleXExpression ) ) otherlv_6= ')' )
             {
-            // InternalMelange.g:6979:1: ( () otherlv_1= 'do' ( (lv_body_2_0= ruleXExpression ) ) otherlv_3= 'while' otherlv_4= '(' ( (lv_predicate_5_0= ruleXExpression ) ) otherlv_6= ')' )
-            // InternalMelange.g:6979:2: () otherlv_1= 'do' ( (lv_body_2_0= ruleXExpression ) ) otherlv_3= 'while' otherlv_4= '(' ( (lv_predicate_5_0= ruleXExpression ) ) otherlv_6= ')'
+            // InternalMelange.g:6998:1: ( () otherlv_1= 'do' ( (lv_body_2_0= ruleXExpression ) ) otherlv_3= 'while' otherlv_4= '(' ( (lv_predicate_5_0= ruleXExpression ) ) otherlv_6= ')' )
+            // InternalMelange.g:6998:2: () otherlv_1= 'do' ( (lv_body_2_0= ruleXExpression ) ) otherlv_3= 'while' otherlv_4= '(' ( (lv_predicate_5_0= ruleXExpression ) ) otherlv_6= ')'
             {
-            // InternalMelange.g:6979:2: ()
-            // InternalMelange.g:6980:5: 
+            // InternalMelange.g:6998:2: ()
+            // InternalMelange.g:6999:5: 
             {
             if ( state.backtracking==0 ) {
 
@@ -19908,24 +19950,24 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,105,FOLLOW_63); if (state.failed) return current;
+            otherlv_1=(Token)match(input,106,FOLLOW_64); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_1, grammarAccess.getXDoWhileExpressionAccess().getDoKeyword_1());
                   
             }
-            // InternalMelange.g:6989:1: ( (lv_body_2_0= ruleXExpression ) )
-            // InternalMelange.g:6990:1: (lv_body_2_0= ruleXExpression )
+            // InternalMelange.g:7008:1: ( (lv_body_2_0= ruleXExpression ) )
+            // InternalMelange.g:7009:1: (lv_body_2_0= ruleXExpression )
             {
-            // InternalMelange.g:6990:1: (lv_body_2_0= ruleXExpression )
-            // InternalMelange.g:6991:3: lv_body_2_0= ruleXExpression
+            // InternalMelange.g:7009:1: (lv_body_2_0= ruleXExpression )
+            // InternalMelange.g:7010:3: lv_body_2_0= ruleXExpression
             {
             if ( state.backtracking==0 ) {
                
               	        newCompositeNode(grammarAccess.getXDoWhileExpressionAccess().getBodyXExpressionParserRuleCall_2_0()); 
               	    
             }
-            pushFollow(FOLLOW_107);
+            pushFollow(FOLLOW_108);
             lv_body_2_0=ruleXExpression();
 
             state._fsp--;
@@ -19949,23 +19991,23 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_3=(Token)match(input,104,FOLLOW_46); if (state.failed) return current;
+            otherlv_3=(Token)match(input,105,FOLLOW_46); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_3, grammarAccess.getXDoWhileExpressionAccess().getWhileKeyword_3());
                   
             }
-            otherlv_4=(Token)match(input,24,FOLLOW_63); if (state.failed) return current;
+            otherlv_4=(Token)match(input,24,FOLLOW_64); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_4, grammarAccess.getXDoWhileExpressionAccess().getLeftParenthesisKeyword_4());
                   
             }
-            // InternalMelange.g:7015:1: ( (lv_predicate_5_0= ruleXExpression ) )
-            // InternalMelange.g:7016:1: (lv_predicate_5_0= ruleXExpression )
+            // InternalMelange.g:7034:1: ( (lv_predicate_5_0= ruleXExpression ) )
+            // InternalMelange.g:7035:1: (lv_predicate_5_0= ruleXExpression )
             {
-            // InternalMelange.g:7016:1: (lv_predicate_5_0= ruleXExpression )
-            // InternalMelange.g:7017:3: lv_predicate_5_0= ruleXExpression
+            // InternalMelange.g:7035:1: (lv_predicate_5_0= ruleXExpression )
+            // InternalMelange.g:7036:3: lv_predicate_5_0= ruleXExpression
             {
             if ( state.backtracking==0 ) {
                
@@ -20025,7 +20067,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleXBlockExpression"
-    // InternalMelange.g:7045:1: entryRuleXBlockExpression returns [EObject current=null] : iv_ruleXBlockExpression= ruleXBlockExpression EOF ;
+    // InternalMelange.g:7064:1: entryRuleXBlockExpression returns [EObject current=null] : iv_ruleXBlockExpression= ruleXBlockExpression EOF ;
     public final EObject entryRuleXBlockExpression() throws RecognitionException {
         EObject current = null;
 
@@ -20033,8 +20075,8 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalMelange.g:7046:2: (iv_ruleXBlockExpression= ruleXBlockExpression EOF )
-            // InternalMelange.g:7047:2: iv_ruleXBlockExpression= ruleXBlockExpression EOF
+            // InternalMelange.g:7065:2: (iv_ruleXBlockExpression= ruleXBlockExpression EOF )
+            // InternalMelange.g:7066:2: iv_ruleXBlockExpression= ruleXBlockExpression EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getXBlockExpressionRule()); 
@@ -20065,7 +20107,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleXBlockExpression"
-    // InternalMelange.g:7054:1: ruleXBlockExpression returns [EObject current=null] : ( () otherlv_1= '{' ( ( (lv_expressions_2_0= ruleXExpressionOrVarDeclaration ) ) (otherlv_3= ';' )? )* otherlv_4= '}' ) ;
+    // InternalMelange.g:7073:1: ruleXBlockExpression returns [EObject current=null] : ( () otherlv_1= '{' ( ( (lv_expressions_2_0= ruleXExpressionOrVarDeclaration ) ) (otherlv_3= ';' )? )* otherlv_4= '}' ) ;
     public final EObject ruleXBlockExpression() throws RecognitionException {
         EObject current = null;
 
@@ -20078,14 +20120,14 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // InternalMelange.g:7057:28: ( ( () otherlv_1= '{' ( ( (lv_expressions_2_0= ruleXExpressionOrVarDeclaration ) ) (otherlv_3= ';' )? )* otherlv_4= '}' ) )
-            // InternalMelange.g:7058:1: ( () otherlv_1= '{' ( ( (lv_expressions_2_0= ruleXExpressionOrVarDeclaration ) ) (otherlv_3= ';' )? )* otherlv_4= '}' )
+            // InternalMelange.g:7076:28: ( ( () otherlv_1= '{' ( ( (lv_expressions_2_0= ruleXExpressionOrVarDeclaration ) ) (otherlv_3= ';' )? )* otherlv_4= '}' ) )
+            // InternalMelange.g:7077:1: ( () otherlv_1= '{' ( ( (lv_expressions_2_0= ruleXExpressionOrVarDeclaration ) ) (otherlv_3= ';' )? )* otherlv_4= '}' )
             {
-            // InternalMelange.g:7058:1: ( () otherlv_1= '{' ( ( (lv_expressions_2_0= ruleXExpressionOrVarDeclaration ) ) (otherlv_3= ';' )? )* otherlv_4= '}' )
-            // InternalMelange.g:7058:2: () otherlv_1= '{' ( ( (lv_expressions_2_0= ruleXExpressionOrVarDeclaration ) ) (otherlv_3= ';' )? )* otherlv_4= '}'
+            // InternalMelange.g:7077:1: ( () otherlv_1= '{' ( ( (lv_expressions_2_0= ruleXExpressionOrVarDeclaration ) ) (otherlv_3= ';' )? )* otherlv_4= '}' )
+            // InternalMelange.g:7077:2: () otherlv_1= '{' ( ( (lv_expressions_2_0= ruleXExpressionOrVarDeclaration ) ) (otherlv_3= ';' )? )* otherlv_4= '}'
             {
-            // InternalMelange.g:7058:2: ()
-            // InternalMelange.g:7059:5: 
+            // InternalMelange.g:7077:2: ()
+            // InternalMelange.g:7078:5: 
             {
             if ( state.backtracking==0 ) {
 
@@ -20097,39 +20139,39 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,16,FOLLOW_108); if (state.failed) return current;
+            otherlv_1=(Token)match(input,16,FOLLOW_109); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_1, grammarAccess.getXBlockExpressionAccess().getLeftCurlyBracketKeyword_1());
                   
             }
-            // InternalMelange.g:7068:1: ( ( (lv_expressions_2_0= ruleXExpressionOrVarDeclaration ) ) (otherlv_3= ';' )? )*
+            // InternalMelange.g:7087:1: ( ( (lv_expressions_2_0= ruleXExpressionOrVarDeclaration ) ) (otherlv_3= ';' )? )*
             loop129:
             do {
                 int alt129=2;
                 int LA129_0 = input.LA(1);
 
-                if ( ((LA129_0>=RULE_ID && LA129_0<=RULE_DECIMAL)||LA129_0==16||(LA129_0>=23 && LA129_0<=24)||LA129_0==56||LA129_0==62||LA129_0==70||LA129_0==85||LA129_0==96||LA129_0==98||LA129_0==100||(LA129_0>=103 && LA129_0<=120)||LA129_0==122) ) {
+                if ( ((LA129_0>=RULE_ID && LA129_0<=RULE_DECIMAL)||LA129_0==16||(LA129_0>=23 && LA129_0<=24)||LA129_0==56||LA129_0==63||LA129_0==71||LA129_0==86||LA129_0==97||LA129_0==99||LA129_0==101||(LA129_0>=104 && LA129_0<=121)||LA129_0==123) ) {
                     alt129=1;
                 }
 
 
                 switch (alt129) {
             	case 1 :
-            	    // InternalMelange.g:7068:2: ( (lv_expressions_2_0= ruleXExpressionOrVarDeclaration ) ) (otherlv_3= ';' )?
+            	    // InternalMelange.g:7087:2: ( (lv_expressions_2_0= ruleXExpressionOrVarDeclaration ) ) (otherlv_3= ';' )?
             	    {
-            	    // InternalMelange.g:7068:2: ( (lv_expressions_2_0= ruleXExpressionOrVarDeclaration ) )
-            	    // InternalMelange.g:7069:1: (lv_expressions_2_0= ruleXExpressionOrVarDeclaration )
+            	    // InternalMelange.g:7087:2: ( (lv_expressions_2_0= ruleXExpressionOrVarDeclaration ) )
+            	    // InternalMelange.g:7088:1: (lv_expressions_2_0= ruleXExpressionOrVarDeclaration )
             	    {
-            	    // InternalMelange.g:7069:1: (lv_expressions_2_0= ruleXExpressionOrVarDeclaration )
-            	    // InternalMelange.g:7070:3: lv_expressions_2_0= ruleXExpressionOrVarDeclaration
+            	    // InternalMelange.g:7088:1: (lv_expressions_2_0= ruleXExpressionOrVarDeclaration )
+            	    // InternalMelange.g:7089:3: lv_expressions_2_0= ruleXExpressionOrVarDeclaration
             	    {
             	    if ( state.backtracking==0 ) {
             	       
             	      	        newCompositeNode(grammarAccess.getXBlockExpressionAccess().getExpressionsXExpressionOrVarDeclarationParserRuleCall_2_0_0()); 
             	      	    
             	    }
-            	    pushFollow(FOLLOW_109);
+            	    pushFollow(FOLLOW_110);
             	    lv_expressions_2_0=ruleXExpressionOrVarDeclaration();
 
             	    state._fsp--;
@@ -20153,18 +20195,18 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    // InternalMelange.g:7086:2: (otherlv_3= ';' )?
+            	    // InternalMelange.g:7105:2: (otherlv_3= ';' )?
             	    int alt128=2;
             	    int LA128_0 = input.LA(1);
 
-            	    if ( (LA128_0==97) ) {
+            	    if ( (LA128_0==98) ) {
             	        alt128=1;
             	    }
             	    switch (alt128) {
             	        case 1 :
-            	            // InternalMelange.g:7086:4: otherlv_3= ';'
+            	            // InternalMelange.g:7105:4: otherlv_3= ';'
             	            {
-            	            otherlv_3=(Token)match(input,97,FOLLOW_108); if (state.failed) return current;
+            	            otherlv_3=(Token)match(input,98,FOLLOW_109); if (state.failed) return current;
             	            if ( state.backtracking==0 ) {
 
             	                  	newLeafNode(otherlv_3, grammarAccess.getXBlockExpressionAccess().getSemicolonKeyword_2_1());
@@ -20214,7 +20256,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleXExpressionOrVarDeclaration"
-    // InternalMelange.g:7102:1: entryRuleXExpressionOrVarDeclaration returns [EObject current=null] : iv_ruleXExpressionOrVarDeclaration= ruleXExpressionOrVarDeclaration EOF ;
+    // InternalMelange.g:7121:1: entryRuleXExpressionOrVarDeclaration returns [EObject current=null] : iv_ruleXExpressionOrVarDeclaration= ruleXExpressionOrVarDeclaration EOF ;
     public final EObject entryRuleXExpressionOrVarDeclaration() throws RecognitionException {
         EObject current = null;
 
@@ -20222,8 +20264,8 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalMelange.g:7103:2: (iv_ruleXExpressionOrVarDeclaration= ruleXExpressionOrVarDeclaration EOF )
-            // InternalMelange.g:7104:2: iv_ruleXExpressionOrVarDeclaration= ruleXExpressionOrVarDeclaration EOF
+            // InternalMelange.g:7122:2: (iv_ruleXExpressionOrVarDeclaration= ruleXExpressionOrVarDeclaration EOF )
+            // InternalMelange.g:7123:2: iv_ruleXExpressionOrVarDeclaration= ruleXExpressionOrVarDeclaration EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getXExpressionOrVarDeclarationRule()); 
@@ -20254,7 +20296,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleXExpressionOrVarDeclaration"
-    // InternalMelange.g:7111:1: ruleXExpressionOrVarDeclaration returns [EObject current=null] : (this_XVariableDeclaration_0= ruleXVariableDeclaration | this_XExpression_1= ruleXExpression ) ;
+    // InternalMelange.g:7130:1: ruleXExpressionOrVarDeclaration returns [EObject current=null] : (this_XVariableDeclaration_0= ruleXVariableDeclaration | this_XExpression_1= ruleXExpression ) ;
     public final EObject ruleXExpressionOrVarDeclaration() throws RecognitionException {
         EObject current = null;
 
@@ -20266,17 +20308,17 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // InternalMelange.g:7114:28: ( (this_XVariableDeclaration_0= ruleXVariableDeclaration | this_XExpression_1= ruleXExpression ) )
-            // InternalMelange.g:7115:1: (this_XVariableDeclaration_0= ruleXVariableDeclaration | this_XExpression_1= ruleXExpression )
+            // InternalMelange.g:7133:28: ( (this_XVariableDeclaration_0= ruleXVariableDeclaration | this_XExpression_1= ruleXExpression ) )
+            // InternalMelange.g:7134:1: (this_XVariableDeclaration_0= ruleXVariableDeclaration | this_XExpression_1= ruleXExpression )
             {
-            // InternalMelange.g:7115:1: (this_XVariableDeclaration_0= ruleXVariableDeclaration | this_XExpression_1= ruleXExpression )
+            // InternalMelange.g:7134:1: (this_XVariableDeclaration_0= ruleXVariableDeclaration | this_XExpression_1= ruleXExpression )
             int alt130=2;
             int LA130_0 = input.LA(1);
 
-            if ( ((LA130_0>=106 && LA130_0<=107)) ) {
+            if ( ((LA130_0>=107 && LA130_0<=108)) ) {
                 alt130=1;
             }
-            else if ( ((LA130_0>=RULE_ID && LA130_0<=RULE_DECIMAL)||LA130_0==16||(LA130_0>=23 && LA130_0<=24)||LA130_0==56||LA130_0==62||LA130_0==70||LA130_0==85||LA130_0==96||LA130_0==98||LA130_0==100||(LA130_0>=103 && LA130_0<=105)||(LA130_0>=108 && LA130_0<=120)||LA130_0==122) ) {
+            else if ( ((LA130_0>=RULE_ID && LA130_0<=RULE_DECIMAL)||LA130_0==16||(LA130_0>=23 && LA130_0<=24)||LA130_0==56||LA130_0==63||LA130_0==71||LA130_0==86||LA130_0==97||LA130_0==99||LA130_0==101||(LA130_0>=104 && LA130_0<=106)||(LA130_0>=109 && LA130_0<=121)||LA130_0==123) ) {
                 alt130=2;
             }
             else {
@@ -20288,7 +20330,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
             }
             switch (alt130) {
                 case 1 :
-                    // InternalMelange.g:7116:5: this_XVariableDeclaration_0= ruleXVariableDeclaration
+                    // InternalMelange.g:7135:5: this_XVariableDeclaration_0= ruleXVariableDeclaration
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -20310,7 +20352,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalMelange.g:7126:5: this_XExpression_1= ruleXExpression
+                    // InternalMelange.g:7145:5: this_XExpression_1= ruleXExpression
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -20354,7 +20396,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleXVariableDeclaration"
-    // InternalMelange.g:7142:1: entryRuleXVariableDeclaration returns [EObject current=null] : iv_ruleXVariableDeclaration= ruleXVariableDeclaration EOF ;
+    // InternalMelange.g:7161:1: entryRuleXVariableDeclaration returns [EObject current=null] : iv_ruleXVariableDeclaration= ruleXVariableDeclaration EOF ;
     public final EObject entryRuleXVariableDeclaration() throws RecognitionException {
         EObject current = null;
 
@@ -20362,8 +20404,8 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalMelange.g:7143:2: (iv_ruleXVariableDeclaration= ruleXVariableDeclaration EOF )
-            // InternalMelange.g:7144:2: iv_ruleXVariableDeclaration= ruleXVariableDeclaration EOF
+            // InternalMelange.g:7162:2: (iv_ruleXVariableDeclaration= ruleXVariableDeclaration EOF )
+            // InternalMelange.g:7163:2: iv_ruleXVariableDeclaration= ruleXVariableDeclaration EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getXVariableDeclarationRule()); 
@@ -20394,7 +20436,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleXVariableDeclaration"
-    // InternalMelange.g:7151:1: ruleXVariableDeclaration returns [EObject current=null] : ( () ( ( (lv_writeable_1_0= 'var' ) ) | otherlv_2= 'val' ) ( ( ( ( ( ( ruleJvmTypeReference ) ) ( ( ruleValidID ) ) ) )=> ( ( (lv_type_3_0= ruleJvmTypeReference ) ) ( (lv_name_4_0= ruleValidID ) ) ) ) | ( (lv_name_5_0= ruleValidID ) ) ) (otherlv_6= '=' ( (lv_right_7_0= ruleXExpression ) ) )? ) ;
+    // InternalMelange.g:7170:1: ruleXVariableDeclaration returns [EObject current=null] : ( () ( ( (lv_writeable_1_0= 'var' ) ) | otherlv_2= 'val' ) ( ( ( ( ( ( ruleJvmTypeReference ) ) ( ( ruleValidID ) ) ) )=> ( ( (lv_type_3_0= ruleJvmTypeReference ) ) ( (lv_name_4_0= ruleValidID ) ) ) ) | ( (lv_name_5_0= ruleValidID ) ) ) (otherlv_6= '=' ( (lv_right_7_0= ruleXExpression ) ) )? ) ;
     public final EObject ruleXVariableDeclaration() throws RecognitionException {
         EObject current = null;
 
@@ -20413,14 +20455,14 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // InternalMelange.g:7154:28: ( ( () ( ( (lv_writeable_1_0= 'var' ) ) | otherlv_2= 'val' ) ( ( ( ( ( ( ruleJvmTypeReference ) ) ( ( ruleValidID ) ) ) )=> ( ( (lv_type_3_0= ruleJvmTypeReference ) ) ( (lv_name_4_0= ruleValidID ) ) ) ) | ( (lv_name_5_0= ruleValidID ) ) ) (otherlv_6= '=' ( (lv_right_7_0= ruleXExpression ) ) )? ) )
-            // InternalMelange.g:7155:1: ( () ( ( (lv_writeable_1_0= 'var' ) ) | otherlv_2= 'val' ) ( ( ( ( ( ( ruleJvmTypeReference ) ) ( ( ruleValidID ) ) ) )=> ( ( (lv_type_3_0= ruleJvmTypeReference ) ) ( (lv_name_4_0= ruleValidID ) ) ) ) | ( (lv_name_5_0= ruleValidID ) ) ) (otherlv_6= '=' ( (lv_right_7_0= ruleXExpression ) ) )? )
+            // InternalMelange.g:7173:28: ( ( () ( ( (lv_writeable_1_0= 'var' ) ) | otherlv_2= 'val' ) ( ( ( ( ( ( ruleJvmTypeReference ) ) ( ( ruleValidID ) ) ) )=> ( ( (lv_type_3_0= ruleJvmTypeReference ) ) ( (lv_name_4_0= ruleValidID ) ) ) ) | ( (lv_name_5_0= ruleValidID ) ) ) (otherlv_6= '=' ( (lv_right_7_0= ruleXExpression ) ) )? ) )
+            // InternalMelange.g:7174:1: ( () ( ( (lv_writeable_1_0= 'var' ) ) | otherlv_2= 'val' ) ( ( ( ( ( ( ruleJvmTypeReference ) ) ( ( ruleValidID ) ) ) )=> ( ( (lv_type_3_0= ruleJvmTypeReference ) ) ( (lv_name_4_0= ruleValidID ) ) ) ) | ( (lv_name_5_0= ruleValidID ) ) ) (otherlv_6= '=' ( (lv_right_7_0= ruleXExpression ) ) )? )
             {
-            // InternalMelange.g:7155:1: ( () ( ( (lv_writeable_1_0= 'var' ) ) | otherlv_2= 'val' ) ( ( ( ( ( ( ruleJvmTypeReference ) ) ( ( ruleValidID ) ) ) )=> ( ( (lv_type_3_0= ruleJvmTypeReference ) ) ( (lv_name_4_0= ruleValidID ) ) ) ) | ( (lv_name_5_0= ruleValidID ) ) ) (otherlv_6= '=' ( (lv_right_7_0= ruleXExpression ) ) )? )
-            // InternalMelange.g:7155:2: () ( ( (lv_writeable_1_0= 'var' ) ) | otherlv_2= 'val' ) ( ( ( ( ( ( ruleJvmTypeReference ) ) ( ( ruleValidID ) ) ) )=> ( ( (lv_type_3_0= ruleJvmTypeReference ) ) ( (lv_name_4_0= ruleValidID ) ) ) ) | ( (lv_name_5_0= ruleValidID ) ) ) (otherlv_6= '=' ( (lv_right_7_0= ruleXExpression ) ) )?
+            // InternalMelange.g:7174:1: ( () ( ( (lv_writeable_1_0= 'var' ) ) | otherlv_2= 'val' ) ( ( ( ( ( ( ruleJvmTypeReference ) ) ( ( ruleValidID ) ) ) )=> ( ( (lv_type_3_0= ruleJvmTypeReference ) ) ( (lv_name_4_0= ruleValidID ) ) ) ) | ( (lv_name_5_0= ruleValidID ) ) ) (otherlv_6= '=' ( (lv_right_7_0= ruleXExpression ) ) )? )
+            // InternalMelange.g:7174:2: () ( ( (lv_writeable_1_0= 'var' ) ) | otherlv_2= 'val' ) ( ( ( ( ( ( ruleJvmTypeReference ) ) ( ( ruleValidID ) ) ) )=> ( ( (lv_type_3_0= ruleJvmTypeReference ) ) ( (lv_name_4_0= ruleValidID ) ) ) ) | ( (lv_name_5_0= ruleValidID ) ) ) (otherlv_6= '=' ( (lv_right_7_0= ruleXExpression ) ) )?
             {
-            // InternalMelange.g:7155:2: ()
-            // InternalMelange.g:7156:5: 
+            // InternalMelange.g:7174:2: ()
+            // InternalMelange.g:7175:5: 
             {
             if ( state.backtracking==0 ) {
 
@@ -20432,14 +20474,14 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalMelange.g:7161:2: ( ( (lv_writeable_1_0= 'var' ) ) | otherlv_2= 'val' )
+            // InternalMelange.g:7180:2: ( ( (lv_writeable_1_0= 'var' ) ) | otherlv_2= 'val' )
             int alt131=2;
             int LA131_0 = input.LA(1);
 
-            if ( (LA131_0==106) ) {
+            if ( (LA131_0==107) ) {
                 alt131=1;
             }
-            else if ( (LA131_0==107) ) {
+            else if ( (LA131_0==108) ) {
                 alt131=2;
             }
             else {
@@ -20451,15 +20493,15 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
             }
             switch (alt131) {
                 case 1 :
-                    // InternalMelange.g:7161:3: ( (lv_writeable_1_0= 'var' ) )
+                    // InternalMelange.g:7180:3: ( (lv_writeable_1_0= 'var' ) )
                     {
-                    // InternalMelange.g:7161:3: ( (lv_writeable_1_0= 'var' ) )
-                    // InternalMelange.g:7162:1: (lv_writeable_1_0= 'var' )
+                    // InternalMelange.g:7180:3: ( (lv_writeable_1_0= 'var' ) )
+                    // InternalMelange.g:7181:1: (lv_writeable_1_0= 'var' )
                     {
-                    // InternalMelange.g:7162:1: (lv_writeable_1_0= 'var' )
-                    // InternalMelange.g:7163:3: lv_writeable_1_0= 'var'
+                    // InternalMelange.g:7181:1: (lv_writeable_1_0= 'var' )
+                    // InternalMelange.g:7182:3: lv_writeable_1_0= 'var'
                     {
-                    lv_writeable_1_0=(Token)match(input,106,FOLLOW_33); if (state.failed) return current;
+                    lv_writeable_1_0=(Token)match(input,107,FOLLOW_33); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               newLeafNode(lv_writeable_1_0, grammarAccess.getXVariableDeclarationAccess().getWriteableVarKeyword_1_0_0());
@@ -20483,9 +20525,9 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalMelange.g:7177:7: otherlv_2= 'val'
+                    // InternalMelange.g:7196:7: otherlv_2= 'val'
                     {
-                    otherlv_2=(Token)match(input,107,FOLLOW_33); if (state.failed) return current;
+                    otherlv_2=(Token)match(input,108,FOLLOW_33); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_2, grammarAccess.getXVariableDeclarationAccess().getValKeyword_1_1());
@@ -20497,7 +20539,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalMelange.g:7181:2: ( ( ( ( ( ( ruleJvmTypeReference ) ) ( ( ruleValidID ) ) ) )=> ( ( (lv_type_3_0= ruleJvmTypeReference ) ) ( (lv_name_4_0= ruleValidID ) ) ) ) | ( (lv_name_5_0= ruleValidID ) ) )
+            // InternalMelange.g:7200:2: ( ( ( ( ( ( ruleJvmTypeReference ) ) ( ( ruleValidID ) ) ) )=> ( ( (lv_type_3_0= ruleJvmTypeReference ) ) ( (lv_name_4_0= ruleValidID ) ) ) ) | ( (lv_name_5_0= ruleValidID ) ) )
             int alt132=2;
             int LA132_0 = input.LA(1);
 
@@ -20521,7 +20563,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
             else if ( (LA132_0==24) && (synpred35_InternalMelange())) {
                 alt132=1;
             }
-            else if ( (LA132_0==82) && (synpred35_InternalMelange())) {
+            else if ( (LA132_0==83) && (synpred35_InternalMelange())) {
                 alt132=1;
             }
             else {
@@ -20533,19 +20575,19 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
             }
             switch (alt132) {
                 case 1 :
-                    // InternalMelange.g:7181:3: ( ( ( ( ( ruleJvmTypeReference ) ) ( ( ruleValidID ) ) ) )=> ( ( (lv_type_3_0= ruleJvmTypeReference ) ) ( (lv_name_4_0= ruleValidID ) ) ) )
+                    // InternalMelange.g:7200:3: ( ( ( ( ( ruleJvmTypeReference ) ) ( ( ruleValidID ) ) ) )=> ( ( (lv_type_3_0= ruleJvmTypeReference ) ) ( (lv_name_4_0= ruleValidID ) ) ) )
                     {
-                    // InternalMelange.g:7181:3: ( ( ( ( ( ruleJvmTypeReference ) ) ( ( ruleValidID ) ) ) )=> ( ( (lv_type_3_0= ruleJvmTypeReference ) ) ( (lv_name_4_0= ruleValidID ) ) ) )
-                    // InternalMelange.g:7181:4: ( ( ( ( ruleJvmTypeReference ) ) ( ( ruleValidID ) ) ) )=> ( ( (lv_type_3_0= ruleJvmTypeReference ) ) ( (lv_name_4_0= ruleValidID ) ) )
+                    // InternalMelange.g:7200:3: ( ( ( ( ( ruleJvmTypeReference ) ) ( ( ruleValidID ) ) ) )=> ( ( (lv_type_3_0= ruleJvmTypeReference ) ) ( (lv_name_4_0= ruleValidID ) ) ) )
+                    // InternalMelange.g:7200:4: ( ( ( ( ruleJvmTypeReference ) ) ( ( ruleValidID ) ) ) )=> ( ( (lv_type_3_0= ruleJvmTypeReference ) ) ( (lv_name_4_0= ruleValidID ) ) )
                     {
-                    // InternalMelange.g:7189:6: ( ( (lv_type_3_0= ruleJvmTypeReference ) ) ( (lv_name_4_0= ruleValidID ) ) )
-                    // InternalMelange.g:7189:7: ( (lv_type_3_0= ruleJvmTypeReference ) ) ( (lv_name_4_0= ruleValidID ) )
+                    // InternalMelange.g:7208:6: ( ( (lv_type_3_0= ruleJvmTypeReference ) ) ( (lv_name_4_0= ruleValidID ) ) )
+                    // InternalMelange.g:7208:7: ( (lv_type_3_0= ruleJvmTypeReference ) ) ( (lv_name_4_0= ruleValidID ) )
                     {
-                    // InternalMelange.g:7189:7: ( (lv_type_3_0= ruleJvmTypeReference ) )
-                    // InternalMelange.g:7190:1: (lv_type_3_0= ruleJvmTypeReference )
+                    // InternalMelange.g:7208:7: ( (lv_type_3_0= ruleJvmTypeReference ) )
+                    // InternalMelange.g:7209:1: (lv_type_3_0= ruleJvmTypeReference )
                     {
-                    // InternalMelange.g:7190:1: (lv_type_3_0= ruleJvmTypeReference )
-                    // InternalMelange.g:7191:3: lv_type_3_0= ruleJvmTypeReference
+                    // InternalMelange.g:7209:1: (lv_type_3_0= ruleJvmTypeReference )
+                    // InternalMelange.g:7210:3: lv_type_3_0= ruleJvmTypeReference
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -20576,18 +20618,18 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // InternalMelange.g:7207:2: ( (lv_name_4_0= ruleValidID ) )
-                    // InternalMelange.g:7208:1: (lv_name_4_0= ruleValidID )
+                    // InternalMelange.g:7226:2: ( (lv_name_4_0= ruleValidID ) )
+                    // InternalMelange.g:7227:1: (lv_name_4_0= ruleValidID )
                     {
-                    // InternalMelange.g:7208:1: (lv_name_4_0= ruleValidID )
-                    // InternalMelange.g:7209:3: lv_name_4_0= ruleValidID
+                    // InternalMelange.g:7227:1: (lv_name_4_0= ruleValidID )
+                    // InternalMelange.g:7228:3: lv_name_4_0= ruleValidID
                     {
                     if ( state.backtracking==0 ) {
                        
                       	        newCompositeNode(grammarAccess.getXVariableDeclarationAccess().getNameValidIDParserRuleCall_2_0_0_1_0()); 
                       	    
                     }
-                    pushFollow(FOLLOW_110);
+                    pushFollow(FOLLOW_111);
                     lv_name_4_0=ruleValidID();
 
                     state._fsp--;
@@ -20621,20 +20663,20 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalMelange.g:7226:6: ( (lv_name_5_0= ruleValidID ) )
+                    // InternalMelange.g:7245:6: ( (lv_name_5_0= ruleValidID ) )
                     {
-                    // InternalMelange.g:7226:6: ( (lv_name_5_0= ruleValidID ) )
-                    // InternalMelange.g:7227:1: (lv_name_5_0= ruleValidID )
+                    // InternalMelange.g:7245:6: ( (lv_name_5_0= ruleValidID ) )
+                    // InternalMelange.g:7246:1: (lv_name_5_0= ruleValidID )
                     {
-                    // InternalMelange.g:7227:1: (lv_name_5_0= ruleValidID )
-                    // InternalMelange.g:7228:3: lv_name_5_0= ruleValidID
+                    // InternalMelange.g:7246:1: (lv_name_5_0= ruleValidID )
+                    // InternalMelange.g:7247:3: lv_name_5_0= ruleValidID
                     {
                     if ( state.backtracking==0 ) {
                        
                       	        newCompositeNode(grammarAccess.getXVariableDeclarationAccess().getNameValidIDParserRuleCall_2_1_0()); 
                       	    
                     }
-                    pushFollow(FOLLOW_110);
+                    pushFollow(FOLLOW_111);
                     lv_name_5_0=ruleValidID();
 
                     state._fsp--;
@@ -20664,7 +20706,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalMelange.g:7244:3: (otherlv_6= '=' ( (lv_right_7_0= ruleXExpression ) ) )?
+            // InternalMelange.g:7263:3: (otherlv_6= '=' ( (lv_right_7_0= ruleXExpression ) ) )?
             int alt133=2;
             int LA133_0 = input.LA(1);
 
@@ -20673,19 +20715,19 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
             }
             switch (alt133) {
                 case 1 :
-                    // InternalMelange.g:7244:5: otherlv_6= '=' ( (lv_right_7_0= ruleXExpression ) )
+                    // InternalMelange.g:7263:5: otherlv_6= '=' ( (lv_right_7_0= ruleXExpression ) )
                     {
-                    otherlv_6=(Token)match(input,18,FOLLOW_63); if (state.failed) return current;
+                    otherlv_6=(Token)match(input,18,FOLLOW_64); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_6, grammarAccess.getXVariableDeclarationAccess().getEqualsSignKeyword_3_0());
                           
                     }
-                    // InternalMelange.g:7248:1: ( (lv_right_7_0= ruleXExpression ) )
-                    // InternalMelange.g:7249:1: (lv_right_7_0= ruleXExpression )
+                    // InternalMelange.g:7267:1: ( (lv_right_7_0= ruleXExpression ) )
+                    // InternalMelange.g:7268:1: (lv_right_7_0= ruleXExpression )
                     {
-                    // InternalMelange.g:7249:1: (lv_right_7_0= ruleXExpression )
-                    // InternalMelange.g:7250:3: lv_right_7_0= ruleXExpression
+                    // InternalMelange.g:7268:1: (lv_right_7_0= ruleXExpression )
+                    // InternalMelange.g:7269:3: lv_right_7_0= ruleXExpression
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -20745,7 +20787,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleJvmFormalParameter"
-    // InternalMelange.g:7274:1: entryRuleJvmFormalParameter returns [EObject current=null] : iv_ruleJvmFormalParameter= ruleJvmFormalParameter EOF ;
+    // InternalMelange.g:7293:1: entryRuleJvmFormalParameter returns [EObject current=null] : iv_ruleJvmFormalParameter= ruleJvmFormalParameter EOF ;
     public final EObject entryRuleJvmFormalParameter() throws RecognitionException {
         EObject current = null;
 
@@ -20753,8 +20795,8 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalMelange.g:7275:2: (iv_ruleJvmFormalParameter= ruleJvmFormalParameter EOF )
-            // InternalMelange.g:7276:2: iv_ruleJvmFormalParameter= ruleJvmFormalParameter EOF
+            // InternalMelange.g:7294:2: (iv_ruleJvmFormalParameter= ruleJvmFormalParameter EOF )
+            // InternalMelange.g:7295:2: iv_ruleJvmFormalParameter= ruleJvmFormalParameter EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getJvmFormalParameterRule()); 
@@ -20785,7 +20827,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleJvmFormalParameter"
-    // InternalMelange.g:7283:1: ruleJvmFormalParameter returns [EObject current=null] : ( ( (lv_parameterType_0_0= ruleJvmTypeReference ) )? ( (lv_name_1_0= ruleValidID ) ) ) ;
+    // InternalMelange.g:7302:1: ruleJvmFormalParameter returns [EObject current=null] : ( ( (lv_parameterType_0_0= ruleJvmTypeReference ) )? ( (lv_name_1_0= ruleValidID ) ) ) ;
     public final EObject ruleJvmFormalParameter() throws RecognitionException {
         EObject current = null;
 
@@ -20797,32 +20839,32 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // InternalMelange.g:7286:28: ( ( ( (lv_parameterType_0_0= ruleJvmTypeReference ) )? ( (lv_name_1_0= ruleValidID ) ) ) )
-            // InternalMelange.g:7287:1: ( ( (lv_parameterType_0_0= ruleJvmTypeReference ) )? ( (lv_name_1_0= ruleValidID ) ) )
+            // InternalMelange.g:7305:28: ( ( ( (lv_parameterType_0_0= ruleJvmTypeReference ) )? ( (lv_name_1_0= ruleValidID ) ) ) )
+            // InternalMelange.g:7306:1: ( ( (lv_parameterType_0_0= ruleJvmTypeReference ) )? ( (lv_name_1_0= ruleValidID ) ) )
             {
-            // InternalMelange.g:7287:1: ( ( (lv_parameterType_0_0= ruleJvmTypeReference ) )? ( (lv_name_1_0= ruleValidID ) ) )
-            // InternalMelange.g:7287:2: ( (lv_parameterType_0_0= ruleJvmTypeReference ) )? ( (lv_name_1_0= ruleValidID ) )
+            // InternalMelange.g:7306:1: ( ( (lv_parameterType_0_0= ruleJvmTypeReference ) )? ( (lv_name_1_0= ruleValidID ) ) )
+            // InternalMelange.g:7306:2: ( (lv_parameterType_0_0= ruleJvmTypeReference ) )? ( (lv_name_1_0= ruleValidID ) )
             {
-            // InternalMelange.g:7287:2: ( (lv_parameterType_0_0= ruleJvmTypeReference ) )?
+            // InternalMelange.g:7306:2: ( (lv_parameterType_0_0= ruleJvmTypeReference ) )?
             int alt134=2;
             int LA134_0 = input.LA(1);
 
             if ( (LA134_0==RULE_ID) ) {
                 int LA134_1 = input.LA(2);
 
-                if ( (LA134_1==RULE_ID||LA134_1==62||LA134_1==70||LA134_1==93) ) {
+                if ( (LA134_1==RULE_ID||LA134_1==63||LA134_1==71||LA134_1==94) ) {
                     alt134=1;
                 }
             }
-            else if ( (LA134_0==24||LA134_0==82) ) {
+            else if ( (LA134_0==24||LA134_0==83) ) {
                 alt134=1;
             }
             switch (alt134) {
                 case 1 :
-                    // InternalMelange.g:7288:1: (lv_parameterType_0_0= ruleJvmTypeReference )
+                    // InternalMelange.g:7307:1: (lv_parameterType_0_0= ruleJvmTypeReference )
                     {
-                    // InternalMelange.g:7288:1: (lv_parameterType_0_0= ruleJvmTypeReference )
-                    // InternalMelange.g:7289:3: lv_parameterType_0_0= ruleJvmTypeReference
+                    // InternalMelange.g:7307:1: (lv_parameterType_0_0= ruleJvmTypeReference )
+                    // InternalMelange.g:7308:3: lv_parameterType_0_0= ruleJvmTypeReference
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -20856,11 +20898,11 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalMelange.g:7305:3: ( (lv_name_1_0= ruleValidID ) )
-            // InternalMelange.g:7306:1: (lv_name_1_0= ruleValidID )
+            // InternalMelange.g:7324:3: ( (lv_name_1_0= ruleValidID ) )
+            // InternalMelange.g:7325:1: (lv_name_1_0= ruleValidID )
             {
-            // InternalMelange.g:7306:1: (lv_name_1_0= ruleValidID )
-            // InternalMelange.g:7307:3: lv_name_1_0= ruleValidID
+            // InternalMelange.g:7325:1: (lv_name_1_0= ruleValidID )
+            // InternalMelange.g:7326:3: lv_name_1_0= ruleValidID
             {
             if ( state.backtracking==0 ) {
                
@@ -20914,7 +20956,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleFullJvmFormalParameter"
-    // InternalMelange.g:7331:1: entryRuleFullJvmFormalParameter returns [EObject current=null] : iv_ruleFullJvmFormalParameter= ruleFullJvmFormalParameter EOF ;
+    // InternalMelange.g:7350:1: entryRuleFullJvmFormalParameter returns [EObject current=null] : iv_ruleFullJvmFormalParameter= ruleFullJvmFormalParameter EOF ;
     public final EObject entryRuleFullJvmFormalParameter() throws RecognitionException {
         EObject current = null;
 
@@ -20922,8 +20964,8 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalMelange.g:7332:2: (iv_ruleFullJvmFormalParameter= ruleFullJvmFormalParameter EOF )
-            // InternalMelange.g:7333:2: iv_ruleFullJvmFormalParameter= ruleFullJvmFormalParameter EOF
+            // InternalMelange.g:7351:2: (iv_ruleFullJvmFormalParameter= ruleFullJvmFormalParameter EOF )
+            // InternalMelange.g:7352:2: iv_ruleFullJvmFormalParameter= ruleFullJvmFormalParameter EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getFullJvmFormalParameterRule()); 
@@ -20954,7 +20996,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleFullJvmFormalParameter"
-    // InternalMelange.g:7340:1: ruleFullJvmFormalParameter returns [EObject current=null] : ( ( (lv_parameterType_0_0= ruleJvmTypeReference ) ) ( (lv_name_1_0= ruleValidID ) ) ) ;
+    // InternalMelange.g:7359:1: ruleFullJvmFormalParameter returns [EObject current=null] : ( ( (lv_parameterType_0_0= ruleJvmTypeReference ) ) ( (lv_name_1_0= ruleValidID ) ) ) ;
     public final EObject ruleFullJvmFormalParameter() throws RecognitionException {
         EObject current = null;
 
@@ -20966,17 +21008,17 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // InternalMelange.g:7343:28: ( ( ( (lv_parameterType_0_0= ruleJvmTypeReference ) ) ( (lv_name_1_0= ruleValidID ) ) ) )
-            // InternalMelange.g:7344:1: ( ( (lv_parameterType_0_0= ruleJvmTypeReference ) ) ( (lv_name_1_0= ruleValidID ) ) )
+            // InternalMelange.g:7362:28: ( ( ( (lv_parameterType_0_0= ruleJvmTypeReference ) ) ( (lv_name_1_0= ruleValidID ) ) ) )
+            // InternalMelange.g:7363:1: ( ( (lv_parameterType_0_0= ruleJvmTypeReference ) ) ( (lv_name_1_0= ruleValidID ) ) )
             {
-            // InternalMelange.g:7344:1: ( ( (lv_parameterType_0_0= ruleJvmTypeReference ) ) ( (lv_name_1_0= ruleValidID ) ) )
-            // InternalMelange.g:7344:2: ( (lv_parameterType_0_0= ruleJvmTypeReference ) ) ( (lv_name_1_0= ruleValidID ) )
+            // InternalMelange.g:7363:1: ( ( (lv_parameterType_0_0= ruleJvmTypeReference ) ) ( (lv_name_1_0= ruleValidID ) ) )
+            // InternalMelange.g:7363:2: ( (lv_parameterType_0_0= ruleJvmTypeReference ) ) ( (lv_name_1_0= ruleValidID ) )
             {
-            // InternalMelange.g:7344:2: ( (lv_parameterType_0_0= ruleJvmTypeReference ) )
-            // InternalMelange.g:7345:1: (lv_parameterType_0_0= ruleJvmTypeReference )
+            // InternalMelange.g:7363:2: ( (lv_parameterType_0_0= ruleJvmTypeReference ) )
+            // InternalMelange.g:7364:1: (lv_parameterType_0_0= ruleJvmTypeReference )
             {
-            // InternalMelange.g:7345:1: (lv_parameterType_0_0= ruleJvmTypeReference )
-            // InternalMelange.g:7346:3: lv_parameterType_0_0= ruleJvmTypeReference
+            // InternalMelange.g:7364:1: (lv_parameterType_0_0= ruleJvmTypeReference )
+            // InternalMelange.g:7365:3: lv_parameterType_0_0= ruleJvmTypeReference
             {
             if ( state.backtracking==0 ) {
                
@@ -21007,11 +21049,11 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalMelange.g:7362:2: ( (lv_name_1_0= ruleValidID ) )
-            // InternalMelange.g:7363:1: (lv_name_1_0= ruleValidID )
+            // InternalMelange.g:7381:2: ( (lv_name_1_0= ruleValidID ) )
+            // InternalMelange.g:7382:1: (lv_name_1_0= ruleValidID )
             {
-            // InternalMelange.g:7363:1: (lv_name_1_0= ruleValidID )
-            // InternalMelange.g:7364:3: lv_name_1_0= ruleValidID
+            // InternalMelange.g:7382:1: (lv_name_1_0= ruleValidID )
+            // InternalMelange.g:7383:3: lv_name_1_0= ruleValidID
             {
             if ( state.backtracking==0 ) {
                
@@ -21065,7 +21107,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleXFeatureCall"
-    // InternalMelange.g:7388:1: entryRuleXFeatureCall returns [EObject current=null] : iv_ruleXFeatureCall= ruleXFeatureCall EOF ;
+    // InternalMelange.g:7407:1: entryRuleXFeatureCall returns [EObject current=null] : iv_ruleXFeatureCall= ruleXFeatureCall EOF ;
     public final EObject entryRuleXFeatureCall() throws RecognitionException {
         EObject current = null;
 
@@ -21073,8 +21115,8 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalMelange.g:7389:2: (iv_ruleXFeatureCall= ruleXFeatureCall EOF )
-            // InternalMelange.g:7390:2: iv_ruleXFeatureCall= ruleXFeatureCall EOF
+            // InternalMelange.g:7408:2: (iv_ruleXFeatureCall= ruleXFeatureCall EOF )
+            // InternalMelange.g:7409:2: iv_ruleXFeatureCall= ruleXFeatureCall EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getXFeatureCallRule()); 
@@ -21105,7 +21147,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleXFeatureCall"
-    // InternalMelange.g:7397:1: ruleXFeatureCall returns [EObject current=null] : ( () (otherlv_1= '<' ( (lv_typeArguments_2_0= ruleJvmArgumentTypeReference ) ) (otherlv_3= ',' ( (lv_typeArguments_4_0= ruleJvmArgumentTypeReference ) ) )* otherlv_5= '>' )? ( ( ruleIdOrSuper ) ) ( ( ( ( '(' ) )=> (lv_explicitOperationCall_7_0= '(' ) ) ( ( ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> (lv_featureCallArguments_8_0= ruleXShortClosure ) ) | ( ( (lv_featureCallArguments_9_0= ruleXExpression ) ) (otherlv_10= ',' ( (lv_featureCallArguments_11_0= ruleXExpression ) ) )* ) )? otherlv_12= ')' )? ( ( ( () '[' ) )=> (lv_featureCallArguments_13_0= ruleXClosure ) )? ) ;
+    // InternalMelange.g:7416:1: ruleXFeatureCall returns [EObject current=null] : ( () (otherlv_1= '<' ( (lv_typeArguments_2_0= ruleJvmArgumentTypeReference ) ) (otherlv_3= ',' ( (lv_typeArguments_4_0= ruleJvmArgumentTypeReference ) ) )* otherlv_5= '>' )? ( ( ruleIdOrSuper ) ) ( ( ( ( '(' ) )=> (lv_explicitOperationCall_7_0= '(' ) ) ( ( ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> (lv_featureCallArguments_8_0= ruleXShortClosure ) ) | ( ( (lv_featureCallArguments_9_0= ruleXExpression ) ) (otherlv_10= ',' ( (lv_featureCallArguments_11_0= ruleXExpression ) ) )* ) )? otherlv_12= ')' )? ( ( ( () '[' ) )=> (lv_featureCallArguments_13_0= ruleXClosure ) )? ) ;
     public final EObject ruleXFeatureCall() throws RecognitionException {
         EObject current = null;
 
@@ -21131,14 +21173,14 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // InternalMelange.g:7400:28: ( ( () (otherlv_1= '<' ( (lv_typeArguments_2_0= ruleJvmArgumentTypeReference ) ) (otherlv_3= ',' ( (lv_typeArguments_4_0= ruleJvmArgumentTypeReference ) ) )* otherlv_5= '>' )? ( ( ruleIdOrSuper ) ) ( ( ( ( '(' ) )=> (lv_explicitOperationCall_7_0= '(' ) ) ( ( ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> (lv_featureCallArguments_8_0= ruleXShortClosure ) ) | ( ( (lv_featureCallArguments_9_0= ruleXExpression ) ) (otherlv_10= ',' ( (lv_featureCallArguments_11_0= ruleXExpression ) ) )* ) )? otherlv_12= ')' )? ( ( ( () '[' ) )=> (lv_featureCallArguments_13_0= ruleXClosure ) )? ) )
-            // InternalMelange.g:7401:1: ( () (otherlv_1= '<' ( (lv_typeArguments_2_0= ruleJvmArgumentTypeReference ) ) (otherlv_3= ',' ( (lv_typeArguments_4_0= ruleJvmArgumentTypeReference ) ) )* otherlv_5= '>' )? ( ( ruleIdOrSuper ) ) ( ( ( ( '(' ) )=> (lv_explicitOperationCall_7_0= '(' ) ) ( ( ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> (lv_featureCallArguments_8_0= ruleXShortClosure ) ) | ( ( (lv_featureCallArguments_9_0= ruleXExpression ) ) (otherlv_10= ',' ( (lv_featureCallArguments_11_0= ruleXExpression ) ) )* ) )? otherlv_12= ')' )? ( ( ( () '[' ) )=> (lv_featureCallArguments_13_0= ruleXClosure ) )? )
+            // InternalMelange.g:7419:28: ( ( () (otherlv_1= '<' ( (lv_typeArguments_2_0= ruleJvmArgumentTypeReference ) ) (otherlv_3= ',' ( (lv_typeArguments_4_0= ruleJvmArgumentTypeReference ) ) )* otherlv_5= '>' )? ( ( ruleIdOrSuper ) ) ( ( ( ( '(' ) )=> (lv_explicitOperationCall_7_0= '(' ) ) ( ( ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> (lv_featureCallArguments_8_0= ruleXShortClosure ) ) | ( ( (lv_featureCallArguments_9_0= ruleXExpression ) ) (otherlv_10= ',' ( (lv_featureCallArguments_11_0= ruleXExpression ) ) )* ) )? otherlv_12= ')' )? ( ( ( () '[' ) )=> (lv_featureCallArguments_13_0= ruleXClosure ) )? ) )
+            // InternalMelange.g:7420:1: ( () (otherlv_1= '<' ( (lv_typeArguments_2_0= ruleJvmArgumentTypeReference ) ) (otherlv_3= ',' ( (lv_typeArguments_4_0= ruleJvmArgumentTypeReference ) ) )* otherlv_5= '>' )? ( ( ruleIdOrSuper ) ) ( ( ( ( '(' ) )=> (lv_explicitOperationCall_7_0= '(' ) ) ( ( ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> (lv_featureCallArguments_8_0= ruleXShortClosure ) ) | ( ( (lv_featureCallArguments_9_0= ruleXExpression ) ) (otherlv_10= ',' ( (lv_featureCallArguments_11_0= ruleXExpression ) ) )* ) )? otherlv_12= ')' )? ( ( ( () '[' ) )=> (lv_featureCallArguments_13_0= ruleXClosure ) )? )
             {
-            // InternalMelange.g:7401:1: ( () (otherlv_1= '<' ( (lv_typeArguments_2_0= ruleJvmArgumentTypeReference ) ) (otherlv_3= ',' ( (lv_typeArguments_4_0= ruleJvmArgumentTypeReference ) ) )* otherlv_5= '>' )? ( ( ruleIdOrSuper ) ) ( ( ( ( '(' ) )=> (lv_explicitOperationCall_7_0= '(' ) ) ( ( ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> (lv_featureCallArguments_8_0= ruleXShortClosure ) ) | ( ( (lv_featureCallArguments_9_0= ruleXExpression ) ) (otherlv_10= ',' ( (lv_featureCallArguments_11_0= ruleXExpression ) ) )* ) )? otherlv_12= ')' )? ( ( ( () '[' ) )=> (lv_featureCallArguments_13_0= ruleXClosure ) )? )
-            // InternalMelange.g:7401:2: () (otherlv_1= '<' ( (lv_typeArguments_2_0= ruleJvmArgumentTypeReference ) ) (otherlv_3= ',' ( (lv_typeArguments_4_0= ruleJvmArgumentTypeReference ) ) )* otherlv_5= '>' )? ( ( ruleIdOrSuper ) ) ( ( ( ( '(' ) )=> (lv_explicitOperationCall_7_0= '(' ) ) ( ( ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> (lv_featureCallArguments_8_0= ruleXShortClosure ) ) | ( ( (lv_featureCallArguments_9_0= ruleXExpression ) ) (otherlv_10= ',' ( (lv_featureCallArguments_11_0= ruleXExpression ) ) )* ) )? otherlv_12= ')' )? ( ( ( () '[' ) )=> (lv_featureCallArguments_13_0= ruleXClosure ) )?
+            // InternalMelange.g:7420:1: ( () (otherlv_1= '<' ( (lv_typeArguments_2_0= ruleJvmArgumentTypeReference ) ) (otherlv_3= ',' ( (lv_typeArguments_4_0= ruleJvmArgumentTypeReference ) ) )* otherlv_5= '>' )? ( ( ruleIdOrSuper ) ) ( ( ( ( '(' ) )=> (lv_explicitOperationCall_7_0= '(' ) ) ( ( ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> (lv_featureCallArguments_8_0= ruleXShortClosure ) ) | ( ( (lv_featureCallArguments_9_0= ruleXExpression ) ) (otherlv_10= ',' ( (lv_featureCallArguments_11_0= ruleXExpression ) ) )* ) )? otherlv_12= ')' )? ( ( ( () '[' ) )=> (lv_featureCallArguments_13_0= ruleXClosure ) )? )
+            // InternalMelange.g:7420:2: () (otherlv_1= '<' ( (lv_typeArguments_2_0= ruleJvmArgumentTypeReference ) ) (otherlv_3= ',' ( (lv_typeArguments_4_0= ruleJvmArgumentTypeReference ) ) )* otherlv_5= '>' )? ( ( ruleIdOrSuper ) ) ( ( ( ( '(' ) )=> (lv_explicitOperationCall_7_0= '(' ) ) ( ( ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> (lv_featureCallArguments_8_0= ruleXShortClosure ) ) | ( ( (lv_featureCallArguments_9_0= ruleXExpression ) ) (otherlv_10= ',' ( (lv_featureCallArguments_11_0= ruleXExpression ) ) )* ) )? otherlv_12= ')' )? ( ( ( () '[' ) )=> (lv_featureCallArguments_13_0= ruleXClosure ) )?
             {
-            // InternalMelange.g:7401:2: ()
-            // InternalMelange.g:7402:5: 
+            // InternalMelange.g:7420:2: ()
+            // InternalMelange.g:7421:5: 
             {
             if ( state.backtracking==0 ) {
 
@@ -21150,35 +21192,35 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalMelange.g:7407:2: (otherlv_1= '<' ( (lv_typeArguments_2_0= ruleJvmArgumentTypeReference ) ) (otherlv_3= ',' ( (lv_typeArguments_4_0= ruleJvmArgumentTypeReference ) ) )* otherlv_5= '>' )?
+            // InternalMelange.g:7426:2: (otherlv_1= '<' ( (lv_typeArguments_2_0= ruleJvmArgumentTypeReference ) ) (otherlv_3= ',' ( (lv_typeArguments_4_0= ruleJvmArgumentTypeReference ) ) )* otherlv_5= '>' )?
             int alt136=2;
             int LA136_0 = input.LA(1);
 
-            if ( (LA136_0==70) ) {
+            if ( (LA136_0==71) ) {
                 alt136=1;
             }
             switch (alt136) {
                 case 1 :
-                    // InternalMelange.g:7407:4: otherlv_1= '<' ( (lv_typeArguments_2_0= ruleJvmArgumentTypeReference ) ) (otherlv_3= ',' ( (lv_typeArguments_4_0= ruleJvmArgumentTypeReference ) ) )* otherlv_5= '>'
+                    // InternalMelange.g:7426:4: otherlv_1= '<' ( (lv_typeArguments_2_0= ruleJvmArgumentTypeReference ) ) (otherlv_3= ',' ( (lv_typeArguments_4_0= ruleJvmArgumentTypeReference ) ) )* otherlv_5= '>'
                     {
-                    otherlv_1=(Token)match(input,70,FOLLOW_83); if (state.failed) return current;
+                    otherlv_1=(Token)match(input,71,FOLLOW_84); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_1, grammarAccess.getXFeatureCallAccess().getLessThanSignKeyword_1_0());
                           
                     }
-                    // InternalMelange.g:7411:1: ( (lv_typeArguments_2_0= ruleJvmArgumentTypeReference ) )
-                    // InternalMelange.g:7412:1: (lv_typeArguments_2_0= ruleJvmArgumentTypeReference )
+                    // InternalMelange.g:7430:1: ( (lv_typeArguments_2_0= ruleJvmArgumentTypeReference ) )
+                    // InternalMelange.g:7431:1: (lv_typeArguments_2_0= ruleJvmArgumentTypeReference )
                     {
-                    // InternalMelange.g:7412:1: (lv_typeArguments_2_0= ruleJvmArgumentTypeReference )
-                    // InternalMelange.g:7413:3: lv_typeArguments_2_0= ruleJvmArgumentTypeReference
+                    // InternalMelange.g:7431:1: (lv_typeArguments_2_0= ruleJvmArgumentTypeReference )
+                    // InternalMelange.g:7432:3: lv_typeArguments_2_0= ruleJvmArgumentTypeReference
                     {
                     if ( state.backtracking==0 ) {
                        
                       	        newCompositeNode(grammarAccess.getXFeatureCallAccess().getTypeArgumentsJvmArgumentTypeReferenceParserRuleCall_1_1_0()); 
                       	    
                     }
-                    pushFollow(FOLLOW_84);
+                    pushFollow(FOLLOW_85);
                     lv_typeArguments_2_0=ruleJvmArgumentTypeReference();
 
                     state._fsp--;
@@ -21202,7 +21244,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // InternalMelange.g:7429:2: (otherlv_3= ',' ( (lv_typeArguments_4_0= ruleJvmArgumentTypeReference ) ) )*
+                    // InternalMelange.g:7448:2: (otherlv_3= ',' ( (lv_typeArguments_4_0= ruleJvmArgumentTypeReference ) ) )*
                     loop135:
                     do {
                         int alt135=2;
@@ -21215,26 +21257,26 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
                         switch (alt135) {
                     	case 1 :
-                    	    // InternalMelange.g:7429:4: otherlv_3= ',' ( (lv_typeArguments_4_0= ruleJvmArgumentTypeReference ) )
+                    	    // InternalMelange.g:7448:4: otherlv_3= ',' ( (lv_typeArguments_4_0= ruleJvmArgumentTypeReference ) )
                     	    {
-                    	    otherlv_3=(Token)match(input,33,FOLLOW_83); if (state.failed) return current;
+                    	    otherlv_3=(Token)match(input,33,FOLLOW_84); if (state.failed) return current;
                     	    if ( state.backtracking==0 ) {
 
                     	          	newLeafNode(otherlv_3, grammarAccess.getXFeatureCallAccess().getCommaKeyword_1_2_0());
                     	          
                     	    }
-                    	    // InternalMelange.g:7433:1: ( (lv_typeArguments_4_0= ruleJvmArgumentTypeReference ) )
-                    	    // InternalMelange.g:7434:1: (lv_typeArguments_4_0= ruleJvmArgumentTypeReference )
+                    	    // InternalMelange.g:7452:1: ( (lv_typeArguments_4_0= ruleJvmArgumentTypeReference ) )
+                    	    // InternalMelange.g:7453:1: (lv_typeArguments_4_0= ruleJvmArgumentTypeReference )
                     	    {
-                    	    // InternalMelange.g:7434:1: (lv_typeArguments_4_0= ruleJvmArgumentTypeReference )
-                    	    // InternalMelange.g:7435:3: lv_typeArguments_4_0= ruleJvmArgumentTypeReference
+                    	    // InternalMelange.g:7453:1: (lv_typeArguments_4_0= ruleJvmArgumentTypeReference )
+                    	    // InternalMelange.g:7454:3: lv_typeArguments_4_0= ruleJvmArgumentTypeReference
                     	    {
                     	    if ( state.backtracking==0 ) {
                     	       
                     	      	        newCompositeNode(grammarAccess.getXFeatureCallAccess().getTypeArgumentsJvmArgumentTypeReferenceParserRuleCall_1_2_1_0()); 
                     	      	    
                     	    }
-                    	    pushFollow(FOLLOW_84);
+                    	    pushFollow(FOLLOW_85);
                     	    lv_typeArguments_4_0=ruleJvmArgumentTypeReference();
 
                     	    state._fsp--;
@@ -21267,7 +21309,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                         }
                     } while (true);
 
-                    otherlv_5=(Token)match(input,71,FOLLOW_82); if (state.failed) return current;
+                    otherlv_5=(Token)match(input,72,FOLLOW_83); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_5, grammarAccess.getXFeatureCallAccess().getGreaterThanSignKeyword_1_3());
@@ -21279,11 +21321,11 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalMelange.g:7455:3: ( ( ruleIdOrSuper ) )
-            // InternalMelange.g:7456:1: ( ruleIdOrSuper )
+            // InternalMelange.g:7474:3: ( ( ruleIdOrSuper ) )
+            // InternalMelange.g:7475:1: ( ruleIdOrSuper )
             {
-            // InternalMelange.g:7456:1: ( ruleIdOrSuper )
-            // InternalMelange.g:7457:3: ruleIdOrSuper
+            // InternalMelange.g:7475:1: ( ruleIdOrSuper )
+            // InternalMelange.g:7476:3: ruleIdOrSuper
             {
             if ( state.backtracking==0 ) {
 
@@ -21297,7 +21339,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
               	        newCompositeNode(grammarAccess.getXFeatureCallAccess().getFeatureJvmIdentifiableElementCrossReference_2_0()); 
               	    
             }
-            pushFollow(FOLLOW_111);
+            pushFollow(FOLLOW_112);
             ruleIdOrSuper();
 
             state._fsp--;
@@ -21313,20 +21355,20 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalMelange.g:7470:2: ( ( ( ( '(' ) )=> (lv_explicitOperationCall_7_0= '(' ) ) ( ( ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> (lv_featureCallArguments_8_0= ruleXShortClosure ) ) | ( ( (lv_featureCallArguments_9_0= ruleXExpression ) ) (otherlv_10= ',' ( (lv_featureCallArguments_11_0= ruleXExpression ) ) )* ) )? otherlv_12= ')' )?
+            // InternalMelange.g:7489:2: ( ( ( ( '(' ) )=> (lv_explicitOperationCall_7_0= '(' ) ) ( ( ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> (lv_featureCallArguments_8_0= ruleXShortClosure ) ) | ( ( (lv_featureCallArguments_9_0= ruleXExpression ) ) (otherlv_10= ',' ( (lv_featureCallArguments_11_0= ruleXExpression ) ) )* ) )? otherlv_12= ')' )?
             int alt139=2;
             alt139 = dfa139.predict(input);
             switch (alt139) {
                 case 1 :
-                    // InternalMelange.g:7470:3: ( ( ( '(' ) )=> (lv_explicitOperationCall_7_0= '(' ) ) ( ( ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> (lv_featureCallArguments_8_0= ruleXShortClosure ) ) | ( ( (lv_featureCallArguments_9_0= ruleXExpression ) ) (otherlv_10= ',' ( (lv_featureCallArguments_11_0= ruleXExpression ) ) )* ) )? otherlv_12= ')'
+                    // InternalMelange.g:7489:3: ( ( ( '(' ) )=> (lv_explicitOperationCall_7_0= '(' ) ) ( ( ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> (lv_featureCallArguments_8_0= ruleXShortClosure ) ) | ( ( (lv_featureCallArguments_9_0= ruleXExpression ) ) (otherlv_10= ',' ( (lv_featureCallArguments_11_0= ruleXExpression ) ) )* ) )? otherlv_12= ')'
                     {
-                    // InternalMelange.g:7470:3: ( ( ( '(' ) )=> (lv_explicitOperationCall_7_0= '(' ) )
-                    // InternalMelange.g:7470:4: ( ( '(' ) )=> (lv_explicitOperationCall_7_0= '(' )
+                    // InternalMelange.g:7489:3: ( ( ( '(' ) )=> (lv_explicitOperationCall_7_0= '(' ) )
+                    // InternalMelange.g:7489:4: ( ( '(' ) )=> (lv_explicitOperationCall_7_0= '(' )
                     {
-                    // InternalMelange.g:7477:1: (lv_explicitOperationCall_7_0= '(' )
-                    // InternalMelange.g:7478:3: lv_explicitOperationCall_7_0= '('
+                    // InternalMelange.g:7496:1: (lv_explicitOperationCall_7_0= '(' )
+                    // InternalMelange.g:7497:3: lv_explicitOperationCall_7_0= '('
                     {
-                    lv_explicitOperationCall_7_0=(Token)match(input,24,FOLLOW_86); if (state.failed) return current;
+                    lv_explicitOperationCall_7_0=(Token)match(input,24,FOLLOW_87); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               newLeafNode(lv_explicitOperationCall_7_0, grammarAccess.getXFeatureCallAccess().getExplicitOperationCallLeftParenthesisKeyword_3_0_0());
@@ -21346,18 +21388,18 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // InternalMelange.g:7491:2: ( ( ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> (lv_featureCallArguments_8_0= ruleXShortClosure ) ) | ( ( (lv_featureCallArguments_9_0= ruleXExpression ) ) (otherlv_10= ',' ( (lv_featureCallArguments_11_0= ruleXExpression ) ) )* ) )?
+                    // InternalMelange.g:7510:2: ( ( ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> (lv_featureCallArguments_8_0= ruleXShortClosure ) ) | ( ( (lv_featureCallArguments_9_0= ruleXExpression ) ) (otherlv_10= ',' ( (lv_featureCallArguments_11_0= ruleXExpression ) ) )* ) )?
                     int alt138=3;
                     alt138 = dfa138.predict(input);
                     switch (alt138) {
                         case 1 :
-                            // InternalMelange.g:7491:3: ( ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> (lv_featureCallArguments_8_0= ruleXShortClosure ) )
+                            // InternalMelange.g:7510:3: ( ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> (lv_featureCallArguments_8_0= ruleXShortClosure ) )
                             {
-                            // InternalMelange.g:7491:3: ( ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> (lv_featureCallArguments_8_0= ruleXShortClosure ) )
-                            // InternalMelange.g:7491:4: ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> (lv_featureCallArguments_8_0= ruleXShortClosure )
+                            // InternalMelange.g:7510:3: ( ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> (lv_featureCallArguments_8_0= ruleXShortClosure ) )
+                            // InternalMelange.g:7510:4: ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> (lv_featureCallArguments_8_0= ruleXShortClosure )
                             {
-                            // InternalMelange.g:7508:1: (lv_featureCallArguments_8_0= ruleXShortClosure )
-                            // InternalMelange.g:7509:3: lv_featureCallArguments_8_0= ruleXShortClosure
+                            // InternalMelange.g:7527:1: (lv_featureCallArguments_8_0= ruleXShortClosure )
+                            // InternalMelange.g:7528:3: lv_featureCallArguments_8_0= ruleXShortClosure
                             {
                             if ( state.backtracking==0 ) {
                                
@@ -21392,16 +21434,16 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                             }
                             break;
                         case 2 :
-                            // InternalMelange.g:7526:6: ( ( (lv_featureCallArguments_9_0= ruleXExpression ) ) (otherlv_10= ',' ( (lv_featureCallArguments_11_0= ruleXExpression ) ) )* )
+                            // InternalMelange.g:7545:6: ( ( (lv_featureCallArguments_9_0= ruleXExpression ) ) (otherlv_10= ',' ( (lv_featureCallArguments_11_0= ruleXExpression ) ) )* )
                             {
-                            // InternalMelange.g:7526:6: ( ( (lv_featureCallArguments_9_0= ruleXExpression ) ) (otherlv_10= ',' ( (lv_featureCallArguments_11_0= ruleXExpression ) ) )* )
-                            // InternalMelange.g:7526:7: ( (lv_featureCallArguments_9_0= ruleXExpression ) ) (otherlv_10= ',' ( (lv_featureCallArguments_11_0= ruleXExpression ) ) )*
+                            // InternalMelange.g:7545:6: ( ( (lv_featureCallArguments_9_0= ruleXExpression ) ) (otherlv_10= ',' ( (lv_featureCallArguments_11_0= ruleXExpression ) ) )* )
+                            // InternalMelange.g:7545:7: ( (lv_featureCallArguments_9_0= ruleXExpression ) ) (otherlv_10= ',' ( (lv_featureCallArguments_11_0= ruleXExpression ) ) )*
                             {
-                            // InternalMelange.g:7526:7: ( (lv_featureCallArguments_9_0= ruleXExpression ) )
-                            // InternalMelange.g:7527:1: (lv_featureCallArguments_9_0= ruleXExpression )
+                            // InternalMelange.g:7545:7: ( (lv_featureCallArguments_9_0= ruleXExpression ) )
+                            // InternalMelange.g:7546:1: (lv_featureCallArguments_9_0= ruleXExpression )
                             {
-                            // InternalMelange.g:7527:1: (lv_featureCallArguments_9_0= ruleXExpression )
-                            // InternalMelange.g:7528:3: lv_featureCallArguments_9_0= ruleXExpression
+                            // InternalMelange.g:7546:1: (lv_featureCallArguments_9_0= ruleXExpression )
+                            // InternalMelange.g:7547:3: lv_featureCallArguments_9_0= ruleXExpression
                             {
                             if ( state.backtracking==0 ) {
                                
@@ -21432,7 +21474,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
                             }
 
-                            // InternalMelange.g:7544:2: (otherlv_10= ',' ( (lv_featureCallArguments_11_0= ruleXExpression ) ) )*
+                            // InternalMelange.g:7563:2: (otherlv_10= ',' ( (lv_featureCallArguments_11_0= ruleXExpression ) ) )*
                             loop137:
                             do {
                                 int alt137=2;
@@ -21445,19 +21487,19 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
                                 switch (alt137) {
                             	case 1 :
-                            	    // InternalMelange.g:7544:4: otherlv_10= ',' ( (lv_featureCallArguments_11_0= ruleXExpression ) )
+                            	    // InternalMelange.g:7563:4: otherlv_10= ',' ( (lv_featureCallArguments_11_0= ruleXExpression ) )
                             	    {
-                            	    otherlv_10=(Token)match(input,33,FOLLOW_63); if (state.failed) return current;
+                            	    otherlv_10=(Token)match(input,33,FOLLOW_64); if (state.failed) return current;
                             	    if ( state.backtracking==0 ) {
 
                             	          	newLeafNode(otherlv_10, grammarAccess.getXFeatureCallAccess().getCommaKeyword_3_1_1_1_0());
                             	          
                             	    }
-                            	    // InternalMelange.g:7548:1: ( (lv_featureCallArguments_11_0= ruleXExpression ) )
-                            	    // InternalMelange.g:7549:1: (lv_featureCallArguments_11_0= ruleXExpression )
+                            	    // InternalMelange.g:7567:1: ( (lv_featureCallArguments_11_0= ruleXExpression ) )
+                            	    // InternalMelange.g:7568:1: (lv_featureCallArguments_11_0= ruleXExpression )
                             	    {
-                            	    // InternalMelange.g:7549:1: (lv_featureCallArguments_11_0= ruleXExpression )
-                            	    // InternalMelange.g:7550:3: lv_featureCallArguments_11_0= ruleXExpression
+                            	    // InternalMelange.g:7568:1: (lv_featureCallArguments_11_0= ruleXExpression )
+                            	    // InternalMelange.g:7569:3: lv_featureCallArguments_11_0= ruleXExpression
                             	    {
                             	    if ( state.backtracking==0 ) {
                             	       
@@ -21506,7 +21548,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_12=(Token)match(input,25,FOLLOW_112); if (state.failed) return current;
+                    otherlv_12=(Token)match(input,25,FOLLOW_113); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_12, grammarAccess.getXFeatureCallAccess().getRightParenthesisKeyword_3_2());
@@ -21518,15 +21560,15 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalMelange.g:7570:3: ( ( ( () '[' ) )=> (lv_featureCallArguments_13_0= ruleXClosure ) )?
+            // InternalMelange.g:7589:3: ( ( ( () '[' ) )=> (lv_featureCallArguments_13_0= ruleXClosure ) )?
             int alt140=2;
             alt140 = dfa140.predict(input);
             switch (alt140) {
                 case 1 :
-                    // InternalMelange.g:7570:4: ( ( () '[' ) )=> (lv_featureCallArguments_13_0= ruleXClosure )
+                    // InternalMelange.g:7589:4: ( ( () '[' ) )=> (lv_featureCallArguments_13_0= ruleXClosure )
                     {
-                    // InternalMelange.g:7573:1: (lv_featureCallArguments_13_0= ruleXClosure )
-                    // InternalMelange.g:7574:3: lv_featureCallArguments_13_0= ruleXClosure
+                    // InternalMelange.g:7592:1: (lv_featureCallArguments_13_0= ruleXClosure )
+                    // InternalMelange.g:7593:3: lv_featureCallArguments_13_0= ruleXClosure
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -21583,7 +21625,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleFeatureCallID"
-    // InternalMelange.g:7598:1: entryRuleFeatureCallID returns [String current=null] : iv_ruleFeatureCallID= ruleFeatureCallID EOF ;
+    // InternalMelange.g:7617:1: entryRuleFeatureCallID returns [String current=null] : iv_ruleFeatureCallID= ruleFeatureCallID EOF ;
     public final String entryRuleFeatureCallID() throws RecognitionException {
         String current = null;
 
@@ -21591,8 +21633,8 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalMelange.g:7599:2: (iv_ruleFeatureCallID= ruleFeatureCallID EOF )
-            // InternalMelange.g:7600:2: iv_ruleFeatureCallID= ruleFeatureCallID EOF
+            // InternalMelange.g:7618:2: (iv_ruleFeatureCallID= ruleFeatureCallID EOF )
+            // InternalMelange.g:7619:2: iv_ruleFeatureCallID= ruleFeatureCallID EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getFeatureCallIDRule()); 
@@ -21623,7 +21665,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleFeatureCallID"
-    // InternalMelange.g:7607:1: ruleFeatureCallID returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_ValidID_0= ruleValidID | kw= 'extends' | kw= 'static' | kw= 'import' | kw= 'extension' ) ;
+    // InternalMelange.g:7626:1: ruleFeatureCallID returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_ValidID_0= ruleValidID | kw= 'extends' | kw= 'static' | kw= 'import' | kw= 'extension' ) ;
     public final AntlrDatatypeRuleToken ruleFeatureCallID() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -21634,10 +21676,10 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // InternalMelange.g:7610:28: ( (this_ValidID_0= ruleValidID | kw= 'extends' | kw= 'static' | kw= 'import' | kw= 'extension' ) )
-            // InternalMelange.g:7611:1: (this_ValidID_0= ruleValidID | kw= 'extends' | kw= 'static' | kw= 'import' | kw= 'extension' )
+            // InternalMelange.g:7629:28: ( (this_ValidID_0= ruleValidID | kw= 'extends' | kw= 'static' | kw= 'import' | kw= 'extension' ) )
+            // InternalMelange.g:7630:1: (this_ValidID_0= ruleValidID | kw= 'extends' | kw= 'static' | kw= 'import' | kw= 'extension' )
             {
-            // InternalMelange.g:7611:1: (this_ValidID_0= ruleValidID | kw= 'extends' | kw= 'static' | kw= 'import' | kw= 'extension' )
+            // InternalMelange.g:7630:1: (this_ValidID_0= ruleValidID | kw= 'extends' | kw= 'static' | kw= 'import' | kw= 'extension' )
             int alt141=5;
             switch ( input.LA(1) ) {
             case RULE_ID:
@@ -21645,22 +21687,22 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                 alt141=1;
                 }
                 break;
-            case 108:
+            case 109:
                 {
                 alt141=2;
                 }
                 break;
-            case 109:
+            case 110:
                 {
                 alt141=3;
                 }
                 break;
-            case 110:
+            case 111:
                 {
                 alt141=4;
                 }
                 break;
-            case 111:
+            case 112:
                 {
                 alt141=5;
                 }
@@ -21675,7 +21717,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
             switch (alt141) {
                 case 1 :
-                    // InternalMelange.g:7612:5: this_ValidID_0= ruleValidID
+                    // InternalMelange.g:7631:5: this_ValidID_0= ruleValidID
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -21701,9 +21743,9 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalMelange.g:7624:2: kw= 'extends'
+                    // InternalMelange.g:7643:2: kw= 'extends'
                     {
-                    kw=(Token)match(input,108,FOLLOW_2); if (state.failed) return current;
+                    kw=(Token)match(input,109,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
@@ -21714,9 +21756,9 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalMelange.g:7631:2: kw= 'static'
+                    // InternalMelange.g:7650:2: kw= 'static'
                     {
-                    kw=(Token)match(input,109,FOLLOW_2); if (state.failed) return current;
+                    kw=(Token)match(input,110,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
@@ -21727,9 +21769,9 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // InternalMelange.g:7638:2: kw= 'import'
+                    // InternalMelange.g:7657:2: kw= 'import'
                     {
-                    kw=(Token)match(input,110,FOLLOW_2); if (state.failed) return current;
+                    kw=(Token)match(input,111,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
@@ -21740,9 +21782,9 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // InternalMelange.g:7645:2: kw= 'extension'
+                    // InternalMelange.g:7664:2: kw= 'extension'
                     {
-                    kw=(Token)match(input,111,FOLLOW_2); if (state.failed) return current;
+                    kw=(Token)match(input,112,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
@@ -21775,7 +21817,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleIdOrSuper"
-    // InternalMelange.g:7658:1: entryRuleIdOrSuper returns [String current=null] : iv_ruleIdOrSuper= ruleIdOrSuper EOF ;
+    // InternalMelange.g:7677:1: entryRuleIdOrSuper returns [String current=null] : iv_ruleIdOrSuper= ruleIdOrSuper EOF ;
     public final String entryRuleIdOrSuper() throws RecognitionException {
         String current = null;
 
@@ -21783,8 +21825,8 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalMelange.g:7659:2: (iv_ruleIdOrSuper= ruleIdOrSuper EOF )
-            // InternalMelange.g:7660:2: iv_ruleIdOrSuper= ruleIdOrSuper EOF
+            // InternalMelange.g:7678:2: (iv_ruleIdOrSuper= ruleIdOrSuper EOF )
+            // InternalMelange.g:7679:2: iv_ruleIdOrSuper= ruleIdOrSuper EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getIdOrSuperRule()); 
@@ -21815,7 +21857,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleIdOrSuper"
-    // InternalMelange.g:7667:1: ruleIdOrSuper returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_FeatureCallID_0= ruleFeatureCallID | kw= 'super' ) ;
+    // InternalMelange.g:7686:1: ruleIdOrSuper returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_FeatureCallID_0= ruleFeatureCallID | kw= 'super' ) ;
     public final AntlrDatatypeRuleToken ruleIdOrSuper() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -21826,17 +21868,17 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // InternalMelange.g:7670:28: ( (this_FeatureCallID_0= ruleFeatureCallID | kw= 'super' ) )
-            // InternalMelange.g:7671:1: (this_FeatureCallID_0= ruleFeatureCallID | kw= 'super' )
+            // InternalMelange.g:7689:28: ( (this_FeatureCallID_0= ruleFeatureCallID | kw= 'super' ) )
+            // InternalMelange.g:7690:1: (this_FeatureCallID_0= ruleFeatureCallID | kw= 'super' )
             {
-            // InternalMelange.g:7671:1: (this_FeatureCallID_0= ruleFeatureCallID | kw= 'super' )
+            // InternalMelange.g:7690:1: (this_FeatureCallID_0= ruleFeatureCallID | kw= 'super' )
             int alt142=2;
             int LA142_0 = input.LA(1);
 
-            if ( (LA142_0==RULE_ID||(LA142_0>=108 && LA142_0<=111)) ) {
+            if ( (LA142_0==RULE_ID||(LA142_0>=109 && LA142_0<=112)) ) {
                 alt142=1;
             }
-            else if ( (LA142_0==112) ) {
+            else if ( (LA142_0==113) ) {
                 alt142=2;
             }
             else {
@@ -21848,7 +21890,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
             }
             switch (alt142) {
                 case 1 :
-                    // InternalMelange.g:7672:5: this_FeatureCallID_0= ruleFeatureCallID
+                    // InternalMelange.g:7691:5: this_FeatureCallID_0= ruleFeatureCallID
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -21874,9 +21916,9 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalMelange.g:7684:2: kw= 'super'
+                    // InternalMelange.g:7703:2: kw= 'super'
                     {
-                    kw=(Token)match(input,112,FOLLOW_2); if (state.failed) return current;
+                    kw=(Token)match(input,113,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
@@ -21909,7 +21951,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleXConstructorCall"
-    // InternalMelange.g:7697:1: entryRuleXConstructorCall returns [EObject current=null] : iv_ruleXConstructorCall= ruleXConstructorCall EOF ;
+    // InternalMelange.g:7716:1: entryRuleXConstructorCall returns [EObject current=null] : iv_ruleXConstructorCall= ruleXConstructorCall EOF ;
     public final EObject entryRuleXConstructorCall() throws RecognitionException {
         EObject current = null;
 
@@ -21917,8 +21959,8 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalMelange.g:7698:2: (iv_ruleXConstructorCall= ruleXConstructorCall EOF )
-            // InternalMelange.g:7699:2: iv_ruleXConstructorCall= ruleXConstructorCall EOF
+            // InternalMelange.g:7717:2: (iv_ruleXConstructorCall= ruleXConstructorCall EOF )
+            // InternalMelange.g:7718:2: iv_ruleXConstructorCall= ruleXConstructorCall EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getXConstructorCallRule()); 
@@ -21949,7 +21991,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleXConstructorCall"
-    // InternalMelange.g:7706:1: ruleXConstructorCall returns [EObject current=null] : ( () otherlv_1= 'new' ( ( ruleQualifiedName ) ) ( ( ( '<' )=>otherlv_3= '<' ) ( (lv_typeArguments_4_0= ruleJvmArgumentTypeReference ) ) (otherlv_5= ',' ( (lv_typeArguments_6_0= ruleJvmArgumentTypeReference ) ) )* otherlv_7= '>' )? ( ( ( ( '(' ) )=> (lv_explicitConstructorCall_8_0= '(' ) ) ( ( ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> (lv_arguments_9_0= ruleXShortClosure ) ) | ( ( (lv_arguments_10_0= ruleXExpression ) ) (otherlv_11= ',' ( (lv_arguments_12_0= ruleXExpression ) ) )* ) )? otherlv_13= ')' )? ( ( ( () '[' ) )=> (lv_arguments_14_0= ruleXClosure ) )? ) ;
+    // InternalMelange.g:7725:1: ruleXConstructorCall returns [EObject current=null] : ( () otherlv_1= 'new' ( ( ruleQualifiedName ) ) ( ( ( '<' )=>otherlv_3= '<' ) ( (lv_typeArguments_4_0= ruleJvmArgumentTypeReference ) ) (otherlv_5= ',' ( (lv_typeArguments_6_0= ruleJvmArgumentTypeReference ) ) )* otherlv_7= '>' )? ( ( ( ( '(' ) )=> (lv_explicitConstructorCall_8_0= '(' ) ) ( ( ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> (lv_arguments_9_0= ruleXShortClosure ) ) | ( ( (lv_arguments_10_0= ruleXExpression ) ) (otherlv_11= ',' ( (lv_arguments_12_0= ruleXExpression ) ) )* ) )? otherlv_13= ')' )? ( ( ( () '[' ) )=> (lv_arguments_14_0= ruleXClosure ) )? ) ;
     public final EObject ruleXConstructorCall() throws RecognitionException {
         EObject current = null;
 
@@ -21976,14 +22018,14 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // InternalMelange.g:7709:28: ( ( () otherlv_1= 'new' ( ( ruleQualifiedName ) ) ( ( ( '<' )=>otherlv_3= '<' ) ( (lv_typeArguments_4_0= ruleJvmArgumentTypeReference ) ) (otherlv_5= ',' ( (lv_typeArguments_6_0= ruleJvmArgumentTypeReference ) ) )* otherlv_7= '>' )? ( ( ( ( '(' ) )=> (lv_explicitConstructorCall_8_0= '(' ) ) ( ( ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> (lv_arguments_9_0= ruleXShortClosure ) ) | ( ( (lv_arguments_10_0= ruleXExpression ) ) (otherlv_11= ',' ( (lv_arguments_12_0= ruleXExpression ) ) )* ) )? otherlv_13= ')' )? ( ( ( () '[' ) )=> (lv_arguments_14_0= ruleXClosure ) )? ) )
-            // InternalMelange.g:7710:1: ( () otherlv_1= 'new' ( ( ruleQualifiedName ) ) ( ( ( '<' )=>otherlv_3= '<' ) ( (lv_typeArguments_4_0= ruleJvmArgumentTypeReference ) ) (otherlv_5= ',' ( (lv_typeArguments_6_0= ruleJvmArgumentTypeReference ) ) )* otherlv_7= '>' )? ( ( ( ( '(' ) )=> (lv_explicitConstructorCall_8_0= '(' ) ) ( ( ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> (lv_arguments_9_0= ruleXShortClosure ) ) | ( ( (lv_arguments_10_0= ruleXExpression ) ) (otherlv_11= ',' ( (lv_arguments_12_0= ruleXExpression ) ) )* ) )? otherlv_13= ')' )? ( ( ( () '[' ) )=> (lv_arguments_14_0= ruleXClosure ) )? )
+            // InternalMelange.g:7728:28: ( ( () otherlv_1= 'new' ( ( ruleQualifiedName ) ) ( ( ( '<' )=>otherlv_3= '<' ) ( (lv_typeArguments_4_0= ruleJvmArgumentTypeReference ) ) (otherlv_5= ',' ( (lv_typeArguments_6_0= ruleJvmArgumentTypeReference ) ) )* otherlv_7= '>' )? ( ( ( ( '(' ) )=> (lv_explicitConstructorCall_8_0= '(' ) ) ( ( ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> (lv_arguments_9_0= ruleXShortClosure ) ) | ( ( (lv_arguments_10_0= ruleXExpression ) ) (otherlv_11= ',' ( (lv_arguments_12_0= ruleXExpression ) ) )* ) )? otherlv_13= ')' )? ( ( ( () '[' ) )=> (lv_arguments_14_0= ruleXClosure ) )? ) )
+            // InternalMelange.g:7729:1: ( () otherlv_1= 'new' ( ( ruleQualifiedName ) ) ( ( ( '<' )=>otherlv_3= '<' ) ( (lv_typeArguments_4_0= ruleJvmArgumentTypeReference ) ) (otherlv_5= ',' ( (lv_typeArguments_6_0= ruleJvmArgumentTypeReference ) ) )* otherlv_7= '>' )? ( ( ( ( '(' ) )=> (lv_explicitConstructorCall_8_0= '(' ) ) ( ( ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> (lv_arguments_9_0= ruleXShortClosure ) ) | ( ( (lv_arguments_10_0= ruleXExpression ) ) (otherlv_11= ',' ( (lv_arguments_12_0= ruleXExpression ) ) )* ) )? otherlv_13= ')' )? ( ( ( () '[' ) )=> (lv_arguments_14_0= ruleXClosure ) )? )
             {
-            // InternalMelange.g:7710:1: ( () otherlv_1= 'new' ( ( ruleQualifiedName ) ) ( ( ( '<' )=>otherlv_3= '<' ) ( (lv_typeArguments_4_0= ruleJvmArgumentTypeReference ) ) (otherlv_5= ',' ( (lv_typeArguments_6_0= ruleJvmArgumentTypeReference ) ) )* otherlv_7= '>' )? ( ( ( ( '(' ) )=> (lv_explicitConstructorCall_8_0= '(' ) ) ( ( ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> (lv_arguments_9_0= ruleXShortClosure ) ) | ( ( (lv_arguments_10_0= ruleXExpression ) ) (otherlv_11= ',' ( (lv_arguments_12_0= ruleXExpression ) ) )* ) )? otherlv_13= ')' )? ( ( ( () '[' ) )=> (lv_arguments_14_0= ruleXClosure ) )? )
-            // InternalMelange.g:7710:2: () otherlv_1= 'new' ( ( ruleQualifiedName ) ) ( ( ( '<' )=>otherlv_3= '<' ) ( (lv_typeArguments_4_0= ruleJvmArgumentTypeReference ) ) (otherlv_5= ',' ( (lv_typeArguments_6_0= ruleJvmArgumentTypeReference ) ) )* otherlv_7= '>' )? ( ( ( ( '(' ) )=> (lv_explicitConstructorCall_8_0= '(' ) ) ( ( ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> (lv_arguments_9_0= ruleXShortClosure ) ) | ( ( (lv_arguments_10_0= ruleXExpression ) ) (otherlv_11= ',' ( (lv_arguments_12_0= ruleXExpression ) ) )* ) )? otherlv_13= ')' )? ( ( ( () '[' ) )=> (lv_arguments_14_0= ruleXClosure ) )?
+            // InternalMelange.g:7729:1: ( () otherlv_1= 'new' ( ( ruleQualifiedName ) ) ( ( ( '<' )=>otherlv_3= '<' ) ( (lv_typeArguments_4_0= ruleJvmArgumentTypeReference ) ) (otherlv_5= ',' ( (lv_typeArguments_6_0= ruleJvmArgumentTypeReference ) ) )* otherlv_7= '>' )? ( ( ( ( '(' ) )=> (lv_explicitConstructorCall_8_0= '(' ) ) ( ( ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> (lv_arguments_9_0= ruleXShortClosure ) ) | ( ( (lv_arguments_10_0= ruleXExpression ) ) (otherlv_11= ',' ( (lv_arguments_12_0= ruleXExpression ) ) )* ) )? otherlv_13= ')' )? ( ( ( () '[' ) )=> (lv_arguments_14_0= ruleXClosure ) )? )
+            // InternalMelange.g:7729:2: () otherlv_1= 'new' ( ( ruleQualifiedName ) ) ( ( ( '<' )=>otherlv_3= '<' ) ( (lv_typeArguments_4_0= ruleJvmArgumentTypeReference ) ) (otherlv_5= ',' ( (lv_typeArguments_6_0= ruleJvmArgumentTypeReference ) ) )* otherlv_7= '>' )? ( ( ( ( '(' ) )=> (lv_explicitConstructorCall_8_0= '(' ) ) ( ( ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> (lv_arguments_9_0= ruleXShortClosure ) ) | ( ( (lv_arguments_10_0= ruleXExpression ) ) (otherlv_11= ',' ( (lv_arguments_12_0= ruleXExpression ) ) )* ) )? otherlv_13= ')' )? ( ( ( () '[' ) )=> (lv_arguments_14_0= ruleXClosure ) )?
             {
-            // InternalMelange.g:7710:2: ()
-            // InternalMelange.g:7711:5: 
+            // InternalMelange.g:7729:2: ()
+            // InternalMelange.g:7730:5: 
             {
             if ( state.backtracking==0 ) {
 
@@ -21995,17 +22037,17 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,113,FOLLOW_3); if (state.failed) return current;
+            otherlv_1=(Token)match(input,114,FOLLOW_3); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_1, grammarAccess.getXConstructorCallAccess().getNewKeyword_1());
                   
             }
-            // InternalMelange.g:7720:1: ( ( ruleQualifiedName ) )
-            // InternalMelange.g:7721:1: ( ruleQualifiedName )
+            // InternalMelange.g:7739:1: ( ( ruleQualifiedName ) )
+            // InternalMelange.g:7740:1: ( ruleQualifiedName )
             {
-            // InternalMelange.g:7721:1: ( ruleQualifiedName )
-            // InternalMelange.g:7722:3: ruleQualifiedName
+            // InternalMelange.g:7740:1: ( ruleQualifiedName )
+            // InternalMelange.g:7741:3: ruleQualifiedName
             {
             if ( state.backtracking==0 ) {
 
@@ -22019,7 +22061,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
               	        newCompositeNode(grammarAccess.getXConstructorCallAccess().getConstructorJvmConstructorCrossReference_2_0()); 
               	    
             }
-            pushFollow(FOLLOW_113);
+            pushFollow(FOLLOW_114);
             ruleQualifiedName();
 
             state._fsp--;
@@ -22035,17 +22077,17 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalMelange.g:7735:2: ( ( ( '<' )=>otherlv_3= '<' ) ( (lv_typeArguments_4_0= ruleJvmArgumentTypeReference ) ) (otherlv_5= ',' ( (lv_typeArguments_6_0= ruleJvmArgumentTypeReference ) ) )* otherlv_7= '>' )?
+            // InternalMelange.g:7754:2: ( ( ( '<' )=>otherlv_3= '<' ) ( (lv_typeArguments_4_0= ruleJvmArgumentTypeReference ) ) (otherlv_5= ',' ( (lv_typeArguments_6_0= ruleJvmArgumentTypeReference ) ) )* otherlv_7= '>' )?
             int alt144=2;
             alt144 = dfa144.predict(input);
             switch (alt144) {
                 case 1 :
-                    // InternalMelange.g:7735:3: ( ( '<' )=>otherlv_3= '<' ) ( (lv_typeArguments_4_0= ruleJvmArgumentTypeReference ) ) (otherlv_5= ',' ( (lv_typeArguments_6_0= ruleJvmArgumentTypeReference ) ) )* otherlv_7= '>'
+                    // InternalMelange.g:7754:3: ( ( '<' )=>otherlv_3= '<' ) ( (lv_typeArguments_4_0= ruleJvmArgumentTypeReference ) ) (otherlv_5= ',' ( (lv_typeArguments_6_0= ruleJvmArgumentTypeReference ) ) )* otherlv_7= '>'
                     {
-                    // InternalMelange.g:7735:3: ( ( '<' )=>otherlv_3= '<' )
-                    // InternalMelange.g:7735:4: ( '<' )=>otherlv_3= '<'
+                    // InternalMelange.g:7754:3: ( ( '<' )=>otherlv_3= '<' )
+                    // InternalMelange.g:7754:4: ( '<' )=>otherlv_3= '<'
                     {
-                    otherlv_3=(Token)match(input,70,FOLLOW_83); if (state.failed) return current;
+                    otherlv_3=(Token)match(input,71,FOLLOW_84); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_3, grammarAccess.getXConstructorCallAccess().getLessThanSignKeyword_3_0());
@@ -22054,18 +22096,18 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // InternalMelange.g:7740:2: ( (lv_typeArguments_4_0= ruleJvmArgumentTypeReference ) )
-                    // InternalMelange.g:7741:1: (lv_typeArguments_4_0= ruleJvmArgumentTypeReference )
+                    // InternalMelange.g:7759:2: ( (lv_typeArguments_4_0= ruleJvmArgumentTypeReference ) )
+                    // InternalMelange.g:7760:1: (lv_typeArguments_4_0= ruleJvmArgumentTypeReference )
                     {
-                    // InternalMelange.g:7741:1: (lv_typeArguments_4_0= ruleJvmArgumentTypeReference )
-                    // InternalMelange.g:7742:3: lv_typeArguments_4_0= ruleJvmArgumentTypeReference
+                    // InternalMelange.g:7760:1: (lv_typeArguments_4_0= ruleJvmArgumentTypeReference )
+                    // InternalMelange.g:7761:3: lv_typeArguments_4_0= ruleJvmArgumentTypeReference
                     {
                     if ( state.backtracking==0 ) {
                        
                       	        newCompositeNode(grammarAccess.getXConstructorCallAccess().getTypeArgumentsJvmArgumentTypeReferenceParserRuleCall_3_1_0()); 
                       	    
                     }
-                    pushFollow(FOLLOW_84);
+                    pushFollow(FOLLOW_85);
                     lv_typeArguments_4_0=ruleJvmArgumentTypeReference();
 
                     state._fsp--;
@@ -22089,7 +22131,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // InternalMelange.g:7758:2: (otherlv_5= ',' ( (lv_typeArguments_6_0= ruleJvmArgumentTypeReference ) ) )*
+                    // InternalMelange.g:7777:2: (otherlv_5= ',' ( (lv_typeArguments_6_0= ruleJvmArgumentTypeReference ) ) )*
                     loop143:
                     do {
                         int alt143=2;
@@ -22102,26 +22144,26 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
                         switch (alt143) {
                     	case 1 :
-                    	    // InternalMelange.g:7758:4: otherlv_5= ',' ( (lv_typeArguments_6_0= ruleJvmArgumentTypeReference ) )
+                    	    // InternalMelange.g:7777:4: otherlv_5= ',' ( (lv_typeArguments_6_0= ruleJvmArgumentTypeReference ) )
                     	    {
-                    	    otherlv_5=(Token)match(input,33,FOLLOW_83); if (state.failed) return current;
+                    	    otherlv_5=(Token)match(input,33,FOLLOW_84); if (state.failed) return current;
                     	    if ( state.backtracking==0 ) {
 
                     	          	newLeafNode(otherlv_5, grammarAccess.getXConstructorCallAccess().getCommaKeyword_3_2_0());
                     	          
                     	    }
-                    	    // InternalMelange.g:7762:1: ( (lv_typeArguments_6_0= ruleJvmArgumentTypeReference ) )
-                    	    // InternalMelange.g:7763:1: (lv_typeArguments_6_0= ruleJvmArgumentTypeReference )
+                    	    // InternalMelange.g:7781:1: ( (lv_typeArguments_6_0= ruleJvmArgumentTypeReference ) )
+                    	    // InternalMelange.g:7782:1: (lv_typeArguments_6_0= ruleJvmArgumentTypeReference )
                     	    {
-                    	    // InternalMelange.g:7763:1: (lv_typeArguments_6_0= ruleJvmArgumentTypeReference )
-                    	    // InternalMelange.g:7764:3: lv_typeArguments_6_0= ruleJvmArgumentTypeReference
+                    	    // InternalMelange.g:7782:1: (lv_typeArguments_6_0= ruleJvmArgumentTypeReference )
+                    	    // InternalMelange.g:7783:3: lv_typeArguments_6_0= ruleJvmArgumentTypeReference
                     	    {
                     	    if ( state.backtracking==0 ) {
                     	       
                     	      	        newCompositeNode(grammarAccess.getXConstructorCallAccess().getTypeArgumentsJvmArgumentTypeReferenceParserRuleCall_3_2_1_0()); 
                     	      	    
                     	    }
-                    	    pushFollow(FOLLOW_84);
+                    	    pushFollow(FOLLOW_85);
                     	    lv_typeArguments_6_0=ruleJvmArgumentTypeReference();
 
                     	    state._fsp--;
@@ -22154,7 +22196,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                         }
                     } while (true);
 
-                    otherlv_7=(Token)match(input,71,FOLLOW_111); if (state.failed) return current;
+                    otherlv_7=(Token)match(input,72,FOLLOW_112); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_7, grammarAccess.getXConstructorCallAccess().getGreaterThanSignKeyword_3_3());
@@ -22166,20 +22208,20 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalMelange.g:7784:3: ( ( ( ( '(' ) )=> (lv_explicitConstructorCall_8_0= '(' ) ) ( ( ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> (lv_arguments_9_0= ruleXShortClosure ) ) | ( ( (lv_arguments_10_0= ruleXExpression ) ) (otherlv_11= ',' ( (lv_arguments_12_0= ruleXExpression ) ) )* ) )? otherlv_13= ')' )?
+            // InternalMelange.g:7803:3: ( ( ( ( '(' ) )=> (lv_explicitConstructorCall_8_0= '(' ) ) ( ( ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> (lv_arguments_9_0= ruleXShortClosure ) ) | ( ( (lv_arguments_10_0= ruleXExpression ) ) (otherlv_11= ',' ( (lv_arguments_12_0= ruleXExpression ) ) )* ) )? otherlv_13= ')' )?
             int alt147=2;
             alt147 = dfa147.predict(input);
             switch (alt147) {
                 case 1 :
-                    // InternalMelange.g:7784:4: ( ( ( '(' ) )=> (lv_explicitConstructorCall_8_0= '(' ) ) ( ( ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> (lv_arguments_9_0= ruleXShortClosure ) ) | ( ( (lv_arguments_10_0= ruleXExpression ) ) (otherlv_11= ',' ( (lv_arguments_12_0= ruleXExpression ) ) )* ) )? otherlv_13= ')'
+                    // InternalMelange.g:7803:4: ( ( ( '(' ) )=> (lv_explicitConstructorCall_8_0= '(' ) ) ( ( ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> (lv_arguments_9_0= ruleXShortClosure ) ) | ( ( (lv_arguments_10_0= ruleXExpression ) ) (otherlv_11= ',' ( (lv_arguments_12_0= ruleXExpression ) ) )* ) )? otherlv_13= ')'
                     {
-                    // InternalMelange.g:7784:4: ( ( ( '(' ) )=> (lv_explicitConstructorCall_8_0= '(' ) )
-                    // InternalMelange.g:7784:5: ( ( '(' ) )=> (lv_explicitConstructorCall_8_0= '(' )
+                    // InternalMelange.g:7803:4: ( ( ( '(' ) )=> (lv_explicitConstructorCall_8_0= '(' ) )
+                    // InternalMelange.g:7803:5: ( ( '(' ) )=> (lv_explicitConstructorCall_8_0= '(' )
                     {
-                    // InternalMelange.g:7791:1: (lv_explicitConstructorCall_8_0= '(' )
-                    // InternalMelange.g:7792:3: lv_explicitConstructorCall_8_0= '('
+                    // InternalMelange.g:7810:1: (lv_explicitConstructorCall_8_0= '(' )
+                    // InternalMelange.g:7811:3: lv_explicitConstructorCall_8_0= '('
                     {
-                    lv_explicitConstructorCall_8_0=(Token)match(input,24,FOLLOW_86); if (state.failed) return current;
+                    lv_explicitConstructorCall_8_0=(Token)match(input,24,FOLLOW_87); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               newLeafNode(lv_explicitConstructorCall_8_0, grammarAccess.getXConstructorCallAccess().getExplicitConstructorCallLeftParenthesisKeyword_4_0_0());
@@ -22199,18 +22241,18 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // InternalMelange.g:7805:2: ( ( ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> (lv_arguments_9_0= ruleXShortClosure ) ) | ( ( (lv_arguments_10_0= ruleXExpression ) ) (otherlv_11= ',' ( (lv_arguments_12_0= ruleXExpression ) ) )* ) )?
+                    // InternalMelange.g:7824:2: ( ( ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> (lv_arguments_9_0= ruleXShortClosure ) ) | ( ( (lv_arguments_10_0= ruleXExpression ) ) (otherlv_11= ',' ( (lv_arguments_12_0= ruleXExpression ) ) )* ) )?
                     int alt146=3;
                     alt146 = dfa146.predict(input);
                     switch (alt146) {
                         case 1 :
-                            // InternalMelange.g:7805:3: ( ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> (lv_arguments_9_0= ruleXShortClosure ) )
+                            // InternalMelange.g:7824:3: ( ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> (lv_arguments_9_0= ruleXShortClosure ) )
                             {
-                            // InternalMelange.g:7805:3: ( ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> (lv_arguments_9_0= ruleXShortClosure ) )
-                            // InternalMelange.g:7805:4: ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> (lv_arguments_9_0= ruleXShortClosure )
+                            // InternalMelange.g:7824:3: ( ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> (lv_arguments_9_0= ruleXShortClosure ) )
+                            // InternalMelange.g:7824:4: ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> (lv_arguments_9_0= ruleXShortClosure )
                             {
-                            // InternalMelange.g:7822:1: (lv_arguments_9_0= ruleXShortClosure )
-                            // InternalMelange.g:7823:3: lv_arguments_9_0= ruleXShortClosure
+                            // InternalMelange.g:7841:1: (lv_arguments_9_0= ruleXShortClosure )
+                            // InternalMelange.g:7842:3: lv_arguments_9_0= ruleXShortClosure
                             {
                             if ( state.backtracking==0 ) {
                                
@@ -22245,16 +22287,16 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                             }
                             break;
                         case 2 :
-                            // InternalMelange.g:7840:6: ( ( (lv_arguments_10_0= ruleXExpression ) ) (otherlv_11= ',' ( (lv_arguments_12_0= ruleXExpression ) ) )* )
+                            // InternalMelange.g:7859:6: ( ( (lv_arguments_10_0= ruleXExpression ) ) (otherlv_11= ',' ( (lv_arguments_12_0= ruleXExpression ) ) )* )
                             {
-                            // InternalMelange.g:7840:6: ( ( (lv_arguments_10_0= ruleXExpression ) ) (otherlv_11= ',' ( (lv_arguments_12_0= ruleXExpression ) ) )* )
-                            // InternalMelange.g:7840:7: ( (lv_arguments_10_0= ruleXExpression ) ) (otherlv_11= ',' ( (lv_arguments_12_0= ruleXExpression ) ) )*
+                            // InternalMelange.g:7859:6: ( ( (lv_arguments_10_0= ruleXExpression ) ) (otherlv_11= ',' ( (lv_arguments_12_0= ruleXExpression ) ) )* )
+                            // InternalMelange.g:7859:7: ( (lv_arguments_10_0= ruleXExpression ) ) (otherlv_11= ',' ( (lv_arguments_12_0= ruleXExpression ) ) )*
                             {
-                            // InternalMelange.g:7840:7: ( (lv_arguments_10_0= ruleXExpression ) )
-                            // InternalMelange.g:7841:1: (lv_arguments_10_0= ruleXExpression )
+                            // InternalMelange.g:7859:7: ( (lv_arguments_10_0= ruleXExpression ) )
+                            // InternalMelange.g:7860:1: (lv_arguments_10_0= ruleXExpression )
                             {
-                            // InternalMelange.g:7841:1: (lv_arguments_10_0= ruleXExpression )
-                            // InternalMelange.g:7842:3: lv_arguments_10_0= ruleXExpression
+                            // InternalMelange.g:7860:1: (lv_arguments_10_0= ruleXExpression )
+                            // InternalMelange.g:7861:3: lv_arguments_10_0= ruleXExpression
                             {
                             if ( state.backtracking==0 ) {
                                
@@ -22285,7 +22327,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
                             }
 
-                            // InternalMelange.g:7858:2: (otherlv_11= ',' ( (lv_arguments_12_0= ruleXExpression ) ) )*
+                            // InternalMelange.g:7877:2: (otherlv_11= ',' ( (lv_arguments_12_0= ruleXExpression ) ) )*
                             loop145:
                             do {
                                 int alt145=2;
@@ -22298,19 +22340,19 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
                                 switch (alt145) {
                             	case 1 :
-                            	    // InternalMelange.g:7858:4: otherlv_11= ',' ( (lv_arguments_12_0= ruleXExpression ) )
+                            	    // InternalMelange.g:7877:4: otherlv_11= ',' ( (lv_arguments_12_0= ruleXExpression ) )
                             	    {
-                            	    otherlv_11=(Token)match(input,33,FOLLOW_63); if (state.failed) return current;
+                            	    otherlv_11=(Token)match(input,33,FOLLOW_64); if (state.failed) return current;
                             	    if ( state.backtracking==0 ) {
 
                             	          	newLeafNode(otherlv_11, grammarAccess.getXConstructorCallAccess().getCommaKeyword_4_1_1_1_0());
                             	          
                             	    }
-                            	    // InternalMelange.g:7862:1: ( (lv_arguments_12_0= ruleXExpression ) )
-                            	    // InternalMelange.g:7863:1: (lv_arguments_12_0= ruleXExpression )
+                            	    // InternalMelange.g:7881:1: ( (lv_arguments_12_0= ruleXExpression ) )
+                            	    // InternalMelange.g:7882:1: (lv_arguments_12_0= ruleXExpression )
                             	    {
-                            	    // InternalMelange.g:7863:1: (lv_arguments_12_0= ruleXExpression )
-                            	    // InternalMelange.g:7864:3: lv_arguments_12_0= ruleXExpression
+                            	    // InternalMelange.g:7882:1: (lv_arguments_12_0= ruleXExpression )
+                            	    // InternalMelange.g:7883:3: lv_arguments_12_0= ruleXExpression
                             	    {
                             	    if ( state.backtracking==0 ) {
                             	       
@@ -22359,7 +22401,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_13=(Token)match(input,25,FOLLOW_112); if (state.failed) return current;
+                    otherlv_13=(Token)match(input,25,FOLLOW_113); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_13, grammarAccess.getXConstructorCallAccess().getRightParenthesisKeyword_4_2());
@@ -22371,15 +22413,15 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalMelange.g:7884:3: ( ( ( () '[' ) )=> (lv_arguments_14_0= ruleXClosure ) )?
+            // InternalMelange.g:7903:3: ( ( ( () '[' ) )=> (lv_arguments_14_0= ruleXClosure ) )?
             int alt148=2;
             alt148 = dfa148.predict(input);
             switch (alt148) {
                 case 1 :
-                    // InternalMelange.g:7884:4: ( ( () '[' ) )=> (lv_arguments_14_0= ruleXClosure )
+                    // InternalMelange.g:7903:4: ( ( () '[' ) )=> (lv_arguments_14_0= ruleXClosure )
                     {
-                    // InternalMelange.g:7887:1: (lv_arguments_14_0= ruleXClosure )
-                    // InternalMelange.g:7888:3: lv_arguments_14_0= ruleXClosure
+                    // InternalMelange.g:7906:1: (lv_arguments_14_0= ruleXClosure )
+                    // InternalMelange.g:7907:3: lv_arguments_14_0= ruleXClosure
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -22436,7 +22478,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleXBooleanLiteral"
-    // InternalMelange.g:7912:1: entryRuleXBooleanLiteral returns [EObject current=null] : iv_ruleXBooleanLiteral= ruleXBooleanLiteral EOF ;
+    // InternalMelange.g:7931:1: entryRuleXBooleanLiteral returns [EObject current=null] : iv_ruleXBooleanLiteral= ruleXBooleanLiteral EOF ;
     public final EObject entryRuleXBooleanLiteral() throws RecognitionException {
         EObject current = null;
 
@@ -22444,8 +22486,8 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalMelange.g:7913:2: (iv_ruleXBooleanLiteral= ruleXBooleanLiteral EOF )
-            // InternalMelange.g:7914:2: iv_ruleXBooleanLiteral= ruleXBooleanLiteral EOF
+            // InternalMelange.g:7932:2: (iv_ruleXBooleanLiteral= ruleXBooleanLiteral EOF )
+            // InternalMelange.g:7933:2: iv_ruleXBooleanLiteral= ruleXBooleanLiteral EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getXBooleanLiteralRule()); 
@@ -22476,7 +22518,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleXBooleanLiteral"
-    // InternalMelange.g:7921:1: ruleXBooleanLiteral returns [EObject current=null] : ( () (otherlv_1= 'false' | ( (lv_isTrue_2_0= 'true' ) ) ) ) ;
+    // InternalMelange.g:7940:1: ruleXBooleanLiteral returns [EObject current=null] : ( () (otherlv_1= 'false' | ( (lv_isTrue_2_0= 'true' ) ) ) ) ;
     public final EObject ruleXBooleanLiteral() throws RecognitionException {
         EObject current = null;
 
@@ -22486,14 +22528,14 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // InternalMelange.g:7924:28: ( ( () (otherlv_1= 'false' | ( (lv_isTrue_2_0= 'true' ) ) ) ) )
-            // InternalMelange.g:7925:1: ( () (otherlv_1= 'false' | ( (lv_isTrue_2_0= 'true' ) ) ) )
+            // InternalMelange.g:7943:28: ( ( () (otherlv_1= 'false' | ( (lv_isTrue_2_0= 'true' ) ) ) ) )
+            // InternalMelange.g:7944:1: ( () (otherlv_1= 'false' | ( (lv_isTrue_2_0= 'true' ) ) ) )
             {
-            // InternalMelange.g:7925:1: ( () (otherlv_1= 'false' | ( (lv_isTrue_2_0= 'true' ) ) ) )
-            // InternalMelange.g:7925:2: () (otherlv_1= 'false' | ( (lv_isTrue_2_0= 'true' ) ) )
+            // InternalMelange.g:7944:1: ( () (otherlv_1= 'false' | ( (lv_isTrue_2_0= 'true' ) ) ) )
+            // InternalMelange.g:7944:2: () (otherlv_1= 'false' | ( (lv_isTrue_2_0= 'true' ) ) )
             {
-            // InternalMelange.g:7925:2: ()
-            // InternalMelange.g:7926:5: 
+            // InternalMelange.g:7944:2: ()
+            // InternalMelange.g:7945:5: 
             {
             if ( state.backtracking==0 ) {
 
@@ -22505,14 +22547,14 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalMelange.g:7931:2: (otherlv_1= 'false' | ( (lv_isTrue_2_0= 'true' ) ) )
+            // InternalMelange.g:7950:2: (otherlv_1= 'false' | ( (lv_isTrue_2_0= 'true' ) ) )
             int alt149=2;
             int LA149_0 = input.LA(1);
 
-            if ( (LA149_0==114) ) {
+            if ( (LA149_0==115) ) {
                 alt149=1;
             }
-            else if ( (LA149_0==115) ) {
+            else if ( (LA149_0==116) ) {
                 alt149=2;
             }
             else {
@@ -22524,9 +22566,9 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
             }
             switch (alt149) {
                 case 1 :
-                    // InternalMelange.g:7931:4: otherlv_1= 'false'
+                    // InternalMelange.g:7950:4: otherlv_1= 'false'
                     {
-                    otherlv_1=(Token)match(input,114,FOLLOW_2); if (state.failed) return current;
+                    otherlv_1=(Token)match(input,115,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_1, grammarAccess.getXBooleanLiteralAccess().getFalseKeyword_1_0());
@@ -22536,15 +22578,15 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalMelange.g:7936:6: ( (lv_isTrue_2_0= 'true' ) )
+                    // InternalMelange.g:7955:6: ( (lv_isTrue_2_0= 'true' ) )
                     {
-                    // InternalMelange.g:7936:6: ( (lv_isTrue_2_0= 'true' ) )
-                    // InternalMelange.g:7937:1: (lv_isTrue_2_0= 'true' )
+                    // InternalMelange.g:7955:6: ( (lv_isTrue_2_0= 'true' ) )
+                    // InternalMelange.g:7956:1: (lv_isTrue_2_0= 'true' )
                     {
-                    // InternalMelange.g:7937:1: (lv_isTrue_2_0= 'true' )
-                    // InternalMelange.g:7938:3: lv_isTrue_2_0= 'true'
+                    // InternalMelange.g:7956:1: (lv_isTrue_2_0= 'true' )
+                    // InternalMelange.g:7957:3: lv_isTrue_2_0= 'true'
                     {
-                    lv_isTrue_2_0=(Token)match(input,115,FOLLOW_2); if (state.failed) return current;
+                    lv_isTrue_2_0=(Token)match(input,116,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               newLeafNode(lv_isTrue_2_0, grammarAccess.getXBooleanLiteralAccess().getIsTrueTrueKeyword_1_1_0());
@@ -22593,7 +22635,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleXNullLiteral"
-    // InternalMelange.g:7959:1: entryRuleXNullLiteral returns [EObject current=null] : iv_ruleXNullLiteral= ruleXNullLiteral EOF ;
+    // InternalMelange.g:7978:1: entryRuleXNullLiteral returns [EObject current=null] : iv_ruleXNullLiteral= ruleXNullLiteral EOF ;
     public final EObject entryRuleXNullLiteral() throws RecognitionException {
         EObject current = null;
 
@@ -22601,8 +22643,8 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalMelange.g:7960:2: (iv_ruleXNullLiteral= ruleXNullLiteral EOF )
-            // InternalMelange.g:7961:2: iv_ruleXNullLiteral= ruleXNullLiteral EOF
+            // InternalMelange.g:7979:2: (iv_ruleXNullLiteral= ruleXNullLiteral EOF )
+            // InternalMelange.g:7980:2: iv_ruleXNullLiteral= ruleXNullLiteral EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getXNullLiteralRule()); 
@@ -22633,7 +22675,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleXNullLiteral"
-    // InternalMelange.g:7968:1: ruleXNullLiteral returns [EObject current=null] : ( () otherlv_1= 'null' ) ;
+    // InternalMelange.g:7987:1: ruleXNullLiteral returns [EObject current=null] : ( () otherlv_1= 'null' ) ;
     public final EObject ruleXNullLiteral() throws RecognitionException {
         EObject current = null;
 
@@ -22642,14 +22684,14 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // InternalMelange.g:7971:28: ( ( () otherlv_1= 'null' ) )
-            // InternalMelange.g:7972:1: ( () otherlv_1= 'null' )
+            // InternalMelange.g:7990:28: ( ( () otherlv_1= 'null' ) )
+            // InternalMelange.g:7991:1: ( () otherlv_1= 'null' )
             {
-            // InternalMelange.g:7972:1: ( () otherlv_1= 'null' )
-            // InternalMelange.g:7972:2: () otherlv_1= 'null'
+            // InternalMelange.g:7991:1: ( () otherlv_1= 'null' )
+            // InternalMelange.g:7991:2: () otherlv_1= 'null'
             {
-            // InternalMelange.g:7972:2: ()
-            // InternalMelange.g:7973:5: 
+            // InternalMelange.g:7991:2: ()
+            // InternalMelange.g:7992:5: 
             {
             if ( state.backtracking==0 ) {
 
@@ -22661,7 +22703,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,116,FOLLOW_2); if (state.failed) return current;
+            otherlv_1=(Token)match(input,117,FOLLOW_2); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_1, grammarAccess.getXNullLiteralAccess().getNullKeyword_1());
@@ -22690,7 +22732,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleXNumberLiteral"
-    // InternalMelange.g:7990:1: entryRuleXNumberLiteral returns [EObject current=null] : iv_ruleXNumberLiteral= ruleXNumberLiteral EOF ;
+    // InternalMelange.g:8009:1: entryRuleXNumberLiteral returns [EObject current=null] : iv_ruleXNumberLiteral= ruleXNumberLiteral EOF ;
     public final EObject entryRuleXNumberLiteral() throws RecognitionException {
         EObject current = null;
 
@@ -22698,8 +22740,8 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalMelange.g:7991:2: (iv_ruleXNumberLiteral= ruleXNumberLiteral EOF )
-            // InternalMelange.g:7992:2: iv_ruleXNumberLiteral= ruleXNumberLiteral EOF
+            // InternalMelange.g:8010:2: (iv_ruleXNumberLiteral= ruleXNumberLiteral EOF )
+            // InternalMelange.g:8011:2: iv_ruleXNumberLiteral= ruleXNumberLiteral EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getXNumberLiteralRule()); 
@@ -22730,7 +22772,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleXNumberLiteral"
-    // InternalMelange.g:7999:1: ruleXNumberLiteral returns [EObject current=null] : ( () ( (lv_value_1_0= ruleNumber ) ) ) ;
+    // InternalMelange.g:8018:1: ruleXNumberLiteral returns [EObject current=null] : ( () ( (lv_value_1_0= ruleNumber ) ) ) ;
     public final EObject ruleXNumberLiteral() throws RecognitionException {
         EObject current = null;
 
@@ -22740,14 +22782,14 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // InternalMelange.g:8002:28: ( ( () ( (lv_value_1_0= ruleNumber ) ) ) )
-            // InternalMelange.g:8003:1: ( () ( (lv_value_1_0= ruleNumber ) ) )
+            // InternalMelange.g:8021:28: ( ( () ( (lv_value_1_0= ruleNumber ) ) ) )
+            // InternalMelange.g:8022:1: ( () ( (lv_value_1_0= ruleNumber ) ) )
             {
-            // InternalMelange.g:8003:1: ( () ( (lv_value_1_0= ruleNumber ) ) )
-            // InternalMelange.g:8003:2: () ( (lv_value_1_0= ruleNumber ) )
+            // InternalMelange.g:8022:1: ( () ( (lv_value_1_0= ruleNumber ) ) )
+            // InternalMelange.g:8022:2: () ( (lv_value_1_0= ruleNumber ) )
             {
-            // InternalMelange.g:8003:2: ()
-            // InternalMelange.g:8004:5: 
+            // InternalMelange.g:8022:2: ()
+            // InternalMelange.g:8023:5: 
             {
             if ( state.backtracking==0 ) {
 
@@ -22759,11 +22801,11 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalMelange.g:8009:2: ( (lv_value_1_0= ruleNumber ) )
-            // InternalMelange.g:8010:1: (lv_value_1_0= ruleNumber )
+            // InternalMelange.g:8028:2: ( (lv_value_1_0= ruleNumber ) )
+            // InternalMelange.g:8029:1: (lv_value_1_0= ruleNumber )
             {
-            // InternalMelange.g:8010:1: (lv_value_1_0= ruleNumber )
-            // InternalMelange.g:8011:3: lv_value_1_0= ruleNumber
+            // InternalMelange.g:8029:1: (lv_value_1_0= ruleNumber )
+            // InternalMelange.g:8030:3: lv_value_1_0= ruleNumber
             {
             if ( state.backtracking==0 ) {
                
@@ -22817,7 +22859,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleXStringLiteral"
-    // InternalMelange.g:8035:1: entryRuleXStringLiteral returns [EObject current=null] : iv_ruleXStringLiteral= ruleXStringLiteral EOF ;
+    // InternalMelange.g:8054:1: entryRuleXStringLiteral returns [EObject current=null] : iv_ruleXStringLiteral= ruleXStringLiteral EOF ;
     public final EObject entryRuleXStringLiteral() throws RecognitionException {
         EObject current = null;
 
@@ -22825,8 +22867,8 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalMelange.g:8036:2: (iv_ruleXStringLiteral= ruleXStringLiteral EOF )
-            // InternalMelange.g:8037:2: iv_ruleXStringLiteral= ruleXStringLiteral EOF
+            // InternalMelange.g:8055:2: (iv_ruleXStringLiteral= ruleXStringLiteral EOF )
+            // InternalMelange.g:8056:2: iv_ruleXStringLiteral= ruleXStringLiteral EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getXStringLiteralRule()); 
@@ -22857,7 +22899,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleXStringLiteral"
-    // InternalMelange.g:8044:1: ruleXStringLiteral returns [EObject current=null] : ( () ( (lv_value_1_0= RULE_STRING ) ) ) ;
+    // InternalMelange.g:8063:1: ruleXStringLiteral returns [EObject current=null] : ( () ( (lv_value_1_0= RULE_STRING ) ) ) ;
     public final EObject ruleXStringLiteral() throws RecognitionException {
         EObject current = null;
 
@@ -22866,14 +22908,14 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // InternalMelange.g:8047:28: ( ( () ( (lv_value_1_0= RULE_STRING ) ) ) )
-            // InternalMelange.g:8048:1: ( () ( (lv_value_1_0= RULE_STRING ) ) )
+            // InternalMelange.g:8066:28: ( ( () ( (lv_value_1_0= RULE_STRING ) ) ) )
+            // InternalMelange.g:8067:1: ( () ( (lv_value_1_0= RULE_STRING ) ) )
             {
-            // InternalMelange.g:8048:1: ( () ( (lv_value_1_0= RULE_STRING ) ) )
-            // InternalMelange.g:8048:2: () ( (lv_value_1_0= RULE_STRING ) )
+            // InternalMelange.g:8067:1: ( () ( (lv_value_1_0= RULE_STRING ) ) )
+            // InternalMelange.g:8067:2: () ( (lv_value_1_0= RULE_STRING ) )
             {
-            // InternalMelange.g:8048:2: ()
-            // InternalMelange.g:8049:5: 
+            // InternalMelange.g:8067:2: ()
+            // InternalMelange.g:8068:5: 
             {
             if ( state.backtracking==0 ) {
 
@@ -22885,11 +22927,11 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalMelange.g:8054:2: ( (lv_value_1_0= RULE_STRING ) )
-            // InternalMelange.g:8055:1: (lv_value_1_0= RULE_STRING )
+            // InternalMelange.g:8073:2: ( (lv_value_1_0= RULE_STRING ) )
+            // InternalMelange.g:8074:1: (lv_value_1_0= RULE_STRING )
             {
-            // InternalMelange.g:8055:1: (lv_value_1_0= RULE_STRING )
-            // InternalMelange.g:8056:3: lv_value_1_0= RULE_STRING
+            // InternalMelange.g:8074:1: (lv_value_1_0= RULE_STRING )
+            // InternalMelange.g:8075:3: lv_value_1_0= RULE_STRING
             {
             lv_value_1_0=(Token)match(input,RULE_STRING,FOLLOW_2); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -22938,7 +22980,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleXTypeLiteral"
-    // InternalMelange.g:8080:1: entryRuleXTypeLiteral returns [EObject current=null] : iv_ruleXTypeLiteral= ruleXTypeLiteral EOF ;
+    // InternalMelange.g:8099:1: entryRuleXTypeLiteral returns [EObject current=null] : iv_ruleXTypeLiteral= ruleXTypeLiteral EOF ;
     public final EObject entryRuleXTypeLiteral() throws RecognitionException {
         EObject current = null;
 
@@ -22946,8 +22988,8 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalMelange.g:8081:2: (iv_ruleXTypeLiteral= ruleXTypeLiteral EOF )
-            // InternalMelange.g:8082:2: iv_ruleXTypeLiteral= ruleXTypeLiteral EOF
+            // InternalMelange.g:8100:2: (iv_ruleXTypeLiteral= ruleXTypeLiteral EOF )
+            // InternalMelange.g:8101:2: iv_ruleXTypeLiteral= ruleXTypeLiteral EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getXTypeLiteralRule()); 
@@ -22978,7 +23020,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleXTypeLiteral"
-    // InternalMelange.g:8089:1: ruleXTypeLiteral returns [EObject current=null] : ( () otherlv_1= 'typeof' otherlv_2= '(' ( ( ruleQualifiedName ) ) ( (lv_arrayDimensions_4_0= ruleArrayBrackets ) )* otherlv_5= ')' ) ;
+    // InternalMelange.g:8108:1: ruleXTypeLiteral returns [EObject current=null] : ( () otherlv_1= 'typeof' otherlv_2= '(' ( ( ruleQualifiedName ) ) ( (lv_arrayDimensions_4_0= ruleArrayBrackets ) )* otherlv_5= ')' ) ;
     public final EObject ruleXTypeLiteral() throws RecognitionException {
         EObject current = null;
 
@@ -22991,14 +23033,14 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // InternalMelange.g:8092:28: ( ( () otherlv_1= 'typeof' otherlv_2= '(' ( ( ruleQualifiedName ) ) ( (lv_arrayDimensions_4_0= ruleArrayBrackets ) )* otherlv_5= ')' ) )
-            // InternalMelange.g:8093:1: ( () otherlv_1= 'typeof' otherlv_2= '(' ( ( ruleQualifiedName ) ) ( (lv_arrayDimensions_4_0= ruleArrayBrackets ) )* otherlv_5= ')' )
+            // InternalMelange.g:8111:28: ( ( () otherlv_1= 'typeof' otherlv_2= '(' ( ( ruleQualifiedName ) ) ( (lv_arrayDimensions_4_0= ruleArrayBrackets ) )* otherlv_5= ')' ) )
+            // InternalMelange.g:8112:1: ( () otherlv_1= 'typeof' otherlv_2= '(' ( ( ruleQualifiedName ) ) ( (lv_arrayDimensions_4_0= ruleArrayBrackets ) )* otherlv_5= ')' )
             {
-            // InternalMelange.g:8093:1: ( () otherlv_1= 'typeof' otherlv_2= '(' ( ( ruleQualifiedName ) ) ( (lv_arrayDimensions_4_0= ruleArrayBrackets ) )* otherlv_5= ')' )
-            // InternalMelange.g:8093:2: () otherlv_1= 'typeof' otherlv_2= '(' ( ( ruleQualifiedName ) ) ( (lv_arrayDimensions_4_0= ruleArrayBrackets ) )* otherlv_5= ')'
+            // InternalMelange.g:8112:1: ( () otherlv_1= 'typeof' otherlv_2= '(' ( ( ruleQualifiedName ) ) ( (lv_arrayDimensions_4_0= ruleArrayBrackets ) )* otherlv_5= ')' )
+            // InternalMelange.g:8112:2: () otherlv_1= 'typeof' otherlv_2= '(' ( ( ruleQualifiedName ) ) ( (lv_arrayDimensions_4_0= ruleArrayBrackets ) )* otherlv_5= ')'
             {
-            // InternalMelange.g:8093:2: ()
-            // InternalMelange.g:8094:5: 
+            // InternalMelange.g:8112:2: ()
+            // InternalMelange.g:8113:5: 
             {
             if ( state.backtracking==0 ) {
 
@@ -23010,7 +23052,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,117,FOLLOW_46); if (state.failed) return current;
+            otherlv_1=(Token)match(input,118,FOLLOW_46); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_1, grammarAccess.getXTypeLiteralAccess().getTypeofKeyword_1());
@@ -23022,11 +23064,11 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                   	newLeafNode(otherlv_2, grammarAccess.getXTypeLiteralAccess().getLeftParenthesisKeyword_2());
                   
             }
-            // InternalMelange.g:8107:1: ( ( ruleQualifiedName ) )
-            // InternalMelange.g:8108:1: ( ruleQualifiedName )
+            // InternalMelange.g:8126:1: ( ( ruleQualifiedName ) )
+            // InternalMelange.g:8127:1: ( ruleQualifiedName )
             {
-            // InternalMelange.g:8108:1: ( ruleQualifiedName )
-            // InternalMelange.g:8109:3: ruleQualifiedName
+            // InternalMelange.g:8127:1: ( ruleQualifiedName )
+            // InternalMelange.g:8128:3: ruleQualifiedName
             {
             if ( state.backtracking==0 ) {
 
@@ -23040,7 +23082,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
               	        newCompositeNode(grammarAccess.getXTypeLiteralAccess().getTypeJvmTypeCrossReference_3_0()); 
               	    
             }
-            pushFollow(FOLLOW_114);
+            pushFollow(FOLLOW_115);
             ruleQualifiedName();
 
             state._fsp--;
@@ -23056,30 +23098,30 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalMelange.g:8122:2: ( (lv_arrayDimensions_4_0= ruleArrayBrackets ) )*
+            // InternalMelange.g:8141:2: ( (lv_arrayDimensions_4_0= ruleArrayBrackets ) )*
             loop150:
             do {
                 int alt150=2;
                 int LA150_0 = input.LA(1);
 
-                if ( (LA150_0==62) ) {
+                if ( (LA150_0==63) ) {
                     alt150=1;
                 }
 
 
                 switch (alt150) {
             	case 1 :
-            	    // InternalMelange.g:8123:1: (lv_arrayDimensions_4_0= ruleArrayBrackets )
+            	    // InternalMelange.g:8142:1: (lv_arrayDimensions_4_0= ruleArrayBrackets )
             	    {
-            	    // InternalMelange.g:8123:1: (lv_arrayDimensions_4_0= ruleArrayBrackets )
-            	    // InternalMelange.g:8124:3: lv_arrayDimensions_4_0= ruleArrayBrackets
+            	    // InternalMelange.g:8142:1: (lv_arrayDimensions_4_0= ruleArrayBrackets )
+            	    // InternalMelange.g:8143:3: lv_arrayDimensions_4_0= ruleArrayBrackets
             	    {
             	    if ( state.backtracking==0 ) {
             	       
             	      	        newCompositeNode(grammarAccess.getXTypeLiteralAccess().getArrayDimensionsArrayBracketsParserRuleCall_4_0()); 
             	      	    
             	    }
-            	    pushFollow(FOLLOW_114);
+            	    pushFollow(FOLLOW_115);
             	    lv_arrayDimensions_4_0=ruleArrayBrackets();
 
             	    state._fsp--;
@@ -23138,7 +23180,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleXThrowExpression"
-    // InternalMelange.g:8152:1: entryRuleXThrowExpression returns [EObject current=null] : iv_ruleXThrowExpression= ruleXThrowExpression EOF ;
+    // InternalMelange.g:8171:1: entryRuleXThrowExpression returns [EObject current=null] : iv_ruleXThrowExpression= ruleXThrowExpression EOF ;
     public final EObject entryRuleXThrowExpression() throws RecognitionException {
         EObject current = null;
 
@@ -23146,8 +23188,8 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalMelange.g:8153:2: (iv_ruleXThrowExpression= ruleXThrowExpression EOF )
-            // InternalMelange.g:8154:2: iv_ruleXThrowExpression= ruleXThrowExpression EOF
+            // InternalMelange.g:8172:2: (iv_ruleXThrowExpression= ruleXThrowExpression EOF )
+            // InternalMelange.g:8173:2: iv_ruleXThrowExpression= ruleXThrowExpression EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getXThrowExpressionRule()); 
@@ -23178,7 +23220,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleXThrowExpression"
-    // InternalMelange.g:8161:1: ruleXThrowExpression returns [EObject current=null] : ( () otherlv_1= 'throw' ( (lv_expression_2_0= ruleXExpression ) ) ) ;
+    // InternalMelange.g:8180:1: ruleXThrowExpression returns [EObject current=null] : ( () otherlv_1= 'throw' ( (lv_expression_2_0= ruleXExpression ) ) ) ;
     public final EObject ruleXThrowExpression() throws RecognitionException {
         EObject current = null;
 
@@ -23189,14 +23231,14 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // InternalMelange.g:8164:28: ( ( () otherlv_1= 'throw' ( (lv_expression_2_0= ruleXExpression ) ) ) )
-            // InternalMelange.g:8165:1: ( () otherlv_1= 'throw' ( (lv_expression_2_0= ruleXExpression ) ) )
+            // InternalMelange.g:8183:28: ( ( () otherlv_1= 'throw' ( (lv_expression_2_0= ruleXExpression ) ) ) )
+            // InternalMelange.g:8184:1: ( () otherlv_1= 'throw' ( (lv_expression_2_0= ruleXExpression ) ) )
             {
-            // InternalMelange.g:8165:1: ( () otherlv_1= 'throw' ( (lv_expression_2_0= ruleXExpression ) ) )
-            // InternalMelange.g:8165:2: () otherlv_1= 'throw' ( (lv_expression_2_0= ruleXExpression ) )
+            // InternalMelange.g:8184:1: ( () otherlv_1= 'throw' ( (lv_expression_2_0= ruleXExpression ) ) )
+            // InternalMelange.g:8184:2: () otherlv_1= 'throw' ( (lv_expression_2_0= ruleXExpression ) )
             {
-            // InternalMelange.g:8165:2: ()
-            // InternalMelange.g:8166:5: 
+            // InternalMelange.g:8184:2: ()
+            // InternalMelange.g:8185:5: 
             {
             if ( state.backtracking==0 ) {
 
@@ -23208,17 +23250,17 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,118,FOLLOW_63); if (state.failed) return current;
+            otherlv_1=(Token)match(input,119,FOLLOW_64); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_1, grammarAccess.getXThrowExpressionAccess().getThrowKeyword_1());
                   
             }
-            // InternalMelange.g:8175:1: ( (lv_expression_2_0= ruleXExpression ) )
-            // InternalMelange.g:8176:1: (lv_expression_2_0= ruleXExpression )
+            // InternalMelange.g:8194:1: ( (lv_expression_2_0= ruleXExpression ) )
+            // InternalMelange.g:8195:1: (lv_expression_2_0= ruleXExpression )
             {
-            // InternalMelange.g:8176:1: (lv_expression_2_0= ruleXExpression )
-            // InternalMelange.g:8177:3: lv_expression_2_0= ruleXExpression
+            // InternalMelange.g:8195:1: (lv_expression_2_0= ruleXExpression )
+            // InternalMelange.g:8196:3: lv_expression_2_0= ruleXExpression
             {
             if ( state.backtracking==0 ) {
                
@@ -23272,7 +23314,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleXReturnExpression"
-    // InternalMelange.g:8201:1: entryRuleXReturnExpression returns [EObject current=null] : iv_ruleXReturnExpression= ruleXReturnExpression EOF ;
+    // InternalMelange.g:8220:1: entryRuleXReturnExpression returns [EObject current=null] : iv_ruleXReturnExpression= ruleXReturnExpression EOF ;
     public final EObject entryRuleXReturnExpression() throws RecognitionException {
         EObject current = null;
 
@@ -23280,8 +23322,8 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalMelange.g:8202:2: (iv_ruleXReturnExpression= ruleXReturnExpression EOF )
-            // InternalMelange.g:8203:2: iv_ruleXReturnExpression= ruleXReturnExpression EOF
+            // InternalMelange.g:8221:2: (iv_ruleXReturnExpression= ruleXReturnExpression EOF )
+            // InternalMelange.g:8222:2: iv_ruleXReturnExpression= ruleXReturnExpression EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getXReturnExpressionRule()); 
@@ -23312,7 +23354,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleXReturnExpression"
-    // InternalMelange.g:8210:1: ruleXReturnExpression returns [EObject current=null] : ( () otherlv_1= 'return' ( ( 'extends' | 'static' | 'import' | 'extension' | '!' | '-' | '+' | 'new' | '{' | 'switch' | 'synchronized' | '<' | 'super' | '#' | '[' | 'false' | 'true' | 'null' | 'typeof' | 'if' | 'for' | 'while' | 'do' | 'throw' | 'return' | 'try' | '(' | RULE_ID | RULE_HEX | RULE_INT | RULE_DECIMAL | RULE_STRING )=> (lv_expression_2_0= ruleXExpression ) )? ) ;
+    // InternalMelange.g:8229:1: ruleXReturnExpression returns [EObject current=null] : ( () otherlv_1= 'return' ( ( 'extends' | 'static' | 'import' | 'extension' | '!' | '-' | '+' | 'new' | '{' | 'switch' | 'synchronized' | '<' | 'super' | '#' | '[' | 'false' | 'true' | 'null' | 'typeof' | 'if' | 'for' | 'while' | 'do' | 'throw' | 'return' | 'try' | '(' | RULE_ID | RULE_HEX | RULE_INT | RULE_DECIMAL | RULE_STRING )=> (lv_expression_2_0= ruleXExpression ) )? ) ;
     public final EObject ruleXReturnExpression() throws RecognitionException {
         EObject current = null;
 
@@ -23323,14 +23365,14 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // InternalMelange.g:8213:28: ( ( () otherlv_1= 'return' ( ( 'extends' | 'static' | 'import' | 'extension' | '!' | '-' | '+' | 'new' | '{' | 'switch' | 'synchronized' | '<' | 'super' | '#' | '[' | 'false' | 'true' | 'null' | 'typeof' | 'if' | 'for' | 'while' | 'do' | 'throw' | 'return' | 'try' | '(' | RULE_ID | RULE_HEX | RULE_INT | RULE_DECIMAL | RULE_STRING )=> (lv_expression_2_0= ruleXExpression ) )? ) )
-            // InternalMelange.g:8214:1: ( () otherlv_1= 'return' ( ( 'extends' | 'static' | 'import' | 'extension' | '!' | '-' | '+' | 'new' | '{' | 'switch' | 'synchronized' | '<' | 'super' | '#' | '[' | 'false' | 'true' | 'null' | 'typeof' | 'if' | 'for' | 'while' | 'do' | 'throw' | 'return' | 'try' | '(' | RULE_ID | RULE_HEX | RULE_INT | RULE_DECIMAL | RULE_STRING )=> (lv_expression_2_0= ruleXExpression ) )? )
+            // InternalMelange.g:8232:28: ( ( () otherlv_1= 'return' ( ( 'extends' | 'static' | 'import' | 'extension' | '!' | '-' | '+' | 'new' | '{' | 'switch' | 'synchronized' | '<' | 'super' | '#' | '[' | 'false' | 'true' | 'null' | 'typeof' | 'if' | 'for' | 'while' | 'do' | 'throw' | 'return' | 'try' | '(' | RULE_ID | RULE_HEX | RULE_INT | RULE_DECIMAL | RULE_STRING )=> (lv_expression_2_0= ruleXExpression ) )? ) )
+            // InternalMelange.g:8233:1: ( () otherlv_1= 'return' ( ( 'extends' | 'static' | 'import' | 'extension' | '!' | '-' | '+' | 'new' | '{' | 'switch' | 'synchronized' | '<' | 'super' | '#' | '[' | 'false' | 'true' | 'null' | 'typeof' | 'if' | 'for' | 'while' | 'do' | 'throw' | 'return' | 'try' | '(' | RULE_ID | RULE_HEX | RULE_INT | RULE_DECIMAL | RULE_STRING )=> (lv_expression_2_0= ruleXExpression ) )? )
             {
-            // InternalMelange.g:8214:1: ( () otherlv_1= 'return' ( ( 'extends' | 'static' | 'import' | 'extension' | '!' | '-' | '+' | 'new' | '{' | 'switch' | 'synchronized' | '<' | 'super' | '#' | '[' | 'false' | 'true' | 'null' | 'typeof' | 'if' | 'for' | 'while' | 'do' | 'throw' | 'return' | 'try' | '(' | RULE_ID | RULE_HEX | RULE_INT | RULE_DECIMAL | RULE_STRING )=> (lv_expression_2_0= ruleXExpression ) )? )
-            // InternalMelange.g:8214:2: () otherlv_1= 'return' ( ( 'extends' | 'static' | 'import' | 'extension' | '!' | '-' | '+' | 'new' | '{' | 'switch' | 'synchronized' | '<' | 'super' | '#' | '[' | 'false' | 'true' | 'null' | 'typeof' | 'if' | 'for' | 'while' | 'do' | 'throw' | 'return' | 'try' | '(' | RULE_ID | RULE_HEX | RULE_INT | RULE_DECIMAL | RULE_STRING )=> (lv_expression_2_0= ruleXExpression ) )?
+            // InternalMelange.g:8233:1: ( () otherlv_1= 'return' ( ( 'extends' | 'static' | 'import' | 'extension' | '!' | '-' | '+' | 'new' | '{' | 'switch' | 'synchronized' | '<' | 'super' | '#' | '[' | 'false' | 'true' | 'null' | 'typeof' | 'if' | 'for' | 'while' | 'do' | 'throw' | 'return' | 'try' | '(' | RULE_ID | RULE_HEX | RULE_INT | RULE_DECIMAL | RULE_STRING )=> (lv_expression_2_0= ruleXExpression ) )? )
+            // InternalMelange.g:8233:2: () otherlv_1= 'return' ( ( 'extends' | 'static' | 'import' | 'extension' | '!' | '-' | '+' | 'new' | '{' | 'switch' | 'synchronized' | '<' | 'super' | '#' | '[' | 'false' | 'true' | 'null' | 'typeof' | 'if' | 'for' | 'while' | 'do' | 'throw' | 'return' | 'try' | '(' | RULE_ID | RULE_HEX | RULE_INT | RULE_DECIMAL | RULE_STRING )=> (lv_expression_2_0= ruleXExpression ) )?
             {
-            // InternalMelange.g:8214:2: ()
-            // InternalMelange.g:8215:5: 
+            // InternalMelange.g:8233:2: ()
+            // InternalMelange.g:8234:5: 
             {
             if ( state.backtracking==0 ) {
 
@@ -23342,21 +23384,21 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,119,FOLLOW_115); if (state.failed) return current;
+            otherlv_1=(Token)match(input,120,FOLLOW_116); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_1, grammarAccess.getXReturnExpressionAccess().getReturnKeyword_1());
                   
             }
-            // InternalMelange.g:8224:1: ( ( 'extends' | 'static' | 'import' | 'extension' | '!' | '-' | '+' | 'new' | '{' | 'switch' | 'synchronized' | '<' | 'super' | '#' | '[' | 'false' | 'true' | 'null' | 'typeof' | 'if' | 'for' | 'while' | 'do' | 'throw' | 'return' | 'try' | '(' | RULE_ID | RULE_HEX | RULE_INT | RULE_DECIMAL | RULE_STRING )=> (lv_expression_2_0= ruleXExpression ) )?
+            // InternalMelange.g:8243:1: ( ( 'extends' | 'static' | 'import' | 'extension' | '!' | '-' | '+' | 'new' | '{' | 'switch' | 'synchronized' | '<' | 'super' | '#' | '[' | 'false' | 'true' | 'null' | 'typeof' | 'if' | 'for' | 'while' | 'do' | 'throw' | 'return' | 'try' | '(' | RULE_ID | RULE_HEX | RULE_INT | RULE_DECIMAL | RULE_STRING )=> (lv_expression_2_0= ruleXExpression ) )?
             int alt151=2;
             alt151 = dfa151.predict(input);
             switch (alt151) {
                 case 1 :
-                    // InternalMelange.g:8224:2: ( 'extends' | 'static' | 'import' | 'extension' | '!' | '-' | '+' | 'new' | '{' | 'switch' | 'synchronized' | '<' | 'super' | '#' | '[' | 'false' | 'true' | 'null' | 'typeof' | 'if' | 'for' | 'while' | 'do' | 'throw' | 'return' | 'try' | '(' | RULE_ID | RULE_HEX | RULE_INT | RULE_DECIMAL | RULE_STRING )=> (lv_expression_2_0= ruleXExpression )
+                    // InternalMelange.g:8243:2: ( 'extends' | 'static' | 'import' | 'extension' | '!' | '-' | '+' | 'new' | '{' | 'switch' | 'synchronized' | '<' | 'super' | '#' | '[' | 'false' | 'true' | 'null' | 'typeof' | 'if' | 'for' | 'while' | 'do' | 'throw' | 'return' | 'try' | '(' | RULE_ID | RULE_HEX | RULE_INT | RULE_DECIMAL | RULE_STRING )=> (lv_expression_2_0= ruleXExpression )
                     {
-                    // InternalMelange.g:8252:1: (lv_expression_2_0= ruleXExpression )
-                    // InternalMelange.g:8253:3: lv_expression_2_0= ruleXExpression
+                    // InternalMelange.g:8271:1: (lv_expression_2_0= ruleXExpression )
+                    // InternalMelange.g:8272:3: lv_expression_2_0= ruleXExpression
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -23413,7 +23455,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleXTryCatchFinallyExpression"
-    // InternalMelange.g:8277:1: entryRuleXTryCatchFinallyExpression returns [EObject current=null] : iv_ruleXTryCatchFinallyExpression= ruleXTryCatchFinallyExpression EOF ;
+    // InternalMelange.g:8296:1: entryRuleXTryCatchFinallyExpression returns [EObject current=null] : iv_ruleXTryCatchFinallyExpression= ruleXTryCatchFinallyExpression EOF ;
     public final EObject entryRuleXTryCatchFinallyExpression() throws RecognitionException {
         EObject current = null;
 
@@ -23421,8 +23463,8 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalMelange.g:8278:2: (iv_ruleXTryCatchFinallyExpression= ruleXTryCatchFinallyExpression EOF )
-            // InternalMelange.g:8279:2: iv_ruleXTryCatchFinallyExpression= ruleXTryCatchFinallyExpression EOF
+            // InternalMelange.g:8297:2: (iv_ruleXTryCatchFinallyExpression= ruleXTryCatchFinallyExpression EOF )
+            // InternalMelange.g:8298:2: iv_ruleXTryCatchFinallyExpression= ruleXTryCatchFinallyExpression EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getXTryCatchFinallyExpressionRule()); 
@@ -23453,7 +23495,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleXTryCatchFinallyExpression"
-    // InternalMelange.g:8286:1: ruleXTryCatchFinallyExpression returns [EObject current=null] : ( () otherlv_1= 'try' ( (lv_expression_2_0= ruleXExpression ) ) ( ( ( ( 'catch' )=> (lv_catchClauses_3_0= ruleXCatchClause ) )+ ( ( ( 'finally' )=>otherlv_4= 'finally' ) ( (lv_finallyExpression_5_0= ruleXExpression ) ) )? ) | (otherlv_6= 'finally' ( (lv_finallyExpression_7_0= ruleXExpression ) ) ) ) ) ;
+    // InternalMelange.g:8305:1: ruleXTryCatchFinallyExpression returns [EObject current=null] : ( () otherlv_1= 'try' ( (lv_expression_2_0= ruleXExpression ) ) ( ( ( ( 'catch' )=> (lv_catchClauses_3_0= ruleXCatchClause ) )+ ( ( ( 'finally' )=>otherlv_4= 'finally' ) ( (lv_finallyExpression_5_0= ruleXExpression ) ) )? ) | (otherlv_6= 'finally' ( (lv_finallyExpression_7_0= ruleXExpression ) ) ) ) ) ;
     public final EObject ruleXTryCatchFinallyExpression() throws RecognitionException {
         EObject current = null;
 
@@ -23472,14 +23514,14 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // InternalMelange.g:8289:28: ( ( () otherlv_1= 'try' ( (lv_expression_2_0= ruleXExpression ) ) ( ( ( ( 'catch' )=> (lv_catchClauses_3_0= ruleXCatchClause ) )+ ( ( ( 'finally' )=>otherlv_4= 'finally' ) ( (lv_finallyExpression_5_0= ruleXExpression ) ) )? ) | (otherlv_6= 'finally' ( (lv_finallyExpression_7_0= ruleXExpression ) ) ) ) ) )
-            // InternalMelange.g:8290:1: ( () otherlv_1= 'try' ( (lv_expression_2_0= ruleXExpression ) ) ( ( ( ( 'catch' )=> (lv_catchClauses_3_0= ruleXCatchClause ) )+ ( ( ( 'finally' )=>otherlv_4= 'finally' ) ( (lv_finallyExpression_5_0= ruleXExpression ) ) )? ) | (otherlv_6= 'finally' ( (lv_finallyExpression_7_0= ruleXExpression ) ) ) ) )
+            // InternalMelange.g:8308:28: ( ( () otherlv_1= 'try' ( (lv_expression_2_0= ruleXExpression ) ) ( ( ( ( 'catch' )=> (lv_catchClauses_3_0= ruleXCatchClause ) )+ ( ( ( 'finally' )=>otherlv_4= 'finally' ) ( (lv_finallyExpression_5_0= ruleXExpression ) ) )? ) | (otherlv_6= 'finally' ( (lv_finallyExpression_7_0= ruleXExpression ) ) ) ) ) )
+            // InternalMelange.g:8309:1: ( () otherlv_1= 'try' ( (lv_expression_2_0= ruleXExpression ) ) ( ( ( ( 'catch' )=> (lv_catchClauses_3_0= ruleXCatchClause ) )+ ( ( ( 'finally' )=>otherlv_4= 'finally' ) ( (lv_finallyExpression_5_0= ruleXExpression ) ) )? ) | (otherlv_6= 'finally' ( (lv_finallyExpression_7_0= ruleXExpression ) ) ) ) )
             {
-            // InternalMelange.g:8290:1: ( () otherlv_1= 'try' ( (lv_expression_2_0= ruleXExpression ) ) ( ( ( ( 'catch' )=> (lv_catchClauses_3_0= ruleXCatchClause ) )+ ( ( ( 'finally' )=>otherlv_4= 'finally' ) ( (lv_finallyExpression_5_0= ruleXExpression ) ) )? ) | (otherlv_6= 'finally' ( (lv_finallyExpression_7_0= ruleXExpression ) ) ) ) )
-            // InternalMelange.g:8290:2: () otherlv_1= 'try' ( (lv_expression_2_0= ruleXExpression ) ) ( ( ( ( 'catch' )=> (lv_catchClauses_3_0= ruleXCatchClause ) )+ ( ( ( 'finally' )=>otherlv_4= 'finally' ) ( (lv_finallyExpression_5_0= ruleXExpression ) ) )? ) | (otherlv_6= 'finally' ( (lv_finallyExpression_7_0= ruleXExpression ) ) ) )
+            // InternalMelange.g:8309:1: ( () otherlv_1= 'try' ( (lv_expression_2_0= ruleXExpression ) ) ( ( ( ( 'catch' )=> (lv_catchClauses_3_0= ruleXCatchClause ) )+ ( ( ( 'finally' )=>otherlv_4= 'finally' ) ( (lv_finallyExpression_5_0= ruleXExpression ) ) )? ) | (otherlv_6= 'finally' ( (lv_finallyExpression_7_0= ruleXExpression ) ) ) ) )
+            // InternalMelange.g:8309:2: () otherlv_1= 'try' ( (lv_expression_2_0= ruleXExpression ) ) ( ( ( ( 'catch' )=> (lv_catchClauses_3_0= ruleXCatchClause ) )+ ( ( ( 'finally' )=>otherlv_4= 'finally' ) ( (lv_finallyExpression_5_0= ruleXExpression ) ) )? ) | (otherlv_6= 'finally' ( (lv_finallyExpression_7_0= ruleXExpression ) ) ) )
             {
-            // InternalMelange.g:8290:2: ()
-            // InternalMelange.g:8291:5: 
+            // InternalMelange.g:8309:2: ()
+            // InternalMelange.g:8310:5: 
             {
             if ( state.backtracking==0 ) {
 
@@ -23491,24 +23533,24 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,120,FOLLOW_63); if (state.failed) return current;
+            otherlv_1=(Token)match(input,121,FOLLOW_64); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_1, grammarAccess.getXTryCatchFinallyExpressionAccess().getTryKeyword_1());
                   
             }
-            // InternalMelange.g:8300:1: ( (lv_expression_2_0= ruleXExpression ) )
-            // InternalMelange.g:8301:1: (lv_expression_2_0= ruleXExpression )
+            // InternalMelange.g:8319:1: ( (lv_expression_2_0= ruleXExpression ) )
+            // InternalMelange.g:8320:1: (lv_expression_2_0= ruleXExpression )
             {
-            // InternalMelange.g:8301:1: (lv_expression_2_0= ruleXExpression )
-            // InternalMelange.g:8302:3: lv_expression_2_0= ruleXExpression
+            // InternalMelange.g:8320:1: (lv_expression_2_0= ruleXExpression )
+            // InternalMelange.g:8321:3: lv_expression_2_0= ruleXExpression
             {
             if ( state.backtracking==0 ) {
                
               	        newCompositeNode(grammarAccess.getXTryCatchFinallyExpressionAccess().getExpressionXExpressionParserRuleCall_2_0()); 
               	    
             }
-            pushFollow(FOLLOW_116);
+            pushFollow(FOLLOW_117);
             lv_expression_2_0=ruleXExpression();
 
             state._fsp--;
@@ -23532,14 +23574,14 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalMelange.g:8318:2: ( ( ( ( 'catch' )=> (lv_catchClauses_3_0= ruleXCatchClause ) )+ ( ( ( 'finally' )=>otherlv_4= 'finally' ) ( (lv_finallyExpression_5_0= ruleXExpression ) ) )? ) | (otherlv_6= 'finally' ( (lv_finallyExpression_7_0= ruleXExpression ) ) ) )
+            // InternalMelange.g:8337:2: ( ( ( ( 'catch' )=> (lv_catchClauses_3_0= ruleXCatchClause ) )+ ( ( ( 'finally' )=>otherlv_4= 'finally' ) ( (lv_finallyExpression_5_0= ruleXExpression ) ) )? ) | (otherlv_6= 'finally' ( (lv_finallyExpression_7_0= ruleXExpression ) ) ) )
             int alt154=2;
             int LA154_0 = input.LA(1);
 
-            if ( (LA154_0==123) ) {
+            if ( (LA154_0==124) ) {
                 alt154=1;
             }
-            else if ( (LA154_0==121) ) {
+            else if ( (LA154_0==122) ) {
                 alt154=2;
             }
             else {
@@ -23551,19 +23593,19 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
             }
             switch (alt154) {
                 case 1 :
-                    // InternalMelange.g:8318:3: ( ( ( 'catch' )=> (lv_catchClauses_3_0= ruleXCatchClause ) )+ ( ( ( 'finally' )=>otherlv_4= 'finally' ) ( (lv_finallyExpression_5_0= ruleXExpression ) ) )? )
+                    // InternalMelange.g:8337:3: ( ( ( 'catch' )=> (lv_catchClauses_3_0= ruleXCatchClause ) )+ ( ( ( 'finally' )=>otherlv_4= 'finally' ) ( (lv_finallyExpression_5_0= ruleXExpression ) ) )? )
                     {
-                    // InternalMelange.g:8318:3: ( ( ( 'catch' )=> (lv_catchClauses_3_0= ruleXCatchClause ) )+ ( ( ( 'finally' )=>otherlv_4= 'finally' ) ( (lv_finallyExpression_5_0= ruleXExpression ) ) )? )
-                    // InternalMelange.g:8318:4: ( ( 'catch' )=> (lv_catchClauses_3_0= ruleXCatchClause ) )+ ( ( ( 'finally' )=>otherlv_4= 'finally' ) ( (lv_finallyExpression_5_0= ruleXExpression ) ) )?
+                    // InternalMelange.g:8337:3: ( ( ( 'catch' )=> (lv_catchClauses_3_0= ruleXCatchClause ) )+ ( ( ( 'finally' )=>otherlv_4= 'finally' ) ( (lv_finallyExpression_5_0= ruleXExpression ) ) )? )
+                    // InternalMelange.g:8337:4: ( ( 'catch' )=> (lv_catchClauses_3_0= ruleXCatchClause ) )+ ( ( ( 'finally' )=>otherlv_4= 'finally' ) ( (lv_finallyExpression_5_0= ruleXExpression ) ) )?
                     {
-                    // InternalMelange.g:8318:4: ( ( 'catch' )=> (lv_catchClauses_3_0= ruleXCatchClause ) )+
+                    // InternalMelange.g:8337:4: ( ( 'catch' )=> (lv_catchClauses_3_0= ruleXCatchClause ) )+
                     int cnt152=0;
                     loop152:
                     do {
                         int alt152=2;
                         int LA152_0 = input.LA(1);
 
-                        if ( (LA152_0==123) ) {
+                        if ( (LA152_0==124) ) {
                             int LA152_2 = input.LA(2);
 
                             if ( (synpred44_InternalMelange()) ) {
@@ -23576,17 +23618,17 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
                         switch (alt152) {
                     	case 1 :
-                    	    // InternalMelange.g:8318:5: ( 'catch' )=> (lv_catchClauses_3_0= ruleXCatchClause )
+                    	    // InternalMelange.g:8337:5: ( 'catch' )=> (lv_catchClauses_3_0= ruleXCatchClause )
                     	    {
-                    	    // InternalMelange.g:8320:1: (lv_catchClauses_3_0= ruleXCatchClause )
-                    	    // InternalMelange.g:8321:3: lv_catchClauses_3_0= ruleXCatchClause
+                    	    // InternalMelange.g:8339:1: (lv_catchClauses_3_0= ruleXCatchClause )
+                    	    // InternalMelange.g:8340:3: lv_catchClauses_3_0= ruleXCatchClause
                     	    {
                     	    if ( state.backtracking==0 ) {
                     	       
                     	      	        newCompositeNode(grammarAccess.getXTryCatchFinallyExpressionAccess().getCatchClausesXCatchClauseParserRuleCall_3_0_0_0()); 
                     	      	    
                     	    }
-                    	    pushFollow(FOLLOW_117);
+                    	    pushFollow(FOLLOW_118);
                     	    lv_catchClauses_3_0=ruleXCatchClause();
 
                     	    state._fsp--;
@@ -23621,11 +23663,11 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                         cnt152++;
                     } while (true);
 
-                    // InternalMelange.g:8337:3: ( ( ( 'finally' )=>otherlv_4= 'finally' ) ( (lv_finallyExpression_5_0= ruleXExpression ) ) )?
+                    // InternalMelange.g:8356:3: ( ( ( 'finally' )=>otherlv_4= 'finally' ) ( (lv_finallyExpression_5_0= ruleXExpression ) ) )?
                     int alt153=2;
                     int LA153_0 = input.LA(1);
 
-                    if ( (LA153_0==121) ) {
+                    if ( (LA153_0==122) ) {
                         int LA153_1 = input.LA(2);
 
                         if ( (synpred45_InternalMelange()) ) {
@@ -23634,12 +23676,12 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                     }
                     switch (alt153) {
                         case 1 :
-                            // InternalMelange.g:8337:4: ( ( 'finally' )=>otherlv_4= 'finally' ) ( (lv_finallyExpression_5_0= ruleXExpression ) )
+                            // InternalMelange.g:8356:4: ( ( 'finally' )=>otherlv_4= 'finally' ) ( (lv_finallyExpression_5_0= ruleXExpression ) )
                             {
-                            // InternalMelange.g:8337:4: ( ( 'finally' )=>otherlv_4= 'finally' )
-                            // InternalMelange.g:8337:5: ( 'finally' )=>otherlv_4= 'finally'
+                            // InternalMelange.g:8356:4: ( ( 'finally' )=>otherlv_4= 'finally' )
+                            // InternalMelange.g:8356:5: ( 'finally' )=>otherlv_4= 'finally'
                             {
-                            otherlv_4=(Token)match(input,121,FOLLOW_63); if (state.failed) return current;
+                            otherlv_4=(Token)match(input,122,FOLLOW_64); if (state.failed) return current;
                             if ( state.backtracking==0 ) {
 
                                   	newLeafNode(otherlv_4, grammarAccess.getXTryCatchFinallyExpressionAccess().getFinallyKeyword_3_0_1_0());
@@ -23648,11 +23690,11 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
                             }
 
-                            // InternalMelange.g:8342:2: ( (lv_finallyExpression_5_0= ruleXExpression ) )
-                            // InternalMelange.g:8343:1: (lv_finallyExpression_5_0= ruleXExpression )
+                            // InternalMelange.g:8361:2: ( (lv_finallyExpression_5_0= ruleXExpression ) )
+                            // InternalMelange.g:8362:1: (lv_finallyExpression_5_0= ruleXExpression )
                             {
-                            // InternalMelange.g:8343:1: (lv_finallyExpression_5_0= ruleXExpression )
-                            // InternalMelange.g:8344:3: lv_finallyExpression_5_0= ruleXExpression
+                            // InternalMelange.g:8362:1: (lv_finallyExpression_5_0= ruleXExpression )
+                            // InternalMelange.g:8363:3: lv_finallyExpression_5_0= ruleXExpression
                             {
                             if ( state.backtracking==0 ) {
                                
@@ -23696,22 +23738,22 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalMelange.g:8361:6: (otherlv_6= 'finally' ( (lv_finallyExpression_7_0= ruleXExpression ) ) )
+                    // InternalMelange.g:8380:6: (otherlv_6= 'finally' ( (lv_finallyExpression_7_0= ruleXExpression ) ) )
                     {
-                    // InternalMelange.g:8361:6: (otherlv_6= 'finally' ( (lv_finallyExpression_7_0= ruleXExpression ) ) )
-                    // InternalMelange.g:8361:8: otherlv_6= 'finally' ( (lv_finallyExpression_7_0= ruleXExpression ) )
+                    // InternalMelange.g:8380:6: (otherlv_6= 'finally' ( (lv_finallyExpression_7_0= ruleXExpression ) ) )
+                    // InternalMelange.g:8380:8: otherlv_6= 'finally' ( (lv_finallyExpression_7_0= ruleXExpression ) )
                     {
-                    otherlv_6=(Token)match(input,121,FOLLOW_63); if (state.failed) return current;
+                    otherlv_6=(Token)match(input,122,FOLLOW_64); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_6, grammarAccess.getXTryCatchFinallyExpressionAccess().getFinallyKeyword_3_1_0());
                           
                     }
-                    // InternalMelange.g:8365:1: ( (lv_finallyExpression_7_0= ruleXExpression ) )
-                    // InternalMelange.g:8366:1: (lv_finallyExpression_7_0= ruleXExpression )
+                    // InternalMelange.g:8384:1: ( (lv_finallyExpression_7_0= ruleXExpression ) )
+                    // InternalMelange.g:8385:1: (lv_finallyExpression_7_0= ruleXExpression )
                     {
-                    // InternalMelange.g:8366:1: (lv_finallyExpression_7_0= ruleXExpression )
-                    // InternalMelange.g:8367:3: lv_finallyExpression_7_0= ruleXExpression
+                    // InternalMelange.g:8385:1: (lv_finallyExpression_7_0= ruleXExpression )
+                    // InternalMelange.g:8386:3: lv_finallyExpression_7_0= ruleXExpression
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -23774,7 +23816,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleXSynchronizedExpression"
-    // InternalMelange.g:8391:1: entryRuleXSynchronizedExpression returns [EObject current=null] : iv_ruleXSynchronizedExpression= ruleXSynchronizedExpression EOF ;
+    // InternalMelange.g:8410:1: entryRuleXSynchronizedExpression returns [EObject current=null] : iv_ruleXSynchronizedExpression= ruleXSynchronizedExpression EOF ;
     public final EObject entryRuleXSynchronizedExpression() throws RecognitionException {
         EObject current = null;
 
@@ -23782,8 +23824,8 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalMelange.g:8392:2: (iv_ruleXSynchronizedExpression= ruleXSynchronizedExpression EOF )
-            // InternalMelange.g:8393:2: iv_ruleXSynchronizedExpression= ruleXSynchronizedExpression EOF
+            // InternalMelange.g:8411:2: (iv_ruleXSynchronizedExpression= ruleXSynchronizedExpression EOF )
+            // InternalMelange.g:8412:2: iv_ruleXSynchronizedExpression= ruleXSynchronizedExpression EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getXSynchronizedExpressionRule()); 
@@ -23814,7 +23856,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleXSynchronizedExpression"
-    // InternalMelange.g:8400:1: ruleXSynchronizedExpression returns [EObject current=null] : ( ( ( ( () 'synchronized' '(' ) )=> ( () otherlv_1= 'synchronized' otherlv_2= '(' ) ) ( (lv_param_3_0= ruleXExpression ) ) otherlv_4= ')' ( (lv_expression_5_0= ruleXExpression ) ) ) ;
+    // InternalMelange.g:8419:1: ruleXSynchronizedExpression returns [EObject current=null] : ( ( ( ( () 'synchronized' '(' ) )=> ( () otherlv_1= 'synchronized' otherlv_2= '(' ) ) ( (lv_param_3_0= ruleXExpression ) ) otherlv_4= ')' ( (lv_expression_5_0= ruleXExpression ) ) ) ;
     public final EObject ruleXSynchronizedExpression() throws RecognitionException {
         EObject current = null;
 
@@ -23829,20 +23871,20 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // InternalMelange.g:8403:28: ( ( ( ( ( () 'synchronized' '(' ) )=> ( () otherlv_1= 'synchronized' otherlv_2= '(' ) ) ( (lv_param_3_0= ruleXExpression ) ) otherlv_4= ')' ( (lv_expression_5_0= ruleXExpression ) ) ) )
-            // InternalMelange.g:8404:1: ( ( ( ( () 'synchronized' '(' ) )=> ( () otherlv_1= 'synchronized' otherlv_2= '(' ) ) ( (lv_param_3_0= ruleXExpression ) ) otherlv_4= ')' ( (lv_expression_5_0= ruleXExpression ) ) )
+            // InternalMelange.g:8422:28: ( ( ( ( ( () 'synchronized' '(' ) )=> ( () otherlv_1= 'synchronized' otherlv_2= '(' ) ) ( (lv_param_3_0= ruleXExpression ) ) otherlv_4= ')' ( (lv_expression_5_0= ruleXExpression ) ) ) )
+            // InternalMelange.g:8423:1: ( ( ( ( () 'synchronized' '(' ) )=> ( () otherlv_1= 'synchronized' otherlv_2= '(' ) ) ( (lv_param_3_0= ruleXExpression ) ) otherlv_4= ')' ( (lv_expression_5_0= ruleXExpression ) ) )
             {
-            // InternalMelange.g:8404:1: ( ( ( ( () 'synchronized' '(' ) )=> ( () otherlv_1= 'synchronized' otherlv_2= '(' ) ) ( (lv_param_3_0= ruleXExpression ) ) otherlv_4= ')' ( (lv_expression_5_0= ruleXExpression ) ) )
-            // InternalMelange.g:8404:2: ( ( ( () 'synchronized' '(' ) )=> ( () otherlv_1= 'synchronized' otherlv_2= '(' ) ) ( (lv_param_3_0= ruleXExpression ) ) otherlv_4= ')' ( (lv_expression_5_0= ruleXExpression ) )
+            // InternalMelange.g:8423:1: ( ( ( ( () 'synchronized' '(' ) )=> ( () otherlv_1= 'synchronized' otherlv_2= '(' ) ) ( (lv_param_3_0= ruleXExpression ) ) otherlv_4= ')' ( (lv_expression_5_0= ruleXExpression ) ) )
+            // InternalMelange.g:8423:2: ( ( ( () 'synchronized' '(' ) )=> ( () otherlv_1= 'synchronized' otherlv_2= '(' ) ) ( (lv_param_3_0= ruleXExpression ) ) otherlv_4= ')' ( (lv_expression_5_0= ruleXExpression ) )
             {
-            // InternalMelange.g:8404:2: ( ( ( () 'synchronized' '(' ) )=> ( () otherlv_1= 'synchronized' otherlv_2= '(' ) )
-            // InternalMelange.g:8404:3: ( ( () 'synchronized' '(' ) )=> ( () otherlv_1= 'synchronized' otherlv_2= '(' )
+            // InternalMelange.g:8423:2: ( ( ( () 'synchronized' '(' ) )=> ( () otherlv_1= 'synchronized' otherlv_2= '(' ) )
+            // InternalMelange.g:8423:3: ( ( () 'synchronized' '(' ) )=> ( () otherlv_1= 'synchronized' otherlv_2= '(' )
             {
-            // InternalMelange.g:8407:5: ( () otherlv_1= 'synchronized' otherlv_2= '(' )
-            // InternalMelange.g:8407:6: () otherlv_1= 'synchronized' otherlv_2= '('
+            // InternalMelange.g:8426:5: ( () otherlv_1= 'synchronized' otherlv_2= '(' )
+            // InternalMelange.g:8426:6: () otherlv_1= 'synchronized' otherlv_2= '('
             {
-            // InternalMelange.g:8407:6: ()
-            // InternalMelange.g:8408:5: 
+            // InternalMelange.g:8426:6: ()
+            // InternalMelange.g:8427:5: 
             {
             if ( state.backtracking==0 ) {
 
@@ -23854,13 +23896,13 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,122,FOLLOW_46); if (state.failed) return current;
+            otherlv_1=(Token)match(input,123,FOLLOW_46); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_1, grammarAccess.getXSynchronizedExpressionAccess().getSynchronizedKeyword_0_0_1());
                   
             }
-            otherlv_2=(Token)match(input,24,FOLLOW_63); if (state.failed) return current;
+            otherlv_2=(Token)match(input,24,FOLLOW_64); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_2, grammarAccess.getXSynchronizedExpressionAccess().getLeftParenthesisKeyword_0_0_2());
@@ -23872,11 +23914,11 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalMelange.g:8421:3: ( (lv_param_3_0= ruleXExpression ) )
-            // InternalMelange.g:8422:1: (lv_param_3_0= ruleXExpression )
+            // InternalMelange.g:8440:3: ( (lv_param_3_0= ruleXExpression ) )
+            // InternalMelange.g:8441:1: (lv_param_3_0= ruleXExpression )
             {
-            // InternalMelange.g:8422:1: (lv_param_3_0= ruleXExpression )
-            // InternalMelange.g:8423:3: lv_param_3_0= ruleXExpression
+            // InternalMelange.g:8441:1: (lv_param_3_0= ruleXExpression )
+            // InternalMelange.g:8442:3: lv_param_3_0= ruleXExpression
             {
             if ( state.backtracking==0 ) {
                
@@ -23907,17 +23949,17 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_4=(Token)match(input,25,FOLLOW_63); if (state.failed) return current;
+            otherlv_4=(Token)match(input,25,FOLLOW_64); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_4, grammarAccess.getXSynchronizedExpressionAccess().getRightParenthesisKeyword_2());
                   
             }
-            // InternalMelange.g:8443:1: ( (lv_expression_5_0= ruleXExpression ) )
-            // InternalMelange.g:8444:1: (lv_expression_5_0= ruleXExpression )
+            // InternalMelange.g:8462:1: ( (lv_expression_5_0= ruleXExpression ) )
+            // InternalMelange.g:8463:1: (lv_expression_5_0= ruleXExpression )
             {
-            // InternalMelange.g:8444:1: (lv_expression_5_0= ruleXExpression )
-            // InternalMelange.g:8445:3: lv_expression_5_0= ruleXExpression
+            // InternalMelange.g:8463:1: (lv_expression_5_0= ruleXExpression )
+            // InternalMelange.g:8464:3: lv_expression_5_0= ruleXExpression
             {
             if ( state.backtracking==0 ) {
                
@@ -23971,7 +24013,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleXCatchClause"
-    // InternalMelange.g:8469:1: entryRuleXCatchClause returns [EObject current=null] : iv_ruleXCatchClause= ruleXCatchClause EOF ;
+    // InternalMelange.g:8488:1: entryRuleXCatchClause returns [EObject current=null] : iv_ruleXCatchClause= ruleXCatchClause EOF ;
     public final EObject entryRuleXCatchClause() throws RecognitionException {
         EObject current = null;
 
@@ -23979,8 +24021,8 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalMelange.g:8470:2: (iv_ruleXCatchClause= ruleXCatchClause EOF )
-            // InternalMelange.g:8471:2: iv_ruleXCatchClause= ruleXCatchClause EOF
+            // InternalMelange.g:8489:2: (iv_ruleXCatchClause= ruleXCatchClause EOF )
+            // InternalMelange.g:8490:2: iv_ruleXCatchClause= ruleXCatchClause EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getXCatchClauseRule()); 
@@ -24011,7 +24053,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleXCatchClause"
-    // InternalMelange.g:8478:1: ruleXCatchClause returns [EObject current=null] : ( ( ( 'catch' )=>otherlv_0= 'catch' ) otherlv_1= '(' ( (lv_declaredParam_2_0= ruleFullJvmFormalParameter ) ) otherlv_3= ')' ( (lv_expression_4_0= ruleXExpression ) ) ) ;
+    // InternalMelange.g:8497:1: ruleXCatchClause returns [EObject current=null] : ( ( ( 'catch' )=>otherlv_0= 'catch' ) otherlv_1= '(' ( (lv_declaredParam_2_0= ruleFullJvmFormalParameter ) ) otherlv_3= ')' ( (lv_expression_4_0= ruleXExpression ) ) ) ;
     public final EObject ruleXCatchClause() throws RecognitionException {
         EObject current = null;
 
@@ -24026,16 +24068,16 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // InternalMelange.g:8481:28: ( ( ( ( 'catch' )=>otherlv_0= 'catch' ) otherlv_1= '(' ( (lv_declaredParam_2_0= ruleFullJvmFormalParameter ) ) otherlv_3= ')' ( (lv_expression_4_0= ruleXExpression ) ) ) )
-            // InternalMelange.g:8482:1: ( ( ( 'catch' )=>otherlv_0= 'catch' ) otherlv_1= '(' ( (lv_declaredParam_2_0= ruleFullJvmFormalParameter ) ) otherlv_3= ')' ( (lv_expression_4_0= ruleXExpression ) ) )
+            // InternalMelange.g:8500:28: ( ( ( ( 'catch' )=>otherlv_0= 'catch' ) otherlv_1= '(' ( (lv_declaredParam_2_0= ruleFullJvmFormalParameter ) ) otherlv_3= ')' ( (lv_expression_4_0= ruleXExpression ) ) ) )
+            // InternalMelange.g:8501:1: ( ( ( 'catch' )=>otherlv_0= 'catch' ) otherlv_1= '(' ( (lv_declaredParam_2_0= ruleFullJvmFormalParameter ) ) otherlv_3= ')' ( (lv_expression_4_0= ruleXExpression ) ) )
             {
-            // InternalMelange.g:8482:1: ( ( ( 'catch' )=>otherlv_0= 'catch' ) otherlv_1= '(' ( (lv_declaredParam_2_0= ruleFullJvmFormalParameter ) ) otherlv_3= ')' ( (lv_expression_4_0= ruleXExpression ) ) )
-            // InternalMelange.g:8482:2: ( ( 'catch' )=>otherlv_0= 'catch' ) otherlv_1= '(' ( (lv_declaredParam_2_0= ruleFullJvmFormalParameter ) ) otherlv_3= ')' ( (lv_expression_4_0= ruleXExpression ) )
+            // InternalMelange.g:8501:1: ( ( ( 'catch' )=>otherlv_0= 'catch' ) otherlv_1= '(' ( (lv_declaredParam_2_0= ruleFullJvmFormalParameter ) ) otherlv_3= ')' ( (lv_expression_4_0= ruleXExpression ) ) )
+            // InternalMelange.g:8501:2: ( ( 'catch' )=>otherlv_0= 'catch' ) otherlv_1= '(' ( (lv_declaredParam_2_0= ruleFullJvmFormalParameter ) ) otherlv_3= ')' ( (lv_expression_4_0= ruleXExpression ) )
             {
-            // InternalMelange.g:8482:2: ( ( 'catch' )=>otherlv_0= 'catch' )
-            // InternalMelange.g:8482:3: ( 'catch' )=>otherlv_0= 'catch'
+            // InternalMelange.g:8501:2: ( ( 'catch' )=>otherlv_0= 'catch' )
+            // InternalMelange.g:8501:3: ( 'catch' )=>otherlv_0= 'catch'
             {
-            otherlv_0=(Token)match(input,123,FOLLOW_46); if (state.failed) return current;
+            otherlv_0=(Token)match(input,124,FOLLOW_46); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_0, grammarAccess.getXCatchClauseAccess().getCatchKeyword_0());
@@ -24050,11 +24092,11 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                   	newLeafNode(otherlv_1, grammarAccess.getXCatchClauseAccess().getLeftParenthesisKeyword_1());
                   
             }
-            // InternalMelange.g:8491:1: ( (lv_declaredParam_2_0= ruleFullJvmFormalParameter ) )
-            // InternalMelange.g:8492:1: (lv_declaredParam_2_0= ruleFullJvmFormalParameter )
+            // InternalMelange.g:8510:1: ( (lv_declaredParam_2_0= ruleFullJvmFormalParameter ) )
+            // InternalMelange.g:8511:1: (lv_declaredParam_2_0= ruleFullJvmFormalParameter )
             {
-            // InternalMelange.g:8492:1: (lv_declaredParam_2_0= ruleFullJvmFormalParameter )
-            // InternalMelange.g:8493:3: lv_declaredParam_2_0= ruleFullJvmFormalParameter
+            // InternalMelange.g:8511:1: (lv_declaredParam_2_0= ruleFullJvmFormalParameter )
+            // InternalMelange.g:8512:3: lv_declaredParam_2_0= ruleFullJvmFormalParameter
             {
             if ( state.backtracking==0 ) {
                
@@ -24085,17 +24127,17 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_3=(Token)match(input,25,FOLLOW_63); if (state.failed) return current;
+            otherlv_3=(Token)match(input,25,FOLLOW_64); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_3, grammarAccess.getXCatchClauseAccess().getRightParenthesisKeyword_3());
                   
             }
-            // InternalMelange.g:8513:1: ( (lv_expression_4_0= ruleXExpression ) )
-            // InternalMelange.g:8514:1: (lv_expression_4_0= ruleXExpression )
+            // InternalMelange.g:8532:1: ( (lv_expression_4_0= ruleXExpression ) )
+            // InternalMelange.g:8533:1: (lv_expression_4_0= ruleXExpression )
             {
-            // InternalMelange.g:8514:1: (lv_expression_4_0= ruleXExpression )
-            // InternalMelange.g:8515:3: lv_expression_4_0= ruleXExpression
+            // InternalMelange.g:8533:1: (lv_expression_4_0= ruleXExpression )
+            // InternalMelange.g:8534:3: lv_expression_4_0= ruleXExpression
             {
             if ( state.backtracking==0 ) {
                
@@ -24149,7 +24191,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleQualifiedName"
-    // InternalMelange.g:8539:1: entryRuleQualifiedName returns [String current=null] : iv_ruleQualifiedName= ruleQualifiedName EOF ;
+    // InternalMelange.g:8558:1: entryRuleQualifiedName returns [String current=null] : iv_ruleQualifiedName= ruleQualifiedName EOF ;
     public final String entryRuleQualifiedName() throws RecognitionException {
         String current = null;
 
@@ -24157,8 +24199,8 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalMelange.g:8540:2: (iv_ruleQualifiedName= ruleQualifiedName EOF )
-            // InternalMelange.g:8541:2: iv_ruleQualifiedName= ruleQualifiedName EOF
+            // InternalMelange.g:8559:2: (iv_ruleQualifiedName= ruleQualifiedName EOF )
+            // InternalMelange.g:8560:2: iv_ruleQualifiedName= ruleQualifiedName EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getQualifiedNameRule()); 
@@ -24189,7 +24231,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleQualifiedName"
-    // InternalMelange.g:8548:1: ruleQualifiedName returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_ValidID_0= ruleValidID ( ( ( '.' )=>kw= '.' ) this_ValidID_2= ruleValidID )* ) ;
+    // InternalMelange.g:8567:1: ruleQualifiedName returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_ValidID_0= ruleValidID ( ( ( '.' )=>kw= '.' ) this_ValidID_2= ruleValidID )* ) ;
     public final AntlrDatatypeRuleToken ruleQualifiedName() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -24202,18 +24244,18 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // InternalMelange.g:8551:28: ( (this_ValidID_0= ruleValidID ( ( ( '.' )=>kw= '.' ) this_ValidID_2= ruleValidID )* ) )
-            // InternalMelange.g:8552:1: (this_ValidID_0= ruleValidID ( ( ( '.' )=>kw= '.' ) this_ValidID_2= ruleValidID )* )
+            // InternalMelange.g:8570:28: ( (this_ValidID_0= ruleValidID ( ( ( '.' )=>kw= '.' ) this_ValidID_2= ruleValidID )* ) )
+            // InternalMelange.g:8571:1: (this_ValidID_0= ruleValidID ( ( ( '.' )=>kw= '.' ) this_ValidID_2= ruleValidID )* )
             {
-            // InternalMelange.g:8552:1: (this_ValidID_0= ruleValidID ( ( ( '.' )=>kw= '.' ) this_ValidID_2= ruleValidID )* )
-            // InternalMelange.g:8553:5: this_ValidID_0= ruleValidID ( ( ( '.' )=>kw= '.' ) this_ValidID_2= ruleValidID )*
+            // InternalMelange.g:8571:1: (this_ValidID_0= ruleValidID ( ( ( '.' )=>kw= '.' ) this_ValidID_2= ruleValidID )* )
+            // InternalMelange.g:8572:5: this_ValidID_0= ruleValidID ( ( ( '.' )=>kw= '.' ) this_ValidID_2= ruleValidID )*
             {
             if ( state.backtracking==0 ) {
                
                       newCompositeNode(grammarAccess.getQualifiedNameAccess().getValidIDParserRuleCall_0()); 
                   
             }
-            pushFollow(FOLLOW_118);
+            pushFollow(FOLLOW_119);
             this_ValidID_0=ruleValidID();
 
             state._fsp--;
@@ -24228,13 +24270,13 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                       afterParserOrEnumRuleCall();
                   
             }
-            // InternalMelange.g:8563:1: ( ( ( '.' )=>kw= '.' ) this_ValidID_2= ruleValidID )*
+            // InternalMelange.g:8582:1: ( ( ( '.' )=>kw= '.' ) this_ValidID_2= ruleValidID )*
             loop155:
             do {
                 int alt155=2;
                 int LA155_0 = input.LA(1);
 
-                if ( (LA155_0==93) ) {
+                if ( (LA155_0==94) ) {
                     int LA155_2 = input.LA(2);
 
                     if ( (LA155_2==RULE_ID) ) {
@@ -24253,12 +24295,12 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
                 switch (alt155) {
             	case 1 :
-            	    // InternalMelange.g:8563:2: ( ( '.' )=>kw= '.' ) this_ValidID_2= ruleValidID
+            	    // InternalMelange.g:8582:2: ( ( '.' )=>kw= '.' ) this_ValidID_2= ruleValidID
             	    {
-            	    // InternalMelange.g:8563:2: ( ( '.' )=>kw= '.' )
-            	    // InternalMelange.g:8563:3: ( '.' )=>kw= '.'
+            	    // InternalMelange.g:8582:2: ( ( '.' )=>kw= '.' )
+            	    // InternalMelange.g:8582:3: ( '.' )=>kw= '.'
             	    {
-            	    kw=(Token)match(input,93,FOLLOW_3); if (state.failed) return current;
+            	    kw=(Token)match(input,94,FOLLOW_3); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
             	              current.merge(kw);
@@ -24273,7 +24315,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
             	              newCompositeNode(grammarAccess.getQualifiedNameAccess().getValidIDParserRuleCall_1_1()); 
             	          
             	    }
-            	    pushFollow(FOLLOW_118);
+            	    pushFollow(FOLLOW_119);
             	    this_ValidID_2=ruleValidID();
 
             	    state._fsp--;
@@ -24320,7 +24362,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleNumber"
-    // InternalMelange.g:8590:1: entryRuleNumber returns [String current=null] : iv_ruleNumber= ruleNumber EOF ;
+    // InternalMelange.g:8609:1: entryRuleNumber returns [String current=null] : iv_ruleNumber= ruleNumber EOF ;
     public final String entryRuleNumber() throws RecognitionException {
         String current = null;
 
@@ -24331,8 +24373,8 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
         		HiddenTokens myHiddenTokenState = ((XtextTokenStream)input).setHiddenTokens();
         	
         try {
-            // InternalMelange.g:8594:2: (iv_ruleNumber= ruleNumber EOF )
-            // InternalMelange.g:8595:2: iv_ruleNumber= ruleNumber EOF
+            // InternalMelange.g:8613:2: (iv_ruleNumber= ruleNumber EOF )
+            // InternalMelange.g:8614:2: iv_ruleNumber= ruleNumber EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getNumberRule()); 
@@ -24366,7 +24408,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleNumber"
-    // InternalMelange.g:8605:1: ruleNumber returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_HEX_0= RULE_HEX | ( (this_INT_1= RULE_INT | this_DECIMAL_2= RULE_DECIMAL ) (kw= '.' (this_INT_4= RULE_INT | this_DECIMAL_5= RULE_DECIMAL ) )? ) ) ;
+    // InternalMelange.g:8624:1: ruleNumber returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_HEX_0= RULE_HEX | ( (this_INT_1= RULE_INT | this_DECIMAL_2= RULE_DECIMAL ) (kw= '.' (this_INT_4= RULE_INT | this_DECIMAL_5= RULE_DECIMAL ) )? ) ) ;
     public final AntlrDatatypeRuleToken ruleNumber() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -24381,10 +24423,10 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
         		HiddenTokens myHiddenTokenState = ((XtextTokenStream)input).setHiddenTokens();
             
         try {
-            // InternalMelange.g:8609:28: ( (this_HEX_0= RULE_HEX | ( (this_INT_1= RULE_INT | this_DECIMAL_2= RULE_DECIMAL ) (kw= '.' (this_INT_4= RULE_INT | this_DECIMAL_5= RULE_DECIMAL ) )? ) ) )
-            // InternalMelange.g:8610:1: (this_HEX_0= RULE_HEX | ( (this_INT_1= RULE_INT | this_DECIMAL_2= RULE_DECIMAL ) (kw= '.' (this_INT_4= RULE_INT | this_DECIMAL_5= RULE_DECIMAL ) )? ) )
+            // InternalMelange.g:8628:28: ( (this_HEX_0= RULE_HEX | ( (this_INT_1= RULE_INT | this_DECIMAL_2= RULE_DECIMAL ) (kw= '.' (this_INT_4= RULE_INT | this_DECIMAL_5= RULE_DECIMAL ) )? ) ) )
+            // InternalMelange.g:8629:1: (this_HEX_0= RULE_HEX | ( (this_INT_1= RULE_INT | this_DECIMAL_2= RULE_DECIMAL ) (kw= '.' (this_INT_4= RULE_INT | this_DECIMAL_5= RULE_DECIMAL ) )? ) )
             {
-            // InternalMelange.g:8610:1: (this_HEX_0= RULE_HEX | ( (this_INT_1= RULE_INT | this_DECIMAL_2= RULE_DECIMAL ) (kw= '.' (this_INT_4= RULE_INT | this_DECIMAL_5= RULE_DECIMAL ) )? ) )
+            // InternalMelange.g:8629:1: (this_HEX_0= RULE_HEX | ( (this_INT_1= RULE_INT | this_DECIMAL_2= RULE_DECIMAL ) (kw= '.' (this_INT_4= RULE_INT | this_DECIMAL_5= RULE_DECIMAL ) )? ) )
             int alt159=2;
             int LA159_0 = input.LA(1);
 
@@ -24403,7 +24445,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
             }
             switch (alt159) {
                 case 1 :
-                    // InternalMelange.g:8610:6: this_HEX_0= RULE_HEX
+                    // InternalMelange.g:8629:6: this_HEX_0= RULE_HEX
                     {
                     this_HEX_0=(Token)match(input,RULE_HEX,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -24420,12 +24462,12 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalMelange.g:8618:6: ( (this_INT_1= RULE_INT | this_DECIMAL_2= RULE_DECIMAL ) (kw= '.' (this_INT_4= RULE_INT | this_DECIMAL_5= RULE_DECIMAL ) )? )
+                    // InternalMelange.g:8637:6: ( (this_INT_1= RULE_INT | this_DECIMAL_2= RULE_DECIMAL ) (kw= '.' (this_INT_4= RULE_INT | this_DECIMAL_5= RULE_DECIMAL ) )? )
                     {
-                    // InternalMelange.g:8618:6: ( (this_INT_1= RULE_INT | this_DECIMAL_2= RULE_DECIMAL ) (kw= '.' (this_INT_4= RULE_INT | this_DECIMAL_5= RULE_DECIMAL ) )? )
-                    // InternalMelange.g:8618:7: (this_INT_1= RULE_INT | this_DECIMAL_2= RULE_DECIMAL ) (kw= '.' (this_INT_4= RULE_INT | this_DECIMAL_5= RULE_DECIMAL ) )?
+                    // InternalMelange.g:8637:6: ( (this_INT_1= RULE_INT | this_DECIMAL_2= RULE_DECIMAL ) (kw= '.' (this_INT_4= RULE_INT | this_DECIMAL_5= RULE_DECIMAL ) )? )
+                    // InternalMelange.g:8637:7: (this_INT_1= RULE_INT | this_DECIMAL_2= RULE_DECIMAL ) (kw= '.' (this_INT_4= RULE_INT | this_DECIMAL_5= RULE_DECIMAL ) )?
                     {
-                    // InternalMelange.g:8618:7: (this_INT_1= RULE_INT | this_DECIMAL_2= RULE_DECIMAL )
+                    // InternalMelange.g:8637:7: (this_INT_1= RULE_INT | this_DECIMAL_2= RULE_DECIMAL )
                     int alt156=2;
                     int LA156_0 = input.LA(1);
 
@@ -24444,9 +24486,9 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                     }
                     switch (alt156) {
                         case 1 :
-                            // InternalMelange.g:8618:12: this_INT_1= RULE_INT
+                            // InternalMelange.g:8637:12: this_INT_1= RULE_INT
                             {
-                            this_INT_1=(Token)match(input,RULE_INT,FOLLOW_118); if (state.failed) return current;
+                            this_INT_1=(Token)match(input,RULE_INT,FOLLOW_119); if (state.failed) return current;
                             if ( state.backtracking==0 ) {
 
                               		current.merge(this_INT_1);
@@ -24461,9 +24503,9 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                             }
                             break;
                         case 2 :
-                            // InternalMelange.g:8626:10: this_DECIMAL_2= RULE_DECIMAL
+                            // InternalMelange.g:8645:10: this_DECIMAL_2= RULE_DECIMAL
                             {
-                            this_DECIMAL_2=(Token)match(input,RULE_DECIMAL,FOLLOW_118); if (state.failed) return current;
+                            this_DECIMAL_2=(Token)match(input,RULE_DECIMAL,FOLLOW_119); if (state.failed) return current;
                             if ( state.backtracking==0 ) {
 
                               		current.merge(this_DECIMAL_2);
@@ -24480,11 +24522,11 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // InternalMelange.g:8633:2: (kw= '.' (this_INT_4= RULE_INT | this_DECIMAL_5= RULE_DECIMAL ) )?
+                    // InternalMelange.g:8652:2: (kw= '.' (this_INT_4= RULE_INT | this_DECIMAL_5= RULE_DECIMAL ) )?
                     int alt158=2;
                     int LA158_0 = input.LA(1);
 
-                    if ( (LA158_0==93) ) {
+                    if ( (LA158_0==94) ) {
                         int LA158_1 = input.LA(2);
 
                         if ( ((LA158_1>=RULE_INT && LA158_1<=RULE_DECIMAL)) ) {
@@ -24493,16 +24535,16 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                     }
                     switch (alt158) {
                         case 1 :
-                            // InternalMelange.g:8634:2: kw= '.' (this_INT_4= RULE_INT | this_DECIMAL_5= RULE_DECIMAL )
+                            // InternalMelange.g:8653:2: kw= '.' (this_INT_4= RULE_INT | this_DECIMAL_5= RULE_DECIMAL )
                             {
-                            kw=(Token)match(input,93,FOLLOW_119); if (state.failed) return current;
+                            kw=(Token)match(input,94,FOLLOW_120); if (state.failed) return current;
                             if ( state.backtracking==0 ) {
 
                                       current.merge(kw);
                                       newLeafNode(kw, grammarAccess.getNumberAccess().getFullStopKeyword_1_1_0()); 
                                   
                             }
-                            // InternalMelange.g:8639:1: (this_INT_4= RULE_INT | this_DECIMAL_5= RULE_DECIMAL )
+                            // InternalMelange.g:8658:1: (this_INT_4= RULE_INT | this_DECIMAL_5= RULE_DECIMAL )
                             int alt157=2;
                             int LA157_0 = input.LA(1);
 
@@ -24521,7 +24563,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                             }
                             switch (alt157) {
                                 case 1 :
-                                    // InternalMelange.g:8639:6: this_INT_4= RULE_INT
+                                    // InternalMelange.g:8658:6: this_INT_4= RULE_INT
                                     {
                                     this_INT_4=(Token)match(input,RULE_INT,FOLLOW_2); if (state.failed) return current;
                                     if ( state.backtracking==0 ) {
@@ -24538,7 +24580,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                                     }
                                     break;
                                 case 2 :
-                                    // InternalMelange.g:8647:10: this_DECIMAL_5= RULE_DECIMAL
+                                    // InternalMelange.g:8666:10: this_DECIMAL_5= RULE_DECIMAL
                                     {
                                     this_DECIMAL_5=(Token)match(input,RULE_DECIMAL,FOLLOW_2); if (state.failed) return current;
                                     if ( state.backtracking==0 ) {
@@ -24595,7 +24637,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleJvmTypeReference"
-    // InternalMelange.g:8667:1: entryRuleJvmTypeReference returns [EObject current=null] : iv_ruleJvmTypeReference= ruleJvmTypeReference EOF ;
+    // InternalMelange.g:8686:1: entryRuleJvmTypeReference returns [EObject current=null] : iv_ruleJvmTypeReference= ruleJvmTypeReference EOF ;
     public final EObject entryRuleJvmTypeReference() throws RecognitionException {
         EObject current = null;
 
@@ -24603,8 +24645,8 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalMelange.g:8668:2: (iv_ruleJvmTypeReference= ruleJvmTypeReference EOF )
-            // InternalMelange.g:8669:2: iv_ruleJvmTypeReference= ruleJvmTypeReference EOF
+            // InternalMelange.g:8687:2: (iv_ruleJvmTypeReference= ruleJvmTypeReference EOF )
+            // InternalMelange.g:8688:2: iv_ruleJvmTypeReference= ruleJvmTypeReference EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getJvmTypeReferenceRule()); 
@@ -24635,7 +24677,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleJvmTypeReference"
-    // InternalMelange.g:8676:1: ruleJvmTypeReference returns [EObject current=null] : ( (this_JvmParameterizedTypeReference_0= ruleJvmParameterizedTypeReference ( ( ( () ruleArrayBrackets ) )=> ( () ruleArrayBrackets ) )* ) | this_XFunctionTypeRef_3= ruleXFunctionTypeRef ) ;
+    // InternalMelange.g:8695:1: ruleJvmTypeReference returns [EObject current=null] : ( (this_JvmParameterizedTypeReference_0= ruleJvmParameterizedTypeReference ( ( ( () ruleArrayBrackets ) )=> ( () ruleArrayBrackets ) )* ) | this_XFunctionTypeRef_3= ruleXFunctionTypeRef ) ;
     public final EObject ruleJvmTypeReference() throws RecognitionException {
         EObject current = null;
 
@@ -24647,17 +24689,17 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // InternalMelange.g:8679:28: ( ( (this_JvmParameterizedTypeReference_0= ruleJvmParameterizedTypeReference ( ( ( () ruleArrayBrackets ) )=> ( () ruleArrayBrackets ) )* ) | this_XFunctionTypeRef_3= ruleXFunctionTypeRef ) )
-            // InternalMelange.g:8680:1: ( (this_JvmParameterizedTypeReference_0= ruleJvmParameterizedTypeReference ( ( ( () ruleArrayBrackets ) )=> ( () ruleArrayBrackets ) )* ) | this_XFunctionTypeRef_3= ruleXFunctionTypeRef )
+            // InternalMelange.g:8698:28: ( ( (this_JvmParameterizedTypeReference_0= ruleJvmParameterizedTypeReference ( ( ( () ruleArrayBrackets ) )=> ( () ruleArrayBrackets ) )* ) | this_XFunctionTypeRef_3= ruleXFunctionTypeRef ) )
+            // InternalMelange.g:8699:1: ( (this_JvmParameterizedTypeReference_0= ruleJvmParameterizedTypeReference ( ( ( () ruleArrayBrackets ) )=> ( () ruleArrayBrackets ) )* ) | this_XFunctionTypeRef_3= ruleXFunctionTypeRef )
             {
-            // InternalMelange.g:8680:1: ( (this_JvmParameterizedTypeReference_0= ruleJvmParameterizedTypeReference ( ( ( () ruleArrayBrackets ) )=> ( () ruleArrayBrackets ) )* ) | this_XFunctionTypeRef_3= ruleXFunctionTypeRef )
+            // InternalMelange.g:8699:1: ( (this_JvmParameterizedTypeReference_0= ruleJvmParameterizedTypeReference ( ( ( () ruleArrayBrackets ) )=> ( () ruleArrayBrackets ) )* ) | this_XFunctionTypeRef_3= ruleXFunctionTypeRef )
             int alt161=2;
             int LA161_0 = input.LA(1);
 
             if ( (LA161_0==RULE_ID) ) {
                 alt161=1;
             }
-            else if ( (LA161_0==24||LA161_0==82) ) {
+            else if ( (LA161_0==24||LA161_0==83) ) {
                 alt161=2;
             }
             else {
@@ -24669,17 +24711,17 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
             }
             switch (alt161) {
                 case 1 :
-                    // InternalMelange.g:8680:2: (this_JvmParameterizedTypeReference_0= ruleJvmParameterizedTypeReference ( ( ( () ruleArrayBrackets ) )=> ( () ruleArrayBrackets ) )* )
+                    // InternalMelange.g:8699:2: (this_JvmParameterizedTypeReference_0= ruleJvmParameterizedTypeReference ( ( ( () ruleArrayBrackets ) )=> ( () ruleArrayBrackets ) )* )
                     {
-                    // InternalMelange.g:8680:2: (this_JvmParameterizedTypeReference_0= ruleJvmParameterizedTypeReference ( ( ( () ruleArrayBrackets ) )=> ( () ruleArrayBrackets ) )* )
-                    // InternalMelange.g:8681:5: this_JvmParameterizedTypeReference_0= ruleJvmParameterizedTypeReference ( ( ( () ruleArrayBrackets ) )=> ( () ruleArrayBrackets ) )*
+                    // InternalMelange.g:8699:2: (this_JvmParameterizedTypeReference_0= ruleJvmParameterizedTypeReference ( ( ( () ruleArrayBrackets ) )=> ( () ruleArrayBrackets ) )* )
+                    // InternalMelange.g:8700:5: this_JvmParameterizedTypeReference_0= ruleJvmParameterizedTypeReference ( ( ( () ruleArrayBrackets ) )=> ( () ruleArrayBrackets ) )*
                     {
                     if ( state.backtracking==0 ) {
                        
                               newCompositeNode(grammarAccess.getJvmTypeReferenceAccess().getJvmParameterizedTypeReferenceParserRuleCall_0_0()); 
                           
                     }
-                    pushFollow(FOLLOW_112);
+                    pushFollow(FOLLOW_113);
                     this_JvmParameterizedTypeReference_0=ruleJvmParameterizedTypeReference();
 
                     state._fsp--;
@@ -24690,16 +24732,16 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                               afterParserOrEnumRuleCall();
                           
                     }
-                    // InternalMelange.g:8689:1: ( ( ( () ruleArrayBrackets ) )=> ( () ruleArrayBrackets ) )*
+                    // InternalMelange.g:8708:1: ( ( ( () ruleArrayBrackets ) )=> ( () ruleArrayBrackets ) )*
                     loop160:
                     do {
                         int alt160=2;
                         int LA160_0 = input.LA(1);
 
-                        if ( (LA160_0==62) ) {
+                        if ( (LA160_0==63) ) {
                             int LA160_2 = input.LA(2);
 
-                            if ( (LA160_2==63) ) {
+                            if ( (LA160_2==64) ) {
                                 int LA160_3 = input.LA(3);
 
                                 if ( (synpred49_InternalMelange()) ) {
@@ -24715,13 +24757,13 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
                         switch (alt160) {
                     	case 1 :
-                    	    // InternalMelange.g:8689:2: ( ( () ruleArrayBrackets ) )=> ( () ruleArrayBrackets )
+                    	    // InternalMelange.g:8708:2: ( ( () ruleArrayBrackets ) )=> ( () ruleArrayBrackets )
                     	    {
-                    	    // InternalMelange.g:8690:24: ( () ruleArrayBrackets )
-                    	    // InternalMelange.g:8690:25: () ruleArrayBrackets
+                    	    // InternalMelange.g:8709:24: ( () ruleArrayBrackets )
+                    	    // InternalMelange.g:8709:25: () ruleArrayBrackets
                     	    {
-                    	    // InternalMelange.g:8690:25: ()
-                    	    // InternalMelange.g:8691:5: 
+                    	    // InternalMelange.g:8709:25: ()
+                    	    // InternalMelange.g:8710:5: 
                     	    {
                     	    if ( state.backtracking==0 ) {
 
@@ -24738,7 +24780,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                     	              newCompositeNode(grammarAccess.getJvmTypeReferenceAccess().getArrayBracketsParserRuleCall_0_1_0_1()); 
                     	          
                     	    }
-                    	    pushFollow(FOLLOW_112);
+                    	    pushFollow(FOLLOW_113);
                     	    ruleArrayBrackets();
 
                     	    state._fsp--;
@@ -24767,7 +24809,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalMelange.g:8706:5: this_XFunctionTypeRef_3= ruleXFunctionTypeRef
+                    // InternalMelange.g:8725:5: this_XFunctionTypeRef_3= ruleXFunctionTypeRef
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -24811,7 +24853,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleArrayBrackets"
-    // InternalMelange.g:8722:1: entryRuleArrayBrackets returns [String current=null] : iv_ruleArrayBrackets= ruleArrayBrackets EOF ;
+    // InternalMelange.g:8741:1: entryRuleArrayBrackets returns [String current=null] : iv_ruleArrayBrackets= ruleArrayBrackets EOF ;
     public final String entryRuleArrayBrackets() throws RecognitionException {
         String current = null;
 
@@ -24819,8 +24861,8 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalMelange.g:8723:2: (iv_ruleArrayBrackets= ruleArrayBrackets EOF )
-            // InternalMelange.g:8724:2: iv_ruleArrayBrackets= ruleArrayBrackets EOF
+            // InternalMelange.g:8742:2: (iv_ruleArrayBrackets= ruleArrayBrackets EOF )
+            // InternalMelange.g:8743:2: iv_ruleArrayBrackets= ruleArrayBrackets EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getArrayBracketsRule()); 
@@ -24851,7 +24893,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleArrayBrackets"
-    // InternalMelange.g:8731:1: ruleArrayBrackets returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= '[' kw= ']' ) ;
+    // InternalMelange.g:8750:1: ruleArrayBrackets returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= '[' kw= ']' ) ;
     public final AntlrDatatypeRuleToken ruleArrayBrackets() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -24860,20 +24902,20 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // InternalMelange.g:8734:28: ( (kw= '[' kw= ']' ) )
-            // InternalMelange.g:8735:1: (kw= '[' kw= ']' )
+            // InternalMelange.g:8753:28: ( (kw= '[' kw= ']' ) )
+            // InternalMelange.g:8754:1: (kw= '[' kw= ']' )
             {
-            // InternalMelange.g:8735:1: (kw= '[' kw= ']' )
-            // InternalMelange.g:8736:2: kw= '[' kw= ']'
+            // InternalMelange.g:8754:1: (kw= '[' kw= ']' )
+            // InternalMelange.g:8755:2: kw= '[' kw= ']'
             {
-            kw=(Token)match(input,62,FOLLOW_93); if (state.failed) return current;
+            kw=(Token)match(input,63,FOLLOW_94); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                       current.merge(kw);
                       newLeafNode(kw, grammarAccess.getArrayBracketsAccess().getLeftSquareBracketKeyword_0()); 
                   
             }
-            kw=(Token)match(input,63,FOLLOW_2); if (state.failed) return current;
+            kw=(Token)match(input,64,FOLLOW_2); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                       current.merge(kw);
@@ -24903,7 +24945,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleXFunctionTypeRef"
-    // InternalMelange.g:8755:1: entryRuleXFunctionTypeRef returns [EObject current=null] : iv_ruleXFunctionTypeRef= ruleXFunctionTypeRef EOF ;
+    // InternalMelange.g:8774:1: entryRuleXFunctionTypeRef returns [EObject current=null] : iv_ruleXFunctionTypeRef= ruleXFunctionTypeRef EOF ;
     public final EObject entryRuleXFunctionTypeRef() throws RecognitionException {
         EObject current = null;
 
@@ -24911,8 +24953,8 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalMelange.g:8756:2: (iv_ruleXFunctionTypeRef= ruleXFunctionTypeRef EOF )
-            // InternalMelange.g:8757:2: iv_ruleXFunctionTypeRef= ruleXFunctionTypeRef EOF
+            // InternalMelange.g:8775:2: (iv_ruleXFunctionTypeRef= ruleXFunctionTypeRef EOF )
+            // InternalMelange.g:8776:2: iv_ruleXFunctionTypeRef= ruleXFunctionTypeRef EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getXFunctionTypeRefRule()); 
@@ -24943,7 +24985,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleXFunctionTypeRef"
-    // InternalMelange.g:8764:1: ruleXFunctionTypeRef returns [EObject current=null] : ( (otherlv_0= '(' ( ( (lv_paramTypes_1_0= ruleJvmTypeReference ) ) (otherlv_2= ',' ( (lv_paramTypes_3_0= ruleJvmTypeReference ) ) )* )? otherlv_4= ')' )? otherlv_5= '=>' ( (lv_returnType_6_0= ruleJvmTypeReference ) ) ) ;
+    // InternalMelange.g:8783:1: ruleXFunctionTypeRef returns [EObject current=null] : ( (otherlv_0= '(' ( ( (lv_paramTypes_1_0= ruleJvmTypeReference ) ) (otherlv_2= ',' ( (lv_paramTypes_3_0= ruleJvmTypeReference ) ) )* )? otherlv_4= ')' )? otherlv_5= '=>' ( (lv_returnType_6_0= ruleJvmTypeReference ) ) ) ;
     public final EObject ruleXFunctionTypeRef() throws RecognitionException {
         EObject current = null;
 
@@ -24961,13 +25003,13 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // InternalMelange.g:8767:28: ( ( (otherlv_0= '(' ( ( (lv_paramTypes_1_0= ruleJvmTypeReference ) ) (otherlv_2= ',' ( (lv_paramTypes_3_0= ruleJvmTypeReference ) ) )* )? otherlv_4= ')' )? otherlv_5= '=>' ( (lv_returnType_6_0= ruleJvmTypeReference ) ) ) )
-            // InternalMelange.g:8768:1: ( (otherlv_0= '(' ( ( (lv_paramTypes_1_0= ruleJvmTypeReference ) ) (otherlv_2= ',' ( (lv_paramTypes_3_0= ruleJvmTypeReference ) ) )* )? otherlv_4= ')' )? otherlv_5= '=>' ( (lv_returnType_6_0= ruleJvmTypeReference ) ) )
+            // InternalMelange.g:8786:28: ( ( (otherlv_0= '(' ( ( (lv_paramTypes_1_0= ruleJvmTypeReference ) ) (otherlv_2= ',' ( (lv_paramTypes_3_0= ruleJvmTypeReference ) ) )* )? otherlv_4= ')' )? otherlv_5= '=>' ( (lv_returnType_6_0= ruleJvmTypeReference ) ) ) )
+            // InternalMelange.g:8787:1: ( (otherlv_0= '(' ( ( (lv_paramTypes_1_0= ruleJvmTypeReference ) ) (otherlv_2= ',' ( (lv_paramTypes_3_0= ruleJvmTypeReference ) ) )* )? otherlv_4= ')' )? otherlv_5= '=>' ( (lv_returnType_6_0= ruleJvmTypeReference ) ) )
             {
-            // InternalMelange.g:8768:1: ( (otherlv_0= '(' ( ( (lv_paramTypes_1_0= ruleJvmTypeReference ) ) (otherlv_2= ',' ( (lv_paramTypes_3_0= ruleJvmTypeReference ) ) )* )? otherlv_4= ')' )? otherlv_5= '=>' ( (lv_returnType_6_0= ruleJvmTypeReference ) ) )
-            // InternalMelange.g:8768:2: (otherlv_0= '(' ( ( (lv_paramTypes_1_0= ruleJvmTypeReference ) ) (otherlv_2= ',' ( (lv_paramTypes_3_0= ruleJvmTypeReference ) ) )* )? otherlv_4= ')' )? otherlv_5= '=>' ( (lv_returnType_6_0= ruleJvmTypeReference ) )
+            // InternalMelange.g:8787:1: ( (otherlv_0= '(' ( ( (lv_paramTypes_1_0= ruleJvmTypeReference ) ) (otherlv_2= ',' ( (lv_paramTypes_3_0= ruleJvmTypeReference ) ) )* )? otherlv_4= ')' )? otherlv_5= '=>' ( (lv_returnType_6_0= ruleJvmTypeReference ) ) )
+            // InternalMelange.g:8787:2: (otherlv_0= '(' ( ( (lv_paramTypes_1_0= ruleJvmTypeReference ) ) (otherlv_2= ',' ( (lv_paramTypes_3_0= ruleJvmTypeReference ) ) )* )? otherlv_4= ')' )? otherlv_5= '=>' ( (lv_returnType_6_0= ruleJvmTypeReference ) )
             {
-            // InternalMelange.g:8768:2: (otherlv_0= '(' ( ( (lv_paramTypes_1_0= ruleJvmTypeReference ) ) (otherlv_2= ',' ( (lv_paramTypes_3_0= ruleJvmTypeReference ) ) )* )? otherlv_4= ')' )?
+            // InternalMelange.g:8787:2: (otherlv_0= '(' ( ( (lv_paramTypes_1_0= ruleJvmTypeReference ) ) (otherlv_2= ',' ( (lv_paramTypes_3_0= ruleJvmTypeReference ) ) )* )? otherlv_4= ')' )?
             int alt164=2;
             int LA164_0 = input.LA(1);
 
@@ -24976,7 +25018,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
             }
             switch (alt164) {
                 case 1 :
-                    // InternalMelange.g:8768:4: otherlv_0= '(' ( ( (lv_paramTypes_1_0= ruleJvmTypeReference ) ) (otherlv_2= ',' ( (lv_paramTypes_3_0= ruleJvmTypeReference ) ) )* )? otherlv_4= ')'
+                    // InternalMelange.g:8787:4: otherlv_0= '(' ( ( (lv_paramTypes_1_0= ruleJvmTypeReference ) ) (otherlv_2= ',' ( (lv_paramTypes_3_0= ruleJvmTypeReference ) ) )* )? otherlv_4= ')'
                     {
                     otherlv_0=(Token)match(input,24,FOLLOW_47); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -24984,22 +25026,22 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                           	newLeafNode(otherlv_0, grammarAccess.getXFunctionTypeRefAccess().getLeftParenthesisKeyword_0_0());
                           
                     }
-                    // InternalMelange.g:8772:1: ( ( (lv_paramTypes_1_0= ruleJvmTypeReference ) ) (otherlv_2= ',' ( (lv_paramTypes_3_0= ruleJvmTypeReference ) ) )* )?
+                    // InternalMelange.g:8791:1: ( ( (lv_paramTypes_1_0= ruleJvmTypeReference ) ) (otherlv_2= ',' ( (lv_paramTypes_3_0= ruleJvmTypeReference ) ) )* )?
                     int alt163=2;
                     int LA163_0 = input.LA(1);
 
-                    if ( (LA163_0==RULE_ID||LA163_0==24||LA163_0==82) ) {
+                    if ( (LA163_0==RULE_ID||LA163_0==24||LA163_0==83) ) {
                         alt163=1;
                     }
                     switch (alt163) {
                         case 1 :
-                            // InternalMelange.g:8772:2: ( (lv_paramTypes_1_0= ruleJvmTypeReference ) ) (otherlv_2= ',' ( (lv_paramTypes_3_0= ruleJvmTypeReference ) ) )*
+                            // InternalMelange.g:8791:2: ( (lv_paramTypes_1_0= ruleJvmTypeReference ) ) (otherlv_2= ',' ( (lv_paramTypes_3_0= ruleJvmTypeReference ) ) )*
                             {
-                            // InternalMelange.g:8772:2: ( (lv_paramTypes_1_0= ruleJvmTypeReference ) )
-                            // InternalMelange.g:8773:1: (lv_paramTypes_1_0= ruleJvmTypeReference )
+                            // InternalMelange.g:8791:2: ( (lv_paramTypes_1_0= ruleJvmTypeReference ) )
+                            // InternalMelange.g:8792:1: (lv_paramTypes_1_0= ruleJvmTypeReference )
                             {
-                            // InternalMelange.g:8773:1: (lv_paramTypes_1_0= ruleJvmTypeReference )
-                            // InternalMelange.g:8774:3: lv_paramTypes_1_0= ruleJvmTypeReference
+                            // InternalMelange.g:8792:1: (lv_paramTypes_1_0= ruleJvmTypeReference )
+                            // InternalMelange.g:8793:3: lv_paramTypes_1_0= ruleJvmTypeReference
                             {
                             if ( state.backtracking==0 ) {
                                
@@ -25030,7 +25072,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
                             }
 
-                            // InternalMelange.g:8790:2: (otherlv_2= ',' ( (lv_paramTypes_3_0= ruleJvmTypeReference ) ) )*
+                            // InternalMelange.g:8809:2: (otherlv_2= ',' ( (lv_paramTypes_3_0= ruleJvmTypeReference ) ) )*
                             loop162:
                             do {
                                 int alt162=2;
@@ -25043,7 +25085,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
                                 switch (alt162) {
                             	case 1 :
-                            	    // InternalMelange.g:8790:4: otherlv_2= ',' ( (lv_paramTypes_3_0= ruleJvmTypeReference ) )
+                            	    // InternalMelange.g:8809:4: otherlv_2= ',' ( (lv_paramTypes_3_0= ruleJvmTypeReference ) )
                             	    {
                             	    otherlv_2=(Token)match(input,33,FOLLOW_33); if (state.failed) return current;
                             	    if ( state.backtracking==0 ) {
@@ -25051,11 +25093,11 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                             	          	newLeafNode(otherlv_2, grammarAccess.getXFunctionTypeRefAccess().getCommaKeyword_0_1_1_0());
                             	          
                             	    }
-                            	    // InternalMelange.g:8794:1: ( (lv_paramTypes_3_0= ruleJvmTypeReference ) )
-                            	    // InternalMelange.g:8795:1: (lv_paramTypes_3_0= ruleJvmTypeReference )
+                            	    // InternalMelange.g:8813:1: ( (lv_paramTypes_3_0= ruleJvmTypeReference ) )
+                            	    // InternalMelange.g:8814:1: (lv_paramTypes_3_0= ruleJvmTypeReference )
                             	    {
-                            	    // InternalMelange.g:8795:1: (lv_paramTypes_3_0= ruleJvmTypeReference )
-                            	    // InternalMelange.g:8796:3: lv_paramTypes_3_0= ruleJvmTypeReference
+                            	    // InternalMelange.g:8814:1: (lv_paramTypes_3_0= ruleJvmTypeReference )
+                            	    // InternalMelange.g:8815:3: lv_paramTypes_3_0= ruleJvmTypeReference
                             	    {
                             	    if ( state.backtracking==0 ) {
                             	       
@@ -25101,7 +25143,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_4=(Token)match(input,25,FOLLOW_120); if (state.failed) return current;
+                    otherlv_4=(Token)match(input,25,FOLLOW_121); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_4, grammarAccess.getXFunctionTypeRefAccess().getRightParenthesisKeyword_0_2());
@@ -25113,17 +25155,17 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_5=(Token)match(input,82,FOLLOW_33); if (state.failed) return current;
+            otherlv_5=(Token)match(input,83,FOLLOW_33); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_5, grammarAccess.getXFunctionTypeRefAccess().getEqualsSignGreaterThanSignKeyword_1());
                   
             }
-            // InternalMelange.g:8820:1: ( (lv_returnType_6_0= ruleJvmTypeReference ) )
-            // InternalMelange.g:8821:1: (lv_returnType_6_0= ruleJvmTypeReference )
+            // InternalMelange.g:8839:1: ( (lv_returnType_6_0= ruleJvmTypeReference ) )
+            // InternalMelange.g:8840:1: (lv_returnType_6_0= ruleJvmTypeReference )
             {
-            // InternalMelange.g:8821:1: (lv_returnType_6_0= ruleJvmTypeReference )
-            // InternalMelange.g:8822:3: lv_returnType_6_0= ruleJvmTypeReference
+            // InternalMelange.g:8840:1: (lv_returnType_6_0= ruleJvmTypeReference )
+            // InternalMelange.g:8841:3: lv_returnType_6_0= ruleJvmTypeReference
             {
             if ( state.backtracking==0 ) {
                
@@ -25177,7 +25219,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleJvmParameterizedTypeReference"
-    // InternalMelange.g:8846:1: entryRuleJvmParameterizedTypeReference returns [EObject current=null] : iv_ruleJvmParameterizedTypeReference= ruleJvmParameterizedTypeReference EOF ;
+    // InternalMelange.g:8865:1: entryRuleJvmParameterizedTypeReference returns [EObject current=null] : iv_ruleJvmParameterizedTypeReference= ruleJvmParameterizedTypeReference EOF ;
     public final EObject entryRuleJvmParameterizedTypeReference() throws RecognitionException {
         EObject current = null;
 
@@ -25185,8 +25227,8 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalMelange.g:8847:2: (iv_ruleJvmParameterizedTypeReference= ruleJvmParameterizedTypeReference EOF )
-            // InternalMelange.g:8848:2: iv_ruleJvmParameterizedTypeReference= ruleJvmParameterizedTypeReference EOF
+            // InternalMelange.g:8866:2: (iv_ruleJvmParameterizedTypeReference= ruleJvmParameterizedTypeReference EOF )
+            // InternalMelange.g:8867:2: iv_ruleJvmParameterizedTypeReference= ruleJvmParameterizedTypeReference EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getJvmParameterizedTypeReferenceRule()); 
@@ -25217,7 +25259,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleJvmParameterizedTypeReference"
-    // InternalMelange.g:8855:1: ruleJvmParameterizedTypeReference returns [EObject current=null] : ( ( ( ruleQualifiedName ) ) ( ( ( '<' )=>otherlv_1= '<' ) ( (lv_arguments_2_0= ruleJvmArgumentTypeReference ) ) (otherlv_3= ',' ( (lv_arguments_4_0= ruleJvmArgumentTypeReference ) ) )* otherlv_5= '>' ( ( ( ( () '.' ) )=> ( () otherlv_7= '.' ) ) ( ( ruleValidID ) ) ( ( ( '<' )=>otherlv_9= '<' ) ( (lv_arguments_10_0= ruleJvmArgumentTypeReference ) ) (otherlv_11= ',' ( (lv_arguments_12_0= ruleJvmArgumentTypeReference ) ) )* otherlv_13= '>' )? )* )? ) ;
+    // InternalMelange.g:8874:1: ruleJvmParameterizedTypeReference returns [EObject current=null] : ( ( ( ruleQualifiedName ) ) ( ( ( '<' )=>otherlv_1= '<' ) ( (lv_arguments_2_0= ruleJvmArgumentTypeReference ) ) (otherlv_3= ',' ( (lv_arguments_4_0= ruleJvmArgumentTypeReference ) ) )* otherlv_5= '>' ( ( ( ( () '.' ) )=> ( () otherlv_7= '.' ) ) ( ( ruleValidID ) ) ( ( ( '<' )=>otherlv_9= '<' ) ( (lv_arguments_10_0= ruleJvmArgumentTypeReference ) ) (otherlv_11= ',' ( (lv_arguments_12_0= ruleJvmArgumentTypeReference ) ) )* otherlv_13= '>' )? )* )? ) ;
     public final EObject ruleJvmParameterizedTypeReference() throws RecognitionException {
         EObject current = null;
 
@@ -25240,17 +25282,17 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // InternalMelange.g:8858:28: ( ( ( ( ruleQualifiedName ) ) ( ( ( '<' )=>otherlv_1= '<' ) ( (lv_arguments_2_0= ruleJvmArgumentTypeReference ) ) (otherlv_3= ',' ( (lv_arguments_4_0= ruleJvmArgumentTypeReference ) ) )* otherlv_5= '>' ( ( ( ( () '.' ) )=> ( () otherlv_7= '.' ) ) ( ( ruleValidID ) ) ( ( ( '<' )=>otherlv_9= '<' ) ( (lv_arguments_10_0= ruleJvmArgumentTypeReference ) ) (otherlv_11= ',' ( (lv_arguments_12_0= ruleJvmArgumentTypeReference ) ) )* otherlv_13= '>' )? )* )? ) )
-            // InternalMelange.g:8859:1: ( ( ( ruleQualifiedName ) ) ( ( ( '<' )=>otherlv_1= '<' ) ( (lv_arguments_2_0= ruleJvmArgumentTypeReference ) ) (otherlv_3= ',' ( (lv_arguments_4_0= ruleJvmArgumentTypeReference ) ) )* otherlv_5= '>' ( ( ( ( () '.' ) )=> ( () otherlv_7= '.' ) ) ( ( ruleValidID ) ) ( ( ( '<' )=>otherlv_9= '<' ) ( (lv_arguments_10_0= ruleJvmArgumentTypeReference ) ) (otherlv_11= ',' ( (lv_arguments_12_0= ruleJvmArgumentTypeReference ) ) )* otherlv_13= '>' )? )* )? )
+            // InternalMelange.g:8877:28: ( ( ( ( ruleQualifiedName ) ) ( ( ( '<' )=>otherlv_1= '<' ) ( (lv_arguments_2_0= ruleJvmArgumentTypeReference ) ) (otherlv_3= ',' ( (lv_arguments_4_0= ruleJvmArgumentTypeReference ) ) )* otherlv_5= '>' ( ( ( ( () '.' ) )=> ( () otherlv_7= '.' ) ) ( ( ruleValidID ) ) ( ( ( '<' )=>otherlv_9= '<' ) ( (lv_arguments_10_0= ruleJvmArgumentTypeReference ) ) (otherlv_11= ',' ( (lv_arguments_12_0= ruleJvmArgumentTypeReference ) ) )* otherlv_13= '>' )? )* )? ) )
+            // InternalMelange.g:8878:1: ( ( ( ruleQualifiedName ) ) ( ( ( '<' )=>otherlv_1= '<' ) ( (lv_arguments_2_0= ruleJvmArgumentTypeReference ) ) (otherlv_3= ',' ( (lv_arguments_4_0= ruleJvmArgumentTypeReference ) ) )* otherlv_5= '>' ( ( ( ( () '.' ) )=> ( () otherlv_7= '.' ) ) ( ( ruleValidID ) ) ( ( ( '<' )=>otherlv_9= '<' ) ( (lv_arguments_10_0= ruleJvmArgumentTypeReference ) ) (otherlv_11= ',' ( (lv_arguments_12_0= ruleJvmArgumentTypeReference ) ) )* otherlv_13= '>' )? )* )? )
             {
-            // InternalMelange.g:8859:1: ( ( ( ruleQualifiedName ) ) ( ( ( '<' )=>otherlv_1= '<' ) ( (lv_arguments_2_0= ruleJvmArgumentTypeReference ) ) (otherlv_3= ',' ( (lv_arguments_4_0= ruleJvmArgumentTypeReference ) ) )* otherlv_5= '>' ( ( ( ( () '.' ) )=> ( () otherlv_7= '.' ) ) ( ( ruleValidID ) ) ( ( ( '<' )=>otherlv_9= '<' ) ( (lv_arguments_10_0= ruleJvmArgumentTypeReference ) ) (otherlv_11= ',' ( (lv_arguments_12_0= ruleJvmArgumentTypeReference ) ) )* otherlv_13= '>' )? )* )? )
-            // InternalMelange.g:8859:2: ( ( ruleQualifiedName ) ) ( ( ( '<' )=>otherlv_1= '<' ) ( (lv_arguments_2_0= ruleJvmArgumentTypeReference ) ) (otherlv_3= ',' ( (lv_arguments_4_0= ruleJvmArgumentTypeReference ) ) )* otherlv_5= '>' ( ( ( ( () '.' ) )=> ( () otherlv_7= '.' ) ) ( ( ruleValidID ) ) ( ( ( '<' )=>otherlv_9= '<' ) ( (lv_arguments_10_0= ruleJvmArgumentTypeReference ) ) (otherlv_11= ',' ( (lv_arguments_12_0= ruleJvmArgumentTypeReference ) ) )* otherlv_13= '>' )? )* )?
+            // InternalMelange.g:8878:1: ( ( ( ruleQualifiedName ) ) ( ( ( '<' )=>otherlv_1= '<' ) ( (lv_arguments_2_0= ruleJvmArgumentTypeReference ) ) (otherlv_3= ',' ( (lv_arguments_4_0= ruleJvmArgumentTypeReference ) ) )* otherlv_5= '>' ( ( ( ( () '.' ) )=> ( () otherlv_7= '.' ) ) ( ( ruleValidID ) ) ( ( ( '<' )=>otherlv_9= '<' ) ( (lv_arguments_10_0= ruleJvmArgumentTypeReference ) ) (otherlv_11= ',' ( (lv_arguments_12_0= ruleJvmArgumentTypeReference ) ) )* otherlv_13= '>' )? )* )? )
+            // InternalMelange.g:8878:2: ( ( ruleQualifiedName ) ) ( ( ( '<' )=>otherlv_1= '<' ) ( (lv_arguments_2_0= ruleJvmArgumentTypeReference ) ) (otherlv_3= ',' ( (lv_arguments_4_0= ruleJvmArgumentTypeReference ) ) )* otherlv_5= '>' ( ( ( ( () '.' ) )=> ( () otherlv_7= '.' ) ) ( ( ruleValidID ) ) ( ( ( '<' )=>otherlv_9= '<' ) ( (lv_arguments_10_0= ruleJvmArgumentTypeReference ) ) (otherlv_11= ',' ( (lv_arguments_12_0= ruleJvmArgumentTypeReference ) ) )* otherlv_13= '>' )? )* )?
             {
-            // InternalMelange.g:8859:2: ( ( ruleQualifiedName ) )
-            // InternalMelange.g:8860:1: ( ruleQualifiedName )
+            // InternalMelange.g:8878:2: ( ( ruleQualifiedName ) )
+            // InternalMelange.g:8879:1: ( ruleQualifiedName )
             {
-            // InternalMelange.g:8860:1: ( ruleQualifiedName )
-            // InternalMelange.g:8861:3: ruleQualifiedName
+            // InternalMelange.g:8879:1: ( ruleQualifiedName )
+            // InternalMelange.g:8880:3: ruleQualifiedName
             {
             if ( state.backtracking==0 ) {
 
@@ -25264,7 +25306,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
               	        newCompositeNode(grammarAccess.getJvmParameterizedTypeReferenceAccess().getTypeJvmTypeCrossReference_0_0()); 
               	    
             }
-            pushFollow(FOLLOW_121);
+            pushFollow(FOLLOW_122);
             ruleQualifiedName();
 
             state._fsp--;
@@ -25280,17 +25322,17 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalMelange.g:8874:2: ( ( ( '<' )=>otherlv_1= '<' ) ( (lv_arguments_2_0= ruleJvmArgumentTypeReference ) ) (otherlv_3= ',' ( (lv_arguments_4_0= ruleJvmArgumentTypeReference ) ) )* otherlv_5= '>' ( ( ( ( () '.' ) )=> ( () otherlv_7= '.' ) ) ( ( ruleValidID ) ) ( ( ( '<' )=>otherlv_9= '<' ) ( (lv_arguments_10_0= ruleJvmArgumentTypeReference ) ) (otherlv_11= ',' ( (lv_arguments_12_0= ruleJvmArgumentTypeReference ) ) )* otherlv_13= '>' )? )* )?
+            // InternalMelange.g:8893:2: ( ( ( '<' )=>otherlv_1= '<' ) ( (lv_arguments_2_0= ruleJvmArgumentTypeReference ) ) (otherlv_3= ',' ( (lv_arguments_4_0= ruleJvmArgumentTypeReference ) ) )* otherlv_5= '>' ( ( ( ( () '.' ) )=> ( () otherlv_7= '.' ) ) ( ( ruleValidID ) ) ( ( ( '<' )=>otherlv_9= '<' ) ( (lv_arguments_10_0= ruleJvmArgumentTypeReference ) ) (otherlv_11= ',' ( (lv_arguments_12_0= ruleJvmArgumentTypeReference ) ) )* otherlv_13= '>' )? )* )?
             int alt169=2;
             alt169 = dfa169.predict(input);
             switch (alt169) {
                 case 1 :
-                    // InternalMelange.g:8874:3: ( ( '<' )=>otherlv_1= '<' ) ( (lv_arguments_2_0= ruleJvmArgumentTypeReference ) ) (otherlv_3= ',' ( (lv_arguments_4_0= ruleJvmArgumentTypeReference ) ) )* otherlv_5= '>' ( ( ( ( () '.' ) )=> ( () otherlv_7= '.' ) ) ( ( ruleValidID ) ) ( ( ( '<' )=>otherlv_9= '<' ) ( (lv_arguments_10_0= ruleJvmArgumentTypeReference ) ) (otherlv_11= ',' ( (lv_arguments_12_0= ruleJvmArgumentTypeReference ) ) )* otherlv_13= '>' )? )*
+                    // InternalMelange.g:8893:3: ( ( '<' )=>otherlv_1= '<' ) ( (lv_arguments_2_0= ruleJvmArgumentTypeReference ) ) (otherlv_3= ',' ( (lv_arguments_4_0= ruleJvmArgumentTypeReference ) ) )* otherlv_5= '>' ( ( ( ( () '.' ) )=> ( () otherlv_7= '.' ) ) ( ( ruleValidID ) ) ( ( ( '<' )=>otherlv_9= '<' ) ( (lv_arguments_10_0= ruleJvmArgumentTypeReference ) ) (otherlv_11= ',' ( (lv_arguments_12_0= ruleJvmArgumentTypeReference ) ) )* otherlv_13= '>' )? )*
                     {
-                    // InternalMelange.g:8874:3: ( ( '<' )=>otherlv_1= '<' )
-                    // InternalMelange.g:8874:4: ( '<' )=>otherlv_1= '<'
+                    // InternalMelange.g:8893:3: ( ( '<' )=>otherlv_1= '<' )
+                    // InternalMelange.g:8893:4: ( '<' )=>otherlv_1= '<'
                     {
-                    otherlv_1=(Token)match(input,70,FOLLOW_83); if (state.failed) return current;
+                    otherlv_1=(Token)match(input,71,FOLLOW_84); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_1, grammarAccess.getJvmParameterizedTypeReferenceAccess().getLessThanSignKeyword_1_0());
@@ -25299,18 +25341,18 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // InternalMelange.g:8879:2: ( (lv_arguments_2_0= ruleJvmArgumentTypeReference ) )
-                    // InternalMelange.g:8880:1: (lv_arguments_2_0= ruleJvmArgumentTypeReference )
+                    // InternalMelange.g:8898:2: ( (lv_arguments_2_0= ruleJvmArgumentTypeReference ) )
+                    // InternalMelange.g:8899:1: (lv_arguments_2_0= ruleJvmArgumentTypeReference )
                     {
-                    // InternalMelange.g:8880:1: (lv_arguments_2_0= ruleJvmArgumentTypeReference )
-                    // InternalMelange.g:8881:3: lv_arguments_2_0= ruleJvmArgumentTypeReference
+                    // InternalMelange.g:8899:1: (lv_arguments_2_0= ruleJvmArgumentTypeReference )
+                    // InternalMelange.g:8900:3: lv_arguments_2_0= ruleJvmArgumentTypeReference
                     {
                     if ( state.backtracking==0 ) {
                        
                       	        newCompositeNode(grammarAccess.getJvmParameterizedTypeReferenceAccess().getArgumentsJvmArgumentTypeReferenceParserRuleCall_1_1_0()); 
                       	    
                     }
-                    pushFollow(FOLLOW_84);
+                    pushFollow(FOLLOW_85);
                     lv_arguments_2_0=ruleJvmArgumentTypeReference();
 
                     state._fsp--;
@@ -25334,7 +25376,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // InternalMelange.g:8897:2: (otherlv_3= ',' ( (lv_arguments_4_0= ruleJvmArgumentTypeReference ) ) )*
+                    // InternalMelange.g:8916:2: (otherlv_3= ',' ( (lv_arguments_4_0= ruleJvmArgumentTypeReference ) ) )*
                     loop165:
                     do {
                         int alt165=2;
@@ -25347,26 +25389,26 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
                         switch (alt165) {
                     	case 1 :
-                    	    // InternalMelange.g:8897:4: otherlv_3= ',' ( (lv_arguments_4_0= ruleJvmArgumentTypeReference ) )
+                    	    // InternalMelange.g:8916:4: otherlv_3= ',' ( (lv_arguments_4_0= ruleJvmArgumentTypeReference ) )
                     	    {
-                    	    otherlv_3=(Token)match(input,33,FOLLOW_83); if (state.failed) return current;
+                    	    otherlv_3=(Token)match(input,33,FOLLOW_84); if (state.failed) return current;
                     	    if ( state.backtracking==0 ) {
 
                     	          	newLeafNode(otherlv_3, grammarAccess.getJvmParameterizedTypeReferenceAccess().getCommaKeyword_1_2_0());
                     	          
                     	    }
-                    	    // InternalMelange.g:8901:1: ( (lv_arguments_4_0= ruleJvmArgumentTypeReference ) )
-                    	    // InternalMelange.g:8902:1: (lv_arguments_4_0= ruleJvmArgumentTypeReference )
+                    	    // InternalMelange.g:8920:1: ( (lv_arguments_4_0= ruleJvmArgumentTypeReference ) )
+                    	    // InternalMelange.g:8921:1: (lv_arguments_4_0= ruleJvmArgumentTypeReference )
                     	    {
-                    	    // InternalMelange.g:8902:1: (lv_arguments_4_0= ruleJvmArgumentTypeReference )
-                    	    // InternalMelange.g:8903:3: lv_arguments_4_0= ruleJvmArgumentTypeReference
+                    	    // InternalMelange.g:8921:1: (lv_arguments_4_0= ruleJvmArgumentTypeReference )
+                    	    // InternalMelange.g:8922:3: lv_arguments_4_0= ruleJvmArgumentTypeReference
                     	    {
                     	    if ( state.backtracking==0 ) {
                     	       
                     	      	        newCompositeNode(grammarAccess.getJvmParameterizedTypeReferenceAccess().getArgumentsJvmArgumentTypeReferenceParserRuleCall_1_2_1_0()); 
                     	      	    
                     	    }
-                    	    pushFollow(FOLLOW_84);
+                    	    pushFollow(FOLLOW_85);
                     	    lv_arguments_4_0=ruleJvmArgumentTypeReference();
 
                     	    state._fsp--;
@@ -25399,19 +25441,19 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                         }
                     } while (true);
 
-                    otherlv_5=(Token)match(input,71,FOLLOW_118); if (state.failed) return current;
+                    otherlv_5=(Token)match(input,72,FOLLOW_119); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_5, grammarAccess.getJvmParameterizedTypeReferenceAccess().getGreaterThanSignKeyword_1_3());
                           
                     }
-                    // InternalMelange.g:8923:1: ( ( ( ( () '.' ) )=> ( () otherlv_7= '.' ) ) ( ( ruleValidID ) ) ( ( ( '<' )=>otherlv_9= '<' ) ( (lv_arguments_10_0= ruleJvmArgumentTypeReference ) ) (otherlv_11= ',' ( (lv_arguments_12_0= ruleJvmArgumentTypeReference ) ) )* otherlv_13= '>' )? )*
+                    // InternalMelange.g:8942:1: ( ( ( ( () '.' ) )=> ( () otherlv_7= '.' ) ) ( ( ruleValidID ) ) ( ( ( '<' )=>otherlv_9= '<' ) ( (lv_arguments_10_0= ruleJvmArgumentTypeReference ) ) (otherlv_11= ',' ( (lv_arguments_12_0= ruleJvmArgumentTypeReference ) ) )* otherlv_13= '>' )? )*
                     loop168:
                     do {
                         int alt168=2;
                         int LA168_0 = input.LA(1);
 
-                        if ( (LA168_0==93) ) {
+                        if ( (LA168_0==94) ) {
                             int LA168_2 = input.LA(2);
 
                             if ( (LA168_2==RULE_ID) ) {
@@ -25430,16 +25472,16 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
                         switch (alt168) {
                     	case 1 :
-                    	    // InternalMelange.g:8923:2: ( ( ( () '.' ) )=> ( () otherlv_7= '.' ) ) ( ( ruleValidID ) ) ( ( ( '<' )=>otherlv_9= '<' ) ( (lv_arguments_10_0= ruleJvmArgumentTypeReference ) ) (otherlv_11= ',' ( (lv_arguments_12_0= ruleJvmArgumentTypeReference ) ) )* otherlv_13= '>' )?
+                    	    // InternalMelange.g:8942:2: ( ( ( () '.' ) )=> ( () otherlv_7= '.' ) ) ( ( ruleValidID ) ) ( ( ( '<' )=>otherlv_9= '<' ) ( (lv_arguments_10_0= ruleJvmArgumentTypeReference ) ) (otherlv_11= ',' ( (lv_arguments_12_0= ruleJvmArgumentTypeReference ) ) )* otherlv_13= '>' )?
                     	    {
-                    	    // InternalMelange.g:8923:2: ( ( ( () '.' ) )=> ( () otherlv_7= '.' ) )
-                    	    // InternalMelange.g:8923:3: ( ( () '.' ) )=> ( () otherlv_7= '.' )
+                    	    // InternalMelange.g:8942:2: ( ( ( () '.' ) )=> ( () otherlv_7= '.' ) )
+                    	    // InternalMelange.g:8942:3: ( ( () '.' ) )=> ( () otherlv_7= '.' )
                     	    {
-                    	    // InternalMelange.g:8925:5: ( () otherlv_7= '.' )
-                    	    // InternalMelange.g:8925:6: () otherlv_7= '.'
+                    	    // InternalMelange.g:8944:5: ( () otherlv_7= '.' )
+                    	    // InternalMelange.g:8944:6: () otherlv_7= '.'
                     	    {
-                    	    // InternalMelange.g:8925:6: ()
-                    	    // InternalMelange.g:8926:5: 
+                    	    // InternalMelange.g:8944:6: ()
+                    	    // InternalMelange.g:8945:5: 
                     	    {
                     	    if ( state.backtracking==0 ) {
 
@@ -25451,7 +25493,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
                     	    }
 
-                    	    otherlv_7=(Token)match(input,93,FOLLOW_3); if (state.failed) return current;
+                    	    otherlv_7=(Token)match(input,94,FOLLOW_3); if (state.failed) return current;
                     	    if ( state.backtracking==0 ) {
 
                     	          	newLeafNode(otherlv_7, grammarAccess.getJvmParameterizedTypeReferenceAccess().getFullStopKeyword_1_4_0_0_1());
@@ -25463,11 +25505,11 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
                     	    }
 
-                    	    // InternalMelange.g:8935:3: ( ( ruleValidID ) )
-                    	    // InternalMelange.g:8936:1: ( ruleValidID )
+                    	    // InternalMelange.g:8954:3: ( ( ruleValidID ) )
+                    	    // InternalMelange.g:8955:1: ( ruleValidID )
                     	    {
-                    	    // InternalMelange.g:8936:1: ( ruleValidID )
-                    	    // InternalMelange.g:8937:3: ruleValidID
+                    	    // InternalMelange.g:8955:1: ( ruleValidID )
+                    	    // InternalMelange.g:8956:3: ruleValidID
                     	    {
                     	    if ( state.backtracking==0 ) {
 
@@ -25481,7 +25523,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                     	      	        newCompositeNode(grammarAccess.getJvmParameterizedTypeReferenceAccess().getTypeJvmTypeCrossReference_1_4_1_0()); 
                     	      	    
                     	    }
-                    	    pushFollow(FOLLOW_122);
+                    	    pushFollow(FOLLOW_123);
                     	    ruleValidID();
 
                     	    state._fsp--;
@@ -25497,17 +25539,17 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
                     	    }
 
-                    	    // InternalMelange.g:8950:2: ( ( ( '<' )=>otherlv_9= '<' ) ( (lv_arguments_10_0= ruleJvmArgumentTypeReference ) ) (otherlv_11= ',' ( (lv_arguments_12_0= ruleJvmArgumentTypeReference ) ) )* otherlv_13= '>' )?
+                    	    // InternalMelange.g:8969:2: ( ( ( '<' )=>otherlv_9= '<' ) ( (lv_arguments_10_0= ruleJvmArgumentTypeReference ) ) (otherlv_11= ',' ( (lv_arguments_12_0= ruleJvmArgumentTypeReference ) ) )* otherlv_13= '>' )?
                     	    int alt167=2;
                     	    alt167 = dfa167.predict(input);
                     	    switch (alt167) {
                     	        case 1 :
-                    	            // InternalMelange.g:8950:3: ( ( '<' )=>otherlv_9= '<' ) ( (lv_arguments_10_0= ruleJvmArgumentTypeReference ) ) (otherlv_11= ',' ( (lv_arguments_12_0= ruleJvmArgumentTypeReference ) ) )* otherlv_13= '>'
+                    	            // InternalMelange.g:8969:3: ( ( '<' )=>otherlv_9= '<' ) ( (lv_arguments_10_0= ruleJvmArgumentTypeReference ) ) (otherlv_11= ',' ( (lv_arguments_12_0= ruleJvmArgumentTypeReference ) ) )* otherlv_13= '>'
                     	            {
-                    	            // InternalMelange.g:8950:3: ( ( '<' )=>otherlv_9= '<' )
-                    	            // InternalMelange.g:8950:4: ( '<' )=>otherlv_9= '<'
+                    	            // InternalMelange.g:8969:3: ( ( '<' )=>otherlv_9= '<' )
+                    	            // InternalMelange.g:8969:4: ( '<' )=>otherlv_9= '<'
                     	            {
-                    	            otherlv_9=(Token)match(input,70,FOLLOW_83); if (state.failed) return current;
+                    	            otherlv_9=(Token)match(input,71,FOLLOW_84); if (state.failed) return current;
                     	            if ( state.backtracking==0 ) {
 
                     	                  	newLeafNode(otherlv_9, grammarAccess.getJvmParameterizedTypeReferenceAccess().getLessThanSignKeyword_1_4_2_0());
@@ -25516,18 +25558,18 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
                     	            }
 
-                    	            // InternalMelange.g:8955:2: ( (lv_arguments_10_0= ruleJvmArgumentTypeReference ) )
-                    	            // InternalMelange.g:8956:1: (lv_arguments_10_0= ruleJvmArgumentTypeReference )
+                    	            // InternalMelange.g:8974:2: ( (lv_arguments_10_0= ruleJvmArgumentTypeReference ) )
+                    	            // InternalMelange.g:8975:1: (lv_arguments_10_0= ruleJvmArgumentTypeReference )
                     	            {
-                    	            // InternalMelange.g:8956:1: (lv_arguments_10_0= ruleJvmArgumentTypeReference )
-                    	            // InternalMelange.g:8957:3: lv_arguments_10_0= ruleJvmArgumentTypeReference
+                    	            // InternalMelange.g:8975:1: (lv_arguments_10_0= ruleJvmArgumentTypeReference )
+                    	            // InternalMelange.g:8976:3: lv_arguments_10_0= ruleJvmArgumentTypeReference
                     	            {
                     	            if ( state.backtracking==0 ) {
                     	               
                     	              	        newCompositeNode(grammarAccess.getJvmParameterizedTypeReferenceAccess().getArgumentsJvmArgumentTypeReferenceParserRuleCall_1_4_2_1_0()); 
                     	              	    
                     	            }
-                    	            pushFollow(FOLLOW_84);
+                    	            pushFollow(FOLLOW_85);
                     	            lv_arguments_10_0=ruleJvmArgumentTypeReference();
 
                     	            state._fsp--;
@@ -25551,7 +25593,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
                     	            }
 
-                    	            // InternalMelange.g:8973:2: (otherlv_11= ',' ( (lv_arguments_12_0= ruleJvmArgumentTypeReference ) ) )*
+                    	            // InternalMelange.g:8992:2: (otherlv_11= ',' ( (lv_arguments_12_0= ruleJvmArgumentTypeReference ) ) )*
                     	            loop166:
                     	            do {
                     	                int alt166=2;
@@ -25564,26 +25606,26 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
                     	                switch (alt166) {
                     	            	case 1 :
-                    	            	    // InternalMelange.g:8973:4: otherlv_11= ',' ( (lv_arguments_12_0= ruleJvmArgumentTypeReference ) )
+                    	            	    // InternalMelange.g:8992:4: otherlv_11= ',' ( (lv_arguments_12_0= ruleJvmArgumentTypeReference ) )
                     	            	    {
-                    	            	    otherlv_11=(Token)match(input,33,FOLLOW_83); if (state.failed) return current;
+                    	            	    otherlv_11=(Token)match(input,33,FOLLOW_84); if (state.failed) return current;
                     	            	    if ( state.backtracking==0 ) {
 
                     	            	          	newLeafNode(otherlv_11, grammarAccess.getJvmParameterizedTypeReferenceAccess().getCommaKeyword_1_4_2_2_0());
                     	            	          
                     	            	    }
-                    	            	    // InternalMelange.g:8977:1: ( (lv_arguments_12_0= ruleJvmArgumentTypeReference ) )
-                    	            	    // InternalMelange.g:8978:1: (lv_arguments_12_0= ruleJvmArgumentTypeReference )
+                    	            	    // InternalMelange.g:8996:1: ( (lv_arguments_12_0= ruleJvmArgumentTypeReference ) )
+                    	            	    // InternalMelange.g:8997:1: (lv_arguments_12_0= ruleJvmArgumentTypeReference )
                     	            	    {
-                    	            	    // InternalMelange.g:8978:1: (lv_arguments_12_0= ruleJvmArgumentTypeReference )
-                    	            	    // InternalMelange.g:8979:3: lv_arguments_12_0= ruleJvmArgumentTypeReference
+                    	            	    // InternalMelange.g:8997:1: (lv_arguments_12_0= ruleJvmArgumentTypeReference )
+                    	            	    // InternalMelange.g:8998:3: lv_arguments_12_0= ruleJvmArgumentTypeReference
                     	            	    {
                     	            	    if ( state.backtracking==0 ) {
                     	            	       
                     	            	      	        newCompositeNode(grammarAccess.getJvmParameterizedTypeReferenceAccess().getArgumentsJvmArgumentTypeReferenceParserRuleCall_1_4_2_2_1_0()); 
                     	            	      	    
                     	            	    }
-                    	            	    pushFollow(FOLLOW_84);
+                    	            	    pushFollow(FOLLOW_85);
                     	            	    lv_arguments_12_0=ruleJvmArgumentTypeReference();
 
                     	            	    state._fsp--;
@@ -25616,7 +25658,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                     	                }
                     	            } while (true);
 
-                    	            otherlv_13=(Token)match(input,71,FOLLOW_118); if (state.failed) return current;
+                    	            otherlv_13=(Token)match(input,72,FOLLOW_119); if (state.failed) return current;
                     	            if ( state.backtracking==0 ) {
 
                     	                  	newLeafNode(otherlv_13, grammarAccess.getJvmParameterizedTypeReferenceAccess().getGreaterThanSignKeyword_1_4_2_3());
@@ -25666,7 +25708,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleJvmArgumentTypeReference"
-    // InternalMelange.g:9007:1: entryRuleJvmArgumentTypeReference returns [EObject current=null] : iv_ruleJvmArgumentTypeReference= ruleJvmArgumentTypeReference EOF ;
+    // InternalMelange.g:9026:1: entryRuleJvmArgumentTypeReference returns [EObject current=null] : iv_ruleJvmArgumentTypeReference= ruleJvmArgumentTypeReference EOF ;
     public final EObject entryRuleJvmArgumentTypeReference() throws RecognitionException {
         EObject current = null;
 
@@ -25674,8 +25716,8 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalMelange.g:9008:2: (iv_ruleJvmArgumentTypeReference= ruleJvmArgumentTypeReference EOF )
-            // InternalMelange.g:9009:2: iv_ruleJvmArgumentTypeReference= ruleJvmArgumentTypeReference EOF
+            // InternalMelange.g:9027:2: (iv_ruleJvmArgumentTypeReference= ruleJvmArgumentTypeReference EOF )
+            // InternalMelange.g:9028:2: iv_ruleJvmArgumentTypeReference= ruleJvmArgumentTypeReference EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getJvmArgumentTypeReferenceRule()); 
@@ -25706,7 +25748,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleJvmArgumentTypeReference"
-    // InternalMelange.g:9016:1: ruleJvmArgumentTypeReference returns [EObject current=null] : (this_JvmTypeReference_0= ruleJvmTypeReference | this_JvmWildcardTypeReference_1= ruleJvmWildcardTypeReference ) ;
+    // InternalMelange.g:9035:1: ruleJvmArgumentTypeReference returns [EObject current=null] : (this_JvmTypeReference_0= ruleJvmTypeReference | this_JvmWildcardTypeReference_1= ruleJvmWildcardTypeReference ) ;
     public final EObject ruleJvmArgumentTypeReference() throws RecognitionException {
         EObject current = null;
 
@@ -25718,14 +25760,14 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // InternalMelange.g:9019:28: ( (this_JvmTypeReference_0= ruleJvmTypeReference | this_JvmWildcardTypeReference_1= ruleJvmWildcardTypeReference ) )
-            // InternalMelange.g:9020:1: (this_JvmTypeReference_0= ruleJvmTypeReference | this_JvmWildcardTypeReference_1= ruleJvmWildcardTypeReference )
+            // InternalMelange.g:9038:28: ( (this_JvmTypeReference_0= ruleJvmTypeReference | this_JvmWildcardTypeReference_1= ruleJvmWildcardTypeReference ) )
+            // InternalMelange.g:9039:1: (this_JvmTypeReference_0= ruleJvmTypeReference | this_JvmWildcardTypeReference_1= ruleJvmWildcardTypeReference )
             {
-            // InternalMelange.g:9020:1: (this_JvmTypeReference_0= ruleJvmTypeReference | this_JvmWildcardTypeReference_1= ruleJvmWildcardTypeReference )
+            // InternalMelange.g:9039:1: (this_JvmTypeReference_0= ruleJvmTypeReference | this_JvmWildcardTypeReference_1= ruleJvmWildcardTypeReference )
             int alt170=2;
             int LA170_0 = input.LA(1);
 
-            if ( (LA170_0==RULE_ID||LA170_0==24||LA170_0==82) ) {
+            if ( (LA170_0==RULE_ID||LA170_0==24||LA170_0==83) ) {
                 alt170=1;
             }
             else if ( (LA170_0==28) ) {
@@ -25740,7 +25782,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
             }
             switch (alt170) {
                 case 1 :
-                    // InternalMelange.g:9021:5: this_JvmTypeReference_0= ruleJvmTypeReference
+                    // InternalMelange.g:9040:5: this_JvmTypeReference_0= ruleJvmTypeReference
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -25762,7 +25804,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalMelange.g:9031:5: this_JvmWildcardTypeReference_1= ruleJvmWildcardTypeReference
+                    // InternalMelange.g:9050:5: this_JvmWildcardTypeReference_1= ruleJvmWildcardTypeReference
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -25806,7 +25848,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleJvmWildcardTypeReference"
-    // InternalMelange.g:9047:1: entryRuleJvmWildcardTypeReference returns [EObject current=null] : iv_ruleJvmWildcardTypeReference= ruleJvmWildcardTypeReference EOF ;
+    // InternalMelange.g:9066:1: entryRuleJvmWildcardTypeReference returns [EObject current=null] : iv_ruleJvmWildcardTypeReference= ruleJvmWildcardTypeReference EOF ;
     public final EObject entryRuleJvmWildcardTypeReference() throws RecognitionException {
         EObject current = null;
 
@@ -25814,8 +25856,8 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalMelange.g:9048:2: (iv_ruleJvmWildcardTypeReference= ruleJvmWildcardTypeReference EOF )
-            // InternalMelange.g:9049:2: iv_ruleJvmWildcardTypeReference= ruleJvmWildcardTypeReference EOF
+            // InternalMelange.g:9067:2: (iv_ruleJvmWildcardTypeReference= ruleJvmWildcardTypeReference EOF )
+            // InternalMelange.g:9068:2: iv_ruleJvmWildcardTypeReference= ruleJvmWildcardTypeReference EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getJvmWildcardTypeReferenceRule()); 
@@ -25846,7 +25888,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleJvmWildcardTypeReference"
-    // InternalMelange.g:9056:1: ruleJvmWildcardTypeReference returns [EObject current=null] : ( () otherlv_1= '?' ( ( ( (lv_constraints_2_0= ruleJvmUpperBound ) ) ( (lv_constraints_3_0= ruleJvmUpperBoundAnded ) )* ) | ( ( (lv_constraints_4_0= ruleJvmLowerBound ) ) ( (lv_constraints_5_0= ruleJvmLowerBoundAnded ) )* ) )? ) ;
+    // InternalMelange.g:9075:1: ruleJvmWildcardTypeReference returns [EObject current=null] : ( () otherlv_1= '?' ( ( ( (lv_constraints_2_0= ruleJvmUpperBound ) ) ( (lv_constraints_3_0= ruleJvmUpperBoundAnded ) )* ) | ( ( (lv_constraints_4_0= ruleJvmLowerBound ) ) ( (lv_constraints_5_0= ruleJvmLowerBoundAnded ) )* ) )? ) ;
     public final EObject ruleJvmWildcardTypeReference() throws RecognitionException {
         EObject current = null;
 
@@ -25863,14 +25905,14 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // InternalMelange.g:9059:28: ( ( () otherlv_1= '?' ( ( ( (lv_constraints_2_0= ruleJvmUpperBound ) ) ( (lv_constraints_3_0= ruleJvmUpperBoundAnded ) )* ) | ( ( (lv_constraints_4_0= ruleJvmLowerBound ) ) ( (lv_constraints_5_0= ruleJvmLowerBoundAnded ) )* ) )? ) )
-            // InternalMelange.g:9060:1: ( () otherlv_1= '?' ( ( ( (lv_constraints_2_0= ruleJvmUpperBound ) ) ( (lv_constraints_3_0= ruleJvmUpperBoundAnded ) )* ) | ( ( (lv_constraints_4_0= ruleJvmLowerBound ) ) ( (lv_constraints_5_0= ruleJvmLowerBoundAnded ) )* ) )? )
+            // InternalMelange.g:9078:28: ( ( () otherlv_1= '?' ( ( ( (lv_constraints_2_0= ruleJvmUpperBound ) ) ( (lv_constraints_3_0= ruleJvmUpperBoundAnded ) )* ) | ( ( (lv_constraints_4_0= ruleJvmLowerBound ) ) ( (lv_constraints_5_0= ruleJvmLowerBoundAnded ) )* ) )? ) )
+            // InternalMelange.g:9079:1: ( () otherlv_1= '?' ( ( ( (lv_constraints_2_0= ruleJvmUpperBound ) ) ( (lv_constraints_3_0= ruleJvmUpperBoundAnded ) )* ) | ( ( (lv_constraints_4_0= ruleJvmLowerBound ) ) ( (lv_constraints_5_0= ruleJvmLowerBoundAnded ) )* ) )? )
             {
-            // InternalMelange.g:9060:1: ( () otherlv_1= '?' ( ( ( (lv_constraints_2_0= ruleJvmUpperBound ) ) ( (lv_constraints_3_0= ruleJvmUpperBoundAnded ) )* ) | ( ( (lv_constraints_4_0= ruleJvmLowerBound ) ) ( (lv_constraints_5_0= ruleJvmLowerBoundAnded ) )* ) )? )
-            // InternalMelange.g:9060:2: () otherlv_1= '?' ( ( ( (lv_constraints_2_0= ruleJvmUpperBound ) ) ( (lv_constraints_3_0= ruleJvmUpperBoundAnded ) )* ) | ( ( (lv_constraints_4_0= ruleJvmLowerBound ) ) ( (lv_constraints_5_0= ruleJvmLowerBoundAnded ) )* ) )?
+            // InternalMelange.g:9079:1: ( () otherlv_1= '?' ( ( ( (lv_constraints_2_0= ruleJvmUpperBound ) ) ( (lv_constraints_3_0= ruleJvmUpperBoundAnded ) )* ) | ( ( (lv_constraints_4_0= ruleJvmLowerBound ) ) ( (lv_constraints_5_0= ruleJvmLowerBoundAnded ) )* ) )? )
+            // InternalMelange.g:9079:2: () otherlv_1= '?' ( ( ( (lv_constraints_2_0= ruleJvmUpperBound ) ) ( (lv_constraints_3_0= ruleJvmUpperBoundAnded ) )* ) | ( ( (lv_constraints_4_0= ruleJvmLowerBound ) ) ( (lv_constraints_5_0= ruleJvmLowerBoundAnded ) )* ) )?
             {
-            // InternalMelange.g:9060:2: ()
-            // InternalMelange.g:9061:5: 
+            // InternalMelange.g:9079:2: ()
+            // InternalMelange.g:9080:5: 
             {
             if ( state.backtracking==0 ) {
 
@@ -25882,41 +25924,41 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,28,FOLLOW_123); if (state.failed) return current;
+            otherlv_1=(Token)match(input,28,FOLLOW_124); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_1, grammarAccess.getJvmWildcardTypeReferenceAccess().getQuestionMarkKeyword_1());
                   
             }
-            // InternalMelange.g:9070:1: ( ( ( (lv_constraints_2_0= ruleJvmUpperBound ) ) ( (lv_constraints_3_0= ruleJvmUpperBoundAnded ) )* ) | ( ( (lv_constraints_4_0= ruleJvmLowerBound ) ) ( (lv_constraints_5_0= ruleJvmLowerBoundAnded ) )* ) )?
+            // InternalMelange.g:9089:1: ( ( ( (lv_constraints_2_0= ruleJvmUpperBound ) ) ( (lv_constraints_3_0= ruleJvmUpperBoundAnded ) )* ) | ( ( (lv_constraints_4_0= ruleJvmLowerBound ) ) ( (lv_constraints_5_0= ruleJvmLowerBoundAnded ) )* ) )?
             int alt173=3;
             int LA173_0 = input.LA(1);
 
-            if ( (LA173_0==108) ) {
+            if ( (LA173_0==109) ) {
                 alt173=1;
             }
-            else if ( (LA173_0==112) ) {
+            else if ( (LA173_0==113) ) {
                 alt173=2;
             }
             switch (alt173) {
                 case 1 :
-                    // InternalMelange.g:9070:2: ( ( (lv_constraints_2_0= ruleJvmUpperBound ) ) ( (lv_constraints_3_0= ruleJvmUpperBoundAnded ) )* )
+                    // InternalMelange.g:9089:2: ( ( (lv_constraints_2_0= ruleJvmUpperBound ) ) ( (lv_constraints_3_0= ruleJvmUpperBoundAnded ) )* )
                     {
-                    // InternalMelange.g:9070:2: ( ( (lv_constraints_2_0= ruleJvmUpperBound ) ) ( (lv_constraints_3_0= ruleJvmUpperBoundAnded ) )* )
-                    // InternalMelange.g:9070:3: ( (lv_constraints_2_0= ruleJvmUpperBound ) ) ( (lv_constraints_3_0= ruleJvmUpperBoundAnded ) )*
+                    // InternalMelange.g:9089:2: ( ( (lv_constraints_2_0= ruleJvmUpperBound ) ) ( (lv_constraints_3_0= ruleJvmUpperBoundAnded ) )* )
+                    // InternalMelange.g:9089:3: ( (lv_constraints_2_0= ruleJvmUpperBound ) ) ( (lv_constraints_3_0= ruleJvmUpperBoundAnded ) )*
                     {
-                    // InternalMelange.g:9070:3: ( (lv_constraints_2_0= ruleJvmUpperBound ) )
-                    // InternalMelange.g:9071:1: (lv_constraints_2_0= ruleJvmUpperBound )
+                    // InternalMelange.g:9089:3: ( (lv_constraints_2_0= ruleJvmUpperBound ) )
+                    // InternalMelange.g:9090:1: (lv_constraints_2_0= ruleJvmUpperBound )
                     {
-                    // InternalMelange.g:9071:1: (lv_constraints_2_0= ruleJvmUpperBound )
-                    // InternalMelange.g:9072:3: lv_constraints_2_0= ruleJvmUpperBound
+                    // InternalMelange.g:9090:1: (lv_constraints_2_0= ruleJvmUpperBound )
+                    // InternalMelange.g:9091:3: lv_constraints_2_0= ruleJvmUpperBound
                     {
                     if ( state.backtracking==0 ) {
                        
                       	        newCompositeNode(grammarAccess.getJvmWildcardTypeReferenceAccess().getConstraintsJvmUpperBoundParserRuleCall_2_0_0_0()); 
                       	    
                     }
-                    pushFollow(FOLLOW_124);
+                    pushFollow(FOLLOW_125);
                     lv_constraints_2_0=ruleJvmUpperBound();
 
                     state._fsp--;
@@ -25940,30 +25982,30 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // InternalMelange.g:9088:2: ( (lv_constraints_3_0= ruleJvmUpperBoundAnded ) )*
+                    // InternalMelange.g:9107:2: ( (lv_constraints_3_0= ruleJvmUpperBoundAnded ) )*
                     loop171:
                     do {
                         int alt171=2;
                         int LA171_0 = input.LA(1);
 
-                        if ( (LA171_0==124) ) {
+                        if ( (LA171_0==125) ) {
                             alt171=1;
                         }
 
 
                         switch (alt171) {
                     	case 1 :
-                    	    // InternalMelange.g:9089:1: (lv_constraints_3_0= ruleJvmUpperBoundAnded )
+                    	    // InternalMelange.g:9108:1: (lv_constraints_3_0= ruleJvmUpperBoundAnded )
                     	    {
-                    	    // InternalMelange.g:9089:1: (lv_constraints_3_0= ruleJvmUpperBoundAnded )
-                    	    // InternalMelange.g:9090:3: lv_constraints_3_0= ruleJvmUpperBoundAnded
+                    	    // InternalMelange.g:9108:1: (lv_constraints_3_0= ruleJvmUpperBoundAnded )
+                    	    // InternalMelange.g:9109:3: lv_constraints_3_0= ruleJvmUpperBoundAnded
                     	    {
                     	    if ( state.backtracking==0 ) {
                     	       
                     	      	        newCompositeNode(grammarAccess.getJvmWildcardTypeReferenceAccess().getConstraintsJvmUpperBoundAndedParserRuleCall_2_0_1_0()); 
                     	      	    
                     	    }
-                    	    pushFollow(FOLLOW_124);
+                    	    pushFollow(FOLLOW_125);
                     	    lv_constraints_3_0=ruleJvmUpperBoundAnded();
 
                     	    state._fsp--;
@@ -26000,23 +26042,23 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalMelange.g:9107:6: ( ( (lv_constraints_4_0= ruleJvmLowerBound ) ) ( (lv_constraints_5_0= ruleJvmLowerBoundAnded ) )* )
+                    // InternalMelange.g:9126:6: ( ( (lv_constraints_4_0= ruleJvmLowerBound ) ) ( (lv_constraints_5_0= ruleJvmLowerBoundAnded ) )* )
                     {
-                    // InternalMelange.g:9107:6: ( ( (lv_constraints_4_0= ruleJvmLowerBound ) ) ( (lv_constraints_5_0= ruleJvmLowerBoundAnded ) )* )
-                    // InternalMelange.g:9107:7: ( (lv_constraints_4_0= ruleJvmLowerBound ) ) ( (lv_constraints_5_0= ruleJvmLowerBoundAnded ) )*
+                    // InternalMelange.g:9126:6: ( ( (lv_constraints_4_0= ruleJvmLowerBound ) ) ( (lv_constraints_5_0= ruleJvmLowerBoundAnded ) )* )
+                    // InternalMelange.g:9126:7: ( (lv_constraints_4_0= ruleJvmLowerBound ) ) ( (lv_constraints_5_0= ruleJvmLowerBoundAnded ) )*
                     {
-                    // InternalMelange.g:9107:7: ( (lv_constraints_4_0= ruleJvmLowerBound ) )
-                    // InternalMelange.g:9108:1: (lv_constraints_4_0= ruleJvmLowerBound )
+                    // InternalMelange.g:9126:7: ( (lv_constraints_4_0= ruleJvmLowerBound ) )
+                    // InternalMelange.g:9127:1: (lv_constraints_4_0= ruleJvmLowerBound )
                     {
-                    // InternalMelange.g:9108:1: (lv_constraints_4_0= ruleJvmLowerBound )
-                    // InternalMelange.g:9109:3: lv_constraints_4_0= ruleJvmLowerBound
+                    // InternalMelange.g:9127:1: (lv_constraints_4_0= ruleJvmLowerBound )
+                    // InternalMelange.g:9128:3: lv_constraints_4_0= ruleJvmLowerBound
                     {
                     if ( state.backtracking==0 ) {
                        
                       	        newCompositeNode(grammarAccess.getJvmWildcardTypeReferenceAccess().getConstraintsJvmLowerBoundParserRuleCall_2_1_0_0()); 
                       	    
                     }
-                    pushFollow(FOLLOW_124);
+                    pushFollow(FOLLOW_125);
                     lv_constraints_4_0=ruleJvmLowerBound();
 
                     state._fsp--;
@@ -26040,30 +26082,30 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // InternalMelange.g:9125:2: ( (lv_constraints_5_0= ruleJvmLowerBoundAnded ) )*
+                    // InternalMelange.g:9144:2: ( (lv_constraints_5_0= ruleJvmLowerBoundAnded ) )*
                     loop172:
                     do {
                         int alt172=2;
                         int LA172_0 = input.LA(1);
 
-                        if ( (LA172_0==124) ) {
+                        if ( (LA172_0==125) ) {
                             alt172=1;
                         }
 
 
                         switch (alt172) {
                     	case 1 :
-                    	    // InternalMelange.g:9126:1: (lv_constraints_5_0= ruleJvmLowerBoundAnded )
+                    	    // InternalMelange.g:9145:1: (lv_constraints_5_0= ruleJvmLowerBoundAnded )
                     	    {
-                    	    // InternalMelange.g:9126:1: (lv_constraints_5_0= ruleJvmLowerBoundAnded )
-                    	    // InternalMelange.g:9127:3: lv_constraints_5_0= ruleJvmLowerBoundAnded
+                    	    // InternalMelange.g:9145:1: (lv_constraints_5_0= ruleJvmLowerBoundAnded )
+                    	    // InternalMelange.g:9146:3: lv_constraints_5_0= ruleJvmLowerBoundAnded
                     	    {
                     	    if ( state.backtracking==0 ) {
                     	       
                     	      	        newCompositeNode(grammarAccess.getJvmWildcardTypeReferenceAccess().getConstraintsJvmLowerBoundAndedParserRuleCall_2_1_1_0()); 
                     	      	    
                     	    }
-                    	    pushFollow(FOLLOW_124);
+                    	    pushFollow(FOLLOW_125);
                     	    lv_constraints_5_0=ruleJvmLowerBoundAnded();
 
                     	    state._fsp--;
@@ -26125,7 +26167,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleJvmUpperBound"
-    // InternalMelange.g:9151:1: entryRuleJvmUpperBound returns [EObject current=null] : iv_ruleJvmUpperBound= ruleJvmUpperBound EOF ;
+    // InternalMelange.g:9170:1: entryRuleJvmUpperBound returns [EObject current=null] : iv_ruleJvmUpperBound= ruleJvmUpperBound EOF ;
     public final EObject entryRuleJvmUpperBound() throws RecognitionException {
         EObject current = null;
 
@@ -26133,8 +26175,8 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalMelange.g:9152:2: (iv_ruleJvmUpperBound= ruleJvmUpperBound EOF )
-            // InternalMelange.g:9153:2: iv_ruleJvmUpperBound= ruleJvmUpperBound EOF
+            // InternalMelange.g:9171:2: (iv_ruleJvmUpperBound= ruleJvmUpperBound EOF )
+            // InternalMelange.g:9172:2: iv_ruleJvmUpperBound= ruleJvmUpperBound EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getJvmUpperBoundRule()); 
@@ -26165,7 +26207,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleJvmUpperBound"
-    // InternalMelange.g:9160:1: ruleJvmUpperBound returns [EObject current=null] : (otherlv_0= 'extends' ( (lv_typeReference_1_0= ruleJvmTypeReference ) ) ) ;
+    // InternalMelange.g:9179:1: ruleJvmUpperBound returns [EObject current=null] : (otherlv_0= 'extends' ( (lv_typeReference_1_0= ruleJvmTypeReference ) ) ) ;
     public final EObject ruleJvmUpperBound() throws RecognitionException {
         EObject current = null;
 
@@ -26176,23 +26218,23 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // InternalMelange.g:9163:28: ( (otherlv_0= 'extends' ( (lv_typeReference_1_0= ruleJvmTypeReference ) ) ) )
-            // InternalMelange.g:9164:1: (otherlv_0= 'extends' ( (lv_typeReference_1_0= ruleJvmTypeReference ) ) )
+            // InternalMelange.g:9182:28: ( (otherlv_0= 'extends' ( (lv_typeReference_1_0= ruleJvmTypeReference ) ) ) )
+            // InternalMelange.g:9183:1: (otherlv_0= 'extends' ( (lv_typeReference_1_0= ruleJvmTypeReference ) ) )
             {
-            // InternalMelange.g:9164:1: (otherlv_0= 'extends' ( (lv_typeReference_1_0= ruleJvmTypeReference ) ) )
-            // InternalMelange.g:9164:3: otherlv_0= 'extends' ( (lv_typeReference_1_0= ruleJvmTypeReference ) )
+            // InternalMelange.g:9183:1: (otherlv_0= 'extends' ( (lv_typeReference_1_0= ruleJvmTypeReference ) ) )
+            // InternalMelange.g:9183:3: otherlv_0= 'extends' ( (lv_typeReference_1_0= ruleJvmTypeReference ) )
             {
-            otherlv_0=(Token)match(input,108,FOLLOW_33); if (state.failed) return current;
+            otherlv_0=(Token)match(input,109,FOLLOW_33); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_0, grammarAccess.getJvmUpperBoundAccess().getExtendsKeyword_0());
                   
             }
-            // InternalMelange.g:9168:1: ( (lv_typeReference_1_0= ruleJvmTypeReference ) )
-            // InternalMelange.g:9169:1: (lv_typeReference_1_0= ruleJvmTypeReference )
+            // InternalMelange.g:9187:1: ( (lv_typeReference_1_0= ruleJvmTypeReference ) )
+            // InternalMelange.g:9188:1: (lv_typeReference_1_0= ruleJvmTypeReference )
             {
-            // InternalMelange.g:9169:1: (lv_typeReference_1_0= ruleJvmTypeReference )
-            // InternalMelange.g:9170:3: lv_typeReference_1_0= ruleJvmTypeReference
+            // InternalMelange.g:9188:1: (lv_typeReference_1_0= ruleJvmTypeReference )
+            // InternalMelange.g:9189:3: lv_typeReference_1_0= ruleJvmTypeReference
             {
             if ( state.backtracking==0 ) {
                
@@ -26246,7 +26288,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleJvmUpperBoundAnded"
-    // InternalMelange.g:9194:1: entryRuleJvmUpperBoundAnded returns [EObject current=null] : iv_ruleJvmUpperBoundAnded= ruleJvmUpperBoundAnded EOF ;
+    // InternalMelange.g:9213:1: entryRuleJvmUpperBoundAnded returns [EObject current=null] : iv_ruleJvmUpperBoundAnded= ruleJvmUpperBoundAnded EOF ;
     public final EObject entryRuleJvmUpperBoundAnded() throws RecognitionException {
         EObject current = null;
 
@@ -26254,8 +26296,8 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalMelange.g:9195:2: (iv_ruleJvmUpperBoundAnded= ruleJvmUpperBoundAnded EOF )
-            // InternalMelange.g:9196:2: iv_ruleJvmUpperBoundAnded= ruleJvmUpperBoundAnded EOF
+            // InternalMelange.g:9214:2: (iv_ruleJvmUpperBoundAnded= ruleJvmUpperBoundAnded EOF )
+            // InternalMelange.g:9215:2: iv_ruleJvmUpperBoundAnded= ruleJvmUpperBoundAnded EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getJvmUpperBoundAndedRule()); 
@@ -26286,7 +26328,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleJvmUpperBoundAnded"
-    // InternalMelange.g:9203:1: ruleJvmUpperBoundAnded returns [EObject current=null] : (otherlv_0= '&' ( (lv_typeReference_1_0= ruleJvmTypeReference ) ) ) ;
+    // InternalMelange.g:9222:1: ruleJvmUpperBoundAnded returns [EObject current=null] : (otherlv_0= '&' ( (lv_typeReference_1_0= ruleJvmTypeReference ) ) ) ;
     public final EObject ruleJvmUpperBoundAnded() throws RecognitionException {
         EObject current = null;
 
@@ -26297,23 +26339,23 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // InternalMelange.g:9206:28: ( (otherlv_0= '&' ( (lv_typeReference_1_0= ruleJvmTypeReference ) ) ) )
-            // InternalMelange.g:9207:1: (otherlv_0= '&' ( (lv_typeReference_1_0= ruleJvmTypeReference ) ) )
+            // InternalMelange.g:9225:28: ( (otherlv_0= '&' ( (lv_typeReference_1_0= ruleJvmTypeReference ) ) ) )
+            // InternalMelange.g:9226:1: (otherlv_0= '&' ( (lv_typeReference_1_0= ruleJvmTypeReference ) ) )
             {
-            // InternalMelange.g:9207:1: (otherlv_0= '&' ( (lv_typeReference_1_0= ruleJvmTypeReference ) ) )
-            // InternalMelange.g:9207:3: otherlv_0= '&' ( (lv_typeReference_1_0= ruleJvmTypeReference ) )
+            // InternalMelange.g:9226:1: (otherlv_0= '&' ( (lv_typeReference_1_0= ruleJvmTypeReference ) ) )
+            // InternalMelange.g:9226:3: otherlv_0= '&' ( (lv_typeReference_1_0= ruleJvmTypeReference ) )
             {
-            otherlv_0=(Token)match(input,124,FOLLOW_33); if (state.failed) return current;
+            otherlv_0=(Token)match(input,125,FOLLOW_33); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_0, grammarAccess.getJvmUpperBoundAndedAccess().getAmpersandKeyword_0());
                   
             }
-            // InternalMelange.g:9211:1: ( (lv_typeReference_1_0= ruleJvmTypeReference ) )
-            // InternalMelange.g:9212:1: (lv_typeReference_1_0= ruleJvmTypeReference )
+            // InternalMelange.g:9230:1: ( (lv_typeReference_1_0= ruleJvmTypeReference ) )
+            // InternalMelange.g:9231:1: (lv_typeReference_1_0= ruleJvmTypeReference )
             {
-            // InternalMelange.g:9212:1: (lv_typeReference_1_0= ruleJvmTypeReference )
-            // InternalMelange.g:9213:3: lv_typeReference_1_0= ruleJvmTypeReference
+            // InternalMelange.g:9231:1: (lv_typeReference_1_0= ruleJvmTypeReference )
+            // InternalMelange.g:9232:3: lv_typeReference_1_0= ruleJvmTypeReference
             {
             if ( state.backtracking==0 ) {
                
@@ -26367,7 +26409,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleJvmLowerBound"
-    // InternalMelange.g:9237:1: entryRuleJvmLowerBound returns [EObject current=null] : iv_ruleJvmLowerBound= ruleJvmLowerBound EOF ;
+    // InternalMelange.g:9256:1: entryRuleJvmLowerBound returns [EObject current=null] : iv_ruleJvmLowerBound= ruleJvmLowerBound EOF ;
     public final EObject entryRuleJvmLowerBound() throws RecognitionException {
         EObject current = null;
 
@@ -26375,8 +26417,8 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalMelange.g:9238:2: (iv_ruleJvmLowerBound= ruleJvmLowerBound EOF )
-            // InternalMelange.g:9239:2: iv_ruleJvmLowerBound= ruleJvmLowerBound EOF
+            // InternalMelange.g:9257:2: (iv_ruleJvmLowerBound= ruleJvmLowerBound EOF )
+            // InternalMelange.g:9258:2: iv_ruleJvmLowerBound= ruleJvmLowerBound EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getJvmLowerBoundRule()); 
@@ -26407,7 +26449,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleJvmLowerBound"
-    // InternalMelange.g:9246:1: ruleJvmLowerBound returns [EObject current=null] : (otherlv_0= 'super' ( (lv_typeReference_1_0= ruleJvmTypeReference ) ) ) ;
+    // InternalMelange.g:9265:1: ruleJvmLowerBound returns [EObject current=null] : (otherlv_0= 'super' ( (lv_typeReference_1_0= ruleJvmTypeReference ) ) ) ;
     public final EObject ruleJvmLowerBound() throws RecognitionException {
         EObject current = null;
 
@@ -26418,23 +26460,23 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // InternalMelange.g:9249:28: ( (otherlv_0= 'super' ( (lv_typeReference_1_0= ruleJvmTypeReference ) ) ) )
-            // InternalMelange.g:9250:1: (otherlv_0= 'super' ( (lv_typeReference_1_0= ruleJvmTypeReference ) ) )
+            // InternalMelange.g:9268:28: ( (otherlv_0= 'super' ( (lv_typeReference_1_0= ruleJvmTypeReference ) ) ) )
+            // InternalMelange.g:9269:1: (otherlv_0= 'super' ( (lv_typeReference_1_0= ruleJvmTypeReference ) ) )
             {
-            // InternalMelange.g:9250:1: (otherlv_0= 'super' ( (lv_typeReference_1_0= ruleJvmTypeReference ) ) )
-            // InternalMelange.g:9250:3: otherlv_0= 'super' ( (lv_typeReference_1_0= ruleJvmTypeReference ) )
+            // InternalMelange.g:9269:1: (otherlv_0= 'super' ( (lv_typeReference_1_0= ruleJvmTypeReference ) ) )
+            // InternalMelange.g:9269:3: otherlv_0= 'super' ( (lv_typeReference_1_0= ruleJvmTypeReference ) )
             {
-            otherlv_0=(Token)match(input,112,FOLLOW_33); if (state.failed) return current;
+            otherlv_0=(Token)match(input,113,FOLLOW_33); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_0, grammarAccess.getJvmLowerBoundAccess().getSuperKeyword_0());
                   
             }
-            // InternalMelange.g:9254:1: ( (lv_typeReference_1_0= ruleJvmTypeReference ) )
-            // InternalMelange.g:9255:1: (lv_typeReference_1_0= ruleJvmTypeReference )
+            // InternalMelange.g:9273:1: ( (lv_typeReference_1_0= ruleJvmTypeReference ) )
+            // InternalMelange.g:9274:1: (lv_typeReference_1_0= ruleJvmTypeReference )
             {
-            // InternalMelange.g:9255:1: (lv_typeReference_1_0= ruleJvmTypeReference )
-            // InternalMelange.g:9256:3: lv_typeReference_1_0= ruleJvmTypeReference
+            // InternalMelange.g:9274:1: (lv_typeReference_1_0= ruleJvmTypeReference )
+            // InternalMelange.g:9275:3: lv_typeReference_1_0= ruleJvmTypeReference
             {
             if ( state.backtracking==0 ) {
                
@@ -26488,7 +26530,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleJvmLowerBoundAnded"
-    // InternalMelange.g:9280:1: entryRuleJvmLowerBoundAnded returns [EObject current=null] : iv_ruleJvmLowerBoundAnded= ruleJvmLowerBoundAnded EOF ;
+    // InternalMelange.g:9299:1: entryRuleJvmLowerBoundAnded returns [EObject current=null] : iv_ruleJvmLowerBoundAnded= ruleJvmLowerBoundAnded EOF ;
     public final EObject entryRuleJvmLowerBoundAnded() throws RecognitionException {
         EObject current = null;
 
@@ -26496,8 +26538,8 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalMelange.g:9281:2: (iv_ruleJvmLowerBoundAnded= ruleJvmLowerBoundAnded EOF )
-            // InternalMelange.g:9282:2: iv_ruleJvmLowerBoundAnded= ruleJvmLowerBoundAnded EOF
+            // InternalMelange.g:9300:2: (iv_ruleJvmLowerBoundAnded= ruleJvmLowerBoundAnded EOF )
+            // InternalMelange.g:9301:2: iv_ruleJvmLowerBoundAnded= ruleJvmLowerBoundAnded EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getJvmLowerBoundAndedRule()); 
@@ -26528,7 +26570,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleJvmLowerBoundAnded"
-    // InternalMelange.g:9289:1: ruleJvmLowerBoundAnded returns [EObject current=null] : (otherlv_0= '&' ( (lv_typeReference_1_0= ruleJvmTypeReference ) ) ) ;
+    // InternalMelange.g:9308:1: ruleJvmLowerBoundAnded returns [EObject current=null] : (otherlv_0= '&' ( (lv_typeReference_1_0= ruleJvmTypeReference ) ) ) ;
     public final EObject ruleJvmLowerBoundAnded() throws RecognitionException {
         EObject current = null;
 
@@ -26539,23 +26581,23 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // InternalMelange.g:9292:28: ( (otherlv_0= '&' ( (lv_typeReference_1_0= ruleJvmTypeReference ) ) ) )
-            // InternalMelange.g:9293:1: (otherlv_0= '&' ( (lv_typeReference_1_0= ruleJvmTypeReference ) ) )
+            // InternalMelange.g:9311:28: ( (otherlv_0= '&' ( (lv_typeReference_1_0= ruleJvmTypeReference ) ) ) )
+            // InternalMelange.g:9312:1: (otherlv_0= '&' ( (lv_typeReference_1_0= ruleJvmTypeReference ) ) )
             {
-            // InternalMelange.g:9293:1: (otherlv_0= '&' ( (lv_typeReference_1_0= ruleJvmTypeReference ) ) )
-            // InternalMelange.g:9293:3: otherlv_0= '&' ( (lv_typeReference_1_0= ruleJvmTypeReference ) )
+            // InternalMelange.g:9312:1: (otherlv_0= '&' ( (lv_typeReference_1_0= ruleJvmTypeReference ) ) )
+            // InternalMelange.g:9312:3: otherlv_0= '&' ( (lv_typeReference_1_0= ruleJvmTypeReference ) )
             {
-            otherlv_0=(Token)match(input,124,FOLLOW_33); if (state.failed) return current;
+            otherlv_0=(Token)match(input,125,FOLLOW_33); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_0, grammarAccess.getJvmLowerBoundAndedAccess().getAmpersandKeyword_0());
                   
             }
-            // InternalMelange.g:9297:1: ( (lv_typeReference_1_0= ruleJvmTypeReference ) )
-            // InternalMelange.g:9298:1: (lv_typeReference_1_0= ruleJvmTypeReference )
+            // InternalMelange.g:9316:1: ( (lv_typeReference_1_0= ruleJvmTypeReference ) )
+            // InternalMelange.g:9317:1: (lv_typeReference_1_0= ruleJvmTypeReference )
             {
-            // InternalMelange.g:9298:1: (lv_typeReference_1_0= ruleJvmTypeReference )
-            // InternalMelange.g:9299:3: lv_typeReference_1_0= ruleJvmTypeReference
+            // InternalMelange.g:9317:1: (lv_typeReference_1_0= ruleJvmTypeReference )
+            // InternalMelange.g:9318:3: lv_typeReference_1_0= ruleJvmTypeReference
             {
             if ( state.backtracking==0 ) {
                
@@ -26609,7 +26651,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleQualifiedNameWithWildcard"
-    // InternalMelange.g:9325:1: entryRuleQualifiedNameWithWildcard returns [String current=null] : iv_ruleQualifiedNameWithWildcard= ruleQualifiedNameWithWildcard EOF ;
+    // InternalMelange.g:9344:1: entryRuleQualifiedNameWithWildcard returns [String current=null] : iv_ruleQualifiedNameWithWildcard= ruleQualifiedNameWithWildcard EOF ;
     public final String entryRuleQualifiedNameWithWildcard() throws RecognitionException {
         String current = null;
 
@@ -26617,8 +26659,8 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalMelange.g:9326:2: (iv_ruleQualifiedNameWithWildcard= ruleQualifiedNameWithWildcard EOF )
-            // InternalMelange.g:9327:2: iv_ruleQualifiedNameWithWildcard= ruleQualifiedNameWithWildcard EOF
+            // InternalMelange.g:9345:2: (iv_ruleQualifiedNameWithWildcard= ruleQualifiedNameWithWildcard EOF )
+            // InternalMelange.g:9346:2: iv_ruleQualifiedNameWithWildcard= ruleQualifiedNameWithWildcard EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getQualifiedNameWithWildcardRule()); 
@@ -26649,7 +26691,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleQualifiedNameWithWildcard"
-    // InternalMelange.g:9334:1: ruleQualifiedNameWithWildcard returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_QualifiedName_0= ruleQualifiedName kw= '.' kw= '*' ) ;
+    // InternalMelange.g:9353:1: ruleQualifiedNameWithWildcard returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_QualifiedName_0= ruleQualifiedName kw= '.' kw= '*' ) ;
     public final AntlrDatatypeRuleToken ruleQualifiedNameWithWildcard() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -26660,18 +26702,18 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // InternalMelange.g:9337:28: ( (this_QualifiedName_0= ruleQualifiedName kw= '.' kw= '*' ) )
-            // InternalMelange.g:9338:1: (this_QualifiedName_0= ruleQualifiedName kw= '.' kw= '*' )
+            // InternalMelange.g:9356:28: ( (this_QualifiedName_0= ruleQualifiedName kw= '.' kw= '*' ) )
+            // InternalMelange.g:9357:1: (this_QualifiedName_0= ruleQualifiedName kw= '.' kw= '*' )
             {
-            // InternalMelange.g:9338:1: (this_QualifiedName_0= ruleQualifiedName kw= '.' kw= '*' )
-            // InternalMelange.g:9339:5: this_QualifiedName_0= ruleQualifiedName kw= '.' kw= '*'
+            // InternalMelange.g:9357:1: (this_QualifiedName_0= ruleQualifiedName kw= '.' kw= '*' )
+            // InternalMelange.g:9358:5: this_QualifiedName_0= ruleQualifiedName kw= '.' kw= '*'
             {
             if ( state.backtracking==0 ) {
                
                       newCompositeNode(grammarAccess.getQualifiedNameWithWildcardAccess().getQualifiedNameParserRuleCall_0()); 
                   
             }
-            pushFollow(FOLLOW_125);
+            pushFollow(FOLLOW_126);
             this_QualifiedName_0=ruleQualifiedName();
 
             state._fsp--;
@@ -26686,14 +26728,14 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                       afterParserOrEnumRuleCall();
                   
             }
-            kw=(Token)match(input,93,FOLLOW_126); if (state.failed) return current;
+            kw=(Token)match(input,94,FOLLOW_127); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                       current.merge(kw);
                       newLeafNode(kw, grammarAccess.getQualifiedNameWithWildcardAccess().getFullStopKeyword_1()); 
                   
             }
-            kw=(Token)match(input,86,FOLLOW_2); if (state.failed) return current;
+            kw=(Token)match(input,87,FOLLOW_2); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                       current.merge(kw);
@@ -26723,7 +26765,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleValidID"
-    // InternalMelange.g:9369:1: entryRuleValidID returns [String current=null] : iv_ruleValidID= ruleValidID EOF ;
+    // InternalMelange.g:9388:1: entryRuleValidID returns [String current=null] : iv_ruleValidID= ruleValidID EOF ;
     public final String entryRuleValidID() throws RecognitionException {
         String current = null;
 
@@ -26731,8 +26773,8 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalMelange.g:9370:2: (iv_ruleValidID= ruleValidID EOF )
-            // InternalMelange.g:9371:2: iv_ruleValidID= ruleValidID EOF
+            // InternalMelange.g:9389:2: (iv_ruleValidID= ruleValidID EOF )
+            // InternalMelange.g:9390:2: iv_ruleValidID= ruleValidID EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getValidIDRule()); 
@@ -26763,7 +26805,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleValidID"
-    // InternalMelange.g:9378:1: ruleValidID returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : this_ID_0= RULE_ID ;
+    // InternalMelange.g:9397:1: ruleValidID returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : this_ID_0= RULE_ID ;
     public final AntlrDatatypeRuleToken ruleValidID() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -26772,8 +26814,8 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // InternalMelange.g:9381:28: (this_ID_0= RULE_ID )
-            // InternalMelange.g:9382:5: this_ID_0= RULE_ID
+            // InternalMelange.g:9400:28: (this_ID_0= RULE_ID )
+            // InternalMelange.g:9401:5: this_ID_0= RULE_ID
             {
             this_ID_0=(Token)match(input,RULE_ID,FOLLOW_2); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -26806,7 +26848,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleXImportSection"
-    // InternalMelange.g:9397:1: entryRuleXImportSection returns [EObject current=null] : iv_ruleXImportSection= ruleXImportSection EOF ;
+    // InternalMelange.g:9416:1: entryRuleXImportSection returns [EObject current=null] : iv_ruleXImportSection= ruleXImportSection EOF ;
     public final EObject entryRuleXImportSection() throws RecognitionException {
         EObject current = null;
 
@@ -26814,8 +26856,8 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalMelange.g:9398:2: (iv_ruleXImportSection= ruleXImportSection EOF )
-            // InternalMelange.g:9399:2: iv_ruleXImportSection= ruleXImportSection EOF
+            // InternalMelange.g:9417:2: (iv_ruleXImportSection= ruleXImportSection EOF )
+            // InternalMelange.g:9418:2: iv_ruleXImportSection= ruleXImportSection EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getXImportSectionRule()); 
@@ -26846,7 +26888,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleXImportSection"
-    // InternalMelange.g:9406:1: ruleXImportSection returns [EObject current=null] : ( (lv_importDeclarations_0_0= ruleXImportDeclaration ) )+ ;
+    // InternalMelange.g:9425:1: ruleXImportSection returns [EObject current=null] : ( (lv_importDeclarations_0_0= ruleXImportDeclaration ) )+ ;
     public final EObject ruleXImportSection() throws RecognitionException {
         EObject current = null;
 
@@ -26856,34 +26898,34 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // InternalMelange.g:9409:28: ( ( (lv_importDeclarations_0_0= ruleXImportDeclaration ) )+ )
-            // InternalMelange.g:9410:1: ( (lv_importDeclarations_0_0= ruleXImportDeclaration ) )+
+            // InternalMelange.g:9428:28: ( ( (lv_importDeclarations_0_0= ruleXImportDeclaration ) )+ )
+            // InternalMelange.g:9429:1: ( (lv_importDeclarations_0_0= ruleXImportDeclaration ) )+
             {
-            // InternalMelange.g:9410:1: ( (lv_importDeclarations_0_0= ruleXImportDeclaration ) )+
+            // InternalMelange.g:9429:1: ( (lv_importDeclarations_0_0= ruleXImportDeclaration ) )+
             int cnt174=0;
             loop174:
             do {
                 int alt174=2;
                 int LA174_0 = input.LA(1);
 
-                if ( (LA174_0==110) ) {
+                if ( (LA174_0==111) ) {
                     alt174=1;
                 }
 
 
                 switch (alt174) {
             	case 1 :
-            	    // InternalMelange.g:9411:1: (lv_importDeclarations_0_0= ruleXImportDeclaration )
+            	    // InternalMelange.g:9430:1: (lv_importDeclarations_0_0= ruleXImportDeclaration )
             	    {
-            	    // InternalMelange.g:9411:1: (lv_importDeclarations_0_0= ruleXImportDeclaration )
-            	    // InternalMelange.g:9412:3: lv_importDeclarations_0_0= ruleXImportDeclaration
+            	    // InternalMelange.g:9430:1: (lv_importDeclarations_0_0= ruleXImportDeclaration )
+            	    // InternalMelange.g:9431:3: lv_importDeclarations_0_0= ruleXImportDeclaration
             	    {
             	    if ( state.backtracking==0 ) {
             	       
             	      	        newCompositeNode(grammarAccess.getXImportSectionAccess().getImportDeclarationsXImportDeclarationParserRuleCall_0()); 
             	      	    
             	    }
-            	    pushFollow(FOLLOW_127);
+            	    pushFollow(FOLLOW_128);
             	    lv_importDeclarations_0_0=ruleXImportDeclaration();
 
             	    state._fsp--;
@@ -26938,7 +26980,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleXImportDeclaration"
-    // InternalMelange.g:9436:1: entryRuleXImportDeclaration returns [EObject current=null] : iv_ruleXImportDeclaration= ruleXImportDeclaration EOF ;
+    // InternalMelange.g:9455:1: entryRuleXImportDeclaration returns [EObject current=null] : iv_ruleXImportDeclaration= ruleXImportDeclaration EOF ;
     public final EObject entryRuleXImportDeclaration() throws RecognitionException {
         EObject current = null;
 
@@ -26946,8 +26988,8 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalMelange.g:9437:2: (iv_ruleXImportDeclaration= ruleXImportDeclaration EOF )
-            // InternalMelange.g:9438:2: iv_ruleXImportDeclaration= ruleXImportDeclaration EOF
+            // InternalMelange.g:9456:2: (iv_ruleXImportDeclaration= ruleXImportDeclaration EOF )
+            // InternalMelange.g:9457:2: iv_ruleXImportDeclaration= ruleXImportDeclaration EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getXImportDeclarationRule()); 
@@ -26978,7 +27020,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleXImportDeclaration"
-    // InternalMelange.g:9445:1: ruleXImportDeclaration returns [EObject current=null] : (otherlv_0= 'import' ( ( ( (lv_static_1_0= 'static' ) ) ( (lv_extension_2_0= 'extension' ) )? ( ( ruleQualifiedNameInStaticImport ) ) ( ( (lv_wildcard_4_0= '*' ) ) | ( (lv_memberName_5_0= ruleValidID ) ) ) ) | ( ( ruleQualifiedName ) ) | ( (lv_importedNamespace_7_0= ruleQualifiedNameWithWildcard ) ) ) (otherlv_8= ';' )? ) ;
+    // InternalMelange.g:9464:1: ruleXImportDeclaration returns [EObject current=null] : (otherlv_0= 'import' ( ( ( (lv_static_1_0= 'static' ) ) ( (lv_extension_2_0= 'extension' ) )? ( ( ruleQualifiedNameInStaticImport ) ) ( ( (lv_wildcard_4_0= '*' ) ) | ( (lv_memberName_5_0= ruleValidID ) ) ) ) | ( ( ruleQualifiedName ) ) | ( (lv_importedNamespace_7_0= ruleQualifiedNameWithWildcard ) ) ) (otherlv_8= ';' )? ) ;
     public final EObject ruleXImportDeclaration() throws RecognitionException {
         EObject current = null;
 
@@ -26995,35 +27037,35 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // InternalMelange.g:9448:28: ( (otherlv_0= 'import' ( ( ( (lv_static_1_0= 'static' ) ) ( (lv_extension_2_0= 'extension' ) )? ( ( ruleQualifiedNameInStaticImport ) ) ( ( (lv_wildcard_4_0= '*' ) ) | ( (lv_memberName_5_0= ruleValidID ) ) ) ) | ( ( ruleQualifiedName ) ) | ( (lv_importedNamespace_7_0= ruleQualifiedNameWithWildcard ) ) ) (otherlv_8= ';' )? ) )
-            // InternalMelange.g:9449:1: (otherlv_0= 'import' ( ( ( (lv_static_1_0= 'static' ) ) ( (lv_extension_2_0= 'extension' ) )? ( ( ruleQualifiedNameInStaticImport ) ) ( ( (lv_wildcard_4_0= '*' ) ) | ( (lv_memberName_5_0= ruleValidID ) ) ) ) | ( ( ruleQualifiedName ) ) | ( (lv_importedNamespace_7_0= ruleQualifiedNameWithWildcard ) ) ) (otherlv_8= ';' )? )
+            // InternalMelange.g:9467:28: ( (otherlv_0= 'import' ( ( ( (lv_static_1_0= 'static' ) ) ( (lv_extension_2_0= 'extension' ) )? ( ( ruleQualifiedNameInStaticImport ) ) ( ( (lv_wildcard_4_0= '*' ) ) | ( (lv_memberName_5_0= ruleValidID ) ) ) ) | ( ( ruleQualifiedName ) ) | ( (lv_importedNamespace_7_0= ruleQualifiedNameWithWildcard ) ) ) (otherlv_8= ';' )? ) )
+            // InternalMelange.g:9468:1: (otherlv_0= 'import' ( ( ( (lv_static_1_0= 'static' ) ) ( (lv_extension_2_0= 'extension' ) )? ( ( ruleQualifiedNameInStaticImport ) ) ( ( (lv_wildcard_4_0= '*' ) ) | ( (lv_memberName_5_0= ruleValidID ) ) ) ) | ( ( ruleQualifiedName ) ) | ( (lv_importedNamespace_7_0= ruleQualifiedNameWithWildcard ) ) ) (otherlv_8= ';' )? )
             {
-            // InternalMelange.g:9449:1: (otherlv_0= 'import' ( ( ( (lv_static_1_0= 'static' ) ) ( (lv_extension_2_0= 'extension' ) )? ( ( ruleQualifiedNameInStaticImport ) ) ( ( (lv_wildcard_4_0= '*' ) ) | ( (lv_memberName_5_0= ruleValidID ) ) ) ) | ( ( ruleQualifiedName ) ) | ( (lv_importedNamespace_7_0= ruleQualifiedNameWithWildcard ) ) ) (otherlv_8= ';' )? )
-            // InternalMelange.g:9449:3: otherlv_0= 'import' ( ( ( (lv_static_1_0= 'static' ) ) ( (lv_extension_2_0= 'extension' ) )? ( ( ruleQualifiedNameInStaticImport ) ) ( ( (lv_wildcard_4_0= '*' ) ) | ( (lv_memberName_5_0= ruleValidID ) ) ) ) | ( ( ruleQualifiedName ) ) | ( (lv_importedNamespace_7_0= ruleQualifiedNameWithWildcard ) ) ) (otherlv_8= ';' )?
+            // InternalMelange.g:9468:1: (otherlv_0= 'import' ( ( ( (lv_static_1_0= 'static' ) ) ( (lv_extension_2_0= 'extension' ) )? ( ( ruleQualifiedNameInStaticImport ) ) ( ( (lv_wildcard_4_0= '*' ) ) | ( (lv_memberName_5_0= ruleValidID ) ) ) ) | ( ( ruleQualifiedName ) ) | ( (lv_importedNamespace_7_0= ruleQualifiedNameWithWildcard ) ) ) (otherlv_8= ';' )? )
+            // InternalMelange.g:9468:3: otherlv_0= 'import' ( ( ( (lv_static_1_0= 'static' ) ) ( (lv_extension_2_0= 'extension' ) )? ( ( ruleQualifiedNameInStaticImport ) ) ( ( (lv_wildcard_4_0= '*' ) ) | ( (lv_memberName_5_0= ruleValidID ) ) ) ) | ( ( ruleQualifiedName ) ) | ( (lv_importedNamespace_7_0= ruleQualifiedNameWithWildcard ) ) ) (otherlv_8= ';' )?
             {
-            otherlv_0=(Token)match(input,110,FOLLOW_128); if (state.failed) return current;
+            otherlv_0=(Token)match(input,111,FOLLOW_129); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_0, grammarAccess.getXImportDeclarationAccess().getImportKeyword_0());
                   
             }
-            // InternalMelange.g:9453:1: ( ( ( (lv_static_1_0= 'static' ) ) ( (lv_extension_2_0= 'extension' ) )? ( ( ruleQualifiedNameInStaticImport ) ) ( ( (lv_wildcard_4_0= '*' ) ) | ( (lv_memberName_5_0= ruleValidID ) ) ) ) | ( ( ruleQualifiedName ) ) | ( (lv_importedNamespace_7_0= ruleQualifiedNameWithWildcard ) ) )
+            // InternalMelange.g:9472:1: ( ( ( (lv_static_1_0= 'static' ) ) ( (lv_extension_2_0= 'extension' ) )? ( ( ruleQualifiedNameInStaticImport ) ) ( ( (lv_wildcard_4_0= '*' ) ) | ( (lv_memberName_5_0= ruleValidID ) ) ) ) | ( ( ruleQualifiedName ) ) | ( (lv_importedNamespace_7_0= ruleQualifiedNameWithWildcard ) ) )
             int alt177=3;
             alt177 = dfa177.predict(input);
             switch (alt177) {
                 case 1 :
-                    // InternalMelange.g:9453:2: ( ( (lv_static_1_0= 'static' ) ) ( (lv_extension_2_0= 'extension' ) )? ( ( ruleQualifiedNameInStaticImport ) ) ( ( (lv_wildcard_4_0= '*' ) ) | ( (lv_memberName_5_0= ruleValidID ) ) ) )
+                    // InternalMelange.g:9472:2: ( ( (lv_static_1_0= 'static' ) ) ( (lv_extension_2_0= 'extension' ) )? ( ( ruleQualifiedNameInStaticImport ) ) ( ( (lv_wildcard_4_0= '*' ) ) | ( (lv_memberName_5_0= ruleValidID ) ) ) )
                     {
-                    // InternalMelange.g:9453:2: ( ( (lv_static_1_0= 'static' ) ) ( (lv_extension_2_0= 'extension' ) )? ( ( ruleQualifiedNameInStaticImport ) ) ( ( (lv_wildcard_4_0= '*' ) ) | ( (lv_memberName_5_0= ruleValidID ) ) ) )
-                    // InternalMelange.g:9453:3: ( (lv_static_1_0= 'static' ) ) ( (lv_extension_2_0= 'extension' ) )? ( ( ruleQualifiedNameInStaticImport ) ) ( ( (lv_wildcard_4_0= '*' ) ) | ( (lv_memberName_5_0= ruleValidID ) ) )
+                    // InternalMelange.g:9472:2: ( ( (lv_static_1_0= 'static' ) ) ( (lv_extension_2_0= 'extension' ) )? ( ( ruleQualifiedNameInStaticImport ) ) ( ( (lv_wildcard_4_0= '*' ) ) | ( (lv_memberName_5_0= ruleValidID ) ) ) )
+                    // InternalMelange.g:9472:3: ( (lv_static_1_0= 'static' ) ) ( (lv_extension_2_0= 'extension' ) )? ( ( ruleQualifiedNameInStaticImport ) ) ( ( (lv_wildcard_4_0= '*' ) ) | ( (lv_memberName_5_0= ruleValidID ) ) )
                     {
-                    // InternalMelange.g:9453:3: ( (lv_static_1_0= 'static' ) )
-                    // InternalMelange.g:9454:1: (lv_static_1_0= 'static' )
+                    // InternalMelange.g:9472:3: ( (lv_static_1_0= 'static' ) )
+                    // InternalMelange.g:9473:1: (lv_static_1_0= 'static' )
                     {
-                    // InternalMelange.g:9454:1: (lv_static_1_0= 'static' )
-                    // InternalMelange.g:9455:3: lv_static_1_0= 'static'
+                    // InternalMelange.g:9473:1: (lv_static_1_0= 'static' )
+                    // InternalMelange.g:9474:3: lv_static_1_0= 'static'
                     {
-                    lv_static_1_0=(Token)match(input,109,FOLLOW_129); if (state.failed) return current;
+                    lv_static_1_0=(Token)match(input,110,FOLLOW_130); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               newLeafNode(lv_static_1_0, grammarAccess.getXImportDeclarationAccess().getStaticStaticKeyword_1_0_0_0());
@@ -27043,21 +27085,21 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // InternalMelange.g:9468:2: ( (lv_extension_2_0= 'extension' ) )?
+                    // InternalMelange.g:9487:2: ( (lv_extension_2_0= 'extension' ) )?
                     int alt175=2;
                     int LA175_0 = input.LA(1);
 
-                    if ( (LA175_0==111) ) {
+                    if ( (LA175_0==112) ) {
                         alt175=1;
                     }
                     switch (alt175) {
                         case 1 :
-                            // InternalMelange.g:9469:1: (lv_extension_2_0= 'extension' )
+                            // InternalMelange.g:9488:1: (lv_extension_2_0= 'extension' )
                             {
-                            // InternalMelange.g:9469:1: (lv_extension_2_0= 'extension' )
-                            // InternalMelange.g:9470:3: lv_extension_2_0= 'extension'
+                            // InternalMelange.g:9488:1: (lv_extension_2_0= 'extension' )
+                            // InternalMelange.g:9489:3: lv_extension_2_0= 'extension'
                             {
-                            lv_extension_2_0=(Token)match(input,111,FOLLOW_129); if (state.failed) return current;
+                            lv_extension_2_0=(Token)match(input,112,FOLLOW_130); if (state.failed) return current;
                             if ( state.backtracking==0 ) {
 
                                       newLeafNode(lv_extension_2_0, grammarAccess.getXImportDeclarationAccess().getExtensionExtensionKeyword_1_0_1_0());
@@ -27080,11 +27122,11 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // InternalMelange.g:9483:3: ( ( ruleQualifiedNameInStaticImport ) )
-                    // InternalMelange.g:9484:1: ( ruleQualifiedNameInStaticImport )
+                    // InternalMelange.g:9502:3: ( ( ruleQualifiedNameInStaticImport ) )
+                    // InternalMelange.g:9503:1: ( ruleQualifiedNameInStaticImport )
                     {
-                    // InternalMelange.g:9484:1: ( ruleQualifiedNameInStaticImport )
-                    // InternalMelange.g:9485:3: ruleQualifiedNameInStaticImport
+                    // InternalMelange.g:9503:1: ( ruleQualifiedNameInStaticImport )
+                    // InternalMelange.g:9504:3: ruleQualifiedNameInStaticImport
                     {
                     if ( state.backtracking==0 ) {
 
@@ -27098,7 +27140,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                       	        newCompositeNode(grammarAccess.getXImportDeclarationAccess().getImportedTypeJvmDeclaredTypeCrossReference_1_0_2_0()); 
                       	    
                     }
-                    pushFollow(FOLLOW_130);
+                    pushFollow(FOLLOW_131);
                     ruleQualifiedNameInStaticImport();
 
                     state._fsp--;
@@ -27114,11 +27156,11 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // InternalMelange.g:9498:2: ( ( (lv_wildcard_4_0= '*' ) ) | ( (lv_memberName_5_0= ruleValidID ) ) )
+                    // InternalMelange.g:9517:2: ( ( (lv_wildcard_4_0= '*' ) ) | ( (lv_memberName_5_0= ruleValidID ) ) )
                     int alt176=2;
                     int LA176_0 = input.LA(1);
 
-                    if ( (LA176_0==86) ) {
+                    if ( (LA176_0==87) ) {
                         alt176=1;
                     }
                     else if ( (LA176_0==RULE_ID) ) {
@@ -27133,15 +27175,15 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                     }
                     switch (alt176) {
                         case 1 :
-                            // InternalMelange.g:9498:3: ( (lv_wildcard_4_0= '*' ) )
+                            // InternalMelange.g:9517:3: ( (lv_wildcard_4_0= '*' ) )
                             {
-                            // InternalMelange.g:9498:3: ( (lv_wildcard_4_0= '*' ) )
-                            // InternalMelange.g:9499:1: (lv_wildcard_4_0= '*' )
+                            // InternalMelange.g:9517:3: ( (lv_wildcard_4_0= '*' ) )
+                            // InternalMelange.g:9518:1: (lv_wildcard_4_0= '*' )
                             {
-                            // InternalMelange.g:9499:1: (lv_wildcard_4_0= '*' )
-                            // InternalMelange.g:9500:3: lv_wildcard_4_0= '*'
+                            // InternalMelange.g:9518:1: (lv_wildcard_4_0= '*' )
+                            // InternalMelange.g:9519:3: lv_wildcard_4_0= '*'
                             {
-                            lv_wildcard_4_0=(Token)match(input,86,FOLLOW_131); if (state.failed) return current;
+                            lv_wildcard_4_0=(Token)match(input,87,FOLLOW_132); if (state.failed) return current;
                             if ( state.backtracking==0 ) {
 
                                       newLeafNode(lv_wildcard_4_0, grammarAccess.getXImportDeclarationAccess().getWildcardAsteriskKeyword_1_0_3_0_0());
@@ -27165,20 +27207,20 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                             }
                             break;
                         case 2 :
-                            // InternalMelange.g:9514:6: ( (lv_memberName_5_0= ruleValidID ) )
+                            // InternalMelange.g:9533:6: ( (lv_memberName_5_0= ruleValidID ) )
                             {
-                            // InternalMelange.g:9514:6: ( (lv_memberName_5_0= ruleValidID ) )
-                            // InternalMelange.g:9515:1: (lv_memberName_5_0= ruleValidID )
+                            // InternalMelange.g:9533:6: ( (lv_memberName_5_0= ruleValidID ) )
+                            // InternalMelange.g:9534:1: (lv_memberName_5_0= ruleValidID )
                             {
-                            // InternalMelange.g:9515:1: (lv_memberName_5_0= ruleValidID )
-                            // InternalMelange.g:9516:3: lv_memberName_5_0= ruleValidID
+                            // InternalMelange.g:9534:1: (lv_memberName_5_0= ruleValidID )
+                            // InternalMelange.g:9535:3: lv_memberName_5_0= ruleValidID
                             {
                             if ( state.backtracking==0 ) {
                                
                               	        newCompositeNode(grammarAccess.getXImportDeclarationAccess().getMemberNameValidIDParserRuleCall_1_0_3_1_0()); 
                               	    
                             }
-                            pushFollow(FOLLOW_131);
+                            pushFollow(FOLLOW_132);
                             lv_memberName_5_0=ruleValidID();
 
                             state._fsp--;
@@ -27215,13 +27257,13 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalMelange.g:9533:6: ( ( ruleQualifiedName ) )
+                    // InternalMelange.g:9552:6: ( ( ruleQualifiedName ) )
                     {
-                    // InternalMelange.g:9533:6: ( ( ruleQualifiedName ) )
-                    // InternalMelange.g:9534:1: ( ruleQualifiedName )
+                    // InternalMelange.g:9552:6: ( ( ruleQualifiedName ) )
+                    // InternalMelange.g:9553:1: ( ruleQualifiedName )
                     {
-                    // InternalMelange.g:9534:1: ( ruleQualifiedName )
-                    // InternalMelange.g:9535:3: ruleQualifiedName
+                    // InternalMelange.g:9553:1: ( ruleQualifiedName )
+                    // InternalMelange.g:9554:3: ruleQualifiedName
                     {
                     if ( state.backtracking==0 ) {
 
@@ -27235,7 +27277,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                       	        newCompositeNode(grammarAccess.getXImportDeclarationAccess().getImportedTypeJvmDeclaredTypeCrossReference_1_1_0()); 
                       	    
                     }
-                    pushFollow(FOLLOW_131);
+                    pushFollow(FOLLOW_132);
                     ruleQualifiedName();
 
                     state._fsp--;
@@ -27255,20 +27297,20 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalMelange.g:9549:6: ( (lv_importedNamespace_7_0= ruleQualifiedNameWithWildcard ) )
+                    // InternalMelange.g:9568:6: ( (lv_importedNamespace_7_0= ruleQualifiedNameWithWildcard ) )
                     {
-                    // InternalMelange.g:9549:6: ( (lv_importedNamespace_7_0= ruleQualifiedNameWithWildcard ) )
-                    // InternalMelange.g:9550:1: (lv_importedNamespace_7_0= ruleQualifiedNameWithWildcard )
+                    // InternalMelange.g:9568:6: ( (lv_importedNamespace_7_0= ruleQualifiedNameWithWildcard ) )
+                    // InternalMelange.g:9569:1: (lv_importedNamespace_7_0= ruleQualifiedNameWithWildcard )
                     {
-                    // InternalMelange.g:9550:1: (lv_importedNamespace_7_0= ruleQualifiedNameWithWildcard )
-                    // InternalMelange.g:9551:3: lv_importedNamespace_7_0= ruleQualifiedNameWithWildcard
+                    // InternalMelange.g:9569:1: (lv_importedNamespace_7_0= ruleQualifiedNameWithWildcard )
+                    // InternalMelange.g:9570:3: lv_importedNamespace_7_0= ruleQualifiedNameWithWildcard
                     {
                     if ( state.backtracking==0 ) {
                        
                       	        newCompositeNode(grammarAccess.getXImportDeclarationAccess().getImportedNamespaceQualifiedNameWithWildcardParserRuleCall_1_2_0()); 
                       	    
                     }
-                    pushFollow(FOLLOW_131);
+                    pushFollow(FOLLOW_132);
                     lv_importedNamespace_7_0=ruleQualifiedNameWithWildcard();
 
                     state._fsp--;
@@ -27298,18 +27340,18 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalMelange.g:9567:3: (otherlv_8= ';' )?
+            // InternalMelange.g:9586:3: (otherlv_8= ';' )?
             int alt178=2;
             int LA178_0 = input.LA(1);
 
-            if ( (LA178_0==97) ) {
+            if ( (LA178_0==98) ) {
                 alt178=1;
             }
             switch (alt178) {
                 case 1 :
-                    // InternalMelange.g:9567:5: otherlv_8= ';'
+                    // InternalMelange.g:9586:5: otherlv_8= ';'
                     {
-                    otherlv_8=(Token)match(input,97,FOLLOW_2); if (state.failed) return current;
+                    otherlv_8=(Token)match(input,98,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_8, grammarAccess.getXImportDeclarationAccess().getSemicolonKeyword_2());
@@ -27344,7 +27386,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleQualifiedNameInStaticImport"
-    // InternalMelange.g:9579:1: entryRuleQualifiedNameInStaticImport returns [String current=null] : iv_ruleQualifiedNameInStaticImport= ruleQualifiedNameInStaticImport EOF ;
+    // InternalMelange.g:9598:1: entryRuleQualifiedNameInStaticImport returns [String current=null] : iv_ruleQualifiedNameInStaticImport= ruleQualifiedNameInStaticImport EOF ;
     public final String entryRuleQualifiedNameInStaticImport() throws RecognitionException {
         String current = null;
 
@@ -27352,8 +27394,8 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalMelange.g:9580:2: (iv_ruleQualifiedNameInStaticImport= ruleQualifiedNameInStaticImport EOF )
-            // InternalMelange.g:9581:2: iv_ruleQualifiedNameInStaticImport= ruleQualifiedNameInStaticImport EOF
+            // InternalMelange.g:9599:2: (iv_ruleQualifiedNameInStaticImport= ruleQualifiedNameInStaticImport EOF )
+            // InternalMelange.g:9600:2: iv_ruleQualifiedNameInStaticImport= ruleQualifiedNameInStaticImport EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getQualifiedNameInStaticImportRule()); 
@@ -27384,7 +27426,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleQualifiedNameInStaticImport"
-    // InternalMelange.g:9588:1: ruleQualifiedNameInStaticImport returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_ValidID_0= ruleValidID kw= '.' )+ ;
+    // InternalMelange.g:9607:1: ruleQualifiedNameInStaticImport returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_ValidID_0= ruleValidID kw= '.' )+ ;
     public final AntlrDatatypeRuleToken ruleQualifiedNameInStaticImport() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -27395,10 +27437,10 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // InternalMelange.g:9591:28: ( (this_ValidID_0= ruleValidID kw= '.' )+ )
-            // InternalMelange.g:9592:1: (this_ValidID_0= ruleValidID kw= '.' )+
+            // InternalMelange.g:9610:28: ( (this_ValidID_0= ruleValidID kw= '.' )+ )
+            // InternalMelange.g:9611:1: (this_ValidID_0= ruleValidID kw= '.' )+
             {
-            // InternalMelange.g:9592:1: (this_ValidID_0= ruleValidID kw= '.' )+
+            // InternalMelange.g:9611:1: (this_ValidID_0= ruleValidID kw= '.' )+
             int cnt179=0;
             loop179:
             do {
@@ -27408,7 +27450,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                 if ( (LA179_0==RULE_ID) ) {
                     int LA179_2 = input.LA(2);
 
-                    if ( (LA179_2==93) ) {
+                    if ( (LA179_2==94) ) {
                         alt179=1;
                     }
 
@@ -27418,14 +27460,14 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
                 switch (alt179) {
             	case 1 :
-            	    // InternalMelange.g:9593:5: this_ValidID_0= ruleValidID kw= '.'
+            	    // InternalMelange.g:9612:5: this_ValidID_0= ruleValidID kw= '.'
             	    {
             	    if ( state.backtracking==0 ) {
             	       
             	              newCompositeNode(grammarAccess.getQualifiedNameInStaticImportAccess().getValidIDParserRuleCall_0()); 
             	          
             	    }
-            	    pushFollow(FOLLOW_125);
+            	    pushFollow(FOLLOW_126);
             	    this_ValidID_0=ruleValidID();
 
             	    state._fsp--;
@@ -27440,7 +27482,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
             	              afterParserOrEnumRuleCall();
             	          
             	    }
-            	    kw=(Token)match(input,93,FOLLOW_14); if (state.failed) return current;
+            	    kw=(Token)match(input,94,FOLLOW_14); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
             	              current.merge(kw);
@@ -27481,7 +27523,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleResourceType"
-    // InternalMelange.g:9617:1: ruleResourceType returns [Enumerator current=null] : ( (enumLiteral_0= 'Melange' ) | (enumLiteral_1= 'EMF' ) | (enumLiteral_2= 'Xtext' ) ) ;
+    // InternalMelange.g:9636:1: ruleResourceType returns [Enumerator current=null] : ( (enumLiteral_0= 'Melange' ) | (enumLiteral_1= 'EMF' ) | (enumLiteral_2= 'Xtext' ) ) ;
     public final Enumerator ruleResourceType() throws RecognitionException {
         Enumerator current = null;
 
@@ -27491,23 +27533,23 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
          enterRule(); 
         try {
-            // InternalMelange.g:9619:28: ( ( (enumLiteral_0= 'Melange' ) | (enumLiteral_1= 'EMF' ) | (enumLiteral_2= 'Xtext' ) ) )
-            // InternalMelange.g:9620:1: ( (enumLiteral_0= 'Melange' ) | (enumLiteral_1= 'EMF' ) | (enumLiteral_2= 'Xtext' ) )
+            // InternalMelange.g:9638:28: ( ( (enumLiteral_0= 'Melange' ) | (enumLiteral_1= 'EMF' ) | (enumLiteral_2= 'Xtext' ) ) )
+            // InternalMelange.g:9639:1: ( (enumLiteral_0= 'Melange' ) | (enumLiteral_1= 'EMF' ) | (enumLiteral_2= 'Xtext' ) )
             {
-            // InternalMelange.g:9620:1: ( (enumLiteral_0= 'Melange' ) | (enumLiteral_1= 'EMF' ) | (enumLiteral_2= 'Xtext' ) )
+            // InternalMelange.g:9639:1: ( (enumLiteral_0= 'Melange' ) | (enumLiteral_1= 'EMF' ) | (enumLiteral_2= 'Xtext' ) )
             int alt180=3;
             switch ( input.LA(1) ) {
-            case 125:
+            case 126:
                 {
                 alt180=1;
                 }
                 break;
-            case 126:
+            case 127:
                 {
                 alt180=2;
                 }
                 break;
-            case 127:
+            case 128:
                 {
                 alt180=3;
                 }
@@ -27522,12 +27564,12 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
             switch (alt180) {
                 case 1 :
-                    // InternalMelange.g:9620:2: (enumLiteral_0= 'Melange' )
+                    // InternalMelange.g:9639:2: (enumLiteral_0= 'Melange' )
                     {
-                    // InternalMelange.g:9620:2: (enumLiteral_0= 'Melange' )
-                    // InternalMelange.g:9620:4: enumLiteral_0= 'Melange'
+                    // InternalMelange.g:9639:2: (enumLiteral_0= 'Melange' )
+                    // InternalMelange.g:9639:4: enumLiteral_0= 'Melange'
                     {
-                    enumLiteral_0=(Token)match(input,125,FOLLOW_2); if (state.failed) return current;
+                    enumLiteral_0=(Token)match(input,126,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current = grammarAccess.getResourceTypeAccess().getMELANGEEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
@@ -27541,12 +27583,12 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalMelange.g:9626:6: (enumLiteral_1= 'EMF' )
+                    // InternalMelange.g:9645:6: (enumLiteral_1= 'EMF' )
                     {
-                    // InternalMelange.g:9626:6: (enumLiteral_1= 'EMF' )
-                    // InternalMelange.g:9626:8: enumLiteral_1= 'EMF'
+                    // InternalMelange.g:9645:6: (enumLiteral_1= 'EMF' )
+                    // InternalMelange.g:9645:8: enumLiteral_1= 'EMF'
                     {
-                    enumLiteral_1=(Token)match(input,126,FOLLOW_2); if (state.failed) return current;
+                    enumLiteral_1=(Token)match(input,127,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current = grammarAccess.getResourceTypeAccess().getEMFEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
@@ -27560,12 +27602,12 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalMelange.g:9632:6: (enumLiteral_2= 'Xtext' )
+                    // InternalMelange.g:9651:6: (enumLiteral_2= 'Xtext' )
                     {
-                    // InternalMelange.g:9632:6: (enumLiteral_2= 'Xtext' )
-                    // InternalMelange.g:9632:8: enumLiteral_2= 'Xtext'
+                    // InternalMelange.g:9651:6: (enumLiteral_2= 'Xtext' )
+                    // InternalMelange.g:9651:8: enumLiteral_2= 'Xtext'
                     {
-                    enumLiteral_2=(Token)match(input,127,FOLLOW_2); if (state.failed) return current;
+                    enumLiteral_2=(Token)match(input,128,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current = grammarAccess.getResourceTypeAccess().getXTEXTEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
@@ -27667,22 +27709,22 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
     // $ANTLR start synpred7_InternalMelange
     public final void synpred7_InternalMelange_fragment() throws RecognitionException {   
-        // InternalMelange.g:3724:3: ( ( () ( ( ruleOpMultiAssign ) ) ) )
-        // InternalMelange.g:3724:4: ( () ( ( ruleOpMultiAssign ) ) )
+        // InternalMelange.g:3743:3: ( ( () ( ( ruleOpMultiAssign ) ) ) )
+        // InternalMelange.g:3743:4: ( () ( ( ruleOpMultiAssign ) ) )
         {
-        // InternalMelange.g:3724:4: ( () ( ( ruleOpMultiAssign ) ) )
-        // InternalMelange.g:3724:5: () ( ( ruleOpMultiAssign ) )
+        // InternalMelange.g:3743:4: ( () ( ( ruleOpMultiAssign ) ) )
+        // InternalMelange.g:3743:5: () ( ( ruleOpMultiAssign ) )
         {
-        // InternalMelange.g:3724:5: ()
-        // InternalMelange.g:3725:1: 
+        // InternalMelange.g:3743:5: ()
+        // InternalMelange.g:3744:1: 
         {
         }
 
-        // InternalMelange.g:3725:2: ( ( ruleOpMultiAssign ) )
-        // InternalMelange.g:3726:1: ( ruleOpMultiAssign )
+        // InternalMelange.g:3744:2: ( ( ruleOpMultiAssign ) )
+        // InternalMelange.g:3745:1: ( ruleOpMultiAssign )
         {
-        // InternalMelange.g:3726:1: ( ruleOpMultiAssign )
-        // InternalMelange.g:3727:3: ruleOpMultiAssign
+        // InternalMelange.g:3745:1: ( ruleOpMultiAssign )
+        // InternalMelange.g:3746:3: ruleOpMultiAssign
         {
         pushFollow(FOLLOW_2);
         ruleOpMultiAssign();
@@ -27705,22 +27747,22 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
     // $ANTLR start synpred8_InternalMelange
     public final void synpred8_InternalMelange_fragment() throws RecognitionException {   
-        // InternalMelange.g:3918:3: ( ( () ( ( ruleOpOr ) ) ) )
-        // InternalMelange.g:3918:4: ( () ( ( ruleOpOr ) ) )
+        // InternalMelange.g:3937:3: ( ( () ( ( ruleOpOr ) ) ) )
+        // InternalMelange.g:3937:4: ( () ( ( ruleOpOr ) ) )
         {
-        // InternalMelange.g:3918:4: ( () ( ( ruleOpOr ) ) )
-        // InternalMelange.g:3918:5: () ( ( ruleOpOr ) )
+        // InternalMelange.g:3937:4: ( () ( ( ruleOpOr ) ) )
+        // InternalMelange.g:3937:5: () ( ( ruleOpOr ) )
         {
-        // InternalMelange.g:3918:5: ()
-        // InternalMelange.g:3919:1: 
+        // InternalMelange.g:3937:5: ()
+        // InternalMelange.g:3938:1: 
         {
         }
 
-        // InternalMelange.g:3919:2: ( ( ruleOpOr ) )
-        // InternalMelange.g:3920:1: ( ruleOpOr )
+        // InternalMelange.g:3938:2: ( ( ruleOpOr ) )
+        // InternalMelange.g:3939:1: ( ruleOpOr )
         {
-        // InternalMelange.g:3920:1: ( ruleOpOr )
-        // InternalMelange.g:3921:3: ruleOpOr
+        // InternalMelange.g:3939:1: ( ruleOpOr )
+        // InternalMelange.g:3940:3: ruleOpOr
         {
         pushFollow(FOLLOW_2);
         ruleOpOr();
@@ -27743,22 +27785,22 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
     // $ANTLR start synpred9_InternalMelange
     public final void synpred9_InternalMelange_fragment() throws RecognitionException {   
-        // InternalMelange.g:4019:3: ( ( () ( ( ruleOpAnd ) ) ) )
-        // InternalMelange.g:4019:4: ( () ( ( ruleOpAnd ) ) )
+        // InternalMelange.g:4038:3: ( ( () ( ( ruleOpAnd ) ) ) )
+        // InternalMelange.g:4038:4: ( () ( ( ruleOpAnd ) ) )
         {
-        // InternalMelange.g:4019:4: ( () ( ( ruleOpAnd ) ) )
-        // InternalMelange.g:4019:5: () ( ( ruleOpAnd ) )
+        // InternalMelange.g:4038:4: ( () ( ( ruleOpAnd ) ) )
+        // InternalMelange.g:4038:5: () ( ( ruleOpAnd ) )
         {
-        // InternalMelange.g:4019:5: ()
-        // InternalMelange.g:4020:1: 
+        // InternalMelange.g:4038:5: ()
+        // InternalMelange.g:4039:1: 
         {
         }
 
-        // InternalMelange.g:4020:2: ( ( ruleOpAnd ) )
-        // InternalMelange.g:4021:1: ( ruleOpAnd )
+        // InternalMelange.g:4039:2: ( ( ruleOpAnd ) )
+        // InternalMelange.g:4040:1: ( ruleOpAnd )
         {
-        // InternalMelange.g:4021:1: ( ruleOpAnd )
-        // InternalMelange.g:4022:3: ruleOpAnd
+        // InternalMelange.g:4040:1: ( ruleOpAnd )
+        // InternalMelange.g:4041:3: ruleOpAnd
         {
         pushFollow(FOLLOW_2);
         ruleOpAnd();
@@ -27781,22 +27823,22 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
     // $ANTLR start synpred10_InternalMelange
     public final void synpred10_InternalMelange_fragment() throws RecognitionException {   
-        // InternalMelange.g:4120:3: ( ( () ( ( ruleOpEquality ) ) ) )
-        // InternalMelange.g:4120:4: ( () ( ( ruleOpEquality ) ) )
+        // InternalMelange.g:4139:3: ( ( () ( ( ruleOpEquality ) ) ) )
+        // InternalMelange.g:4139:4: ( () ( ( ruleOpEquality ) ) )
         {
-        // InternalMelange.g:4120:4: ( () ( ( ruleOpEquality ) ) )
-        // InternalMelange.g:4120:5: () ( ( ruleOpEquality ) )
+        // InternalMelange.g:4139:4: ( () ( ( ruleOpEquality ) ) )
+        // InternalMelange.g:4139:5: () ( ( ruleOpEquality ) )
         {
-        // InternalMelange.g:4120:5: ()
-        // InternalMelange.g:4121:1: 
+        // InternalMelange.g:4139:5: ()
+        // InternalMelange.g:4140:1: 
         {
         }
 
-        // InternalMelange.g:4121:2: ( ( ruleOpEquality ) )
-        // InternalMelange.g:4122:1: ( ruleOpEquality )
+        // InternalMelange.g:4140:2: ( ( ruleOpEquality ) )
+        // InternalMelange.g:4141:1: ( ruleOpEquality )
         {
-        // InternalMelange.g:4122:1: ( ruleOpEquality )
-        // InternalMelange.g:4123:3: ruleOpEquality
+        // InternalMelange.g:4141:1: ( ruleOpEquality )
+        // InternalMelange.g:4142:3: ruleOpEquality
         {
         pushFollow(FOLLOW_2);
         ruleOpEquality();
@@ -27819,18 +27861,18 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
     // $ANTLR start synpred11_InternalMelange
     public final void synpred11_InternalMelange_fragment() throws RecognitionException {   
-        // InternalMelange.g:4242:4: ( ( () 'instanceof' ) )
-        // InternalMelange.g:4242:5: ( () 'instanceof' )
+        // InternalMelange.g:4261:4: ( ( () 'instanceof' ) )
+        // InternalMelange.g:4261:5: ( () 'instanceof' )
         {
-        // InternalMelange.g:4242:5: ( () 'instanceof' )
-        // InternalMelange.g:4242:6: () 'instanceof'
+        // InternalMelange.g:4261:5: ( () 'instanceof' )
+        // InternalMelange.g:4261:6: () 'instanceof'
         {
-        // InternalMelange.g:4242:6: ()
-        // InternalMelange.g:4243:1: 
+        // InternalMelange.g:4261:6: ()
+        // InternalMelange.g:4262:1: 
         {
         }
 
-        match(input,79,FOLLOW_2); if (state.failed) return ;
+        match(input,80,FOLLOW_2); if (state.failed) return ;
 
         }
 
@@ -27841,22 +27883,22 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
     // $ANTLR start synpred12_InternalMelange
     public final void synpred12_InternalMelange_fragment() throws RecognitionException {   
-        // InternalMelange.g:4273:8: ( ( () ( ( ruleOpCompare ) ) ) )
-        // InternalMelange.g:4273:9: ( () ( ( ruleOpCompare ) ) )
+        // InternalMelange.g:4292:8: ( ( () ( ( ruleOpCompare ) ) ) )
+        // InternalMelange.g:4292:9: ( () ( ( ruleOpCompare ) ) )
         {
-        // InternalMelange.g:4273:9: ( () ( ( ruleOpCompare ) ) )
-        // InternalMelange.g:4273:10: () ( ( ruleOpCompare ) )
+        // InternalMelange.g:4292:9: ( () ( ( ruleOpCompare ) ) )
+        // InternalMelange.g:4292:10: () ( ( ruleOpCompare ) )
         {
-        // InternalMelange.g:4273:10: ()
-        // InternalMelange.g:4274:1: 
+        // InternalMelange.g:4292:10: ()
+        // InternalMelange.g:4293:1: 
         {
         }
 
-        // InternalMelange.g:4274:2: ( ( ruleOpCompare ) )
-        // InternalMelange.g:4275:1: ( ruleOpCompare )
+        // InternalMelange.g:4293:2: ( ( ruleOpCompare ) )
+        // InternalMelange.g:4294:1: ( ruleOpCompare )
         {
-        // InternalMelange.g:4275:1: ( ruleOpCompare )
-        // InternalMelange.g:4276:3: ruleOpCompare
+        // InternalMelange.g:4294:1: ( ruleOpCompare )
+        // InternalMelange.g:4295:3: ruleOpCompare
         {
         pushFollow(FOLLOW_2);
         ruleOpCompare();
@@ -27879,22 +27921,22 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
     // $ANTLR start synpred13_InternalMelange
     public final void synpred13_InternalMelange_fragment() throws RecognitionException {   
-        // InternalMelange.g:4401:3: ( ( () ( ( ruleOpOther ) ) ) )
-        // InternalMelange.g:4401:4: ( () ( ( ruleOpOther ) ) )
+        // InternalMelange.g:4420:3: ( ( () ( ( ruleOpOther ) ) ) )
+        // InternalMelange.g:4420:4: ( () ( ( ruleOpOther ) ) )
         {
-        // InternalMelange.g:4401:4: ( () ( ( ruleOpOther ) ) )
-        // InternalMelange.g:4401:5: () ( ( ruleOpOther ) )
+        // InternalMelange.g:4420:4: ( () ( ( ruleOpOther ) ) )
+        // InternalMelange.g:4420:5: () ( ( ruleOpOther ) )
         {
-        // InternalMelange.g:4401:5: ()
-        // InternalMelange.g:4402:1: 
+        // InternalMelange.g:4420:5: ()
+        // InternalMelange.g:4421:1: 
         {
         }
 
-        // InternalMelange.g:4402:2: ( ( ruleOpOther ) )
-        // InternalMelange.g:4403:1: ( ruleOpOther )
+        // InternalMelange.g:4421:2: ( ( ruleOpOther ) )
+        // InternalMelange.g:4422:1: ( ruleOpOther )
         {
-        // InternalMelange.g:4403:1: ( ruleOpOther )
-        // InternalMelange.g:4404:3: ruleOpOther
+        // InternalMelange.g:4422:1: ( ruleOpOther )
+        // InternalMelange.g:4423:3: ruleOpOther
         {
         pushFollow(FOLLOW_2);
         ruleOpOther();
@@ -27917,14 +27959,14 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
     // $ANTLR start synpred14_InternalMelange
     public final void synpred14_InternalMelange_fragment() throws RecognitionException {   
-        // InternalMelange.g:4513:3: ( ( '>' '>' ) )
-        // InternalMelange.g:4513:4: ( '>' '>' )
+        // InternalMelange.g:4532:3: ( ( '>' '>' ) )
+        // InternalMelange.g:4532:4: ( '>' '>' )
         {
-        // InternalMelange.g:4513:4: ( '>' '>' )
-        // InternalMelange.g:4514:2: '>' '>'
+        // InternalMelange.g:4532:4: ( '>' '>' )
+        // InternalMelange.g:4533:2: '>' '>'
         {
-        match(input,71,FOLLOW_74); if (state.failed) return ;
-        match(input,71,FOLLOW_2); if (state.failed) return ;
+        match(input,72,FOLLOW_75); if (state.failed) return ;
+        match(input,72,FOLLOW_2); if (state.failed) return ;
 
         }
 
@@ -27935,14 +27977,14 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
     // $ANTLR start synpred15_InternalMelange
     public final void synpred15_InternalMelange_fragment() throws RecognitionException {   
-        // InternalMelange.g:4543:3: ( ( '<' '<' ) )
-        // InternalMelange.g:4543:4: ( '<' '<' )
+        // InternalMelange.g:4562:3: ( ( '<' '<' ) )
+        // InternalMelange.g:4562:4: ( '<' '<' )
         {
-        // InternalMelange.g:4543:4: ( '<' '<' )
-        // InternalMelange.g:4544:2: '<' '<'
+        // InternalMelange.g:4562:4: ( '<' '<' )
+        // InternalMelange.g:4563:2: '<' '<'
         {
-        match(input,70,FOLLOW_65); if (state.failed) return ;
-        match(input,70,FOLLOW_2); if (state.failed) return ;
+        match(input,71,FOLLOW_66); if (state.failed) return ;
+        match(input,71,FOLLOW_2); if (state.failed) return ;
 
         }
 
@@ -27953,22 +27995,22 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
     // $ANTLR start synpred16_InternalMelange
     public final void synpred16_InternalMelange_fragment() throws RecognitionException {   
-        // InternalMelange.g:4617:3: ( ( () ( ( ruleOpAdd ) ) ) )
-        // InternalMelange.g:4617:4: ( () ( ( ruleOpAdd ) ) )
+        // InternalMelange.g:4636:3: ( ( () ( ( ruleOpAdd ) ) ) )
+        // InternalMelange.g:4636:4: ( () ( ( ruleOpAdd ) ) )
         {
-        // InternalMelange.g:4617:4: ( () ( ( ruleOpAdd ) ) )
-        // InternalMelange.g:4617:5: () ( ( ruleOpAdd ) )
+        // InternalMelange.g:4636:4: ( () ( ( ruleOpAdd ) ) )
+        // InternalMelange.g:4636:5: () ( ( ruleOpAdd ) )
         {
-        // InternalMelange.g:4617:5: ()
-        // InternalMelange.g:4618:1: 
+        // InternalMelange.g:4636:5: ()
+        // InternalMelange.g:4637:1: 
         {
         }
 
-        // InternalMelange.g:4618:2: ( ( ruleOpAdd ) )
-        // InternalMelange.g:4619:1: ( ruleOpAdd )
+        // InternalMelange.g:4637:2: ( ( ruleOpAdd ) )
+        // InternalMelange.g:4638:1: ( ruleOpAdd )
         {
-        // InternalMelange.g:4619:1: ( ruleOpAdd )
-        // InternalMelange.g:4620:3: ruleOpAdd
+        // InternalMelange.g:4638:1: ( ruleOpAdd )
+        // InternalMelange.g:4639:3: ruleOpAdd
         {
         pushFollow(FOLLOW_2);
         ruleOpAdd();
@@ -27991,22 +28033,22 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
     // $ANTLR start synpred17_InternalMelange
     public final void synpred17_InternalMelange_fragment() throws RecognitionException {   
-        // InternalMelange.g:4725:3: ( ( () ( ( ruleOpMulti ) ) ) )
-        // InternalMelange.g:4725:4: ( () ( ( ruleOpMulti ) ) )
+        // InternalMelange.g:4744:3: ( ( () ( ( ruleOpMulti ) ) ) )
+        // InternalMelange.g:4744:4: ( () ( ( ruleOpMulti ) ) )
         {
-        // InternalMelange.g:4725:4: ( () ( ( ruleOpMulti ) ) )
-        // InternalMelange.g:4725:5: () ( ( ruleOpMulti ) )
+        // InternalMelange.g:4744:4: ( () ( ( ruleOpMulti ) ) )
+        // InternalMelange.g:4744:5: () ( ( ruleOpMulti ) )
         {
-        // InternalMelange.g:4725:5: ()
-        // InternalMelange.g:4726:1: 
+        // InternalMelange.g:4744:5: ()
+        // InternalMelange.g:4745:1: 
         {
         }
 
-        // InternalMelange.g:4726:2: ( ( ruleOpMulti ) )
-        // InternalMelange.g:4727:1: ( ruleOpMulti )
+        // InternalMelange.g:4745:2: ( ( ruleOpMulti ) )
+        // InternalMelange.g:4746:1: ( ruleOpMulti )
         {
-        // InternalMelange.g:4727:1: ( ruleOpMulti )
-        // InternalMelange.g:4728:3: ruleOpMulti
+        // InternalMelange.g:4746:1: ( ruleOpMulti )
+        // InternalMelange.g:4747:3: ruleOpMulti
         {
         pushFollow(FOLLOW_2);
         ruleOpMulti();
@@ -28029,18 +28071,18 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
     // $ANTLR start synpred18_InternalMelange
     public final void synpred18_InternalMelange_fragment() throws RecognitionException {   
-        // InternalMelange.g:4958:3: ( ( () 'as' ) )
-        // InternalMelange.g:4958:4: ( () 'as' )
+        // InternalMelange.g:4977:3: ( ( () 'as' ) )
+        // InternalMelange.g:4977:4: ( () 'as' )
         {
-        // InternalMelange.g:4958:4: ( () 'as' )
-        // InternalMelange.g:4958:5: () 'as'
+        // InternalMelange.g:4977:4: ( () 'as' )
+        // InternalMelange.g:4977:5: () 'as'
         {
-        // InternalMelange.g:4958:5: ()
-        // InternalMelange.g:4959:1: 
+        // InternalMelange.g:4977:5: ()
+        // InternalMelange.g:4978:1: 
         {
         }
 
-        match(input,90,FOLLOW_2); if (state.failed) return ;
+        match(input,91,FOLLOW_2); if (state.failed) return ;
 
         }
 
@@ -28051,22 +28093,22 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
     // $ANTLR start synpred19_InternalMelange
     public final void synpred19_InternalMelange_fragment() throws RecognitionException {   
-        // InternalMelange.g:5018:2: ( ( () ( ( ruleOpPostfix ) ) ) )
-        // InternalMelange.g:5018:3: ( () ( ( ruleOpPostfix ) ) )
+        // InternalMelange.g:5037:2: ( ( () ( ( ruleOpPostfix ) ) ) )
+        // InternalMelange.g:5037:3: ( () ( ( ruleOpPostfix ) ) )
         {
-        // InternalMelange.g:5018:3: ( () ( ( ruleOpPostfix ) ) )
-        // InternalMelange.g:5018:4: () ( ( ruleOpPostfix ) )
+        // InternalMelange.g:5037:3: ( () ( ( ruleOpPostfix ) ) )
+        // InternalMelange.g:5037:4: () ( ( ruleOpPostfix ) )
         {
-        // InternalMelange.g:5018:4: ()
-        // InternalMelange.g:5019:1: 
+        // InternalMelange.g:5037:4: ()
+        // InternalMelange.g:5038:1: 
         {
         }
 
-        // InternalMelange.g:5019:2: ( ( ruleOpPostfix ) )
-        // InternalMelange.g:5020:1: ( ruleOpPostfix )
+        // InternalMelange.g:5038:2: ( ( ruleOpPostfix ) )
+        // InternalMelange.g:5039:1: ( ruleOpPostfix )
         {
-        // InternalMelange.g:5020:1: ( ruleOpPostfix )
-        // InternalMelange.g:5021:3: ruleOpPostfix
+        // InternalMelange.g:5039:1: ( ruleOpPostfix )
+        // InternalMelange.g:5040:3: ruleOpPostfix
         {
         pushFollow(FOLLOW_2);
         ruleOpPostfix();
@@ -28089,25 +28131,25 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
     // $ANTLR start synpred20_InternalMelange
     public final void synpred20_InternalMelange_fragment() throws RecognitionException {   
-        // InternalMelange.g:5108:4: ( ( () ( '.' | ( ( '::' ) ) ) ( ( ruleFeatureCallID ) ) ruleOpSingleAssign ) )
-        // InternalMelange.g:5108:5: ( () ( '.' | ( ( '::' ) ) ) ( ( ruleFeatureCallID ) ) ruleOpSingleAssign )
+        // InternalMelange.g:5127:4: ( ( () ( '.' | ( ( '::' ) ) ) ( ( ruleFeatureCallID ) ) ruleOpSingleAssign ) )
+        // InternalMelange.g:5127:5: ( () ( '.' | ( ( '::' ) ) ) ( ( ruleFeatureCallID ) ) ruleOpSingleAssign )
         {
-        // InternalMelange.g:5108:5: ( () ( '.' | ( ( '::' ) ) ) ( ( ruleFeatureCallID ) ) ruleOpSingleAssign )
-        // InternalMelange.g:5108:6: () ( '.' | ( ( '::' ) ) ) ( ( ruleFeatureCallID ) ) ruleOpSingleAssign
+        // InternalMelange.g:5127:5: ( () ( '.' | ( ( '::' ) ) ) ( ( ruleFeatureCallID ) ) ruleOpSingleAssign )
+        // InternalMelange.g:5127:6: () ( '.' | ( ( '::' ) ) ) ( ( ruleFeatureCallID ) ) ruleOpSingleAssign
         {
-        // InternalMelange.g:5108:6: ()
-        // InternalMelange.g:5109:1: 
+        // InternalMelange.g:5127:6: ()
+        // InternalMelange.g:5128:1: 
         {
         }
 
-        // InternalMelange.g:5109:2: ( '.' | ( ( '::' ) ) )
+        // InternalMelange.g:5128:2: ( '.' | ( ( '::' ) ) )
         int alt181=2;
         int LA181_0 = input.LA(1);
 
-        if ( (LA181_0==93) ) {
+        if ( (LA181_0==94) ) {
             alt181=1;
         }
-        else if ( (LA181_0==94) ) {
+        else if ( (LA181_0==95) ) {
             alt181=2;
         }
         else {
@@ -28119,22 +28161,22 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
         }
         switch (alt181) {
             case 1 :
-                // InternalMelange.g:5109:4: '.'
+                // InternalMelange.g:5128:4: '.'
                 {
-                match(input,93,FOLLOW_81); if (state.failed) return ;
+                match(input,94,FOLLOW_82); if (state.failed) return ;
 
                 }
                 break;
             case 2 :
-                // InternalMelange.g:5111:6: ( ( '::' ) )
+                // InternalMelange.g:5130:6: ( ( '::' ) )
                 {
-                // InternalMelange.g:5111:6: ( ( '::' ) )
-                // InternalMelange.g:5112:1: ( '::' )
+                // InternalMelange.g:5130:6: ( ( '::' ) )
+                // InternalMelange.g:5131:1: ( '::' )
                 {
-                // InternalMelange.g:5112:1: ( '::' )
-                // InternalMelange.g:5113:2: '::'
+                // InternalMelange.g:5131:1: ( '::' )
+                // InternalMelange.g:5132:2: '::'
                 {
-                match(input,94,FOLLOW_81); if (state.failed) return ;
+                match(input,95,FOLLOW_82); if (state.failed) return ;
 
                 }
 
@@ -28147,11 +28189,11 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
         }
 
-        // InternalMelange.g:5117:3: ( ( ruleFeatureCallID ) )
-        // InternalMelange.g:5118:1: ( ruleFeatureCallID )
+        // InternalMelange.g:5136:3: ( ( ruleFeatureCallID ) )
+        // InternalMelange.g:5137:1: ( ruleFeatureCallID )
         {
-        // InternalMelange.g:5118:1: ( ruleFeatureCallID )
-        // InternalMelange.g:5119:3: ruleFeatureCallID
+        // InternalMelange.g:5137:1: ( ruleFeatureCallID )
+        // InternalMelange.g:5138:3: ruleFeatureCallID
         {
         pushFollow(FOLLOW_9);
         ruleFeatureCallID();
@@ -28179,31 +28221,31 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
     // $ANTLR start synpred21_InternalMelange
     public final void synpred21_InternalMelange_fragment() throws RecognitionException {   
-        // InternalMelange.g:5189:8: ( ( () ( '.' | ( ( '?.' ) ) | ( ( '::' ) ) ) ) )
-        // InternalMelange.g:5189:9: ( () ( '.' | ( ( '?.' ) ) | ( ( '::' ) ) ) )
+        // InternalMelange.g:5208:8: ( ( () ( '.' | ( ( '?.' ) ) | ( ( '::' ) ) ) ) )
+        // InternalMelange.g:5208:9: ( () ( '.' | ( ( '?.' ) ) | ( ( '::' ) ) ) )
         {
-        // InternalMelange.g:5189:9: ( () ( '.' | ( ( '?.' ) ) | ( ( '::' ) ) ) )
-        // InternalMelange.g:5189:10: () ( '.' | ( ( '?.' ) ) | ( ( '::' ) ) )
+        // InternalMelange.g:5208:9: ( () ( '.' | ( ( '?.' ) ) | ( ( '::' ) ) ) )
+        // InternalMelange.g:5208:10: () ( '.' | ( ( '?.' ) ) | ( ( '::' ) ) )
         {
-        // InternalMelange.g:5189:10: ()
-        // InternalMelange.g:5190:1: 
+        // InternalMelange.g:5208:10: ()
+        // InternalMelange.g:5209:1: 
         {
         }
 
-        // InternalMelange.g:5190:2: ( '.' | ( ( '?.' ) ) | ( ( '::' ) ) )
+        // InternalMelange.g:5209:2: ( '.' | ( ( '?.' ) ) | ( ( '::' ) ) )
         int alt182=3;
         switch ( input.LA(1) ) {
-        case 93:
+        case 94:
             {
             alt182=1;
             }
             break;
-        case 95:
+        case 96:
             {
             alt182=2;
             }
             break;
-        case 94:
+        case 95:
             {
             alt182=3;
             }
@@ -28218,22 +28260,22 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
         switch (alt182) {
             case 1 :
-                // InternalMelange.g:5190:4: '.'
+                // InternalMelange.g:5209:4: '.'
                 {
-                match(input,93,FOLLOW_2); if (state.failed) return ;
+                match(input,94,FOLLOW_2); if (state.failed) return ;
 
                 }
                 break;
             case 2 :
-                // InternalMelange.g:5192:6: ( ( '?.' ) )
+                // InternalMelange.g:5211:6: ( ( '?.' ) )
                 {
-                // InternalMelange.g:5192:6: ( ( '?.' ) )
-                // InternalMelange.g:5193:1: ( '?.' )
+                // InternalMelange.g:5211:6: ( ( '?.' ) )
+                // InternalMelange.g:5212:1: ( '?.' )
                 {
-                // InternalMelange.g:5193:1: ( '?.' )
-                // InternalMelange.g:5194:2: '?.'
+                // InternalMelange.g:5212:1: ( '?.' )
+                // InternalMelange.g:5213:2: '?.'
                 {
-                match(input,95,FOLLOW_2); if (state.failed) return ;
+                match(input,96,FOLLOW_2); if (state.failed) return ;
 
                 }
 
@@ -28244,15 +28286,15 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                 }
                 break;
             case 3 :
-                // InternalMelange.g:5199:6: ( ( '::' ) )
+                // InternalMelange.g:5218:6: ( ( '::' ) )
                 {
-                // InternalMelange.g:5199:6: ( ( '::' ) )
-                // InternalMelange.g:5200:1: ( '::' )
+                // InternalMelange.g:5218:6: ( ( '::' ) )
+                // InternalMelange.g:5219:1: ( '::' )
                 {
-                // InternalMelange.g:5200:1: ( '::' )
-                // InternalMelange.g:5201:2: '::'
+                // InternalMelange.g:5219:1: ( '::' )
+                // InternalMelange.g:5220:2: '::'
                 {
-                match(input,94,FOLLOW_2); if (state.failed) return ;
+                match(input,95,FOLLOW_2); if (state.failed) return ;
 
                 }
 
@@ -28275,11 +28317,11 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
     // $ANTLR start synpred22_InternalMelange
     public final void synpred22_InternalMelange_fragment() throws RecognitionException {   
-        // InternalMelange.g:5310:4: ( ( '(' ) )
-        // InternalMelange.g:5311:1: ( '(' )
+        // InternalMelange.g:5329:4: ( ( '(' ) )
+        // InternalMelange.g:5330:1: ( '(' )
         {
-        // InternalMelange.g:5311:1: ( '(' )
-        // InternalMelange.g:5312:2: '('
+        // InternalMelange.g:5330:1: ( '(' )
+        // InternalMelange.g:5331:2: '('
         {
         match(input,24,FOLLOW_2); if (state.failed) return ;
 
@@ -28292,35 +28334,35 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
     // $ANTLR start synpred23_InternalMelange
     public final void synpred23_InternalMelange_fragment() throws RecognitionException {   
-        // InternalMelange.g:5331:4: ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )
-        // InternalMelange.g:5331:5: ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) )
+        // InternalMelange.g:5350:4: ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )
+        // InternalMelange.g:5350:5: ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) )
         {
-        // InternalMelange.g:5331:5: ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) )
-        // InternalMelange.g:5331:6: () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) )
+        // InternalMelange.g:5350:5: ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) )
+        // InternalMelange.g:5350:6: () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) )
         {
-        // InternalMelange.g:5331:6: ()
-        // InternalMelange.g:5332:1: 
+        // InternalMelange.g:5350:6: ()
+        // InternalMelange.g:5351:1: 
         {
         }
 
-        // InternalMelange.g:5332:2: ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )?
+        // InternalMelange.g:5351:2: ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )?
         int alt184=2;
         int LA184_0 = input.LA(1);
 
-        if ( (LA184_0==RULE_ID||LA184_0==24||LA184_0==82) ) {
+        if ( (LA184_0==RULE_ID||LA184_0==24||LA184_0==83) ) {
             alt184=1;
         }
         switch (alt184) {
             case 1 :
-                // InternalMelange.g:5332:3: ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )*
+                // InternalMelange.g:5351:3: ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )*
                 {
-                // InternalMelange.g:5332:3: ( ( ruleJvmFormalParameter ) )
-                // InternalMelange.g:5333:1: ( ruleJvmFormalParameter )
+                // InternalMelange.g:5351:3: ( ( ruleJvmFormalParameter ) )
+                // InternalMelange.g:5352:1: ( ruleJvmFormalParameter )
                 {
-                // InternalMelange.g:5333:1: ( ruleJvmFormalParameter )
-                // InternalMelange.g:5334:1: ruleJvmFormalParameter
+                // InternalMelange.g:5352:1: ( ruleJvmFormalParameter )
+                // InternalMelange.g:5353:1: ruleJvmFormalParameter
                 {
-                pushFollow(FOLLOW_91);
+                pushFollow(FOLLOW_92);
                 ruleJvmFormalParameter();
 
                 state._fsp--;
@@ -28331,7 +28373,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
                 }
 
-                // InternalMelange.g:5336:2: ( ',' ( ( ruleJvmFormalParameter ) ) )*
+                // InternalMelange.g:5355:2: ( ',' ( ( ruleJvmFormalParameter ) ) )*
                 loop183:
                 do {
                     int alt183=2;
@@ -28344,16 +28386,16 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
                     switch (alt183) {
                 	case 1 :
-                	    // InternalMelange.g:5336:4: ',' ( ( ruleJvmFormalParameter ) )
+                	    // InternalMelange.g:5355:4: ',' ( ( ruleJvmFormalParameter ) )
                 	    {
                 	    match(input,33,FOLLOW_33); if (state.failed) return ;
-                	    // InternalMelange.g:5337:1: ( ( ruleJvmFormalParameter ) )
-                	    // InternalMelange.g:5338:1: ( ruleJvmFormalParameter )
+                	    // InternalMelange.g:5356:1: ( ( ruleJvmFormalParameter ) )
+                	    // InternalMelange.g:5357:1: ( ruleJvmFormalParameter )
                 	    {
-                	    // InternalMelange.g:5338:1: ( ruleJvmFormalParameter )
-                	    // InternalMelange.g:5339:1: ruleJvmFormalParameter
+                	    // InternalMelange.g:5357:1: ( ruleJvmFormalParameter )
+                	    // InternalMelange.g:5358:1: ruleJvmFormalParameter
                 	    {
-                	    pushFollow(FOLLOW_91);
+                	    pushFollow(FOLLOW_92);
                 	    ruleJvmFormalParameter();
 
                 	    state._fsp--;
@@ -28379,11 +28421,11 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
         }
 
-        // InternalMelange.g:5341:6: ( ( '|' ) )
-        // InternalMelange.g:5342:1: ( '|' )
+        // InternalMelange.g:5360:6: ( ( '|' ) )
+        // InternalMelange.g:5361:1: ( '|' )
         {
-        // InternalMelange.g:5342:1: ( '|' )
-        // InternalMelange.g:5343:2: '|'
+        // InternalMelange.g:5361:1: ( '|' )
+        // InternalMelange.g:5362:2: '|'
         {
         match(input,27,FOLLOW_2); if (state.failed) return ;
 
@@ -28402,18 +28444,18 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
     // $ANTLR start synpred24_InternalMelange
     public final void synpred24_InternalMelange_fragment() throws RecognitionException {   
-        // InternalMelange.g:5410:4: ( ( () '[' ) )
-        // InternalMelange.g:5410:5: ( () '[' )
+        // InternalMelange.g:5429:4: ( ( () '[' ) )
+        // InternalMelange.g:5429:5: ( () '[' )
         {
-        // InternalMelange.g:5410:5: ( () '[' )
-        // InternalMelange.g:5410:6: () '['
+        // InternalMelange.g:5429:5: ( () '[' )
+        // InternalMelange.g:5429:6: () '['
         {
-        // InternalMelange.g:5410:6: ()
-        // InternalMelange.g:5411:1: 
+        // InternalMelange.g:5429:6: ()
+        // InternalMelange.g:5430:1: 
         {
         }
 
-        match(input,62,FOLLOW_2); if (state.failed) return ;
+        match(input,63,FOLLOW_2); if (state.failed) return ;
 
         }
 
@@ -28424,18 +28466,18 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
     // $ANTLR start synpred25_InternalMelange
     public final void synpred25_InternalMelange_fragment() throws RecognitionException {   
-        // InternalMelange.g:5481:7: ( ( () 'synchronized' '(' ) )
-        // InternalMelange.g:5481:8: ( () 'synchronized' '(' )
+        // InternalMelange.g:5500:7: ( ( () 'synchronized' '(' ) )
+        // InternalMelange.g:5500:8: ( () 'synchronized' '(' )
         {
-        // InternalMelange.g:5481:8: ( () 'synchronized' '(' )
-        // InternalMelange.g:5481:9: () 'synchronized' '('
+        // InternalMelange.g:5500:8: ( () 'synchronized' '(' )
+        // InternalMelange.g:5500:9: () 'synchronized' '('
         {
-        // InternalMelange.g:5481:9: ()
-        // InternalMelange.g:5482:1: 
+        // InternalMelange.g:5500:9: ()
+        // InternalMelange.g:5501:1: 
         {
         }
 
-        match(input,122,FOLLOW_46); if (state.failed) return ;
+        match(input,123,FOLLOW_46); if (state.failed) return ;
         match(input,24,FOLLOW_2); if (state.failed) return ;
 
         }
@@ -28447,24 +28489,24 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
     // $ANTLR start synpred26_InternalMelange
     public final void synpred26_InternalMelange_fragment() throws RecognitionException {   
-        // InternalMelange.g:5524:7: ( ( () 'for' '(' ( ( ruleJvmFormalParameter ) ) ':' ) )
-        // InternalMelange.g:5524:8: ( () 'for' '(' ( ( ruleJvmFormalParameter ) ) ':' )
+        // InternalMelange.g:5543:7: ( ( () 'for' '(' ( ( ruleJvmFormalParameter ) ) ':' ) )
+        // InternalMelange.g:5543:8: ( () 'for' '(' ( ( ruleJvmFormalParameter ) ) ':' )
         {
-        // InternalMelange.g:5524:8: ( () 'for' '(' ( ( ruleJvmFormalParameter ) ) ':' )
-        // InternalMelange.g:5524:9: () 'for' '(' ( ( ruleJvmFormalParameter ) ) ':'
+        // InternalMelange.g:5543:8: ( () 'for' '(' ( ( ruleJvmFormalParameter ) ) ':' )
+        // InternalMelange.g:5543:9: () 'for' '(' ( ( ruleJvmFormalParameter ) ) ':'
         {
-        // InternalMelange.g:5524:9: ()
-        // InternalMelange.g:5525:1: 
+        // InternalMelange.g:5543:9: ()
+        // InternalMelange.g:5544:1: 
         {
         }
 
-        match(input,103,FOLLOW_46); if (state.failed) return ;
+        match(input,104,FOLLOW_46); if (state.failed) return ;
         match(input,24,FOLLOW_33); if (state.failed) return ;
-        // InternalMelange.g:5527:1: ( ( ruleJvmFormalParameter ) )
-        // InternalMelange.g:5528:1: ( ruleJvmFormalParameter )
+        // InternalMelange.g:5546:1: ( ( ruleJvmFormalParameter ) )
+        // InternalMelange.g:5547:1: ( ruleJvmFormalParameter )
         {
-        // InternalMelange.g:5528:1: ( ruleJvmFormalParameter )
-        // InternalMelange.g:5529:1: ruleJvmFormalParameter
+        // InternalMelange.g:5547:1: ( ruleJvmFormalParameter )
+        // InternalMelange.g:5548:1: ruleJvmFormalParameter
         {
         pushFollow(FOLLOW_37);
         ruleJvmFormalParameter();
@@ -28488,18 +28530,18 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
     // $ANTLR start synpred27_InternalMelange
     public final void synpred27_InternalMelange_fragment() throws RecognitionException {   
-        // InternalMelange.g:5642:7: ( ( () '[' ) )
-        // InternalMelange.g:5642:8: ( () '[' )
+        // InternalMelange.g:5661:7: ( ( () '[' ) )
+        // InternalMelange.g:5661:8: ( () '[' )
         {
-        // InternalMelange.g:5642:8: ( () '[' )
-        // InternalMelange.g:5642:9: () '['
+        // InternalMelange.g:5661:8: ( () '[' )
+        // InternalMelange.g:5661:9: () '['
         {
-        // InternalMelange.g:5642:9: ()
-        // InternalMelange.g:5643:1: 
+        // InternalMelange.g:5661:9: ()
+        // InternalMelange.g:5662:1: 
         {
         }
 
-        match(input,62,FOLLOW_2); if (state.failed) return ;
+        match(input,63,FOLLOW_2); if (state.failed) return ;
 
         }
 
@@ -28510,30 +28552,30 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
     // $ANTLR start synpred29_InternalMelange
     public final void synpred29_InternalMelange_fragment() throws RecognitionException {   
-        // InternalMelange.g:5934:4: ( ( ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )
-        // InternalMelange.g:5934:5: ( ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) )
+        // InternalMelange.g:5953:4: ( ( ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )
+        // InternalMelange.g:5953:5: ( ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) )
         {
-        // InternalMelange.g:5934:5: ( ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) )
-        // InternalMelange.g:5934:6: ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) )
+        // InternalMelange.g:5953:5: ( ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) )
+        // InternalMelange.g:5953:6: ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) )
         {
-        // InternalMelange.g:5934:6: ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )?
+        // InternalMelange.g:5953:6: ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )?
         int alt186=2;
         int LA186_0 = input.LA(1);
 
-        if ( (LA186_0==RULE_ID||LA186_0==24||LA186_0==82) ) {
+        if ( (LA186_0==RULE_ID||LA186_0==24||LA186_0==83) ) {
             alt186=1;
         }
         switch (alt186) {
             case 1 :
-                // InternalMelange.g:5934:7: ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )*
+                // InternalMelange.g:5953:7: ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )*
                 {
-                // InternalMelange.g:5934:7: ( ( ruleJvmFormalParameter ) )
-                // InternalMelange.g:5935:1: ( ruleJvmFormalParameter )
+                // InternalMelange.g:5953:7: ( ( ruleJvmFormalParameter ) )
+                // InternalMelange.g:5954:1: ( ruleJvmFormalParameter )
                 {
-                // InternalMelange.g:5935:1: ( ruleJvmFormalParameter )
-                // InternalMelange.g:5936:1: ruleJvmFormalParameter
+                // InternalMelange.g:5954:1: ( ruleJvmFormalParameter )
+                // InternalMelange.g:5955:1: ruleJvmFormalParameter
                 {
-                pushFollow(FOLLOW_91);
+                pushFollow(FOLLOW_92);
                 ruleJvmFormalParameter();
 
                 state._fsp--;
@@ -28544,7 +28586,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
                 }
 
-                // InternalMelange.g:5938:2: ( ',' ( ( ruleJvmFormalParameter ) ) )*
+                // InternalMelange.g:5957:2: ( ',' ( ( ruleJvmFormalParameter ) ) )*
                 loop185:
                 do {
                     int alt185=2;
@@ -28557,16 +28599,16 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
                     switch (alt185) {
                 	case 1 :
-                	    // InternalMelange.g:5938:4: ',' ( ( ruleJvmFormalParameter ) )
+                	    // InternalMelange.g:5957:4: ',' ( ( ruleJvmFormalParameter ) )
                 	    {
                 	    match(input,33,FOLLOW_33); if (state.failed) return ;
-                	    // InternalMelange.g:5939:1: ( ( ruleJvmFormalParameter ) )
-                	    // InternalMelange.g:5940:1: ( ruleJvmFormalParameter )
+                	    // InternalMelange.g:5958:1: ( ( ruleJvmFormalParameter ) )
+                	    // InternalMelange.g:5959:1: ( ruleJvmFormalParameter )
                 	    {
-                	    // InternalMelange.g:5940:1: ( ruleJvmFormalParameter )
-                	    // InternalMelange.g:5941:1: ruleJvmFormalParameter
+                	    // InternalMelange.g:5959:1: ( ruleJvmFormalParameter )
+                	    // InternalMelange.g:5960:1: ruleJvmFormalParameter
                 	    {
-                	    pushFollow(FOLLOW_91);
+                	    pushFollow(FOLLOW_92);
                 	    ruleJvmFormalParameter();
 
                 	    state._fsp--;
@@ -28592,11 +28634,11 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
         }
 
-        // InternalMelange.g:5943:6: ( ( '|' ) )
-        // InternalMelange.g:5944:1: ( '|' )
+        // InternalMelange.g:5962:6: ( ( '|' ) )
+        // InternalMelange.g:5963:1: ( '|' )
         {
-        // InternalMelange.g:5944:1: ( '|' )
-        // InternalMelange.g:5945:2: '|'
+        // InternalMelange.g:5963:1: ( '|' )
+        // InternalMelange.g:5964:2: '|'
         {
         match(input,27,FOLLOW_2); if (state.failed) return ;
 
@@ -28615,10 +28657,10 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
     // $ANTLR start synpred31_InternalMelange
     public final void synpred31_InternalMelange_fragment() throws RecognitionException {   
-        // InternalMelange.g:6304:4: ( 'else' )
-        // InternalMelange.g:6304:6: 'else'
+        // InternalMelange.g:6323:4: ( 'else' )
+        // InternalMelange.g:6323:6: 'else'
         {
-        match(input,99,FOLLOW_2); if (state.failed) return ;
+        match(input,100,FOLLOW_2); if (state.failed) return ;
 
         }
     }
@@ -28626,18 +28668,18 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
     // $ANTLR start synpred32_InternalMelange
     public final void synpred32_InternalMelange_fragment() throws RecognitionException {   
-        // InternalMelange.g:6358:4: ( ( '(' ( ( ruleJvmFormalParameter ) ) ':' ) )
-        // InternalMelange.g:6358:5: ( '(' ( ( ruleJvmFormalParameter ) ) ':' )
+        // InternalMelange.g:6377:4: ( ( '(' ( ( ruleJvmFormalParameter ) ) ':' ) )
+        // InternalMelange.g:6377:5: ( '(' ( ( ruleJvmFormalParameter ) ) ':' )
         {
-        // InternalMelange.g:6358:5: ( '(' ( ( ruleJvmFormalParameter ) ) ':' )
-        // InternalMelange.g:6358:7: '(' ( ( ruleJvmFormalParameter ) ) ':'
+        // InternalMelange.g:6377:5: ( '(' ( ( ruleJvmFormalParameter ) ) ':' )
+        // InternalMelange.g:6377:7: '(' ( ( ruleJvmFormalParameter ) ) ':'
         {
         match(input,24,FOLLOW_33); if (state.failed) return ;
-        // InternalMelange.g:6359:1: ( ( ruleJvmFormalParameter ) )
-        // InternalMelange.g:6360:1: ( ruleJvmFormalParameter )
+        // InternalMelange.g:6378:1: ( ( ruleJvmFormalParameter ) )
+        // InternalMelange.g:6379:1: ( ruleJvmFormalParameter )
         {
-        // InternalMelange.g:6360:1: ( ruleJvmFormalParameter )
-        // InternalMelange.g:6361:1: ruleJvmFormalParameter
+        // InternalMelange.g:6379:1: ( ruleJvmFormalParameter )
+        // InternalMelange.g:6380:1: ruleJvmFormalParameter
         {
         pushFollow(FOLLOW_37);
         ruleJvmFormalParameter();
@@ -28661,17 +28703,17 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
     // $ANTLR start synpred33_InternalMelange
     public final void synpred33_InternalMelange_fragment() throws RecognitionException {   
-        // InternalMelange.g:6413:8: ( ( ( ( ruleJvmFormalParameter ) ) ':' ) )
-        // InternalMelange.g:6413:9: ( ( ( ruleJvmFormalParameter ) ) ':' )
+        // InternalMelange.g:6432:8: ( ( ( ( ruleJvmFormalParameter ) ) ':' ) )
+        // InternalMelange.g:6432:9: ( ( ( ruleJvmFormalParameter ) ) ':' )
         {
-        // InternalMelange.g:6413:9: ( ( ( ruleJvmFormalParameter ) ) ':' )
-        // InternalMelange.g:6413:10: ( ( ruleJvmFormalParameter ) ) ':'
+        // InternalMelange.g:6432:9: ( ( ( ruleJvmFormalParameter ) ) ':' )
+        // InternalMelange.g:6432:10: ( ( ruleJvmFormalParameter ) ) ':'
         {
-        // InternalMelange.g:6413:10: ( ( ruleJvmFormalParameter ) )
-        // InternalMelange.g:6414:1: ( ruleJvmFormalParameter )
+        // InternalMelange.g:6432:10: ( ( ruleJvmFormalParameter ) )
+        // InternalMelange.g:6433:1: ( ruleJvmFormalParameter )
         {
-        // InternalMelange.g:6414:1: ( ruleJvmFormalParameter )
-        // InternalMelange.g:6415:1: ruleJvmFormalParameter
+        // InternalMelange.g:6433:1: ( ruleJvmFormalParameter )
+        // InternalMelange.g:6434:1: ruleJvmFormalParameter
         {
         pushFollow(FOLLOW_37);
         ruleJvmFormalParameter();
@@ -28695,17 +28737,17 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
     // $ANTLR start synpred35_InternalMelange
     public final void synpred35_InternalMelange_fragment() throws RecognitionException {   
-        // InternalMelange.g:7181:4: ( ( ( ( ruleJvmTypeReference ) ) ( ( ruleValidID ) ) ) )
-        // InternalMelange.g:7181:5: ( ( ( ruleJvmTypeReference ) ) ( ( ruleValidID ) ) )
+        // InternalMelange.g:7200:4: ( ( ( ( ruleJvmTypeReference ) ) ( ( ruleValidID ) ) ) )
+        // InternalMelange.g:7200:5: ( ( ( ruleJvmTypeReference ) ) ( ( ruleValidID ) ) )
         {
-        // InternalMelange.g:7181:5: ( ( ( ruleJvmTypeReference ) ) ( ( ruleValidID ) ) )
-        // InternalMelange.g:7181:6: ( ( ruleJvmTypeReference ) ) ( ( ruleValidID ) )
+        // InternalMelange.g:7200:5: ( ( ( ruleJvmTypeReference ) ) ( ( ruleValidID ) ) )
+        // InternalMelange.g:7200:6: ( ( ruleJvmTypeReference ) ) ( ( ruleValidID ) )
         {
-        // InternalMelange.g:7181:6: ( ( ruleJvmTypeReference ) )
-        // InternalMelange.g:7182:1: ( ruleJvmTypeReference )
+        // InternalMelange.g:7200:6: ( ( ruleJvmTypeReference ) )
+        // InternalMelange.g:7201:1: ( ruleJvmTypeReference )
         {
-        // InternalMelange.g:7182:1: ( ruleJvmTypeReference )
-        // InternalMelange.g:7183:1: ruleJvmTypeReference
+        // InternalMelange.g:7201:1: ( ruleJvmTypeReference )
+        // InternalMelange.g:7202:1: ruleJvmTypeReference
         {
         pushFollow(FOLLOW_3);
         ruleJvmTypeReference();
@@ -28718,11 +28760,11 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
         }
 
-        // InternalMelange.g:7185:2: ( ( ruleValidID ) )
-        // InternalMelange.g:7186:1: ( ruleValidID )
+        // InternalMelange.g:7204:2: ( ( ruleValidID ) )
+        // InternalMelange.g:7205:1: ( ruleValidID )
         {
-        // InternalMelange.g:7186:1: ( ruleValidID )
-        // InternalMelange.g:7187:1: ruleValidID
+        // InternalMelange.g:7205:1: ( ruleValidID )
+        // InternalMelange.g:7206:1: ruleValidID
         {
         pushFollow(FOLLOW_2);
         ruleValidID();
@@ -28745,11 +28787,11 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
     // $ANTLR start synpred36_InternalMelange
     public final void synpred36_InternalMelange_fragment() throws RecognitionException {   
-        // InternalMelange.g:7470:4: ( ( '(' ) )
-        // InternalMelange.g:7471:1: ( '(' )
+        // InternalMelange.g:7489:4: ( ( '(' ) )
+        // InternalMelange.g:7490:1: ( '(' )
         {
-        // InternalMelange.g:7471:1: ( '(' )
-        // InternalMelange.g:7472:2: '('
+        // InternalMelange.g:7490:1: ( '(' )
+        // InternalMelange.g:7491:2: '('
         {
         match(input,24,FOLLOW_2); if (state.failed) return ;
 
@@ -28762,35 +28804,35 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
     // $ANTLR start synpred37_InternalMelange
     public final void synpred37_InternalMelange_fragment() throws RecognitionException {   
-        // InternalMelange.g:7491:4: ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )
-        // InternalMelange.g:7491:5: ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) )
+        // InternalMelange.g:7510:4: ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )
+        // InternalMelange.g:7510:5: ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) )
         {
-        // InternalMelange.g:7491:5: ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) )
-        // InternalMelange.g:7491:6: () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) )
+        // InternalMelange.g:7510:5: ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) )
+        // InternalMelange.g:7510:6: () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) )
         {
-        // InternalMelange.g:7491:6: ()
-        // InternalMelange.g:7492:1: 
+        // InternalMelange.g:7510:6: ()
+        // InternalMelange.g:7511:1: 
         {
         }
 
-        // InternalMelange.g:7492:2: ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )?
+        // InternalMelange.g:7511:2: ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )?
         int alt190=2;
         int LA190_0 = input.LA(1);
 
-        if ( (LA190_0==RULE_ID||LA190_0==24||LA190_0==82) ) {
+        if ( (LA190_0==RULE_ID||LA190_0==24||LA190_0==83) ) {
             alt190=1;
         }
         switch (alt190) {
             case 1 :
-                // InternalMelange.g:7492:3: ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )*
+                // InternalMelange.g:7511:3: ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )*
                 {
-                // InternalMelange.g:7492:3: ( ( ruleJvmFormalParameter ) )
-                // InternalMelange.g:7493:1: ( ruleJvmFormalParameter )
+                // InternalMelange.g:7511:3: ( ( ruleJvmFormalParameter ) )
+                // InternalMelange.g:7512:1: ( ruleJvmFormalParameter )
                 {
-                // InternalMelange.g:7493:1: ( ruleJvmFormalParameter )
-                // InternalMelange.g:7494:1: ruleJvmFormalParameter
+                // InternalMelange.g:7512:1: ( ruleJvmFormalParameter )
+                // InternalMelange.g:7513:1: ruleJvmFormalParameter
                 {
-                pushFollow(FOLLOW_91);
+                pushFollow(FOLLOW_92);
                 ruleJvmFormalParameter();
 
                 state._fsp--;
@@ -28801,7 +28843,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
                 }
 
-                // InternalMelange.g:7496:2: ( ',' ( ( ruleJvmFormalParameter ) ) )*
+                // InternalMelange.g:7515:2: ( ',' ( ( ruleJvmFormalParameter ) ) )*
                 loop189:
                 do {
                     int alt189=2;
@@ -28814,16 +28856,16 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
                     switch (alt189) {
                 	case 1 :
-                	    // InternalMelange.g:7496:4: ',' ( ( ruleJvmFormalParameter ) )
+                	    // InternalMelange.g:7515:4: ',' ( ( ruleJvmFormalParameter ) )
                 	    {
                 	    match(input,33,FOLLOW_33); if (state.failed) return ;
-                	    // InternalMelange.g:7497:1: ( ( ruleJvmFormalParameter ) )
-                	    // InternalMelange.g:7498:1: ( ruleJvmFormalParameter )
+                	    // InternalMelange.g:7516:1: ( ( ruleJvmFormalParameter ) )
+                	    // InternalMelange.g:7517:1: ( ruleJvmFormalParameter )
                 	    {
-                	    // InternalMelange.g:7498:1: ( ruleJvmFormalParameter )
-                	    // InternalMelange.g:7499:1: ruleJvmFormalParameter
+                	    // InternalMelange.g:7517:1: ( ruleJvmFormalParameter )
+                	    // InternalMelange.g:7518:1: ruleJvmFormalParameter
                 	    {
-                	    pushFollow(FOLLOW_91);
+                	    pushFollow(FOLLOW_92);
                 	    ruleJvmFormalParameter();
 
                 	    state._fsp--;
@@ -28849,11 +28891,11 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
         }
 
-        // InternalMelange.g:7501:6: ( ( '|' ) )
-        // InternalMelange.g:7502:1: ( '|' )
+        // InternalMelange.g:7520:6: ( ( '|' ) )
+        // InternalMelange.g:7521:1: ( '|' )
         {
-        // InternalMelange.g:7502:1: ( '|' )
-        // InternalMelange.g:7503:2: '|'
+        // InternalMelange.g:7521:1: ( '|' )
+        // InternalMelange.g:7522:2: '|'
         {
         match(input,27,FOLLOW_2); if (state.failed) return ;
 
@@ -28872,18 +28914,18 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
     // $ANTLR start synpred38_InternalMelange
     public final void synpred38_InternalMelange_fragment() throws RecognitionException {   
-        // InternalMelange.g:7570:4: ( ( () '[' ) )
-        // InternalMelange.g:7570:5: ( () '[' )
+        // InternalMelange.g:7589:4: ( ( () '[' ) )
+        // InternalMelange.g:7589:5: ( () '[' )
         {
-        // InternalMelange.g:7570:5: ( () '[' )
-        // InternalMelange.g:7570:6: () '['
+        // InternalMelange.g:7589:5: ( () '[' )
+        // InternalMelange.g:7589:6: () '['
         {
-        // InternalMelange.g:7570:6: ()
-        // InternalMelange.g:7571:1: 
+        // InternalMelange.g:7589:6: ()
+        // InternalMelange.g:7590:1: 
         {
         }
 
-        match(input,62,FOLLOW_2); if (state.failed) return ;
+        match(input,63,FOLLOW_2); if (state.failed) return ;
 
         }
 
@@ -28894,10 +28936,10 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
     // $ANTLR start synpred39_InternalMelange
     public final void synpred39_InternalMelange_fragment() throws RecognitionException {   
-        // InternalMelange.g:7735:4: ( '<' )
-        // InternalMelange.g:7735:6: '<'
+        // InternalMelange.g:7754:4: ( '<' )
+        // InternalMelange.g:7754:6: '<'
         {
-        match(input,70,FOLLOW_2); if (state.failed) return ;
+        match(input,71,FOLLOW_2); if (state.failed) return ;
 
         }
     }
@@ -28905,11 +28947,11 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
     // $ANTLR start synpred40_InternalMelange
     public final void synpred40_InternalMelange_fragment() throws RecognitionException {   
-        // InternalMelange.g:7784:5: ( ( '(' ) )
-        // InternalMelange.g:7785:1: ( '(' )
+        // InternalMelange.g:7803:5: ( ( '(' ) )
+        // InternalMelange.g:7804:1: ( '(' )
         {
-        // InternalMelange.g:7785:1: ( '(' )
-        // InternalMelange.g:7786:2: '('
+        // InternalMelange.g:7804:1: ( '(' )
+        // InternalMelange.g:7805:2: '('
         {
         match(input,24,FOLLOW_2); if (state.failed) return ;
 
@@ -28922,35 +28964,35 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
     // $ANTLR start synpred41_InternalMelange
     public final void synpred41_InternalMelange_fragment() throws RecognitionException {   
-        // InternalMelange.g:7805:4: ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )
-        // InternalMelange.g:7805:5: ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) )
+        // InternalMelange.g:7824:4: ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )
+        // InternalMelange.g:7824:5: ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) )
         {
-        // InternalMelange.g:7805:5: ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) )
-        // InternalMelange.g:7805:6: () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) )
+        // InternalMelange.g:7824:5: ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) )
+        // InternalMelange.g:7824:6: () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) )
         {
-        // InternalMelange.g:7805:6: ()
-        // InternalMelange.g:7806:1: 
+        // InternalMelange.g:7824:6: ()
+        // InternalMelange.g:7825:1: 
         {
         }
 
-        // InternalMelange.g:7806:2: ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )?
+        // InternalMelange.g:7825:2: ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )?
         int alt192=2;
         int LA192_0 = input.LA(1);
 
-        if ( (LA192_0==RULE_ID||LA192_0==24||LA192_0==82) ) {
+        if ( (LA192_0==RULE_ID||LA192_0==24||LA192_0==83) ) {
             alt192=1;
         }
         switch (alt192) {
             case 1 :
-                // InternalMelange.g:7806:3: ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )*
+                // InternalMelange.g:7825:3: ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )*
                 {
-                // InternalMelange.g:7806:3: ( ( ruleJvmFormalParameter ) )
-                // InternalMelange.g:7807:1: ( ruleJvmFormalParameter )
+                // InternalMelange.g:7825:3: ( ( ruleJvmFormalParameter ) )
+                // InternalMelange.g:7826:1: ( ruleJvmFormalParameter )
                 {
-                // InternalMelange.g:7807:1: ( ruleJvmFormalParameter )
-                // InternalMelange.g:7808:1: ruleJvmFormalParameter
+                // InternalMelange.g:7826:1: ( ruleJvmFormalParameter )
+                // InternalMelange.g:7827:1: ruleJvmFormalParameter
                 {
-                pushFollow(FOLLOW_91);
+                pushFollow(FOLLOW_92);
                 ruleJvmFormalParameter();
 
                 state._fsp--;
@@ -28961,7 +29003,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
                 }
 
-                // InternalMelange.g:7810:2: ( ',' ( ( ruleJvmFormalParameter ) ) )*
+                // InternalMelange.g:7829:2: ( ',' ( ( ruleJvmFormalParameter ) ) )*
                 loop191:
                 do {
                     int alt191=2;
@@ -28974,16 +29016,16 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
                     switch (alt191) {
                 	case 1 :
-                	    // InternalMelange.g:7810:4: ',' ( ( ruleJvmFormalParameter ) )
+                	    // InternalMelange.g:7829:4: ',' ( ( ruleJvmFormalParameter ) )
                 	    {
                 	    match(input,33,FOLLOW_33); if (state.failed) return ;
-                	    // InternalMelange.g:7811:1: ( ( ruleJvmFormalParameter ) )
-                	    // InternalMelange.g:7812:1: ( ruleJvmFormalParameter )
+                	    // InternalMelange.g:7830:1: ( ( ruleJvmFormalParameter ) )
+                	    // InternalMelange.g:7831:1: ( ruleJvmFormalParameter )
                 	    {
-                	    // InternalMelange.g:7812:1: ( ruleJvmFormalParameter )
-                	    // InternalMelange.g:7813:1: ruleJvmFormalParameter
+                	    // InternalMelange.g:7831:1: ( ruleJvmFormalParameter )
+                	    // InternalMelange.g:7832:1: ruleJvmFormalParameter
                 	    {
-                	    pushFollow(FOLLOW_91);
+                	    pushFollow(FOLLOW_92);
                 	    ruleJvmFormalParameter();
 
                 	    state._fsp--;
@@ -29009,11 +29051,11 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
         }
 
-        // InternalMelange.g:7815:6: ( ( '|' ) )
-        // InternalMelange.g:7816:1: ( '|' )
+        // InternalMelange.g:7834:6: ( ( '|' ) )
+        // InternalMelange.g:7835:1: ( '|' )
         {
-        // InternalMelange.g:7816:1: ( '|' )
-        // InternalMelange.g:7817:2: '|'
+        // InternalMelange.g:7835:1: ( '|' )
+        // InternalMelange.g:7836:2: '|'
         {
         match(input,27,FOLLOW_2); if (state.failed) return ;
 
@@ -29032,18 +29074,18 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
     // $ANTLR start synpred42_InternalMelange
     public final void synpred42_InternalMelange_fragment() throws RecognitionException {   
-        // InternalMelange.g:7884:4: ( ( () '[' ) )
-        // InternalMelange.g:7884:5: ( () '[' )
+        // InternalMelange.g:7903:4: ( ( () '[' ) )
+        // InternalMelange.g:7903:5: ( () '[' )
         {
-        // InternalMelange.g:7884:5: ( () '[' )
-        // InternalMelange.g:7884:6: () '['
+        // InternalMelange.g:7903:5: ( () '[' )
+        // InternalMelange.g:7903:6: () '['
         {
-        // InternalMelange.g:7884:6: ()
-        // InternalMelange.g:7885:1: 
+        // InternalMelange.g:7903:6: ()
+        // InternalMelange.g:7904:1: 
         {
         }
 
-        match(input,62,FOLLOW_2); if (state.failed) return ;
+        match(input,63,FOLLOW_2); if (state.failed) return ;
 
         }
 
@@ -29054,10 +29096,10 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
     // $ANTLR start synpred43_InternalMelange
     public final void synpred43_InternalMelange_fragment() throws RecognitionException {   
-        // InternalMelange.g:8224:2: ( 'extends' | 'static' | 'import' | 'extension' | '!' | '-' | '+' | 'new' | '{' | 'switch' | 'synchronized' | '<' | 'super' | '#' | '[' | 'false' | 'true' | 'null' | 'typeof' | 'if' | 'for' | 'while' | 'do' | 'throw' | 'return' | 'try' | '(' | RULE_ID | RULE_HEX | RULE_INT | RULE_DECIMAL | RULE_STRING )
+        // InternalMelange.g:8243:2: ( 'extends' | 'static' | 'import' | 'extension' | '!' | '-' | '+' | 'new' | '{' | 'switch' | 'synchronized' | '<' | 'super' | '#' | '[' | 'false' | 'true' | 'null' | 'typeof' | 'if' | 'for' | 'while' | 'do' | 'throw' | 'return' | 'try' | '(' | RULE_ID | RULE_HEX | RULE_INT | RULE_DECIMAL | RULE_STRING )
         // InternalMelange.g:
         {
-        if ( (input.LA(1)>=RULE_ID && input.LA(1)<=RULE_DECIMAL)||input.LA(1)==16||(input.LA(1)>=23 && input.LA(1)<=24)||input.LA(1)==56||input.LA(1)==62||input.LA(1)==70||input.LA(1)==85||input.LA(1)==96||input.LA(1)==98||input.LA(1)==100||(input.LA(1)>=103 && input.LA(1)<=105)||(input.LA(1)>=108 && input.LA(1)<=120)||input.LA(1)==122 ) {
+        if ( (input.LA(1)>=RULE_ID && input.LA(1)<=RULE_DECIMAL)||input.LA(1)==16||(input.LA(1)>=23 && input.LA(1)<=24)||input.LA(1)==56||input.LA(1)==63||input.LA(1)==71||input.LA(1)==86||input.LA(1)==97||input.LA(1)==99||input.LA(1)==101||(input.LA(1)>=104 && input.LA(1)<=106)||(input.LA(1)>=109 && input.LA(1)<=121)||input.LA(1)==123 ) {
             input.consume();
             state.errorRecovery=false;state.failed=false;
         }
@@ -29074,10 +29116,10 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
     // $ANTLR start synpred44_InternalMelange
     public final void synpred44_InternalMelange_fragment() throws RecognitionException {   
-        // InternalMelange.g:8318:5: ( 'catch' )
-        // InternalMelange.g:8318:7: 'catch'
+        // InternalMelange.g:8337:5: ( 'catch' )
+        // InternalMelange.g:8337:7: 'catch'
         {
-        match(input,123,FOLLOW_2); if (state.failed) return ;
+        match(input,124,FOLLOW_2); if (state.failed) return ;
 
         }
     }
@@ -29085,10 +29127,10 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
     // $ANTLR start synpred45_InternalMelange
     public final void synpred45_InternalMelange_fragment() throws RecognitionException {   
-        // InternalMelange.g:8337:5: ( 'finally' )
-        // InternalMelange.g:8337:7: 'finally'
+        // InternalMelange.g:8356:5: ( 'finally' )
+        // InternalMelange.g:8356:7: 'finally'
         {
-        match(input,121,FOLLOW_2); if (state.failed) return ;
+        match(input,122,FOLLOW_2); if (state.failed) return ;
 
         }
     }
@@ -29096,10 +29138,10 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
     // $ANTLR start synpred48_InternalMelange
     public final void synpred48_InternalMelange_fragment() throws RecognitionException {   
-        // InternalMelange.g:8563:3: ( '.' )
-        // InternalMelange.g:8564:2: '.'
+        // InternalMelange.g:8582:3: ( '.' )
+        // InternalMelange.g:8583:2: '.'
         {
-        match(input,93,FOLLOW_2); if (state.failed) return ;
+        match(input,94,FOLLOW_2); if (state.failed) return ;
 
         }
     }
@@ -29107,14 +29149,14 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
     // $ANTLR start synpred49_InternalMelange
     public final void synpred49_InternalMelange_fragment() throws RecognitionException {   
-        // InternalMelange.g:8689:2: ( ( () ruleArrayBrackets ) )
-        // InternalMelange.g:8689:3: ( () ruleArrayBrackets )
+        // InternalMelange.g:8708:2: ( ( () ruleArrayBrackets ) )
+        // InternalMelange.g:8708:3: ( () ruleArrayBrackets )
         {
-        // InternalMelange.g:8689:3: ( () ruleArrayBrackets )
-        // InternalMelange.g:8689:4: () ruleArrayBrackets
+        // InternalMelange.g:8708:3: ( () ruleArrayBrackets )
+        // InternalMelange.g:8708:4: () ruleArrayBrackets
         {
-        // InternalMelange.g:8689:4: ()
-        // InternalMelange.g:8690:1: 
+        // InternalMelange.g:8708:4: ()
+        // InternalMelange.g:8709:1: 
         {
         }
 
@@ -29133,10 +29175,10 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
     // $ANTLR start synpred50_InternalMelange
     public final void synpred50_InternalMelange_fragment() throws RecognitionException {   
-        // InternalMelange.g:8874:4: ( '<' )
-        // InternalMelange.g:8874:6: '<'
+        // InternalMelange.g:8893:4: ( '<' )
+        // InternalMelange.g:8893:6: '<'
         {
-        match(input,70,FOLLOW_2); if (state.failed) return ;
+        match(input,71,FOLLOW_2); if (state.failed) return ;
 
         }
     }
@@ -29144,18 +29186,18 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
     // $ANTLR start synpred51_InternalMelange
     public final void synpred51_InternalMelange_fragment() throws RecognitionException {   
-        // InternalMelange.g:8923:3: ( ( () '.' ) )
-        // InternalMelange.g:8923:4: ( () '.' )
+        // InternalMelange.g:8942:3: ( ( () '.' ) )
+        // InternalMelange.g:8942:4: ( () '.' )
         {
-        // InternalMelange.g:8923:4: ( () '.' )
-        // InternalMelange.g:8923:5: () '.'
+        // InternalMelange.g:8942:4: ( () '.' )
+        // InternalMelange.g:8942:5: () '.'
         {
-        // InternalMelange.g:8923:5: ()
-        // InternalMelange.g:8924:1: 
+        // InternalMelange.g:8942:5: ()
+        // InternalMelange.g:8943:1: 
         {
         }
 
-        match(input,93,FOLLOW_2); if (state.failed) return ;
+        match(input,94,FOLLOW_2); if (state.failed) return ;
 
         }
 
@@ -29166,10 +29208,10 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
     // $ANTLR start synpred52_InternalMelange
     public final void synpred52_InternalMelange_fragment() throws RecognitionException {   
-        // InternalMelange.g:8950:4: ( '<' )
-        // InternalMelange.g:8950:6: '<'
+        // InternalMelange.g:8969:4: ( '<' )
+        // InternalMelange.g:8969:6: '<'
         {
-        match(input,70,FOLLOW_2); if (state.failed) return ;
+        match(input,71,FOLLOW_2); if (state.failed) return ;
 
         }
     }
@@ -29866,7 +29908,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
     static final String dfa_3s = "\1\16\1\uffff\12\0\11\uffff";
     static final String dfa_4s = "\1\64\1\uffff\12\0\11\uffff";
     static final String dfa_5s = "\1\uffff\1\12\12\uffff\1\1\1\2\1\3\1\4\1\5\1\6\1\7\1\10\1\11";
-    static final String dfa_6s = "\2\uffff\1\4\1\0\1\2\1\3\1\5\1\7\1\11\1\10\1\6\1\1\11\uffff}>";
+    static final String dfa_6s = "\2\uffff\1\1\1\7\1\2\1\3\1\5\1\10\1\11\1\4\1\6\1\0\11\uffff}>";
     static final String[] dfa_7s = {
             "\2\1\3\uffff\1\13\13\uffff\1\2\4\uffff\1\3\1\1\1\uffff\1\4\1\5\1\6\1\7\1\10\1\11\1\12\1\uffff\2\1\1\uffff\3\1",
             "",
@@ -29920,21 +29962,6 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
         	int _s = s;
             switch ( s ) {
                     case 0 : 
-                        int LA31_3 = input.LA(1);
-
-                         
-                        int index31_3 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( getUnorderedGroupHelper().canSelect(grammarAccess.getLanguageAccess().getUnorderedGroup(), 1) ) {s = 13;}
-
-                        else if ( getUnorderedGroupHelper().canLeave(grammarAccess.getLanguageAccess().getUnorderedGroup()) ) {s = 1;}
-
-                         
-                        input.seek(index31_3);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 1 : 
                         int LA31_11 = input.LA(1);
 
                          
@@ -29947,6 +29974,21 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
                          
                         input.seek(index31_11);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 1 : 
+                        int LA31_2 = input.LA(1);
+
+                         
+                        int index31_2 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( getUnorderedGroupHelper().canSelect(grammarAccess.getLanguageAccess().getUnorderedGroup(), 0) ) {s = 12;}
+
+                        else if ( getUnorderedGroupHelper().canLeave(grammarAccess.getLanguageAccess().getUnorderedGroup()) ) {s = 1;}
+
+                         
+                        input.seek(index31_2);
                         if ( s>=0 ) return s;
                         break;
                     case 2 : 
@@ -29980,18 +30022,18 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                         if ( s>=0 ) return s;
                         break;
                     case 4 : 
-                        int LA31_2 = input.LA(1);
+                        int LA31_9 = input.LA(1);
 
                          
-                        int index31_2 = input.index();
+                        int index31_9 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( getUnorderedGroupHelper().canSelect(grammarAccess.getLanguageAccess().getUnorderedGroup(), 0) ) {s = 12;}
+                        if ( getUnorderedGroupHelper().canSelect(grammarAccess.getLanguageAccess().getUnorderedGroup(), 7) ) {s = 19;}
 
                         else if ( getUnorderedGroupHelper().canLeave(grammarAccess.getLanguageAccess().getUnorderedGroup()) ) {s = 1;}
 
                          
-                        input.seek(index31_2);
+                        input.seek(index31_9);
                         if ( s>=0 ) return s;
                         break;
                     case 5 : 
@@ -30025,6 +30067,21 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                         if ( s>=0 ) return s;
                         break;
                     case 7 : 
+                        int LA31_3 = input.LA(1);
+
+                         
+                        int index31_3 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( getUnorderedGroupHelper().canSelect(grammarAccess.getLanguageAccess().getUnorderedGroup(), 1) ) {s = 13;}
+
+                        else if ( getUnorderedGroupHelper().canLeave(grammarAccess.getLanguageAccess().getUnorderedGroup()) ) {s = 1;}
+
+                         
+                        input.seek(index31_3);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 8 : 
                         int LA31_7 = input.LA(1);
 
                          
@@ -30037,21 +30094,6 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
                          
                         input.seek(index31_7);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 8 : 
-                        int LA31_9 = input.LA(1);
-
-                         
-                        int index31_9 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( getUnorderedGroupHelper().canSelect(grammarAccess.getLanguageAccess().getUnorderedGroup(), 7) ) {s = 19;}
-
-                        else if ( getUnorderedGroupHelper().canLeave(grammarAccess.getLanguageAccess().getUnorderedGroup()) ) {s = 1;}
-
-                         
-                        input.seek(index31_9);
                         if ( s>=0 ) return s;
                         break;
                     case 9 : 
@@ -30080,11 +30122,11 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
     static final String dfa_8s = "\46\uffff";
     static final String dfa_9s = "\1\1\20\uffff\1\1\2\uffff\1\1\10\uffff\1\1\10\uffff";
     static final String dfa_10s = "\1\16\1\uffff\1\4\5\5\1\4\1\0\1\uffff\1\20\5\0\1\16\1\uffff\1\4\1\16\5\uffff\1\5\1\20\1\5\1\16\2\4\1\0\2\20\1\uffff\1\4\1\20";
-    static final String dfa_11s = "\1\100\1\uffff\1\4\5\5\1\4\1\0\1\uffff\1\43\5\0\1\64\1\uffff\1\4\1\100\5\uffff\1\5\1\135\1\5\1\64\2\4\1\0\2\135\1\uffff\1\4\1\135";
+    static final String dfa_11s = "\1\101\1\uffff\1\4\5\5\1\4\1\0\1\uffff\1\43\5\0\1\64\1\uffff\1\4\1\101\5\uffff\1\5\1\136\1\5\1\64\2\4\1\0\2\136\1\uffff\1\4\1\136";
     static final String dfa_12s = "\1\uffff\1\11\10\uffff\1\2\7\uffff\1\10\2\uffff\1\3\1\4\1\5\1\6\1\7\11\uffff\1\1\2\uffff";
-    static final String dfa_13s = "\1\6\10\uffff\1\1\2\uffff\1\3\1\5\1\4\1\7\1\2\17\uffff\1\0\5\uffff}>";
+    static final String dfa_13s = "\1\0\10\uffff\1\5\2\uffff\1\4\1\1\1\7\1\2\1\3\17\uffff\1\6\5\uffff}>";
     static final String[] dfa_14s = {
-            "\2\1\3\uffff\1\11\13\uffff\1\2\4\uffff\2\1\1\uffff\1\3\1\4\1\5\1\6\1\7\1\10\1\1\1\uffff\2\1\1\uffff\3\1\13\uffff\1\12",
+            "\2\1\3\uffff\1\11\13\uffff\1\2\4\uffff\2\1\1\uffff\1\3\1\4\1\5\1\6\1\7\1\10\1\1\1\uffff\2\1\1\uffff\3\1\14\uffff\1\12",
             "",
             "\1\13",
             "\1\14",
@@ -30104,24 +30146,24 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
             "\2\1\3\uffff\1\11\13\uffff\1\1\4\uffff\1\1\1\32\1\uffff\7\1\1\uffff\2\1\1\uffff\3\1",
             "",
             "\1\33",
-            "\2\1\3\uffff\1\1\13\uffff\1\1\4\uffff\2\1\1\uffff\7\1\1\uffff\2\1\1\34\3\1\1\uffff\1\1\4\uffff\2\1\3\uffff\1\1",
+            "\2\1\3\uffff\1\1\13\uffff\1\1\4\uffff\2\1\1\uffff\7\1\1\uffff\2\1\1\34\3\1\1\uffff\1\1\5\uffff\2\1\3\uffff\1\1",
             "",
             "",
             "",
             "",
             "",
             "\1\35",
-            "\1\24\20\uffff\1\37\1\uffff\1\1\71\uffff\1\36",
+            "\1\24\20\uffff\1\37\1\uffff\1\1\72\uffff\1\36",
             "\1\40",
             "\2\1\3\uffff\1\11\13\uffff\1\1\4\uffff\2\1\1\uffff\7\1\1\uffff\2\1\1\uffff\3\1",
             "\1\41",
             "\1\42",
             "\1\uffff",
-            "\1\24\20\uffff\1\37\1\uffff\1\1\71\uffff\1\36",
-            "\1\24\20\uffff\1\37\1\uffff\1\1\71\uffff\1\44",
+            "\1\24\20\uffff\1\37\1\uffff\1\1\72\uffff\1\36",
+            "\1\24\20\uffff\1\37\1\uffff\1\1\72\uffff\1\44",
             "",
             "\1\45",
-            "\1\24\20\uffff\1\37\1\uffff\1\1\71\uffff\1\44"
+            "\1\24\20\uffff\1\37\1\uffff\1\1\72\uffff\1\44"
     };
 
     static final short[] dfa_8 = DFA.unpackEncodedString(dfa_8s);
@@ -30153,96 +30195,6 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
         	int _s = s;
             switch ( s ) {
                     case 0 : 
-                        int LA40_32 = input.LA(1);
-
-                         
-                        int index40_32 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( getUnorderedGroupHelper().canSelect(grammarAccess.getExternalLanguageAccess().getUnorderedGroup(), 0) ) {s = 35;}
-
-                        else if ( getUnorderedGroupHelper().canLeave(grammarAccess.getExternalLanguageAccess().getUnorderedGroup()) ) {s = 1;}
-
-                         
-                        input.seek(index40_32);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 1 : 
-                        int LA40_9 = input.LA(1);
-
-                         
-                        int index40_9 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( getUnorderedGroupHelper().canSelect(grammarAccess.getExternalLanguageAccess().getUnorderedGroup(), 7) ) {s = 18;}
-
-                        else if ( getUnorderedGroupHelper().canLeave(grammarAccess.getExternalLanguageAccess().getUnorderedGroup()) ) {s = 1;}
-
-                         
-                        input.seek(index40_9);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 2 : 
-                        int LA40_16 = input.LA(1);
-
-                         
-                        int index40_16 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( getUnorderedGroupHelper().canSelect(grammarAccess.getExternalLanguageAccess().getUnorderedGroup(), 6) ) {s = 25;}
-
-                        else if ( getUnorderedGroupHelper().canLeave(grammarAccess.getExternalLanguageAccess().getUnorderedGroup()) ) {s = 1;}
-
-                         
-                        input.seek(index40_16);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 3 : 
-                        int LA40_12 = input.LA(1);
-
-                         
-                        int index40_12 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( getUnorderedGroupHelper().canSelect(grammarAccess.getExternalLanguageAccess().getUnorderedGroup(), 2) ) {s = 21;}
-
-                        else if ( getUnorderedGroupHelper().canLeave(grammarAccess.getExternalLanguageAccess().getUnorderedGroup()) ) {s = 1;}
-
-                         
-                        input.seek(index40_12);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 4 : 
-                        int LA40_14 = input.LA(1);
-
-                         
-                        int index40_14 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( getUnorderedGroupHelper().canSelect(grammarAccess.getExternalLanguageAccess().getUnorderedGroup(), 4) ) {s = 23;}
-
-                        else if ( getUnorderedGroupHelper().canLeave(grammarAccess.getExternalLanguageAccess().getUnorderedGroup()) ) {s = 1;}
-
-                         
-                        input.seek(index40_14);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 5 : 
-                        int LA40_13 = input.LA(1);
-
-                         
-                        int index40_13 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( getUnorderedGroupHelper().canSelect(grammarAccess.getExternalLanguageAccess().getUnorderedGroup(), 3) ) {s = 22;}
-
-                        else if ( getUnorderedGroupHelper().canLeave(grammarAccess.getExternalLanguageAccess().getUnorderedGroup()) ) {s = 1;}
-
-                         
-                        input.seek(index40_13);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 6 : 
                         int LA40_0 = input.LA(1);
 
                          
@@ -30267,13 +30219,28 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
                         else if ( (LA40_0==19) ) {s = 9;}
 
-                        else if ( LA40_0 == 64 && getUnorderedGroupHelper().canSelect(grammarAccess.getExternalLanguageAccess().getUnorderedGroup(), 1) ) {s = 10;}
+                        else if ( LA40_0 == 65 && getUnorderedGroupHelper().canSelect(grammarAccess.getExternalLanguageAccess().getUnorderedGroup(), 1) ) {s = 10;}
 
                          
                         input.seek(index40_0);
                         if ( s>=0 ) return s;
                         break;
-                    case 7 : 
+                    case 1 : 
+                        int LA40_13 = input.LA(1);
+
+                         
+                        int index40_13 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( getUnorderedGroupHelper().canSelect(grammarAccess.getExternalLanguageAccess().getUnorderedGroup(), 3) ) {s = 22;}
+
+                        else if ( getUnorderedGroupHelper().canLeave(grammarAccess.getExternalLanguageAccess().getUnorderedGroup()) ) {s = 1;}
+
+                         
+                        input.seek(index40_13);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 2 : 
                         int LA40_15 = input.LA(1);
 
                          
@@ -30288,6 +30255,81 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                         input.seek(index40_15);
                         if ( s>=0 ) return s;
                         break;
+                    case 3 : 
+                        int LA40_16 = input.LA(1);
+
+                         
+                        int index40_16 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( getUnorderedGroupHelper().canSelect(grammarAccess.getExternalLanguageAccess().getUnorderedGroup(), 6) ) {s = 25;}
+
+                        else if ( getUnorderedGroupHelper().canLeave(grammarAccess.getExternalLanguageAccess().getUnorderedGroup()) ) {s = 1;}
+
+                         
+                        input.seek(index40_16);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 4 : 
+                        int LA40_12 = input.LA(1);
+
+                         
+                        int index40_12 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( getUnorderedGroupHelper().canSelect(grammarAccess.getExternalLanguageAccess().getUnorderedGroup(), 2) ) {s = 21;}
+
+                        else if ( getUnorderedGroupHelper().canLeave(grammarAccess.getExternalLanguageAccess().getUnorderedGroup()) ) {s = 1;}
+
+                         
+                        input.seek(index40_12);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 5 : 
+                        int LA40_9 = input.LA(1);
+
+                         
+                        int index40_9 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( getUnorderedGroupHelper().canSelect(grammarAccess.getExternalLanguageAccess().getUnorderedGroup(), 7) ) {s = 18;}
+
+                        else if ( getUnorderedGroupHelper().canLeave(grammarAccess.getExternalLanguageAccess().getUnorderedGroup()) ) {s = 1;}
+
+                         
+                        input.seek(index40_9);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 6 : 
+                        int LA40_32 = input.LA(1);
+
+                         
+                        int index40_32 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( getUnorderedGroupHelper().canSelect(grammarAccess.getExternalLanguageAccess().getUnorderedGroup(), 0) ) {s = 35;}
+
+                        else if ( getUnorderedGroupHelper().canLeave(grammarAccess.getExternalLanguageAccess().getUnorderedGroup()) ) {s = 1;}
+
+                         
+                        input.seek(index40_32);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 7 : 
+                        int LA40_14 = input.LA(1);
+
+                         
+                        int index40_14 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( getUnorderedGroupHelper().canSelect(grammarAccess.getExternalLanguageAccess().getUnorderedGroup(), 4) ) {s = 23;}
+
+                        else if ( getUnorderedGroupHelper().canLeave(grammarAccess.getExternalLanguageAccess().getUnorderedGroup()) ) {s = 1;}
+
+                         
+                        input.seek(index40_14);
+                        if ( s>=0 ) return s;
+                        break;
             }
             if (state.backtracking>0) {state.failed=true; return -1;}
             NoViableAltException nvae =
@@ -30297,19 +30339,19 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
         }
     }
     static final String dfa_15s = "\7\uffff";
-    static final String dfa_16s = "\2\uffff\1\3\3\uffff\1\3";
-    static final String dfa_17s = "\1\100\1\4\1\16\1\uffff\1\4\1\uffff\1\16";
-    static final String dfa_18s = "\1\100\1\122\1\135\1\uffff\1\126\1\uffff\1\135";
-    static final String dfa_19s = "\3\uffff\1\1\1\uffff\1\2\1\uffff";
+    static final String dfa_16s = "\2\uffff\1\3\2\uffff\1\3\1\uffff";
+    static final String dfa_17s = "\1\101\1\4\1\16\1\uffff\1\4\1\16\1\uffff";
+    static final String dfa_18s = "\1\101\1\123\1\136\1\uffff\1\127\1\136\1\uffff";
+    static final String dfa_19s = "\3\uffff\1\1\2\uffff\1\2";
     static final String dfa_20s = "\7\uffff}>";
     static final String[] dfa_21s = {
             "\1\1",
-            "\1\2\23\uffff\1\3\71\uffff\1\3",
-            "\2\3\3\uffff\1\3\6\uffff\1\3\4\uffff\1\3\4\uffff\2\3\1\uffff\7\3\1\uffff\6\3\1\uffff\1\3\4\uffff\2\3\1\uffff\1\3\1\uffff\1\3\5\uffff\1\3\26\uffff\1\4",
+            "\1\2\23\uffff\1\3\72\uffff\1\3",
+            "\2\3\3\uffff\1\3\6\uffff\1\3\4\uffff\1\3\4\uffff\2\3\1\uffff\7\3\1\uffff\6\3\1\uffff\1\3\5\uffff\2\3\1\uffff\1\3\1\uffff\1\3\5\uffff\1\3\26\uffff\1\4",
             "",
-            "\1\6\121\uffff\1\5",
-            "",
-            "\2\3\3\uffff\1\3\6\uffff\1\3\4\uffff\1\3\4\uffff\2\3\1\uffff\7\3\1\uffff\6\3\1\uffff\1\3\4\uffff\2\3\1\uffff\1\3\1\uffff\1\3\5\uffff\1\3\26\uffff\1\4"
+            "\1\5\122\uffff\1\6",
+            "\2\3\3\uffff\1\3\6\uffff\1\3\4\uffff\1\3\4\uffff\2\3\1\uffff\7\3\1\uffff\6\3\1\uffff\1\3\5\uffff\2\3\1\uffff\1\3\1\uffff\1\3\5\uffff\1\3\26\uffff\1\4",
+            ""
     };
 
     static final short[] dfa_15 = DFA.unpackEncodedString(dfa_15s);
@@ -30334,17 +30376,17 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
             this.transition = dfa_21;
         }
         public String getDescription() {
-            return "3511:1: (this_AspectTypeRef_0= ruleAspectTypeRef | this_AspectWildcard_1= ruleAspectWildcard )";
+            return "3530:1: (this_AspectTypeRef_0= ruleAspectTypeRef | this_AspectWildcard_1= ruleAspectWildcard )";
         }
     }
     static final String dfa_22s = "\12\uffff";
     static final String dfa_23s = "\1\10\11\uffff";
     static final String dfa_24s = "\1\4\7\0\2\uffff";
-    static final String dfa_25s = "\1\173\7\0\2\uffff";
+    static final String dfa_25s = "\1\174\7\0\2\uffff";
     static final String dfa_26s = "\10\uffff\1\2\1\1";
     static final String dfa_27s = "\1\uffff\1\0\1\1\1\2\1\3\1\4\1\5\1\6\2\uffff}>";
     static final String[] dfa_28s = {
-            "\5\10\7\uffff\1\10\2\uffff\2\10\2\uffff\3\10\7\uffff\1\10\14\uffff\1\10\11\uffff\1\10\5\uffff\2\10\1\uffff\1\1\1\2\1\3\1\4\1\5\1\6\1\7\64\10",
+            "\5\10\7\uffff\1\10\2\uffff\2\10\2\uffff\3\10\7\uffff\1\10\14\uffff\1\10\11\uffff\1\10\6\uffff\2\10\1\uffff\1\1\1\2\1\3\1\4\1\5\1\6\1\7\64\10",
             "\1\uffff",
             "\1\uffff",
             "\1\uffff",
@@ -30378,7 +30420,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
             this.transition = dfa_28;
         }
         public String getDescription() {
-            return "3724:1: ( ( ( ( () ( ( ruleOpMultiAssign ) ) ) )=> ( () ( ( ruleOpMultiAssign ) ) ) ) ( (lv_rightOperand_7_0= ruleXAssignment ) ) )?";
+            return "3743:1: ( ( ( ( () ( ( ruleOpMultiAssign ) ) ) )=> ( () ( ( ruleOpMultiAssign ) ) ) ) ( (lv_rightOperand_7_0= ruleXAssignment ) ) )?";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             TokenStream input = (TokenStream)_input;
@@ -30500,11 +30542,11 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
     static final String dfa_29s = "\13\uffff";
     static final String dfa_30s = "\1\1\12\uffff";
     static final String dfa_31s = "\1\4\1\uffff\10\0\1\uffff";
-    static final String dfa_32s = "\1\173\1\uffff\10\0\1\uffff";
+    static final String dfa_32s = "\1\174\1\uffff\10\0\1\uffff";
     static final String dfa_33s = "\1\uffff\1\2\10\uffff\1\1";
-    static final String dfa_34s = "\2\uffff\1\2\1\3\1\4\1\5\1\7\1\6\1\0\1\1\1\uffff}>";
+    static final String dfa_34s = "\2\uffff\1\0\1\6\1\4\1\5\1\7\1\3\1\1\1\2\1\uffff}>";
     static final String[] dfa_35s = {
-            "\5\1\7\uffff\1\1\2\uffff\1\1\1\4\2\uffff\3\1\7\uffff\1\1\14\uffff\1\1\11\uffff\1\1\5\uffff\2\1\1\uffff\5\1\1\2\1\3\10\1\1\5\1\6\1\7\1\10\1\11\47\1",
+            "\5\1\7\uffff\1\1\2\uffff\1\1\1\4\2\uffff\3\1\7\uffff\1\1\14\uffff\1\1\11\uffff\1\1\6\uffff\2\1\1\uffff\5\1\1\2\1\3\10\1\1\5\1\6\1\7\1\10\1\11\47\1",
             "",
             "\1\uffff",
             "\1\uffff",
@@ -30539,43 +30581,13 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
             this.transition = dfa_35;
         }
         public String getDescription() {
-            return "()* loopback of 4401:1: ( ( ( ( () ( ( ruleOpOther ) ) ) )=> ( () ( ( ruleOpOther ) ) ) ) ( (lv_rightOperand_3_0= ruleXAdditiveExpression ) ) )*";
+            return "()* loopback of 4420:1: ( ( ( ( () ( ( ruleOpOther ) ) ) )=> ( () ( ( ruleOpOther ) ) ) ) ( (lv_rightOperand_3_0= ruleXAdditiveExpression ) ) )*";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             TokenStream input = (TokenStream)_input;
         	int _s = s;
             switch ( s ) {
                     case 0 : 
-                        int LA79_8 = input.LA(1);
-
-                         
-                        int index79_8 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred13_InternalMelange()) ) {s = 10;}
-
-                        else if ( (true) ) {s = 1;}
-
-                         
-                        input.seek(index79_8);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 1 : 
-                        int LA79_9 = input.LA(1);
-
-                         
-                        int index79_9 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred13_InternalMelange()) ) {s = 10;}
-
-                        else if ( (true) ) {s = 1;}
-
-                         
-                        input.seek(index79_9);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 2 : 
                         int LA79_2 = input.LA(1);
 
                          
@@ -30590,11 +30602,11 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                         input.seek(index79_2);
                         if ( s>=0 ) return s;
                         break;
-                    case 3 : 
-                        int LA79_3 = input.LA(1);
+                    case 1 : 
+                        int LA79_8 = input.LA(1);
 
                          
-                        int index79_3 = input.index();
+                        int index79_8 = input.index();
                         input.rewind();
                         s = -1;
                         if ( (synpred13_InternalMelange()) ) {s = 10;}
@@ -30602,7 +30614,37 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                         else if ( (true) ) {s = 1;}
 
                          
-                        input.seek(index79_3);
+                        input.seek(index79_8);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 2 : 
+                        int LA79_9 = input.LA(1);
+
+                         
+                        int index79_9 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred13_InternalMelange()) ) {s = 10;}
+
+                        else if ( (true) ) {s = 1;}
+
+                         
+                        input.seek(index79_9);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 3 : 
+                        int LA79_7 = input.LA(1);
+
+                         
+                        int index79_7 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred13_InternalMelange()) ) {s = 10;}
+
+                        else if ( (true) ) {s = 1;}
+
+                         
+                        input.seek(index79_7);
                         if ( s>=0 ) return s;
                         break;
                     case 4 : 
@@ -30636,10 +30678,10 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                         if ( s>=0 ) return s;
                         break;
                     case 6 : 
-                        int LA79_7 = input.LA(1);
+                        int LA79_3 = input.LA(1);
 
                          
-                        int index79_7 = input.index();
+                        int index79_3 = input.index();
                         input.rewind();
                         s = -1;
                         if ( (synpred13_InternalMelange()) ) {s = 10;}
@@ -30647,7 +30689,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                         else if ( (true) ) {s = 1;}
 
                          
-                        input.seek(index79_7);
+                        input.seek(index79_3);
                         if ( s>=0 ) return s;
                         break;
                     case 7 : 
@@ -30673,12 +30715,12 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
             throw nvae;
         }
     }
-    static final String dfa_36s = "\1\24\2\uffff\1\107\7\uffff";
-    static final String dfa_37s = "\1\124\2\uffff\1\121\7\uffff";
+    static final String dfa_36s = "\1\24\2\uffff\1\110\7\uffff";
+    static final String dfa_37s = "\1\125\2\uffff\1\122\7\uffff";
     static final String dfa_38s = "\1\uffff\1\1\1\2\1\uffff\1\4\1\5\1\7\1\10\1\11\1\3\1\6";
     static final String dfa_39s = "\13\uffff}>";
     static final String[] dfa_40s = {
-            "\1\1\61\uffff\1\6\1\3\10\uffff\1\2\1\4\1\5\1\7\1\10",
+            "\1\1\62\uffff\1\6\1\3\10\uffff\1\2\1\4\1\5\1\7\1\10",
             "",
             "",
             "\1\12\11\uffff\1\11",
@@ -30710,17 +30752,17 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
             this.transition = dfa_40;
         }
         public String getDescription() {
-            return "4466:1: (kw= '->' | kw= '..<' | (kw= '>' kw= '..' ) | kw= '..' | kw= '=>' | (kw= '>' ( ( ( ( '>' '>' ) )=> (kw= '>' kw= '>' ) ) | kw= '>' ) ) | (kw= '<' ( ( ( ( '<' '<' ) )=> (kw= '<' kw= '<' ) ) | kw= '<' | kw= '=>' ) ) | kw= '<>' | kw= '?:' )";
+            return "4485:1: (kw= '->' | kw= '..<' | (kw= '>' kw= '..' ) | kw= '..' | kw= '=>' | (kw= '>' ( ( ( ( '>' '>' ) )=> (kw= '>' kw= '>' ) ) | kw= '>' ) ) | (kw= '<' ( ( ( ( '<' '<' ) )=> (kw= '<' kw= '<' ) ) | kw= '<' | kw= '=>' ) ) | kw= '<>' | kw= '?:' )";
         }
     }
     static final String dfa_41s = "\116\uffff";
     static final String dfa_42s = "\1\2\115\uffff";
     static final String dfa_43s = "\1\4\1\0\114\uffff";
-    static final String dfa_44s = "\1\173\1\0\114\uffff";
+    static final String dfa_44s = "\1\174\1\0\114\uffff";
     static final String dfa_45s = "\2\uffff\1\2\112\uffff\1\1";
     static final String dfa_46s = "\1\uffff\1\0\114\uffff}>";
     static final String[] dfa_47s = {
-            "\5\2\7\uffff\1\2\2\uffff\2\2\2\uffff\1\2\1\1\1\2\7\uffff\1\2\14\uffff\1\2\11\uffff\1\2\5\uffff\2\2\1\uffff\73\2",
+            "\5\2\7\uffff\1\2\2\uffff\2\2\2\uffff\1\2\1\1\1\2\7\uffff\1\2\14\uffff\1\2\11\uffff\1\2\6\uffff\2\2\1\uffff\73\2",
             "\1\uffff",
             "",
             "",
@@ -30822,7 +30864,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
             this.transition = dfa_47;
         }
         public String getDescription() {
-            return "5310:2: ( ( ( ( '(' ) )=> (lv_explicitOperationCall_17_0= '(' ) ) ( ( ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> (lv_memberCallArguments_18_0= ruleXShortClosure ) ) | ( ( (lv_memberCallArguments_19_0= ruleXExpression ) ) (otherlv_20= ',' ( (lv_memberCallArguments_21_0= ruleXExpression ) ) )* ) )? otherlv_22= ')' )?";
+            return "5329:2: ( ( ( ( '(' ) )=> (lv_explicitOperationCall_17_0= '(' ) ) ( ( ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> (lv_memberCallArguments_18_0= ruleXShortClosure ) ) | ( ( (lv_memberCallArguments_19_0= ruleXExpression ) ) (otherlv_20= ',' ( (lv_memberCallArguments_21_0= ruleXExpression ) ) )* ) )? otherlv_22= ')' )?";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             TokenStream input = (TokenStream)_input;
@@ -30853,11 +30895,11 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
     }
     static final String dfa_48s = "\44\uffff";
     static final String dfa_49s = "\1\4\2\0\41\uffff";
-    static final String dfa_50s = "\1\172\2\0\41\uffff";
+    static final String dfa_50s = "\1\173\2\0\41\uffff";
     static final String dfa_51s = "\3\uffff\2\1\1\2\35\uffff\1\3";
     static final String dfa_52s = "\1\0\1\1\1\2\41\uffff}>";
     static final String[] dfa_53s = {
-            "\1\1\4\5\7\uffff\1\5\6\uffff\1\5\1\2\1\43\1\uffff\1\4\34\uffff\1\5\5\uffff\1\5\7\uffff\1\5\13\uffff\1\3\2\uffff\1\5\12\uffff\1\5\1\uffff\1\5\1\uffff\1\5\2\uffff\3\5\2\uffff\15\5\1\uffff\1\5",
+            "\1\1\4\5\7\uffff\1\5\6\uffff\1\5\1\2\1\43\1\uffff\1\4\34\uffff\1\5\6\uffff\1\5\7\uffff\1\5\13\uffff\1\3\2\uffff\1\5\12\uffff\1\5\1\uffff\1\5\1\uffff\1\5\2\uffff\3\5\2\uffff\15\5\1\uffff\1\5",
             "\1\uffff",
             "\1\uffff",
             "",
@@ -30916,7 +30958,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
             this.transition = dfa_53;
         }
         public String getDescription() {
-            return "5331:2: ( ( ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> (lv_memberCallArguments_18_0= ruleXShortClosure ) ) | ( ( (lv_memberCallArguments_19_0= ruleXExpression ) ) (otherlv_20= ',' ( (lv_memberCallArguments_21_0= ruleXExpression ) ) )* ) )?";
+            return "5350:2: ( ( ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> (lv_memberCallArguments_18_0= ruleXShortClosure ) ) | ( ( (lv_memberCallArguments_19_0= ruleXExpression ) ) (otherlv_20= ',' ( (lv_memberCallArguments_21_0= ruleXExpression ) ) )* ) )?";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             TokenStream input = (TokenStream)_input;
@@ -30933,11 +30975,11 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
                         else if ( (LA97_0==24) ) {s = 2;}
 
-                        else if ( (LA97_0==82) && (synpred23_InternalMelange())) {s = 3;}
+                        else if ( (LA97_0==83) && (synpred23_InternalMelange())) {s = 3;}
 
                         else if ( (LA97_0==27) && (synpred23_InternalMelange())) {s = 4;}
 
-                        else if ( ((LA97_0>=RULE_STRING && LA97_0<=RULE_DECIMAL)||LA97_0==16||LA97_0==23||LA97_0==56||LA97_0==62||LA97_0==70||LA97_0==85||LA97_0==96||LA97_0==98||LA97_0==100||(LA97_0>=103 && LA97_0<=105)||(LA97_0>=108 && LA97_0<=120)||LA97_0==122) ) {s = 5;}
+                        else if ( ((LA97_0>=RULE_STRING && LA97_0<=RULE_DECIMAL)||LA97_0==16||LA97_0==23||LA97_0==56||LA97_0==63||LA97_0==71||LA97_0==86||LA97_0==97||LA97_0==99||LA97_0==101||(LA97_0>=104 && LA97_0<=106)||(LA97_0>=109 && LA97_0<=121)||LA97_0==123) ) {s = 5;}
 
                         else if ( (LA97_0==25) ) {s = 35;}
 
@@ -30984,7 +31026,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
         }
     }
     static final String[] dfa_54s = {
-            "\5\2\7\uffff\1\2\2\uffff\2\2\2\uffff\3\2\7\uffff\1\2\14\uffff\1\2\11\uffff\1\2\5\uffff\1\1\1\2\1\uffff\73\2",
+            "\5\2\7\uffff\1\2\2\uffff\2\2\2\uffff\3\2\7\uffff\1\2\14\uffff\1\2\11\uffff\1\2\6\uffff\1\1\1\2\1\uffff\73\2",
             "\1\uffff",
             "",
             "",
@@ -31079,7 +31121,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
             this.transition = dfa_54;
         }
         public String getDescription() {
-            return "5410:3: ( ( ( () '[' ) )=> (lv_memberCallArguments_23_0= ruleXClosure ) )?";
+            return "5429:3: ( ( ( () '[' ) )=> (lv_memberCallArguments_23_0= ruleXClosure ) )?";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             TokenStream input = (TokenStream)_input;
@@ -31110,11 +31152,11 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
     }
     static final String dfa_55s = "\40\uffff";
     static final String dfa_56s = "\1\4\26\uffff\1\0\10\uffff";
-    static final String dfa_57s = "\1\172\26\uffff\1\0\10\uffff";
+    static final String dfa_57s = "\1\173\26\uffff\1\0\10\uffff";
     static final String dfa_58s = "\1\uffff\1\1\1\2\1\3\1\4\1\5\6\uffff\1\6\11\uffff\1\7\1\uffff\1\12\1\13\1\14\1\15\1\16\1\17\1\10\1\11";
     static final String dfa_59s = "\1\0\26\uffff\1\1\10\uffff}>";
     static final String[] dfa_60s = {
-            "\1\5\4\14\7\uffff\1\2\7\uffff\1\35\45\uffff\1\14\7\uffff\1\5\31\uffff\1\14\1\uffff\1\26\1\uffff\1\3\2\uffff\1\27\1\30\1\31\2\uffff\5\5\1\1\4\14\1\32\1\33\1\34\1\uffff\1\4",
+            "\1\5\4\14\7\uffff\1\2\7\uffff\1\35\46\uffff\1\14\7\uffff\1\5\31\uffff\1\14\1\uffff\1\26\1\uffff\1\3\2\uffff\1\27\1\30\1\31\2\uffff\5\5\1\1\4\14\1\32\1\33\1\34\1\uffff\1\4",
             "",
             "",
             "",
@@ -31169,7 +31211,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
             this.transition = dfa_60;
         }
         public String getDescription() {
-            return "5451:1: (this_XConstructorCall_0= ruleXConstructorCall | this_XBlockExpression_1= ruleXBlockExpression | this_XSwitchExpression_2= ruleXSwitchExpression | ( ( ( () 'synchronized' '(' ) )=>this_XSynchronizedExpression_3= ruleXSynchronizedExpression ) | this_XFeatureCall_4= ruleXFeatureCall | this_XLiteral_5= ruleXLiteral | this_XIfExpression_6= ruleXIfExpression | ( ( ( () 'for' '(' ( ( ruleJvmFormalParameter ) ) ':' ) )=>this_XForLoopExpression_7= ruleXForLoopExpression ) | this_XBasicForLoopExpression_8= ruleXBasicForLoopExpression | this_XWhileExpression_9= ruleXWhileExpression | this_XDoWhileExpression_10= ruleXDoWhileExpression | this_XThrowExpression_11= ruleXThrowExpression | this_XReturnExpression_12= ruleXReturnExpression | this_XTryCatchFinallyExpression_13= ruleXTryCatchFinallyExpression | this_XParenthesizedExpression_14= ruleXParenthesizedExpression )";
+            return "5470:1: (this_XConstructorCall_0= ruleXConstructorCall | this_XBlockExpression_1= ruleXBlockExpression | this_XSwitchExpression_2= ruleXSwitchExpression | ( ( ( () 'synchronized' '(' ) )=>this_XSynchronizedExpression_3= ruleXSynchronizedExpression ) | this_XFeatureCall_4= ruleXFeatureCall | this_XLiteral_5= ruleXLiteral | this_XIfExpression_6= ruleXIfExpression | ( ( ( () 'for' '(' ( ( ruleJvmFormalParameter ) ) ':' ) )=>this_XForLoopExpression_7= ruleXForLoopExpression ) | this_XBasicForLoopExpression_8= ruleXBasicForLoopExpression | this_XWhileExpression_9= ruleXWhileExpression | this_XDoWhileExpression_10= ruleXDoWhileExpression | this_XThrowExpression_11= ruleXThrowExpression | this_XReturnExpression_12= ruleXReturnExpression | this_XTryCatchFinallyExpression_13= ruleXTryCatchFinallyExpression | this_XParenthesizedExpression_14= ruleXParenthesizedExpression )";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             TokenStream input = (TokenStream)_input;
@@ -31182,31 +31224,31 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
                         int index101_0 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (LA101_0==113) ) {s = 1;}
+                        if ( (LA101_0==114) ) {s = 1;}
 
                         else if ( (LA101_0==16) ) {s = 2;}
 
-                        else if ( (LA101_0==100) ) {s = 3;}
+                        else if ( (LA101_0==101) ) {s = 3;}
 
-                        else if ( (LA101_0==122) && (synpred25_InternalMelange())) {s = 4;}
+                        else if ( (LA101_0==123) && (synpred25_InternalMelange())) {s = 4;}
 
-                        else if ( (LA101_0==RULE_ID||LA101_0==70||(LA101_0>=108 && LA101_0<=112)) ) {s = 5;}
+                        else if ( (LA101_0==RULE_ID||LA101_0==71||(LA101_0>=109 && LA101_0<=113)) ) {s = 5;}
 
-                        else if ( ((LA101_0>=RULE_STRING && LA101_0<=RULE_DECIMAL)||LA101_0==62||LA101_0==96||(LA101_0>=114 && LA101_0<=117)) ) {s = 12;}
+                        else if ( ((LA101_0>=RULE_STRING && LA101_0<=RULE_DECIMAL)||LA101_0==63||LA101_0==97||(LA101_0>=115 && LA101_0<=118)) ) {s = 12;}
 
-                        else if ( (LA101_0==98) ) {s = 22;}
+                        else if ( (LA101_0==99) ) {s = 22;}
 
-                        else if ( (LA101_0==103) ) {s = 23;}
+                        else if ( (LA101_0==104) ) {s = 23;}
 
-                        else if ( (LA101_0==104) ) {s = 24;}
+                        else if ( (LA101_0==105) ) {s = 24;}
 
-                        else if ( (LA101_0==105) ) {s = 25;}
+                        else if ( (LA101_0==106) ) {s = 25;}
 
-                        else if ( (LA101_0==118) ) {s = 26;}
+                        else if ( (LA101_0==119) ) {s = 26;}
 
-                        else if ( (LA101_0==119) ) {s = 27;}
+                        else if ( (LA101_0==120) ) {s = 27;}
 
-                        else if ( (LA101_0==120) ) {s = 28;}
+                        else if ( (LA101_0==121) ) {s = 28;}
 
                         else if ( (LA101_0==24) ) {s = 29;}
 
@@ -31238,11 +31280,11 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
         }
     }
     static final String dfa_61s = "\1\4\2\0\43\uffff";
-    static final String dfa_62s = "\1\172\2\0\43\uffff";
+    static final String dfa_62s = "\1\173\2\0\43\uffff";
     static final String dfa_63s = "\3\uffff\2\1\1\2\40\uffff";
     static final String dfa_64s = "\1\0\1\1\1\2\43\uffff}>";
     static final String[] dfa_65s = {
-            "\1\1\4\5\7\uffff\1\5\6\uffff\1\5\1\2\2\uffff\1\4\34\uffff\1\5\5\uffff\2\5\6\uffff\1\5\13\uffff\1\3\2\uffff\1\5\12\uffff\1\5\1\uffff\1\5\1\uffff\1\5\2\uffff\22\5\1\uffff\1\5",
+            "\1\1\4\5\7\uffff\1\5\6\uffff\1\5\1\2\2\uffff\1\4\34\uffff\1\5\6\uffff\2\5\6\uffff\1\5\13\uffff\1\3\2\uffff\1\5\12\uffff\1\5\1\uffff\1\5\1\uffff\1\5\2\uffff\22\5\1\uffff\1\5",
             "\1\uffff",
             "\1\uffff",
             "",
@@ -31301,7 +31343,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
             this.transition = dfa_65;
         }
         public String getDescription() {
-            return "5934:3: ( ( ( ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> ( ( ( (lv_declaredFormalParameters_2_0= ruleJvmFormalParameter ) ) (otherlv_3= ',' ( (lv_declaredFormalParameters_4_0= ruleJvmFormalParameter ) ) )* )? ( (lv_explicitSyntax_5_0= '|' ) ) ) )?";
+            return "5953:3: ( ( ( ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> ( ( ( (lv_declaredFormalParameters_2_0= ruleJvmFormalParameter ) ) (otherlv_3= ',' ( (lv_declaredFormalParameters_4_0= ruleJvmFormalParameter ) ) )* )? ( (lv_explicitSyntax_5_0= '|' ) ) ) )?";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             TokenStream input = (TokenStream)_input;
@@ -31318,11 +31360,11 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
                         else if ( (LA110_0==24) ) {s = 2;}
 
-                        else if ( (LA110_0==82) && (synpred29_InternalMelange())) {s = 3;}
+                        else if ( (LA110_0==83) && (synpred29_InternalMelange())) {s = 3;}
 
                         else if ( (LA110_0==27) && (synpred29_InternalMelange())) {s = 4;}
 
-                        else if ( ((LA110_0>=RULE_STRING && LA110_0<=RULE_DECIMAL)||LA110_0==16||LA110_0==23||LA110_0==56||(LA110_0>=62 && LA110_0<=63)||LA110_0==70||LA110_0==85||LA110_0==96||LA110_0==98||LA110_0==100||(LA110_0>=103 && LA110_0<=120)||LA110_0==122) ) {s = 5;}
+                        else if ( ((LA110_0>=RULE_STRING && LA110_0<=RULE_DECIMAL)||LA110_0==16||LA110_0==23||LA110_0==56||(LA110_0>=63 && LA110_0<=64)||LA110_0==71||LA110_0==86||LA110_0==97||LA110_0==99||LA110_0==101||(LA110_0>=104 && LA110_0<=121)||LA110_0==123) ) {s = 5;}
 
                          
                         input.seek(index110_0);
@@ -31368,11 +31410,11 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
     }
     static final String dfa_66s = "\43\uffff";
     static final String dfa_67s = "\1\4\1\0\41\uffff";
-    static final String dfa_68s = "\1\172\1\0\41\uffff";
+    static final String dfa_68s = "\1\173\1\0\41\uffff";
     static final String dfa_69s = "\2\uffff\1\2\37\uffff\1\1";
     static final String dfa_70s = "\1\uffff\1\0\41\uffff}>";
     static final String[] dfa_71s = {
-            "\5\2\7\uffff\1\2\6\uffff\1\2\1\1\37\uffff\1\2\5\uffff\1\2\7\uffff\1\2\13\uffff\1\2\2\uffff\1\2\12\uffff\1\2\1\uffff\1\2\1\uffff\1\2\2\uffff\3\2\2\uffff\15\2\1\uffff\1\2",
+            "\5\2\7\uffff\1\2\6\uffff\1\2\1\1\37\uffff\1\2\6\uffff\1\2\7\uffff\1\2\13\uffff\1\2\2\uffff\1\2\12\uffff\1\2\1\uffff\1\2\1\uffff\1\2\2\uffff\3\2\2\uffff\15\2\1\uffff\1\2",
             "\1\uffff",
             "",
             "",
@@ -31430,7 +31472,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
             this.transition = dfa_71;
         }
         public String getDescription() {
-            return "6358:1: ( ( ( ( ( '(' ( ( ruleJvmFormalParameter ) ) ':' ) )=> (otherlv_2= '(' ( (lv_declaredParam_3_0= ruleJvmFormalParameter ) ) otherlv_4= ':' ) ) ( (lv_switch_5_0= ruleXExpression ) ) otherlv_6= ')' ) | ( ( ( ( ( ( ruleJvmFormalParameter ) ) ':' ) )=> ( ( (lv_declaredParam_7_0= ruleJvmFormalParameter ) ) otherlv_8= ':' ) )? ( (lv_switch_9_0= ruleXExpression ) ) ) )";
+            return "6377:1: ( ( ( ( ( '(' ( ( ruleJvmFormalParameter ) ) ':' ) )=> (otherlv_2= '(' ( (lv_declaredParam_3_0= ruleJvmFormalParameter ) ) otherlv_4= ':' ) ) ( (lv_switch_5_0= ruleXExpression ) ) otherlv_6= ')' ) | ( ( ( ( ( ( ruleJvmFormalParameter ) ) ':' ) )=> ( ( (lv_declaredParam_7_0= ruleJvmFormalParameter ) ) otherlv_8= ':' ) )? ( (lv_switch_9_0= ruleXExpression ) ) ) )";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             TokenStream input = (TokenStream)_input;
@@ -31461,11 +31503,11 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
     }
     static final String dfa_72s = "\42\uffff";
     static final String dfa_73s = "\1\4\2\0\37\uffff";
-    static final String dfa_74s = "\1\172\2\0\37\uffff";
+    static final String dfa_74s = "\1\173\2\0\37\uffff";
     static final String dfa_75s = "\3\uffff\1\1\1\2\35\uffff";
     static final String dfa_76s = "\1\0\1\1\1\2\37\uffff}>";
     static final String[] dfa_77s = {
-            "\1\1\4\4\7\uffff\1\4\6\uffff\1\4\1\2\37\uffff\1\4\5\uffff\1\4\7\uffff\1\4\13\uffff\1\3\2\uffff\1\4\12\uffff\1\4\1\uffff\1\4\1\uffff\1\4\2\uffff\3\4\2\uffff\15\4\1\uffff\1\4",
+            "\1\1\4\4\7\uffff\1\4\6\uffff\1\4\1\2\37\uffff\1\4\6\uffff\1\4\7\uffff\1\4\13\uffff\1\3\2\uffff\1\4\12\uffff\1\4\1\uffff\1\4\1\uffff\1\4\2\uffff\3\4\2\uffff\15\4\1\uffff\1\4",
             "\1\uffff",
             "\1\uffff",
             "",
@@ -31522,7 +31564,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
             this.transition = dfa_77;
         }
         public String getDescription() {
-            return "6413:7: ( ( ( ( ( ruleJvmFormalParameter ) ) ':' ) )=> ( ( (lv_declaredParam_7_0= ruleJvmFormalParameter ) ) otherlv_8= ':' ) )?";
+            return "6432:7: ( ( ( ( ( ruleJvmFormalParameter ) ) ':' ) )=> ( ( (lv_declaredParam_7_0= ruleJvmFormalParameter ) ) otherlv_8= ':' ) )?";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             TokenStream input = (TokenStream)_input;
@@ -31539,9 +31581,9 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
                         else if ( (LA116_0==24) ) {s = 2;}
 
-                        else if ( (LA116_0==82) && (synpred33_InternalMelange())) {s = 3;}
+                        else if ( (LA116_0==83) && (synpred33_InternalMelange())) {s = 3;}
 
-                        else if ( ((LA116_0>=RULE_STRING && LA116_0<=RULE_DECIMAL)||LA116_0==16||LA116_0==23||LA116_0==56||LA116_0==62||LA116_0==70||LA116_0==85||LA116_0==96||LA116_0==98||LA116_0==100||(LA116_0>=103 && LA116_0<=105)||(LA116_0>=108 && LA116_0<=120)||LA116_0==122) ) {s = 4;}
+                        else if ( ((LA116_0>=RULE_STRING && LA116_0<=RULE_DECIMAL)||LA116_0==16||LA116_0==23||LA116_0==56||LA116_0==63||LA116_0==71||LA116_0==86||LA116_0==97||LA116_0==99||LA116_0==101||(LA116_0>=104 && LA116_0<=106)||(LA116_0>=109 && LA116_0<=121)||LA116_0==123) ) {s = 4;}
 
                          
                         input.seek(index116_0);
@@ -31600,7 +31642,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
             this.transition = dfa_47;
         }
         public String getDescription() {
-            return "7470:2: ( ( ( ( '(' ) )=> (lv_explicitOperationCall_7_0= '(' ) ) ( ( ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> (lv_featureCallArguments_8_0= ruleXShortClosure ) ) | ( ( (lv_featureCallArguments_9_0= ruleXExpression ) ) (otherlv_10= ',' ( (lv_featureCallArguments_11_0= ruleXExpression ) ) )* ) )? otherlv_12= ')' )?";
+            return "7489:2: ( ( ( ( '(' ) )=> (lv_explicitOperationCall_7_0= '(' ) ) ( ( ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> (lv_featureCallArguments_8_0= ruleXShortClosure ) ) | ( ( (lv_featureCallArguments_9_0= ruleXExpression ) ) (otherlv_10= ',' ( (lv_featureCallArguments_11_0= ruleXExpression ) ) )* ) )? otherlv_12= ')' )?";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             TokenStream input = (TokenStream)_input;
@@ -31644,7 +31686,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
             this.transition = dfa_53;
         }
         public String getDescription() {
-            return "7491:2: ( ( ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> (lv_featureCallArguments_8_0= ruleXShortClosure ) ) | ( ( (lv_featureCallArguments_9_0= ruleXExpression ) ) (otherlv_10= ',' ( (lv_featureCallArguments_11_0= ruleXExpression ) ) )* ) )?";
+            return "7510:2: ( ( ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> (lv_featureCallArguments_8_0= ruleXShortClosure ) ) | ( ( (lv_featureCallArguments_9_0= ruleXExpression ) ) (otherlv_10= ',' ( (lv_featureCallArguments_11_0= ruleXExpression ) ) )* ) )?";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             TokenStream input = (TokenStream)_input;
@@ -31661,11 +31703,11 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
                         else if ( (LA138_0==24) ) {s = 2;}
 
-                        else if ( (LA138_0==82) && (synpred37_InternalMelange())) {s = 3;}
+                        else if ( (LA138_0==83) && (synpred37_InternalMelange())) {s = 3;}
 
                         else if ( (LA138_0==27) && (synpred37_InternalMelange())) {s = 4;}
 
-                        else if ( ((LA138_0>=RULE_STRING && LA138_0<=RULE_DECIMAL)||LA138_0==16||LA138_0==23||LA138_0==56||LA138_0==62||LA138_0==70||LA138_0==85||LA138_0==96||LA138_0==98||LA138_0==100||(LA138_0>=103 && LA138_0<=105)||(LA138_0>=108 && LA138_0<=120)||LA138_0==122) ) {s = 5;}
+                        else if ( ((LA138_0>=RULE_STRING && LA138_0<=RULE_DECIMAL)||LA138_0==16||LA138_0==23||LA138_0==56||LA138_0==63||LA138_0==71||LA138_0==86||LA138_0==97||LA138_0==99||LA138_0==101||(LA138_0>=104 && LA138_0<=106)||(LA138_0>=109 && LA138_0<=121)||LA138_0==123) ) {s = 5;}
 
                         else if ( (LA138_0==25) ) {s = 35;}
 
@@ -31726,7 +31768,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
             this.transition = dfa_54;
         }
         public String getDescription() {
-            return "7570:3: ( ( ( () '[' ) )=> (lv_featureCallArguments_13_0= ruleXClosure ) )?";
+            return "7589:3: ( ( ( () '[' ) )=> (lv_featureCallArguments_13_0= ruleXClosure ) )?";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             TokenStream input = (TokenStream)_input;
@@ -31756,7 +31798,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
         }
     }
     static final String[] dfa_78s = {
-            "\5\2\7\uffff\1\2\2\uffff\2\2\2\uffff\3\2\7\uffff\1\2\14\uffff\1\2\11\uffff\1\2\5\uffff\2\2\1\uffff\5\2\1\1\65\2",
+            "\5\2\7\uffff\1\2\2\uffff\2\2\2\uffff\3\2\7\uffff\1\2\14\uffff\1\2\11\uffff\1\2\6\uffff\2\2\1\uffff\5\2\1\1\65\2",
             "\1\uffff",
             "",
             "",
@@ -31851,7 +31893,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
             this.transition = dfa_78;
         }
         public String getDescription() {
-            return "7735:2: ( ( ( '<' )=>otherlv_3= '<' ) ( (lv_typeArguments_4_0= ruleJvmArgumentTypeReference ) ) (otherlv_5= ',' ( (lv_typeArguments_6_0= ruleJvmArgumentTypeReference ) ) )* otherlv_7= '>' )?";
+            return "7754:2: ( ( ( '<' )=>otherlv_3= '<' ) ( (lv_typeArguments_4_0= ruleJvmArgumentTypeReference ) ) (otherlv_5= ',' ( (lv_typeArguments_6_0= ruleJvmArgumentTypeReference ) ) )* otherlv_7= '>' )?";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             TokenStream input = (TokenStream)_input;
@@ -31895,7 +31937,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
             this.transition = dfa_47;
         }
         public String getDescription() {
-            return "7784:3: ( ( ( ( '(' ) )=> (lv_explicitConstructorCall_8_0= '(' ) ) ( ( ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> (lv_arguments_9_0= ruleXShortClosure ) ) | ( ( (lv_arguments_10_0= ruleXExpression ) ) (otherlv_11= ',' ( (lv_arguments_12_0= ruleXExpression ) ) )* ) )? otherlv_13= ')' )?";
+            return "7803:3: ( ( ( ( '(' ) )=> (lv_explicitConstructorCall_8_0= '(' ) ) ( ( ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> (lv_arguments_9_0= ruleXShortClosure ) ) | ( ( (lv_arguments_10_0= ruleXExpression ) ) (otherlv_11= ',' ( (lv_arguments_12_0= ruleXExpression ) ) )* ) )? otherlv_13= ')' )?";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             TokenStream input = (TokenStream)_input;
@@ -31939,7 +31981,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
             this.transition = dfa_53;
         }
         public String getDescription() {
-            return "7805:2: ( ( ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> (lv_arguments_9_0= ruleXShortClosure ) ) | ( ( (lv_arguments_10_0= ruleXExpression ) ) (otherlv_11= ',' ( (lv_arguments_12_0= ruleXExpression ) ) )* ) )?";
+            return "7824:2: ( ( ( ( () ( ( ( ruleJvmFormalParameter ) ) ( ',' ( ( ruleJvmFormalParameter ) ) )* )? ( ( '|' ) ) ) )=> (lv_arguments_9_0= ruleXShortClosure ) ) | ( ( (lv_arguments_10_0= ruleXExpression ) ) (otherlv_11= ',' ( (lv_arguments_12_0= ruleXExpression ) ) )* ) )?";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             TokenStream input = (TokenStream)_input;
@@ -31956,11 +31998,11 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
 
                         else if ( (LA146_0==24) ) {s = 2;}
 
-                        else if ( (LA146_0==82) && (synpred41_InternalMelange())) {s = 3;}
+                        else if ( (LA146_0==83) && (synpred41_InternalMelange())) {s = 3;}
 
                         else if ( (LA146_0==27) && (synpred41_InternalMelange())) {s = 4;}
 
-                        else if ( ((LA146_0>=RULE_STRING && LA146_0<=RULE_DECIMAL)||LA146_0==16||LA146_0==23||LA146_0==56||LA146_0==62||LA146_0==70||LA146_0==85||LA146_0==96||LA146_0==98||LA146_0==100||(LA146_0>=103 && LA146_0<=105)||(LA146_0>=108 && LA146_0<=120)||LA146_0==122) ) {s = 5;}
+                        else if ( ((LA146_0>=RULE_STRING && LA146_0<=RULE_DECIMAL)||LA146_0==16||LA146_0==23||LA146_0==56||LA146_0==63||LA146_0==71||LA146_0==86||LA146_0==97||LA146_0==99||LA146_0==101||(LA146_0>=104 && LA146_0<=106)||(LA146_0>=109 && LA146_0<=121)||LA146_0==123) ) {s = 5;}
 
                         else if ( (LA146_0==25) ) {s = 35;}
 
@@ -32021,7 +32063,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
             this.transition = dfa_54;
         }
         public String getDescription() {
-            return "7884:3: ( ( ( () '[' ) )=> (lv_arguments_14_0= ruleXClosure ) )?";
+            return "7903:3: ( ( ( () '[' ) )=> (lv_arguments_14_0= ruleXClosure ) )?";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             TokenStream input = (TokenStream)_input;
@@ -32052,11 +32094,11 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
     }
     static final String dfa_79s = "\1\41\115\uffff";
     static final String dfa_80s = "\1\4\40\0\55\uffff";
-    static final String dfa_81s = "\1\173\40\0\55\uffff";
+    static final String dfa_81s = "\1\174\40\0\55\uffff";
     static final String dfa_82s = "\41\uffff\1\2\53\uffff\1\1";
     static final String dfa_83s = "\1\uffff\1\0\1\1\1\2\1\3\1\4\1\5\1\6\1\7\1\10\1\11\1\12\1\13\1\14\1\15\1\16\1\17\1\20\1\21\1\22\1\23\1\24\1\25\1\26\1\27\1\30\1\31\1\32\1\33\1\34\1\35\1\36\1\37\55\uffff}>";
     static final String[] dfa_84s = {
-            "\1\1\1\27\1\23\1\24\1\25\7\uffff\1\12\2\uffff\2\41\2\uffff\1\6\1\40\1\41\7\uffff\1\41\14\uffff\1\41\11\uffff\1\7\5\uffff\1\20\1\41\1\uffff\5\41\1\15\16\41\1\10\12\41\1\17\1\41\1\31\1\41\1\13\2\41\1\32\1\33\1\34\2\41\1\2\1\3\1\4\1\5\1\16\1\11\1\21\1\22\1\26\1\30\1\35\1\36\1\37\1\41\1\14\1\41",
+            "\1\1\1\27\1\23\1\24\1\25\7\uffff\1\12\2\uffff\2\41\2\uffff\1\6\1\40\1\41\7\uffff\1\41\14\uffff\1\41\11\uffff\1\7\6\uffff\1\20\1\41\1\uffff\5\41\1\15\16\41\1\10\12\41\1\17\1\41\1\31\1\41\1\13\2\41\1\32\1\33\1\34\2\41\1\2\1\3\1\4\1\5\1\16\1\11\1\21\1\22\1\26\1\30\1\35\1\36\1\37\1\41\1\14\1\41",
             "\1\uffff",
             "\1\uffff",
             "\1\uffff",
@@ -32156,7 +32198,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
             this.transition = dfa_84;
         }
         public String getDescription() {
-            return "8224:1: ( ( 'extends' | 'static' | 'import' | 'extension' | '!' | '-' | '+' | 'new' | '{' | 'switch' | 'synchronized' | '<' | 'super' | '#' | '[' | 'false' | 'true' | 'null' | 'typeof' | 'if' | 'for' | 'while' | 'do' | 'throw' | 'return' | 'try' | '(' | RULE_ID | RULE_HEX | RULE_INT | RULE_DECIMAL | RULE_STRING )=> (lv_expression_2_0= ruleXExpression ) )?";
+            return "8243:1: ( ( 'extends' | 'static' | 'import' | 'extension' | '!' | '-' | '+' | 'new' | '{' | 'switch' | 'synchronized' | '<' | 'super' | '#' | '[' | 'false' | 'true' | 'null' | 'typeof' | 'if' | 'for' | 'while' | 'do' | 'throw' | 'return' | 'try' | '(' | RULE_ID | RULE_HEX | RULE_INT | RULE_DECIMAL | RULE_STRING )=> (lv_expression_2_0= ruleXExpression ) )?";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             TokenStream input = (TokenStream)_input;
@@ -32653,11 +32695,11 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
     static final String dfa_85s = "\146\uffff";
     static final String dfa_86s = "\1\2\145\uffff";
     static final String dfa_87s = "\1\4\1\0\144\uffff";
-    static final String dfa_88s = "\1\174\1\0\144\uffff";
+    static final String dfa_88s = "\1\175\1\0\144\uffff";
     static final String dfa_89s = "\2\uffff\1\2\142\uffff\1\1";
     static final String dfa_90s = "\1\uffff\1\0\144\uffff}>";
     static final String[] dfa_91s = {
-            "\5\2\5\uffff\3\2\2\uffff\2\2\2\uffff\4\2\4\uffff\1\2\1\uffff\1\2\2\uffff\2\2\1\uffff\16\2\1\uffff\1\2\1\uffff\1\2\2\uffff\2\2\1\uffff\10\2\1\1\66\2",
+            "\5\2\5\uffff\3\2\2\uffff\2\2\2\uffff\4\2\4\uffff\1\2\1\uffff\1\2\2\uffff\2\2\1\uffff\16\2\1\uffff\1\2\1\uffff\1\2\3\uffff\2\2\1\uffff\10\2\1\1\66\2",
             "\1\uffff",
             "",
             "",
@@ -32783,7 +32825,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
             this.transition = dfa_91;
         }
         public String getDescription() {
-            return "8874:2: ( ( ( '<' )=>otherlv_1= '<' ) ( (lv_arguments_2_0= ruleJvmArgumentTypeReference ) ) (otherlv_3= ',' ( (lv_arguments_4_0= ruleJvmArgumentTypeReference ) ) )* otherlv_5= '>' ( ( ( ( () '.' ) )=> ( () otherlv_7= '.' ) ) ( ( ruleValidID ) ) ( ( ( '<' )=>otherlv_9= '<' ) ( (lv_arguments_10_0= ruleJvmArgumentTypeReference ) ) (otherlv_11= ',' ( (lv_arguments_12_0= ruleJvmArgumentTypeReference ) ) )* otherlv_13= '>' )? )* )?";
+            return "8893:2: ( ( ( '<' )=>otherlv_1= '<' ) ( (lv_arguments_2_0= ruleJvmArgumentTypeReference ) ) (otherlv_3= ',' ( (lv_arguments_4_0= ruleJvmArgumentTypeReference ) ) )* otherlv_5= '>' ( ( ( ( () '.' ) )=> ( () otherlv_7= '.' ) ) ( ( ruleValidID ) ) ( ( ( '<' )=>otherlv_9= '<' ) ( (lv_arguments_10_0= ruleJvmArgumentTypeReference ) ) (otherlv_11= ',' ( (lv_arguments_12_0= ruleJvmArgumentTypeReference ) ) )* otherlv_13= '>' )? )* )?";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             TokenStream input = (TokenStream)_input;
@@ -32827,7 +32869,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
             this.transition = dfa_91;
         }
         public String getDescription() {
-            return "8950:2: ( ( ( '<' )=>otherlv_9= '<' ) ( (lv_arguments_10_0= ruleJvmArgumentTypeReference ) ) (otherlv_11= ',' ( (lv_arguments_12_0= ruleJvmArgumentTypeReference ) ) )* otherlv_13= '>' )?";
+            return "8969:2: ( ( ( '<' )=>otherlv_9= '<' ) ( (lv_arguments_10_0= ruleJvmArgumentTypeReference ) ) (otherlv_11= ',' ( (lv_arguments_12_0= ruleJvmArgumentTypeReference ) ) )* otherlv_13= '>' )?";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             TokenStream input = (TokenStream)_input;
@@ -32858,16 +32900,16 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
     }
     static final String dfa_92s = "\2\uffff\1\4\3\uffff\1\4";
     static final String dfa_93s = "\1\4\1\uffff\1\16\1\4\2\uffff\1\16";
-    static final String dfa_94s = "\1\155\1\uffff\1\156\1\126\2\uffff\1\156";
+    static final String dfa_94s = "\1\156\1\uffff\1\157\1\127\2\uffff\1\157";
     static final String dfa_95s = "\1\uffff\1\1\2\uffff\1\2\1\3\1\uffff";
     static final String[] dfa_96s = {
-            "\1\2\150\uffff\1\1",
+            "\1\2\151\uffff\1\1",
             "",
-            "\2\4\3\uffff\1\4\13\uffff\1\4\4\uffff\2\4\1\uffff\7\4\1\uffff\2\4\1\uffff\3\4\50\uffff\1\3\3\uffff\1\4\14\uffff\1\4",
-            "\1\6\121\uffff\1\5",
+            "\2\4\3\uffff\1\4\13\uffff\1\4\4\uffff\2\4\1\uffff\7\4\1\uffff\2\4\1\uffff\3\4\51\uffff\1\3\3\uffff\1\4\14\uffff\1\4",
+            "\1\6\122\uffff\1\5",
             "",
             "",
-            "\2\4\3\uffff\1\4\13\uffff\1\4\4\uffff\2\4\1\uffff\7\4\1\uffff\2\4\1\uffff\3\4\50\uffff\1\3\3\uffff\1\4\14\uffff\1\4"
+            "\2\4\3\uffff\1\4\13\uffff\1\4\4\uffff\2\4\1\uffff\7\4\1\uffff\2\4\1\uffff\3\4\51\uffff\1\3\3\uffff\1\4\14\uffff\1\4"
     };
     static final short[] dfa_92 = DFA.unpackEncodedString(dfa_92s);
     static final char[] dfa_93 = DFA.unpackEncodedStringToUnsignedChars(dfa_93s);
@@ -32889,7 +32931,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
             this.transition = dfa_96;
         }
         public String getDescription() {
-            return "9453:1: ( ( ( (lv_static_1_0= 'static' ) ) ( (lv_extension_2_0= 'extension' ) )? ( ( ruleQualifiedNameInStaticImport ) ) ( ( (lv_wildcard_4_0= '*' ) ) | ( (lv_memberName_5_0= ruleValidID ) ) ) ) | ( ( ruleQualifiedName ) ) | ( (lv_importedNamespace_7_0= ruleQualifiedNameWithWildcard ) ) )";
+            return "9472:1: ( ( ( (lv_static_1_0= 'static' ) ) ( (lv_extension_2_0= 'extension' ) )? ( ( ruleQualifiedNameInStaticImport ) ) ( ( (lv_wildcard_4_0= '*' ) ) | ( (lv_memberName_5_0= ruleValidID ) ) ) ) | ( ( ruleQualifiedName ) ) | ( (lv_importedNamespace_7_0= ruleQualifiedNameWithWildcard ) ) )";
         }
     }
  
@@ -32897,15 +32939,15 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_1 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_2 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_3 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_4 = new BitSet(new long[]{0x001DBFB08008C002L,0x0000400000000000L});
+    public static final BitSet FOLLOW_4 = new BitSet(new long[]{0x001DBFB08008C002L,0x0000800000000000L});
     public static final BitSet FOLLOW_5 = new BitSet(new long[]{0x001DBFB08008C002L});
-    public static final BitSet FOLLOW_6 = new BitSet(new long[]{0x00001F8080080000L,0x0000000000000001L});
+    public static final BitSet FOLLOW_6 = new BitSet(new long[]{0x00001F8080080000L,0x0000000000000002L});
     public static final BitSet FOLLOW_7 = new BitSet(new long[]{0x0000000000010000L});
-    public static final BitSet FOLLOW_8 = new BitSet(new long[]{0x18420000058A0010L,0x0000000000000001L});
+    public static final BitSet FOLLOW_8 = new BitSet(new long[]{0x30420000058A0010L,0x0000000000000002L});
     public static final BitSet FOLLOW_9 = new BitSet(new long[]{0x0000000000040000L});
     public static final BitSet FOLLOW_10 = new BitSet(new long[]{0x0000000070000010L});
-    public static final BitSet FOLLOW_11 = new BitSet(new long[]{0x1842000005880010L,0x0000000000000001L});
-    public static final BitSet FOLLOW_12 = new BitSet(new long[]{0x1842000004080000L,0x0000000000000001L});
+    public static final BitSet FOLLOW_11 = new BitSet(new long[]{0x3042000005880010L,0x0000000000000002L});
+    public static final BitSet FOLLOW_12 = new BitSet(new long[]{0x3042000004080000L,0x0000000000000002L});
     public static final BitSet FOLLOW_13 = new BitSet(new long[]{0x0000000000100000L});
     public static final BitSet FOLLOW_14 = new BitSet(new long[]{0x0000000000000012L});
     public static final BitSet FOLLOW_15 = new BitSet(new long[]{0x0000000000200002L});
@@ -32913,7 +32955,7 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_17 = new BitSet(new long[]{0x0000000000400002L});
     public static final BitSet FOLLOW_18 = new BitSet(new long[]{0x0000000002000000L});
     public static final BitSet FOLLOW_19 = new BitSet(new long[]{0x0000000008000000L});
-    public static final BitSet FOLLOW_20 = new BitSet(new long[]{0x1842000004000000L,0x0000000000000001L});
+    public static final BitSet FOLLOW_20 = new BitSet(new long[]{0x3042000004000000L,0x0000000000000002L});
     public static final BitSet FOLLOW_21 = new BitSet(new long[]{0x0000000020000000L});
     public static final BitSet FOLLOW_22 = new BitSet(new long[]{0x0000000070080010L});
     public static final BitSet FOLLOW_23 = new BitSet(new long[]{0x0000000040000000L});
@@ -32921,26 +32963,26 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_25 = new BitSet(new long[]{0x0000000E00010000L});
     public static final BitSet FOLLOW_26 = new BitSet(new long[]{0x0000000A00010000L});
     public static final BitSet FOLLOW_27 = new BitSet(new long[]{0x0000000200010000L});
-    public static final BitSet FOLLOW_28 = new BitSet(new long[]{0x18423F9084080002L,0x0000000000000001L});
-    public static final BitSet FOLLOW_29 = new BitSet(new long[]{0x0000000000000000L,0xE000000000000000L});
+    public static final BitSet FOLLOW_28 = new BitSet(new long[]{0x30423F9084080002L,0x0000000000000002L});
+    public static final BitSet FOLLOW_29 = new BitSet(new long[]{0x0000000000000000L,0xC000000000000000L,0x0000000000000001L});
     public static final BitSet FOLLOW_30 = new BitSet(new long[]{0x00003FF080080002L});
     public static final BitSet FOLLOW_31 = new BitSet(new long[]{0x0000000000000020L});
     public static final BitSet FOLLOW_32 = new BitSet(new long[]{0x00003F9080080002L});
-    public static final BitSet FOLLOW_33 = new BitSet(new long[]{0x0000000001000010L,0x0000000000040000L});
+    public static final BitSet FOLLOW_33 = new BitSet(new long[]{0x0000000001000010L,0x0000000000080000L});
     public static final BitSet FOLLOW_34 = new BitSet(new long[]{0x00003F9280080002L});
     public static final BitSet FOLLOW_35 = new BitSet(new long[]{0x00003FB080080002L});
     public static final BitSet FOLLOW_36 = new BitSet(new long[]{0x0000200000080000L});
     public static final BitSet FOLLOW_37 = new BitSet(new long[]{0x0000400000000000L});
     public static final BitSet FOLLOW_38 = new BitSet(new long[]{0x0000000400010000L});
     public static final BitSet FOLLOW_39 = new BitSet(new long[]{0x0002000000000000L});
-    public static final BitSet FOLLOW_40 = new BitSet(new long[]{0x00001F8080080002L,0x0000000000000001L});
-    public static final BitSet FOLLOW_41 = new BitSet(new long[]{0x00001F8280080002L,0x0000000000000001L});
+    public static final BitSet FOLLOW_40 = new BitSet(new long[]{0x00001F8080080002L,0x0000000000000002L});
+    public static final BitSet FOLLOW_41 = new BitSet(new long[]{0x00001F8280080002L,0x0000000000000002L});
     public static final BitSet FOLLOW_42 = new BitSet(new long[]{0x0000002000080000L});
     public static final BitSet FOLLOW_43 = new BitSet(new long[]{0x0000000000080000L});
     public static final BitSet FOLLOW_44 = new BitSet(new long[]{0x0001002000080002L});
     public static final BitSet FOLLOW_45 = new BitSet(new long[]{0x0008000000000000L});
     public static final BitSet FOLLOW_46 = new BitSet(new long[]{0x0000000001000000L});
-    public static final BitSet FOLLOW_47 = new BitSet(new long[]{0x0000000003000010L,0x0000000000040000L});
+    public static final BitSet FOLLOW_47 = new BitSet(new long[]{0x0000000003000010L,0x0000000000080000L});
     public static final BitSet FOLLOW_48 = new BitSet(new long[]{0x0000000202000000L});
     public static final BitSet FOLLOW_49 = new BitSet(new long[]{0x0020000000000000L});
     public static final BitSet FOLLOW_50 = new BitSet(new long[]{0x0000000000080020L});
@@ -32948,82 +32990,83 @@ public class InternalMelangeParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_52 = new BitSet(new long[]{0x0080000000080000L});
     public static final BitSet FOLLOW_53 = new BitSet(new long[]{0x0100000004000010L});
     public static final BitSet FOLLOW_54 = new BitSet(new long[]{0x0000000200080000L});
-    public static final BitSet FOLLOW_55 = new BitSet(new long[]{0x0600000000000002L});
-    public static final BitSet FOLLOW_56 = new BitSet(new long[]{0x0400000200000002L});
-    public static final BitSet FOLLOW_57 = new BitSet(new long[]{0x0200000000000002L});
-    public static final BitSet FOLLOW_58 = new BitSet(new long[]{0x0000000200000002L});
-    public static final BitSet FOLLOW_59 = new BitSet(new long[]{0x0400000000000002L});
-    public static final BitSet FOLLOW_60 = new BitSet(new long[]{0x2000000000000000L});
+    public static final BitSet FOLLOW_55 = new BitSet(new long[]{0x0200000000000000L});
+    public static final BitSet FOLLOW_56 = new BitSet(new long[]{0x0C00000000000002L});
+    public static final BitSet FOLLOW_57 = new BitSet(new long[]{0x0800000200000002L});
+    public static final BitSet FOLLOW_58 = new BitSet(new long[]{0x0400000000000002L});
+    public static final BitSet FOLLOW_59 = new BitSet(new long[]{0x0000000200000002L});
+    public static final BitSet FOLLOW_60 = new BitSet(new long[]{0x0800000000000002L});
     public static final BitSet FOLLOW_61 = new BitSet(new long[]{0x4000000000000000L});
-    public static final BitSet FOLLOW_62 = new BitSet(new long[]{0x8000000200000000L});
-    public static final BitSet FOLLOW_63 = new BitSet(new long[]{0x41000000018101F0L,0x05FFF39500200040L});
-    public static final BitSet FOLLOW_64 = new BitSet(new long[]{0x0000000000000002L,0x00000000000000FEL});
-    public static final BitSet FOLLOW_65 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000040L});
-    public static final BitSet FOLLOW_66 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000180L});
-    public static final BitSet FOLLOW_67 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000100L});
-    public static final BitSet FOLLOW_68 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000200L});
+    public static final BitSet FOLLOW_62 = new BitSet(new long[]{0x8000000000000000L});
+    public static final BitSet FOLLOW_63 = new BitSet(new long[]{0x0000000200000000L,0x0000000000000001L});
+    public static final BitSet FOLLOW_64 = new BitSet(new long[]{0x81000000018101F0L,0x0BFFE72A00400080L});
+    public static final BitSet FOLLOW_65 = new BitSet(new long[]{0x0000000000000002L,0x00000000000001FCL});
+    public static final BitSet FOLLOW_66 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000080L});
+    public static final BitSet FOLLOW_67 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000300L});
+    public static final BitSet FOLLOW_68 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000200L});
     public static final BitSet FOLLOW_69 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000400L});
-    public static final BitSet FOLLOW_70 = new BitSet(new long[]{0x0000000000000002L,0x0000000000007800L});
-    public static final BitSet FOLLOW_71 = new BitSet(new long[]{0x0000000000000002L,0x00000000000081C0L});
-    public static final BitSet FOLLOW_72 = new BitSet(new long[]{0x0000000000100002L,0x00000000001F00C0L});
-    public static final BitSet FOLLOW_73 = new BitSet(new long[]{0x0000000000000000L,0x0000000000020000L});
-    public static final BitSet FOLLOW_74 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000080L});
-    public static final BitSet FOLLOW_75 = new BitSet(new long[]{0x0000000000000000L,0x0000000000040040L});
-    public static final BitSet FOLLOW_76 = new BitSet(new long[]{0x0100000000000002L,0x0000000000200000L});
-    public static final BitSet FOLLOW_77 = new BitSet(new long[]{0x0000000000000002L,0x0000000003C00000L});
-    public static final BitSet FOLLOW_78 = new BitSet(new long[]{0x0000000000000002L,0x0000000004000000L});
-    public static final BitSet FOLLOW_79 = new BitSet(new long[]{0x0000000000000002L,0x0000000018000000L});
-    public static final BitSet FOLLOW_80 = new BitSet(new long[]{0x0000000000000002L,0x00000000E0000000L});
-    public static final BitSet FOLLOW_81 = new BitSet(new long[]{0x0000000000000010L,0x0000F00000000000L});
-    public static final BitSet FOLLOW_82 = new BitSet(new long[]{0x0000000000000010L,0x0001F00000000040L});
-    public static final BitSet FOLLOW_83 = new BitSet(new long[]{0x0000000011000010L,0x0000000000040000L});
-    public static final BitSet FOLLOW_84 = new BitSet(new long[]{0x0000000200000000L,0x0000000000000080L});
-    public static final BitSet FOLLOW_85 = new BitSet(new long[]{0x4000000001000002L,0x00000000E0000000L});
-    public static final BitSet FOLLOW_86 = new BitSet(new long[]{0x410000000B8101F0L,0x05FFF39500240040L});
-    public static final BitSet FOLLOW_87 = new BitSet(new long[]{0x4000000000000002L,0x00000000E0000000L});
-    public static final BitSet FOLLOW_88 = new BitSet(new long[]{0x41000000018901F0L,0x05FFF39500200040L});
-    public static final BitSet FOLLOW_89 = new BitSet(new long[]{0xC1000000018101F0L,0x05FFF39500200040L});
-    public static final BitSet FOLLOW_90 = new BitSet(new long[]{0xC1000000098101F0L,0x05FFFF9500240040L});
-    public static final BitSet FOLLOW_91 = new BitSet(new long[]{0x0000000208000000L});
-    public static final BitSet FOLLOW_92 = new BitSet(new long[]{0xC1000000018101F0L,0x05FFFF9500200040L});
-    public static final BitSet FOLLOW_93 = new BitSet(new long[]{0x8000000000000000L});
-    public static final BitSet FOLLOW_94 = new BitSet(new long[]{0x41000000018101F2L,0x05FFFF9700200040L});
-    public static final BitSet FOLLOW_95 = new BitSet(new long[]{0x41000000018101F2L,0x05FFFF9500200040L});
-    public static final BitSet FOLLOW_96 = new BitSet(new long[]{0x0000000000000002L,0x0000000800000000L});
-    public static final BitSet FOLLOW_97 = new BitSet(new long[]{0x41000000018101F0L,0x05FFF39500240040L});
-    public static final BitSet FOLLOW_98 = new BitSet(new long[]{0x0000400201080010L,0x0000006000040000L});
-    public static final BitSet FOLLOW_99 = new BitSet(new long[]{0x0000400200000000L,0x0000004000000000L});
-    public static final BitSet FOLLOW_100 = new BitSet(new long[]{0x0000400200000000L});
-    public static final BitSet FOLLOW_101 = new BitSet(new long[]{0x41000000018101F0L,0x05FFFF9700200040L});
-    public static final BitSet FOLLOW_102 = new BitSet(new long[]{0x0000000200000000L,0x0000000200000000L});
-    public static final BitSet FOLLOW_103 = new BitSet(new long[]{0x41000000018101F0L,0x05FFFF9500200040L});
-    public static final BitSet FOLLOW_104 = new BitSet(new long[]{0x41000000018101F0L,0x05FFF39700200040L});
-    public static final BitSet FOLLOW_105 = new BitSet(new long[]{0x0000000000000000L,0x0000000200000000L});
-    public static final BitSet FOLLOW_106 = new BitSet(new long[]{0x41000000038101F0L,0x05FFF39500200040L});
-    public static final BitSet FOLLOW_107 = new BitSet(new long[]{0x0000000000000000L,0x0000010000000000L});
-    public static final BitSet FOLLOW_108 = new BitSet(new long[]{0x41000000018901F0L,0x05FFFF9500200040L});
-    public static final BitSet FOLLOW_109 = new BitSet(new long[]{0x41000000018901F0L,0x05FFFF9700200040L});
-    public static final BitSet FOLLOW_110 = new BitSet(new long[]{0x0000000000040002L});
-    public static final BitSet FOLLOW_111 = new BitSet(new long[]{0x4000000001000002L});
-    public static final BitSet FOLLOW_112 = new BitSet(new long[]{0x4000000000000002L});
-    public static final BitSet FOLLOW_113 = new BitSet(new long[]{0x4000000001000002L,0x0000000000000040L});
-    public static final BitSet FOLLOW_114 = new BitSet(new long[]{0x4000000002000000L});
-    public static final BitSet FOLLOW_115 = new BitSet(new long[]{0x41000000018101F2L,0x05FFF39500200040L});
-    public static final BitSet FOLLOW_116 = new BitSet(new long[]{0x0000000000000000L,0x0A00000000000000L});
-    public static final BitSet FOLLOW_117 = new BitSet(new long[]{0x0000000000000002L,0x0A00000000000000L});
-    public static final BitSet FOLLOW_118 = new BitSet(new long[]{0x0000000000000002L,0x0000000020000000L});
-    public static final BitSet FOLLOW_119 = new BitSet(new long[]{0x0000000000000180L});
-    public static final BitSet FOLLOW_120 = new BitSet(new long[]{0x0000000000000000L,0x0000000000040000L});
-    public static final BitSet FOLLOW_121 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000040L});
-    public static final BitSet FOLLOW_122 = new BitSet(new long[]{0x0000000000000002L,0x0000000020000040L});
-    public static final BitSet FOLLOW_123 = new BitSet(new long[]{0x0000000000000002L,0x0001100000000000L});
-    public static final BitSet FOLLOW_124 = new BitSet(new long[]{0x0000000000000002L,0x1000000000000000L});
-    public static final BitSet FOLLOW_125 = new BitSet(new long[]{0x0000000000000000L,0x0000000020000000L});
-    public static final BitSet FOLLOW_126 = new BitSet(new long[]{0x0000000000000000L,0x0000000000400000L});
-    public static final BitSet FOLLOW_127 = new BitSet(new long[]{0x0000000000000002L,0x0000400000000000L});
-    public static final BitSet FOLLOW_128 = new BitSet(new long[]{0x0000000000000010L,0x0000200000000000L});
-    public static final BitSet FOLLOW_129 = new BitSet(new long[]{0x0000000000000010L,0x0000800000000000L});
-    public static final BitSet FOLLOW_130 = new BitSet(new long[]{0x0000000000000010L,0x0000000000400000L});
-    public static final BitSet FOLLOW_131 = new BitSet(new long[]{0x0000000000000002L,0x0000000200000000L});
+    public static final BitSet FOLLOW_70 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000800L});
+    public static final BitSet FOLLOW_71 = new BitSet(new long[]{0x0000000000000002L,0x000000000000F000L});
+    public static final BitSet FOLLOW_72 = new BitSet(new long[]{0x0000000000000002L,0x0000000000010380L});
+    public static final BitSet FOLLOW_73 = new BitSet(new long[]{0x0000000000100002L,0x00000000003E0180L});
+    public static final BitSet FOLLOW_74 = new BitSet(new long[]{0x0000000000000000L,0x0000000000040000L});
+    public static final BitSet FOLLOW_75 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000100L});
+    public static final BitSet FOLLOW_76 = new BitSet(new long[]{0x0000000000000000L,0x0000000000080080L});
+    public static final BitSet FOLLOW_77 = new BitSet(new long[]{0x0100000000000002L,0x0000000000400000L});
+    public static final BitSet FOLLOW_78 = new BitSet(new long[]{0x0000000000000002L,0x0000000007800000L});
+    public static final BitSet FOLLOW_79 = new BitSet(new long[]{0x0000000000000002L,0x0000000008000000L});
+    public static final BitSet FOLLOW_80 = new BitSet(new long[]{0x0000000000000002L,0x0000000030000000L});
+    public static final BitSet FOLLOW_81 = new BitSet(new long[]{0x0000000000000002L,0x00000001C0000000L});
+    public static final BitSet FOLLOW_82 = new BitSet(new long[]{0x0000000000000010L,0x0001E00000000000L});
+    public static final BitSet FOLLOW_83 = new BitSet(new long[]{0x0000000000000010L,0x0003E00000000080L});
+    public static final BitSet FOLLOW_84 = new BitSet(new long[]{0x0000000011000010L,0x0000000000080000L});
+    public static final BitSet FOLLOW_85 = new BitSet(new long[]{0x0000000200000000L,0x0000000000000100L});
+    public static final BitSet FOLLOW_86 = new BitSet(new long[]{0x8000000001000002L,0x00000001C0000000L});
+    public static final BitSet FOLLOW_87 = new BitSet(new long[]{0x810000000B8101F0L,0x0BFFE72A00480080L});
+    public static final BitSet FOLLOW_88 = new BitSet(new long[]{0x8000000000000002L,0x00000001C0000000L});
+    public static final BitSet FOLLOW_89 = new BitSet(new long[]{0x81000000018901F0L,0x0BFFE72A00400080L});
+    public static final BitSet FOLLOW_90 = new BitSet(new long[]{0x81000000018101F0L,0x0BFFE72A00400081L});
+    public static final BitSet FOLLOW_91 = new BitSet(new long[]{0x81000000098101F0L,0x0BFFFF2A00480081L});
+    public static final BitSet FOLLOW_92 = new BitSet(new long[]{0x0000000208000000L});
+    public static final BitSet FOLLOW_93 = new BitSet(new long[]{0x81000000018101F0L,0x0BFFFF2A00400081L});
+    public static final BitSet FOLLOW_94 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
+    public static final BitSet FOLLOW_95 = new BitSet(new long[]{0x81000000018101F2L,0x0BFFFF2E00400080L});
+    public static final BitSet FOLLOW_96 = new BitSet(new long[]{0x81000000018101F2L,0x0BFFFF2A00400080L});
+    public static final BitSet FOLLOW_97 = new BitSet(new long[]{0x0000000000000002L,0x0000001000000000L});
+    public static final BitSet FOLLOW_98 = new BitSet(new long[]{0x81000000018101F0L,0x0BFFE72A00480080L});
+    public static final BitSet FOLLOW_99 = new BitSet(new long[]{0x0000400201080010L,0x000000C000080000L});
+    public static final BitSet FOLLOW_100 = new BitSet(new long[]{0x0000400200000000L,0x0000008000000000L});
+    public static final BitSet FOLLOW_101 = new BitSet(new long[]{0x0000400200000000L});
+    public static final BitSet FOLLOW_102 = new BitSet(new long[]{0x81000000018101F0L,0x0BFFFF2E00400080L});
+    public static final BitSet FOLLOW_103 = new BitSet(new long[]{0x0000000200000000L,0x0000000400000000L});
+    public static final BitSet FOLLOW_104 = new BitSet(new long[]{0x81000000018101F0L,0x0BFFFF2A00400080L});
+    public static final BitSet FOLLOW_105 = new BitSet(new long[]{0x81000000018101F0L,0x0BFFE72E00400080L});
+    public static final BitSet FOLLOW_106 = new BitSet(new long[]{0x0000000000000000L,0x0000000400000000L});
+    public static final BitSet FOLLOW_107 = new BitSet(new long[]{0x81000000038101F0L,0x0BFFE72A00400080L});
+    public static final BitSet FOLLOW_108 = new BitSet(new long[]{0x0000000000000000L,0x0000020000000000L});
+    public static final BitSet FOLLOW_109 = new BitSet(new long[]{0x81000000018901F0L,0x0BFFFF2A00400080L});
+    public static final BitSet FOLLOW_110 = new BitSet(new long[]{0x81000000018901F0L,0x0BFFFF2E00400080L});
+    public static final BitSet FOLLOW_111 = new BitSet(new long[]{0x0000000000040002L});
+    public static final BitSet FOLLOW_112 = new BitSet(new long[]{0x8000000001000002L});
+    public static final BitSet FOLLOW_113 = new BitSet(new long[]{0x8000000000000002L});
+    public static final BitSet FOLLOW_114 = new BitSet(new long[]{0x8000000001000002L,0x0000000000000080L});
+    public static final BitSet FOLLOW_115 = new BitSet(new long[]{0x8000000002000000L});
+    public static final BitSet FOLLOW_116 = new BitSet(new long[]{0x81000000018101F2L,0x0BFFE72A00400080L});
+    public static final BitSet FOLLOW_117 = new BitSet(new long[]{0x0000000000000000L,0x1400000000000000L});
+    public static final BitSet FOLLOW_118 = new BitSet(new long[]{0x0000000000000002L,0x1400000000000000L});
+    public static final BitSet FOLLOW_119 = new BitSet(new long[]{0x0000000000000002L,0x0000000040000000L});
+    public static final BitSet FOLLOW_120 = new BitSet(new long[]{0x0000000000000180L});
+    public static final BitSet FOLLOW_121 = new BitSet(new long[]{0x0000000000000000L,0x0000000000080000L});
+    public static final BitSet FOLLOW_122 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000080L});
+    public static final BitSet FOLLOW_123 = new BitSet(new long[]{0x0000000000000002L,0x0000000040000080L});
+    public static final BitSet FOLLOW_124 = new BitSet(new long[]{0x0000000000000002L,0x0002200000000000L});
+    public static final BitSet FOLLOW_125 = new BitSet(new long[]{0x0000000000000002L,0x2000000000000000L});
+    public static final BitSet FOLLOW_126 = new BitSet(new long[]{0x0000000000000000L,0x0000000040000000L});
+    public static final BitSet FOLLOW_127 = new BitSet(new long[]{0x0000000000000000L,0x0000000000800000L});
+    public static final BitSet FOLLOW_128 = new BitSet(new long[]{0x0000000000000002L,0x0000800000000000L});
+    public static final BitSet FOLLOW_129 = new BitSet(new long[]{0x0000000000000010L,0x0000400000000000L});
+    public static final BitSet FOLLOW_130 = new BitSet(new long[]{0x0000000000000010L,0x0001000000000000L});
+    public static final BitSet FOLLOW_131 = new BitSet(new long[]{0x0000000000000010L,0x0000000000800000L});
+    public static final BitSet FOLLOW_132 = new BitSet(new long[]{0x0000000000000002L,0x0000000400000000L});
 
 }

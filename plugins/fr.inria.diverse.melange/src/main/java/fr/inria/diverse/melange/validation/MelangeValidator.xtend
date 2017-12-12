@@ -525,7 +525,6 @@ class MelangeValidator extends AbstractMelangeValidator {
 					}
 				]
 
-//			conf.propagate = true
 				if (conf.number == 0) {
 					error(
 						'''This configuration is invalid''',
@@ -552,11 +551,7 @@ class MelangeValidator extends AbstractMelangeValidator {
 						MelangePackage.Literals.REUSE__LANGUAGECONCERN,
 						MelangeValidationConstants.REUSE_INCOMPLETE_CONFIGURATION
 					)
-				} else {
-					val solutions = conf.getSolutions(Long.valueOf(conf.number()).intValue());
-					println('''OK, solution = «solutions»''')
 				}
-
 			} catch (SelectionNotPossibleException e) {
 				error(
 						'''This configuration is invalid''',
