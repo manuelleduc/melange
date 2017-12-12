@@ -13,6 +13,7 @@ package fr.inria.diverse.melange.validation
 import com.google.inject.Inject
 import de.ovgu.featureide.fm.core.configuration.Configuration
 import de.ovgu.featureide.fm.core.configuration.Selection
+import de.ovgu.featureide.fm.core.configuration.SelectionNotPossibleException
 import fr.inria.diverse.melange.ast.AspectExtensions
 import fr.inria.diverse.melange.ast.LanguageExtensions
 import fr.inria.diverse.melange.ast.ModelingElementExtensions
@@ -75,7 +76,7 @@ class MelangeValidator extends AbstractMelangeValidator {
 			else if (e.eContainer.eContainer instanceof ModelTypingSpace)
 				e.eContainer.eContainer
 
-		if ((root as ModelTypingSpace).elements.filter(NamedElement).exists [ e_ |
+		if (root !== null && (root as ModelTypingSpace).elements.filter(NamedElement).exists [ e_ |
 			e_ != e && e_.name == e.name
 		])
 			error(
@@ -196,7 +197,7 @@ class MelangeValidator extends AbstractMelangeValidator {
 	def void checkImportIsValid(Import i) {
 		try {
 			i.validateImportEcore
-			
+
 			// TODO: we do not deal with syntax declaration in Language Concerns
 			if (i.eContainer instanceof Language) {
 				val lang = i.eContainer as Language
@@ -468,7 +469,7 @@ class MelangeValidator extends AbstractMelangeValidator {
 			}
 		}
 	}
-	
+
 	@Check
 	def void languageDoesNotHaveTaggedElements(TaggedReuseFeature taggedReuseFeature) {
 
@@ -484,7 +485,7 @@ class MelangeValidator extends AbstractMelangeValidator {
 			)
 		}
 	}
-	
+
 	@Check
 	def void taggedElementIsUsed(TaggedElement taggedElement) {
 		// ignoring the tagged elements with no name (aka plain old operators).
@@ -502,35 +503,69 @@ class MelangeValidator extends AbstractMelangeValidator {
 			}
 		}
 	}
-	
+
 	@Check
 	def void validateVMConfiguration(Reuse reuse) {
-		val fm = fie.buildFeatureModel(reuse.languageconcern.vm)
-		val conf = new Configuration(fm)
+		// we do not deal with the partial feature configuration of the concerns
+		if (mmu.findLanguage(reuse) instanceof Language) {
+			val fm = fie.buildFeatureModel(reuse.languageconcern.vm)
 
-		reuse.features.forEach [
-			if (it instanceof ReferenceReuseFeature)
-				conf.setManual(it.ref.name, Selection.SELECTED)
-		]
+			val conf = new Configuration(fm)
 
-		if (conf.number == 0) {
-			error(
-				'''This configuration is invalid''',
-				reuse,
-				MelangePackage.Literals.REUSE__LANGUAGECONCERN,
-				MelangeValidationConstants.REUSE_INVALID_CONFIGURATION
-			)
+			try {
+				conf.setManual(reuse.languageconcern.vm.name, Selection.SELECTED)
+
+				reuse.features.forEach [
+					if (it instanceof ReferenceReuseFeature) {
+						if (it.unselected)
+							conf.setManual(it.ref.name, Selection.UNSELECTED)
+						else
+							conf.setManual(it.ref.name, Selection.SELECTED)
+
+					}
+				]
+
+//			conf.propagate = true
+				if (conf.number == 0) {
+					error(
+						'''This configuration is invalid''',
+						reuse,
+						MelangePackage.Literals.REUSE__LANGUAGECONCERN,
+						MelangeValidationConstants.REUSE_INVALID_CONFIGURATION
+					)
+				}
+
+				if (conf.number > 1) {
+
+					val unconfigured = conf.getFeatures.filter[it.selection == Selection.UNDEFINED]
+					val solutions = conf.getSolutions(Long.valueOf(conf.number()).intValue());
+
+					warning(
+						'''
+							The configuration is not complete («FOR u : unconfigured SEPARATOR ', '»«u.name» («u.selection»)«ENDFOR»)
+							Solutions:
+							«FOR solution : solutions»
+								«solution»
+							«ENDFOR»
+						''',
+						reuse,
+						MelangePackage.Literals.REUSE__LANGUAGECONCERN,
+						MelangeValidationConstants.REUSE_INCOMPLETE_CONFIGURATION
+					)
+				} else {
+					val solutions = conf.getSolutions(Long.valueOf(conf.number()).intValue());
+					println('''OK, solution = «solutions»''')
+				}
+
+			} catch (SelectionNotPossibleException e) {
+				error(
+						'''This configuration is invalid''',
+						reuse,
+						MelangePackage.Literals.REUSE__LANGUAGECONCERN,
+						MelangeValidationConstants.REUSE_INVALID_CONFIGURATION
+					)
+			}
 		}
-		
-		if (conf.number > 1) {
-			warning(
-				'''The configuration is not complete''',
-				reuse,
-				MelangePackage.Literals.REUSE__LANGUAGECONCERN,
-				MelangeValidationConstants.REUSE_INCOMPLETE_CONFIGURATION
-			)
-		}
-
 	}
-	
+
 }

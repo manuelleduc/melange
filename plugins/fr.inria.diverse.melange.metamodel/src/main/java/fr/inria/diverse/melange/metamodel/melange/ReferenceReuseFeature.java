@@ -21,6 +21,7 @@ package fr.inria.diverse.melange.metamodel.melange;
  * </p>
  * <ul>
  *   <li>{@link fr.inria.diverse.melange.metamodel.melange.ReferenceReuseFeature#getRef <em>Ref</em>}</li>
+ *   <li>{@link fr.inria.diverse.melange.metamodel.melange.ReferenceReuseFeature#isUnselected <em>Unselected</em>}</li>
  * </ul>
  *
  * @see fr.inria.diverse.melange.metamodel.melange.MelangePackage#getReferenceReuseFeature()
@@ -53,5 +54,31 @@ public interface ReferenceReuseFeature extends ReuseFeature {
 	 * @generated
 	 */
 	void setRef(Variability value);
+
+	/**
+	 * Returns the value of the '<em><b>Unselected</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Unselected</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Unselected</em>' attribute.
+	 * @see #setUnselected(boolean)
+	 * @see fr.inria.diverse.melange.metamodel.melange.MelangePackage#getReferenceReuseFeature_Unselected()
+	 * @model
+	 * @generated
+	 */
+	boolean isUnselected();
+
+	/**
+	 * Sets the value of the '{@link fr.inria.diverse.melange.metamodel.melange.ReferenceReuseFeature#isUnselected <em>Unselected</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Unselected</em>' attribute.
+	 * @see #isUnselected()
+	 * @generated
+	 */
+	void setUnselected(boolean value);
 
 } // ReferenceReuseFeature

@@ -1543,6 +1543,15 @@ public class MelangePackageImpl extends EPackageImpl implements MelangePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getReferenceReuseFeature_Unselected() {
+		return (EAttribute)referenceReuseFeatureEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getTaggedReuseFeature() {
 		return taggedReuseFeatureEClass;
 	}
@@ -1762,6 +1771,7 @@ public class MelangePackageImpl extends EPackageImpl implements MelangePackage {
 
 		referenceReuseFeatureEClass = createEClass(REFERENCE_REUSE_FEATURE);
 		createEReference(referenceReuseFeatureEClass, REFERENCE_REUSE_FEATURE__REF);
+		createEAttribute(referenceReuseFeatureEClass, REFERENCE_REUSE_FEATURE__UNSELECTED);
 
 		taggedReuseFeatureEClass = createEClass(TAGGED_REUSE_FEATURE);
 
@@ -2000,6 +2010,7 @@ public class MelangePackageImpl extends EPackageImpl implements MelangePackage {
 
 		initEClass(referenceReuseFeatureEClass, ReferenceReuseFeature.class, "ReferenceReuseFeature", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getReferenceReuseFeature_Ref(), this.getVariability(), null, "ref", null, 1, 1, ReferenceReuseFeature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getReferenceReuseFeature_Unselected(), theEcorePackage.getEBoolean(), "unselected", null, 0, 1, ReferenceReuseFeature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(taggedReuseFeatureEClass, TaggedReuseFeature.class, "TaggedReuseFeature", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

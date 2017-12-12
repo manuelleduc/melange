@@ -176,7 +176,7 @@ Reuse:
 ;
 
 ReuseFeature:
-	{ReferenceReuseFeature} ref=[Variability|QualifiedName] |
+	{ReferenceReuseFeature} (unselected?='-')? ref=[Variability|QualifiedName] |
 	{TaggedReuseFeature} '$' name=ID
 ;
 

@@ -21,66 +21,66 @@ class FeatureIDEUtil {
 
 		this.configureFeatures(mapFeatures, fm, vm)
 
+		val root = mapFeatures.get(vm.name).structure
+		root.mandatory = true
+		root.abstract = true
+
 		fm
 
 	}
 
 	private def dispatch Map<String, de.ovgu.featureide.fm.core.base.impl.Feature> initializeFeatures(
-		DefaultFeatureModelFactory factory, IFeatureModel fm, boolean isRoot, Feature feature) {
-		val f = factory.createFeature(fm, feature.name)
-		if(isRoot) fm.structure.root = f.structure else fm.addFeature(f)
-		newHashMap(feature.name -> f)
+		DefaultFeatureModelFactory factory, IFeatureModel fm, boolean isRoot, Feature mFeature) {
+		val feature = factory.createFeature(fm, mFeature.name)
+		if(isRoot) fm.structure.root = feature.structure
+		fm.addFeature(feature)
+		newHashMap(mFeature.name -> feature)
 	}
 
 	private def dispatch Map<String, de.ovgu.featureide.fm.core.base.impl.Feature> initializeFeatures(
-		DefaultFeatureModelFactory factory, IFeatureModel fm, boolean isRoot, OneOf feature) {
-		val f = factory.createFeature(fm, feature.name)
-		if(isRoot) fm.structure.root = f.structure else fm.addFeature(f)
-		val maps = feature.children.map[this.initializeFeatures(factory, fm, false, it)]
-		val ret = newHashMap(feature.name -> f)
+		DefaultFeatureModelFactory factory, IFeatureModel fm, boolean isRoot, OneOf oneOf) {
+		val feature = factory.createFeature(fm, oneOf.name)
+		if(isRoot) fm.structure.root = feature.structure
+		fm.addFeature(feature)
+		val maps = oneOf.children.map[this.initializeFeatures(factory, fm, false, it)]
+		val ret = newHashMap(oneOf.name -> feature)
 		maps.forEach[ret.putAll(it)]
 		ret
 	}
 
 	private def dispatch Map<String, de.ovgu.featureide.fm.core.base.impl.Feature> initializeFeatures(
-		DefaultFeatureModelFactory factory, IFeatureModel fm, boolean isRoot, SomeOf feature) {
-		val f = factory.createFeature(fm, feature.name)
-		if(isRoot) fm.structure.root = f.structure else fm.addFeature(f)
-		val maps = feature.children.map[this.initializeFeatures(factory, fm, false, it)]
-		val ret = newHashMap(feature.name -> f)
+		DefaultFeatureModelFactory factory, IFeatureModel fm, boolean isRoot, SomeOf someOf) {
+		val feature = factory.createFeature(fm, someOf.name)
+		if(isRoot) fm.structure.root = feature.structure
+		fm.addFeature(feature)
+		val maps = someOf.children.map[this.initializeFeatures(factory, fm, false, it)]
+		val ret = newHashMap(someOf.name -> feature)
 		maps.forEach[ret.putAll(it)]
 		ret
 	}
 
 	private def dispatch void configureFeatures(Map<String, de.ovgu.featureide.fm.core.base.impl.Feature> mapFeatures,
-		IFeatureModel fm, Feature feature) {
-		val f = mapFeatures.get(feature.name)
-		f.structure.mandatory = !feature.isOptional
+		IFeatureModel fm, Feature mFeature) {
+		val feature = mapFeatures.get(mFeature.name)
+		feature.structure.mandatory = !mFeature.isOptional
 	}
 
 	private def dispatch void configureFeatures(Map<String, de.ovgu.featureide.fm.core.base.impl.Feature> mapFeatures,
 		IFeatureModel fm, OneOf oneOf) {
-		val f = mapFeatures.get(oneOf.name)
-		oneOf.children.forEach [
-			f.structure.addChild(mapFeatures.get(it.name).structure)
-		]
-
-		f.structure.mandatory = !oneOf.isOptional
-		// we first explictly attach the sub features to the parents before configuring them
+		val feature = mapFeatures.get(oneOf.name)
+		feature.structure.setAlternative
+		feature.structure.mandatory = !oneOf.isOptional
+		oneOf.children.forEach[feature.structure.addChild(mapFeatures.get(it.name).structure)]
 		oneOf.children.forEach[configureFeatures(mapFeatures, fm, it)]
-		f.structure.setAlternative
 	}
 
 	private def dispatch void configureFeatures(Map<String, de.ovgu.featureide.fm.core.base.impl.Feature> mapFeatures,
 		IFeatureModel fm, SomeOf someOf) {
-		val f = mapFeatures.get(someOf.name)
-		someOf.children.forEach [
-			f.structure.addChild(mapFeatures.get(it.name).structure)
-		]
-		f.structure.mandatory = !someOf.isOptional
-		someOf.children.forEach [
-			configureFeatures(mapFeatures, fm, it)
-		]
+		val feature = mapFeatures.get(someOf.name)
+		feature.structure.setAnd
+		feature.structure.mandatory = !someOf.isOptional
+		someOf.children.forEach[feature.structure.addChild(mapFeatures.get(it.name).structure)]
+		someOf.children.forEach[configureFeatures(mapFeatures, fm, it)]
 
 	}
 }

@@ -2519,13 +2519,22 @@ public interface MelangePackage extends EPackage {
 	int REFERENCE_REUSE_FEATURE__REF = REUSE_FEATURE_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Unselected</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REFERENCE_REUSE_FEATURE__UNSELECTED = REUSE_FEATURE_FEATURE_COUNT + 1;
+
+	/**
 	 * The number of structural features of the '<em>Reference Reuse Feature</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int REFERENCE_REUSE_FEATURE_FEATURE_COUNT = REUSE_FEATURE_FEATURE_COUNT + 1;
+	int REFERENCE_REUSE_FEATURE_FEATURE_COUNT = REUSE_FEATURE_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Reference Reuse Feature</em>' class.
@@ -3876,6 +3885,17 @@ public interface MelangePackage extends EPackage {
 	EReference getReferenceReuseFeature_Ref();
 
 	/**
+	 * Returns the meta object for the attribute '{@link fr.inria.diverse.melange.metamodel.melange.ReferenceReuseFeature#isUnselected <em>Unselected</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Unselected</em>'.
+	 * @see fr.inria.diverse.melange.metamodel.melange.ReferenceReuseFeature#isUnselected()
+	 * @see #getReferenceReuseFeature()
+	 * @generated
+	 */
+	EAttribute getReferenceReuseFeature_Unselected();
+
+	/**
 	 * Returns the meta object for class '{@link fr.inria.diverse.melange.metamodel.melange.TaggedReuseFeature <em>Tagged Reuse Feature</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4986,6 +5006,14 @@ public interface MelangePackage extends EPackage {
 		 * @generated
 		 */
 		EReference REFERENCE_REUSE_FEATURE__REF = eINSTANCE.getReferenceReuseFeature_Ref();
+
+		/**
+		 * The meta object literal for the '<em><b>Unselected</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute REFERENCE_REUSE_FEATURE__UNSELECTED = eINSTANCE.getReferenceReuseFeature_Unselected();
 
 		/**
 		 * The meta object literal for the '{@link fr.inria.diverse.melange.metamodel.melange.impl.TaggedReuseFeatureImpl <em>Tagged Reuse Feature</em>}' class.

@@ -2998,13 +2998,28 @@ ruleReuseFeature returns [EObject current=null]
     }
 )(
 (
+		lv_unselected_1_0=	'-' 
+    {
+        newLeafNode(lv_unselected_1_0, grammarAccess.getReuseFeatureAccess().getUnselectedHyphenMinusKeyword_0_1_0());
+    }
+ 
+	    {
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getReuseFeatureRule());
+	        }
+       		setWithLastConsumed($current, "unselected", true, "-");
+	    }
+
+)
+)?(
+(
 		{
 			if ($current==null) {
 	            $current = createModelElement(grammarAccess.getReuseFeatureRule());
 	        }
         }
 		{ 
-	        newCompositeNode(grammarAccess.getReuseFeatureAccess().getRefVariabilityCrossReference_0_1_0()); 
+	        newCompositeNode(grammarAccess.getReuseFeatureAccess().getRefVariabilityCrossReference_0_2_0()); 
 	    }
 		ruleQualifiedName		{ 
 	        afterParserOrEnumRuleCall();
@@ -3018,15 +3033,15 @@ ruleReuseFeature returns [EObject current=null]
             grammarAccess.getReuseFeatureAccess().getTaggedReuseFeatureAction_1_0(),
             $current);
     }
-)	otherlv_3='$' 
+)	otherlv_4='$' 
     {
-    	newLeafNode(otherlv_3, grammarAccess.getReuseFeatureAccess().getDollarSignKeyword_1_1());
+    	newLeafNode(otherlv_4, grammarAccess.getReuseFeatureAccess().getDollarSignKeyword_1_1());
     }
 (
 (
-		lv_name_4_0=RULE_ID
+		lv_name_5_0=RULE_ID
 		{
-			newLeafNode(lv_name_4_0, grammarAccess.getReuseFeatureAccess().getNameIDTerminalRuleCall_1_2_0()); 
+			newLeafNode(lv_name_5_0, grammarAccess.getReuseFeatureAccess().getNameIDTerminalRuleCall_1_2_0()); 
 		}
 		{
 	        if ($current==null) {
@@ -3035,7 +3050,7 @@ ruleReuseFeature returns [EObject current=null]
        		setWithLastConsumed(
        			$current, 
        			"name",
-        		lv_name_4_0, 
+        		lv_name_5_0, 
         		"org.eclipse.xtext.xbase.Xtype.ID");
 	    }
 
