@@ -33,7 +33,8 @@ Require-Bundle: org.eclipse.xtext;bundle-version="[2.9.0,2.13.0)";visibility:=re
  org.eclipse.emf.transaction,
  fr.inria.diverse.k3.al.annotationprocessor.plugin,
  org.eclipse.gemoc.commons.eclipse.pde;bundle-version="2.3.0",
- org.objectweb.asm;bundle-version="[5.0.1,6.0.0)";resolution:=optional
+ org.objectweb.asm;bundle-version="[5.0.1,6.0.0)";resolution:=optional,
+ de.ovgu.featureide.fm.core;bundle-version="3.4.1"
 Import-Package: org.apache.log4j,
  org.eclipse.xtext.xbase.lib
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8

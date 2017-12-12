@@ -11,6 +11,8 @@
 package fr.inria.diverse.melange.validation
 
 import com.google.inject.Inject
+import de.ovgu.featureide.fm.core.configuration.Configuration
+import de.ovgu.featureide.fm.core.configuration.Selection
 import fr.inria.diverse.melange.ast.AspectExtensions
 import fr.inria.diverse.melange.ast.LanguageExtensions
 import fr.inria.diverse.melange.ast.ModelingElementExtensions
@@ -24,20 +26,26 @@ import fr.inria.diverse.melange.metamodel.melange.ExternalLanguage
 import fr.inria.diverse.melange.metamodel.melange.Import
 import fr.inria.diverse.melange.metamodel.melange.ImportDsl
 import fr.inria.diverse.melange.metamodel.melange.Language
+import fr.inria.diverse.melange.metamodel.melange.LanguageConcern
 import fr.inria.diverse.melange.metamodel.melange.LanguageOperator
 import fr.inria.diverse.melange.metamodel.melange.MelangePackage
 import fr.inria.diverse.melange.metamodel.melange.ModelType
 import fr.inria.diverse.melange.metamodel.melange.ModelTypingSpace
 import fr.inria.diverse.melange.metamodel.melange.ModelingElement
 import fr.inria.diverse.melange.metamodel.melange.NamedElement
+import fr.inria.diverse.melange.metamodel.melange.ReferenceReuseFeature
 import fr.inria.diverse.melange.metamodel.melange.ResourceType
+import fr.inria.diverse.melange.metamodel.melange.Reuse
 import fr.inria.diverse.melange.metamodel.melange.Slice
+import fr.inria.diverse.melange.metamodel.melange.TaggedElement
+import fr.inria.diverse.melange.metamodel.melange.TaggedReuseFeature
 import fr.inria.diverse.melange.metamodel.melange.Weave
+import fr.inria.diverse.melange.utils.FeatureIDEUtil
+import fr.inria.diverse.melange.utils.MelangeMetamodelUtil
 import org.eclipse.emf.ecore.EClassifier
 import org.eclipse.emf.ecore.EPackage
 import org.eclipse.xtext.common.types.JvmDeclaredType
 import org.eclipse.xtext.validation.Check
-import fr.inria.diverse.melange.metamodel.melange.LanguageConcern
 
 class MelangeValidator extends AbstractMelangeValidator {
 	@Inject extension AspectExtensions
@@ -47,6 +55,8 @@ class MelangeValidator extends AbstractMelangeValidator {
 	@Inject ModelUtils modelUtils
 	@Inject MatchingHelper matchingHelper
 	@Inject ModelTypingSpaceBuilder builder
+	@Inject MelangeMetamodelUtil mmu
+	@Inject FeatureIDEUtil fie
 
 	@Check
 	def void checkElementsAreNamed(NamedElement e) {
@@ -458,4 +468,69 @@ class MelangeValidator extends AbstractMelangeValidator {
 			}
 		}
 	}
+	
+	@Check
+	def void languageDoesNotHaveTaggedElements(TaggedReuseFeature taggedReuseFeature) {
+
+		// lookup for the parent language/language concern
+		val parent = mmu.findLanguage(taggedReuseFeature)
+
+		if (parent instanceof Language) {
+			error(
+				'''Variable feature cannot be introduced in languages''',
+				taggedReuseFeature,
+				MelangePackage.Literals.TAGGED_ELEMENT__NAME,
+				MelangeValidationConstants.TAGGED_REUSE_FEATURE_IN_LANGUAGE
+			)
+		}
+	}
+	
+	@Check
+	def void taggedElementIsUsed(TaggedElement taggedElement) {
+		// ignoring the tagged elements with no name (aka plain old operators).
+		if (taggedElement.name !== null) {
+			val parent = mmu.findLanguage(taggedElement)
+			if (parent instanceof LanguageConcern) {
+				if (!parent.realisations.map[targets].flatten.exists[it == taggedElement]) {
+					warning(
+						'''This variable is never realized''',
+						taggedElement,
+						MelangePackage.Literals.TAGGED_ELEMENT__NAME,
+						MelangeValidationConstants.TAGGED_REUSE_FEATURE_NEVER_REALIZED
+					)
+				}
+			}
+		}
+	}
+	
+	@Check
+	def void validateVMConfiguration(Reuse reuse) {
+		val fm = fie.buildFeatureModel(reuse.languageconcern.vm)
+		val conf = new Configuration(fm)
+
+		reuse.features.forEach [
+			if (it instanceof ReferenceReuseFeature)
+				conf.setManual(it.ref.name, Selection.SELECTED)
+		]
+
+		if (conf.number == 0) {
+			error(
+				'''This configuration is invalid''',
+				reuse,
+				MelangePackage.Literals.REUSE__LANGUAGECONCERN,
+				MelangeValidationConstants.REUSE_INVALID_CONFIGURATION
+			)
+		}
+		
+		if (conf.number > 1) {
+			warning(
+				'''The configuration is not complete''',
+				reuse,
+				MelangePackage.Literals.REUSE__LANGUAGECONCERN,
+				MelangeValidationConstants.REUSE_INCOMPLETE_CONFIGURATION
+			)
+		}
+
+	}
+	
 }
