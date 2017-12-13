@@ -4,7 +4,7 @@
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-v10.html
- *
+ * 
  * Contributors:
  *     Inria - initial API and implementation
  *******************************************************************************/
@@ -19,19 +19,22 @@ import fr.inria.diverse.melange.lib.EcoreMerger
 import fr.inria.diverse.melange.metamodel.melange.Import
 import fr.inria.diverse.melange.metamodel.melange.Inheritance
 import fr.inria.diverse.melange.metamodel.melange.Language
+import fr.inria.diverse.melange.metamodel.melange.LanguageConcern
 import fr.inria.diverse.melange.metamodel.melange.Merge
 import fr.inria.diverse.melange.metamodel.melange.ModelTypingSpace
 import fr.inria.diverse.melange.metamodel.melange.Operator
+import fr.inria.diverse.melange.metamodel.melange.Realisation
 import fr.inria.diverse.melange.metamodel.melange.Reuse
 import fr.inria.diverse.melange.metamodel.melange.Slice
+import fr.inria.diverse.melange.metamodel.melange.TaggedOperator
 import fr.inria.diverse.melange.metamodel.melange.Weave
 import fr.inria.diverse.melange.utils.ErrorHelper
 import java.util.List
+import java.util.Map
 import java.util.Set
 import org.eclipse.emf.ecore.EClass
 import org.eclipse.emf.ecore.EPackage
 import org.eclipse.emf.ecore.util.EcoreUtil
-import fr.inria.diverse.melange.metamodel.melange.LanguageConcern
 
 /**
  * General builder for a {@link Language}.
@@ -76,13 +79,13 @@ class LanguageBuilder extends AbstractBuilder {
 	override postBuild() {
 		isBuilding = false
 
-		errors.forEach[e |
+		errors.forEach [ e |
 			errorHelper.addError(e.location, e.message)
 		]
-		
-		if(source.isGeneratedByMelange)
-			model.forEach[nsURI = source.externalPackageUri+name+"/"]
-		
+
+		if (source.isGeneratedByMelange)
+			model.forEach[nsURI = source.externalPackageUri + name + "/"]
+
 		bindOppositeReferences
 	}
 
@@ -95,30 +98,24 @@ class LanguageBuilder extends AbstractBuilder {
 		 * EClass to infer the ecore fragment 
 		 */
 		val otherOperators = source.operators.filter[!(it instanceof Weave)].toList
-		val aspectOperators =
-			source.operators
-			.filter(Weave)
-			.filter[aspectWildcardImport === null]
-			.sortWith[wA, wB |
-				if (wA.aspectTypeRef?.aspectAnnotationValue !== null) 1 else -1
-			]
-			.map[it as Operator]
-			.toList
+		val aspectOperators = source.operators.filter(Weave).filter[aspectWildcardImport === null].sortWith [ wA, wB |
+			if(wA.aspectTypeRef?.aspectAnnotationValue !== null) 1 else -1
+		].map[it as Operator].toList
 
 		builders = newArrayList
 		builders.addAll(createBuilders(otherOperators))
-		builders.forEach[builder |
+		builders.forEach [ builder |
 			builder.build()
 			errors.addAll(builder.errors)
 		]
 
 		model = EcoreUtil::copyAll(builders.head.model).toSet
-		builders.drop(1).forEach[builder |
+		builders.drop(1).forEach [ builder |
 			errors.addAll(model.merge(builder.model, builder.source))
 		]
 
 		val weaveBuilders = createBuilders(aspectOperators)
-		weaveBuilders.forEach[builder |
+		weaveBuilders.forEach [ builder |
 			builder.build()
 			errors.addAll(builder.errors)
 			errors.addAll(model.merge(builder.model, builder.source))
@@ -138,10 +135,10 @@ class LanguageBuilder extends AbstractBuilder {
 	 * @see EcoreMerger#merge 
 	 */
 	def List<BuilderError> merge(Set<EPackage> base, Set<EPackage> merged, Operator context) {
-		if(merged !== null)
+		if (merged !== null)
 			ecoreMerger.merge(base, merged)
 
-		return ecoreMerger.conflicts.map[
+		return ecoreMerger.conflicts.map [
 			new BuilderError(it.toString, context)
 		]
 	}
@@ -151,22 +148,54 @@ class LanguageBuilder extends AbstractBuilder {
 	 * {@link Operator} of {@code operators}.
 	 */
 	def List<OperatorBuilder<? extends Operator>> createBuilders(List<Operator> operators) {
-		val res = newArrayList
+		val res = <OperatorBuilder<? extends Operator>>newArrayList
 
 		operators.forEach [ op |
-			val builder = switch op {
-				Inheritance: new InheritanceBuilder(op, root)
-				Merge: new MergeBuilder(op, root)
-				Slice: new SliceBuilder(op, root)
-				Import: new ImportBuilder(op)
-				Weave: new WeaveBuilder(op, model)
-				Reuse: new ReuseBuilder(op)
+			val List<OperatorBuilder<? extends Operator>> builders = switch op {
+				Inheritance: #[new InheritanceBuilder(op, root)]
+				Merge: #[new MergeBuilder(op, root)]
+				Slice: #[new SliceBuilder(op, root)]
+				Import: #[new ImportBuilder(op)]
+				Weave: #[new WeaveBuilder(op, model)]
+				Reuse: solveReuse(op)
 			}
-			res.add(builder)
-			injector.injectMembers(builder)
+			res.addAll(builders)
+			builders.forEach[injector.injectMembers(it)]
 		]
 
 		return res
+	}
+
+	def List<OperatorBuilder<? extends Operator>> solveReuse(Reuse r) {
+		val configuration = r.features
+		val lc = r.languageconcern
+		val Map<Realisation, Boolean> lcr = lc.realisations.toInvertedMap[
+			new ConditionVisitor(configuration).visit(it.condition)
+		]
+		val operators = r.owningLanguage.operators.map[
+			if(it instanceof TaggedOperator)
+				if(lcr.get(it)) {
+					it.operator
+				}
+			else 
+				it
+		]
+		
+		val res = <OperatorBuilder<? extends Operator>>newArrayList
+		operators.forEach [ op |
+			val List<OperatorBuilder<? extends Operator>> builders = switch op {
+				Inheritance: #[new InheritanceBuilder(op, root)]
+				Merge: #[new MergeBuilder(op, root)]
+				Slice: #[new SliceBuilder(op, root)]
+				Import: #[new ImportBuilder(op)]
+				Weave: #[new WeaveBuilder(op, model)]
+				Reuse: solveReuse(op)
+			}
+			res.addAll(builders)
+			builders.forEach[injector.injectMembers(it)]
+		]
+		
+		res
 	}
 
 	def boolean isBuilding() {
@@ -180,31 +209,26 @@ class LanguageBuilder extends AbstractBuilder {
 	def WeaveBuilder findBuilder(Weave w) {
 		return builders.filter(WeaveBuilder).findFirst[it.source === w]
 	}
-	
+
 	/**
 	 * Return the list of Operators' builder
 	 */
-	def List<OperatorBuilder<? extends Operator>> getSubBuilders(){
+	def List<OperatorBuilder<? extends Operator>> getSubBuilders() {
 		return builders
 	}
-	
+
 	private def bindOppositeReferences() {
-		val allClasses = model.map[allClasses]
-			.flatten
-			.toSet
-		
-		val allOpposites = allClasses
-			.map[EAllReferences]
-			.flatten
-			.filter[EAnnotations.exists[it.source == "opposite"]]
-			
-		allOpposites.forEach[ref |
+		val allClasses = model.map[allClasses].flatten.toSet
+
+		val allOpposites = allClasses.map[EAllReferences].flatten.filter[EAnnotations.exists[it.source == "opposite"]]
+
+		allOpposites.forEach [ ref |
 			val annot = ref.EAnnotations.findFirst[it.source == "opposite"]
 			val opRefName = annot.details.get("value")
-			if(ref.EType instanceof EClass){
+			if (ref.EType instanceof EClass) {
 				val opRef = (ref.EType as EClass).EAllReferences.findFirst[name == opRefName]
-				//TODO: should check opRef is tagged @Opposite
-				if(opRef !== null && opRef.EOpposite === null){
+				// TODO: should check opRef is tagged @Opposite
+				if (opRef !== null && opRef.EOpposite === null) {
 					ref.EOpposite = opRef
 					opRef.EOpposite = ref
 				}

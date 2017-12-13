@@ -395,7 +395,7 @@ class LanguageExtensions {
 	 * if it is constructed from others {@link Language}s.  
 	 */
 	def boolean isGeneratedByMelange(LanguageConcern l) {
-		return !(l instanceof ExternalLanguage || l instanceof ImportDsl)
+		return !(l instanceof ExternalLanguage || l instanceof ImportDsl) && (l instanceof Language);
 	}
 
 	/**

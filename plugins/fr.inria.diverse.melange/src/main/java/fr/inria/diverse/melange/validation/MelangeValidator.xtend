@@ -341,8 +341,9 @@ class MelangeValidator extends AbstractMelangeValidator {
 	@Check
 	def void checkSliceCriteria(Slice s) {
 		val invalidRoots = s.roots.filter [ clsName |
-			
-			s.targetLanguage instanceof Language && (s.targetLanguage as Language).syntax.findClassifier(clsName) === null
+
+			s.targetLanguage instanceof Language &&
+				(s.targetLanguage as Language).syntax.findClassifier(clsName) === null
 		]
 		val invalidRootsSize = invalidRoots.size
 
@@ -408,7 +409,11 @@ class MelangeValidator extends AbstractMelangeValidator {
 	}
 
 	private def Iterable<EPackage> getEPackagesWithoutGenPackage(ModelingElement m) {
-		return m.pkgs.filter[m.getGenPkgFor(it) === null]
+		val pk = m.pkgs
+		val pkf = pk.filter [
+			m.getGenPkgFor(it) === null
+		]
+		return pkf
 	}
 
 	private def Iterable<EClassifier> getEClassifiersWithoutGenClassifier(ModelingElement m) {
@@ -577,26 +582,28 @@ class MelangeValidator extends AbstractMelangeValidator {
 		imports.forEach [ i |
 			val ecore = modelUtils.loadPkg(i.ecoreUri)
 			val eclasses = ecore.eAllContents.filter(EClass)
-			eclasses.forEach [
-				val fqn = '''«it.EPackage?.name».«it.name»'''
+			eclasses.forEach [ clazz |
+				val filtered = i.mappingRules.findFirst[it.from == clazz.EPackage.name]
+				val packageName = if(filtered !== null) filtered.to else clazz.EPackage.name
+				val fqn = '''«packageName».«clazz.name»'''
 				if (!map.containsKey(fqn))
 					map.put(fqn, newArrayList())
-				map.get(fqn).add(it)
+				map.get(fqn).add(clazz)
 			]
 		]
 
 		val errors = newHashSet()
 
-		map.forEach [ p1, p2 |
+		map.forEach [ fqn, p2 |
 			// trigger an error if all the class have a customization tag
 			if (!p2.filter[it.EAnnotations.exists[it.source == 'Customizable']].empty && p2.filter [
 				!it.EAnnotations.exists[it.source == 'Customizable']
 			].empty) {
-				errors.add(p1)
+				errors.add(fqn)
 			}
 		]
 		if (!errors.empty)
-			warning(
+			error(
 				'''Classes «FOR e : errors SEPARATOR ', '»«e»«ENDFOR» are not customized''',
 				language,
 				MelangePackage.Literals.NAMED_ELEMENT__NAME,

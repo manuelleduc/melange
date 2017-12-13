@@ -11,8 +11,12 @@
 package fr.inria.diverse.melange.builder
 
 import com.google.inject.Inject
+import fr.inria.diverse.melange.metamodel.melange.Language
 import fr.inria.diverse.melange.metamodel.melange.Merge
+import java.util.Set
+import org.eclipse.emf.ecore.EPackage
 import org.eclipse.emf.ecore.util.EcoreUtil
+import org.eclipse.emf.ecore.EClass
 
 /**
  * Builder for the {@link Merge} operator.
@@ -32,6 +36,19 @@ class MergeBuilder extends LanguageOperatorBuilder<Merge> {
 		if (!targetModel.isEmpty) {
 			model = EcoreUtil::copyAll(targetModel).toSet
 			model.forEach[applyRenaming(source.mappingRules)]
+//			model.applyCleanupCustomize(targetModel)
 		}
+	}
+	
+	/**
+	 * Look for Customizable elements in the model and remove them if they have been 
+	 */
+	def applyCleanupCustomize(Set<EPackage> model, Set<EPackage> targetModel) {
+		val customizedElements = model.map[it.eAllContents.filter(EClass).filter[it.EAnnotations.exists[it.source == "Customizable"]].toList].flatten
+		
+		customizedElements.forEach[customizableClass|
+			
+		]
+//		println(a)
 	}
 }

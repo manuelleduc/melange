@@ -98,8 +98,9 @@ class ModelingElementExtensions
 	 * of the {@link ModelingElement} {@code m}.
 	 */
 	def Set<GenPackage> getAllGenPkgs(ModelingElement m) {
-		return
-			m.genmodels
+		val gmodels = m.genmodels
+		
+		return gmodels			
 			.map[allGenPkgs]
 			.flatten
 			.toSet
@@ -122,9 +123,8 @@ class ModelingElementExtensions
 	 * {@code pkg} in {@code m}.
 	 */
 	def GenPackage getGenPkgFor(ModelingElement m, EPackage pkg) {
-		return
-			m.allGenPkgs
-			.findFirst[getEcorePackage.uniqueId == pkg.uniqueId]
+		val allpkg = m.allGenPkgs
+		return allpkg.findFirst[getEcorePackage.uniqueId == pkg.uniqueId]
 	}
 
 	/**
