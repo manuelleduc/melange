@@ -95,6 +95,8 @@ class MelangeValidationConstants
 	public static final String  REUSE_INVALID_CONFIGURATION =
 		"REUSE_INVALID_CONFIGURATION"
 	public static final String  REUSE_INCOMPLETE_CONFIGURATION =
-		"REUSE_INCOMPLETE_CONFIGURATION"	
+		"REUSE_INCOMPLETE_CONFIGURATION"
+	public static final String NOT_CUSTOMIZED_AS =
+		"NOT_CUSTOMIZED_AS"
 
 }

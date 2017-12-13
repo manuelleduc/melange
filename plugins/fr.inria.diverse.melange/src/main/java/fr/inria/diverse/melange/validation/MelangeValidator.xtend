@@ -43,6 +43,7 @@ import fr.inria.diverse.melange.metamodel.melange.TaggedReuseFeature
 import fr.inria.diverse.melange.metamodel.melange.Weave
 import fr.inria.diverse.melange.utils.FeatureIDEUtil
 import fr.inria.diverse.melange.utils.MelangeMetamodelUtil
+import org.eclipse.emf.ecore.EClass
 import org.eclipse.emf.ecore.EClassifier
 import org.eclipse.emf.ecore.EPackage
 import org.eclipse.xtext.common.types.JvmDeclaredType
@@ -554,13 +555,52 @@ class MelangeValidator extends AbstractMelangeValidator {
 				}
 			} catch (SelectionNotPossibleException e) {
 				error(
-						'''This configuration is invalid''',
-						reuse,
-						MelangePackage.Literals.REUSE__LANGUAGECONCERN,
-						MelangeValidationConstants.REUSE_INVALID_CONFIGURATION
-					)
+					'''This configuration is invalid''',
+					reuse,
+					MelangePackage.Literals.REUSE__LANGUAGECONCERN,
+					MelangeValidationConstants.REUSE_INVALID_CONFIGURATION
+				)
 			}
 		}
+	}
+
+	@Check
+	def checkIfCustomizablesRemain(Language language) {
+
+		val imports = language.operators.filter(Import)
+
+		// TODO: taking into account package renaming !!
+		// gather and map each class
+		// TODO: only nominal
+		val map = newHashMap()
+		imports.forEach [ i |
+			val ecore = modelUtils.loadPkg(i.ecoreUri)
+			val eclasses = ecore.eAllContents.filter(EClass)
+			eclasses.forEach [
+				val fqn = '''«it.EPackage?.name».«it.name»'''
+				if (!map.containsKey(fqn))
+					map.put(fqn, newArrayList())
+				map.get(fqn).add(it)
+			]
+		]
+
+		val errors = newHashSet()
+
+		map.forEach [ p1, p2 |
+			// trigger an error if all the class have a customization tag
+			if (!p2.filter[it.EAnnotations.exists[it.source == 'Customizable']].empty && p2.filter [
+				!it.EAnnotations.exists[it.source == 'Customizable']
+			].empty) {
+				errors.add(p1)
+			}
+		]
+		if (!errors.empty)
+			warning(
+				'''Classes «FOR e : errors SEPARATOR ', '»«e»«ENDFOR» are not customized''',
+				language,
+				MelangePackage.Literals.NAMED_ELEMENT__NAME,
+				MelangeValidationConstants.NOT_CUSTOMIZED_AS
+			)
 	}
 
 }
