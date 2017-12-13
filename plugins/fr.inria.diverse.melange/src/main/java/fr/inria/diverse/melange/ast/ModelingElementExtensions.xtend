@@ -88,7 +88,7 @@ class ModelingElementExtensions
 	 * is an Xcore file.
 	 */
 	def boolean isXcore(ModelingElement m) {
-		return
+		return m !== null &&
 			   !m.ecoreUri.nullOrEmpty
 			&& m.ecoreUri.endsWith(".xcore")
 	}

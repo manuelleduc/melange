@@ -286,7 +286,7 @@ class MelangeValidator extends AbstractMelangeValidator {
 	def void checkRuntimeHasBeenGenerated(Language l) {
 		if (l.isGeneratedByMelange && !l.runtimeHasBeenGenerated) {
 			warning(
-				"Cannot find EMF runtime for" + l.name,
+				"Cannot find EMF runtime for " + l.name,
 				MelangePackage.Literals.NAMED_ELEMENT__NAME,
 				MelangeValidationConstants.LANGUAGE_NO_EMF_RUNTIME
 			)
@@ -341,7 +341,8 @@ class MelangeValidator extends AbstractMelangeValidator {
 	@Check
 	def void checkSliceCriteria(Slice s) {
 		val invalidRoots = s.roots.filter [ clsName |
-			s.targetLanguage.syntax.findClassifier(clsName) === null
+			
+			s.targetLanguage instanceof Language && (s.targetLanguage as Language).syntax.findClassifier(clsName) === null
 		]
 		val invalidRootsSize = invalidRoots.size
 

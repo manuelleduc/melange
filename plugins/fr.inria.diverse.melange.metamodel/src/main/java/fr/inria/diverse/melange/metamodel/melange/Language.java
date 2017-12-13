@@ -23,7 +23,6 @@ import org.eclipse.xtext.common.types.JvmTypeReference;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link fr.inria.diverse.melange.metamodel.melange.Language#getOperators <em>Operators</em>}</li>
  *   <li>{@link fr.inria.diverse.melange.metamodel.melange.Language#getExactType <em>Exact Type</em>}</li>
  *   <li>{@link fr.inria.diverse.melange.metamodel.melange.Language#getImplements <em>Implements</em>}</li>
  *   <li>{@link fr.inria.diverse.melange.metamodel.melange.Language#getRequires <em>Requires</em>}</li>
@@ -47,25 +46,7 @@ import org.eclipse.xtext.common.types.JvmTypeReference;
  * @model
  * @generated
  */
-public interface Language extends NamedElement {
-	/**
-	 * Returns the value of the '<em><b>Operators</b></em>' containment reference list.
-	 * The list contents are of type {@link fr.inria.diverse.melange.metamodel.melange.Operator}.
-	 * It is bidirectional and its opposite is '{@link fr.inria.diverse.melange.metamodel.melange.Operator#getOwningLanguage <em>Owning Language</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Operators</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Operators</em>' containment reference list.
-	 * @see fr.inria.diverse.melange.metamodel.melange.MelangePackage#getLanguage_Operators()
-	 * @see fr.inria.diverse.melange.metamodel.melange.Operator#getOwningLanguage
-	 * @model opposite="owningLanguage" containment="true"
-	 * @generated
-	 */
-	EList<Operator> getOperators();
-
+public interface Language extends NamedElement, LanguageConcern {
 	/**
 	 * Returns the value of the '<em><b>Exact Type</b></em>' reference.
 	 * It is bidirectional and its opposite is '{@link fr.inria.diverse.melange.metamodel.melange.ModelType#getExtracted <em>Extracted</em>}'.

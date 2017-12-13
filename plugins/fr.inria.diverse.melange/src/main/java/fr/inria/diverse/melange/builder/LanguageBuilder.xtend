@@ -31,6 +31,7 @@ import java.util.Set
 import org.eclipse.emf.ecore.EClass
 import org.eclipse.emf.ecore.EPackage
 import org.eclipse.emf.ecore.util.EcoreUtil
+import fr.inria.diverse.melange.metamodel.melange.LanguageConcern
 
 /**
  * General builder for a {@link Language}.
@@ -50,7 +51,7 @@ class LanguageBuilder extends AbstractBuilder {
 	/**
 	 * The {@link Language} being built by this builder.
 	 */
-	Language source
+	LanguageConcern source
 	/**
 	 * Whether the language is currently being processed or not.
 	 */
@@ -61,7 +62,7 @@ class LanguageBuilder extends AbstractBuilder {
 	 */
 	List<OperatorBuilder<? extends Operator>> builders
 
-	new(Language l, ModelTypingSpaceBuilder root) {
+	new(LanguageConcern l, ModelTypingSpaceBuilder root) {
 		super()
 		this.source = l
 		this.root = root
@@ -172,7 +173,7 @@ class LanguageBuilder extends AbstractBuilder {
 		return isBuilding
 	}
 
-	def Language getSource() {
+	def LanguageConcern getSource() {
 		return source
 	}
 

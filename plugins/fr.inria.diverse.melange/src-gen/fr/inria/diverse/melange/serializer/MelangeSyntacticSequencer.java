@@ -162,7 +162,7 @@ public class MelangeSyntacticSequencer extends AbstractSyntacticSequencer {
 	
 	/**
 	 * Ambiguous syntax:
-	 *     (('external' '}'*) | '}'+ | '}'+)?
+	 *     ('}'+ | '}'+ | ('external' '}'*))?
 	 *
 	 * This ambiguous syntax occurs at:
 	 *     (rule start) (ambiguity) (rule start)
@@ -528,7 +528,7 @@ public class MelangeSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     ('renaming' '{' '}')?
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     targetLanguage=[Language|QualifiedName] (ambiguity) (rule end)
+	 *     targetLanguage=[LanguageConcern|QualifiedName] (ambiguity) (rule end)
 	 */
 	protected void emit_Merge___RenamingKeyword_2_0_LeftCurlyBracketKeyword_2_1_RightCurlyBracketKeyword_2_3__q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);

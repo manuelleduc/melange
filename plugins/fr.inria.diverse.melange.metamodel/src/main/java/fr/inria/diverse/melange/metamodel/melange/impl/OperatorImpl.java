@@ -15,15 +15,12 @@ import fr.inria.diverse.melange.metamodel.melange.MelangePackage;
 import fr.inria.diverse.melange.metamodel.melange.Operator;
 
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
-import org.eclipse.emf.ecore.util.EcoreUtil;
 
 /**
  * <!-- begin-user-doc -->
@@ -39,6 +36,16 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
  * @generated
  */
 public abstract class OperatorImpl extends MinimalEObjectImpl.Container implements Operator {
+	/**
+	 * The cached value of the '{@link #getOwningLanguage() <em>Owning Language</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getOwningLanguage()
+	 * @generated
+	 * @ordered
+	 */
+	protected Language owningLanguage;
+
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -64,8 +71,15 @@ public abstract class OperatorImpl extends MinimalEObjectImpl.Container implemen
 	 * @generated
 	 */
 	public Language getOwningLanguage() {
-		if (eContainerFeatureID() != MelangePackage.OPERATOR__OWNING_LANGUAGE) return null;
-		return (Language)eInternalContainer();
+		if (owningLanguage != null && owningLanguage.eIsProxy()) {
+			InternalEObject oldOwningLanguage = (InternalEObject)owningLanguage;
+			owningLanguage = (Language)eResolveProxy(oldOwningLanguage);
+			if (owningLanguage != oldOwningLanguage) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, MelangePackage.OPERATOR__OWNING_LANGUAGE, oldOwningLanguage, owningLanguage));
+			}
+		}
+		return owningLanguage;
 	}
 
 	/**
@@ -73,9 +87,8 @@ public abstract class OperatorImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetOwningLanguage(Language newOwningLanguage, NotificationChain msgs) {
-		msgs = eBasicSetContainer((InternalEObject)newOwningLanguage, MelangePackage.OPERATOR__OWNING_LANGUAGE, msgs);
-		return msgs;
+	public Language basicGetOwningLanguage() {
+		return owningLanguage;
 	}
 
 	/**
@@ -84,63 +97,10 @@ public abstract class OperatorImpl extends MinimalEObjectImpl.Container implemen
 	 * @generated
 	 */
 	public void setOwningLanguage(Language newOwningLanguage) {
-		if (newOwningLanguage != eInternalContainer() || (eContainerFeatureID() != MelangePackage.OPERATOR__OWNING_LANGUAGE && newOwningLanguage != null)) {
-			if (EcoreUtil.isAncestor(this, newOwningLanguage))
-				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
-			NotificationChain msgs = null;
-			if (eInternalContainer() != null)
-				msgs = eBasicRemoveFromContainer(msgs);
-			if (newOwningLanguage != null)
-				msgs = ((InternalEObject)newOwningLanguage).eInverseAdd(this, MelangePackage.LANGUAGE__OPERATORS, Language.class, msgs);
-			msgs = basicSetOwningLanguage(newOwningLanguage, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MelangePackage.OPERATOR__OWNING_LANGUAGE, newOwningLanguage, newOwningLanguage));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case MelangePackage.OPERATOR__OWNING_LANGUAGE:
-				if (eInternalContainer() != null)
-					msgs = eBasicRemoveFromContainer(msgs);
-				return basicSetOwningLanguage((Language)otherEnd, msgs);
-		}
-		return super.eInverseAdd(otherEnd, featureID, msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case MelangePackage.OPERATOR__OWNING_LANGUAGE:
-				return basicSetOwningLanguage(null, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
-		switch (eContainerFeatureID()) {
-			case MelangePackage.OPERATOR__OWNING_LANGUAGE:
-				return eInternalContainer().eInverseRemove(this, MelangePackage.LANGUAGE__OPERATORS, Language.class, msgs);
-		}
-		return super.eBasicRemoveFromContainerFeature(msgs);
+		Language oldOwningLanguage = owningLanguage;
+		owningLanguage = newOwningLanguage;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, MelangePackage.OPERATOR__OWNING_LANGUAGE, oldOwningLanguage, owningLanguage));
 	}
 
 	/**
@@ -152,7 +112,8 @@ public abstract class OperatorImpl extends MinimalEObjectImpl.Container implemen
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case MelangePackage.OPERATOR__OWNING_LANGUAGE:
-				return getOwningLanguage();
+				if (resolve) return getOwningLanguage();
+				return basicGetOwningLanguage();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -196,7 +157,7 @@ public abstract class OperatorImpl extends MinimalEObjectImpl.Container implemen
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case MelangePackage.OPERATOR__OWNING_LANGUAGE:
-				return getOwningLanguage() != null;
+				return owningLanguage != null;
 		}
 		return super.eIsSet(featureID);
 	}

@@ -1,6 +1,5 @@
 package fr.inria.diverse.melange.utils
 
-import fr.inria.diverse.melange.metamodel.melange.Language
 import fr.inria.diverse.melange.metamodel.melange.LanguageConcern
 import org.eclipse.emf.ecore.EObject
 
@@ -10,14 +9,14 @@ class MelangeMetamodelUtil {
 	 * @param a tagged element
 	 * @return the Language or LanguageConcern
 	 */
-	def findLanguage(EObject te) {
+	def LanguageConcern findLanguage(EObject te) {
 		var parent = te.eContainer
 		if(parent === null) return null
-		while (!(parent instanceof Language || parent instanceof LanguageConcern)) {
+		while (!(parent instanceof LanguageConcern)) {
 			parent = parent.eContainer
 			if(parent === null) return null
 		}
 
-		return parent
+		return parent as LanguageConcern
 	}
 }

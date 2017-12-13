@@ -4,7 +4,7 @@
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-v10.html
- *
+ * 
  * Contributors:
  *     Inria - initial API and implementation
  *******************************************************************************/
@@ -23,6 +23,7 @@ import fr.inria.diverse.melange.metamodel.melange.Import
 import fr.inria.diverse.melange.metamodel.melange.ImportDsl
 import fr.inria.diverse.melange.metamodel.melange.Inheritance
 import fr.inria.diverse.melange.metamodel.melange.Language
+import fr.inria.diverse.melange.metamodel.melange.LanguageConcern
 import fr.inria.diverse.melange.metamodel.melange.LanguageOperator
 import fr.inria.diverse.melange.metamodel.melange.MelangeFactory
 import fr.inria.diverse.melange.metamodel.melange.Merge
@@ -68,8 +69,7 @@ import org.eclipse.xtext.xbase.jvmmodel.JvmTypesBuilder
 /**
  * A collection of utilities around {@link Language}s
  */
-class LanguageExtensions
-{
+class LanguageExtensions {
 	@Inject extension ASTHelper
 	@Inject extension ModelingElementExtensions
 	@Inject extension MetamodelExtensions
@@ -86,21 +86,20 @@ class LanguageExtensions
 	@Inject EclipseProjectHelper eclipseHelper
 	private static final Logger log = Logger.getLogger(LanguageExtensions)
 
-	static final String ASPECT_MAIN_ANNOTATION =
-		"fr.inria.diverse.k3.al.annotationprocessor.Main"
+	static final String ASPECT_MAIN_ANNOTATION = "fr.inria.diverse.k3.al.annotationprocessor.Main"
 
 	/**
 	 * Checks whether {@link l} or one of its dependencies (languages it depends
 	 * on) cannot be built
 	 */
-	def boolean isInError(Language l) {
+	def boolean isInError(LanguageConcern l) {
 		val langs = newArrayList
 
 		langs += l
 		langs += l.allDependencies
 
-		return langs.exists[lang |
-			lang.eResource.errors.filter(EObjectDiagnosticImpl).exists[
+		return langs.exists [ lang |
+			lang.eResource.errors.filter(EObjectDiagnosticImpl).exists [
 				problematicObject.isContainedBy(lang)
 			]
 		]
@@ -110,7 +109,7 @@ class LanguageExtensions
 	 * Returns the set of immediate super-languages of {@link l}, excluding
 	 * {@link l}
 	 */
-	def Set<Language> getSuperLanguages(Language l) {
+	def Set<LanguageConcern> getSuperLanguages(LanguageConcern l) {
 		return l.operators.filter(Inheritance).map[targetLanguage].toSet
 	}
 
@@ -118,7 +117,7 @@ class LanguageExtensions
 	 * Returns the transitive set of all the super-languages of {@link l},
 	 * excluding {@link l}
 	 */
-	def Set<Language> getAllSuperLanguages(Language l) {
+	def Set<LanguageConcern> getAllSuperLanguages(LanguageConcern l) {
 		val ret = newHashSet
 
 		ret += l.superLanguages
@@ -132,12 +131,11 @@ class LanguageExtensions
 	 * the languages from which it is derived through {@link Inheritance},
 	 * {@link Merge}, or {@link Slice}
 	 */
-	def Set<Language> getAllDependencies(Language l) {
+	def Set<LanguageConcern> getAllDependencies(LanguageConcern l) {
 		val ret = newHashSet
 
 		ret += l.operators.filter(LanguageOperator).map[targetLanguage]
-		ret += l.operators.filter(LanguageOperator)
-				.map[targetLanguage.allDependencies].flatten
+		ret += l.operators.filter(LanguageOperator).map[targetLanguage.allDependencies].flatten
 
 		return ret
 	}
@@ -147,23 +145,17 @@ class LanguageExtensions
 	 * and can be processed
 	 */
 	def boolean isValid(Language l) {
-		return
-			   !l.name.nullOrEmpty
-			&& l.syntax !== null
-			&& l.syntax.isValid
-			&& l.semantics.forall[isValid]
+		return !l.name.nullOrEmpty && l.syntax !== null && l.syntax.isValid && l.semantics.forall[isValid]
 	}
-	
+
 	/**
 	 * Checks whether the given {@link Language} {@code l} is correctly defined
 	 * and can be typed
 	 */
 	def boolean isTypable(Language l) {
-		return
-			   !l.name.nullOrEmpty
-			&& l.syntax !== null
-			&& !l.syntax.pkgs.filterNull.empty
-			&& l.semantics.forall[isValid]
+		return !l.name.nullOrEmpty && l.syntax !== null && !l.syntax.pkgs.filterNull.empty && l.semantics.forall [
+			isValid
+		]
 	}
 
 	/**
@@ -171,10 +163,8 @@ class LanguageExtensions
 	 * definition (either directly defined or inherited it from one of its
 	 * dependencies).
 	 */
-	def boolean hasSyntax(Language l) {
-		return
-			   !l.operators.filter(Import).empty
-			|| l.allDependencies.exists[hasSyntax]
+	def boolean hasSyntax(LanguageConcern l) {
+		return !l.operators.filter(Import).empty || l.allDependencies.exists[hasSyntax]
 	}
 
 	/**
@@ -191,39 +181,40 @@ class LanguageExtensions
 	 *   <li>From {@link Inheritance} relations, in the left->right order</li>
 	 * </ul>
 	 */
-	def List<Aspect> getAllAspects(Language l) {
+	def List<Aspect> getAllAspects(LanguageConcern l) {
 		val res = newHashSet
 
-		res += l.localSemantics
-		res +=
-			l.operators.map[op |
-				if (op instanceof Slice)
-					op.targetLanguage.allAspects
-				else if (op instanceof Merge)
-					op.targetLanguage.allAspects
-				else
-					newArrayList
-			].flatten
-		res += l.operators.filter(Inheritance)
-				.map[targetLanguage.allAspects].flatten
+		if (l instanceof Language) {
+			res += l.localSemantics
+		}
+		res += l.operators.map [ op |
+			if (op instanceof Slice)
+				op.targetLanguage.allAspects
+			else if (op instanceof Merge)
+				op.targetLanguage.allAspects
+			else
+				newArrayList
+		].flatten
+		res += l.operators.filter(Inheritance).map[targetLanguage.allAspects].flatten
 
 		return res.toList
 	}
-	
+
 	/**
 	 * Makes no sense to me :) Comment that later on :/
 	 */
-	//TODO: merge with createExternalAspect()
+	// TODO: merge with createExternalAspect()
 	def List<Aspect> allSemantics(Language l) {
 		// Aspects were re-ordered when they were copied
 		if (l.generatedByMelange)
 			return l.semantics
 		else {
 			val res = newArrayList
-			l.semantics.reverseView.forEach[a1 |
-				if (!res.exists[Aspect a2 | a2.aspectTypeRef.identifier == a1.aspectTypeRef.identifier]
-					&& (!a1.hasAspectAnnotation || l.syntax.pkgs.head.allClasses.exists[cls | cls.name == a1.aspectedClass?.name]))
-				{
+			l.semantics.reverseView.forEach [ a1 |
+				if (!res.exists[Aspect a2|a2.aspectTypeRef.identifier == a1.aspectTypeRef.identifier] &&
+					(!a1.hasAspectAnnotation || l.syntax.pkgs.head.allClasses.exists [ cls |
+						cls.name == a1.aspectedClass?.name
+					])) {
 					res += a1
 				}
 			]
@@ -235,11 +226,13 @@ class LanguageExtensions
 	 * Returns the list of {@link Aspect}s created from {@link Weave} operators.
 	 * The order is the same as in the {@link Language} declaration
 	 */
-	def List<Aspect> getLocalSemantics(Language l) {
-		return
-			l.semantics.filter[asp |
+	def List<Aspect> getLocalSemantics(LanguageConcern l) {
+		if (l instanceof Language)
+			return l.semantics.filter [ asp |
 				asp.owningLanguage === asp.source.owningLanguage
 			].toList
+		else
+			return newArrayList()
 	}
 
 	/**
@@ -248,15 +241,13 @@ class LanguageExtensions
 	 * one of its super-classes.
 	 */
 	def Set<Aspect> findAspectsOn(Language l, EClass cls) {
-		return
-			l.allSemantics
-			.filter[asp |
-				!asp.aspectedClass?.name.nullOrEmpty
-				&& (
-				   asp.aspectedClass?.fullyQualifiedName == cls.fullyQualifiedName
-				|| cls.EAllSuperTypes.exists[asp.aspectedClass?.fullyQualifiedName == fullyQualifiedName]
+		return l.allSemantics.filter [ asp |
+			!asp.aspectedClass?.name.nullOrEmpty && (
+				   asp.aspectedClass?.fullyQualifiedName == cls.fullyQualifiedName || cls.EAllSuperTypes.exists [
+				asp.aspectedClass?.fullyQualifiedName == fullyQualifiedName
+			]
 				)
-			].toSet
+		].toSet
 	}
 
 	/**
@@ -266,11 +257,7 @@ class LanguageExtensions
 	 * @see MatchingHelper#match
 	 */
 	def boolean doesImplement(Language l, ModelType mt) {
-		return
-			matchingHelper.match(
-				l.syntax.pkgs.toList,
-				mt.pkgs.toList,
-				l.mappings.findFirst[to == mt])
+		return matchingHelper.match(l.syntax.pkgs.toList, mt.pkgs.toList, l.mappings.findFirst[to == mt])
 	}
 
 	/**
@@ -295,11 +282,8 @@ class LanguageExtensions
 	def boolean hasAdapterFor(Language l, ModelType mt, String find) {
 		val syntaxFind = l.syntax.findClass(find)
 
-		return
-			   l.^implements.exists[name == mt.name]
-			&& syntaxFind !== null
-			&& mt.findClass(find) !== null
-			&& syntaxFind.abstractable
+		return l.^implements.exists[name == mt.name] && syntaxFind !== null && mt.findClass(find) !== null &&
+			syntaxFind.abstractable
 	}
 
 	/**
@@ -322,15 +306,14 @@ class LanguageExtensions
 	 * @see #getExternalPackageUri
 	 */
 	def void createExternalGenmodel(Language l) {
-		l.syntax.createGenmodel(l.externalEcoreUri, l.externalGenmodelUri,
-			l.externalGenerationPath)
+		l.syntax.createGenmodel(l.externalEcoreUri, l.externalGenmodelUri, l.externalGenerationPath)
 	}
 
 	/**
 	 * Get the name of the project that will contain all the runtime of
 	 * the given {@link Language} {@code l} (Ecore, Genmodel, Java runtime, etc.)
 	 */
-	def String getExternalRuntimeName(Language l) {
+	def String getExternalRuntimeName(LanguageConcern l) {
 		return l.fullyQualifiedName.toLowerCase.toString
 	}
 
@@ -338,13 +321,13 @@ class LanguageExtensions
 	 * Returns the URI of the {@link Language} {@code l} once it is generated.
 	 * The returned URI is of the form {@code http://$languageNameInLowerCase/}.
 	 */
-	def String getExternalPackageUri(Language l) {
+	def String getExternalPackageUri(LanguageConcern l) {
 		return '''http://«l.fullyQualifiedName.toLowerCase»/'''
 	}
 
 	def String getExternalEcorePath(Language l) {
 		val project = l.eResource.project
-		if(project !== null && l.externalRuntimeName == project.name) {
+		if (project !== null && l.externalRuntimeName == project.name) {
 			return '''../«l.externalRuntimeName»/model-gen/«l.name».ecore'''
 		} else {
 			return '''../«l.externalRuntimeName»/model/«l.name».ecore'''
@@ -353,7 +336,7 @@ class LanguageExtensions
 
 	def String getExternalGenmodelPath(Language l) {
 		val project = l.eResource.project
-		if(project !== null && l.externalRuntimeName == project.name) {
+		if (project !== null && l.externalRuntimeName == project.name) {
 			return '''../«l.externalRuntimeName»/model-gen/«l.name».genmodel'''
 		} else {
 			return '''../«l.externalRuntimeName»/model/«l.name».genmodel'''
@@ -362,7 +345,7 @@ class LanguageExtensions
 
 	def String getExternalGenerationPath(Language l) {
 		val project = l.eResource.project
-		if(project !== null && l.externalRuntimeName == project.name) {
+		if (project !== null && l.externalRuntimeName == project.name) {
 			return '''../«l.externalRuntimeName»/src-model-gen/'''
 		} else {
 			return '''../«l.externalRuntimeName»/src/'''
@@ -371,19 +354,19 @@ class LanguageExtensions
 
 	def String getExternalEcoreUri(Language l) {
 		val project = l.eResource.project
-		if(project !== null && l.externalRuntimeName == project.name) {
+		if (project !== null && l.externalRuntimeName == project.name) {
 			return '''platform:/resource/«l.externalRuntimeName»/model-gen/«l.name».ecore'''
 		} else {
-			return '''platform:/resource/«l.externalRuntimeName»/model/«l.name».ecore'''			
+			return '''platform:/resource/«l.externalRuntimeName»/model/«l.name».ecore'''
 		}
 	}
 
 	def String getExternalGenmodelUri(Language l) {
 		val project = l.eResource.project
-		if(project !== null && l.externalRuntimeName == project.name) {
+		if (project !== null && l.externalRuntimeName == project.name) {
 			return '''platform:/resource/«l.externalRuntimeName»/model-gen/«l.name».genmodel'''
 		} else {
-			return '''platform:/resource/«l.externalRuntimeName»/model/«l.name».genmodel'''			
+			return '''platform:/resource/«l.externalRuntimeName»/model/«l.name».genmodel'''
 		}
 	}
 
@@ -391,7 +374,7 @@ class LanguageExtensions
 	 * Returns the fully qualified name of the package that contains all
 	 * the (possibly type-group-copied) aspects of the {@link Language} {@code l}
 	 */
-	def String getAspectsNamespace(Language l) {
+	def String getAspectsNamespace(LanguageConcern l) {
 		return l.fullyQualifiedName.append("aspects").toLowerCase.toString
 //		val postfix =
 //			if (sourceAspectNamespace.segmentCount > 1
@@ -411,7 +394,7 @@ class LanguageExtensions
 	 * be generated by Melange, ie. if it consists of multiple syntax imports or
 	 * if it is constructed from others {@link Language}s.  
 	 */
-	def boolean isGeneratedByMelange(Language l) {		
+	def boolean isGeneratedByMelange(LanguageConcern l) {
 		return !(l instanceof ExternalLanguage || l instanceof ImportDsl)
 	}
 
@@ -434,13 +417,11 @@ class LanguageExtensions
 			segments += gp.getEcorePackage.name
 
 			val fqn = QualifiedName::create(segments).toString.replace(".", "/")
-			if (
-				   project.getFile(l.externalEcorePath).exists
-				&& project.getFile(l.externalGenmodelPath).exists
-				&& project.getFolder(l.externalGenerationPath + fqn).exists
-			)
+			if (project.getFile(l.externalEcorePath).exists && project.getFile(l.externalGenmodelPath).exists &&
+				project.getFolder(l.externalGenerationPath + fqn).exists)
 				return true
-			else return false
+			else
+				return false
 		} else
 			return true
 	}
@@ -451,7 +432,7 @@ class LanguageExtensions
 	 * {@code l}'s semantics with the newly generated aspects. 
 	 */
 	def void createExternalAspects(Language l) {
-		copier2.copyAspect(l,l)
+		copier2.copyAspect(l, l)
 	}
 
 	/**
@@ -459,28 +440,24 @@ class LanguageExtensions
 	 * {@code l} (ie. all the EMF namespaces generated from its syntax or the
 	 * syntax of one of its dependencies).
 	 */
-	def SetMultimap<String,String> collectTargetedPackages(Language l) {
+	def SetMultimap<String, String> collectTargetedPackages(LanguageConcern l) {
 		// Collection of syntaxPackageName -> javaPackageName*
 		val SetMultimap<String, String> res = HashMultimap.create
 
-		l.operators.filter(Import)
-			.map[allGenPkgs]
-			.flatten
-			.filter[getEcorePackage.ESuperPackage === null]
-			.forEach[
-				res.put(it.getEcorePackage.uniqueId,packageNamespace)
-				
+		l.operators.filter(Import).map[allGenPkgs].flatten.filter[getEcorePackage.ESuperPackage === null].forEach [
+			res.put(it.getEcorePackage.uniqueId, packageNamespace)
+
+		]
+		if (l instanceof Language) {
+			l.syntax.allGenPkgs.filter[getEcorePackage.ESuperPackage === null].forEach [
+				res.put(it.getEcorePackage.uniqueId, packageNamespace)
 			]
-		l.syntax.allGenPkgs.filter[getEcorePackage.ESuperPackage === null]
-			.forEach[
-				res.put(it.getEcorePackage.uniqueId,packageNamespace)
-			]
+		}
 		l.allDependencies.map[collectTargetedPackages].forEach[res.putAll(it)]
 //		l.allDependencies.map[syntax.allGenPkgs.filter[getEcorePackage.ESuperPackage === null]]
 //			.flatten.forEach[
 //				res.put(it.getEcorePackage.uniqueId,packageNamespace)
 //			]
-
 		return res
 	}
 
@@ -501,13 +478,10 @@ class LanguageExtensions
 		root.clearSemantics
 
 		val processed = newArrayList
-		root.languages
-			.filter[isGeneratedByMelange]
-			.filter[!processed.contains(it)]
-			.forEach[lang |
-				lang.makeAllSemantics(processed)
-				lang.ensureUniqueAspects
-			]
+		root.languages.filter[isGeneratedByMelange].filter[!processed.contains(it)].forEach [ lang |
+			lang.makeAllSemantics(processed)
+			lang.ensureUniqueAspects
+		]
 	}
 
 	/**
@@ -515,24 +489,23 @@ class LanguageExtensions
 	 * clear all its semantics and only keep those from the {@link Weave} operator.
 	 */
 	def void clearSemantics(ModelTypingSpace root) {
-		root.languages.forEach[lang |
+		root.languages.forEach [ lang |
 			val localAspects = lang.localSemantics
 			lang.semantics.clear
 			lang.semantics += localAspects
 		]
 	}
 
-	private def void makeAllSemantics(Language language, List<Language> processed) {
+	private def void makeAllSemantics(LanguageConcern language, List<LanguageConcern> processed) {
 		if (!processed.contains(language)) {
 			processed += language
 
-			language.allDependencies
-			.filter[!processed.contains(it) && generatedByMelange]
-			.forEach[superLang |
+			language.allDependencies.filter[!processed.contains(it) && generatedByMelange].forEach [ superLang |
 				superLang.makeAllSemantics(processed)
 			]
 
-			language.makeAllSemantics
+			if (language instanceof Language)
+				language.makeAllSemantics
 		}
 	}
 
@@ -547,44 +520,44 @@ class LanguageExtensions
 	private def void makeAllSemantics(Language language) {
 		// Update local aspects (ie. woven with the 'with' keyword)
 		language.updateLocalAspects
-		
-		// Merge & Slice operators
-		language.operators.reverseView
-		.filter(LanguageOperator)
-		.filter[it instanceof Merge || it instanceof Slice]
-		.forEach[op |
-			var aspects = op.targetLanguage.orderedAspects
-			if(op instanceof Slice){
-				val opBuilders = modelTypingSpaceBuilder.findBuilder(language).subBuilders
-				val sliceBuilder = opBuilders.findFirst[source == op]
-				val sliceClasses = 
-					if(sliceBuilder !== null)
-						sliceBuilder.model.map[allClasses].flatten
-					else newArrayList
-				aspects = 
-					aspects.filter[asp |
-						sliceClasses.exists[name == asp.aspectedClass?.name]
-					].toList
-			}
-			aspects.forEach[asp |
-				val localAspectedClass = language.syntax.findClass(findClassWithMapping(asp,op)?.fullyQualifiedName?.toString)
-				val newAsp = MelangeFactory.eINSTANCE.createAspect => [
-					aspectedClass = localAspectedClass
-					aspectTypeRef = typesBuilder.cloneWithProxies(asp.aspectTypeRef)
-					ecoreFragment = EcoreUtil::copy(asp.ecoreFragment)
-					source = asp.source
-				]
 
-				language.semantics += newAsp
-				newAsp.tryUpdateAspect
+		// Merge & Slice operators
+		language.operators.reverseView.filter(LanguageOperator).filter[it instanceof Merge || it instanceof Slice].
+			forEach [ op |
+				if (op.targetLanguage instanceof Language) {
+					var aspects = (op.targetLanguage as Language).orderedAspects
+					if (op instanceof Slice) {
+						val opBuilders = modelTypingSpaceBuilder.findBuilder(language).subBuilders
+						val sliceBuilder = opBuilders.findFirst[source == op]
+						val sliceClasses = if (sliceBuilder !== null)
+								sliceBuilder.model.map[allClasses].flatten
+							else
+								newArrayList
+						aspects = aspects.filter [ asp |
+							sliceClasses.exists[name == asp.aspectedClass?.name]
+						].toList
+					}
+					aspects.forEach [ asp |
+						val localAspectedClass = language.syntax.findClass(
+							findClassWithMapping(asp, op)?.fullyQualifiedName?.toString)
+						val newAsp = MelangeFactory.eINSTANCE.createAspect => [
+							aspectedClass = localAspectedClass
+							aspectTypeRef = typesBuilder.cloneWithProxies(asp.aspectTypeRef)
+							ecoreFragment = EcoreUtil::copy(asp.ecoreFragment)
+							source = asp.source
+						]
+
+						language.semantics += newAsp
+						newAsp.tryUpdateAspect
+					]
+				}
 			]
-		]
 
 		// Inheritance operator
-		language.superLanguages.toList.reverseView.forEach[superLang |
-			superLang.orderedAspects.forEach[asp |
+		language.superLanguages.toList.reverseView.forEach [ superLang |
+			superLang.orderedAspects.forEach [ asp |
 				val localAspectedClass = language.syntax.findClass(asp.aspectedClass?.fullyQualifiedName?.toString)
-				val newAsp =  MelangeFactory.eINSTANCE.createAspect => [
+				val newAsp = MelangeFactory.eINSTANCE.createAspect => [
 					aspectedClass = localAspectedClass
 					aspectTypeRef = typesBuilder.cloneWithProxies(asp.aspectTypeRef)
 					ecoreFragment = EcoreUtil.copy(asp.ecoreFragment)
@@ -603,7 +576,7 @@ class LanguageExtensions
 	 */
 	private def void ensureUniqueAspects(Language language) {
 		val noDuplicates = newLinkedHashMap
-		language.semantics.forEach[asp |
+		language.semantics.forEach [ asp |
 			noDuplicates.put(asp.aspectTypeRef.identifier, asp)
 		]
 
@@ -615,21 +588,23 @@ class LanguageExtensions
 	 * Get {@link Aspect}s from the {@link Language} {@code language} ordered
 	 * by their overriding priority.
 	 */
-	private def List<Aspect> getOrderedAspects(Language language) {
+	private def List<Aspect> getOrderedAspects(LanguageConcern language) {
 		// FIXME: Seems weird to me :/
-		return 
-			if (language.isGeneratedByMelange)
+		if (language instanceof Language)
+			return if (language.isGeneratedByMelange)
 				language.semantics
 			else
 				language.semantics.reverseView
+		else
+			newArrayList()
 	}
-	
+
 	/**
 	 * Try to update each of the local {@link Aspect}s of the {@link Language}
 	 * {@code language} to point to their generated equivalent.
 	 */
 	private def void updateLocalAspects(Language language) {
-		language.localSemantics.reverseView.forEach[asp |
+		language.localSemantics.reverseView.forEach [ asp |
 			asp.aspectedClass = language.syntax.findClass(asp.aspectedClass?.fullyQualifiedName?.toString)
 			asp.tryUpdateAspect
 		]
@@ -645,11 +620,10 @@ class LanguageExtensions
 		val newRef = typeRefBuilder.typeRef(
 			'''«language.aspectsNamespace».«aspectSimpleName»''')
 
-		return
-			if (newRef instanceof JvmUnknownTypeReference)
-				null
-			else
-				newRef
+		return if (newRef instanceof JvmUnknownTypeReference)
+			null
+		else
+			newRef
 	}
 
 	/**
@@ -657,16 +631,10 @@ class LanguageExtensions
 	 * in {@code language}'s {@link Aspect}s.
 	 */
 	def Set<JvmOperation> getEntryPoints(Language language) {
-		return
-			language.allSemantics
-	        .map[aspectTypeRef.type]
-	        .filter(JvmDeclaredType)
-	        .map[declaredOperations]
-	        .flatten
-	        .filter[annotations.exists[annotation.qualifiedName == ASPECT_MAIN_ANNOTATION]]
-	        .toSet
+		return language.allSemantics.map[aspectTypeRef.type].filter(JvmDeclaredType).map[declaredOperations].flatten.
+			filter[annotations.exists[annotation.qualifiedName == ASPECT_MAIN_ANNOTATION]].toSet
 	}
-	
+
 	/**
 	 * Search in {@link op}.owningLanguage for the class on which {@link asp}
 	 * is weaved, taking in account the mapping
@@ -674,132 +642,112 @@ class LanguageExtensions
 	 * @param asp An aspect from op.targetLanguage
 	 * @param op A Merge or Slice operator
 	 */
-	def EClass findClassWithMapping(Aspect asp, LanguageOperator op){
-		
+	def EClass findClassWithMapping(Aspect asp, LanguageOperator op) {
+
 		var classFqName = asp.aspectedClass?.fullyQualifiedName?.toString
-		
-		val rules = 
-			if(op instanceof Merge)
+
+		val rules = if (op instanceof Merge)
 				op.mappingRules
-			else if(op instanceof Slice)
+			else if (op instanceof Slice)
 				op.mappingRules
-		if(!rules.isNullOrEmpty)
+		if (!rules.isNullOrEmpty)
 			classFqName = classFqName.rename(rules)
-		
-		return 
-			op
-			.owningLanguage
-			.syntax
-			.findClass(classFqName)
+
+		return op.owningLanguage.syntax.findClass(classFqName)
 	}
-	
+
 	/**
 	 * Return null if {@link op} has no mapping
 	 */
-	def RenamingRuleManager createRenamingManager(LanguageOperator op){
+	def RenamingRuleManager createRenamingManager(LanguageOperator op) {
 //		val newRootName = op.owningLanguage.syntax.rootPackageNamespace
-		val rules = 
-			if(op instanceof Merge)
+		val rules = if (op instanceof Merge)
 				op.mappingRules
-			else if(op instanceof Slice)
+			else if (op instanceof Slice)
 				op.mappingRules
-				
-		if(rules.isNullOrEmpty)
+
+		if (rules.isNullOrEmpty)
 			return null
 		else
 			return new RenamingRuleManager(rules, #[], aspectExtension)
 	}
-	
+
 	/**
 	 * Returns mappings from syntax, merge & slice operators
 	 */
-	def List<PackageBinding> collectMappings(Language l){
+	def List<PackageBinding> collectMappings(Language l) {
 		val res = newArrayList
 		res.addAll(l.operators.filter(Import).map[mappingRules].flatten)
 		res.addAll(l.operators.filter(Merge).map[mappingRules].flatten)
 		res.addAll(l.operators.filter(Slice).map[mappingRules].flatten)
 		return res
 	}
-	
-	def String rename(String qualifiedClsName,  List<PackageBinding> rules){
-		if(qualifiedClsName === null || !qualifiedClsName.contains("."))
+
+	def String rename(String qualifiedClsName, List<PackageBinding> rules) {
+		if (qualifiedClsName === null || !qualifiedClsName.contains("."))
 			return qualifiedClsName
-			
-		val pkgName = qualifiedClsName.substring(0,qualifiedClsName.lastIndexOf("."))
-		val simpleName = qualifiedClsName.substring(qualifiedClsName.lastIndexOf(".")+1)
-		
+
+		val pkgName = qualifiedClsName.substring(0, qualifiedClsName.lastIndexOf("."))
+		val simpleName = qualifiedClsName.substring(qualifiedClsName.lastIndexOf(".") + 1)
+
 		val candidateRules = rules.filter[pkgName.endsWith(from)]
 		val res = candidateRules.findFirst[classes.exists[from == simpleName]]
-		if(res !== null){
+		if (res !== null) {
 			return res.to + "." + res.classes.findFirst[from == simpleName].to
-		}
-		else if(!candidateRules.isEmpty){
+		} else if (!candidateRules.isEmpty) {
 			return candidateRules.head.to + "." + simpleName
 		}
-		
+
 		return qualifiedClsName
 	}
-	
+
 	private def Set<String> collectAspectDependencies(Language l) {
 		val scope = l.allDependencies
 		scope.add(l)
-		val originalAspects = scope
-			.map[operators]
-			.flatten
-			.filter(Weave)
-			.filter[aspectWildcardImport === null]
-			.map[aspectTypeRef]
-			.toSet
-		val originalEcores = scope
-			.map[operators]
-			.flatten
-			.filter(Import)
-			.map[ecoreUri]
-			.toSet
-		
-		val ecoreProjects = originalEcores
-			.map[ecoreURI |
-				val URI uri = URI.createURI(ecoreURI);
-				val String filePath = uri.toPlatformString(true);
-				if(filePath !== null){
-					val IPath path = new Path(filePath);
-					ResourcesPlugin.getWorkspace().getRoot().getFile(path);
-				}
-			]
-			.filterNull
-			.map[project]
-			.toSet
-		
+		val originalAspects = scope.map[operators].flatten.filter(Weave).filter[aspectWildcardImport === null].map [
+			aspectTypeRef
+		].toSet
+		val originalEcores = scope.map[operators].flatten.filter(Import).map[ecoreUri].toSet
+
+		val ecoreProjects = originalEcores.map [ ecoreURI |
+			val URI uri = URI.createURI(ecoreURI);
+			val String filePath = uri.toPlatformString(true);
+			if (filePath !== null) {
+				val IPath path = new Path(filePath);
+				ResourcesPlugin.getWorkspace().getRoot().getFile(path);
+			}
+		].filterNull.map[project].toSet
+
 		val k3Projects = new HashSet<IProject>
 		val ws = ResourcesPlugin.workspace.root
 		try {
 			ws.accept(new IResourceVisitor {
 				override visit(IResource resource) throws CoreException {
 					if (resource instanceof IFile) {
-						val firstMatch = originalAspects.findFirst[ref|
+						val firstMatch = originalAspects.findFirst [ ref |
 							val pattern = ref.identifier.replace(".", "/") + ".java"
 							resource.locationURI.path.endsWith(pattern)
 						]
-						if (firstMatch !== null){
+						if (firstMatch !== null) {
 							k3Projects.add(resource.project)
 						}
-	
+
 						return false
 					}
-	
+
 					return true
 				}
 			})
 		} catch (CoreException e) {
 			log.error("Unexpected exception while visiting workspace", e)
 		}
-		
+
 		val allRequiredBundles = k3Projects.map[dependencies].flatten.toSet
 		allRequiredBundles.removeAll(ecoreProjects.map[name])
-		
+
 		return allRequiredBundles
 	}
-	
+
 	/**
 	 * Collect required bundles from Aspect's projects (Ecore bundles excluded)
 	 * and add them to the runtime project of {@link l}.
@@ -808,70 +756,72 @@ class LanguageExtensions
 		val project = ResourcesPlugin.workspace.root.getProject(l.externalRuntimeName)
 		eclipseHelper.addDependencies(project, l.collectAspectDependencies)
 	}
-	
+
 	/**
 	 * Return all local aspects extracted from {@link l}'s dependencies associated with renaming rules
 	 * from aspect.owningLanguage to {@link l}
 	 */
-	def List<Pair<Aspect,List<PackageBinding>>> getAllAspectsWithRenaming(Language l, Stack<List<PackageBinding>> stack) {
-		val res = new ArrayList<Pair<Aspect,List<PackageBinding>>>()
+	def List<Pair<Aspect, List<PackageBinding>>> getAllAspectsWithRenaming(LanguageConcern l,
+		Stack<List<PackageBinding>> stack) {
+		val res = new ArrayList<Pair<Aspect, List<PackageBinding>>>()
 
 		val renaming = AspectCopier2.flatten(stack)
-		l.localSemantics.forEach[asp| res.add(new Pair(asp,renaming))]
-		
-		l.operators.forEach[op |
-			if (op instanceof Slice){
-				stack.push(op.mappingRules)
-				res.addAll(op.targetLanguage.getAllAspectsWithRenaming(stack))
-				stack.pop
-				
-			}
-			else if (op instanceof Merge){
-				stack.push(op.mappingRules)
-				res.addAll(op.targetLanguage.getAllAspectsWithRenaming(stack))
-				stack.pop
+		l.localSemantics.forEach[asp|res.add(new Pair(asp, renaming))]
+
+		l.operators.forEach [ op |
+			if (op instanceof LanguageOperator) {
+				val opl = op.targetLanguage
+				if (op instanceof Slice) {
+					stack.push(op.mappingRules)
+					res.addAll(opl.getAllAspectsWithRenaming(stack))
+					stack.pop
+
+				} else if (op instanceof Merge) {
+					stack.push(op.mappingRules)
+					res.addAll(opl.getAllAspectsWithRenaming(stack))
+					stack.pop
+				}
 			}
 		]
-		res += l.operators.filter(Inheritance)
-				.map[targetLanguage.getAllAspectsWithRenaming(stack)].flatten
+		res += l.operators.filter(Inheritance).map[targetLanguage.getAllAspectsWithRenaming(stack)].flatten
 
 		return res.toList
 	}
-	
-	def boolean isXmof(Language l){
+
+	def boolean isXmof(Language l) {
 		return l instanceof ExternalLanguage && l.xmof !== null
 	}
-	
+
 	def Dsl toDsl(Language l) {
 		val dsl = DslFactoryImpl.eINSTANCE.createDsl
 		dsl.name = l.fullyQualifiedName.toString
 		dsl.abstractSyntax = DslFactoryImpl.eINSTANCE.createAbstractSyntax
-		
+
 		val ecore = DslFactoryImpl.eINSTANCE.createSimpleValue
 		ecore.name = "ecore"
 		ecore.values += l.syntax.ecoreUri
 		dsl.abstractSyntax.values += ecore
-		
-		if(!l.semantics.isEmpty) {
+
+		if (!l.semantics.isEmpty) {
 			dsl.semantic = DslFactoryImpl.eINSTANCE.createSemantic
 			val k3Aspects = DslFactoryImpl.eINSTANCE.createSimpleValue
 			k3Aspects.name = "k3"
-			l.semantics.forEach[asp |
+			l.semantics.forEach [ asp |
 				k3Aspects.values += asp.aspectTypeRef.qualifiedName
 			]
 			dsl.semantic.values += k3Aspects
 		}
-		
+
 		return dsl
 	}
-	
+
 	def void createDsl(Language l) {
-		val uri = l.externalEcoreUri.replaceFirst("ecore$","dsl")
+		val uri = l.externalEcoreUri.replaceFirst("ecore$", "dsl")
 		val resSet = new ResourceSetImpl
 		val res = resSet.createResource(URI::createURI(uri))
-		
+
 		res.contents += l.toDsl
-		
+
 		try {
 			val options = newHashMap
 			res.save(options)

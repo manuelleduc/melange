@@ -12,9 +12,11 @@ package fr.inria.diverse.melange.metamodel.melange.impl;
 
 import fr.inria.diverse.melange.metamodel.melange.MelangePackage;
 import fr.inria.diverse.melange.metamodel.melange.ReferenceReuseFeature;
+
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
@@ -40,6 +42,7 @@ public class ReferenceReuseFeatureImpl extends ReuseFeatureImpl implements Refer
 	 * @ordered
 	 */
 	protected static final boolean UNSELECTED_EDEFAULT = false;
+
 	/**
 	 * The cached value of the '{@link #isUnselected() <em>Unselected</em>}' attribute.
 	 * <!-- begin-user-doc -->

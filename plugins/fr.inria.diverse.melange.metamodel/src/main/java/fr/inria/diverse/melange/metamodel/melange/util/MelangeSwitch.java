@@ -211,6 +211,7 @@ public class MelangeSwitch<T> extends Switch<T> {
 			case MelangePackage.LANGUAGE: {
 				Language language = (Language)theEObject;
 				T result = caseLanguage(language);
+				if (result == null) result = caseLanguageConcern(language);
 				if (result == null) result = caseNamedElement(language);
 				if (result == null) result = caseElement(language);
 				if (result == null) result = defaultCase(theEObject);
@@ -234,6 +235,7 @@ public class MelangeSwitch<T> extends Switch<T> {
 				ExternalLanguage externalLanguage = (ExternalLanguage)theEObject;
 				T result = caseExternalLanguage(externalLanguage);
 				if (result == null) result = caseLanguage(externalLanguage);
+				if (result == null) result = caseLanguageConcern(externalLanguage);
 				if (result == null) result = caseNamedElement(externalLanguage);
 				if (result == null) result = caseElement(externalLanguage);
 				if (result == null) result = defaultCase(theEObject);
@@ -249,6 +251,7 @@ public class MelangeSwitch<T> extends Switch<T> {
 				ImportDsl importDsl = (ImportDsl)theEObject;
 				T result = caseImportDsl(importDsl);
 				if (result == null) result = caseLanguage(importDsl);
+				if (result == null) result = caseLanguageConcern(importDsl);
 				if (result == null) result = caseNamedElement(importDsl);
 				if (result == null) result = caseElement(importDsl);
 				if (result == null) result = defaultCase(theEObject);
@@ -301,6 +304,7 @@ public class MelangeSwitch<T> extends Switch<T> {
 				TaggedOperator taggedOperator = (TaggedOperator)theEObject;
 				T result = caseTaggedOperator(taggedOperator);
 				if (result == null) result = caseTaggedElement(taggedOperator);
+				if (result == null) result = caseOperator(taggedOperator);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}

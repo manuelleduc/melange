@@ -10,6 +10,7 @@
  */
 package fr.inria.diverse.melange.metamodel.melange.impl;
 
+import fr.inria.diverse.melange.metamodel.melange.Language;
 import fr.inria.diverse.melange.metamodel.melange.MelangePackage;
 import fr.inria.diverse.melange.metamodel.melange.Operator;
 import fr.inria.diverse.melange.metamodel.melange.TaggedOperator;
@@ -30,12 +31,23 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link fr.inria.diverse.melange.metamodel.melange.impl.TaggedOperatorImpl#getOwningLanguage <em>Owning Language</em>}</li>
  *   <li>{@link fr.inria.diverse.melange.metamodel.melange.impl.TaggedOperatorImpl#getOperator <em>Operator</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class TaggedOperatorImpl extends TaggedElementImpl implements TaggedOperator {
+	/**
+	 * The cached value of the '{@link #getOwningLanguage() <em>Owning Language</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getOwningLanguage()
+	 * @generated
+	 * @ordered
+	 */
+	protected Language owningLanguage;
+
 	/**
 	 * The cached value of the '{@link #getOperator() <em>Operator</em>}' containment reference.
 	 * <!-- begin-user-doc -->
@@ -63,6 +75,44 @@ public class TaggedOperatorImpl extends TaggedElementImpl implements TaggedOpera
 	@Override
 	protected EClass eStaticClass() {
 		return MelangePackage.Literals.TAGGED_OPERATOR;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Language getOwningLanguage() {
+		if (owningLanguage != null && owningLanguage.eIsProxy()) {
+			InternalEObject oldOwningLanguage = (InternalEObject)owningLanguage;
+			owningLanguage = (Language)eResolveProxy(oldOwningLanguage);
+			if (owningLanguage != oldOwningLanguage) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, MelangePackage.TAGGED_OPERATOR__OWNING_LANGUAGE, oldOwningLanguage, owningLanguage));
+			}
+		}
+		return owningLanguage;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Language basicGetOwningLanguage() {
+		return owningLanguage;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setOwningLanguage(Language newOwningLanguage) {
+		Language oldOwningLanguage = owningLanguage;
+		owningLanguage = newOwningLanguage;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, MelangePackage.TAGGED_OPERATOR__OWNING_LANGUAGE, oldOwningLanguage, owningLanguage));
 	}
 
 	/**
@@ -130,6 +180,9 @@ public class TaggedOperatorImpl extends TaggedElementImpl implements TaggedOpera
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case MelangePackage.TAGGED_OPERATOR__OWNING_LANGUAGE:
+				if (resolve) return getOwningLanguage();
+				return basicGetOwningLanguage();
 			case MelangePackage.TAGGED_OPERATOR__OPERATOR:
 				return getOperator();
 		}
@@ -144,6 +197,9 @@ public class TaggedOperatorImpl extends TaggedElementImpl implements TaggedOpera
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case MelangePackage.TAGGED_OPERATOR__OWNING_LANGUAGE:
+				setOwningLanguage((Language)newValue);
+				return;
 			case MelangePackage.TAGGED_OPERATOR__OPERATOR:
 				setOperator((Operator)newValue);
 				return;
@@ -159,6 +215,9 @@ public class TaggedOperatorImpl extends TaggedElementImpl implements TaggedOpera
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
+			case MelangePackage.TAGGED_OPERATOR__OWNING_LANGUAGE:
+				setOwningLanguage((Language)null);
+				return;
 			case MelangePackage.TAGGED_OPERATOR__OPERATOR:
 				setOperator((Operator)null);
 				return;
@@ -174,10 +233,44 @@ public class TaggedOperatorImpl extends TaggedElementImpl implements TaggedOpera
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case MelangePackage.TAGGED_OPERATOR__OWNING_LANGUAGE:
+				return owningLanguage != null;
 			case MelangePackage.TAGGED_OPERATOR__OPERATOR:
 				return operator != null;
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
+		if (baseClass == Operator.class) {
+			switch (derivedFeatureID) {
+				case MelangePackage.TAGGED_OPERATOR__OWNING_LANGUAGE: return MelangePackage.OPERATOR__OWNING_LANGUAGE;
+				default: return -1;
+			}
+		}
+		return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
+		if (baseClass == Operator.class) {
+			switch (baseFeatureID) {
+				case MelangePackage.OPERATOR__OWNING_LANGUAGE: return MelangePackage.TAGGED_OPERATOR__OWNING_LANGUAGE;
+				default: return -1;
+			}
+		}
+		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
 	}
 
 } //TaggedOperatorImpl

@@ -2017,8 +2017,8 @@ public class MelangeGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cMergeKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cTargetLanguageAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final CrossReference cTargetLanguageLanguageCrossReference_1_0 = (CrossReference)cTargetLanguageAssignment_1.eContents().get(0);
-		private final RuleCall cTargetLanguageLanguageQualifiedNameParserRuleCall_1_0_1 = (RuleCall)cTargetLanguageLanguageCrossReference_1_0.eContents().get(1);
+		private final CrossReference cTargetLanguageLanguageConcernCrossReference_1_0 = (CrossReference)cTargetLanguageAssignment_1.eContents().get(0);
+		private final RuleCall cTargetLanguageLanguageConcernQualifiedNameParserRuleCall_1_0_1 = (RuleCall)cTargetLanguageLanguageConcernCrossReference_1_0.eContents().get(1);
 		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
 		private final Keyword cRenamingKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
 		private final Keyword cLeftCurlyBracketKeyword_2_1 = (Keyword)cGroup_2.eContents().get(1);
@@ -2027,25 +2027,25 @@ public class MelangeGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_2_3 = (Keyword)cGroup_2.eContents().get(3);
 		
 		//Merge:
-		//	'merge' targetLanguage=[Language|QualifiedName] ('renaming' '{'
+		//	'merge' targetLanguage=[LanguageConcern|QualifiedName] ('renaming' '{'
 		//	mappingRules+=PackageMapping*
 		//	'}')?;
 		@Override public ParserRule getRule() { return rule; }
 
-		//'merge' targetLanguage=[Language|QualifiedName] ('renaming' '{' mappingRules+=PackageMapping* '}')?
+		//'merge' targetLanguage=[LanguageConcern|QualifiedName] ('renaming' '{' mappingRules+=PackageMapping* '}')?
 		public Group getGroup() { return cGroup; }
 
 		//'merge'
 		public Keyword getMergeKeyword_0() { return cMergeKeyword_0; }
 
-		//targetLanguage=[Language|QualifiedName]
+		//targetLanguage=[LanguageConcern|QualifiedName]
 		public Assignment getTargetLanguageAssignment_1() { return cTargetLanguageAssignment_1; }
 
-		//[Language|QualifiedName]
-		public CrossReference getTargetLanguageLanguageCrossReference_1_0() { return cTargetLanguageLanguageCrossReference_1_0; }
+		//[LanguageConcern|QualifiedName]
+		public CrossReference getTargetLanguageLanguageConcernCrossReference_1_0() { return cTargetLanguageLanguageConcernCrossReference_1_0; }
 
 		//QualifiedName
-		public RuleCall getTargetLanguageLanguageQualifiedNameParserRuleCall_1_0_1() { return cTargetLanguageLanguageQualifiedNameParserRuleCall_1_0_1; }
+		public RuleCall getTargetLanguageLanguageConcernQualifiedNameParserRuleCall_1_0_1() { return cTargetLanguageLanguageConcernQualifiedNameParserRuleCall_1_0_1; }
 
 		//('renaming' '{' mappingRules+=PackageMapping* '}')?
 		public Group getGroup_2() { return cGroup_2; }
@@ -2071,8 +2071,8 @@ public class MelangeGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cSliceKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cTargetLanguageAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final CrossReference cTargetLanguageLanguageCrossReference_1_0 = (CrossReference)cTargetLanguageAssignment_1.eContents().get(0);
-		private final RuleCall cTargetLanguageLanguageQualifiedNameParserRuleCall_1_0_1 = (RuleCall)cTargetLanguageLanguageCrossReference_1_0.eContents().get(1);
+		private final CrossReference cTargetLanguageLanguageConcernCrossReference_1_0 = (CrossReference)cTargetLanguageAssignment_1.eContents().get(0);
+		private final RuleCall cTargetLanguageLanguageConcernQualifiedNameParserRuleCall_1_0_1 = (RuleCall)cTargetLanguageLanguageConcernCrossReference_1_0.eContents().get(1);
 		private final Keyword cOnKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		private final Keyword cLeftSquareBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		private final Assignment cRootsAssignment_4 = (Assignment)cGroup.eContents().get(4);
@@ -2090,26 +2090,26 @@ public class MelangeGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_7_3 = (Keyword)cGroup_7.eContents().get(3);
 		
 		//Slice:
-		//	'slice' targetLanguage=[Language|QualifiedName] 'on' '[' roots+=STRING (',' roots+=STRING)* ']' ('renaming' '{'
+		//	'slice' targetLanguage=[LanguageConcern|QualifiedName] 'on' '[' roots+=STRING (',' roots+=STRING)* ']' ('renaming' '{'
 		//	mappingRules+=PackageMapping*
 		//	'}')?;
 		@Override public ParserRule getRule() { return rule; }
 
-		//'slice' targetLanguage=[Language|QualifiedName] 'on' '[' roots+=STRING (',' roots+=STRING)* ']' ('renaming' '{'
+		//'slice' targetLanguage=[LanguageConcern|QualifiedName] 'on' '[' roots+=STRING (',' roots+=STRING)* ']' ('renaming' '{'
 		//mappingRules+=PackageMapping* '}')?
 		public Group getGroup() { return cGroup; }
 
 		//'slice'
 		public Keyword getSliceKeyword_0() { return cSliceKeyword_0; }
 
-		//targetLanguage=[Language|QualifiedName]
+		//targetLanguage=[LanguageConcern|QualifiedName]
 		public Assignment getTargetLanguageAssignment_1() { return cTargetLanguageAssignment_1; }
 
-		//[Language|QualifiedName]
-		public CrossReference getTargetLanguageLanguageCrossReference_1_0() { return cTargetLanguageLanguageCrossReference_1_0; }
+		//[LanguageConcern|QualifiedName]
+		public CrossReference getTargetLanguageLanguageConcernCrossReference_1_0() { return cTargetLanguageLanguageConcernCrossReference_1_0; }
 
 		//QualifiedName
-		public RuleCall getTargetLanguageLanguageQualifiedNameParserRuleCall_1_0_1() { return cTargetLanguageLanguageQualifiedNameParserRuleCall_1_0_1; }
+		public RuleCall getTargetLanguageLanguageConcernQualifiedNameParserRuleCall_1_0_1() { return cTargetLanguageLanguageConcernQualifiedNameParserRuleCall_1_0_1; }
 
 		//'on'
 		public Keyword getOnKeyword_2() { return cOnKeyword_2; }
@@ -2160,21 +2160,21 @@ public class MelangeGrammarAccess extends AbstractGrammarElementFinder {
 	public class InheritElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "fr.inria.diverse.melange.Melange.Inherit");
 		private final Assignment cTargetLanguageAssignment = (Assignment)rule.eContents().get(1);
-		private final CrossReference cTargetLanguageLanguageCrossReference_0 = (CrossReference)cTargetLanguageAssignment.eContents().get(0);
-		private final RuleCall cTargetLanguageLanguageQualifiedNameParserRuleCall_0_1 = (RuleCall)cTargetLanguageLanguageCrossReference_0.eContents().get(1);
+		private final CrossReference cTargetLanguageLanguageConcernCrossReference_0 = (CrossReference)cTargetLanguageAssignment.eContents().get(0);
+		private final RuleCall cTargetLanguageLanguageConcernQualifiedNameParserRuleCall_0_1 = (RuleCall)cTargetLanguageLanguageConcernCrossReference_0.eContents().get(1);
 		
 		//Inherit Inheritance:
-		//	targetLanguage=[Language|QualifiedName];
+		//	targetLanguage=[LanguageConcern|QualifiedName];
 		@Override public ParserRule getRule() { return rule; }
 
-		//targetLanguage=[Language|QualifiedName]
+		//targetLanguage=[LanguageConcern|QualifiedName]
 		public Assignment getTargetLanguageAssignment() { return cTargetLanguageAssignment; }
 
-		//[Language|QualifiedName]
-		public CrossReference getTargetLanguageLanguageCrossReference_0() { return cTargetLanguageLanguageCrossReference_0; }
+		//[LanguageConcern|QualifiedName]
+		public CrossReference getTargetLanguageLanguageConcernCrossReference_0() { return cTargetLanguageLanguageConcernCrossReference_0; }
 
 		//QualifiedName
-		public RuleCall getTargetLanguageLanguageQualifiedNameParserRuleCall_0_1() { return cTargetLanguageLanguageQualifiedNameParserRuleCall_0_1; }
+		public RuleCall getTargetLanguageLanguageConcernQualifiedNameParserRuleCall_0_1() { return cTargetLanguageLanguageConcernQualifiedNameParserRuleCall_0_1; }
 	}
 
 	public class WeaveElements extends AbstractParserRuleElementFinder {
@@ -2742,7 +2742,7 @@ public class MelangeGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Merge:
-	//	'merge' targetLanguage=[Language|QualifiedName] ('renaming' '{'
+	//	'merge' targetLanguage=[LanguageConcern|QualifiedName] ('renaming' '{'
 	//	mappingRules+=PackageMapping*
 	//	'}')?;
 	public MergeElements getMergeAccess() {
@@ -2754,7 +2754,7 @@ public class MelangeGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Slice:
-	//	'slice' targetLanguage=[Language|QualifiedName] 'on' '[' roots+=STRING (',' roots+=STRING)* ']' ('renaming' '{'
+	//	'slice' targetLanguage=[LanguageConcern|QualifiedName] 'on' '[' roots+=STRING (',' roots+=STRING)* ']' ('renaming' '{'
 	//	mappingRules+=PackageMapping*
 	//	'}')?;
 	public SliceElements getSliceAccess() {
@@ -2766,7 +2766,7 @@ public class MelangeGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Inherit Inheritance:
-	//	targetLanguage=[Language|QualifiedName];
+	//	targetLanguage=[LanguageConcern|QualifiedName];
 	public InheritElements getInheritAccess() {
 		return pInherit;
 	}

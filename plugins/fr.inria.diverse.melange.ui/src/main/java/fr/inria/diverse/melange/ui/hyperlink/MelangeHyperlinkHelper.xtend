@@ -103,7 +103,7 @@ class MelangeHyperlinkHelper extends XbaseHyperLinkHelper{
     
     def ITextRegion getTextRegion(Language lang,  int offset) {
         val List<INode> nodes = NodeModelUtils.findNodesForFeature(lang,
-                MelangePackage.Literals.LANGUAGE__OPERATORS);
+                MelangePackage.Literals.LANGUAGE_CONCERN__OPERATORS);
         for (INode node : nodes) {
             val ITextRegion textRegion = node.getTextRegion();
             if (textRegion.contains(offset)) {

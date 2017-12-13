@@ -16,6 +16,7 @@ import fr.inria.diverse.melange.metamodel.melange.Language
 import java.util.Map
 import com.google.inject.Singleton
 import fr.inria.diverse.melange.metamodel.melange.ModelTypingSpace
+import fr.inria.diverse.melange.metamodel.melange.LanguageConcern
 
 /**
  * Wololo, wololo wololo.
@@ -23,13 +24,13 @@ import fr.inria.diverse.melange.metamodel.melange.ModelTypingSpace
 @Singleton
 class ModelTypingSpaceBuilder {
 	@Inject Injector injector
-	Map<Language, LanguageBuilder> registry = newHashMap
+	Map<LanguageConcern, LanguageBuilder> registry = newHashMap
 
 	/**
 	 * Creates and returns a builder to construct a model for {@code l}.
 	 * Always returns the same builder for a given language.
 	 */
-	def LanguageBuilder getBuilder(Language l) {
+	def LanguageBuilder getBuilder(LanguageConcern l) {
 		var res = registry.get(l)
 
 		if (res === null) {
@@ -49,7 +50,7 @@ class ModelTypingSpaceBuilder {
 	 * Return the builder corresponding to {@code l}, or null if it cannot be
 	 * retrieved.
 	 */
-	def LanguageBuilder findBuilder(Language l){
+	def LanguageBuilder findBuilder(LanguageConcern l){
 		return registry.get(l)
 	}
 }

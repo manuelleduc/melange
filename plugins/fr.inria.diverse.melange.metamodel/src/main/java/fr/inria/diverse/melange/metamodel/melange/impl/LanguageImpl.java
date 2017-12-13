@@ -13,12 +13,15 @@ package fr.inria.diverse.melange.metamodel.melange.impl;
 import fr.inria.diverse.melange.metamodel.melange.Annotation;
 import fr.inria.diverse.melange.metamodel.melange.Aspect;
 import fr.inria.diverse.melange.metamodel.melange.Language;
+import fr.inria.diverse.melange.metamodel.melange.LanguageConcern;
 import fr.inria.diverse.melange.metamodel.melange.Mapping;
 import fr.inria.diverse.melange.metamodel.melange.MelangePackage;
 import fr.inria.diverse.melange.metamodel.melange.Metamodel;
 import fr.inria.diverse.melange.metamodel.melange.ModelType;
 import fr.inria.diverse.melange.metamodel.melange.Operator;
+import fr.inria.diverse.melange.metamodel.melange.Realisation;
 import fr.inria.diverse.melange.metamodel.melange.ResourceType;
+import fr.inria.diverse.melange.metamodel.melange.Variability;
 
 import java.util.Collection;
 
@@ -49,7 +52,9 @@ import org.eclipse.xtext.common.types.JvmTypeReference;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link fr.inria.diverse.melange.metamodel.melange.impl.LanguageImpl#getVm <em>Vm</em>}</li>
  *   <li>{@link fr.inria.diverse.melange.metamodel.melange.impl.LanguageImpl#getOperators <em>Operators</em>}</li>
+ *   <li>{@link fr.inria.diverse.melange.metamodel.melange.impl.LanguageImpl#getRealisations <em>Realisations</em>}</li>
  *   <li>{@link fr.inria.diverse.melange.metamodel.melange.impl.LanguageImpl#getExactType <em>Exact Type</em>}</li>
  *   <li>{@link fr.inria.diverse.melange.metamodel.melange.impl.LanguageImpl#getImplements <em>Implements</em>}</li>
  *   <li>{@link fr.inria.diverse.melange.metamodel.melange.impl.LanguageImpl#getRequires <em>Requires</em>}</li>
@@ -73,6 +78,16 @@ import org.eclipse.xtext.common.types.JvmTypeReference;
  */
 public class LanguageImpl extends NamedElementImpl implements Language {
 	/**
+	 * The cached value of the '{@link #getVm() <em>Vm</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getVm()
+	 * @generated
+	 * @ordered
+	 */
+	protected Variability vm;
+
+	/**
 	 * The cached value of the '{@link #getOperators() <em>Operators</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -81,6 +96,16 @@ public class LanguageImpl extends NamedElementImpl implements Language {
 	 * @ordered
 	 */
 	protected EList<Operator> operators;
+
+	/**
+	 * The cached value of the '{@link #getRealisations() <em>Realisations</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRealisations()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Realisation> realisations;
 
 	/**
 	 * The cached value of the '{@link #getExactType() <em>Exact Type</em>}' reference.
@@ -336,11 +361,66 @@ public class LanguageImpl extends NamedElementImpl implements Language {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Variability getVm() {
+		return vm;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetVm(Variability newVm, NotificationChain msgs) {
+		Variability oldVm = vm;
+		vm = newVm;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, MelangePackage.LANGUAGE__VM, oldVm, newVm);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setVm(Variability newVm) {
+		if (newVm != vm) {
+			NotificationChain msgs = null;
+			if (vm != null)
+				msgs = ((InternalEObject)vm).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - MelangePackage.LANGUAGE__VM, null, msgs);
+			if (newVm != null)
+				msgs = ((InternalEObject)newVm).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - MelangePackage.LANGUAGE__VM, null, msgs);
+			msgs = basicSetVm(newVm, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, MelangePackage.LANGUAGE__VM, newVm, newVm));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EList<Operator> getOperators() {
 		if (operators == null) {
-			operators = new EObjectContainmentWithInverseEList<Operator>(Operator.class, this, MelangePackage.LANGUAGE__OPERATORS, MelangePackage.OPERATOR__OWNING_LANGUAGE);
+			operators = new EObjectContainmentEList<Operator>(Operator.class, this, MelangePackage.LANGUAGE__OPERATORS);
 		}
 		return operators;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<Realisation> getRealisations() {
+		if (realisations == null) {
+			realisations = new EObjectContainmentEList<Realisation>(Realisation.class, this, MelangePackage.LANGUAGE__REALISATIONS);
+		}
+		return realisations;
 	}
 
 	/**
@@ -720,8 +800,6 @@ public class LanguageImpl extends NamedElementImpl implements Language {
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case MelangePackage.LANGUAGE__OPERATORS:
-				return ((InternalEList<InternalEObject>)(InternalEList<?>)getOperators()).basicAdd(otherEnd, msgs);
 			case MelangePackage.LANGUAGE__EXACT_TYPE:
 				if (exactType != null)
 					msgs = ((InternalEObject)exactType).eInverseRemove(this, MelangePackage.MODEL_TYPE__EXTRACTED, ModelType.class, msgs);
@@ -746,8 +824,12 @@ public class LanguageImpl extends NamedElementImpl implements Language {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
+			case MelangePackage.LANGUAGE__VM:
+				return basicSetVm(null, msgs);
 			case MelangePackage.LANGUAGE__OPERATORS:
 				return ((InternalEList<?>)getOperators()).basicRemove(otherEnd, msgs);
+			case MelangePackage.LANGUAGE__REALISATIONS:
+				return ((InternalEList<?>)getRealisations()).basicRemove(otherEnd, msgs);
 			case MelangePackage.LANGUAGE__EXACT_TYPE:
 				return basicSetExactType(null, msgs);
 			case MelangePackage.LANGUAGE__SYNTAX:
@@ -772,8 +854,12 @@ public class LanguageImpl extends NamedElementImpl implements Language {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case MelangePackage.LANGUAGE__VM:
+				return getVm();
 			case MelangePackage.LANGUAGE__OPERATORS:
 				return getOperators();
+			case MelangePackage.LANGUAGE__REALISATIONS:
+				return getRealisations();
 			case MelangePackage.LANGUAGE__EXACT_TYPE:
 				if (resolve) return getExactType();
 				return basicGetExactType();
@@ -822,9 +908,16 @@ public class LanguageImpl extends NamedElementImpl implements Language {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case MelangePackage.LANGUAGE__VM:
+				setVm((Variability)newValue);
+				return;
 			case MelangePackage.LANGUAGE__OPERATORS:
 				getOperators().clear();
 				getOperators().addAll((Collection<? extends Operator>)newValue);
+				return;
+			case MelangePackage.LANGUAGE__REALISATIONS:
+				getRealisations().clear();
+				getRealisations().addAll((Collection<? extends Realisation>)newValue);
 				return;
 			case MelangePackage.LANGUAGE__EXACT_TYPE:
 				setExactType((ModelType)newValue);
@@ -897,8 +990,14 @@ public class LanguageImpl extends NamedElementImpl implements Language {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
+			case MelangePackage.LANGUAGE__VM:
+				setVm((Variability)null);
+				return;
 			case MelangePackage.LANGUAGE__OPERATORS:
 				getOperators().clear();
+				return;
+			case MelangePackage.LANGUAGE__REALISATIONS:
+				getRealisations().clear();
 				return;
 			case MelangePackage.LANGUAGE__EXACT_TYPE:
 				setExactType((ModelType)null);
@@ -963,8 +1062,12 @@ public class LanguageImpl extends NamedElementImpl implements Language {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case MelangePackage.LANGUAGE__VM:
+				return vm != null;
 			case MelangePackage.LANGUAGE__OPERATORS:
 				return operators != null && !operators.isEmpty();
+			case MelangePackage.LANGUAGE__REALISATIONS:
+				return realisations != null && !realisations.isEmpty();
 			case MelangePackage.LANGUAGE__EXACT_TYPE:
 				return exactType != null;
 			case MelangePackage.LANGUAGE__IMPLEMENTS:
@@ -1001,6 +1104,42 @@ public class LanguageImpl extends NamedElementImpl implements Language {
 				return annotations != null && !annotations.isEmpty();
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
+		if (baseClass == LanguageConcern.class) {
+			switch (derivedFeatureID) {
+				case MelangePackage.LANGUAGE__VM: return MelangePackage.LANGUAGE_CONCERN__VM;
+				case MelangePackage.LANGUAGE__OPERATORS: return MelangePackage.LANGUAGE_CONCERN__OPERATORS;
+				case MelangePackage.LANGUAGE__REALISATIONS: return MelangePackage.LANGUAGE_CONCERN__REALISATIONS;
+				default: return -1;
+			}
+		}
+		return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
+		if (baseClass == LanguageConcern.class) {
+			switch (baseFeatureID) {
+				case MelangePackage.LANGUAGE_CONCERN__VM: return MelangePackage.LANGUAGE__VM;
+				case MelangePackage.LANGUAGE_CONCERN__OPERATORS: return MelangePackage.LANGUAGE__OPERATORS;
+				case MelangePackage.LANGUAGE_CONCERN__REALISATIONS: return MelangePackage.LANGUAGE__REALISATIONS;
+				default: return -1;
+			}
+		}
+		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
 	}
 
 	/**

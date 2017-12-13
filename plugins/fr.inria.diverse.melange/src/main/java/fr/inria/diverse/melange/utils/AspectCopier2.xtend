@@ -22,12 +22,14 @@ import fr.inria.diverse.melange.lib.ModelUtils
 import fr.inria.diverse.melange.metamodel.melange.Import
 import fr.inria.diverse.melange.metamodel.melange.Inheritance
 import fr.inria.diverse.melange.metamodel.melange.Language
+import fr.inria.diverse.melange.metamodel.melange.LanguageConcern
 import fr.inria.diverse.melange.metamodel.melange.LanguageOperator
 import fr.inria.diverse.melange.metamodel.melange.MelangePackage
 import fr.inria.diverse.melange.metamodel.melange.Merge
 import fr.inria.diverse.melange.metamodel.melange.PackageBinding
 import fr.inria.diverse.melange.metamodel.melange.Slice
 import java.util.List
+import java.util.Set
 import java.util.Stack
 import org.eclipse.core.resources.IFile
 import org.eclipse.core.resources.IFolder
@@ -37,10 +39,9 @@ import org.eclipse.core.resources.ResourcesPlugin
 import org.eclipse.core.runtime.CoreException
 import org.eclipse.emf.ecore.EClass
 import org.eclipse.emf.ecore.util.EcoreUtil
+import org.eclipse.xtext.common.types.JvmDeclaredType
 import org.eclipse.xtext.common.types.JvmTypeReference
 import org.eclipse.xtext.naming.IQualifiedNameProvider
-import org.eclipse.xtext.common.types.JvmDeclaredType
-import java.util.Set
 
 class AspectCopier2 {
 	
@@ -61,7 +62,7 @@ class AspectCopier2 {
 		copyAspect(sourceLang,targetLang,new Stack,null)
 	}
 	
-	private def SetMultimap<String,String> copyAspect(Language l, Language targetLang, Stack<List<PackageBinding>> stack, List<EClass> sliceClasses) {
+	private def SetMultimap<String,String> copyAspect(LanguageConcern l, LanguageConcern targetLang, Stack<List<PackageBinding>> stack, List<EClass> sliceClasses) {
 		// Map package.uniqueId to emfFqn
 		val SetMultimap<String,String> realPkgNames = HashMultimap.create
 	
@@ -124,7 +125,7 @@ class AspectCopier2 {
 	 * Return the associations of EPackage with generated Java Class
 	 * (use full qualified names)
 	 */
-	private def SetMultimap<String,String> mappingFromSyntax(Language sourceLang) {
+	private def SetMultimap<String,String> mappingFromSyntax(LanguageConcern sourceLang) {
 		val res = HashMultimap.create
 		sourceLang.operators.filter(Import).forEach[ecore |
 			//TODO: use EPackageProvider
@@ -148,7 +149,7 @@ class AspectCopier2 {
 	 * Return the associations of EPackage with generated Java Class
 	 * (use full qualified names)
 	 */
-	private def SetMultimap<String,String> mappingFromLanguageOp(Language sourceLanguage) {
+	private def SetMultimap<String,String> mappingFromLanguageOp(LanguageConcern sourceLanguage) {
 		val res = HashMultimap.create
 		sourceLanguage.operators.filter(LanguageOperator).forEach[
 			res.putAll(mappingFromLanguageOp)
@@ -198,7 +199,7 @@ class AspectCopier2 {
 	/**
 	 * Copy aspects declared in {@link currentLang} into the project of {@link targetLang} 
 	 */
-	private def void copyLocalAspects(Language currentLang, Language targetLang, SetMultimap<String,String> realPkgNames, Stack<List<PackageBinding>> stack, List<EClass> sliceClasses) {
+	private def void copyLocalAspects(LanguageConcern currentLang, LanguageConcern targetLang, SetMultimap<String,String> realPkgNames, Stack<List<PackageBinding>> stack, List<EClass> sliceClasses) {
 		
 		val localAspSliced = 
 			if(sliceClasses !== null)
@@ -407,9 +408,9 @@ class AspectCopier2 {
 	/**
 	 * Return classes from {@link origin} corresponding to {@link classes} through {@link mapping}
 	 */
-	private def List<EClass> reverseRenaming(List<EClass> classes, Language origin, List<PackageBinding> mapping) {
+	private def List<EClass> reverseRenaming(List<EClass> classes, LanguageConcern origin, List<PackageBinding> mapping) {
 		val res = newArrayList
-		val originPool = origin.syntax.allClasses
+		val originPool = if(origin instanceof Language) origin.syntax.allClasses else newArrayList()
 		
 		classes.forEach[cls |
 			val pkg = cls.EPackage.uniqueId

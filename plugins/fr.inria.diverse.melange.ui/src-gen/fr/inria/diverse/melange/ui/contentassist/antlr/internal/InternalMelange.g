@@ -28988,12 +28988,12 @@ rule__Merge__TargetLanguageAssignment_1
     }
 :
 (
-{ before(grammarAccess.getMergeAccess().getTargetLanguageLanguageCrossReference_1_0()); }
+{ before(grammarAccess.getMergeAccess().getTargetLanguageLanguageConcernCrossReference_1_0()); }
 (
-{ before(grammarAccess.getMergeAccess().getTargetLanguageLanguageQualifiedNameParserRuleCall_1_0_1()); }
-	ruleQualifiedName{ after(grammarAccess.getMergeAccess().getTargetLanguageLanguageQualifiedNameParserRuleCall_1_0_1()); }
+{ before(grammarAccess.getMergeAccess().getTargetLanguageLanguageConcernQualifiedNameParserRuleCall_1_0_1()); }
+	ruleQualifiedName{ after(grammarAccess.getMergeAccess().getTargetLanguageLanguageConcernQualifiedNameParserRuleCall_1_0_1()); }
 )
-{ after(grammarAccess.getMergeAccess().getTargetLanguageLanguageCrossReference_1_0()); }
+{ after(grammarAccess.getMergeAccess().getTargetLanguageLanguageConcernCrossReference_1_0()); }
 )
 
 ;
@@ -29022,12 +29022,12 @@ rule__Slice__TargetLanguageAssignment_1
     }
 :
 (
-{ before(grammarAccess.getSliceAccess().getTargetLanguageLanguageCrossReference_1_0()); }
+{ before(grammarAccess.getSliceAccess().getTargetLanguageLanguageConcernCrossReference_1_0()); }
 (
-{ before(grammarAccess.getSliceAccess().getTargetLanguageLanguageQualifiedNameParserRuleCall_1_0_1()); }
-	ruleQualifiedName{ after(grammarAccess.getSliceAccess().getTargetLanguageLanguageQualifiedNameParserRuleCall_1_0_1()); }
+{ before(grammarAccess.getSliceAccess().getTargetLanguageLanguageConcernQualifiedNameParserRuleCall_1_0_1()); }
+	ruleQualifiedName{ after(grammarAccess.getSliceAccess().getTargetLanguageLanguageConcernQualifiedNameParserRuleCall_1_0_1()); }
 )
-{ after(grammarAccess.getSliceAccess().getTargetLanguageLanguageCrossReference_1_0()); }
+{ after(grammarAccess.getSliceAccess().getTargetLanguageLanguageConcernCrossReference_1_0()); }
 )
 
 ;
@@ -29086,12 +29086,12 @@ rule__Inherit__TargetLanguageAssignment
     }
 :
 (
-{ before(grammarAccess.getInheritAccess().getTargetLanguageLanguageCrossReference_0()); }
+{ before(grammarAccess.getInheritAccess().getTargetLanguageLanguageConcernCrossReference_0()); }
 (
-{ before(grammarAccess.getInheritAccess().getTargetLanguageLanguageQualifiedNameParserRuleCall_0_1()); }
-	ruleQualifiedName{ after(grammarAccess.getInheritAccess().getTargetLanguageLanguageQualifiedNameParserRuleCall_0_1()); }
+{ before(grammarAccess.getInheritAccess().getTargetLanguageLanguageConcernQualifiedNameParserRuleCall_0_1()); }
+	ruleQualifiedName{ after(grammarAccess.getInheritAccess().getTargetLanguageLanguageConcernQualifiedNameParserRuleCall_0_1()); }
 )
-{ after(grammarAccess.getInheritAccess().getTargetLanguageLanguageCrossReference_0()); }
+{ after(grammarAccess.getInheritAccess().getTargetLanguageLanguageConcernCrossReference_0()); }
 )
 
 ;

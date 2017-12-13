@@ -597,9 +597,9 @@ public class MelangeSemanticSequencer extends XbaseSemanticSequencer {
 	 * Constraint:
 	 *     (
 	 *         (operators+=Weave | xmof=STRING | fileExtension=STRING)? 
-	 *         (xtext+=STRING xtext+=STRING*)? 
 	 *         (sirius+=STRING sirius+=STRING*)? 
 	 *         (ecl+=STRING ecl+=STRING*)? 
+	 *         (xtext+=STRING xtext+=STRING*)? 
 	 *         (exactTypeName=ValidID exactTypeUri=STRING?)? 
 	 *         (name=ValidID (implements+=[ModelType|QualifiedName] implements+=[ModelType|QualifiedName]*)? operators+=ExternalImport)?
 	 *     )+
@@ -659,7 +659,7 @@ public class MelangeSemanticSequencer extends XbaseSemanticSequencer {
 	 *     Inherit returns Inheritance
 	 *
 	 * Constraint:
-	 *     targetLanguage=[Language|QualifiedName]
+	 *     targetLanguage=[LanguageConcern|QualifiedName]
 	 */
 	protected void sequence_Inherit(ISerializationContext context, Inheritance semanticObject) {
 		if (errorAcceptor != null) {
@@ -667,7 +667,7 @@ public class MelangeSemanticSequencer extends XbaseSemanticSequencer {
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MelangePackage.Literals.LANGUAGE_OPERATOR__TARGET_LANGUAGE));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getInheritAccess().getTargetLanguageLanguageQualifiedNameParserRuleCall_0_1(), semanticObject.eGet(MelangePackage.Literals.LANGUAGE_OPERATOR__TARGET_LANGUAGE, false));
+		feeder.accept(grammarAccess.getInheritAccess().getTargetLanguageLanguageConcernQualifiedNameParserRuleCall_0_1(), semanticObject.eGet(MelangePackage.Literals.LANGUAGE_OPERATOR__TARGET_LANGUAGE, false));
 		feeder.finish();
 	}
 	
@@ -694,9 +694,9 @@ public class MelangeSemanticSequencer extends XbaseSemanticSequencer {
 	 *     (
 	 *         (xmof=STRING | fileExtension=STRING | annotations+=Annotation)? 
 	 *         (exactTypeName=ValidID exactTypeUri=STRING?)? 
-	 *         (xtext+=STRING xtext+=STRING*)? 
-	 *         (sirius+=STRING sirius+=STRING*)? 
 	 *         (ecl+=STRING ecl+=STRING*)? 
+	 *         (sirius+=STRING sirius+=STRING*)? 
+	 *         (xtext+=STRING xtext+=STRING*)? 
 	 *         (resourceType=ResourceType (resourceUri=STRING | xtextSetupRef=JvmTypeReference)?)? 
 	 *         (
 	 *             name=ValidID 
@@ -731,7 +731,7 @@ public class MelangeSemanticSequencer extends XbaseSemanticSequencer {
 	 *     Merge returns Merge
 	 *
 	 * Constraint:
-	 *     (targetLanguage=[Language|QualifiedName] mappingRules+=PackageMapping*)
+	 *     (targetLanguage=[LanguageConcern|QualifiedName] mappingRules+=PackageMapping*)
 	 */
 	protected void sequence_Merge(ISerializationContext context, Merge semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -886,7 +886,7 @@ public class MelangeSemanticSequencer extends XbaseSemanticSequencer {
 	 *     Slice returns Slice
 	 *
 	 * Constraint:
-	 *     (targetLanguage=[Language|QualifiedName] roots+=STRING roots+=STRING* mappingRules+=PackageMapping*)
+	 *     (targetLanguage=[LanguageConcern|QualifiedName] roots+=STRING roots+=STRING* mappingRules+=PackageMapping*)
 	 */
 	protected void sequence_Slice(ISerializationContext context, Slice semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

@@ -82443,13 +82443,13 @@ public class InternalMelangeParser extends AbstractInternalContentAssistParser {
             // InternalMelange.g:28991:1: ( ruleQualifiedName )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getMergeAccess().getTargetLanguageLanguageCrossReference_1_0()); 
+               before(grammarAccess.getMergeAccess().getTargetLanguageLanguageConcernCrossReference_1_0()); 
             }
             // InternalMelange.g:28992:1: ( ruleQualifiedName )
             // InternalMelange.g:28993:1: ruleQualifiedName
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getMergeAccess().getTargetLanguageLanguageQualifiedNameParserRuleCall_1_0_1()); 
+               before(grammarAccess.getMergeAccess().getTargetLanguageLanguageConcernQualifiedNameParserRuleCall_1_0_1()); 
             }
             pushFollow(FOLLOW_2);
             ruleQualifiedName();
@@ -82457,13 +82457,13 @@ public class InternalMelangeParser extends AbstractInternalContentAssistParser {
             state._fsp--;
             if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getMergeAccess().getTargetLanguageLanguageQualifiedNameParserRuleCall_1_0_1()); 
+               after(grammarAccess.getMergeAccess().getTargetLanguageLanguageConcernQualifiedNameParserRuleCall_1_0_1()); 
             }
 
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getMergeAccess().getTargetLanguageLanguageCrossReference_1_0()); 
+               after(grammarAccess.getMergeAccess().getTargetLanguageLanguageConcernCrossReference_1_0()); 
             }
 
             }
@@ -82545,13 +82545,13 @@ public class InternalMelangeParser extends AbstractInternalContentAssistParser {
             // InternalMelange.g:29025:1: ( ruleQualifiedName )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getSliceAccess().getTargetLanguageLanguageCrossReference_1_0()); 
+               before(grammarAccess.getSliceAccess().getTargetLanguageLanguageConcernCrossReference_1_0()); 
             }
             // InternalMelange.g:29026:1: ( ruleQualifiedName )
             // InternalMelange.g:29027:1: ruleQualifiedName
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getSliceAccess().getTargetLanguageLanguageQualifiedNameParserRuleCall_1_0_1()); 
+               before(grammarAccess.getSliceAccess().getTargetLanguageLanguageConcernQualifiedNameParserRuleCall_1_0_1()); 
             }
             pushFollow(FOLLOW_2);
             ruleQualifiedName();
@@ -82559,13 +82559,13 @@ public class InternalMelangeParser extends AbstractInternalContentAssistParser {
             state._fsp--;
             if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getSliceAccess().getTargetLanguageLanguageQualifiedNameParserRuleCall_1_0_1()); 
+               after(grammarAccess.getSliceAccess().getTargetLanguageLanguageConcernQualifiedNameParserRuleCall_1_0_1()); 
             }
 
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getSliceAccess().getTargetLanguageLanguageCrossReference_1_0()); 
+               after(grammarAccess.getSliceAccess().getTargetLanguageLanguageConcernCrossReference_1_0()); 
             }
 
             }
@@ -82729,13 +82729,13 @@ public class InternalMelangeParser extends AbstractInternalContentAssistParser {
             // InternalMelange.g:29089:1: ( ruleQualifiedName )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getInheritAccess().getTargetLanguageLanguageCrossReference_0()); 
+               before(grammarAccess.getInheritAccess().getTargetLanguageLanguageConcernCrossReference_0()); 
             }
             // InternalMelange.g:29090:1: ( ruleQualifiedName )
             // InternalMelange.g:29091:1: ruleQualifiedName
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getInheritAccess().getTargetLanguageLanguageQualifiedNameParserRuleCall_0_1()); 
+               before(grammarAccess.getInheritAccess().getTargetLanguageLanguageConcernQualifiedNameParserRuleCall_0_1()); 
             }
             pushFollow(FOLLOW_2);
             ruleQualifiedName();
@@ -82743,13 +82743,13 @@ public class InternalMelangeParser extends AbstractInternalContentAssistParser {
             state._fsp--;
             if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getInheritAccess().getTargetLanguageLanguageQualifiedNameParserRuleCall_0_1()); 
+               after(grammarAccess.getInheritAccess().getTargetLanguageLanguageConcernQualifiedNameParserRuleCall_0_1()); 
             }
 
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getInheritAccess().getTargetLanguageLanguageCrossReference_0()); 
+               after(grammarAccess.getInheritAccess().getTargetLanguageLanguageConcernCrossReference_0()); 
             }
 
             }

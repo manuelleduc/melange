@@ -489,7 +489,7 @@ public interface MelangePackage extends EPackage {
 	int OPERATOR = 13;
 
 	/**
-	 * The feature id for the '<em><b>Owning Language</b></em>' container reference.
+	 * The feature id for the '<em><b>Owning Language</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -526,7 +526,7 @@ public interface MelangePackage extends EPackage {
 	int LANGUAGE_OPERATOR = 14;
 
 	/**
-	 * The feature id for the '<em><b>Owning Language</b></em>' container reference.
+	 * The feature id for the '<em><b>Owning Language</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -572,7 +572,7 @@ public interface MelangePackage extends EPackage {
 	int INHERITANCE = 6;
 
 	/**
-	 * The feature id for the '<em><b>Owning Language</b></em>' container reference.
+	 * The feature id for the '<em><b>Owning Language</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -893,7 +893,7 @@ public interface MelangePackage extends EPackage {
 	int IMPORT = 15;
 
 	/**
-	 * The feature id for the '<em><b>Owning Language</b></em>' container reference.
+	 * The feature id for the '<em><b>Owning Language</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -957,7 +957,7 @@ public interface MelangePackage extends EPackage {
 	int MERGE = 16;
 
 	/**
-	 * The feature id for the '<em><b>Owning Language</b></em>' container reference.
+	 * The feature id for the '<em><b>Owning Language</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1012,7 +1012,7 @@ public interface MelangePackage extends EPackage {
 	int SLICE = 17;
 
 	/**
-	 * The feature id for the '<em><b>Owning Language</b></em>' container reference.
+	 * The feature id for the '<em><b>Owning Language</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1140,13 +1140,31 @@ public interface MelangePackage extends EPackage {
 	int LANGUAGE__NAME = NAMED_ELEMENT__NAME;
 
 	/**
+	 * The feature id for the '<em><b>Vm</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LANGUAGE__VM = NAMED_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
 	 * The feature id for the '<em><b>Operators</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LANGUAGE__OPERATORS = NAMED_ELEMENT_FEATURE_COUNT + 0;
+	int LANGUAGE__OPERATORS = NAMED_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Realisations</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LANGUAGE__REALISATIONS = NAMED_ELEMENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Exact Type</b></em>' reference.
@@ -1155,7 +1173,7 @@ public interface MelangePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LANGUAGE__EXACT_TYPE = NAMED_ELEMENT_FEATURE_COUNT + 1;
+	int LANGUAGE__EXACT_TYPE = NAMED_ELEMENT_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Implements</b></em>' reference list.
@@ -1164,7 +1182,7 @@ public interface MelangePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LANGUAGE__IMPLEMENTS = NAMED_ELEMENT_FEATURE_COUNT + 2;
+	int LANGUAGE__IMPLEMENTS = NAMED_ELEMENT_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Requires</b></em>' reference list.
@@ -1173,7 +1191,7 @@ public interface MelangePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LANGUAGE__REQUIRES = NAMED_ELEMENT_FEATURE_COUNT + 3;
+	int LANGUAGE__REQUIRES = NAMED_ELEMENT_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Syntax</b></em>' containment reference.
@@ -1182,7 +1200,7 @@ public interface MelangePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LANGUAGE__SYNTAX = NAMED_ELEMENT_FEATURE_COUNT + 4;
+	int LANGUAGE__SYNTAX = NAMED_ELEMENT_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Exact Type Name</b></em>' attribute.
@@ -1191,7 +1209,7 @@ public interface MelangePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LANGUAGE__EXACT_TYPE_NAME = NAMED_ELEMENT_FEATURE_COUNT + 5;
+	int LANGUAGE__EXACT_TYPE_NAME = NAMED_ELEMENT_FEATURE_COUNT + 7;
 
 	/**
 	 * The feature id for the '<em><b>Exact Type Uri</b></em>' attribute.
@@ -1200,7 +1218,7 @@ public interface MelangePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LANGUAGE__EXACT_TYPE_URI = NAMED_ELEMENT_FEATURE_COUNT + 6;
+	int LANGUAGE__EXACT_TYPE_URI = NAMED_ELEMENT_FEATURE_COUNT + 8;
 
 	/**
 	 * The feature id for the '<em><b>Resource Type</b></em>' attribute.
@@ -1209,7 +1227,7 @@ public interface MelangePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LANGUAGE__RESOURCE_TYPE = NAMED_ELEMENT_FEATURE_COUNT + 7;
+	int LANGUAGE__RESOURCE_TYPE = NAMED_ELEMENT_FEATURE_COUNT + 9;
 
 	/**
 	 * The feature id for the '<em><b>Resource Uri</b></em>' attribute.
@@ -1218,7 +1236,7 @@ public interface MelangePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LANGUAGE__RESOURCE_URI = NAMED_ELEMENT_FEATURE_COUNT + 8;
+	int LANGUAGE__RESOURCE_URI = NAMED_ELEMENT_FEATURE_COUNT + 10;
 
 	/**
 	 * The feature id for the '<em><b>Xtext Setup Ref</b></em>' containment reference.
@@ -1227,7 +1245,7 @@ public interface MelangePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LANGUAGE__XTEXT_SETUP_REF = NAMED_ELEMENT_FEATURE_COUNT + 9;
+	int LANGUAGE__XTEXT_SETUP_REF = NAMED_ELEMENT_FEATURE_COUNT + 11;
 
 	/**
 	 * The feature id for the '<em><b>Mappings</b></em>' reference list.
@@ -1236,7 +1254,7 @@ public interface MelangePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LANGUAGE__MAPPINGS = NAMED_ELEMENT_FEATURE_COUNT + 10;
+	int LANGUAGE__MAPPINGS = NAMED_ELEMENT_FEATURE_COUNT + 12;
 
 	/**
 	 * The feature id for the '<em><b>Semantics</b></em>' containment reference list.
@@ -1245,7 +1263,7 @@ public interface MelangePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LANGUAGE__SEMANTICS = NAMED_ELEMENT_FEATURE_COUNT + 11;
+	int LANGUAGE__SEMANTICS = NAMED_ELEMENT_FEATURE_COUNT + 13;
 
 	/**
 	 * The feature id for the '<em><b>Xtext</b></em>' attribute list.
@@ -1254,7 +1272,7 @@ public interface MelangePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LANGUAGE__XTEXT = NAMED_ELEMENT_FEATURE_COUNT + 12;
+	int LANGUAGE__XTEXT = NAMED_ELEMENT_FEATURE_COUNT + 14;
 
 	/**
 	 * The feature id for the '<em><b>Sirius</b></em>' attribute list.
@@ -1263,7 +1281,7 @@ public interface MelangePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LANGUAGE__SIRIUS = NAMED_ELEMENT_FEATURE_COUNT + 13;
+	int LANGUAGE__SIRIUS = NAMED_ELEMENT_FEATURE_COUNT + 15;
 
 	/**
 	 * The feature id for the '<em><b>Ecl</b></em>' attribute list.
@@ -1272,7 +1290,7 @@ public interface MelangePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LANGUAGE__ECL = NAMED_ELEMENT_FEATURE_COUNT + 14;
+	int LANGUAGE__ECL = NAMED_ELEMENT_FEATURE_COUNT + 16;
 
 	/**
 	 * The feature id for the '<em><b>Xmof</b></em>' attribute.
@@ -1281,7 +1299,7 @@ public interface MelangePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LANGUAGE__XMOF = NAMED_ELEMENT_FEATURE_COUNT + 15;
+	int LANGUAGE__XMOF = NAMED_ELEMENT_FEATURE_COUNT + 17;
 
 	/**
 	 * The feature id for the '<em><b>File Extension</b></em>' attribute.
@@ -1290,7 +1308,7 @@ public interface MelangePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LANGUAGE__FILE_EXTENSION = NAMED_ELEMENT_FEATURE_COUNT + 16;
+	int LANGUAGE__FILE_EXTENSION = NAMED_ELEMENT_FEATURE_COUNT + 18;
 
 	/**
 	 * The feature id for the '<em><b>Annotations</b></em>' containment reference list.
@@ -1299,7 +1317,7 @@ public interface MelangePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LANGUAGE__ANNOTATIONS = NAMED_ELEMENT_FEATURE_COUNT + 17;
+	int LANGUAGE__ANNOTATIONS = NAMED_ELEMENT_FEATURE_COUNT + 19;
 
 	/**
 	 * The number of structural features of the '<em>Language</em>' class.
@@ -1308,7 +1326,7 @@ public interface MelangePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LANGUAGE_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 18;
+	int LANGUAGE_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 20;
 
 	/**
 	 * The number of operations of the '<em>Language</em>' class.
@@ -1330,7 +1348,7 @@ public interface MelangePackage extends EPackage {
 	int WEAVE = 20;
 
 	/**
-	 * The feature id for the '<em><b>Owning Language</b></em>' container reference.
+	 * The feature id for the '<em><b>Owning Language</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1394,6 +1412,15 @@ public interface MelangePackage extends EPackage {
 	int EXTERNAL_LANGUAGE__NAME = LANGUAGE__NAME;
 
 	/**
+	 * The feature id for the '<em><b>Vm</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXTERNAL_LANGUAGE__VM = LANGUAGE__VM;
+
+	/**
 	 * The feature id for the '<em><b>Operators</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1401,6 +1428,15 @@ public interface MelangePackage extends EPackage {
 	 * @ordered
 	 */
 	int EXTERNAL_LANGUAGE__OPERATORS = LANGUAGE__OPERATORS;
+
+	/**
+	 * The feature id for the '<em><b>Realisations</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXTERNAL_LANGUAGE__REALISATIONS = LANGUAGE__REALISATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Exact Type</b></em>' reference.
@@ -1639,6 +1675,15 @@ public interface MelangePackage extends EPackage {
 	int IMPORT_DSL__NAME = LANGUAGE__NAME;
 
 	/**
+	 * The feature id for the '<em><b>Vm</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMPORT_DSL__VM = LANGUAGE__VM;
+
+	/**
 	 * The feature id for the '<em><b>Operators</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1646,6 +1691,15 @@ public interface MelangePackage extends EPackage {
 	 * @ordered
 	 */
 	int IMPORT_DSL__OPERATORS = LANGUAGE__OPERATORS;
+
+	/**
+	 * The feature id for the '<em><b>Realisations</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMPORT_DSL__REALISATIONS = LANGUAGE__REALISATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Exact Type</b></em>' reference.
@@ -2150,13 +2204,22 @@ public interface MelangePackage extends EPackage {
 	int TAGGED_OPERATOR__NAME = TAGGED_ELEMENT__NAME;
 
 	/**
+	 * The feature id for the '<em><b>Owning Language</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TAGGED_OPERATOR__OWNING_LANGUAGE = TAGGED_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
 	 * The feature id for the '<em><b>Operator</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TAGGED_OPERATOR__OPERATOR = TAGGED_ELEMENT_FEATURE_COUNT + 0;
+	int TAGGED_OPERATOR__OPERATOR = TAGGED_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Tagged Operator</em>' class.
@@ -2165,7 +2228,7 @@ public interface MelangePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TAGGED_OPERATOR_FEATURE_COUNT = TAGGED_ELEMENT_FEATURE_COUNT + 1;
+	int TAGGED_OPERATOR_FEATURE_COUNT = TAGGED_ELEMENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Tagged Operator</em>' class.
@@ -2427,7 +2490,7 @@ public interface MelangePackage extends EPackage {
 	int REUSE = 37;
 
 	/**
-	 * The feature id for the '<em><b>Owning Language</b></em>' container reference.
+	 * The feature id for the '<em><b>Owning Language</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3060,10 +3123,10 @@ public interface MelangePackage extends EPackage {
 	EClass getOperator();
 
 	/**
-	 * Returns the meta object for the container reference '{@link fr.inria.diverse.melange.metamodel.melange.Operator#getOwningLanguage <em>Owning Language</em>}'.
+	 * Returns the meta object for the reference '{@link fr.inria.diverse.melange.metamodel.melange.Operator#getOwningLanguage <em>Owning Language</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the container reference '<em>Owning Language</em>'.
+	 * @return the meta object for the reference '<em>Owning Language</em>'.
 	 * @see fr.inria.diverse.melange.metamodel.melange.Operator#getOwningLanguage()
 	 * @see #getOperator()
 	 * @generated
@@ -3239,17 +3302,6 @@ public interface MelangePackage extends EPackage {
 	 * @generated
 	 */
 	EClass getLanguage();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link fr.inria.diverse.melange.metamodel.melange.Language#getOperators <em>Operators</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Operators</em>'.
-	 * @see fr.inria.diverse.melange.metamodel.melange.Language#getOperators()
-	 * @see #getLanguage()
-	 * @generated
-	 */
-	EReference getLanguage_Operators();
 
 	/**
 	 * Returns the meta object for the reference '{@link fr.inria.diverse.melange.metamodel.melange.Language#getExactType <em>Exact Type</em>}'.
@@ -4342,7 +4394,7 @@ public interface MelangePackage extends EPackage {
 		EClass OPERATOR = eINSTANCE.getOperator();
 
 		/**
-		 * The meta object literal for the '<em><b>Owning Language</b></em>' container reference feature.
+		 * The meta object literal for the '<em><b>Owning Language</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -4488,14 +4540,6 @@ public interface MelangePackage extends EPackage {
 		 * @generated
 		 */
 		EClass LANGUAGE = eINSTANCE.getLanguage();
-
-		/**
-		 * The meta object literal for the '<em><b>Operators</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference LANGUAGE__OPERATORS = eINSTANCE.getLanguage_Operators();
 
 		/**
 		 * The meta object literal for the '<em><b>Exact Type</b></em>' reference feature.

@@ -40,10 +40,11 @@ class WildcardAspectResolver extends DispatchMelangeProcessor
 
 		if (w.aspectWildcardImport !== null) {
 			resolveWildcardImport(w.aspectWildcardImport).forEach[typeRef |
-				w.owningLanguage.operators +=
-					MelangeFactory.eINSTANCE.createWeave => [
-						aspectTypeRef = typeRefBuilder.typeRef(typeRef)
-					]
+				if(w.owningLanguage !== null)
+					w.owningLanguage.operators +=
+						MelangeFactory.eINSTANCE.createWeave => [
+							aspectTypeRef = typeRefBuilder.typeRef(typeRef)
+						]
 			]
 		}
 	}

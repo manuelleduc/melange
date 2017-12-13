@@ -67,7 +67,7 @@ class EPackageProvider
 				ModelType case m.isExtracted:
 					packages.putAll(m.fqn, m.extracted.syntax.packages)
 				Metamodel case !m.owningLanguage.superLanguages.empty: {
-					val pkgsCopy = m.owningLanguage.operators.filter(Inheritance).map[targetLanguage.syntax.packages.map[
+					val pkgsCopy = m.owningLanguage.operators.filter(Inheritance).filter[targetLanguage instanceof Language].map[(targetLanguage as Language).syntax.packages.map[
 						val copy = EcoreUtil::copy(it)
 						copy.name = it.name
 						copy.nsPrefix = it.name

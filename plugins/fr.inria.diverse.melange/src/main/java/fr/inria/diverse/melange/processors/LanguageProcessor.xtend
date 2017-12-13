@@ -4,7 +4,7 @@
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-v10.html
- *
+ * 
  * Contributors:
  *     Inria - initial API and implementation
  *******************************************************************************/
@@ -18,8 +18,10 @@ import fr.inria.diverse.melange.ast.ModelingElementExtensions
 import fr.inria.diverse.melange.builder.LanguageBuilder
 import fr.inria.diverse.melange.builder.ModelTypingSpaceBuilder
 import fr.inria.diverse.melange.lib.EcoreExtensions
+import fr.inria.diverse.melange.metamodel.melange.Aspect
 import fr.inria.diverse.melange.metamodel.melange.Import
 import fr.inria.diverse.melange.metamodel.melange.Language
+import fr.inria.diverse.melange.metamodel.melange.LanguageConcern
 import fr.inria.diverse.melange.metamodel.melange.MelangeFactory
 import fr.inria.diverse.melange.metamodel.melange.Metamodel
 import fr.inria.diverse.melange.metamodel.melange.ModelTypingSpace
@@ -42,14 +44,13 @@ import org.eclipse.xtext.xbase.jvmmodel.JvmTypesBuilder
  * 
  * FIXME: I don't understand much of what's going on here
  */
-class LanguageProcessor extends DispatchMelangeProcessor
-{
+class LanguageProcessor extends DispatchMelangeProcessor {
 	@Inject extension ASTHelper
 	@Inject EPackageProvider packageProvider
 	@Inject extension AspectExtensions
 	@Inject extension LanguageExtensions
 	@Inject extension ModelingElementExtensions
-	
+
 	@Inject extension EcoreExtensions
 	@Inject ModelTypingSpaceBuilder builder
 	@Inject JvmTypesBuilder typesBuilder
@@ -58,27 +59,27 @@ class LanguageProcessor extends DispatchMelangeProcessor
 
 	def dispatch void preProcess(ModelTypingSpace root, boolean isPreLinkingPhase) {
 		typeRefBuilder = typeRefBuilderFactory.create(root.eResource.resourceSet)
-		
+
 		builder.resetFor(root)
 
 		// First, initialize the exactType and syntax of each language
-		root.languages.forEach[language |
+		root.languages.forEach [ language |
 			language.initializeSyntax
 		]
 
 		// Then, collect the appropriate builder for this language and invoke it
-		root.languages.forEach[language |
+		root.languages.forEach [ language |
 			val langBuilder = builder.getBuilder(language)
 			build(langBuilder)
 		]
 
 		// Last, take care of its semantics
-		root.languages.forEach[language |
+		root.languages.forEach [ language |
 			language.initializeSemantic
 		]
 	}
 
-	private def void loadLanguageWithSyntax(ResourceSet rs, Language language, Set<EPackage> syntax) {
+	private def void loadLanguageWithSyntax(ResourceSet rs, LanguageConcern language, Set<EPackage> syntax) {
 		var res = rs.getResource(URI::createURI(language.name + "RootPackage"), false)
 		if (res !== null)
 			rs.resources.remove(res)
@@ -105,8 +106,8 @@ class LanguageProcessor extends DispatchMelangeProcessor
 			syntax = builder.model
 		}
 
-		if(language.isGeneratedByMelange){
-				syntax.forEach[initializeNsUriWith(language.externalPackageUri)]
+		if (language.isGeneratedByMelange) {
+			syntax.forEach[initializeNsUriWith(language.externalPackageUri)]
 		}
 
 		// FIXME: I don't understand what's going on here
@@ -126,7 +127,8 @@ class LanguageProcessor extends DispatchMelangeProcessor
 			else {
 				loadLanguageWithSyntax(rs, language, syntax)
 			}
-			syntax.forEach[packageProvider.registerPackages(language.syntax, it)]
+			if (language instanceof Language)
+				syntax.forEach[packageProvider.registerPackages(language.syntax, it)]
 		}
 	}
 
@@ -141,7 +143,7 @@ class LanguageProcessor extends DispatchMelangeProcessor
 
 		if (language.isGeneratedByMelange) {
 			language.syntax.ecoreUri = language.externalEcoreUri
-			language.syntax.genmodelUris += language.externalGenmodelUri 
+			language.syntax.genmodelUris += language.externalGenmodelUri
 		} else {
 			val importClause = language.operators.filter(Import).head
 
@@ -161,25 +163,22 @@ class LanguageProcessor extends DispatchMelangeProcessor
 	private def void initializeSemantic(Language language) {
 		language.semantics.clear
 		language.semantics +=
-		language.operators
-		.filter(Weave)
-		.filter[aspectTypeRef?.type instanceof JvmDeclaredType]
-		.map[w |
-			// FIXME: Some checks needed here
-			MelangeFactory.eINSTANCE.createAspect => [
-				aspectTypeRef = typesBuilder.cloneWithProxies(w.aspectTypeRef)
-				val classFqName = aspectTypeRef.aspectAnnotationValue
-				if (classFqName !== null){
-					aspectedClass = language.syntax.findClass(classFqName)
-					if(aspectedClass === null){ //try renaming
-						val renamings = language.collectMappings
-						val newName = classFqName.rename(renamings)
-						aspectedClass = language.syntax.findClass(newName)
+			language.operators.filter(Weave).filter[aspectTypeRef?.type instanceof JvmDeclaredType].map [ w |
+				// FIXME: Some checks needed here
+				MelangeFactory.eINSTANCE.createAspect => [
+					aspectTypeRef = typesBuilder.cloneWithProxies(w.aspectTypeRef)
+					val classFqName = aspectTypeRef.aspectAnnotationValue
+					if (classFqName !== null) {
+						aspectedClass = language.syntax.findClass(classFqName)
+						if (aspectedClass === null) { // try renaming
+							val renamings = language.collectMappings
+							val newName = classFqName.rename(renamings)
+							aspectedClass = language.syntax.findClass(newName)
+						}
 					}
-				}
-				ecoreFragment = builder.getBuilder(language).findBuilder(w)?.model?.head
-				source = w
+					ecoreFragment = builder.getBuilder(language).findBuilder(w)?.model?.head
+					source = w
+				]
 			]
-		]
 	}
 }

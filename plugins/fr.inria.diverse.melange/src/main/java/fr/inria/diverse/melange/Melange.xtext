@@ -160,19 +160,19 @@ ExternalImport returns Import:
 	'syntax' ecoreUri=STRING ('withGenmodel' (genmodelUris+=STRING (',' genmodelUris+=STRING)*))?;
 
 Merge returns Merge:
-	'merge' targetLanguage=[Language|QualifiedName]
+	'merge' targetLanguage=[LanguageConcern|QualifiedName]
 	('renaming' '{'
 	(mappingRules+=PackageMapping)*
 	'}')?;
 
 Slice returns Slice:
-	'slice' targetLanguage=[Language|QualifiedName] 'on' '[' roots+=STRING (',' roots+=STRING)* ']'
+	'slice' targetLanguage=[LanguageConcern|QualifiedName] 'on' '[' roots+=STRING (',' roots+=STRING)* ']'
 	('renaming' '{'
 	(mappingRules+=PackageMapping)*
 	'}')?;
 
 Inherit returns Inheritance:
-	targetLanguage=[Language|QualifiedName];
+	targetLanguage=[LanguageConcern|QualifiedName];
 
 Weave:
 	AspectTypeRef | AspectWildcard;

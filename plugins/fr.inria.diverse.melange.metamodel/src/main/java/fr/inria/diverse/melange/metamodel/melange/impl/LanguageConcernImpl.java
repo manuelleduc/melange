@@ -12,8 +12,8 @@ package fr.inria.diverse.melange.metamodel.melange.impl;
 
 import fr.inria.diverse.melange.metamodel.melange.LanguageConcern;
 import fr.inria.diverse.melange.metamodel.melange.MelangePackage;
+import fr.inria.diverse.melange.metamodel.melange.Operator;
 import fr.inria.diverse.melange.metamodel.melange.Realisation;
-import fr.inria.diverse.melange.metamodel.melange.TaggedOperator;
 import fr.inria.diverse.melange.metamodel.melange.Variability;
 
 import java.util.Collection;
@@ -65,7 +65,7 @@ public class LanguageConcernImpl extends NamedElementImpl implements LanguageCon
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<TaggedOperator> operators;
+	protected EList<Operator> operators;
 
 	/**
 	 * The cached value of the '{@link #getRealisations() <em>Realisations</em>}' containment reference list.
@@ -144,9 +144,9 @@ public class LanguageConcernImpl extends NamedElementImpl implements LanguageCon
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<TaggedOperator> getOperators() {
+	public EList<Operator> getOperators() {
 		if (operators == null) {
-			operators = new EObjectContainmentEList<TaggedOperator>(TaggedOperator.class, this, MelangePackage.LANGUAGE_CONCERN__OPERATORS);
+			operators = new EObjectContainmentEList<Operator>(Operator.class, this, MelangePackage.LANGUAGE_CONCERN__OPERATORS);
 		}
 		return operators;
 	}
@@ -213,7 +213,7 @@ public class LanguageConcernImpl extends NamedElementImpl implements LanguageCon
 				return;
 			case MelangePackage.LANGUAGE_CONCERN__OPERATORS:
 				getOperators().clear();
-				getOperators().addAll((Collection<? extends TaggedOperator>)newValue);
+				getOperators().addAll((Collection<? extends Operator>)newValue);
 				return;
 			case MelangePackage.LANGUAGE_CONCERN__REALISATIONS:
 				getRealisations().clear();

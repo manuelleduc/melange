@@ -985,7 +985,7 @@ public class MelangePackageImpl extends EPackageImpl implements MelangePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getLanguage_Operators() {
+	public EReference getLanguage_ExactType() {
 		return (EReference)languageEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -994,7 +994,7 @@ public class MelangePackageImpl extends EPackageImpl implements MelangePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getLanguage_ExactType() {
+	public EReference getLanguage_Implements() {
 		return (EReference)languageEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -1003,7 +1003,7 @@ public class MelangePackageImpl extends EPackageImpl implements MelangePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getLanguage_Implements() {
+	public EReference getLanguage_Requires() {
 		return (EReference)languageEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -1012,7 +1012,7 @@ public class MelangePackageImpl extends EPackageImpl implements MelangePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getLanguage_Requires() {
+	public EReference getLanguage_Syntax() {
 		return (EReference)languageEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -1021,17 +1021,8 @@ public class MelangePackageImpl extends EPackageImpl implements MelangePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getLanguage_Syntax() {
-		return (EReference)languageEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EAttribute getLanguage_ExactTypeName() {
-		return (EAttribute)languageEClass.getEStructuralFeatures().get(5);
+		return (EAttribute)languageEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -1040,7 +1031,7 @@ public class MelangePackageImpl extends EPackageImpl implements MelangePackage {
 	 * @generated
 	 */
 	public EAttribute getLanguage_ExactTypeUri() {
-		return (EAttribute)languageEClass.getEStructuralFeatures().get(6);
+		return (EAttribute)languageEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -1049,7 +1040,7 @@ public class MelangePackageImpl extends EPackageImpl implements MelangePackage {
 	 * @generated
 	 */
 	public EAttribute getLanguage_ResourceType() {
-		return (EAttribute)languageEClass.getEStructuralFeatures().get(7);
+		return (EAttribute)languageEClass.getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -1058,7 +1049,7 @@ public class MelangePackageImpl extends EPackageImpl implements MelangePackage {
 	 * @generated
 	 */
 	public EAttribute getLanguage_ResourceUri() {
-		return (EAttribute)languageEClass.getEStructuralFeatures().get(8);
+		return (EAttribute)languageEClass.getEStructuralFeatures().get(7);
 	}
 
 	/**
@@ -1067,7 +1058,7 @@ public class MelangePackageImpl extends EPackageImpl implements MelangePackage {
 	 * @generated
 	 */
 	public EReference getLanguage_XtextSetupRef() {
-		return (EReference)languageEClass.getEStructuralFeatures().get(9);
+		return (EReference)languageEClass.getEStructuralFeatures().get(8);
 	}
 
 	/**
@@ -1076,7 +1067,7 @@ public class MelangePackageImpl extends EPackageImpl implements MelangePackage {
 	 * @generated
 	 */
 	public EReference getLanguage_Mappings() {
-		return (EReference)languageEClass.getEStructuralFeatures().get(10);
+		return (EReference)languageEClass.getEStructuralFeatures().get(9);
 	}
 
 	/**
@@ -1085,7 +1076,7 @@ public class MelangePackageImpl extends EPackageImpl implements MelangePackage {
 	 * @generated
 	 */
 	public EReference getLanguage_Semantics() {
-		return (EReference)languageEClass.getEStructuralFeatures().get(11);
+		return (EReference)languageEClass.getEStructuralFeatures().get(10);
 	}
 
 	/**
@@ -1094,7 +1085,7 @@ public class MelangePackageImpl extends EPackageImpl implements MelangePackage {
 	 * @generated
 	 */
 	public EAttribute getLanguage_Xtext() {
-		return (EAttribute)languageEClass.getEStructuralFeatures().get(12);
+		return (EAttribute)languageEClass.getEStructuralFeatures().get(11);
 	}
 
 	/**
@@ -1103,7 +1094,7 @@ public class MelangePackageImpl extends EPackageImpl implements MelangePackage {
 	 * @generated
 	 */
 	public EAttribute getLanguage_Sirius() {
-		return (EAttribute)languageEClass.getEStructuralFeatures().get(13);
+		return (EAttribute)languageEClass.getEStructuralFeatures().get(12);
 	}
 
 	/**
@@ -1112,7 +1103,7 @@ public class MelangePackageImpl extends EPackageImpl implements MelangePackage {
 	 * @generated
 	 */
 	public EAttribute getLanguage_Ecl() {
-		return (EAttribute)languageEClass.getEStructuralFeatures().get(14);
+		return (EAttribute)languageEClass.getEStructuralFeatures().get(13);
 	}
 
 	/**
@@ -1121,7 +1112,7 @@ public class MelangePackageImpl extends EPackageImpl implements MelangePackage {
 	 * @generated
 	 */
 	public EAttribute getLanguage_Xmof() {
-		return (EAttribute)languageEClass.getEStructuralFeatures().get(15);
+		return (EAttribute)languageEClass.getEStructuralFeatures().get(14);
 	}
 
 	/**
@@ -1130,7 +1121,7 @@ public class MelangePackageImpl extends EPackageImpl implements MelangePackage {
 	 * @generated
 	 */
 	public EAttribute getLanguage_FileExtension() {
-		return (EAttribute)languageEClass.getEStructuralFeatures().get(16);
+		return (EAttribute)languageEClass.getEStructuralFeatures().get(15);
 	}
 
 	/**
@@ -1139,7 +1130,7 @@ public class MelangePackageImpl extends EPackageImpl implements MelangePackage {
 	 * @generated
 	 */
 	public EReference getLanguage_Annotations() {
-		return (EReference)languageEClass.getEStructuralFeatures().get(17);
+		return (EReference)languageEClass.getEStructuralFeatures().get(16);
 	}
 
 	/**
@@ -1689,7 +1680,6 @@ public class MelangePackageImpl extends EPackageImpl implements MelangePackage {
 		createEReference(packageBindingEClass, PACKAGE_BINDING__CLASSES);
 
 		languageEClass = createEClass(LANGUAGE);
-		createEReference(languageEClass, LANGUAGE__OPERATORS);
 		createEReference(languageEClass, LANGUAGE__EXACT_TYPE);
 		createEReference(languageEClass, LANGUAGE__IMPLEMENTS);
 		createEReference(languageEClass, LANGUAGE__REQUIRES);
@@ -1830,6 +1820,7 @@ public class MelangePackageImpl extends EPackageImpl implements MelangePackage {
 		mergeEClass.getESuperTypes().add(this.getLanguageOperator());
 		sliceEClass.getESuperTypes().add(this.getLanguageOperator());
 		languageEClass.getESuperTypes().add(this.getNamedElement());
+		languageEClass.getESuperTypes().add(this.getLanguageConcern());
 		weaveEClass.getESuperTypes().add(this.getOperator());
 		namedElementEClass.getESuperTypes().add(this.getElement());
 		externalLanguageEClass.getESuperTypes().add(this.getLanguage());
@@ -1840,6 +1831,7 @@ public class MelangePackageImpl extends EPackageImpl implements MelangePackage {
 		oneOfEClass.getESuperTypes().add(this.getVariability());
 		someOfEClass.getESuperTypes().add(this.getVariability());
 		taggedOperatorEClass.getESuperTypes().add(this.getTaggedElement());
+		taggedOperatorEClass.getESuperTypes().add(this.getOperator());
 		orEClass.getESuperTypes().add(this.getCondition());
 		andEClass.getESuperTypes().add(this.getCondition());
 		notEClass.getESuperTypes().add(this.getCondition());
@@ -1905,10 +1897,10 @@ public class MelangePackageImpl extends EPackageImpl implements MelangePackage {
 		initEAttribute(getPropertyBinding_To(), ecorePackage.getEString(), "to", null, 0, 1, PropertyBinding.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(operatorEClass, Operator.class, "Operator", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getOperator_OwningLanguage(), this.getLanguage(), this.getLanguage_Operators(), "owningLanguage", null, 0, 1, Operator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getOperator_OwningLanguage(), this.getLanguage(), null, "owningLanguage", null, 0, 1, Operator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(languageOperatorEClass, LanguageOperator.class, "LanguageOperator", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getLanguageOperator_TargetLanguage(), this.getLanguage(), null, "targetLanguage", null, 1, 1, LanguageOperator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getLanguageOperator_TargetLanguage(), this.getLanguageConcern(), null, "targetLanguage", null, 1, 1, LanguageOperator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(importEClass, Import.class, "Import", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getImport_EcoreUri(), ecorePackage.getEString(), "ecoreUri", null, 0, 1, Import.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1928,7 +1920,6 @@ public class MelangePackageImpl extends EPackageImpl implements MelangePackage {
 		initEReference(getPackageBinding_Classes(), this.getClassBinding(), null, "classes", null, 0, -1, PackageBinding.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(languageEClass, Language.class, "Language", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getLanguage_Operators(), this.getOperator(), this.getOperator_OwningLanguage(), "operators", null, 0, -1, Language.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getLanguage_ExactType(), this.getModelType(), this.getModelType_Extracted(), "exactType", null, 0, 1, Language.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getLanguage_Implements(), this.getModelType(), null, "implements", null, 0, -1, Language.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getLanguage_Requires(), this.getModelType(), null, "requires", null, 0, -1, Language.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1965,7 +1956,7 @@ public class MelangePackageImpl extends EPackageImpl implements MelangePackage {
 
 		initEClass(languageConcernEClass, LanguageConcern.class, "LanguageConcern", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getLanguageConcern_Vm(), this.getVariability(), null, "vm", null, 0, 1, LanguageConcern.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getLanguageConcern_Operators(), this.getTaggedOperator(), null, "operators", null, 0, -1, LanguageConcern.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getLanguageConcern_Operators(), this.getOperator(), null, "operators", null, 0, -1, LanguageConcern.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getLanguageConcern_Realisations(), this.getRealisation(), null, "realisations", null, 0, -1, LanguageConcern.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(variabilityEClass, Variability.class, "Variability", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

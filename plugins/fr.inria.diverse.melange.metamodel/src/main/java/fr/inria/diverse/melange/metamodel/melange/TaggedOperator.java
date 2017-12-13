@@ -27,7 +27,7 @@ package fr.inria.diverse.melange.metamodel.melange;
  * @model
  * @generated
  */
-public interface TaggedOperator extends TaggedElement {
+public interface TaggedOperator extends TaggedElement, Operator {
 	/**
 	 * Returns the value of the '<em><b>Operator</b></em>' containment reference.
 	 * <!-- begin-user-doc -->

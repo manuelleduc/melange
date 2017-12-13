@@ -37,12 +37,12 @@ public interface LanguageOperator extends Operator {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Target Language</em>' reference.
-	 * @see #setTargetLanguage(Language)
+	 * @see #setTargetLanguage(LanguageConcern)
 	 * @see fr.inria.diverse.melange.metamodel.melange.MelangePackage#getLanguageOperator_TargetLanguage()
 	 * @model required="true"
 	 * @generated
 	 */
-	Language getTargetLanguage();
+	LanguageConcern getTargetLanguage();
 
 	/**
 	 * Sets the value of the '{@link fr.inria.diverse.melange.metamodel.melange.LanguageOperator#getTargetLanguage <em>Target Language</em>}' reference.
@@ -52,6 +52,6 @@ public interface LanguageOperator extends Operator {
 	 * @see #getTargetLanguage()
 	 * @generated
 	 */
-	void setTargetLanguage(Language value);
+	void setTargetLanguage(LanguageConcern value);
 
 } // LanguageOperator

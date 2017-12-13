@@ -59,7 +59,7 @@ public interface LanguageConcern extends NamedElement {
 
 	/**
 	 * Returns the value of the '<em><b>Operators</b></em>' containment reference list.
-	 * The list contents are of type {@link fr.inria.diverse.melange.metamodel.melange.TaggedOperator}.
+	 * The list contents are of type {@link fr.inria.diverse.melange.metamodel.melange.Operator}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Operators</em>' containment reference list isn't clear,
@@ -71,7 +71,7 @@ public interface LanguageConcern extends NamedElement {
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<TaggedOperator> getOperators();
+	EList<Operator> getOperators();
 
 	/**
 	 * Returns the value of the '<em><b>Realisations</b></em>' containment reference list.

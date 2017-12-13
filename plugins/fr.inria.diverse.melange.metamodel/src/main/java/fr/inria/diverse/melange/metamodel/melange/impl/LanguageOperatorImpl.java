@@ -10,7 +10,7 @@
  */
 package fr.inria.diverse.melange.metamodel.melange.impl;
 
-import fr.inria.diverse.melange.metamodel.melange.Language;
+import fr.inria.diverse.melange.metamodel.melange.LanguageConcern;
 import fr.inria.diverse.melange.metamodel.melange.LanguageOperator;
 import fr.inria.diverse.melange.metamodel.melange.MelangePackage;
 
@@ -43,7 +43,7 @@ public class LanguageOperatorImpl extends OperatorImpl implements LanguageOperat
 	 * @generated
 	 * @ordered
 	 */
-	protected Language targetLanguage;
+	protected LanguageConcern targetLanguage;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -69,10 +69,10 @@ public class LanguageOperatorImpl extends OperatorImpl implements LanguageOperat
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Language getTargetLanguage() {
+	public LanguageConcern getTargetLanguage() {
 		if (targetLanguage != null && targetLanguage.eIsProxy()) {
 			InternalEObject oldTargetLanguage = (InternalEObject)targetLanguage;
-			targetLanguage = (Language)eResolveProxy(oldTargetLanguage);
+			targetLanguage = (LanguageConcern)eResolveProxy(oldTargetLanguage);
 			if (targetLanguage != oldTargetLanguage) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, MelangePackage.LANGUAGE_OPERATOR__TARGET_LANGUAGE, oldTargetLanguage, targetLanguage));
@@ -86,7 +86,7 @@ public class LanguageOperatorImpl extends OperatorImpl implements LanguageOperat
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Language basicGetTargetLanguage() {
+	public LanguageConcern basicGetTargetLanguage() {
 		return targetLanguage;
 	}
 
@@ -95,8 +95,8 @@ public class LanguageOperatorImpl extends OperatorImpl implements LanguageOperat
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setTargetLanguage(Language newTargetLanguage) {
-		Language oldTargetLanguage = targetLanguage;
+	public void setTargetLanguage(LanguageConcern newTargetLanguage) {
+		LanguageConcern oldTargetLanguage = targetLanguage;
 		targetLanguage = newTargetLanguage;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, MelangePackage.LANGUAGE_OPERATOR__TARGET_LANGUAGE, oldTargetLanguage, targetLanguage));
@@ -126,7 +126,7 @@ public class LanguageOperatorImpl extends OperatorImpl implements LanguageOperat
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case MelangePackage.LANGUAGE_OPERATOR__TARGET_LANGUAGE:
-				setTargetLanguage((Language)newValue);
+				setTargetLanguage((LanguageConcern)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -141,7 +141,7 @@ public class LanguageOperatorImpl extends OperatorImpl implements LanguageOperat
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case MelangePackage.LANGUAGE_OPERATOR__TARGET_LANGUAGE:
-				setTargetLanguage((Language)null);
+				setTargetLanguage((LanguageConcern)null);
 				return;
 		}
 		super.eUnset(featureID);
